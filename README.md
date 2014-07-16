@@ -13,4 +13,4 @@ Within the Documentation/ folder, there are files that describe how to install t
 ##Sponsor
 This project is sponsored by [Jorsek LLC, makers of easyDITA software](http://www.easydita.com).
 
-——-
+---
