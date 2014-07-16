@@ -1,0 +1,130 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+/***** drag up button styles *****/
+/*
+To create the gray pointed trapezoid
+*/
+#drag-icon-bg {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin-left: 0.3125em;
+  height: 4.375em;
+  width: 4.6875em;
+  z-index: 1;
+}
+#drag-icon-bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 51%;
+  width: 100%;
+  background: #eee;
+  -webkit-transform: skew(10deg, 0deg);
+  -moz-transform: skew(10deg, 0deg);
+  -ms-transform: skew(10deg, 0deg);
+  -o-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;
+  -khtml-border-radius: 0 5px 0 0;
+}
+#drag-icon-bg:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: #eee;
+  -webkit-transform: skew(-10deg, 0deg);
+  -moz-transform: skew(-10deg, 0deg);
+  -ms-transform: skew(-10deg, 0deg);
+  -o-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
+  -moz-border-radius: 0 0 5px 0;
+  -webkit-border-radius: 0 0 5px 0;
+  border-radius: 0 0 5px 0;
+  -khtml-border-radius: 0 0 5px 0;
+}
+/*
+To create the three arrow lines within the icon
+*/
+#drag-icon:before {
+  content: '';
+  z-index: 2;
+  display: block;
+  position: absolute;
+  height: 1.875em;
+  width: 0.15625em;
+  background: #8d8d8d;
+  left: 3.22916667em;
+  top: 0.3125em;
+  box-shadow: 0.41666667em 0 0 #8d8d8d, 0.83333333em 0 0 #8d8d8d;
+  -webkit-transform: skew(10deg, 0deg);
+  -moz-transform: skew(10deg, 0deg);
+  -ms-transform: skew(10deg, 0deg);
+  -o-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
+}
+#drag-icon:after {
+  content: '';
+  z-index: 2;
+  display: block;
+  position: absolute;
+  height: 1.875em;
+  width: 0.15625em;
+  background: #8d8d8d;
+  left: 3.22916667em;
+  top: 2.1875em;
+  box-shadow: 0.41666667em 0 0 #8d8d8d, 0.83333333em 0 0 #8d8d8d;
+  -webkit-transform: skew(-10deg, 0deg);
+  -moz-transform: skew(-10deg, 0deg);
+  -ms-transform: skew(-10deg, 0deg);
+  -o-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
+}
+.fade {
+  opacity: 0.2;
+  transition: opacity 0.5s ease-in-out;
+}
+.unfade {
+  opacity: 1.0;
+  transition: opacity 0.5s ease-in-out;
+}
+/***** end drag up button styles *****/
+#drag-container {
+  position: fixed;
+  z-index: 9;
+  left: -2.60416667em;
+  top: 55%;
+  margin-top: -2.1875em;
+  height: 4.375em;
+  right: 24.25%;
+  pointer-events: none;
+  margin-left: inherit;
+  width: auto;
+}
+#drag-handle {
+  pointer-events: auto;
+  width: 4.375em;
+  height: 100%;
+}
+@media screen and (max-width: 37.5em) {
+  #web-help-c1 {
+    width: 63%;
+    bottom: -6.25em;
+    top: 20%;
+    right: 101%;
+    overflow-y: scroll;
+    position: fixed;
+    padding-left: 7%;
+    border-top: solid 0.625em #eeeeee;
+    border-bottom: solid 6.25em #eeeeee;
+    border-right: solid 0.3125em #808080;
+    border-left: solid 62.5em #eeeeee;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

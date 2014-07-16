@@ -1,0 +1,18 @@
+CACHE MANIFEST
+# version 1.0
+
+CACHE:
+loadContent.js
+help-icon.png
+heading.html
+heading/logo.jpg
+dragdealer.js
+frameless.css
+user-fonts.css
+http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+
+NETWORK:
+*
+
+FALLBACK:
+/ fallback.html

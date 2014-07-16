@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+     Sourceforge.net. See the accompanying license.txt file for 
+     applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. -->
+<project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2bwh">
+	
+    <target name="dita2bwh"
+    	depends="build-init, preprocess, dita.map.bwh, 
+    	copy-default-user-fonts, copy-js, copy-default-heading, copy-my-css, 
+    	dita.topics.bwh, dita.inner.topics.bwh, 
+    	dita.outer.topics.bwh, build-search-index">
+    </target>
+
+    <target name="dita.map.bwh"
+            depends="dita.map.bwh.init, dita.map.bwh.toc , dita.out.map.bwh.toc" />
+
+    <target name="dita.map.bwh.init" depends="dita.bwh.init" unless="noMap">
+    	<condition property="args.bwh.toc.xsl" value="${dita.plugin.com.jorsek.bwh.dir}${file.separator}xsl${file.separator}map2xhtmtoc.xsl">
+        <not>
+          <isset property="args.bwh.toc.xsl" />
+        </not>
+      </condition>
+        <condition property="args.bwh.toc" value="index">
+            <not>
+                <isset property="args.bwh.toc" />
+            </not>
+        </condition>
+    </target>
+    
+
+  	
+    <target name="dita.map.bwh.toc"
+            unless="noMap" if="old.transform"
+            description="Build HTML TOC file">
+        <xslt
+              basedir="${dita.temp.dir}"
+              destdir="${output.dir}"
+              includesfile="${dita.temp.dir}${file.separator}${user.input.file.listfile}"
+              classpathref="dost.class.path"
+              style="${args.bwh.toc.xsl}">
+        	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+            <param name="DITAEXT" expression="${dita.ext}" if="dita.ext" />
+            <param name="OUTEXT" expression="${out.ext}" if="out.ext" />
+            <param name="contenttarget" expression="${args.bwh.contenttarget}" if="args.bwh.contenttarget"/>
+            <param name="CSS" expression="${args.css.file}" if="args.css.file" />
+            <param name="CSSPATH" expression="${user.csspath}" if="user.csspath" />
+            <param name="OUTPUTCLASS" expression="${args.bwh.toc.class}" if="args.bwh.toc.class" />
+        	<param name="OUTPUTFILE" expression="${args.bwh.toc}${out.ext}"></param>
+            <dita:extension id="dita.conductor.bwh.toc.param" behavior="org.dita.dost.platform.InsertAction"/>
+            <mapper type="glob"
+                    from="*${dita.input.filename}"
+                    to="*${args.bwh.toc}${out.ext}" />
+          <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+    </target>
+    
+
+    <target name="dita.out.map.bwh.toc"
+            unless="noMap" if="inner.transform"
+            description="Build HTML TOC file,which will adjust the directory">
+        <xslt
+              basedir="${dita.temp.dir}"
+              destdir="${output.dir}"
+              includesfile="${dita.temp.dir}${file.separator}${user.input.file.listfile}"
+              classpathref="dost.class.path"
+              style="${args.bwh.toc.xsl}">
+        	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+            <param name="DITAEXT" expression="${dita.ext}" if="dita.ext" />
+            <param name="OUTEXT" expression="${out.ext}" if="out.ext" />
+            <param name="contenttarget" expression="${args.bwh.contenttarget}" if="args.bwh.contenttarget"/>
+            <param name="CSS" expression="${args.css.file}" if="args.css.file" />
+            <param name="CSSPATH" expression="${user.csspath}" if="user.csspath" />
+            <param name="OUTPUTCLASS" expression="${args.bwh.toc.class}" if="args.bwh.toc.class" />
+        	<param name="OUTPUTFILE" expression="${args.bwh.toc}${out.ext}"></param>
+            <dita:extension id="dita.conductor.bwh.toc.param" behavior="org.dita.dost.platform.InsertAction"/>
+            <mapper type="glob"
+                    from="${user.input.file}"
+                    to="${args.bwh.toc}${out.ext}" />
+          <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+    </target>
+    
+  <target name="copy-revflag" if="dita.input.valfile">
+    <dita-ot-echo id="DOTA069W">
+      <param name="1" value="copy-revflag"/>
+    </dita-ot-echo>
+  </target>
+    
+	<target name="copy-my-css" description="Copying my CSS">
+		<!-- Copy System CSS Files -->
+		<copy todir="${output.dir}">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="*.css"/>
+		</copy>
+	</target>
+
+	<target name="copy-js" description="Copy JS files">
+		<!-- Always copy system default js files -->
+		<copy todir="${output.dir}">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="*.js"></fileset>
+		</copy>
+	</target>
+	
+<!-- only copy over the default heading.html file and heading/ folder if one doesn't already exist
+	in the output directory. (i.e. if the user has already added their customized heading, don't overwrite it) -->
+	<available file="${output.dir}${file.separator}heading.html" property="heading.available"/>
+	<target name="copy-default-heading" description="Copy Default Heading" unless="heading.available">
+<!--		Copy over the default heading HTML file -->
+		<copy todir="${output.dir}">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="heading.html"></fileset>
+		</copy>
+<!--		Copy over the default logos, etc -->
+		<mkdir dir="${user.headingpath.real}${file.separator}heading"></mkdir>
+		<copy todir="${output.dir}${file.separator}heading">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}heading" includes="*"></fileset>
+		</copy>
+	</target>
+
+<!-- only copy over the default user-fonts.css file if one doesn't already exist in the output directory. 
+		(i.e. if the user has already added their customized fonts, don't overwrite it) -->
+	<available file="${output.dir}${file.separator}user-fonts.css" property="user-fonts.available"/>
+	<target name="copy-default-user-fonts" description="Copy Default User Fonts" unless="user-fonts.available">
+		<copy todir="${output.dir}">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="user-fonts.css"/>
+		</copy>
+	</target>
+
+  <target name="copy-css-user" if="user.copycss.yes">
+    <copy file="${args.css.real}" todir="${user.csspath.real}"/>
+  </target>
+  
+	<target name="build-search-index" description="Build Lunr Search Index">
+		<echo message="Running XSLT Indexer..."/>
+		<xslt
+			basedir="${dita.temp.dir}"
+			destdir="${output.dir}${file.separator}indexes"
+			includesfile="${dita.temp.dir}${file.separator}${user.input.file.listfile}"
+			classpathref="dost.class.path"
+			style="${dita.plugin.com.jorsek.bwh.dir}${file.separator}xsl${file.separator}dita2json.xsl">
+			<mapper type="glob" from="${user.input.file}" to="lunr_raw.txt"/>
+		</xslt>
+		<echo>Indexer Complete.</echo>
+		<echo>Loading files...</echo>
+		<loadfile property="source.data" srcFile="${output.dir}${file.separator}indexes${file.separator}lunr_raw.txt"/>
+		<echo file="${dita.temp.dir}${file.separator}temp-code.js">
+			<![CDATA[
+				var idx = lunr(function() {
+					this.field('Title', { boost: 10 })
+					this.field('Shortdesc')
+					this.field('Body')
+					this.field('URI')
+				});
+				
+				var x = project.getProperty("source.data");
+				var y=x.replaceAll(/\s+/g,' ').trim();
+				var z=y.substring(0,y.length()-3).concat(' ]');
+				var indexData = JSON.parse(z);
+				var len = indexData.length;
+				var lastPrint = -1;
+				
+				var startTime = new Date().getTime();
+				for (x in indexData) {
+					perc = x/len*100;
+					percInt = parseInt(perc);
+					percString = String(percInt) + "% Indexed...";
+					if (percInt != lastPrint) {
+						java.lang.System.out.println(percString);
+						lastPrint = percInt;
+					};
+					indexData[x].id = Number(x);
+					idx.add(indexData[x]);
+				}
+				java.lang.System.out.println("100% Indexed.");
+				var endTime = new Date().getTime();
+				var delta = endTime-startTime;
+				if (delta > 90000) {
+					var mins = parseInt(delta/60000);
+					var secs = delta/1000 - parseInt(delta/60000)*60
+					var timeOutput = "Indexed in " + String(mins) + "minutes " + String(secs) + " seconds.";
+				} else if (delta > 5000) {
+					var timeOutput = "Indexed in " + String(delta/1000) + " seconds";
+				} else {
+					var timeOutput = "Indexed in " + String(delta) + "ms";
+				}
+				java.lang.System.out.println(timeOutput);
+				project.setProperty("lunrIndex",JSON.stringify(idx));
+				project.setProperty("lunrData",JSON.stringify(indexData));
+			]]>
+		</echo>
+		<concat destfile="${output.dir}${file.separator}temp-code-full.js">
+			<fileset file="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource/lunr.js"/>
+			<fileset file="${dita.temp.dir}${file.separator}temp-code.js"/>
+		</concat>
+		<echo>Loaded.</echo>
+		<echo>Indexing...</echo>
+		<script language="javascript" src="${output.dir}${file.separator}temp-code-full.js"/>
+		<echo>Indexing Complete.</echo>
+		<echo>Saving files...</echo>
+		<echo file="${output.dir}${file.separator}indexes${file.separator}lunrIndex.txt" append="false">
+			${lunrIndex}
+		</echo>
+		<echo file="${output.dir}${file.separator}indexes${file.separator}lunrData.txt" append="false">
+			${lunrData}
+		</echo>
+		<echo>File Save Complete.</echo>
+	</target>
+  
+</project>
