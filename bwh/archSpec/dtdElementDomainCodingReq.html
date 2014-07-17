@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Element domain module coding requirements"/>
+<meta name="abstract" content="An element domain vocabulary module defines element types that are appropriate for the subject-matter or application domain for which they are designed. The purpose is usually to enhance the user's interaction by providing &#34;semantic&#34; elements whose names more accurately denote their content, making that content easier to search and retrieve."/>
+<meta name="description" content="An element domain vocabulary module defines element types that are appropriate for the subject-matter or application domain for which they are designed. The purpose is usually to enhance the user's interaction by providing &#34;semantic&#34; elements whose names more accurately denote their content, making that content easier to search and retrieve."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dtdmod.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dtdTopicTypeCodingReq.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dtdAttributeDomainCodingReq.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="domainpattern"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Element domain module coding requirements</title>
+</head>
+<body id="domainpattern">
+
+
+  <h1 class="title topictitle1">Element domain module coding requirements</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">An element domain vocabulary module defines element types that are appropriate for the
+    subject-matter or application domain for which they are designed. The purpose is usually to
+    enhance the user's interaction by providing <span class="q">"semantic"</span> elements whose names more accurately
+    denote their content, making that content easier to search and retrieve.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Domain entity file</h2>
+      
+      <p class="p">In addition to the domain declaration entity, the entity declaration file for element
+        domain modules <dfn class="term">must</dfn> include the following components:</p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Element extension entity</dt>
+
+          <dd class="dd">
+            <p class="p">The declaration (<span class="ph filepath">.ent</span>) file <dfn class="term">must</dfn> define an
+              entity for each element extended by the domain. The base of the entity name is the
+              abbreviation for the domain and the extension of the entity name is the name of the
+              extended element. For example, the highlight domain (abbreviated as <samp class="ph codeph">hi-d</samp>) extends the <samp class="ph codeph">ph</samp> element, so the entity for the
+              extended element is named <samp class="ph codeph">hi-d-ph</samp>. </p>
+
+            <p class="p">The value of the entity is a disjunctive list of the specialized elements that are
+              intended to occur in the same locations as the extended element. </p>
+
+            <p class="p">For example, the <samp class="ph codeph">hi-d-ph</samp> entity is defined as follows:</p>
+
+            <pre class="pre codeblock">&lt;!ENTITY % hi-d-ph "b | u | i | tt | sup | sub"&gt;</pre>
+
+          </dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dtdmod.html" title="To be extensible and backward compatible, DITA requires that a DTD implementation of structural and domain specialization modules conform to well-defined implementation (coding) requirements.">DTD syntax specialization module coding requirements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dtdTopicTypeCodingReq.html" title="Topic type vocabulary modules must conform to additional coding requirements for defining default topic nesting.">Topic type module coding requirements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dtdAttributeDomainCodingReq.html" title="An attribute domain vocabulary module declares a new attribute specialized from either the @props or @base attribute. An attribute domain module defines exactly one new attribute type.">Attribute domain module coding requirements</a></div>
+</div>
+</div>
+
+</body>
+</html>

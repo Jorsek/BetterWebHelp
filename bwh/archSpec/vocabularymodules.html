@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Vocabulary modules"/>
+<meta name="abstract" content="Vocabulary modules are atomic units of XML vocabulary definition (element types and attributes). A given DITA element type or attribute is declared in exactly one vocabulary module."/>
+<meta name="description" content="Vocabulary modules are atomic units of XML vocabulary definition (element types and attributes). A given DITA element type or attribute is declared in exactly one vocabulary module."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/specialize.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/specvalid.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="vocabularymodules"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Vocabulary modules</title>
+</head>
+<body id="vocabularymodules">
+
+
+  <h1 class="title topictitle1">Vocabulary modules</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">Vocabulary modules are atomic units of XML vocabulary definition (element types and
+    attributes). A given DITA element type or attribute is declared in exactly one vocabulary
+    module.</p>
+
+    <p class="p">Vocabulary modules <dfn class="term">must</dfn> reflect the implementation requirements defined in this
+      specification for each recognized constraint mechanism. These requirements ensure that all
+      vocabulary modules of a given type follow the same basic coding patterns for how their
+      components are named and organized.</p>
+
+    <p class="p">Vocabulary modules intended to be used outside of a narrowly-restricted context
+        <dfn class="term">should</dfn> have one or more associated globally-unique names (public IDs, URNs, or
+      absolute URLs) by which modules can be referenced without regard to their local storage
+      location.</p>
+
+    <div class="p">There are three types of vocabulary module:<dl class="dl">
+        
+          <dt class="dt dlterm">structural</dt>
+
+          <dd class="dd">A vocabulary module that defines exactly one top-level map or topic type. Structural
+            modules <dfn class="term">may</dfn> also define specializations of elements from domain modules.
+            Structural modules are either <dfn class="term">topic modules</dfn> or <dfn class="term">map
+              modules</dfn>.<p class="p">A topic vocabulary module <dfn class="term">must</dfn> define exactly one
+              top-level topic type. It <dfn class="term">may</dfn> define additional topic types that are then
+              allowed to occur as subordinate topics within the top-level topic. However, such
+              subordinate topic types <dfn class="term">may not</dfn> be used as the root elements of
+              conforming DITA documents. For example, a given top-level topic type may require the
+              use of subordinate topic types that would only ever be meaningful in the context of
+              their containing type and thus would never be candidates for standalone authoring or
+              aggregation via maps. In that case, the subordinate topic type may be declared in the
+              module for the top-level topic type that uses it. However, in most cases, potential
+              subordinate topics <dfn class="term">should</dfn> be defined in their own vocabulary
+              modules.</p>
+<p class="p">A map vocabulary module <dfn class="term">must</dfn> define exactly one element
+              type that specializes map.</p>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">element domain</dt>
+
+          <dd class="dd">A vocabulary module that defines one or more element types that specialize element
+            types used within maps or topics. </dd>
+
+        
+        
+          <dt class="dt dlterm">attribute domain</dt>
+
+          <dd class="dd">A vocabulary module that defines exactly one specialization of either the @base or
+            @props attribute.</dd>
+
+        
+      </dl>
+</div>
+
+    <p class="p">A given vocabulary module exists in an exclusive hierarchy relative to its ancestor modules.
+      For example, the &lt;concept&gt; topic type is defined in the concept topic module and is itself
+      derived from the topic topic module (that is, the topic-defining structural module that
+      defines the topic type &lt;topic&gt;). Likewise, the &lt;task&gt; topic type is defined in the task
+      topic module and is derived from the &lt;topic&gt; topic type. Thus the concept and task topic
+      types are children of the &lt;topic&gt; topic type in the module hierarchy rooted at the
+      &lt;topic&gt; topic vocabulary module.</p>
+
+    <p class="p">All topic types <dfn class="term">must</dfn> ultimately be specialized from &lt;topic&gt;. All map types
+        <dfn class="term">must</dfn> ultimately be specialized from &lt;map&gt;. Domain elements intended for use
+      in topics <dfn class="term">must</dfn> ultimately be specialized from elements defined in the topic
+      module. Domain elements intended for use in maps <dfn class="term">must</dfn> ultimately be specialized
+      from elements defined by or used in the map module (maps share some element types with topics
+      but no map-specific elements may be used within topics). Domain attributes <dfn class="term">must</dfn>
+      ultimately be specialized from either the @base or @props attribute.</p>
+
+    <p class="p">Each vocabulary module has an associated short name, which is used to identify the module in
+      @class and @domains attribute values. While module names need not be globally unique, module
+      names <dfn class="term">must</dfn> be unique within the scope of a given specialization hierarchy. The
+      short name <dfn class="term">must</dfn> be a valid XML name token. </p>
+
+    <p class="p">For structural types, the module name <dfn class="term">must</dfn> be the same as the root element. For
+      example, "task" is the name of the structural vocabulary module whose root element is
+      &lt;task&gt;. For domains, the name is assigned by the developer of the vocabulary module. By
+      convention, domain names end with "-d" and are kept short; for example, "ui-d" for the user
+      interface domain and "pr-d" for the programming domain. </p>
+
+    <p class="p">When integrated into concrete document types, vocabulary modules <dfn class="term">may</dfn> be further
+      constrained through the use of constraint modules. See <a class="- topic/xref  ajaxLink" href="createConstraintsDomainSpec.html" title="Constraint modules define additional constraints for corresponding vocabulary modules in order to restrict content models or attribute lists for specific element types, remove extension elements from an integrated domain module, or replace base element types with domain-provided extension element types. Constraint modules do not and cannot change element semantics, only the details of how element types can be used in the context of a specific concrete document type. Because constraints can make optional elements required, documents that use the same vocabulary modules may still have incompatible constraints. Thus the use of constraints can affect the ability for content from one topic or map to be used directly in another topic or map.">Constraints</a>.</p>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/specialize.html" title="The specialization feature of DITA allows for the creation of new element types and attributes that are explicitly and formally derived from existing types. The resulting specialization allows for the blind interchange of all conforming DITA content and a minimum level of common processing for all DITA content. It also allows specialization-aware processors to add specialization-specific processing to existing base processing.">Specialization</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/specvalid.html" title="When you specialize one element from another, or a new attribute from @props or @base, the new element or attribute must obey certain rules in order to be a conforming specialization.">Requirements for specialized element types and attributes</a></div>
+</div>
+</div>
+
+</body>
+</html>

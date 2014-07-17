@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Structural specialization coding requirements"/>
+<meta name="abstract" content="An XSD structural module declares a top-level map or topic type, implemented as a pair of XSD documents, one that defines groups used to integrate and override the type and one that defines the element types specific to the type."/>
+<meta name="description" content="An XSD structural module declares a top-level map or topic type, implemented as a pair of XSD documents, one that defines groups used to integrate and override the type and one that defines the element types specific to the type."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/schemamod.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/xsdGeneralCodingReq.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/xsdAttributeDomainSpecializationCodeReq.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="xsdStructuralSpecializationReqs"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Structural specialization coding requirements</title>
+</head>
+<body id="xsdStructuralSpecializationReqs">
+
+
+  <h1 class="title topictitle1">Structural specialization coding requirements</h1>
+
+  
+  
+  <div class="body conbody"><p class="shortdesc">An XSD structural module declares a top-level map or topic type, implemented as a pair
+    of XSD documents, one that defines groups used to integrate and override the type and one that
+    defines the element types specific to the type.</p>
+
+    <p class="p">A structural type module <dfn class="term">must</dfn> conform to the following coding requirements in
+      addition to the general module coding requirements: </p>
+
+    <div class="section"><h2 class="title sectiontitle">Module files</h2>
+      
+      <p class="p">A structural vocabulary module <dfn class="term">must</dfn> have two files:</p>
+
+      <ul class="ul" id="xsdStructuralSpecializationReqs__ul_D7BFFD862DE84CBABE9FC4A34BFD430C">
+        <li class="li" id="xsdStructuralSpecializationReqs__li_5E6A30823E6646B582EEDAACFDB332C0">A module schema document. The file name is the
+          name of the root structural element plus <span class="ph filepath">Mod</span> plus the
+            <span class="ph filepath">.xsd</span> extension. For example, <span class="ph filepath">conceptMod.xsd</span> is
+          the module schema document for the concept topic type.</li>
+
+        <li class="li" id="xsdStructuralSpecializationReqs__li_CA93076E32D344DBB656231FD7D63406">A module group definition schema document. The
+          file name is the name of the root structural element plus <span class="ph filepath">Grp</span> plus
+          the <span class="ph filepath">.xsd</span> extension. For example, <span class="ph filepath">conceptGrp.xsd</span>
+          is the module group definition schema document for the concept topic type.</li>
+
+      </ul>
+
+    </div>
+
+    <div class="section" id="xsdStructuralSpecializationReqs__section_48CC341A288448D39DC32181F8D1C3ED"><h2 class="title sectiontitle">Structural module schema document</h2>
+      
+      <p class="p">The root element <dfn class="term">must</dfn> reference the @DITAArchVersion attribute and the
+        @domains attribute. These attributes give processors a reliable way to check the
+        architecture version and look up the list of domains available in the document type. The
+        @DITAArchVersion attribute is referenced as in the following example:</p>
+
+      <pre class="pre codeblock">&lt;xs:attribute name="id" type="xs:ID" use="required"/&gt;
+&lt;xs:attribute ref="ditaarch:DITAArchVersion" /&gt;</pre>
+
+      <p class="p">See <a class="- topic/xref  ajaxLink" href="xsdShellDoctypeCodeReq.html#topicShellPattern" title="A shell document type integrates one or more topic type or map type modules, zero or more domain modules, and zero or more constraint modules. A shell XSD is organized into sections, where each section contains a specific type of declaration.">XSD document-type shell: Coding requirements</a> for
+        information on how to set the values for the <samp class="ph codeph">domains</samp> attibute for XSD
+        shells. </p>
+
+      <p class="p">For topic modules, the last position in the content model <dfn class="term">must</dfn> be the
+            <samp class="ph codeph"><var class="keyword varname">topictype</var>-info-types</samp> nested topics group as in the
+        following example of the root element of the concept topic:</p>
+
+      <pre class="pre codeblock">&lt;xs:complexType name="concept.class"&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:group ref="title"/&gt;
+    &lt;xs:group ref="titlealts" minOccurs="0"/&gt;
+    &lt;xs:choice minOccurs="0"&gt;
+      &lt;xs:group ref="shortdesc" /&gt;
+      &lt;xs:group ref="abstract" /&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:group ref="prolog" minOccurs="0"/&gt;
+    &lt;xs:group ref="conbody" minOccurs="0"/&gt;
+    &lt;xs:group ref="related-links" minOccurs="0"/&gt;
+    &lt;xs:group ref="concept-info-types" minOccurs="0" maxOccurs="unbounded"/&gt;
+  &lt;/xs:sequence&gt;
+  ...
+&lt;/xs:complexType&gt;</pre>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Topic module schema document</h2>
+      
+      <div class="p">For topic modules, the module schema document must define an info-type model group. The
+        name of this group is the topic element name plus <samp class="ph codeph">-info-types</samp>. Thus, the
+        info-type model group for the concept topic type is <samp class="ph codeph">concept-info-types</samp>. The
+        following example shows how this group is defined in <span class="ph filepath">conceptMod.xsd</span>:
+        <pre class="pre codeblock" id="xsdStructuralSpecializationReqs__topicinfotype">&lt;xs:group name="concept-info-types"&gt;
+  &lt;xs:choice&gt;
+    &lt;xs:group ref="concept" minOccurs="0"/&gt;
+    &lt;xs:group ref="info-types" minOccurs="0"/&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:group&gt;</pre>
+</div>
+
+    </div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/schemamod.html" title="To be extensible and backward compatible, DITA requires that an XSD implementation of structural and domain specialization modules conform to well-defined implementation (coding) requirements.">XSD schema specialization module coding requirements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/xsdGeneralCodingReq.html" title="Structural and element domain vocabulary modules must reflect the same coding requirements for element type declarations.">General element type declaration coding requirements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/xsdAttributeDomainSpecializationCodeReq.html">Attribute domain coding requirements</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Topic structure"/>
+<meta name="abstract" content="All topics have the same basic structure, regardless of topic type: title, description or abstract, prolog, body, related links, and nested topics."/>
+<meta name="description" content="All topics have the same basic structure, regardless of topic type: title, description or abstract, prolog, body, related links, and nested topics."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/topicover.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/generictopics.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/topiccontent.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topicstructure"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Topic structure</title>
+</head>
+<body id="topicstructure">
+
+
+<h1 class="title topictitle1">Topic structure</h1>
+
+
+<div class="body conbody"><p class="shortdesc">All topics have the same basic structure, regardless of
+topic type: title,         description or abstract, prolog, body,
+related links, and nested topics.</p>
+
+<div class="p"> All DITA topics must have an XML identifier (the @id
+attribute) and a title. The basic topic structure consists of the
+following parts, some of which are optional: <dl class="dl">
+
+<dt class="dt dlterm">Topic element</dt>
+
+<dd class="dd">The topic element holds the required <span class="ph">@id</span>  attribute and contains all other elements.</dd>
+
+
+<dt class="dt dlterm">Title</dt>
+
+<dd class="dd"><span class="ph">The title contains the</span> subject of the topic.</dd>
+
+
+
+<dt class="dt dlterm">Alternate titles</dt>
+
+<dd class="dd">Titles specifically for use in navigation or search. When not
+provided, the                         base title is used for all contexts.</dd>
+
+
+
+<dt class="dt dlterm">Short description or abstract</dt>
+
+<dd class="dd">A short description of the topic or a longer abstract with an
+embedded short                         description. The short description may
+be used both in topic content (as the                         first
+paragraph), in generated summaries that include the topic, and in
+                        links to the topic. Alternatively, the abstract
+lets you create more complex                         introductory
+content and uses an embedded short description element to        
+                define the part of the abstract that is suitable for
+summaries and link                         previews.</dd>
+<dd class="dd">While
+short descriptions aren't required, they can make a dramatic     
+                   difference to the usability of an information set
+and should generally be                         provided for all topics.</dd>
+
+
+
+<dt class="dt dlterm">Prolog</dt>
+
+<dd class="dd"><span class="ph">The prolog is the</span> container for topic metadata,
+such as                         change history, audience, product,
+and so on.</dd>
+
+
+<dt class="dt dlterm">Body</dt>
+
+<dd class="dd"><span class="ph">The topic body contains the</span> topic content:
+paragraphs,                         lists, sections, and other content
+that the information type permits.</dd>
+
+
+<dt class="dt dlterm">Related links</dt>
+
+<dd class="dd"><span class="ph">Related links connect</span> to other topics. When
+an author                         creates a link as part of a topic,
+the topic becomes dependent on the other                         topic
+being available. To reduce dependencies between topics and thereby
+                        increase the reusability of each topic, authors
+may use DITA maps to define                         and manage links
+between topics, instead of embedding links directly in each      
+                  related topic.</dd>
+
+
+<dt class="dt dlterm">Nested topics</dt>
+
+<dd class="dd">Topics can be defined inside other topics. However, nesting requires
+special care because it can result in complex documents that are less
+usable and less reusable. Nesting may be appropriate for information
+that is first converted from desktop publishing or word processing
+files or for topics that are unusable independent from their parent
+or sibling topics.</dd>
+<dd class="dd">The rules for topic nesting
+can be configured in a document-type shells. For example, the standard
+DITA configuration for concept topics only allows nested concept topics.
+However, local configuration of the concept topic type could allow
+other topic types to nest or disallow topic nesting entirely. In addition,
+the @chunk attribute enables topics to be equally re-usable regardless
+of whether they are separate or nested. The standard DITA configuration
+for ditabase document-type documents allows unrestricted topic nesting
+and may be used for holding sets of otherwise unrelated topics that
+hold re-usable content. It may also be used to convert DITA topics
+from non-DITA legacy source without first determining how individual
+topics should be organized into separate XML documents.</dd>
+
+</dl>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/topicover.html" title="DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject. Topics may be of specific specialized information types, such as task, concept, or reference, or may be generic, that is, without a specified information type.">DITA topics</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/generictopics.html" title="The element type &lt;topic&gt; is the base topic type from which all other topic types are specialized. All topics have the same basic structure.">Generic topics</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/topiccontent.html" title="The content of all topics, regardless of topic type, is built on the same common structures.">Topic content</a></div>
+</div>
+</div>
+
+</body>
+</html>

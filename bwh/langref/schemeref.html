@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="schemeref"/>
+<meta name="abstract" content="A &lt;schemeref&gt; element provides a reference to another scheme. Typically, the referenced scheme defines a base set of controlled values extended by the current scheme. The values in the referenced scheme are merged with the current scheme; the result is equivalent to specifying all of the values in a single map."/>
+<meta name="description" content="A &lt;schemeref&gt; element provides a reference to another scheme. Typically, the referenced scheme defines a base set of controlled values extended by the current scheme. The values in the referenced scheme are merged with the current scheme; the result is equivalent to specifying all of the values in a single map."/>
+<meta name="DC.subject" content="schemeref"/>
+<meta name="keywords" content="schemeref"/>
+<meta name="DC.Relation" scheme="URI" content="../common/subjectScheme.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectScheme.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/hasInstance.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="schemeref"/>
+<meta name="DC.Language" content="en-us"/>
+<title>schemeref</title>
+</head>
+<body id="schemeref">
+
+
+<h1 class="title topictitle1">schemeref</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">A &lt;<span class="keyword">schemeref</span>&gt; element provides a
+reference to another scheme. Typically, the referenced scheme defines
+a base set of controlled values extended by the current scheme. The
+values in the referenced scheme are merged with the current scheme;
+the result is equivalent to specifying all of the values in a single
+map.</p>
+
+<div class="section" id="schemeref__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d509212e36" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d509212e38" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d509212e43" headers="d509212e36" class="stentry"><strong>subjectScheme</strong></td>
+
+<td valign="top" headers="d509212e38 d509212e43" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="topicmeta.html" title="The &lt;topicmeta&gt; element defines the metadata that applies to a topic when it appears in a map. When appropriate, that metadata also applies to the other topics in the map that are contained by the same element that contains the &lt;topicmeta&gt; element. When creating links, &lt;topicmeta&gt; content can also be used to override the title and short description that are used for the link. In addition, it can be used to add index entries to referenced content using the &lt;keywords&gt; element.">topicmeta</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a>) <em class="ph i"> (any number) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="schemeref__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d509212e111" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d509212e113" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d509212e118" headers="d509212e111" class="stentry"><strong>subjectScheme</strong></td>
+
+<td valign="top" headers="d509212e113 d509212e118" class="stentry"><a class="- topic/xref  ajaxLink" href="subjectScheme.html" title="A subjectScheme is a specialized DITA map that defines a collection of controlled values rather than a collection of topics.">subjectScheme</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="schemeref__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+map/topicref subjectScheme/schemeref </p>
+</div>
+
+<div class="example" id="schemeref__example"><h2 class="title sectiontitle">Example: Extending a category with more
+specific values</h2><div class="fig fignone"><span class="figcap">Figure 1. The map baseOS.ditamap</span>
+<pre class="pre codeblock">&lt;subjectScheme&gt;
+  &lt;subjectdef keys="os" navtitle="Operating system"&gt;
+    &lt;subjectdef keys="linux" navtitle="Linux"&gt;
+      &lt;subjectdef keys="redhat" navtitle="RedHat Linux"/&gt;
+      &lt;subjectdef keys="suse"   navtitle="SuSE Linux"/&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="mswin" navtitle="Windows"/&gt;
+    &lt;subjectdef keys="zos"   navtitle="z/OS"/&gt;
+  &lt;/subjectdef&gt;
+  &lt;enumerationdef&gt;
+    &lt;attributedef name="platform"/&gt;
+    &lt;subjectdef keyref="os"/&gt;
+  &lt;/enumerationdef&gt;
+&lt;/subjectScheme&gt;</pre>
+
+</div>
+<div class="fig fignone"><span class="figcap">Figure 2. Second map that references baseOS.ditamap</span>
+<p class="p">Because a scheme establishes relationships between subjects rather
+than a contextual navigation structure, new relationships can be added
+to existing subjects. In particular, the referencing scheme can extend
+an enumeration by adding new relationships to existing subjects that
+belong to the enumeration. For instance, a scheme could extend the
+baseOS.ditamap scheme shown above by adding Macintosh OS as a child
+of the existing os subject and adding special versions of Windows
+under the existing mswin subject:</p>
+
+<pre class="pre codeblock">&lt;subjectScheme&gt;
+  <strong class="ph b">&lt;schemeref href="baseOS.ditamap"/&gt;</strong>
+  &lt;subjectdef keyref="os"&gt;
+    &lt;subjectdef keys="macos" navtitle="Macintosh"/&gt;
+    &lt;subjectdef keyref="mswin"&gt;
+      &lt;subjectdef keys="winxp"  navtitle="Windows XP"/&gt;
+      &lt;subjectdef keys="winvis" navtitle="Windows Vista"/&gt;
+    &lt;/subjectdef&gt;
+  &lt;/subjectdef&gt;
+&lt;/subjectScheme&gt;</pre>
+
+<p class="p">The references to the subjects defined by the base scheme use the
+keyref attribute to avoid duplicate definitions of the keys.</p>
+
+</div>
+<div class="fig fignone"><span class="figcap">Figure 3. Resulting scheme</span>
+<p class="p">The result of merging the extension scheme with the base scheme
+is exactly the same as the following single scheme.</p>
+
+<pre class="pre codeblock">&lt;subjectScheme&gt;
+  &lt;subjectdef keys="os" navtitle="Operating system"&gt;
+    &lt;subjectdef keys="linux" navtitle="Linux"&gt;
+      &lt;subjectdef keys="redhat" navtitle="RedHat Linux"/&gt;
+      &lt;subjectdef keys="suse"   navtitle="SuSE Linux"/&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="macos" navtitle="Macintosh"/&gt;
+    &lt;subjectdef keys="mswin" navtitle="Windows"&gt;
+      &lt;subjectdef keys="winxp" navtitle="Windows XP"/&gt;
+      &lt;subjectdef keys="win98" navtitle="Windows Vista"/&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="zos"   navtitle="z/OS"/&gt;
+  &lt;/subjectdef&gt;
+  &lt;enumerationdef&gt;
+    &lt;attributedef name="platform"/&gt;
+    &lt;subjectdef keyref="os"/&gt;
+  &lt;/enumerationdef&gt;
+&lt;/subjectScheme&gt;</pre>
+
+<p class="p">Because the extended baseOS scheme bound the os subject to the
+platform attribute, the extension scheme doesn't provide that binding.
+The controlled values added by the extension to the hierarchy for
+the os subject become part of the enumeration bound to the platform
+attribute.</p>
+
+</div>
+</div>
+
+<div class="example"><h2 class="title sectiontitle">Example: Extending a category upwards</h2><p class="p">A
+category can also be extended upward. For instance, an extension scheme
+could create a Software category that includes operating systems as
+well as applications.</p>
+<pre class="pre codeblock">&lt;subjectScheme&gt;
+  &lt;schemeref href="baseOS.ditamap"/&gt;
+  &lt;subjectdef keys="sw" navtitle="Software"&gt;
+    &lt;subjectdef keyref="os"/&gt;
+    &lt;subjectdef keys="app" navtitle="Applications"&gt;
+      &lt;subjectdef keys="apacheserv" navtitle="Apache Web Server"/&gt;
+      &lt;subjectdef keys="mysql"      navtitle="MySQL Database"/&gt;
+    &lt;/subjectdef&gt;
+  &lt;/subjectdef&gt;
+&lt;/subjectScheme&gt;</pre>
+<p class="p">If the extended baseOS scheme defines
+the binding of the os subject with the platform attribute, the app
+subjects provided by the extension scheme aren't subordinate to the
+os subject and thus don't become part of that enumeration. To leave
+open the possibility of upward extension of an enumeration, the content
+provider should define the controlled values in one scheme and define
+the binding to the attribute separately in a extension scheme. That
+way, the content provider can substitute a binding to a different
+extension without rework.</p>
+<p class="p">An adopter would identify the extension
+scheme as the scheme governing controlled values in the DITA environment.
+Any base schemes referenced by the extension scheme are, from a logical
+view, part of the extension scheme.</p>
+</div>
+
+<div class="section" id="schemeref__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="schemeref__attribute_table" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d509212e195" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d509212e198" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d509212e201" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d509212e204" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d509212e207" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">navtitle</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">Specifies the title of the topic as it will appear in the
+				navigation or tables of contents that are generated from the map. Beginning
+				with DITA 1.2, the preferred way to specify the navigation title in a map is
+				with the navtitle element, available inside the topicmeta element.</td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">href</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">A pointer to the resource represented by the
+				&lt;topicref&gt;. See 
+				<a class="- topic/xref  ajaxLink" href="common/thehrefattribute.html" title="The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.">The href attribute</a> for detailed information
+				on supported values and processing implications. References to DITA content
+				cannot be below the topic level: that is, you cannot reference individual
+				elements inside a topic. 
+				<span class="ph" id="schemeref__d8034e2014">References to content other than DITA topics
+				  should use the format attribute to identify the kind of resource being
+				  referenced.</span></td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">keys</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">Introduces one or more global identifiers for a resource
+				referenced from a map. See 
+				<a class="- topic/xref  ajaxLink" href="common/thekeysattribute.html" title="A keys attribute consists of one or more space-separated keys. Map authors define keys using a topicref or topicref specialization that contains the “keys” attribute. Each key definition introduces a global identifier for a resource referenced from a map. Keys resolve to the resources given as the href value on the key definition topicref element, to content contained within the key definition topicref element, or both.">The keys attribute</a> for details on how to
+				use the keys attribute.</td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry">NMTOKEN</td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">processing-role</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">Describes the processing role of the referenced topic. The
+				processing default is "normal". 
+				<span class="ph">If the value is not specified locally, but
+				  is specified on an ancestor, the value will cascade from the closest
+				  ancestor.</span>
+				<dl class="dl"> 
+				   
+					 <dt class="dt dlterm">normal
+					 </dt>
+ 
+					 <dd class="dd">Normal topic that is a readable part of the information.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">resource-only
+					 </dt>
+ 
+					 <dd class="dd">The topic is used as a resource for processing purposes,
+						but is not a readable unit of information on its own. This topic should not be
+						included in a rendered table of contents, and the topic should not be rendered
+						on its own.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry">(normal | resource-only |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">query</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">This attribute is deprecated. It may be removed in the
+				future.</td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">type</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">Describes the target of a reference. For the schemeref
+				element, this value defaults to "scheme", because the element is expected to
+				point to another subject scheme.</td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry">scheme</td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">format</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">The format attribute identifies the format of the resource
+				being referenced. For elements like this one that are designed to reference
+				another map, the value defaults to "ditamap". See 
+				<a class="- topic/xref  ajaxLink" href="common/theformatattribute.html" title="The format attribute identifies the format of the resource being cross referenced. The processing default for format is &#34;dita&#34;. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor.">The format attribute</a> for details on other
+				supported values.</td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry">ditamap</td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">scope</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">The scope attribute identifies the closeness of the
+				relationship between the current document and the target resource. See 
+				<a class="- topic/xref  ajaxLink" href="common/thescopeattribute.html" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The scope attribute</a> for more information on
+				values.</td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry">(local | peer | external |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d509212e195" class="stentry">class, outputclass, keyref</td>
+ 
+			 <td valign="top" headers="d509212e198" class="stentry"><span class="ph">Keyref provides a redirectable
+				  reference based on a key defined within a map. See 
+				  <a class="- topic/xref  ajaxLink" href="common/thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The keyref attribute</a> for information on
+				  using this attribute.</span> Class and
+				outputclass are described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d509212e201" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d509212e204" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d509212e207" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/subjectScheme.html" title="A subject scheme map is used to define sets of controlled values for use in classifying content. Sets of controlled values can be bound to DITA attributes. This allows DITA users to share the controlled values for an information set without having to modify a DTD or XML schema. The list of available values can be modified quickly to adapt to new situations, without the need to manage updates to a document type. In addition, DITA users can define relationships between controlled values and extend a set of controlled values maintained by another team or organization. The list of defined values are not validated by basic XML parsers. Instead, the defined values should be validated by DITA processors.">Subject scheme maps</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/subjectScheme.html" title="A subjectScheme is a specialized DITA map that defines a collection of controlled values rather than a collection of topics.">subjectScheme</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/hasInstance.html" title="The &lt;hasInstance&gt; element specifies that the contained subjects have an INSTANCE-OF relationship with the container subject. In an INSTANCE-OF hierarchy, the child subject is a specific entity or object and the parent subject is a type, kind, or class of entity or object.">hasInstance</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Conditional processing attributes"/>
+<meta name="abstract" content="The metadata attributes specify properties of the content that can be used to determine how the content should be processed. Specialized metadata attributes can be defined to enable specific business processing needs, such as semantic processing and data mining."/>
+<meta name="description" content="The metadata attributes specify properties of the content that can be used to determine how the content should be processed. Specialized metadata attributes can be defined to enable specific business processing needs, such as semantic processing and data mining."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/metadata-attributes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/translation-and-localization-attributes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/condproc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/select-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/about-ditaval.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="conditional-processing-attributes"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Conditional processing attributes</title>
+</head>
+<body id="conditional-processing-attributes">
+
+
+<h1 class="title topictitle1">Conditional processing attributes</h1>
+
+
+<div class="body conbody"><p class="shortdesc">The metadata attributes specify properties of the content
+that can be used to determine   how the content should be processed.
+Specialized metadata attributes can be defined to enable   specific
+business processing needs, such as semantic processing and data mining.</p>
+
+<p class="p">Metadata attributes typically are used for the following purposes:</p>
+
+<ul class="ul">
+<li class="li">Filtering content based on the attribute values, for example,
+to suppress or publish profiled content</li>
+
+<li class="li">Flagging content based on the attribute values, for example, to
+highlight specific content on output</li>
+
+<li class="li">Performing custom processing, for example, to extract business-critical
+data and store in it a database</li>
+
+</ul>
+
+<p class="p">Typically @audience, @platform, @product, @otherprops, @props,
+and specializations    of the @props attributes are used for filtering;
+the same attributes plus the @rev attribute are    used for flagging.
+The @status and @importance attributes, as well as custom attributes
+   specialized from @base, are used for application-specific behavior,
+such as identifying metadata    to aid in search and retrieval.</p>
+
+<div class="section"><h2 class="title sectiontitle">Filtering and flagging attributes</h2>        <p class="p">The following conditional-processing attributes are available on
+most elements:</p>
+    <dl class="dl">
+
+<dt class="dt dlterm">product</dt>
+
+<dd class="dd">The product that is the subject of the discussion. </dd>
+
+
+
+<dt class="dt dlterm">platform</dt>
+
+<dd class="dd">The platform on which the product is deployed.</dd>
+
+
+
+<dt class="dt dlterm">audience</dt>
+
+<dd class="dd">The intended audience of the content.</dd>
+
+
+
+<dt class="dt dlterm">rev</dt>
+
+<dd class="dd">The revision or draft number of the current document. (This is
+typically used only for       flagging.)</dd>
+
+
+
+<dt class="dt dlterm">otherprops</dt>
+
+<dd class="dd">Other properties that do not require semantic identification.</dd>
+
+
+
+<dt class="dt dlterm">props</dt>
+
+<dd class="dd">A generic conditional processing attribute that can be specialized
+to create new semantic       conditional processing attributes.</dd>
+
+
+</dl>
+    <p class="p">In general, a conditional processing attribute provides
+a list of one or more values separated     with whitespace. For instance, <samp class="ph codeph">audience="administrator programmer"</samp> qualifies     the content
+as applying to administrators and programmers.</p>
+   </div>
+
+<div class="section"><h2 class="title sectiontitle">Other metadata attributes</h2>        <p class="p">Other
+attributes are still considered metadata on an element, but they are
+not designed for     filtering or flagging.</p>
+    <dl class="dl">
+
+<dt class="dt dlterm">importance </dt>
+
+<dd class="dd">The degree of priority of the content. This attribute takes a
+single value from an       enumeration. </dd>
+
+
+
+<dt class="dt dlterm">status</dt>
+
+<dd class="dd">The current state of the content. This attribute takes a single
+value from an       enumeration.</dd>
+
+
+
+<dt class="dt dlterm">base</dt>
+
+<dd class="dd">A generic attribute that has no specific purpose, but is intended
+to act as the basis for       specialized attributes that have a simple
+value syntax like the conditional processing       attributes (one
+or more alphanumeric values separated by whitespace).</dd>
+
+
+
+<dt class="dt dlterm">outputclass</dt>
+
+<dd class="dd">Provides a label on one or more element instances, typically to
+specify a role or other       semantic distinction. As the @outputclass
+attribute does not provide a formal type declaration       or the
+structural consistency of specialization, it should be used sparingly,
+usually only as       a temporary measure while a specialization is
+developed. For example, &lt;uicontrol&gt; elements       that define
+button labels could be distinguished by adding an @outputclass attribute:
+      <pre class="pre codeblock">&lt;uicontrol outputclass="button"&gt;Cancel&lt;/uicontrol&gt;</pre>
+The value of       the @outputclass attribute may be used to trigger
+XSLT or CSS rules, while providing a mapping       to be used for
+future migration to a more specialized set of user interface elements.</dd>
+
+
+</dl>
+   </div>
+
+</div>
+
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/metadata-attributes.html" title="Certain attributes are common across most DITA elements. These attributes support content referencing, conditional processing, application of metadata, and globalization and localization.">Metadata attributes</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/translation-and-localization-attributes.html" title="DITA elements have several attributes that support localization and translation.">Translation and localization attributes</a></div>
+</div>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br/>
+<div><a class="- topic/link  ajaxLink" href="archSpec/condproc.html" title="Attribute-based profiling, also known as conditional processing or applicability, is the use of classifying metadata that enables the filtering, flagging, searching, indexing, and other processing based on the association of an element with one or more values in a specific classification domain.">Conditional processing (profiling)</a></div>
+<div><a class="- topic/link  ajaxLink" href="common/about-ditaval.html" title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval.">DITAVAL elements</a></div>
+</div>
+<div class="relinfo relref"><strong>Related reference</strong><br/>
+<div><a class="- topic/link  ajaxLink" href="common/select-atts.html" title="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations.">select-atts attribute group</a></div>
+</div>
+</div>
+
+</body>
+</html>

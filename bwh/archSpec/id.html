@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="ID attribute"/>
+<meta name="abstract" content="The DITA identity attribute provides a mechanism for identifying content for linking."/>
+<meta name="description" content="The DITA identity attribute provides a mechanism for identifying content for linking."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditaaddressing.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/uri-based-addressing.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="id"/>
+<meta name="DC.Language" content="en-us"/>
+<title>ID attribute</title>
+</head>
+<body id="id">
+
+
+  <h1 class="title topictitle1">ID attribute</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">The DITA identity attribute provides a mechanism for identifying content for linking. </p>
+
+    <p class="p">The id attribute assigns an identifier to DITA elements so the elements can be referenced.
+      The id attribute is available for most elements. The id attribute is required on some
+      elements. For a specific element to be referenced, it must have an id attribute with a valid
+      value, although entire maps and the first topic, only topic, or all direct-child topics
+      (depending on processing context) in a topic-containing document may be referenced without
+      using an ID. The requirements for the id attribute differ depending on whether it is used on a
+      topic element, a map element, or an element within a topic or map.</p>
+
+    <p class="p">The id attributes for topic and map elements are true XML IDs and therefore must be unique
+      with respect to other XML IDs within the scope of the XML document that contains the topic or
+      map element. The id attribute for most other elements within topics and maps are not declared
+      to be XML IDs. This means that XML parsers do not require that the values of those attributes
+      be unique. All id attribute values must be XML name tokens.</p>
+
+    <p class="p">Within documents containing multiple topics, the IDs for all non-topic elements that have the
+      same nearest ancestor topic element <span class="keyword">should</span> be unique with respect to each
+      other. The IDs for non-topic elements <span class="keyword">may</span> be the same as non-topic elements
+      with different nearest ancestor topic elements.</p>
+
+    <div class="note note"><span class="notetitle">Note:</span> Thus, within a single XML document containing multiple peer or
+      nested topics, the IDs of the non-topic elements only need to be unique within each topic
+      without regard to the IDs of elements within any ancestor or descendant topics.</div>
+
+    <p class="p">The IDs of all elements within a map <span class="keyword">should</span> be unique within that map
+      document. When two elements within a map have the same ID value, the first element with a
+      given ID value, in document order, <span class="keyword">must</span> be used as the target of any
+      reference to that ID. </p>
+
+    <div class="fig fignone"><span class="figcap">Figure 1. ID requirements summary table</span>
+      
+      <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
+          <th valign="bottom" align="left" id="d14230e53" class="stentry">Element</th>
+
+          <th valign="bottom" align="left" id="d14230e56" class="stentry">Attribute type</th>
+
+          <th valign="bottom" align="left" id="d14230e59" class="stentry">Unique within</th>
+
+          <th valign="bottom" align="left" id="d14230e62" class="stentry">Required</th>
+
+          <th valign="bottom" align="left" id="d14230e65" class="stentry">Value type</th>
+
+        </tr>
+<tr class="strow">
+          <td valign="top" headers="d14230e53" class="stentry">map</td>
+
+          <td valign="top" headers="d14230e56" class="stentry">ID</td>
+
+          <td valign="top" headers="d14230e59" class="stentry">document</td>
+
+          <td valign="top" headers="d14230e62" class="stentry">No</td>
+
+          <td valign="top" headers="d14230e65" class="stentry">XML non-colonized name token</td>
+
+        </tr>
+<tr class="strow">
+          <td valign="top" headers="d14230e53" class="stentry">topic</td>
+
+          <td valign="top" headers="d14230e56" class="stentry">ID</td>
+
+          <td valign="top" headers="d14230e59" class="stentry">document</td>
+
+          <td valign="top" headers="d14230e62" class="stentry">Yes</td>
+
+          <td valign="top" headers="d14230e65" class="stentry">XML non-colonized name token</td>
+
+        </tr>
+<tr class="strow">
+          <td valign="top" headers="d14230e53" class="stentry">sub-map</td>
+
+          <td valign="top" headers="d14230e56" class="stentry">NMTOKEN</td>
+
+          <td valign="top" headers="d14230e59" class="stentry">document</td>
+
+          <td valign="top" headers="d14230e62" class="stentry">Usually no, with some exceptions</td>
+
+          <td valign="top" headers="d14230e65" class="stentry">Any legal XML name token</td>
+
+        </tr>
+<tr class="strow">
+          <td valign="top" headers="d14230e53" class="stentry">sub-topic</td>
+
+          <td valign="top" headers="d14230e56" class="stentry">NMTOKEN</td>
+
+          <td valign="top" headers="d14230e59" class="stentry">individual topic</td>
+
+          <td valign="top" headers="d14230e62" class="stentry">Usually no, with some exceptions</td>
+
+          <td valign="top" headers="d14230e65" class="stentry">Any legal XML name token</td>
+
+        </tr>
+</table>
+
+    </div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditaaddressing.html" title="DITA provides a number of facilities for establishing relationships among DITA elements and between DITA elements and non-DITA resources. All DITA relationships use the same addressing facilities irrespective of the semantics of the relationship established. DITA addresses are either direct, URI-based addresses, or indirect key-based addresses. Within DITA documents, individual elements are addressed by unique IDs specified on the common @id attribute. DITA defines two fragment identifier syntaxes for addressing DITA elements, one for topics and elements within maps and one for non-topic elements within topics.">DITA addressing</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/uri-based-addressing.html" title="Content reference and link relationships can be established from DITA elements using URI references to point directly to targets.">URI-based (direct) addressing</a></div>
+</div>
+</div>
+
+</body>
+</html>

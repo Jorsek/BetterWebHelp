@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Changes from DITA 1.1 to DITA 1.2"/>
+<meta name="abstract" content="(Non-normative) DITA 1.2 adds a number of new features to DITA, including indirect addressing via map-defined keys; the ability to define content-model constraints for DITA document types; specializations for learning content and the machine industry; and taxonomies, ontologies, and controlled vocabularies. Other refinements include extended markup for glossaries and terminology."/>
+<meta name="description" content="(Non-normative) DITA 1.2 adds a number of new features to DITA, including indirect addressing via map-defined keys; the ability to define content-model constraints for DITA document types; specializations for learning content and the machine industry; and taxonomies, ontologies, and controlled vocabularies. Other refinements include extended markup for glossaries and terminology."/>
+<meta name="DC.Relation" scheme="URI" content="../non-normative/changes-from-previous-versions.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="new-in_1_2"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Changes from DITA 1.1 to DITA 1.2</title>
+</head>
+<body id="new-in_1_2">
+
+
+<h1 class="title topictitle1">Changes from DITA 1.1 to DITA 1.2</h1>
+
+
+<div class="body conbody"><p class="shortdesc">(Non-normative) DITA 1.2 adds a number of new features
+to DITA, including indirect     addressing via map-defined keys; the
+ability to define content-model constraints for DITA     document
+types; specializations for learning content and the machine industry;
+and taxonomies,     ontologies, and controlled vocabularies. Other
+refinements include extended markup for     glossaries and terminology.</p>
+
+<div class="section"><h2 class="title sectiontitle">New features</h2>              <div class="p">The following
+features are new in DITA 1.2:<ul class="ul">
+<li class="li">Keys and key references. See <a class="- topic/xref  ajaxLink" href="archSpec/key-based_addressing.html" title="The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.">Key-based addressing</a>.</li>
+
+<li class="li">Constraint modules. Constraint modules allow base content models
+to be further             constrained without the need for specialization.
+For example, a constraint module can             make optional elements
+required or disallow optional elements in a specific content     
+       model. See <a class="- topic/xref  ajaxLink" href="archSpec/createConstraintsDomainSpec.html" title="Constraint modules define additional constraints for corresponding vocabulary modules in order to restrict content models or attribute lists for specific element types, remove extension elements from an integrated domain module, or replace base element types with domain-provided extension element types. Constraint modules do not and cannot change element semantics, only the details of how element types can be used in the context of a specific concrete document type. Because constraints can make optional elements required, documents that use the same vocabulary modules may still have incompatible constraints. Thus the use of constraints can affect the ability for content from one topic or map to be used directly in another topic or map.">Constraint domains</a>.</li>
+
+<li class="li">Topic and map specializations for learning and training information,
+including             interactive assessments. See the <a class="- topic/xref  ajaxLink" href="archSpec-learningTraining.html" title="DITA 1.2 introduces the Learning and Training specialization, which is designed for developing instructional materials. It contains all of base DITA and some (but not all) parts of the Technical Content package.">architectural
+specification for learning and training content</a>.</li>
+
+<li class="li">New elements for use with glossary entry topics for more complete
+description of             terms, definition of acronyms, and so on. </li>
+
+<li class="li">New map specialization for defining controlled vocabularies and
+taxonomies. See <a class="- topic/xref  ajaxLink" href="langref/subjectScheme.html#subjectScheme" title="A subjectScheme is a specialized DITA map that defines a collection of controlled values rather than a collection of topics.">subjectScheme</a>. </li>
+
+<li class="li">New machine-industry task specialization. See <a class="- topic/xref  ajaxLink" href="archSpec/dita_machinerytask_topic.html#dita_spec_2_1_info_tasks" title="The machinery task document type supports the development of instructions for the completion of a procedure. The machinery task document type is built using the general task information type combined with the Machinery Taskbody Constraint.">Machinery
+task topic</a>.</li>
+
+</ul>
+</div>
+     </div>
+
+<div class="section"><h2 class="title sectiontitle">New element types</h2>              <div class="p">The following
+base element types are new in DITA 1.2:<dl class="dl">
+<dt class="dt dlterm">&lt;text&gt;</dt>
+
+<dd class="dd">Allowed in most contexts where text is allowed but neither &lt;ph&gt;
+nor &lt;keyword&gt;               are allowed. Enables reuse of text
+in almost any context.</dd>
+
+
+<dt class="dt dlterm">&lt;bodydiv&gt;</dt>
+
+<dd class="dd">Allows creation of untitled containers within topic bodies. Intended
+primarily for               specialization.</dd>
+
+
+<dt class="dt dlterm">&lt;sectiondiv&gt;</dt>
+
+<dd class="dd">Allows creation of untitled containers within sections. Intended
+primarily for               specialization.</dd>
+
+
+<dt class="dt dlterm">&lt;keydef&gt;</dt>
+
+<dd class="dd">Topicref specialization for defining keys. Sets the default value
+for the               @processing-role attribute to "resource-only".</dd>
+
+
+<dt class="dt dlterm">&lt;mapref&gt;</dt>
+
+<dd class="dd">Topicref specialization for referring to DITA maps. Sets the default
+value for the               @format attribute to "ditamap".</dd>
+
+
+<dt class="dt dlterm">&lt;topicset&gt;</dt>
+
+<dd class="dd">Used to define sets of topicrefs that represent an atomic unit
+of reusable               navigation structure. Requires the @id attribute
+be specified.</dd>
+
+
+<dt class="dt dlterm">&lt;topicsetref&gt;</dt>
+
+<dd class="dd">References a &lt;topicset&gt; element. Enables preservation of the
+identity of the               referenced topicset.</dd>
+
+
+<dt class="dt dlterm">&lt;anchor&gt;</dt>
+
+<dd class="dd">Defines a point within a map to which topicrefs can be bound using
+the               &lt;anchorref&gt; element.</dd>
+
+
+<dt class="dt dlterm">&lt;anchorref&gt;</dt>
+
+<dd class="dd">"Pushes" one or more topicrefs onto an anchor point defined by
+an &lt;anchor&gt;               element. Similar to a conref push but
+allows the relationship to be managed               dynamically by
+the renderer.</dd>
+
+</dl>
+</div>
+     </div>
+
+<div class="section"><h2 class="title sectiontitle">Refinements to maps</h2>              <div class="p">     
+   <ul class="ul" id="new-in_1_2__ul_65b6a262-1862-4ce2-a07f-4a5469f6f974">
+<li class="li">Map elements can use the &lt;title&gt; element in place of the title
+attribute.</li>
+
+<li class="li">Relationship table elements can have &lt;title&gt; as an optional
+first child.</li>
+
+<li class="li">Topicref elements can use the &lt;navtitle&gt; element in place of
+the navtitle             attribute.</li>
+
+<li class="li">Maps and topicrefs can now contain the same metadata elements
+as topic prologs.</li>
+
+<li class="li">New topicref attribute named processing-role. Indicates whether
+or not a topic             reference contributes to the navigation
+structure of the containing map.</li>
+
+</ul>
+       </div>
+     </div>
+
+<div class="section"><h2 class="title sectiontitle">Refinements to content references</h2>        
+     <div class="p">         <ul class="ul" id="new-in_1_2__ul_412dd8b6-085a-49a2-982e-7481ab2cd373">
+<li class="li">Content references can now point to ranges of elements. For example,
+a single content             reference from a &lt;step&gt; element can
+include a sequence of &lt;step&gt; elements.</li>
+
+<li class="li">Content references can "push" elements into a target context,
+allowing unilateral             augmentation of topics from other
+topics. For example, given a base topic with generic             content,
+a using map could include both the generic topic and a separate topic
+that uses             conref push to add map-specific content to the
+generic topic.</li>
+
+<li class="li">Content reference resolution can be deferred so that it is done
+later in a rendering             process or completely deferred so
+that it can be done by a separate delivery mechanism,            
+for example., Eclipse information centers.</li>
+
+</ul>
+       </div>
+     </div>
+
+<div class="section"><h2 class="title sectiontitle">Refinements to topic elements</h2>            
+ <div class="p">         <ul class="ul" id="new-in_1_2__ul_7e0a13df-f2b8-45af-93a0-af7633d9fad4">
+<li class="li">The base task topic type has a more relaxed content model. This
+enables creation of a             wider variety of specialized tasks,
+including task specializations that do not have             formal
+markup for individual steps. The OASIS-defined task shell document
+type             integrates a constraint module that imposes the same
+constrained content model as             defined in the DITA 1.1 task
+topic type.</li>
+
+<li class="li">A number of content elements allow the new @keyref attribute,
+including the &lt;ph&gt;,             &lt;keyword&gt;, and &lt;term&gt; elements.
+When using the @keyref attribute, these elements             can get
+their effective content from the key-defining &lt;topicref&gt; element
+and can also             be treated as navigation links to the resource
+pointed to by the key-defining             &lt;topicref&gt; element,
+if any. For example, a term element can use @keyref to link to   
+         the glossary entry topics for the term.</li>
+
+<li class="li">The &lt;image&gt; element takes the new @scalefit attribute, which
+indicates whether or             not the image should be scaled to
+fit the presentation context.</li>
+
+<li class="li">The &lt;draft-comment&gt; element is now allowed in most contexts.</li>
+
+<li class="li">The &lt;figgroup&gt; element now allows &lt;data&gt; as a subelement.</li>
+
+</ul>
+       </div>
+     </div>
+
+<div class="section"><h2 class="title sectiontitle">Refinements to specialization</h2>            
+ <div class="p">         <ul class="ul" id="new-in_1_2__ul_998c8f1b-d5ce-423f-a492-47726f2a926d">
+<li class="li">Structural and domain vocabulary modules can now both be listed
+in the domains             attribute. Structural modules can depend
+on and specialize elements from domains. For             example,
+a structural domain for reference topics for a specific programming
+language             could depend on the Programming domain (pr-d)
+and specialize elements from that             domain.</li>
+
+<li class="li">Information Architects can indicate whether the use of a given
+vocabulary module             requires strict or weak checking of
+content reference constraints.</li>
+
+<li class="li">The implementation patterns for vocabulary modules have been refined.
+In particular,             each element type now defines a separate
+parameter entity for its content model and             attribute list,
+allowing per-element configuration of content models and attribute
+lists             through constraint modules.</li>
+
+</ul>
+       </div>
+     </div>
+
+<div class="section"><h2 class="title sectiontitle">Other refinements</h2>              <div class="p">       
+ <ul class="ul" id="new-in_1_2__ul_b93a56ca-9d6b-4602-ae87-ea2f8d32d290">
+<li class="li">The &lt;dita&gt; element now has the @DITAArchVersion attribute.</li>
+
+<li class="li">A number of processing details have been clarified where they
+were underspecified in             DITA 1.1.</li>
+
+<li class="li">Most attributes that had enumerated values in DITA 1.1 are now
+unenumerated, allowing             specializations to define different
+enumerations if they choose.</li>
+
+</ul>
+       </div>
+     </div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="non-normative/changes-from-previous-versions.html" title="(Non-normative) The following topics outline the changes from earlier versions of DITA to the current version.">Changes from previous versions</a></div>
+</div>
+</div>
+
+</body>
+</html>

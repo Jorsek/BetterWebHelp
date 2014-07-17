@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="audience"/>
+<meta name="abstract" content="The &lt;audience&gt; metadata element indicates, through the value of its type attribute, the intended audience for a topic."/>
+<meta name="description" content="The &lt;audience&gt; metadata element indicates, through the value of its type attribute, the intended audience for a topic."/>
+<meta name="DC.subject" content="audience, intended audience, Prolog elements"/>
+<meta name="keywords" content="audience, intended audience, Prolog elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/prolog2.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/prolog.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/author.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="audience"/>
+<meta name="DC.Language" content="en-us"/>
+<title>audience</title>
+</head>
+<body id="audience">
+
+
+  <h1 class="title topictitle1">audience</h1>
+
+  
+  
+  <div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">audience</span>&gt; metadata element indicates, through the value of
+    its type attribute, the intended audience for a topic.</p>
+<div class="section">
+      <p class="p">Since a topic can have multiple audiences, you can include multiple audience elements. For
+        each audience you specify, you can identify the high-level task (<em class="ph i"><span class="keyword">job</span></em>) they are trying to accomplish and the level of experience (<em class="ph i"><span class="keyword">experiencelevel</span></em>) expected. <span class="ph">The audience element may be used
+          to provide a more detailed definition of values used throughout the map or topic on the
+          audience attribute.</span></p>
+
+      <p class="p">Many of the attributes on the &lt;audience&gt; element have enumerated values, which may be
+        extended by using constaints or by using associated attributes. For instance, the @othertype
+        attribute can be used to extend the audience type enumeration.</p>
+
+    </div>
+<div class="section" id="audience__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d76904e59" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d76904e61" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d76904e66" headers="d76904e59" class="stentry"><strong>topic, map, concept, ditabase, glossary, glossentry, glossgroup, reference, task, bookmap, classifyMap, subjectScheme, machineryTask, learningAssessment, learningBookmap, learningContent, learningMap, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d76904e61 d76904e66" class="stentry"> no content </td>
+</tr>
+</table>
+</div>
+<div class="section" id="audience__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d76904e76" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d76904e78" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d76904e83" headers="d76904e76" class="stentry"><strong>topic (base), topic (technical content), concept, ditabase, glossary, glossentry, glossgroup, reference, task (strict), task (general), machineryTask, learningAssessment, learningContent, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d76904e78 d76904e83" class="stentry"><a class="- topic/xref  ajaxLink" href="metadata.html" title="The &lt;metadata&gt; section of the prolog contains information about a topic such as audience and product information. Metadata can be used by computational processes to select particular topics or to prepare search indexes or to customize navigation. Elements inside of &lt;metadata&gt; provide information about the content and subject of a topic; prolog elements outside of &lt;metadata&gt; provide lifecycle information for the content unit (such as the author or copyright), which are unrelated to the subject.">metadata</a></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d76904e105" headers="d76904e76" class="stentry"><strong>map (base), map (technical content), classifyMap, subjectScheme, learningMap</strong></td>
+
+<td valign="top" headers="d76904e78 d76904e105" class="stentry"><a class="- topic/xref  ajaxLink" href="metadata.html" title="The &lt;metadata&gt; section of the prolog contains information about a topic such as audience and product information. Metadata can be used by computational processes to select particular topics or to prepare search indexes or to customize navigation. Elements inside of &lt;metadata&gt; provide information about the content and subject of a topic; prolog elements outside of &lt;metadata&gt; provide lifecycle information for the content unit (such as the author or copyright), which are unrelated to the subject.">metadata</a>, <a class="- topic/xref  ajaxLink" href="topicmeta.html" title="The &lt;topicmeta&gt; element defines the metadata that applies to a topic when it appears in a map. When appropriate, that metadata also applies to the other topics in the map that are contained by the same element that contains the &lt;topicmeta&gt; element. When creating links, &lt;topicmeta&gt; content can also be used to override the title and short description that are used for the link. In addition, it can be used to add index entries to referenced content using the &lt;keywords&gt; element.">topicmeta</a></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d76904e140" headers="d76904e76" class="stentry"><strong>bookmap, learningBookmap</strong></td>
+
+<td valign="top" headers="d76904e78 d76904e140" class="stentry"><a class="- topic/xref  ajaxLink" href="metadata.html" title="The &lt;metadata&gt; section of the prolog contains information about a topic such as audience and product information. Metadata can be used by computational processes to select particular topics or to prepare search indexes or to customize navigation. Elements inside of &lt;metadata&gt; provide information about the content and subject of a topic; prolog elements outside of &lt;metadata&gt; provide lifecycle information for the content unit (such as the author or copyright), which are unrelated to the subject.">metadata</a>, <a class="- topic/xref  ajaxLink" href="topicmeta.html" title="The &lt;topicmeta&gt; element defines the metadata that applies to a topic when it appears in a map. When appropriate, that metadata also applies to the other topics in the map that are contained by the same element that contains the &lt;topicmeta&gt; element. When creating links, &lt;topicmeta&gt; content can also be used to override the title and short description that are used for the link. In addition, it can be used to add index entries to referenced content using the &lt;keywords&gt; element.">topicmeta</a>, <a class="- topic/xref  ajaxLink" href="bookmeta.html" title="The &lt;bookmeta&gt; element contains information about the book that is not considered book content, such as copyright information, author information, and any classifications.">bookmeta</a></td>
+</tr>
+</table>
+</div>
+<div class="section" id="audience__inheritance"><h2 class="title sectiontitle">Inheritance</h2>
+      
+      <p class="p">- topic/audience </p>
+
+    </div>
+<div class="example" id="audience__example"><h2 class="title sectiontitle">Example</h2>
+      
+      <p class="p">For a command reference topic for experienced programmers, the following might be an
+        appropriate indication of that audience:</p>
+
+      <pre class="pre">&lt;audience type="programmer" job="programming" experiencelevel="expert"/&gt;</pre>
+
+    </div>
+<div class="section" id="audience__attributes"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <table cellpadding="4" cellspacing="0" summary="" id="audience__audience_attr" border="1" class="simpletable"><tr class="sthead">
+          <th valign="bottom" align="left" id="d76904e207" class="stentry" width="14.285714285714286%">Name</th>
+
+          <th valign="bottom" align="left" id="d76904e210" class="stentry" width="42.85714285714286%">Description</th>
+
+          <th valign="bottom" align="left" id="d76904e213" class="stentry" width="14.285714285714286%">Data Type</th>
+
+          <th valign="bottom" align="left" id="d76904e216" class="stentry" width="14.285714285714286%">Default Value</th>
+
+          <th valign="bottom" align="left" id="d76904e219" class="stentry" width="14.285714285714286%">Required?</th>
+
+        </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d76904e207" class="stentry">type</td>
+ 
+			 <td valign="top" headers="d76904e210" class="stentry">Indicates the kind of person for whom the content of the
+				topic is intended. 
+				<span class="ph" id="audience__d8034e4815">Note that this differs from the type
+				  attribute on many other DITA elements.</span> Allowable values are:
+				<dl class="dl">
+				   
+					 <dt class="dt dlterm">user
+					 </dt>
+ 
+					 <dd class="dd">A user of the product
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">purchaser
+					 </dt>
+ 
+					 <dd class="dd">A product purchaser
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">administrator
+					 </dt>
+ 
+					 <dd class="dd">A product administrator
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">programmer
+					 </dt>
+ 
+					 <dd class="dd">A programmer
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">executive
+					 </dt>
+ 
+					 <dd class="dd">An executive
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">services
+					 </dt>
+ 
+					 <dd class="dd">Someone who provides services related to the product
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">other
+					 </dt>
+ 
+					 <dd class="dd">Use the value specified by the othertype attribute
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d76904e213" class="stentry">(user | purchaser | administrator | programmer | executive |
+				services | other | -dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d76904e216" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d76904e219" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d76904e207" class="stentry">othertype</td>
+ 
+			 <td valign="top" headers="d76904e210" class="stentry">Indicates an alternate audience type, when the type is not
+				available in the type attribute value list. This value is used as the
+				user-provided audience when the type attribute value is set to
+				"other."</td>
+ 
+			 <td valign="top" headers="d76904e213" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d76904e216" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d76904e219" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d76904e207" class="stentry">job</td>
+ 
+			 <td valign="top" headers="d76904e210" class="stentry">Indicates the high-level task the audience for the topic is
+				trying to accomplish. Different audiences may read the same topic in terms of
+				different high-level tasks; for example, an administrator may read the topic
+				while administering, while a programmer may read the same topic while
+				customizing. Beginning with DITA 1.2, values in this attribute are not limited
+				to a small number of choices; the following values were used in DITA 1.0 and
+				DITA 1.1, and are still provided as sample values: 
+				<span class="keyword">installing</span>, 
+				<span class="keyword">customizing</span>, 
+				<span class="keyword">administering</span>, 
+				<span class="keyword"> programming</span>, 
+				<span class="keyword"> using</span>, 
+				<span class="keyword">maintaining</span>, 
+				<span class="keyword">troubleshooting</span>, 
+				<span class="keyword">evaluating</span>, 
+				<span class="keyword">planning</span>, 
+				<span class="keyword">migrating</span>, 
+				<span class="keyword">other</span>, 
+				<a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element."><span class="keyword">-dita-use-​conref-​target</span></a>.</td>
+ 
+			 <td valign="top" headers="d76904e213" class="stentry">NMTOKEN</td>
+ 
+			 <td valign="top" headers="d76904e216" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d76904e219" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d76904e207" class="stentry">otherjob</td>
+ 
+			 <td valign="top" headers="d76904e210" class="stentry">If the job attribute value is "other" the value of
+				this attribute is used to identify a kind of job other than the default ones
+				provided by the job attribute. 
+				</td>
+ 
+			 <td valign="top" headers="d76904e213" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d76904e216" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d76904e219" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d76904e207" class="stentry">experiencelevel</td>
+ 
+			 <td valign="top" headers="d76904e210" class="stentry">Indicates the level of experience the audience is assumed to
+				possess. Different audiences may have different experience levels with respect
+				to the same topic; for example, a topic may require general knowledge from a
+				programmer, but expert knowledge from a user. Beginning with DITA 1.2, values
+				in this attribute are not limited to a small number of choices; the following
+				values were used in DITA 1.0 and DITA 1.1, and are still provided as sample
+				values:
+				<dl class="dl">
+				   
+					 <dt class="dt dlterm">novice
+					 </dt>
+ 
+					 <dd class="dd">A first time user.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">general
+					 </dt>
+ 
+					 <dd class="dd">The most common user.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">expert
+					 </dt>
+ 
+					 <dd class="dd">An experienced user.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d76904e213" class="stentry">NMTOKEN</td>
+ 
+			 <td valign="top" headers="d76904e216" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d76904e219" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d76904e207" class="stentry">name</td>
+ 
+			 <td valign="top" headers="d76904e210" class="stentry">Used to associate the audience element with values used in
+				the audience attribute</td>
+ 
+			 <td valign="top" headers="d76904e213" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d76904e216" class="stentry">#REQUIRED</td>
+ 
+			 <td valign="top" headers="d76904e219" class="stentry">Yes</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d76904e207" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d76904e210" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d76904e213" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d76904e216" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d76904e219" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d76904e207" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d76904e210" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d76904e213" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d76904e216" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d76904e219" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d76904e207" class="stentry">class</td>
+ 
+			 <td valign="top" headers="d76904e210" class="stentry">A common attribute described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d76904e213" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d76904e216" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d76904e219" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+
+    </div>
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/prolog2.html" title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's &lt;topicmeta&gt; element.">Prolog (metadata) elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/prolog.html" title="The &lt;prolog&gt; element contains information about the topic as an whole (for example, author information or subject category) that is either entered by the author or maintained by a software application. Much of the metadata inside the &lt;prolog&gt; will not be displayed with the topic when the topic is rendered, but may be used by processes that generate search indexes or customize navigation.">prolog</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/author.html" title="The &lt;author&gt; metadata element contains the name of the topic's author.">author</a></div>
+</div>
+</div>
+
+</body>
+</html>

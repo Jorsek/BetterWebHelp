@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Table elements"/>
+<meta name="abstract" content="DITA topics support two types of tables. The &lt;table&gt; element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself."/>
+<meta name="description" content="DITA topics support two types of tables. The &lt;table&gt; element uses the OASIS Exchange Table Model (formerly known as the CALS table model). The OASIS table supports the spanning of multiple rows or columns for special layout or organizational needs, and provides a wide variety of controls over the display properties of the data and even the table structure itself."/>
+<meta name="DC.subject" content="Table elements"/>
+<meta name="keywords" content="Table elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/topic_elements.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/body2.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/relatedl.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/table.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/tgroup.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/colspec.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/thead.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/tbody.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/row.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/entry.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/simpletable.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/sthead.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/strow.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/stentry.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="table2"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Table elements</title>
+</head>
+<body id="table2">
+
+
+<h1 class="title topictitle1">Table elements</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">DITA topics support two types of tables. The &lt;<span class="keyword">table</span>&gt;
+element uses the
+OASIS Exchange Table Model (formerly known as the CALS table model).
+The OASIS table supports the spanning of multiple rows or columns
+for special layout or organizational needs, and provides a wide variety
+of controls over the display properties of the data and even the table
+structure itself.</p>
+
+<div class="section"><p class="p">The other table structure in DITA is called &lt;<span class="keyword">simpletable</span>&gt;.
+As the name implies, it is structurally less complex than the OASIS
+table, and can be used as a very simple, regular table for which close
+control of formatting is not as important. The main advantage of simpletable
+is for describing lists of data with regular headings, such as telephone
+directory listings, display adapter configuration data, or API properties. </p>
+</div>
+
+</div>
+
+<div class="related-links">
+<ol class="olchildlinks">
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/table.html">table</a><br/>
+The &lt;<span class="keyword">table</span>&gt; element organizes arbitrarily complex relationships of tabular information. This standard table markup allows column or row spanning and table captions or descriptions. An optional title allowed inside the table element provides a caption to describe the table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/tgroup.html">tgroup</a><br/>
+The &lt;<span class="keyword">tgroup</span>&gt; element in a table contains column, row,     spanning, header, and the body (&lt;<span class="keyword">tbody</span>&gt;) of the table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/colspec.html">colspec</a><br/>
+The &lt;<span class="keyword">colspec</span>&gt; element contains a column specification for a table, including assigning a column name and number, cell content alignment, and column width.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/thead.html">thead</a><br/>
+The table header (&lt;<span class="keyword">thead</span>&gt;) element precedes the table body (&lt;<span class="keyword">tbody</span>&gt;) element in a complex table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/tbody.html">tbody</a><br/>
+The &lt;<span class="keyword">tbody</span>&gt; element contains the rows in a table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/row.html">row</a><br/>
+The &lt;<span class="keyword">row</span>&gt; element contains a single row in a table &lt;<span class="keyword">tgroup</span>&gt;.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/entry.html">entry</a><br/>
+The &lt;<span class="keyword">entry</span>&gt; element defines a single cell in a table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/simpletable.html">simpletable</a><br/>
+The &lt;<span class="keyword">simpletable</span>&gt; element is used for tables that are regular in structure and do not need a caption. Choose the simple table element when you want to show information in regular rows and columns. For example, multi-column tabular data such as phone directory listings or parts lists are good candidates for simpletable. Another good use of simpletable is for information that seems to beg for a three-part definition list; the keycol attribute may be used to indicate which column represents the "key" or term-like column of your structure.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/sthead.html">sthead</a><br/>
+The simpletable header (&lt;sthead&gt;) element contains the table's header row. The header row is optional in a simple table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/strow.html">strow</a><br/>
+The &lt;<span class="keyword">simpletable</span>&gt; row (&lt;<span class="keyword">strow</span>&gt;) element specifies a row in a simple table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/stentry.html">stentry</a><br/>
+The simpletable entry (&lt;stentry&gt;) element represents a single table cell, like &lt;entry&gt; in &lt;table&gt;. You can place any number of stentry cells in either an &lt;<span class="keyword">sthead</span>&gt; element (for headings) or &lt;<span class="keyword">strow</span>&gt; element (for rows of data).</li>
+</ol>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/topic_elements.html" title="The base topic elements include elements that make up the core building blocks of the DITA topic, such as topic, body, and related-links, as well as elements like &lt;p&gt; and &lt;ph&gt; that are used in many topic specializations. Some of these elements are also available inside the &lt;topicmeta&gt; map element.">Topic elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/body2.html" title="The body elements support the most common types of content authoring for topics: paragraphs, lists, phrases, figures, and other common types of exhibits in a document.">Body elements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/relatedl.html" title="The related-links section of DITA topics is a special structure that contains links. Links support navigation from a topic to other related topics or resources.">Related links elements</a></div>
+</div>
+</div>
+
+</body>
+</html>

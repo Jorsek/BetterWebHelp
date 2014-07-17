@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="person"/>
+<meta name="abstract" content="The &lt;person&gt; element contains information about the name of a person. Note that unlike the &lt;personname&gt; element, the &lt;person&gt; element is not restricted to describing the names of authors."/>
+<meta name="description" content="The &lt;person&gt; element contains information about the name of a person. Note that unlike the &lt;personname&gt; element, the &lt;person&gt; element is not restricted to describing the names of authors."/>
+<meta name="DC.subject" content="Bookmap elements, person"/>
+<meta name="keywords" content="Bookmap elements, person"/>
+<meta name="DC.Relation" scheme="URI" content="../common/bookmap-meta.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/organization.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/printlocation.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="person"/>
+<meta name="DC.Language" content="en-us"/>
+<title>person</title>
+</head>
+<body id="person">
+
+
+<h1 class="title topictitle1">person</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;person&gt; element contains information about the
+name of a person. Note that unlike the &lt;personname&gt; element,
+the &lt;person&gt; element is not restricted to describing the names
+of authors. </p>
+
+<div class="section" id="person__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d451567e37" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d451567e39" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d451567e44" headers="d451567e37" class="stentry"><strong>bookmap</strong></td>
+
+<td valign="top" headers="d451567e39 d451567e44" class="stentry"> ( text data  or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="foreign.html" title="The &lt;foreign&gt; element allows the introduction of non-DITA content, for example, MathML, SVG, or Rich Text Format (RTF). The &lt;foreign&gt; element or a specialization may contain more than one type of non-DITA content or a mix of DITA and non-DITA content. Specialization of the &lt;foreign&gt; element generally is implemented as a domain, but architects looking for more control over the content may implement foreign vocabularies as structural specializations.">foreign</a> or <a class="- topic/xref  ajaxLink" href="unknown.html" title="The &lt;unknown&gt; element is an open extension that allows information architects to incorporate xml fragments that do not necessarily fit into an existing DITA use case. Processors should ignore this element unless otherwise instructed.">unknown</a> or <a class="- topic/xref  ajaxLink" href="keyword.html" title="The &lt;keyword&gt; element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.">keyword</a> or <a class="- topic/xref  ajaxLink" href="apiname.html" title="The &lt;apiname&gt; element provides the name of an application programming interface (API) such as a Java class name or method name. This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information.">apiname</a> or <a class="- topic/xref  ajaxLink" href="option.html" title="The &lt;option&gt; element describes an option that can be used to modify a command (or something else, like a configuration). This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information.">option</a> or <a class="- topic/xref  ajaxLink" href="parmname.html" title="When referencing the name of an application programming interface parameter within the text flow of your topic, use the parameter name (&lt;parmname&gt;) element to mark up the parameter. This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information.">parmname</a> or <a class="- topic/xref  ajaxLink" href="cmdname.html" title="The command name (&lt;cmdname&gt;) element specifies the name of a command when it is part of a software discussion. This element is part of the DITA software domain, a special set of DITA elements designed to document software tasks, concepts and reference information.">cmdname</a> or <a class="- topic/xref  ajaxLink" href="msgnum.html" title="The message number (&lt;msgnum&gt;) element contains the number of a message produced by an application or program. This element is part of the DITA software domain, a special set of DITA elements designed to document software tasks, concepts and reference information.">msgnum</a> or <a class="- topic/xref  ajaxLink" href="varname.html" title="The variable name (&lt;varname&gt;) element defines a variable that must be supplied to a software application. The variable name element is very similar to the variable (var) element, but variable name is used outside of syntax diagrams. This element is part of the DITA software domain, a special set of DITA elements designed to document software tasks, concepts and reference information.">varname</a> or <a class="- topic/xref  ajaxLink" href="wintitle.html" title="The window title &lt;wintitle&gt; element can be used to mark up names of windows or dialogs, or other user interface elements at the same level of grouping, including wizard titles, wizard page titles, and window pane titles. This element is part of the DITA user interface domain, a special set of DITA elements designed to document user interface tasks, concepts and reference information.">wintitle</a> or <a class="- topic/xref  ajaxLink" href="term.html" title="The &lt;term&gt; element identifies words that may have or require extended definitions or explanations.">term</a> or <a class="- topic/xref  ajaxLink" href="abbreviated-form.html" title="The &lt;abbreviated-form&gt; element represents a reference to a term that may appear in an abbreviated form (often an acronym). The long and short forms of the term are generally defined in a &lt;glossentry&gt; topic. Processors should display the referenced term when rendering an &lt;abbreviated-form&gt; element.">abbreviated-form</a>) <em class="ph i"> (any number) </em></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d451567e217" headers="d451567e37" class="stentry"><strong>learningBookmap</strong></td>
+
+<td valign="top" headers="d451567e39 d451567e217" class="stentry"> ( text data  or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="foreign.html" title="The &lt;foreign&gt; element allows the introduction of non-DITA content, for example, MathML, SVG, or Rich Text Format (RTF). The &lt;foreign&gt; element or a specialization may contain more than one type of non-DITA content or a mix of DITA and non-DITA content. Specialization of the &lt;foreign&gt; element generally is implemented as a domain, but architects looking for more control over the content may implement foreign vocabularies as structural specializations.">foreign</a> or <a class="- topic/xref  ajaxLink" href="unknown.html" title="The &lt;unknown&gt; element is an open extension that allows information architects to incorporate xml fragments that do not necessarily fit into an existing DITA use case. Processors should ignore this element unless otherwise instructed.">unknown</a> or <a class="- topic/xref  ajaxLink" href="keyword.html" title="The &lt;keyword&gt; element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.">keyword</a> or <a class="- topic/xref  ajaxLink" href="term.html" title="The &lt;term&gt; element identifies words that may have or require extended definitions or explanations.">term</a>) <em class="ph i"> (any number) </em></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="person__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d451567e303" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d451567e305" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d451567e310" headers="d451567e303" class="stentry"><strong>bookmap, learningBookmap</strong></td>
+
+<td valign="top" headers="d451567e305 d451567e310" class="stentry"><a class="- topic/xref  ajaxLink" href="publisherinformation.html" title="The &lt;publisherinformation&gt; contains information about what group or person published the book, where it was published, and certain details about its publication history. Other publication history information is found in the &lt;bookchangehistory&gt; element.">publisherinformation</a>, <a class="- topic/xref  ajaxLink" href="published.html" title="The &lt;published&gt; element contains information about the person or organization publishing the book, the dates when it was started and completed, and any special restrictions associated with it.">published</a>, <a class="- topic/xref  ajaxLink" href="reviewed.html" title="The &lt;reviewed&gt; element contains information about when and by whom the book was reviewed during its publication history.">reviewed</a>, <a class="- topic/xref  ajaxLink" href="edited.html" title="The &lt;edited&gt; element contains information about when and by whom the book was edited during its publication history.">edited</a>, <a class="- topic/xref  ajaxLink" href="tested.html" title="The &lt;tested&gt; element contains information about when and by whom the book was tested during its publication history.">tested</a>, <a class="- topic/xref  ajaxLink" href="approved.html" title="The &lt;approved&gt; element contains information about when and by whom the book was approved during its publication history.">approved</a>, <a class="- topic/xref  ajaxLink" href="bookevent.html" title="The &lt;bookevent&gt; element indicates a general event in the publication history of a book. This is an appropriate element for specialization if the current set of specific book event types does not meet your needs. If an element already exists to describe a specific type of event, such as &lt;reviewed&gt;, &lt;edited&gt;, or &lt;approved&gt;, that element should be used instead.">bookevent</a>, <a class="- topic/xref  ajaxLink" href="maintainer.html" title="The &lt;maintainer&gt; element contains information about who maintains the document; the maintainer may be an organization or a person.">maintainer</a>, <a class="- topic/xref  ajaxLink" href="bookowner.html" title="The &lt;bookowner&gt; element contains the owner of the copyright.">bookowner</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="person__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+topic/data bookmap/person </p>
+</div>
+
+<div class="example" id="person__example"><h2 class="title sectiontitle">Example</h2><pre class="pre codeblock">&lt;bookmeta&gt;
+  &lt;bookrights&gt;
+    &lt;copyrfirst&gt;&lt;year&gt;1977&lt;/year&gt;&lt;/copyrfirst&gt;
+    &lt;copyrlast&gt;&lt;year&gt;2008&lt;/year&gt;&lt;/copyrlast&gt;
+    &lt;bookowner&gt;&lt;person&gt;Jane Doe&lt;/person&gt;&lt;/bookowner&gt;
+  &lt;/bookrights&gt;
+&lt;/bookmeta&gt;</pre>
+</div>
+
+<div class="section" id="person__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="person__person_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d451567e399" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d451567e402" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d451567e405" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d451567e408" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d451567e411" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">name</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">Defines a unique name for the object.</td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">datatype</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">Describes the type of data contained in the value attribute
+				or within the data element. A typical use of datatype will be the identifying
+				URI for an XML Schema datatype.</td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">value</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">Specifies a value associated with the current property or
+				element.</td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">href</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">Provides a reference to a resource. See 
+				<a class="- topic/xref  ajaxLink" href="common/thehrefattribute.html" title="The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.">The href attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">format</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">The format attribute identifies the format of the resource
+				being referenced. See 
+				<a class="- topic/xref  ajaxLink" href="common/theformatattribute.html" title="The format attribute identifies the format of the resource being cross referenced. The processing default for format is &#34;dita&#34;. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor.">The format attribute</a> for details on
+				supported values.</td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">type</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">Describes the target of a reference. See 
+				<a class="- topic/xref  ajaxLink" href="common/thetypeattribute.html" title="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes.">The type attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">scope</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">The scope attribute identifies the closeness of the
+				relationship between the current document and the target resource. See 
+				<a class="- topic/xref  ajaxLink" href="common/thescopeattribute.html" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The scope attribute</a> for more information on
+				values.</td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry">(local | peer | external |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d451567e399" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d451567e402" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d451567e405" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d451567e408" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d451567e411" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/bookmap-meta.html" title="The Bookmap specialization of ditamap supports standard book production for collections of DITA topics. This section contains the metadata elements used by bookmap to store book-related metadata.">Bookmap metadata elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/organization.html" title="The &lt;organization&gt; element contains the name of an organization. Note that unlike &lt;organizationname&gt;, the &lt;organization&gt; element is not restricted to use within &lt;authorinformation&gt;; it does not have to contain the name of an authoring organization.">organization</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/printlocation.html" title="The &lt;printlocation&gt; element indicates the location where the book was printed. Customarily, the content is restricted to the name of the country.">printlocation</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="File naming conventions"/>
+<meta name="abstract" content="DITA uses certain naming conventions and file extension for topics, maps, modules, and document-type implementation files."/>
+<meta name="description" content="DITA uses certain naming conventions and file extension for topics, maps, modules, and document-type implementation files."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/introduction-to-dita.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/basic-concepts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/single_sourcing.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="fileext"/>
+<meta name="DC.Language" content="en-us"/>
+<title>File naming conventions</title>
+</head>
+<body id="fileext">
+
+
+  <h1 class="title topictitle1">File naming conventions</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">DITA uses certain naming conventions and file extension for topics, maps, modules, and
+    document-type implementation files.</p>
+
+    <p class="p">Files that contain DITA content <span class="keyword">should</span> use the following naming
+      conventions:</p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">DITA topics</dt>
+
+        <dd class="dd">
+          <ul class="ul" id="fileext__ul_3f454a98-4dfa-468f-bf1f-1b0c1b2a051c">
+            <li class="li">*.dita (recommended)</li>
+
+            <li class="li">*.xml </li>
+
+          </ul>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">DITA maps</dt>
+
+        <dd class="dd">*.ditamap</dd>
+
+      
+      
+        <dt class="dt dlterm">Conditional processing profiles</dt>
+
+        <dd class="dd"><var class="keyword varname">profilename</var>.ditaval</dd>
+
+      
+    </dl>
+
+    <div class="p" id="fileext__doctype-naming-conventions">Files that define DITA document-type components <span class="keyword">must</span> use the following naming conventions:<dl class="dl">
+        
+          <dt class="dt dlterm">Document-type shell files</dt>
+
+          <dd class="dd">
+            <ul class="ul" id="fileext__ul_3298f6ba-c3a1-419b-88e5-104eb24fe903">
+              <li class="li"><var class="keyword varname">typename</var>.dtd</li>
+
+              <li class="li"><var class="keyword varname">typename</var>.xsd</li>
+
+            </ul>
+
+            <div class="p">Where <var class="keyword varname">typename</var> is the name of the intended root topic or map type
+              defined by the document type shell or, as needed, a name that clearly identifies both
+              the intended root map or topic type and distinguishes the document type shell from
+              other shells for the same root type.<div class="note note"><span class="notetitle">non-normative:</span> For
+                example, the OASIS-provided document-type shells for technical content include two
+                different document-type shells for the task topic type:
+                  <span class="ph filepath">task.dtd</span> and <span class="ph filepath">generalTask.dtd</span>, where
+                  <span class="ph filepath">task.dtd</span> includes the strict task body constraint module and
+                  <span class="ph filepath">generalTask.dtd</span> does not.</div>
+</div>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">DTD structural module files</dt>
+
+          <dd class="dd">
+            <ul class="ul" id="fileext__ul_ceea4d8e-0217-4484-a72a-add72e8b1d48">
+              <li class="li"><var class="keyword varname">typename</var>.mod</li>
+
+              <li class="li"><var class="keyword varname">typename</var>.ent </li>
+
+            </ul>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">DTD domain module files</dt>
+
+          <dd class="dd">
+            <ul class="ul" id="fileext__ul_a0cf5d76-8f9c-4d1c-bfed-a65e9756695f">
+              <li class="li"><var class="keyword varname">typename</var>Domain.mod</li>
+
+              <li class="li"><var class="keyword varname">typename</var>Domain.ent</li>
+
+            </ul>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">DTD constraint module files</dt>
+
+          <dd class="dd"><var class="keyword varname">constraintname</var>Constraint.mod</dd>
+
+        
+        
+          <dt class="dt dlterm">Schema structural module files</dt>
+
+          <dd class="dd">
+            <ul class="ul" id="fileext__ul_eefc504e-3109-4ab5-bbe9-91221b4ecf74">
+              <li class="li"><var class="keyword varname">typename</var>Mod.xsd</li>
+
+              <li class="li"><var class="keyword varname">typename</var>Grp.xsd</li>
+
+            </ul>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Schema domain module files</dt>
+
+          <dd class="dd"><var class="keyword varname">typename</var>Domain.xsd </dd>
+
+        
+        
+          <dt class="dt dlterm">Schema constraint module files</dt>
+
+          <dd class="dd">
+            <ul class="ul" id="fileext__ul_49a2afe7-c7d2-4c8f-967e-97c6c8ef207d">
+              <li class="li"><var class="keyword varname">constraintname</var>ConstraintMod.xsd</li>
+
+              <li class="li"><var class="keyword varname">constraintname</var>ConstraintIntMod.xsd</li>
+
+            </ul>
+
+          </dd>
+
+        
+      </dl>
+</div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/introduction-to-dita.html" title="The Darwin Information Typing Architecture (DITA) is an XML-based architecture for authoring, producing, and delivering topic-oriented, information-typed content that can be reused and single-sourced in a variety of ways. While DITA historically has been driven by the requirements of large-scale technical documentation authoring, management, and delivery, it is a standard that is applicable to any kind of publication or information that might be presented to readers, including interactive training and educational materials, standards, reports, business documents, trade books, travel and nature guides, and more.">Introduction to DITA</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/basic-concepts.html" title="DITA has been designed to satisfy requirements for information typing, semantic markup, modularity, reuse, interchange, and production of different deliverable forms from a single source. These topics provide an overview of the key DITA features and facilities that serve to satisfy these requirements.">Basic concepts</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/single_sourcing.html" title="DITA is designed to produce multiple deliverable formats from a single set of DITA content. This means that many rendition details are specified neither in the DITA specification nor in the DITA content; the rendition details are defined and controlled by the processors.">Producing different deliverables from a single source</a></div>
+</div>
+</div>
+
+</body>
+</html>

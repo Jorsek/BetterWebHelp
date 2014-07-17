@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="publisherinformation"/>
+<meta name="abstract" content="The &lt;publisherinformation&gt; contains information about what group or person published the book, where it was published, and certain details about its publication history. Other publication history information is found in the &lt;bookchangehistory&gt; element."/>
+<meta name="description" content="The &lt;publisherinformation&gt; contains information about what group or person published the book, where it was published, and certain details about its publication history. Other publication history information is found in the &lt;bookchangehistory&gt; element."/>
+<meta name="DC.subject" content="Bookmap elements, publisherinformation"/>
+<meta name="keywords" content="Bookmap elements, publisherinformation"/>
+<meta name="DC.Relation" scheme="URI" content="../common/bookmap-meta.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/published.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/publishtype.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="publisherinformation"/>
+<meta name="DC.Language" content="en-us"/>
+<title>publisherinformation</title>
+</head>
+<body id="publisherinformation">
+
+
+<h1 class="title topictitle1">publisherinformation</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;publisherinformation&gt; contains information about
+what group or person published the book, where it was published, and
+certain details about its publication history. Other publication history
+information is found in the &lt;bookchangehistory&gt; element. </p>
+
+<div class="section" id="publisherinformation__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d482248e37" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d482248e39" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d482248e44" headers="d482248e37" class="stentry"><strong>bookmap, learningBookmap</strong></td>
+
+<td valign="top" headers="d482248e39 d482248e44" class="stentry"> ( ( (<a class="- topic/xref  ajaxLink" href="person.html" title="The &lt;person&gt; element contains information about the name of a person. Note that unlike the &lt;personname&gt; element, the &lt;person&gt; element is not restricted to describing the names of authors.">person</a>)  or  (<a class="- topic/xref  ajaxLink" href="organization.html" title="The &lt;organization&gt; element contains the name of an organization. Note that unlike &lt;organizationname&gt;, the &lt;organization&gt; element is not restricted to use within &lt;authorinformation&gt;; it does not have to contain the name of an authoring organization.">organization</a>) ) <em class="ph i"> (any number) </em> then  (<a class="- topic/xref  ajaxLink" href="printlocation.html" title="The &lt;printlocation&gt; element indicates the location where the book was printed. Customarily, the content is restricted to the name of the country.">printlocation</a>) <em class="ph i"> (any number) </em> then  (<a class="- topic/xref  ajaxLink" href="published.html" title="The &lt;published&gt; element contains information about the person or organization publishing the book, the dates when it was started and completed, and any special restrictions associated with it.">published</a>) <em class="ph i"> (any number) </em> then  (<a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a>) <em class="ph i"> (any number) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="publisherinformation__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d482248e112" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d482248e114" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d482248e119" headers="d482248e112" class="stentry"><strong>bookmap, learningBookmap</strong></td>
+
+<td valign="top" headers="d482248e114 d482248e119" class="stentry"><a class="- topic/xref  ajaxLink" href="bookmeta.html" title="The &lt;bookmeta&gt; element contains information about the book that is not considered book content, such as copyright information, author information, and any classifications.">bookmeta</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="publisherinformation__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+topic/publisher bookmap/publisherinformation </p>
+</div>
+
+<div class="example" id="publisherinformation__example"><h2 class="title sectiontitle">Example</h2><pre class="pre codeblock">&lt;bookmeta&gt;
+  &lt;publisherinformation&gt;
+    &lt;organization&gt;Example Publishers&lt;/organization&gt;
+    &lt;printlocation&gt;Austin, TX&lt;/printlocation&gt;
+    &lt;published&gt;
+      &lt;publishtype value="general"/&gt;
+      &lt;completed&gt;&lt;year&gt;1977&lt;/year&gt;&lt;/completed&gt;
+    &lt;/published&gt;
+  &lt;/publisherinformation&gt;
+&lt;/bookmeta&gt;</pre>
+</div>
+
+<div class="section" id="publisherinformation__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="publisherinformation__publisherinformation_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d482248e151" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d482248e154" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d482248e157" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d482248e160" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d482248e163" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d482248e151" class="stentry">href</td>
+ 
+			 <td valign="top" headers="d482248e154" class="stentry">Provides a reference to a resource. See 
+				<a class="- topic/xref  ajaxLink" href="common/thehrefattribute.html" title="The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.">The href attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d482248e157" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d482248e160" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d482248e163" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d482248e151" class="stentry">type</td>
+ 
+			 <td valign="top" headers="d482248e154" class="stentry">Describes the target of a reference. See 
+				<a class="- topic/xref  ajaxLink" href="common/thetypeattribute.html" title="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes.">The type attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d482248e157" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d482248e160" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d482248e163" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d482248e151" class="stentry">format</td>
+ 
+			 <td valign="top" headers="d482248e154" class="stentry">The format attribute identifies the format of the resource
+				being referenced. See 
+				<a class="- topic/xref  ajaxLink" href="common/theformatattribute.html" title="The format attribute identifies the format of the resource being cross referenced. The processing default for format is &#34;dita&#34;. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor.">The format attribute</a> for details on
+				supported values.</td>
+ 
+			 <td valign="top" headers="d482248e157" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d482248e160" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d482248e163" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d482248e151" class="stentry">scope</td>
+ 
+			 <td valign="top" headers="d482248e154" class="stentry">The scope attribute identifies the closeness of the
+				relationship between the current document and the target resource. See 
+				<a class="- topic/xref  ajaxLink" href="common/thescopeattribute.html" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The scope attribute</a> for more information on
+				values.</td>
+ 
+			 <td valign="top" headers="d482248e157" class="stentry">(local | peer | external |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d482248e160" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d482248e163" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d482248e151" class="stentry">keyref</td>
+ 
+			 <td valign="top" headers="d482248e154" class="stentry"><span class="ph" id="publisherinformation__d8034e2664">Keyref provides a redirectable
+				  reference based on a key defined within a map. See 
+				  <a class="- topic/xref  ajaxLink" href="common/thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The keyref attribute</a> for information on
+				  using this attribute.</span></td>
+ 
+			 <td valign="top" headers="d482248e157" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d482248e160" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d482248e163" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d482248e151" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d482248e154" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d482248e157" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d482248e160" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d482248e163" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d482248e151" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d482248e154" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d482248e157" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d482248e160" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d482248e163" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d482248e151" class="stentry">class</td>
+ 
+			 <td valign="top" headers="d482248e154" class="stentry">A common attribute described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d482248e157" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d482248e160" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d482248e163" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/bookmap-meta.html" title="The Bookmap specialization of ditamap supports standard book production for collections of DITA topics. This section contains the metadata elements used by bookmap to store book-related metadata.">Bookmap metadata elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/published.html" title="The &lt;published&gt; element contains information about the person or organization publishing the book, the dates when it was started and completed, and any special restrictions associated with it.">published</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/publishtype.html" title="The &lt;publishtype&gt; element indicates whether the book is generally available from the publisher or is restricted in some way. The value attribute indicates the restrictions, such as beta release, limited availability, or general availability.">publishtype</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="topic"/>
+<meta name="abstract" content="The &lt;topic&gt; element is the top-level DITA element for a single-subject topic or article. Other top-level DITA elements that are more content-specific are &lt;concept&gt;, &lt;task&gt;, &lt;reference&gt;, and &lt;glossentry&gt;, all of which are specializations of the &lt;topic&gt; element."/>
+<meta name="description" content="The &lt;topic&gt; element is the top-level DITA element for a single-subject topic or article. Other top-level DITA elements that are more content-specific are &lt;concept&gt;, &lt;task&gt;, &lt;reference&gt;, and &lt;glossentry&gt;, all of which are specializations of the &lt;topic&gt; element."/>
+<meta name="DC.subject" content="topic, Topic elements"/>
+<meta name="keywords" content="topic, Topic elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/topic2.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/title.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topic"/>
+<meta name="DC.Language" content="en-us"/>
+<title>topic</title>
+</head>
+<body id="topic">
+
+
+<h1 class="title topictitle1">topic</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">topic</span>&gt; element is the top-level
+DITA element for a single-subject topic or article. Other top-level
+DITA elements that are more content-specific are &lt;<span class="keyword">concept</span>&gt;, &lt;<span class="keyword">task</span>&gt;, &lt;<span class="keyword">reference</span>&gt;,
+and &lt;<span class="keyword">glossentry</span>&gt;, all of which are specializations
+of the &lt;topic&gt; element.</p>
+
+<div class="section">           </div>
+
+<div class="section" id="topic__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d608385e56" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d608385e58" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d608385e63" headers="d608385e56" class="stentry"><strong>topic, concept, glossary, glossentry, glossgroup, reference, task, machineryTask, learningAssessment, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d608385e58 d608385e63" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>)  then  (<a class="- topic/xref  ajaxLink" href="titlealts.html" title="The &lt;titlealts&gt; element allows the insertion of alternate titles, such as titles that should be used in creating a table of contents for navigation or a title specific to search results. When the &lt;titlealts&gt; element is absent, the title element is used for all title purposes.">titlealts</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="shortdesc.html" title="The short description (&lt;shortdesc&gt;) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element. The short description, which represents the purpose or theme of the topic, is also intended to be used as a link preview and for searching. The &lt;shortdesc&gt; element also can be used in a DITA map.">shortdesc</a> or <a class="- topic/xref  ajaxLink" href="abstract.html" title="The abstract element occurs between the topic title and the topic body, as the initial content of a topic. It can contain paragraph-level content as well as one or more shortdesc elements which can be used for providing link previews or summaries. The &lt;abstract&gt; element cannot be overridden by maps, but its contained &lt;shortdesc&gt; elements can be, for the purpose of creating link summaries or previews.">abstract</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="prolog.html" title="The &lt;prolog&gt; element contains information about the topic as an whole (for example, author information or subject category) that is either entered by the author or maintained by a software application. Much of the metadata inside the &lt;prolog&gt; will not be displayed with the topic when the topic is rendered, but may be used by processes that generate search indexes or customize navigation.">prolog</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="body.html" title="The &lt;body&gt; element is the container for the main content of a &lt;topic&gt;.">body</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="related-links.html" title="The related information links of a topic (&lt;related-links&gt; element) are stored in a special section following the body of the topic. After a topic is processed into its final output form, the related links are usually displayed at the end of the topic, although some Web-based help systems might display them in a separate navigation frame.">related-links</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="topic.html" title="The &lt;topic&gt; element is the top-level DITA element for a single-subject topic or article. Other top-level DITA elements that are more content-specific are &lt;concept&gt;, &lt;task&gt;, &lt;reference&gt;, and &lt;glossentry&gt;, all of which are specializations of the &lt;topic&gt; element.">topic</a>) <em class="ph i"> (any number) </em>) </td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d608385e196" headers="d608385e56" class="stentry"><strong>ditabase</strong></td>
+
+<td valign="top" headers="d608385e58 d608385e196" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>)  then  (<a class="- topic/xref  ajaxLink" href="titlealts.html" title="The &lt;titlealts&gt; element allows the insertion of alternate titles, such as titles that should be used in creating a table of contents for navigation or a title specific to search results. When the &lt;titlealts&gt; element is absent, the title element is used for all title purposes.">titlealts</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="shortdesc.html" title="The short description (&lt;shortdesc&gt;) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element. The short description, which represents the purpose or theme of the topic, is also intended to be used as a link preview and for searching. The &lt;shortdesc&gt; element also can be used in a DITA map.">shortdesc</a> or <a class="- topic/xref  ajaxLink" href="abstract.html" title="The abstract element occurs between the topic title and the topic body, as the initial content of a topic. It can contain paragraph-level content as well as one or more shortdesc elements which can be used for providing link previews or summaries. The &lt;abstract&gt; element cannot be overridden by maps, but its contained &lt;shortdesc&gt; elements can be, for the purpose of creating link summaries or previews.">abstract</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="prolog.html" title="The &lt;prolog&gt; element contains information about the topic as an whole (for example, author information or subject category) that is either entered by the author or maintained by a software application. Much of the metadata inside the &lt;prolog&gt; will not be displayed with the topic when the topic is rendered, but may be used by processes that generate search indexes or customize navigation.">prolog</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="body.html" title="The &lt;body&gt; element is the container for the main content of a &lt;topic&gt;.">body</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="related-links.html" title="The related information links of a topic (&lt;related-links&gt; element) are stored in a special section following the body of the topic. After a topic is processed into its final output form, the related links are usually displayed at the end of the topic, although some Web-based help systems might display them in a separate navigation frame.">related-links</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="topic.html" title="The &lt;topic&gt; element is the top-level DITA element for a single-subject topic or article. Other top-level DITA elements that are more content-specific are &lt;concept&gt;, &lt;task&gt;, &lt;reference&gt;, and &lt;glossentry&gt;, all of which are specializations of the &lt;topic&gt; element.">topic</a> or <a class="- topic/xref  ajaxLink" href="concept.html" title="The &lt;concept&gt; element is the top-level element for a topic that answers the question &#34;what is?&#34; Concepts provide background information that users must know before they can successfully work with a product or interface. Often, a concept is an extended definition of a major abstraction such as a process or function. It might also have an example or a graphic, but generally the structure of a concept is fairly simple.">concept</a> or <a class="- topic/xref  ajaxLink" href="task.html" title="The &lt;task&gt; element is the top-level element for a task topic. Tasks are the main building blocks for task-oriented user assistance. They generally provide step-by-step instructions that will enable a user to perform a task. A task answers the question of &#34;how to?&#34; by telling the user precisely what to do and the order in which to do it. Tasks have the same high-level structure as other topics, with a title, short description and body.">task</a> or <a class="- topic/xref  ajaxLink" href="reference.html" title="The &lt;reference&gt; element defines a top-level container for a reference topic. Reference topics document programming constructs or facts about a product. Examples of reference topics include (but are not limited to) product specifications, environmental specifications, equipment lists, parts lists, required tools, language elements, class descriptions, commands, functions, and API information. All of these items provide quick access to facts, but no deeper explanation of related concepts or tasks. Reference topics have the same high-level structure as any other topic type, with a title, short description, and body. Within the body, reference topics are typically organized into one or more sections, property lists, and tables. The reference topic type provides general rules that apply to all kinds of reference information, using elements like &lt;refsyn&gt; for syntax or signatures, and &lt;properties&gt; for lists of properties and values.">reference</a> or <a class="- topic/xref  ajaxLink" href="glossentry.html" title="The &lt;glossentry&gt; element defines a single sense of a glossary term. Glossary entries for different term senses can be reused independently of one another. DITA 1.2 adds several elements to the glossentry topic type, allowing it to specify additional information about a term (beyond just the definition).">glossentry</a> or <a class="- topic/xref  ajaxLink" href="glossgroup.html" title="The &lt;glossgroup&gt; is a specialized topic element that may be used to contain multiple &lt;glossentry&gt; topics within a single collection.">glossgroup</a>) <em class="ph i"> (any number) </em>) </td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d608385e394" headers="d608385e56" class="stentry"><strong>learningContent</strong></td>
+
+<td valign="top" headers="d608385e58 d608385e394" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>)  then  (<a class="- topic/xref  ajaxLink" href="titlealts.html" title="The &lt;titlealts&gt; element allows the insertion of alternate titles, such as titles that should be used in creating a table of contents for navigation or a title specific to search results. When the &lt;titlealts&gt; element is absent, the title element is used for all title purposes.">titlealts</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="shortdesc.html" title="The short description (&lt;shortdesc&gt;) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element. The short description, which represents the purpose or theme of the topic, is also intended to be used as a link preview and for searching. The &lt;shortdesc&gt; element also can be used in a DITA map.">shortdesc</a> or <a class="- topic/xref  ajaxLink" href="abstract.html" title="The abstract element occurs between the topic title and the topic body, as the initial content of a topic. It can contain paragraph-level content as well as one or more shortdesc elements which can be used for providing link previews or summaries. The &lt;abstract&gt; element cannot be overridden by maps, but its contained &lt;shortdesc&gt; elements can be, for the purpose of creating link summaries or previews.">abstract</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="prolog.html" title="The &lt;prolog&gt; element contains information about the topic as an whole (for example, author information or subject category) that is either entered by the author or maintained by a software application. Much of the metadata inside the &lt;prolog&gt; will not be displayed with the topic when the topic is rendered, but may be used by processes that generate search indexes or customize navigation.">prolog</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="body.html" title="The &lt;body&gt; element is the container for the main content of a &lt;topic&gt;.">body</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="related-links.html" title="The related information links of a topic (&lt;related-links&gt; element) are stored in a special section following the body of the topic. After a topic is processed into its final output form, the related links are usually displayed at the end of the topic, although some Web-based help systems might display them in a separate navigation frame.">related-links</a>) <em class="ph i"> (optional) </em> then  ( (<a class="- topic/xref  ajaxLink" href="no-topic-nesting.html" title="The &lt;no-topic-nesting&gt; element is a placeholder in the DITA architecture. It is not actually used by the default DITA document types; it is for use only when creating a validly customized document type where the information designer wants to eliminate the ability to nest topics. Not intended for use by authors, and has no associated output processing.">no-topic-nesting</a>) <em class="ph i"> (optional) </em>) <em class="ph i"> (any number) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="topic__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d608385e521" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d608385e523" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d608385e528" headers="d608385e521" class="stentry"><strong>topic (base), topic (technical content), concept, reference, task (strict), task (general), machineryTask</strong></td>
+
+<td valign="top" headers="d608385e523 d608385e528" class="stentry"><a class="- topic/xref  ajaxLink" href="topic.html" title="The &lt;topic&gt; element is the top-level DITA element for a single-subject topic or article. Other top-level DITA elements that are more content-specific are &lt;concept&gt;, &lt;task&gt;, &lt;reference&gt;, and &lt;glossentry&gt;, all of which are specializations of the &lt;topic&gt; element.">topic</a></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d608385e556" headers="d608385e521" class="stentry"><strong>ditabase</strong></td>
+
+<td valign="top" headers="d608385e523 d608385e556" class="stentry"><a class="- topic/xref  ajaxLink" href="dita.html" title="The &lt;dita&gt; element provides a top-level container for multiple topics when you create documents using the ditabase document type. The &lt;dita&gt; element lets you create any sequence of concept, task, and reference topics, and the ditabase document type lets you nest these topic types inside each other. The &lt;dita&gt; element has no particular output implications; it simply allows you to create multiple topics of different types at the same level in a single document.">dita</a>, <a class="- topic/xref  ajaxLink" href="topic.html" title="The &lt;topic&gt; element is the top-level DITA element for a single-subject topic or article. Other top-level DITA elements that are more content-specific are &lt;concept&gt;, &lt;task&gt;, &lt;reference&gt;, and &lt;glossentry&gt;, all of which are specializations of the &lt;topic&gt; element.">topic</a>, <a class="- topic/xref  ajaxLink" href="concept.html" title="The &lt;concept&gt; element is the top-level element for a topic that answers the question &#34;what is?&#34; Concepts provide background information that users must know before they can successfully work with a product or interface. Often, a concept is an extended definition of a major abstraction such as a process or function. It might also have an example or a graphic, but generally the structure of a concept is fairly simple.">concept</a>, <a class="- topic/xref  ajaxLink" href="task.html" title="The &lt;task&gt; element is the top-level element for a task topic. Tasks are the main building blocks for task-oriented user assistance. They generally provide step-by-step instructions that will enable a user to perform a task. A task answers the question of &#34;how to?&#34; by telling the user precisely what to do and the order in which to do it. Tasks have the same high-level structure as other topics, with a title, short description and body.">task</a>, <a class="- topic/xref  ajaxLink" href="reference.html" title="The &lt;reference&gt; element defines a top-level container for a reference topic. Reference topics document programming constructs or facts about a product. Examples of reference topics include (but are not limited to) product specifications, environmental specifications, equipment lists, parts lists, required tools, language elements, class descriptions, commands, functions, and API information. All of these items provide quick access to facts, but no deeper explanation of related concepts or tasks. Reference topics have the same high-level structure as any other topic type, with a title, short description, and body. Within the body, reference topics are typically organized into one or more sections, property lists, and tables. The reference topic type provides general rules that apply to all kinds of reference information, using elements like &lt;refsyn&gt; for syntax or signatures, and &lt;properties&gt; for lists of properties and values.">reference</a></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d608385e639" headers="d608385e521" class="stentry"><strong>glossary, glossentry, glossgroup</strong></td>
+
+<td valign="top" headers="d608385e523 d608385e639" class="stentry"><a class="- topic/xref  ajaxLink" href="topic.html" title="The &lt;topic&gt; element is the top-level DITA element for a single-subject topic or article. Other top-level DITA elements that are more content-specific are &lt;concept&gt;, &lt;task&gt;, &lt;reference&gt;, and &lt;glossentry&gt;, all of which are specializations of the &lt;topic&gt; element.">topic</a>, <a class="- topic/xref  ajaxLink" href="concept.html" title="The &lt;concept&gt; element is the top-level element for a topic that answers the question &#34;what is?&#34; Concepts provide background information that users must know before they can successfully work with a product or interface. Often, a concept is an extended definition of a major abstraction such as a process or function. It might also have an example or a graphic, but generally the structure of a concept is fairly simple.">concept</a></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d608385e680" headers="d608385e521" class="stentry"><strong>learningAssessment, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d608385e523 d608385e680" class="stentry"><a class="- topic/xref  ajaxLink" href="topic.html" title="The &lt;topic&gt; element is the top-level DITA element for a single-subject topic or article. Other top-level DITA elements that are more content-specific are &lt;concept&gt;, &lt;task&gt;, &lt;reference&gt;, and &lt;glossentry&gt;, all of which are specializations of the &lt;topic&gt; element.">topic</a>, <a class="- topic/xref  ajaxLink" href="learningBase.html" title="The learningBase topic type is not used to deliver any actual learning content, but instead provides a set of common elements for use in the other more specific learning content types: learningOverview,learningContent, learningSummary, learningAssessment, and learningPlan.">learningBase</a></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d608385e715" headers="d608385e521" class="stentry"><strong>learningContent</strong></td>
+
+<td valign="top" headers="d608385e523 d608385e715" class="stentry"><a class="- topic/xref  ajaxLink" href="learningBase.html" title="The learningBase topic type is not used to deliver any actual learning content, but instead provides a set of common elements for use in the other more specific learning content types: learningOverview,learningContent, learningSummary, learningAssessment, and learningPlan.">learningBase</a>, <a class="- topic/xref  ajaxLink" href="learningContent.html" title="A Learning Content topic provides the learning content itself, and enables direct use of content from DITA task, concept, and reference topics, as well as additional content of any topic type that supports specific objectives declared in the Learning Overview topic type.">learningContent</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="topic__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+topic/topic </p>
+</div>
+
+<div class="example" id="topic__example"><h2 class="title sectiontitle">Example</h2>       <pre class="pre codeblock">&lt;topic id="topic"&gt;
+ &lt;title&gt;Some little topic&lt;/title&gt;
+ &lt;body&gt;
+  &lt;p&gt;Here's a little topic.&lt;/p&gt;
+  &lt;ul&gt;
+   &lt;li&gt;Some item&lt;/li&gt;
+   &lt;li&gt;Another item&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/body&gt;
+&lt;/topic&gt;</pre>
+</div>
+
+<div class="section" id="topic__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="topic__topic_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d608385e757" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d608385e760" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d608385e763" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d608385e766" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d608385e769" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d608385e757" class="stentry">id</td>
+ 
+			 <td valign="top" headers="d608385e760" class="stentry">This ID enables topics to be referenced uniquely by
+				topicrefs in DITA maps.</td>
+ 
+			 <td valign="top" headers="d608385e763" class="stentry">ID</td>
+ 
+			 <td valign="top" headers="d608385e766" class="stentry">  
+			 </td>
+ 
+			 <td valign="top" headers="d608385e769" class="stentry">Yes</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d608385e757" class="stentry">conref-atts attribute group (conref, conrefend, conaction,
+				conkeyref)</td>
+ 
+			 <td valign="top" headers="d608385e760" class="stentry">A set of related attributes; includes all of the attributes
+				described in 
+				<a class="- topic/xref  ajaxLink" href="common/id-atts.html" title="The &#34;id-atts&#34; attribute group includes attributes that enable the naming and referencing of elements in topics and maps.">id-atts attribute group</a> 
+				<em class="ph i">except</em> for the id attribute.</td>
+ 
+			 <td valign="top" headers="d608385e763" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e766" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e769" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d608385e757" class="stentry">xmlns:ditaarch</td>
+ 
+			 <td valign="top" headers="d608385e760" class="stentry">Declares the default DITA namespace.</td>
+ 
+			 <td valign="top" headers="d608385e763" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e766" class="stentry">"http://dita.​oasis-open.​org/​architecture/​2005/"</td>
+
+			 
+			 <td valign="top" headers="d608385e769" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d608385e757" class="stentry">DITAArchVersion</td>
+ 
+			 <td valign="top" headers="d608385e760" class="stentry">Designates the version of the architecture that is in use.
+				The default value will increase with each release of DITA.</td>
+ 
+			 <td valign="top" headers="d608385e763" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d608385e766" class="stentry">"1.2"</td>
+ 
+			 <td valign="top" headers="d608385e769" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d608385e757" class="stentry">domains</td>
+ 
+			 <td valign="top" headers="d608385e760" class="stentry">Indicates the specialized domains that are included in the
+				DTD or Schema. This value will differ depending on what domains are included in
+				the current DTD or Schema.</td>
+ 
+			 <td valign="top" headers="d608385e763" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d608385e766" class="stentry"><em class="ph i">Varies based on the DTD or Schema; a sample value is
+				  "(topic ui-d) (topic hi-d) (topic pr-d) (topic sw-d) (topic ut-d) (topic
+				  indexing-d)"</em></td>
+ 
+			 <td valign="top" headers="d608385e769" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d608385e757" class="stentry">select-atts attribute group (props, base, platform, product,
+				audience, otherprops, importance, rev, status)</td>
+ 
+			 <td valign="top" headers="d608385e760" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/select-atts.html" title="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations.">select-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d608385e763" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e766" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e769" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d608385e757" class="stentry">localization-atts attribute group (translate, xml:lang,
+				dir)</td>
+ 
+			 <td valign="top" headers="d608385e760" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/localization-atts.html" title="The &#34;localization-atts&#34; attribute group defines a set of common attributes related to translation and localization. These attributes are available on most DITA elements.">localization-atts attribute group</a>. 
+			 </td>
+ 
+			 <td valign="top" headers="d608385e763" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e766" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e769" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d608385e757" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d608385e760" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d608385e763" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e766" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e769" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d608385e757" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d608385e760" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d608385e763" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e766" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d608385e769" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/topic2.html" title="The generic topic structure is used for untyped topics. While much of the DITA architecture is built on generic topics, it is generally better to use more specific information types (such as concept, task, or reference) when they are available.">Basic topic elements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a></div>
+</div>
+</div>
+
+</body>
+</html>

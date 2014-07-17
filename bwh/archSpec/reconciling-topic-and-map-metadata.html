@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Reconciling topic and map metadata"/>
+<meta name="abstract" content="The &lt;topicmeta&gt; element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent &lt;topicref&gt; element, any child &lt;topicref&gt; elements, and – if a direct child of the &lt;map&gt; element – on the map as a whole."/>
+<meta name="description" content="The &lt;topicmeta&gt; element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent &lt;topicref&gt; element, any child &lt;topicref&gt; elements, and – if a direct child of the &lt;map&gt; element – on the map as a whole."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita-metadata.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/map-to-map-cascading-of-metadata.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reconciling-topic-and-map-metadata"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Reconciling topic and map metadata</title>
+</head>
+<body id="reconciling-topic-and-map-metadata">
+
+
+<h1 class="title topictitle1"><span class="ph">Reconciling topic and map metadata</span></h1>
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;topicmeta&gt; element in maps contains numerous elements
+that can be used to declare metadata. These metadata elements have
+an effect on the parent &lt;topicref&gt; element, any child &lt;topicref&gt;
+elements, and – if a direct child of the &lt;map&gt; element – on the
+map as a whole.</p>
+
+<div class="section"><div class="p">For each element that can be contained in the &lt;topicmeta&gt;
+element, the following table addresses the following questions:<dl class="dl">
+
+<dt class="dt dlterm">How does it apply to the topic?</dt>
+
+<dd class="dd">This column describes how the metadata specified within
+the &lt;topicmeta&gt; element interacts with the metadata specified in
+the topic. In most cases, the properties are additive. For example,
+when the &lt;audience&gt; element is set to "user" at the map level,
+the value "user" is added during processing to any audience metadata
+that is specified within the topic.</dd>
+
+
+<dt class="dt dlterm">Does it cascade to other topics in the map?</dt>
+
+<dd class="dd">This column indicates whether the specified metadata
+value cascades to nested &lt;topicref&gt; elements. For example, when
+an &lt;audience&gt; element is set to "user" at the map level, all child &lt;topicref&gt;
+elements implicitly have an &lt;audience&gt; element set to "user" also.
+Elements which can apply only to the specific &lt;topicref&gt; element,
+such as &lt;linktext&gt;, do not cascade.</dd>
+
+
+<dt class="dt dlterm">What is the purpose when specified on the &lt;map&gt;
+element?</dt>
+
+<dd class="dd">The map element allows metadata to be specified for the entire
+map. This column describes what effect, if any, an element has when
+specified at this level.</dd>
+
+</dl>
+</div>
+</div>
+
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Topicmeta elements and their properties</span></caption>
+
+<thead class="thead" align="left">
+<tr class="row" valign="bottom">
+<th class="entry" valign="bottom" id="d17668e61">Element</th>
+
+<th class="entry" valign="bottom" id="d17668e64">How does it apply to the topic?</th>
+
+<th class="entry" valign="bottom" id="d17668e67"><span class="ph" id="reconciling-topic-and-map-metadata__doesitcascade">Does it cascade to
+child &lt;topicref&gt; elements?</span></th>
+
+<th class="entry" valign="bottom" id="d17668e71">What is the purpose when set on the &lt;map&gt;
+element?</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;audience&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">Yes</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify an audience for the entire map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;author&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">Yes</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify an author for the entire map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;category&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">Yes</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify a category for the entire map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;copyright&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">Yes</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify a copyright for the entire map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;critdates&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">Yes</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify critical dates for the entire map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;data&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No, unless specialized for a purpose that
+cascades</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">No stated purpose, until the element is
+specified</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;data-about&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add the property to the specified target</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No, unless specialized for a purpose that
+cascades</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">No stated purpose, until the element is
+specified</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;foreign&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No, unless specialized for a purpose that
+cascades</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">No stated purpose, until the element is
+specified</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;keywords&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">No stated purpose</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;linktext&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Not added to the topic; applies only to links
+created based on this occurrence in the map</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">No stated purpose</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;metadata&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">Yes</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify metadata for the entire map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;navtitle&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Not added to the topic; applies only to navigation
+that is created based on this occurrence in the map. The @locktitle
+attribute of the parent &lt;topicref&gt; element must be set to "yes"
+in order for the navigation title to be used.</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">No stated purpose</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;othermeta&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Define metadata for the entire map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;permissions&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">Yes</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify permissions for the entire map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;prodinfo&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">Yes</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify product info for the entire map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;publisher&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">Yes</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify a publisher for the map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;resourceid&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify a resource ID for the map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;searchtitle&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Replace the one in the topic. If multiple &lt;searchtitle&gt;
+elements are specified for a singletarget, processors may choose to
+issue a warning.</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">No stated purpose</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;shortdesc&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 "><span class="ph">Only added to the topic when
+the &lt;topicref&gt; element specifies a @copy-to attribute. Otherwise,
+it applies only to links created based on this occurrence in the map.</span><div class="note note"><span class="notetitle">Note:</span> Processors <dfn class="term">may</dfn> or <dfn class="term">may
+not</dfn> implement this behavior.</div>
+</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Provide a description of the map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;source&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">Specify a source for the map</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d17668e61 ">&lt;unknown&gt;</td>
+
+<td class="entry" valign="top" headers="d17668e64 ">Add to the topic</td>
+
+<td class="entry" valign="top" headers="d17668e67 ">No, unless specialized for a purpose that
+cascades</td>
+
+<td class="entry" valign="top" headers="d17668e71 ">No stated purpose, until the element is
+specified</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita-metadata.html" title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is assigned in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map; this design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts.">DITA metadata</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/map-to-map-cascading-of-metadata.html" title="When a DITA map (or branch of a DITA map) is referenced by another DITA map, by default, certain rules apply. These rules pertain to the cascading behaviors of attributes, metadata elements, and roles assigned to content (such as the role of &#34;Chapter&#34; assigned by a &lt;chapter&gt; element). Attributes and elements that cascade within a map generally follow the same rules when cascading from one map to another map; this topic covers the exceptions and additional rules that apply.">Map-to-map cascading behaviors</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="display-atts attribute group"/>
+<meta name="abstract" content="The &#34;display-atts&#34; attribute group includes attributes whose values may be used for affecting the display of a topic or element."/>
+<meta name="description" content="The &#34;display-atts&#34; attribute group includes attributes whose values may be used for affecting the display of a topic or element."/>
+<meta name="DC.subject" content="%display-atts, Commonly referenced attribute descriptions, display-atts"/>
+<meta name="keywords" content="%display-atts, Commonly referenced attribute descriptions, display-atts"/>
+<meta name="DC.Relation" scheme="URI" content="../common/comrfet.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/global-atts.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="display-atts"/>
+<meta name="DC.Language" content="en-us"/>
+<title>display-atts attribute group</title>
+</head>
+<body id="display-atts">
+
+
+ <h1 class="title topictitle1">display-atts attribute group</h1>
+
+ 
+ 
+ <div class="body refbody"><p class="shortdesc">The "display-atts" attribute group includes attributes whose values may be used for
+  affecting the display of a topic or element.</p>
+
+  
+  
+  <div class="section"><h2 class="title sectiontitle">Attributes</h2>
+   
+   <table cellpadding="4" cellspacing="0" summary="" id="display-atts__display-atts_attr" border="1" class="simpletable"><tr class="sthead">
+     <th valign="bottom" align="left" id="d36211e60" class="stentry" width="14.285714285714286%">Name</th>
+
+     <th valign="bottom" align="left" id="d36211e63" class="stentry" width="42.85714285714286%">Description</th>
+
+     <th valign="bottom" align="left" id="d36211e66" class="stentry" width="14.285714285714286%">Data Type</th>
+
+     <th valign="bottom" align="left" id="d36211e69" class="stentry" width="14.285714285714286%">Default Value</th>
+
+     <th valign="bottom" align="left" id="d36211e72" class="stentry" width="14.285714285714286%">Required?</th>
+
+    </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d36211e60" class="stentry">scale</td>
+ 
+			 <td valign="top" headers="d36211e63" class="stentry">Specifies a percentage, selected from an enumerated list,
+				that is used to resize fonts in relation to the normal text size. 
+				<span class="ph">This attribute is primarily useful for print-oriented
+				  display.</span>
+				<p class="p">The scale attribute provides an acknowledged style-based
+				  property directly on DITA elements. For the table and fig elements, the intent
+				  of the property is to allow authors to adjust font sizes on the content of the
+				  containing element, primarily for print accomodation. An image in these
+				  contexts is to be scaled only by its own direct scale property. If not
+				  specifically scaled, such an image is unchanged by the scale property of its
+				  parent table or fig.
+				</p>
+
+				<p class="p">Some DITA processors or output formats may not be able to
+				  support all values.
+				</p>
+</td>
+
+			 
+			 <td valign="top" headers="d36211e66" class="stentry">(50 | 60 | 70 | 80 | 90 | 100 | 110 | 120 | 140 | 160 | 180
+				| 200 | 
+				<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">-dita-use-​conref-​target</a>)</td>
+ 
+			 <td valign="top" headers="d36211e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d36211e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d36211e60" class="stentry">frame</td>
+ 
+			 <td valign="top" headers="d36211e63" class="stentry">Specifies which portion of a border should surround the
+				element. Allowable values are:
+				<dl class="dl">
+				   
+					 <dt class="dt dlterm">top
+					 </dt>
+ 
+					 <dd class="dd">Draw a line before the element
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">bottom
+					 </dt>
+ 
+					 <dd class="dd">Draw a line after the element
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">topbot
+					 </dt>
+ 
+					 <dd class="dd">Draw a line both before and after the element
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">all
+					 </dt>
+ 
+					 <dd class="dd">Draw a box around the element
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">sides
+					 </dt>
+ 
+					 <dd class="dd">Draw a line at each side of the element
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">none
+					 </dt>
+ 
+					 <dd class="dd">Don't draw any lines around this element
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+
+				<p class="p">Some DITA processors or output formats may not be able to
+				  support all values.
+				</p>
+</td>
+
+			 
+			 <td valign="top" headers="d36211e66" class="stentry">(top | bottom | topbot | all | sides | none |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d36211e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d36211e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d36211e60" class="stentry">expanse</td>
+ 
+			 <td valign="top" headers="d36211e63" class="stentry">Determines the horizontal placement of the element.
+				Allowable values are: 
+				<dl class="dl">
+				   
+					 <dt class="dt dlterm">page
+					 </dt>
+ 
+					 <dd class="dd">Places the element on the left page margin for
+						left-to-right presentation, or right page margin for right-to-left
+						presentation.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">column
+					 </dt>
+ 
+					 <dd class="dd">Aligns the element with the current column margin
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">textline
+					 </dt>
+ 
+					 <dd class="dd">Aligns the element with the left (for left to right
+						presentation) or right (for right to left presentation) margin of the current
+						text line and takes indention into account.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">spread
+					 </dt>
+ 
+					 <dd class="dd">Indicates that, if possible, the object should be rendered
+						across a multi-page spread. If the rendition target does not have anything
+						corresponding to spreads then spread has the same meaning as "page".
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+
+				<p class="p" id="display-atts__d263e1628">In DITA tables, in place of the expanse
+				  attribute used by other DITA elements, the pgwide attribute is used in order to
+				  conform to the OASIS Exchange Table Model. This attribute has a similar
+				  semantic (1=page width; 0=resize to galley or column).
+				</p>
+
+				<p class="p">Some DITA processors or output formats may not be able to
+				  support all values.
+				</p>
+</td>
+ 
+			 <td valign="top" headers="d36211e66" class="stentry">(page | column | textline | spread |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d36211e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d36211e72" class="stentry">No</td>
+ 
+		  </tr>
+</table>
+
+  </div>
+
+  <div class="example"><h2 class="title sectiontitle">Example</h2>
+   
+   <p class="p">The "display-atts" attribute group is used within the DITA DTDs and schemas as a common
+    definition for attributes that affect presentation of certain elements. A typical example might
+    be:</p>
+
+   
+   <pre class="pre codeblock">&lt;codeblock scale="90" frame="topbot" expanse="page"&gt;
+/* a long sample program */
+Do forever
+  Say "Hello, World"
+End
+&lt;/codeblock&gt;</pre>
+
+  </div>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/comrfet.html" title="Common attribute groups, such as the selection and property attributes of most DITA elements, are described here as sets in order to reduce unnecessary duplication of common information.">Commonly referenced attribute groups</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></div>
+</div>
+</div>
+
+</body>
+</html>

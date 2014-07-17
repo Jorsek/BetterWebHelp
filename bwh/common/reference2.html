@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Reference elements"/>
+<meta name="abstract" content="Reference topics describe factual material about a subject, such as the commands in a programming language. This format is also suitable for bibliographies, catalogues, the list of ingredients for recipes, and similar collections of structured descriptive prose. For more details on when to use reference and other information types, please refer to the DITA architectural specification."/>
+<meta name="description" content="Reference topics describe factual material about a subject, such as the commands in a programming language. This format is also suitable for bibliographies, catalogues, the list of ingredients for recipes, and similar collections of structured descriptive prose. For more details on when to use reference and other information types, please refer to the DITA architectural specification."/>
+<meta name="DC.subject" content="Reference elements"/>
+<meta name="keywords" content="Reference elements"/>
+<meta name="DC.Relation" scheme="URI" content="../langRef-technicalContent.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/reference.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/refbody.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/refbodydiv.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/refsyn.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/properties.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/prophead.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/proptypehd.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/propvaluehd.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/propdeschd.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/property.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/proptype.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/propvalue.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/propdesc.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference2"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Reference elements</title>
+</head>
+<body id="reference2">
+
+
+<h1 class="title topictitle1">Reference elements</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Reference topics describe factual material about
+a subject, such as the commands in a programming language. This format
+is also suitable for bibliographies, catalogues, the list of ingredients
+for recipes, and similar collections of structured descriptive prose.
+For more details on when to use reference and other information types,
+please refer to the DITA architectural specification.</p>
+</div>
+
+<div class="related-links">
+<ol class="olchildlinks">
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/reference.html">reference</a><br/>
+The &lt;<span class="keyword">reference</span>&gt; element defines a top-level container for a reference topic. Reference topics document programming constructs or facts about a product. Examples of reference topics include (but are not limited to) product specifications, environmental specifications, equipment lists, parts lists, required tools, language elements, class descriptions, commands, functions, and API information. All of these items provide quick access to facts, but no deeper explanation of related concepts or tasks. Reference topics have the same high-level structure as any other topic type, with a title, short description, and body. Within the body, reference topics are typically organized into one or more sections, property lists, and tables. The reference topic type provides general rules that apply to all kinds of reference information, using elements like &lt;<span class="keyword">refsyn</span>&gt; for syntax or signatures, and &lt;<span class="keyword">properties</span>&gt; for lists of properties and values.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/refbody.html">refbody</a><br/>
+The &lt;<span class="keyword">refbody</span>&gt; element is a container for the main content of the reference topic. Reference topics limit the body structure to tables (both simple and standard), property lists, syntax sections, and generic sections and examples, in any sequence or number. </li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/refbodydiv.html">refbodydiv</a><br/>
+The &lt;<span class="keyword">refbodydiv</span>&gt; element is similar to the &lt;<span class="keyword">bodydiv</span>&gt; element in that it provides an informal container for content that may be grouped within a reference. Reference topics place many restrictions on their content compared to generic topics; the &lt;<span class="keyword">refbodydiv</span>&gt; element maintains these restrictions by only allowing elements that are already available within the body of a reference. There are no additional semantics attached to the &lt;<span class="keyword">refbodydiv</span>&gt; element; it is purely a grouping element provided to help organize content.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/refsyn.html">refsyn</a><br/>
+The &lt;<span class="keyword">refsyn</span>&gt; element is a special section inside a reference topic. The section often contains syntax or signature content (for example, a command-line utility's calling syntax, or an API's signature). The &lt;<span class="keyword">refsyn</span>&gt; contains a brief, possibly diagrammatic description of the subject's interface or high-level structure.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/properties.html">properties</a><br/>
+The &lt;<span class="keyword">properties</span>&gt; element gives a list of properties for the subject of the current topic, for example whether a class is public or protected. Each property can include the type, value, and a description. The typical rendering is usually in a table-like format. To represent multiple values for a single type, create additional property elements and use only the &lt;<span class="keyword">propvalue</span>&gt; element (and &lt;<span class="keyword">propdesc</span>&gt; when needed) for each successive value.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/prophead.html">prophead</a><br/>
+The prophead element supports headings for the properties element.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/proptypehd.html">proptypehd</a><br/>
+The proptypehd element supports headings for the type column of a properties table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/propvaluehd.html">propvaluehd</a><br/>
+The propvaluehd element supports headings for the value column of a properties table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/propdeschd.html">propdeschd</a><br/>
+The propdeschd element supports headings for the description column of a properties table.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/property.html">property</a><br/>
+The &lt;property&gt; element represents a single property of the current topic's subject. For example, if the current reference topic describes a programming class, the property might show that the class is protected rather than public. The &lt;property&gt; element generally appears together with a series of other properties; it contains three optional elements to provide a type, value, or description of the property.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/proptype.html">proptype</a><br/>
+The &lt;proptype&gt; element describes the type of the property.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/propvalue.html">propvalue</a><br/>
+The &lt;propvalue&gt; element indicates one or more values for the current property type. Values may be placed separate &lt;property&gt; elements if they need separate descriptions. The &lt;proptype&gt; attribute need not be repeated.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/propdesc.html">propdesc</a><br/>
+The &lt;<span class="keyword">propdesc</span>&gt; element is used to provide a short description of the property type and its listed values.</li>
+</ol>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="langRef-technicalContent.html" title="Elements in the technical content section include the original Concept, Task, and Reference specializations, as well as the Bookmap and Glossary specializations added with DITA 1.1. It also includes domains designed primarily for technical content, such as the task requirements and software domains.">Technical content elements</a></div>
+</div>
+</div>
+
+</body>
+</html>

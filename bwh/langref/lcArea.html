@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="lcArea"/>
+<meta name="abstract" content="A lcArea defines an area of a hotspot image that contains a correct or incorrect choice in a hotspot assessment interaction."/>
+<meta name="description" content="A lcArea defines an area of a hotspot image that contains a correct or incorrect choice in a hotspot assessment interaction."/>
+<meta name="DC.subject" content="lcArea, learning and training elements"/>
+<meta name="keywords" content="lcArea, learning and training elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/learning_training_elements_interactions_other.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcAnswerOptionGroup.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcAreaCoords.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="lcArea"/>
+<meta name="DC.Language" content="en-us"/>
+<title>lcArea</title>
+</head>
+<body id="lcArea">
+
+
+<h1 class="title topictitle1">lcArea</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">A <span class="keyword">lcArea</span> defines an area of a hotspot
+image that contains a correct or incorrect choice in a hotspot assessment
+interaction.</p>
+
+<div class="section" id="lcArea__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d290893e39" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d290893e41" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d290893e46" headers="d290893e39" class="stentry"><strong>learningAssessment, learningContent, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d290893e41 d290893e46" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="lcAreaShape.html" title="The &lt;lcAreaShape&gt; element defines the shape of a linkable hotspot in a learning image.">lcAreaShape</a>)  then  (<a class="- topic/xref  ajaxLink" href="lcAreaCoords.html" title="The &lt;lcAreaCoords&gt; element specifies the coordinates of a linkable hotspot in a learning image.">lcAreaCoords</a>)  then  (<a class="- topic/xref  ajaxLink" href="xref.html" title="Use the cross-reference (&lt;xref&gt;) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic. The target of the cross-reference is specified using the href or keyref attributes.">xref</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcCorrectResponse.html" title="The &lt;lcCorrectResponse&gt; element in an assessment interaction indicates a correct response.">lcCorrectResponse</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcFeedback.html" title="The &lt;lcFeedback&gt; element in an assessment interaction provides information to the learner about a correct or incorrect response.">lcFeedback</a>) <em class="ph i"> (optional) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="lcArea__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d290893e119" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d290893e121" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d290893e126" headers="d290893e119" class="stentry"><strong>learningAssessment, learningContent, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d290893e121 d290893e126" class="stentry"><a class="- topic/xref  ajaxLink" href="lcHotspotMap.html" title="A lcHotspotMap interaction lets you designate an action area or region over an image, allowing a click in that region to get scored as correct or incorrect in response to an interaction question.">lcHotspotMap</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="lcArea__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">+
+topic/figgroup learningInteractionBase-d/figgroup learning-d/lcArea </p>
+</div>
+
+<div class="example" id="lcArea__example"><h2 class="title sectiontitle">Example</h2>      <pre class="pre codeblock">
+...
+  &lt;lcArea id="cardinals"&gt;
+    &lt;lcAreaShape&gt;rect&lt;/lcAreaShape&gt;
+    &lt;lcAreaCoords&gt;0,50,50,100&lt;/lcAreaCoords&gt;
+    &lt;lcFeedback&gt;No.&lt;/lcFeedback&gt;
+  &lt;/lcArea&gt;
+...
+  </pre>
+ </div>
+
+<div class="section" id="lcArea__attributes"><h2 class="title sectiontitle">Attributes</h2>
+ 
+<table cellpadding="4" cellspacing="0" summary="" id="lcArea__lcInteractions_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d290893e165" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d290893e168" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d290893e171" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d290893e174" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d290893e177" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d290893e165" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d290893e168" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d290893e171" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290893e174" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290893e177" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d290893e165" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d290893e168" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d290893e171" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290893e174" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290893e177" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d290893e165" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d290893e168" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d290893e171" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290893e174" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290893e177" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+ 
+</div>
+
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/learning_training_elements_interactions_other.html" title="Elements in this group are designed specifically to describe learning and training interactions.">Common learning interactions elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcAnswerOptionGroup.html" title="The &lt;lcAnswerOptionGroup&gt; element provides a container for the options for a true-false, single-select, or multiple-select assessment interaction.">lcAnswerOptionGroup</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcAreaCoords.html" title="The &lt;lcAreaCoords&gt; element specifies the coordinates of a linkable hotspot in a learning image.">lcAreaCoords</a></div>
+</div>
+</div>
+
+</body>
+</html>

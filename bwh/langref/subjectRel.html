@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="subjectRel"/>
+<meta name="abstract" content="The &lt;subjectRel&gt; element contains a set of subjects that are related in some manner. Each group of subjects is contained in a &lt;subjectRole&gt; element; the associations between different columns in the same row are evaluated in the same way as those in a &lt;relrow&gt; (from which &lt;subjectRel&gt; is specialized) but define relationships between the subjects instead of links between topic documents."/>
+<meta name="description" content="The &lt;subjectRel&gt; element contains a set of subjects that are related in some manner. Each group of subjects is contained in a &lt;subjectRole&gt; element; the associations between different columns in the same row are evaluated in the same way as those in a &lt;relrow&gt; (from which &lt;subjectRel&gt; is specialized) but define relationships between the subjects instead of links between topic documents."/>
+<meta name="DC.subject" content="subjectRel"/>
+<meta name="keywords" content="subjectRel"/>
+<meta name="DC.Relation" scheme="URI" content="../common/subjectScheme.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectRelHeader.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectRole.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="subjectRel"/>
+<meta name="DC.Language" content="en-us"/>
+<title>subjectRel</title>
+</head>
+<body id="subjectRel">
+
+
+<h1 class="title topictitle1">subjectRel</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">subjectRel</span>&gt; element contains
+a set of subjects that are related in some manner. Each group of subjects
+is contained in a &lt;subjectRole&gt; element; the associations between
+different columns in the same row are evaluated in the same way as
+those in a &lt;relrow&gt; (from which &lt;subjectRel&gt; is
+specialized) but define relationships between the subjects instead
+of links between topic documents.</p>
+
+<div class="section" id="subjectRel__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d554572e37" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d554572e39" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d554572e44" headers="d554572e37" class="stentry"><strong>subjectScheme</strong></td>
+
+<td valign="top" headers="d554572e39 d554572e44" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="subjectRole.html" title="The &lt;subjectRole&gt; element, when used within a &lt;subjectRel&gt; element, contains a set of subjects that are related to other subjects in the same row of the current &lt;subjectRelTable&gt;. By default, no relationship is defined between multiple subjects in the same &lt;subjectRole&gt; element. When used within the &lt;subjectRelHeader&gt;, the &lt;subjectRole&gt; element defines the category of subject or relationship provided by that column.">subjectRole</a>) <em class="ph i"> (one or more) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="subjectRel__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d554572e74" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d554572e76" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d554572e81" headers="d554572e74" class="stentry"><strong>subjectScheme</strong></td>
+
+<td valign="top" headers="d554572e76 d554572e81" class="stentry"><a class="- topic/xref  ajaxLink" href="subjectRelTable.html" title="The &lt;subjectRelTable&gt; element is a specialized relationship table which establishes relationships between the subjects in different columns of the same row. This element provides an efficient way to author non-hierarchical relationships between subjects. Tools (such as search tools) that use subject relationships to find related content may use these associative relationships in a similar way to the hierarchical relationships.">subjectRelTable</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="subjectRel__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+map/relrow subjectScheme/subjectRel </p>
+</div>
+
+<div class="example" id="subjectRel__example"><h2 class="title sectiontitle">Example</h2><p class="p">The subject relationship
+table in this example establishes environmentFor relationships between
+operating systems and applications. Based on the subjectRole element,
+subjects in the first column are operating systems which are the environment
+for an application, while subjects in the second column are applications
+that run in that environment. For a user interested in content about
+the operating system, content about the applications may also be relevant.</p>
+<pre class="pre codeblock">&lt;subjectScheme&gt;
+  &lt;hasKind&gt;
+    &lt;subjectdef keys="operatingSystem"&gt;
+        &lt;subjectdef keys="linuxOS"/&gt;
+        &lt;subjectdef keys="windowsOS"/&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="application"&gt;
+        &lt;subjectdef keys="IDE"&gt;
+            &lt;subjectdef keys="eclipseIDE"/&gt;
+            &lt;subjectdef keys="visualStudioIDE"/&gt;
+        &lt;/subjectdef&gt;
+        &lt;subjectdef keys="webBrowser"&gt;
+            &lt;subjectdef keys="firefoxBrowser"/&gt;
+            &lt;subjectdef keys="ieBrowser"/&gt;
+        &lt;/subjectdef&gt;
+    &lt;/subjectdef&gt;
+  &lt;/hasKind&gt;
+  ...
+  &lt;subjectRelTable&gt;
+    &lt;subjectRelHeader&gt;
+      &lt;subjectRole&gt;
+        &lt;subjectdef keyref="operatingSystem"&gt;
+          &lt;hasRelated keyref="environmentFor"&gt;
+            &lt;subjectdef keyref="application"/&gt;
+          &lt;/hasRelated&gt;
+        &lt;/subjectdef&gt;
+      &lt;/subjectRole&gt;
+      &lt;subjectRole&gt;
+        &lt;subjectdef keyref="application"/&gt;
+      &lt;/subjectRole&gt;
+    &lt;/subjectRelHeader&gt;
+    &lt;subjectRel&gt;
+      &lt;subjectRole&gt;
+        &lt;subjectdef keyref="linuxOS"/&gt;
+        &lt;subjectdef keyref="windowsOS"/&gt;
+      &lt;/subjectRole&gt;
+      &lt;subjectRole&gt;
+        &lt;subjectdef keyref="eclipseIDE"/&gt;
+        &lt;subjectdef keyref="firefoxBrowser"/&gt;
+      &lt;/subjectRole&gt;
+    &lt;/subjectRel&gt;
+    &lt;subjectRel&gt;
+      &lt;subjectRole&gt;
+        &lt;subjectdef keyref="windowsOS"/&gt;
+      &lt;/subjectRole&gt;
+      &lt;subjectRole&gt;
+        &lt;subjectdef keyref="ieBrowser"/&gt;
+        &lt;subjectdef keyref="visualStudioIDE"/&gt;
+      &lt;/subjectRole&gt;
+    &lt;/subjectRel&gt;
+  &lt;/subjectRelTable&gt;
+&lt;/subjectScheme&gt;</pre>
+<div class="p">A table view of the subjectRelTable
+may look like this; each &lt;subjectRel&gt; represents a single row,
+and each &lt;subjectRole&gt; represents a cell.
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. subjectRelTable
+as a table</span></caption>
+<thead class="thead" align="left">
+<tr class="row" valign="bottom">
+<th class="entry" valign="bottom" id="d554572e122"><pre class="pre codeblock"><em class="ph i">&lt;subjectdef keyref="operatingSystem"&gt;
+ &lt;hasRelated keyref="environmentFor"&gt;
+  &lt;subjectdef keyref="application"/&gt;
+ &lt;/hasRelated&gt;
+&lt;/subjectdef&gt;</em></pre>
+</th>
+
+<th class="entry" valign="bottom" id="d554572e127"><pre class="pre codeblock"><em class="ph i">&lt;subjectdef keyref="application"/&gt;</em></pre>
+</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" headers="d554572e122 "><p class="lines">&lt;subjectdef keyref="linuxOS"/&gt;<br/>
+&lt;subjectdef keyref="windowsOS"/&gt;</p>
+</td>
+
+<td class="entry" valign="top" headers="d554572e127 "><p class="lines">&lt;subjectdef keyref="eclipseIDE"/&gt;<br/>
+&lt;subjectdef keyref="firefoxBrowser"/&gt;</p>
+</td>
+
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" headers="d554572e122 "><p class="lines">&lt;subjectdef keyref="windowsOS"/&gt;</p>
+</td>
+
+<td class="entry" valign="top" headers="d554572e127 "><p class="lines">&lt;subjectdef keyref="ieBrowser"/&gt;<br/>
+&lt;subjectdef keyref="visualStudioIDE"/&gt;</p>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</div>
+</div>
+
+<div class="section" id="subjectRel__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="subjectRel__relrow_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d554572e169" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d554572e172" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d554572e175" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d554572e178" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d554572e181" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d554572e169" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d554572e172" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d554572e175" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d554572e178" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d554572e181" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d554572e169" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d554572e172" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d554572e175" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d554572e178" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d554572e181" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d554572e169" class="stentry">class</td>
+ 
+			 <td valign="top" headers="d554572e172" class="stentry">A common attribute described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d554572e175" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d554572e178" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d554572e181" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/subjectScheme.html" title="A subject scheme map is used to define sets of controlled values for use in classifying content. Sets of controlled values can be bound to DITA attributes. This allows DITA users to share the controlled values for an information set without having to modify a DTD or XML schema. The list of available values can be modified quickly to adapt to new situations, without the need to manage updates to a document type. In addition, DITA users can define relationships between controlled values and extend a set of controlled values maintained by another team or organization. The list of defined values are not validated by basic XML parsers. Instead, the defined values should be validated by DITA processors.">Subject scheme maps</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/subjectRelHeader.html" title="The &lt;subjectRelHeader&gt; element specifies the roles played by subjects in associations.">subjectRelHeader</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/subjectRole.html" title="The &lt;subjectRole&gt; element, when used within a &lt;subjectRel&gt; element, contains a set of subjects that are related to other subjects in the same row of the current &lt;subjectRelTable&gt;. By default, no relationship is defined between multiple subjects in the same &lt;subjectRole&gt; element. When used within the &lt;subjectRelHeader&gt;, the &lt;subjectRole&gt; element defines the category of subject or relationship provided by that column.">subjectRole</a></div>
+</div>
+</div>
+
+</body>
+</html>

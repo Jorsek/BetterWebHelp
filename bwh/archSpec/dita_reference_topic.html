@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Reference topic"/>
+<meta name="abstract" content="The DITA reference document type uses the reference information type. Reference topics are specialized from the base topic information type. They contain the standard topic elements, including title, short descriptions or abstract, prolog, a body, and related links."/>
+<meta name="description" content="The DITA reference document type uses the reference information type. Reference topics are specialized from the base topic information type. They contain the standard topic elements, including title, short descriptions or abstract, prolog, a body, and related links."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_technicalContent_InformationTypes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_concept_topic.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_generic_task_topic.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="dita_ref_topic"/>
+<meta name="DC.Language" content="en-Us"/>
+<title>Reference topic</title>
+</head>
+<body id="dita_ref_topic">
+
+
+  <h1 class="title topictitle1">Reference topic</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">The DITA reference document type uses the reference information type. Reference topics
+    are specialized from the base topic information type. They contain the standard topic elements,
+    including title, short descriptions or abstract, prolog, a body, and related
+    links.</p>
+
+    <div class="section"><h2 class="title sectiontitle">The purpose of the reference information type</h2>
+      
+      <p class="p">Reference topics that provide data in support of the performance of a task. Reference
+        topics may provide lists and tables that include product specifications, parts lists,
+        constraints on use or performance, and other data that is often “looked up” rather than
+        memorized. A reference topic may also describe regular constituents of a subject or product,
+        such as commands in a programming language. or required tools for a series of maintenance
+        tasks.</p>
+
+      <p class="p"> Reference topics provide quick access to fact-based information. In technical information,
+        reference topics are used to list product specifications and parameters, provide essential
+        data, and provide detailed information on subjects such as the commands in a programming
+        language. Reference topics may hold any subject matter that has regular content, such as
+        ingredients for food in recipes, bibliographic lists, catalogue items, and so on. </p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">The structure of the reference topic</h2>
+      
+      <p class="p">The top-level element for a reference topic is the &lt;reference&gt; element. </p>
+
+      <p class="p">The &lt;refbody&gt; element holds the main body-level elements of the reference topic.
+        Reference topics limit the body to tables (both simple and complex), property lists, syntax
+        sections, and generic sections and examples.</p>
+
+      <p class="p">All of the elements of &lt;refbody&gt; are optional and may appear in any sequence and number.
+      </p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Limitations on the reference body</h2>
+      
+      <p class="p">The &lt;refbody&gt; provides for an unlimited number of subdivisions in the form of sections,
+        examples, syntax sections, property lists, and tables. However, once an author decides to
+        incorporate a section, example, property list, or syntax section in the &lt;refbody&gt;, only
+        additional sections, examples, property lists, or syntax sections are allowed. Simple and
+        complex tables may appear within sections, examples, and syntax sections. They may not
+        appear within the property list or simple or complex table sections. Sections, examples,
+        syntax sections, table subdivisions, and property lists may not nest, meaning that only one
+        level of subdivision is permitted in the reference topic.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">The sections of the reference body </h2>
+      
+      <dl class="dl">
+        
+          <dt class="dt dlterm">&lt;section&gt;</dt>
+
+          <dd class="dd">Represents an organizational division in a reference topic. Sections organize subsets
+            of information within a larger topic. You can only include a simple list of peer
+            sections in a topic; sections cannot be nested. A section may have an optional
+            title.</dd>
+
+        
+        
+          <dt class="dt dlterm">&lt;refsyn&gt;</dt>
+
+          <dd class="dd">Contains syntax or signature content (for example, a command-line utility's calling
+            syntax or an API's signature). The &lt;refsyn&gt; contains a brief, possibly diagrammatic
+            description of the subject's interface or high-level structure.</dd>
+
+        
+        
+          <dt class="dt dlterm">&lt;example&gt;</dt>
+
+          <dd class="dd">Provides examples that illustrate or support the current topic. The &lt;example&gt;
+            element has the same content model as &lt;section&gt;. </dd>
+
+        
+        
+          <dt class="dt dlterm">&lt;table&gt;</dt>
+
+          <dd class="dd">Organizes information according into a rows and columns. Table markup also allows for
+            more complex structures, including spanning rows and columns, as well as table captions.
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">&lt;simpletable&gt;</dt>
+
+          <dd class="dd">Holds information in regular rows and columns and does not allow a caption. </dd>
+
+        
+        
+          <dt class="dt dlterm">&lt;properties&gt;</dt>
+
+          <dd class="dd">Lists properties of a subject and their types, values, and descriptions.</dd>
+
+        
+      </dl>
+
+    </div>
+
+    <div class="example">Following is an example of a simple reference topic, including the &lt;refsyn&gt;
+      element.<pre class="pre codeblock">&lt;reference id="boldproperty"&gt;
+&lt;title&gt;Bold property&lt;/title&gt;
+&lt;shortdesc&gt;(Read-write) Whether to use a bold font for the specified text string.&lt;/shortdesc&gt;
+&lt;refbody&gt;
+  &lt;refsyn&gt;
+    &lt;synph&gt;
+      &lt;var&gt;object&lt;/var&gt;&lt;delim&gt;.&lt;/delim&gt;&lt;kwd&gt;Font&lt;/kwd&gt;&lt;delim&gt;.&lt;/delim&gt;
+      &lt;kwd&gt;Bold&lt;/kwd&gt;&lt;delim&gt; = &lt;/delim&gt;&lt;var&gt;trueorfalse&lt;/var&gt;
+    &lt;/synph&gt;
+  &lt;/refsyn&gt;
+  &lt;properties&gt;
+    &lt;property&gt;
+      &lt;proptype&gt;Data type&lt;/proptype&gt;
+      &lt;propvalue&gt;Boolean&lt;/propvalue&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+      &lt;proptype&gt;Legal values&lt;/proptype&gt;
+      &lt;propvalue&gt;True (1) or False (0)&lt;/propvalue&gt;
+    &lt;/property&gt;
+  &lt;/properties&gt;
+&lt;/refbody&gt;
+&lt;/reference&gt;</pre>
+</div>
+
+    <div class="example">Following is an example of a simple reference topic, including the &lt;property&gt;
+      element.<pre class="pre codeblock">&lt;reference id="oiltypes"&gt;
+&lt;title&gt;Oil Types&lt;/title&gt;
+&lt;shortdesc&gt;The tables provide the recommended oil types.&lt;/shortdesc&gt;
+&lt;refbody&gt;
+    &lt;properties&gt;
+    &lt;property&gt;         
+      &lt;prophead&gt;
+          &lt;proptypehd&gt;Oil type&lt;/proptypehd&gt;
+          &lt;propvaluehd&gt;Oil brand&lt;/propvaluehd&gt;
+          &lt;propdeschd&gt;Appropriate use&lt;/propdeschd&gt;
+      &lt;/prophead&gt;
+     &lt;property&gt;
+      &lt;proptype&gt;Primary oil&lt;/proptype&gt;
+      &lt;propvalue&gt;A1X&lt;propvalue&gt;
+      &lt;propdesc&gt;Appropriate for one-cylinder engines&lt;/propdesc&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+      &lt;proptype&gt;Secondary oil&lt;/proptype&gt;
+      &lt;propvalue&gt;B2Z&lt;/propvalue&gt;
+      &lt;propdesc&gt;Appropriate for two-cylinder engines&lt;/propdesc&gt;
+    &lt;/property&gt;
+  &lt;/properties&gt;
+&lt;/refbody&gt;
+&lt;/reference&gt;</pre>
+</div>
+
+    <div class="section"><h2 class="title sectiontitle">Modules</h2>
+      
+      <p class="p">The following DITA modules are provided for the reference topic.</p>
+
+      <ul class="sl simple">
+        <li class="sli">reference.mod, reference.ent (DTD)</li>
+
+        <li class="sli">referenceMod.xsd, referenceGrp.xsd (Schema)</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_technicalContent_InformationTypes.html" title="The Technical Content package contains five topic specializations that support seven document types: concept, reference, general task, strict task, machinery task, glossary entry, and glossary group. These topic types are specialized from the base topic and are designed specifically for information that describes how to use products and processes they are dominated by procedural, task-oriented information. The Technical Content package also includes the map document type.">Technical content: Document and information types</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_concept_topic.html" title="The DITA concept document type uses the concept information type. Concept topics are specialized from the base topic information type. They include the standard topic elements, including the short description, prolog, a body, and related links.">Concept topic</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_generic_task_topic.html" title="The general task document and information types are new to DITA 1.2. They provide a less strict content model for task-oriented information than was available in DITA 1.0 and 1.1. The general task content model may be preferred over the strict task model by some organizations. It can facilitate the migration of legacy content that does not follow the strict task topic model. The general task information type serves as the base for the strict task and machine-industry task document types, can be used to create new document types, and serves as a base for new structural specializations.">General task topic</a></div>
+</div>
+</div>
+
+</body>
+</html>

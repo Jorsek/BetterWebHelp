@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="The keys attribute"/>
+<meta name="abstract" content="A keys attribute consists of one or more space-separated keys. Map authors define keys using a topicref or topicref specialization that contains the “keys” attribute. Each key definition introduces a global identifier for a resource referenced from a map. Keys resolve to the resources given as the href value on the key definition topicref element, to content contained within the key definition topicref element, or both."/>
+<meta name="description" content="A keys attribute consists of one or more space-separated keys. Map authors define keys using a topicref or topicref specialization that contains the “keys” attribute. Each key definition introduces a global identifier for a resource referenced from a map. Keys resolve to the resources given as the href value on the key definition topicref element, to content contained within the key definition topicref element, or both."/>
+<meta name="DC.subject" content="keys attribute"/>
+<meta name="keywords" content="keys attribute"/>
+<meta name="DC.Relation" scheme="URI" content="../common/complexattributedefinitions.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/thehrefattribute.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/thekeyrefattribute.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/key-based_addressing.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="thekeysattribute"/>
+<meta name="DC.Language" content="en-us"/>
+<title>The keys attribute</title>
+</head>
+<body id="thekeysattribute">
+
+
+ <h1 class="title topictitle1">The keys attribute</h1>
+
+ 
+ 
+ 
+ <div class="body refbody"><p class="shortdesc">A keys attribute consists of one or more space-separated keys. Map authors define keys
+  using a topicref or topicref specialization that contains the “keys” attribute. Each key
+  definition introduces a global identifier for a resource referenced from a map. Keys resolve to
+  the resources given as the href value on the key definition topicref element, to content contained
+  within the key definition topicref element, or both.</p>
+
+  <div class="section">
+   <div class="p">The @keys attribute uses the following syntax:<ul class="ul">
+                    <li class="li">The value of the @keys attribute is one or more space separated key
+                        names.</li>
+
+                    <li class="li"> Key names consist of characters that are legal in a URI. The case of key
+                        names is significant.</li>
+
+                    <li class="li">The following characters are prohibited in key names: "{", "}", "[", "]",
+                        "/", "#", "?", and whitespace characters.</li>
+
+                </ul>
+</div>
+
+   <p class="p">A key may not resolve to sub-topic elements, although a keyref attribute may do so by
+    combining a key with a sub-topic element id.</p>
+
+  </div>
+
+ </div>
+
+ <div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/complexattributedefinitions.html" title="Several DITA attributes require more explanation than can fit in a single table cell. Those attributes are collected here.">Complex attribute definitions</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/thehrefattribute.html" title="The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.">The href attribute</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The keyref attribute</a></div>
+</div>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br/>
+<div><a class="- topic/link  ajaxLink" href="archSpec/key-based_addressing.html" title="The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.">Key-based addressing</a></div>
+</div>
+</div>
+
+</body>
+</html>

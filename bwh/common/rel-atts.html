@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="rel-atts attribute group"/>
+<meta name="abstract" content="The &#34;rel-atts&#34; attribute group is deprecated in favor of the relational-atts group, which adds new attributes to the original &#34;rel-atts&#34; group."/>
+<meta name="description" content="The &#34;rel-atts&#34; attribute group is deprecated in favor of the relational-atts group, which adds new attributes to the original &#34;rel-atts&#34; group."/>
+<meta name="DC.Relation" scheme="URI" content="../common/relational-atts.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="rel-atts"/>
+<meta name="DC.Language" content="en-us"/>
+<title>rel-atts attribute group</title>
+</head>
+<body id="rel-atts">
+
+
+<h1 class="title topictitle1"><span class="keyword">rel-atts attribute group</span></h1>
+
+
+<div class="body refbody"><div class="abstract"><span class="shortdesc">The "rel-atts" attribute group is deprecated
+in favor of the relational-atts group, which adds new attributes to
+the original "rel-atts" group.</span>
+</div>
+
+<div class="section">The "rel-atts" attribute group includes attributes whose
+values may be used for representing navigational relationships. These
+attributes occur only on elements that represent relationships between
+topics. Beginning with DITA 1.2, the parameter is deprecated in favor
+of the <a class="- topic/xref  ajaxLink" href="relational-atts.html" title="The &#34;relational-atts&#34; attribute group includes attributes whose values may be used for representing navigational relationships. These attributes occur only on elements that represent relationships among DITA elements or between DITA elements and non-DITA resources.">relational-atts</a> group;
+it is still defined so that specializations which use this entity
+may upgrade more easily.</div>
+
+<div class="section"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="rel-atts__rel-atts_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d44499e54" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d44499e57" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d44499e60" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d44499e63" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d44499e66" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d44499e54" class="stentry">type</td>
+ 
+			 <td valign="top" headers="d44499e57" class="stentry">Describes the target of a reference. See 
+				<a class="- topic/xref  ajaxLink" href="thetypeattribute.html" title="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes.">The type attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d44499e60" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d44499e63" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d44499e66" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d44499e54" class="stentry">role</td>
+ 
+			 <td valign="top" headers="d44499e57" class="stentry"><span class="ph" id="rel-atts__d263e4136">The role attribute defines the
+				  role the target topic plays in relationship with the current topic. For
+				  example, in a parent/child relationship, the role would be "parent"
+				  when the target is the parent of the current topic, and "child" when
+				  the target is the child of the current topic. This structure could be used to
+				  sort and classify links at display time. 
+				</span> See 
+				<a class="- topic/xref  ajaxLink" href="theroleattribute.html" title="The role attribute defines the role the target topic plays in relationship with the current topic. For example, in a parent/child relationship, the role would be &#34;parent&#34; when the target is the parent of the current topic, and &#34;child&#34; when the target is the child of the current topic. This structure could be used to sort and classify links at display time.">The role attribute</a> for information on
+				supported values.
+				<p class="p">The role attribute values 
+				  <em class="ph i">sample</em> and 
+				  <em class="ph i">external</em> are deprecated.
+				</p>
+</td>
+ 
+			 <td valign="top" headers="d44499e60" class="stentry">(parent | child | sibling | friend | next | previous |
+				cousin | ancestor | descendant | 
+				<em class="ph i">sample</em> | 
+				<em class="ph i">external</em> | other | -dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d44499e63" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d44499e66" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d44499e54" class="stentry">otherrole</td>
+ 
+			 <td valign="top" headers="d44499e57" class="stentry">Indicates an alternate role. This value is used when the
+				role attribute is set to other.</td>
+ 
+			 <td valign="top" headers="d44499e60" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d44499e63" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d44499e66" class="stentry">No</td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/relational-atts.html" title="The &#34;relational-atts&#34; attribute group includes attributes whose values may be used for representing navigational relationships. These attributes occur only on elements that represent relationships among DITA elements or between DITA elements and non-DITA resources.">relational-atts attribute group</a></div>
+</div>
+</div>
+
+</body>
+</html>

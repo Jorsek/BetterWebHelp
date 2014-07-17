@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Attribute domain coding requirements"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/schemamod.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/xsdStructuralSpecializationReqs.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="schemaattdomain"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Attribute domain coding requirements</title>
+</head>
+<body id="schemaattdomain">
+
+
+  <h1 class="title topictitle1">Attribute domain coding requirements</h1>
+
+  <div class="body conbody">
+    <div class="section" id="schemaattdomain__section_0223BE7C47334E7DAA29C8381A39547F">
+      <p class="p">An attribute domain <dfn class="term">must</dfn> consist of one file, whose name consists of the module name plus Domain plus the <span class="ph filepath">xsd</span> extension. For example: newAttDomain.xsd for an attribute named "new". The file must have a single attribute group definition that contains the definition of the attribute itself, where the attribute group is named <samp class="ph codeph"><var class="keyword varname">attname</var>Att-d-attribute</samp>. </p>
+
+      <div class="p">For example, for an attribute named "new":<pre class="pre codeblock">&lt;xs:attributeGroup name="newAtt-d-attribute"&gt;
+  &lt;xs:attribute name="new" type="xs:string"/&gt;
+&lt;/xs:attributeGroup&gt;</pre>
+</div>
+
+      <p class="p">The attribute domain must be reflected in a shell document type XSD that integrates it. See <a class="- topic/xref  ajaxLink" href="domainsatt.html#domainsatt" title="Structural types must declare the domain vocabulary modules and constraint modules they use. This is done with the @domains attribute, whose value is a sequence of parenthesized module ancestry specifications. The @domains attribute is declared on the root element for each topic or map type. Structural modules should declare their structural ancestry.">Domain usage declaration (the @domains attribute)</a> for details of attribute domain @domains values. </p>
+
+      <p class="p">For example, if the attribute named "new" is a specialization of the @props attribute, the @domains value would be "<samp class="ph codeph">a(props new)</samp>".</p>
+
+    </div>
+
+    <div class="section" id="schemaattdomain__section_70ECA7107B644C4BBA3606FC6F65F444"> </div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/schemamod.html" title="To be extensible and backward compatible, DITA requires that an XSD implementation of structural and domain specialization modules conform to well-defined implementation (coding) requirements.">XSD schema specialization module coding requirements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/xsdStructuralSpecializationReqs.html" title="An XSD structural module declares a top-level map or topic type, implemented as a pair of XSD documents, one that defines groups used to integrate and override the type and one that defines the element types specific to the type.">Structural specialization coding requirements</a></div>
+</div>
+</div>
+
+</body>
+</html>

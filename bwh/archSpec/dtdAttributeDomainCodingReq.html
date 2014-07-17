@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Attribute domain module coding requirements"/>
+<meta name="abstract" content="An attribute domain vocabulary module declares a new attribute specialized from either the @props or @base attribute. An attribute domain module defines exactly one new attribute type."/>
+<meta name="description" content="An attribute domain vocabulary module declares a new attribute specialized from either the @props or @base attribute. An attribute domain module defines exactly one new attribute type."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dtdmod.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dtdElementDomainCodingReq.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="attdomain"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Attribute domain module coding requirements</title>
+</head>
+<body id="attdomain">
+
+
+  <h1 class="title topictitle1">Attribute domain module coding requirements</h1>
+
+  
+  
+  <div class="body conbody"><p class="shortdesc">An attribute domain vocabulary module declares a new attribute specialized from either
+    the @props or @base attribute. An attribute domain module defines exactly one new attribute
+    type.</p>
+
+    <p class="p">An attribute domain's name is the name of the attribute plus "Att" to distinguish the domain
+      attribute from any element domains with the same name. For example, for an attribute named
+      "new" the attribute domain name would be "newAtt". The attribute domain name is used to
+      construct filenames and entity names for the domain. </p>
+
+    <p class="p">An attribute domain <dfn class="term">must</dfn> consist of one file, whose name consists of the module
+      name plus <span class="ph filepath">Domain</span> plus the <span class="ph filepath">ent</span> extension. For
+      example: <span class="ph filepath">newAttDomain.ent</span> for an attribute named "new". </p>
+
+    <div class="p">The file <dfn class="term">must</dfn> have two parts:<dl class="dl">
+        
+          <dt class="dt dlterm">Attribute extension entity</dt>
+
+          <dd class="dd">
+            <p class="p">The attribute declaration is in an entity. This entity can then be used in document
+              type shells to add the new attribute. The attribute declaration entity name consists
+              of the attribute name plus "-d-attribute". For example: </p>
+
+            <pre class="pre codeblock">&lt;!ENTITY % newAtt-d-attribute "new   CDATA #IMPLIED"&gt;</pre>
+
+            <p class="p">For an attribute named "new".</p>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Domain declaration entity</dt>
+
+          <dd class="dd">
+            <p class="p">The attribute domain is declared in @domains attribute values through a general text entity that contains the attribute domain's domain declaration fragment. The entity name consists of the module name plus "-d-att". For example, "newAtt-d-att" for an attribute named "new". See <a class="- topic/xref  ajaxLink" href="domainsatt.html#domainsatt" title="Structural types must declare the domain vocabulary modules and constraint modules they use. This is done with the @domains attribute, whose value is a sequence of parenthesized module ancestry specifications. The @domains attribute is declared on the root element for each topic or map type. Structural modules should declare their structural ancestry.">Domain usage declaration (the @domains attribute)</a> for details on attribute domain @domains values.</p>
+
+            <p class="p">For example:</p>
+
+            <pre class="pre codeblock">&lt;!ENTITY newAtt-d-att       "a(props new)"  &gt;</pre>
+
+          </dd>
+
+        
+      </dl>
+</div>
+
+    <p class="p">Attribute domains do not have domain module declaration (.mod) files.</p>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dtdmod.html" title="To be extensible and backward compatible, DITA requires that a DTD implementation of structural and domain specialization modules conform to well-defined implementation (coding) requirements.">DTD syntax specialization module coding requirements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dtdElementDomainCodingReq.html" title="An element domain vocabulary module defines element types that are appropriate for the subject-matter or application domain for which they are designed. The purpose is usually to enhance the user's interaction by providing &#34;semantic&#34; elements whose names more accurately denote their content, making that content easier to search and retrieve.">Element domain module coding requirements</a></div>
+</div>
+</div>
+
+</body>
+</html>

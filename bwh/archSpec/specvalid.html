@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Requirements for specialized element types and attributes"/>
+<meta name="abstract" content="When you specialize one element from another, or a new attribute from @props or @base, the new element or attribute must obey certain rules in order to be a conforming specialization."/>
+<meta name="description" content="When you specialize one element from another, or a new attribute from @props or @base, the new element or attribute must obey certain rules in order to be a conforming specialization."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/specialize.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/vocabularymodules.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/classatt.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="specvalid"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Requirements for specialized element types and attributes</title>
+</head>
+<body id="specvalid">
+
+
+  <h1 class="title topictitle1">Requirements for specialized element types and attributes</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">When you specialize one element from another, or a new attribute from @props or @base,
+    the new element or attribute <dfn class="term">must</dfn> obey certain rules in order to be a conforming
+    specialization.</p>
+
+    <p class="p">A specialized element:</p>
+
+    <ul class="ul" id="specvalid__ul_EA3B7077BCC6454F947D813EC26C6A05">
+      <li class="li" id="specvalid__li_8A76B666D9A8424D82D746A58DA630F3"><dfn class="term">Must</dfn> have a properly formed @class
+        attribute specifying inheritance from its parent.</li>
+
+      <li class="li" id="specvalid__li_1DEF508B0D9840C7B00AFF11D92EB450"><dfn class="term">Must not</dfn> have a more inclusive content
+        model than its parent has.</li>
+
+      <li class="li" id="specvalid__li_C292756146B543C699DA6D7A3E3C2F29"><dfn class="term">Must not</dfn> have attributes that its
+        parent lacks.</li>
+
+      <li class="li" id="specvalid__li_FD9B4C1487694564ABF998CB831FCA5E"><dfn class="term">Must not</dfn> have values or value ranges
+        of these attributes that are more extensive than those in the parent.</li>
+
+    </ul>
+
+    <p class="p">An attribute specialized from the @props or @base attribute:</p>
+
+    <ul class="ul" id="specvalid__ul_9B0A068B37114A048F621DE437720028">
+      <li class="li" id="specvalid__li_CA1DAF33E2FC4971BE578549610813CE"><dfn class="term">Must</dfn> follow the rules for attribute
+        domain specialization.</li>
+
+      <li class="li" id="specvalid__li_1E1415DCB60F4941A2F2545D951CE2BE"><dfn class="term">Must not</dfn> have values or value ranges
+        that are more extensive than those of the parent.</li>
+
+      <li class="li" id="specvalid__li_ECF6D0ED922A4250983EB215C1D34F81"><dfn class="term">Must</dfn> conform to the rules
+        for conditional processing values, that is, alphanumeric space-delimited values. In
+        generalized form, the values <dfn class="term">must</dfn> conform to the rules for attribute
+        generalization.</li>
+
+      <li class="li"><dfn class="term">Must</dfn> be declared as a global attribute. Attribute specializations
+          <dfn class="term">cannot</dfn> be limited to specific element types.</li>
+
+    </ul>
+
+    <p class="p">DITA elements are never in a namespace. Only the @DITAArchVersion attribute is in a
+      DITA-defined namespace. All other attributes, except for those defined by the XML standard,
+      are in no namespace.</p>
+
+    <div class="p">This limitation is imposed by the details of the @class attribute syntax, which makes it
+      impractical to have namespace-qualified names for either vocabulary modules or individual
+      element types or attributes. Elements included as descendants of the DITA &lt;foreign&gt; element
+      type may be in any namespace.<div class="note note"><span class="notetitle">Note:</span> For this reason, domain modules that are intended for wide
+        use should take care to define element type and attribute names that are unlikely to
+        conflict with names used in other domains, for example, by using a domain-specific prefix on
+        all names.</div>
+</div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/specialize.html" title="The specialization feature of DITA allows for the creation of new element types and attributes that are explicitly and formally derived from existing types. The resulting specialization allows for the blind interchange of all conforming DITA content and a minimum level of common processing for all DITA content. It also allows specialization-aware processors to add specialization-specific processing to existing base processing.">Specialization</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/vocabularymodules.html" title="Vocabulary modules are atomic units of XML vocabulary definition (element types and attributes). A given DITA element type or attribute is declared in exactly one vocabulary module.">Vocabulary modules</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/classatt.html" title="Each DITA element declares its specialization hierarchy as the value of the @class attribute. The @class attribute usually provides a mapping from the element's current name to its more general equivalents, but it can also provide a mapping from the current name to more general and more specialized equivalents. All specialization-aware processing can be defined in terms of @class attribute values without reference to a given element's tagname.">Element type specialization hierarchy declaration (the @class attribute)</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Key-based addressing"/>
+<meta name="abstract" content="The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic."/>
+<meta name="description" content="The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditaaddressing.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/uri-based-addressing.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita-linking-link-element-summary.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/overview_of_keys.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/using_keys_to_address_dita_elements.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/processing_key_references.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/examples_of_keys.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="key-based_addressing"/>
+<title>Key-based addressing</title>
+</head>
+<body id="key-based_addressing">
+
+
+    <h1 class="title topictitle1">Key-based addressing</h1>
+
+    
+    <div class="body conbody"><p class="shortdesc">The DITA key-reference mechanism provides a layer of abstraction so that the
+        resources addressed by references can be defined globally at the DITA map level instead of
+        locally in each topic.</p>
+
+        <p class="p">When using DITA topics in the context of different maps, it is often necessary to have a
+            relationship resolve to different resources. For example, a content reference to a
+            &lt;ph&gt; element that contains a product name might need to resolve to a different
+            &lt;ph&gt; element when used in a different product-specific map. The DITA key-reference
+            mechanism provides an indirect addressing mechanism that separates references
+            (topicrefs, conrefs, cross references, etc.) from the direct address of the target. (A
+            direct address is the address specified on the element that references the key, for
+            example via @href or @conref.) Linking elements can refer to key names; the key names
+            then are bound to specific resources by maps. Different maps can bind the same key names
+            to different resources. This form of indirection is late bound, because the binding of
+            key names to resources is determined at processing time based on the current set of key
+            definitions for the map context rather than from a static binding that is created when a
+            topic or map is authored. </p>
+
+        <div class="p">
+            
+        </div>
+
+    </div>
+
+<div class="related-links">
+<ol class="olchildlinks">
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/overview_of_keys.html">Overview of keys</a><br/>
+To use key references, one must understand how keys are defined and bound to         resources, how a map hierarchy establishes a key space, and the interaction of keys with         conditional processing.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/using_keys_to_address_dita_elements.html">Using keys to address DITA elements</a><br/>
+For topic references, image references, and navigation link relationships (&lt;link&gt;,         &lt;xref&gt;, and elements that take the @keyref but not the @href attribute), resources can be         addressed by key using the @keyref attribute. For content reference relationships, resources         can be addressed by key using the @conkeyref attribute.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/processing_key_references.html">Processing key references</a><br/>
+</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/examples_of_keys.html">Examples of keys</a><br/>
+</li>
+</ol>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditaaddressing.html" title="DITA provides a number of facilities for establishing relationships among DITA elements and between DITA elements and non-DITA resources. All DITA relationships use the same addressing facilities irrespective of the semantics of the relationship established. DITA addresses are either direct, URI-based addresses, or indirect key-based addresses. Within DITA documents, individual elements are addressed by unique IDs specified on the common @id attribute. DITA defines two fragment identifier syntaxes for addressing DITA elements, one for topics and elements within maps and one for non-topic elements within topics.">DITA addressing</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/uri-based-addressing.html" title="Content reference and link relationships can be established from DITA elements using URI references to point directly to targets.">URI-based (direct) addressing</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita-linking-link-element-summary.html" title="This topic contains a table of DITA elements that may be used to link to or address other items. The table describes how and why each element uses the addressing mechanism, rather than defining the element itself.">Summary of addressing elements</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="General task topic"/>
+<meta name="abstract" content="The general task document and information types are new to DITA 1.2. They provide a less strict content model for task-oriented information than was available in DITA 1.0 and 1.1. The general task content model may be preferred over the strict task model by some organizations. It can facilitate the migration of legacy content that does not follow the strict task topic model. The general task information type serves as the base for the strict task and machine-industry task document types, can be used to create new document types, and serves as a base for new structural specializations."/>
+<meta name="description" content="The general task document and information types are new to DITA 1.2. They provide a less strict content model for task-oriented information than was available in DITA 1.0 and 1.1. The general task content model may be preferred over the strict task model by some organizations. It can facilitate the migration of legacy content that does not follow the strict task topic model. The general task information type serves as the base for the strict task and machine-industry task document types, can be used to create new document types, and serves as a base for new structural specializations."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_technicalContent_InformationTypes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_reference_topic.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_task_topic.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="dita_generic_task_topic"/>
+<meta name="DC.Language" content="en-US"/>
+<title>General task topic</title>
+</head>
+<body id="dita_generic_task_topic">
+
+
+ <h1 class="title topictitle1">General task topic</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc">The general task document and information types are new to DITA 1.2. They
+  provide a less strict content model for task-oriented information than was available in DITA 1.0
+  and 1.1. The general task content model may be preferred over the strict task model by some
+  organizations. It can facilitate the migration of legacy content that does not follow the strict
+  task topic model. The general task information type serves as the base for the strict task and
+  machine-industry task document types, can be used to create new document types, and serves as a
+  base for new structural specializations.</p>
+
+  <div class="section"><h2 class="title sectiontitle">The purpose of the general task information type</h2>
+   
+   <p class="p">Like the DITA strict task document type, the general task document and information types
+    contain the essential building blocks to provide procedural information. Both task information
+    types answer the "How do I?" question by providing step-by-step instructions detailing the
+    requirements that must be fulfilled, the actions that must be performed, and the order in which
+    the actions must be performed. Both task topics include sections for describing the context,
+    prerequisites, expected results, and other aspects of a task.</p>
+
+   <p class="p">The general task information type is specifically designed to accommodate task specializations
+    that differ from the DITA task information type. It may also be used for the conversion of
+    loosely structured tasks from other sources into DITA before they are restructured to follow the
+    more restrictive DITA task model.</p>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">The structure of the general task topic</h2>
+   
+   <p class="p">The &lt;task&gt; element is the top-level element for the general task topic. The general task
+    topic contains a title and a taskbody with optional alternative titles (titlealts), a short
+    description or abstract, a prolog,and related-links.</p>
+
+   <p class="p">The following elements are described here because they are introduced as part of the general
+    task model. All other elements are described in the strict task topic.</p>
+
+   <dl class="dl">
+    
+     <dt class="dt dlterm">&lt;section&gt;</dt>
+
+     <dd class="dd">Represents an organizational division in a task topic. Sections organize subsets of
+      information within the larger topic. Sections may not be nested. A section may have an
+      optional title.</dd>
+
+    
+    
+     <dt class="dt dlterm">&lt;steps-informal&gt;</dt>
+
+     <dd class="dd">Describes procedural task information that would not normally be ordered as steps, such as
+      a group of general procedures that may all be applied in a particular situation. Instead of
+      &lt;step&gt;, the &lt;steps-informal&gt; element uses &lt;ol&gt; and &lt;ul&gt; elements, which are less
+      strictly defined than the &lt;step&gt; element. When converting legacy content, it may be simpler
+      to convert numbered lists to &lt;ol&gt; elements than to &lt;step&gt; elements.</dd>
+
+    
+   </dl>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">Comparison of general and strict task </h2>
+   
+   <p class="p">The following table compares the structures of general and strict task:</p>
+
+   
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+     
+     
+     <thead class="thead" align="left">
+      <tr class="row">
+       <th class="entry" valign="top" id="d6971e80">General taskbody</th>
+
+       <th class="entry" valign="top" id="d6971e83">Strict taskbody constraint</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr class="row">
+       <td class="entry" valign="top" headers="d6971e80 ">prerequisite (optional, in any order, any number)</td>
+
+       <td class="entry" valign="top" headers="d6971e83 ">prerequisite (optional, one only, must precede context)</td>
+
+      </tr>
+
+      <tr class="row">
+       <td class="entry" valign="top" headers="d6971e80 ">context (optional, in any order, any number)</td>
+
+       <td class="entry" valign="top" headers="d6971e83 ">context (optional, one only, must follow prerequisite)</td>
+
+      </tr>
+
+      <tr class="row">
+       <td class="entry" valign="top" headers="d6971e80 ">section (optional, in any order, any number)</td>
+
+       <td class="entry" valign="top" headers="d6971e83 ">(not defined for strict taskbody)</td>
+
+      </tr>
+
+      <tr class="row">
+       <td class="entry" valign="top" headers="d6971e80 ">steps</td>
+
+       <td class="entry" valign="top" headers="d6971e83 ">steps</td>
+
+      </tr>
+
+      <tr class="row">
+       <td class="entry" valign="top" headers="d6971e80 ">steps-unordered</td>
+
+       <td class="entry" valign="top" headers="d6971e83 ">steps-unordered</td>
+
+      </tr>
+
+      <tr class="row">
+       <td class="entry" valign="top" headers="d6971e80 ">steps-informal</td>
+
+       <td class="entry" valign="top" headers="d6971e83 ">(not defined for strict taskbody))</td>
+
+      </tr>
+
+      <tr class="row">
+       <td class="entry" valign="top" headers="d6971e80 ">result (optional, one only, precedes example)</td>
+
+       <td class="entry" valign="top" headers="d6971e83 ">result (optional, one only, precedes example)</td>
+
+      </tr>
+
+      <tr class="row">
+       <td class="entry" valign="top" headers="d6971e80 ">example (optional, any number, precedes post-req)</td>
+
+       <td class="entry" valign="top" headers="d6971e83 ">example (optional, one only, precedes post-req)</td>
+
+      </tr>
+
+      <tr class="row">
+       <td class="entry" valign="top" headers="d6971e80 ">post-requisite (optional, any number)</td>
+
+       <td class="entry" valign="top" headers="d6971e83 ">post-requisite (optional, one only)</td>
+
+      </tr>
+
+     </tbody>
+
+    </table>
+</div>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">Modules</h2>
+   
+   <p class="p">The following DITA modules are provided for the task topic.</p>
+
+   <ul class="sl simple">
+    <li class="sli">task.mod, task.ent(DTD)</li>
+
+    <li class="sli">taskMod.xsd, taskGrp.xsd (Schema)</li>
+
+   </ul>
+
+  </div>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_technicalContent_InformationTypes.html" title="The Technical Content package contains five topic specializations that support seven document types: concept, reference, general task, strict task, machinery task, glossary entry, and glossary group. These topic types are specialized from the base topic and are designed specifically for information that describes how to use products and processes they are dominated by procedural, task-oriented information. The Technical Content package also includes the map document type.">Technical content: Document and information types</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_reference_topic.html" title="The DITA reference document type uses the reference information type. Reference topics are specialized from the base topic information type. They contain the standard topic elements, including title, short descriptions or abstract, prolog, a body, and related links.">Reference topic</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_task_topic.html" title="The strict task document type supports the development of instructions for the completion of a procedure. The strict task document type is built using the general task information type combined with the Strict Taskbody Constraint. See the reference below to ensure that you have the correct task document type when you update to DITA 1.2.">Task topic (strict task)</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="The type attribute"/>
+<meta name="abstract" content="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes."/>
+<meta name="description" content="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes."/>
+<meta name="DC.subject" content="type attribute"/>
+<meta name="keywords" content="type attribute"/>
+<meta name="DC.Relation" scheme="URI" content="../common/complexattributedefinitions.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/theconkeyrefattribute.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/theformatattribute.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="thetypeattribute"/>
+<meta name="DC.Language" content="en-us"/>
+<title>The type attribute</title>
+</head>
+<body id="thetypeattribute">
+
+
+<h1 class="title topictitle1">The type attribute</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The type attribute is most often used on linking elements
+to describe the target of a cross-reference. It is also used on the
+note element to describe the type of the current note, and on several
+other elements for varying purposes.</p>
+
+<div class="section">The descriptions for the type attribute on linking elements
+and on note are too long to fit in the usual attribute table, so they
+are included in this section; for other elements, such as audience,
+copyright, or object, the description can be found with the element.</div>
+
+<div class="section"><h2 class="title sectiontitle">Using type on a linking element</h2><p class="p">The type
+attribute describes the target of a cross-reference and may generate
+cross-reference text based on that description. Only the &lt;xref&gt;
+element can link to content below the topic level: other types of
+linking can target whole topics, but not parts of topics. Typically &lt;xref&gt;
+should also be limited to topic-level targets, unless the output is
+primarily print-oriented. Web-based referencing works best at the
+level of whole topics, rather than anchor locations within topics.</p>
+<p class="p">If not explicitly specified on an element, the type attribute value
+cascades from the closest ancestor element. If there is no explicit
+value for the type attribute on any ancestor, a default value of “topic”
+is used. During output processing for references to DITA topics (format="dita"),
+it is an error if the actual type of a DITA topic and the explicit,
+inherited, or default value for the type attribute are not the same
+as or a specialization of the type attribute value. In this case,
+an implementation may (but need not) give an error message, and may
+(but need not) recover from this error condition by using the type
+attribute value. During output processing for references to non-DITA
+objects (i.e., either scope is not “local” or format is neither “dita”
+nor “ditamap”) or other cases where the type of the referenced item
+cannot be determined from the item itself, the explicit, inherited,
+or default value for the type attribute is used without any validation.
+When a referencing element is first added to or updated in a document,
+DITA aware editors may, but are not required to, set the type attribute
+value based on the actual type of a referenced DITA topic.</p>
+<p class="p">If the type attribute is specified when referencing
+DITA content, it should match one of the values in the referenced
+element's class attribute.  <span class="ph">The type value may
+be an unqualified local name (e.g. "fig") or a qualified name exactly
+as specified in the class attribute (e.g., "mymodule/mytype"). Processors
+may ignore qualified names or may consider only the local name.</span></p>
+<p class="p">For example, if type="topic", the link could be
+to a generic topic, or any specialization of topic, including concept,
+task, and reference. Applications may, but need not, issue a warning
+when the specified or inherited type attribute value does not match
+the target (or a specialization ancestor of the target).</p>
+<p class="p">Some
+possible values for use on the xref element and its specializations
+include:</p>
+<dl class="dl">
+<dt class="dt dlterm">fig</dt>
+
+<dd class="dd">Indicates a link to a figure.</dd>
+
+
+<dt class="dt dlterm">table</dt>
+
+<dd class="dd">Indicates a link to a table.</dd>
+
+
+<dt class="dt dlterm">li</dt>
+
+<dd class="dd">Indicates a link to an ordered list item.</dd>
+
+
+<dt class="dt dlterm">fn</dt>
+
+<dd class="dd">Indicates a link to a footnote.</dd>
+
+
+<dt class="dt dlterm">section</dt>
+
+<dd class="dd">Indicates a link to a section.</dd>
+
+</dl>
+<p class="p">Other values that may be used on any linking element
+include:</p>
+<dl class="dl">
+<dt class="dt dlterm">concept, task, reference, topic</dt>
+
+<dd class="dd">Cross-reference to a topic type.</dd>
+
+
+<dt class="dt dlterm">(no value)</dt>
+
+<dd class="dd">The processor should retrieve the actual type from the target
+if available. If the type cannot be determined, the default should
+be treated as "topic".</dd>
+
+
+<dt class="dt dlterm">-dita-use-conref-target</dt>
+
+<dd class="dd">See <a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information.</dd>
+
+</dl>
+<p class="p">Other values can be used to indicate other types
+of topics or elements as targets. Processing is only required to support
+the above list or specializations of types in that list. Supporting
+additional types as targets may require the creation of processing
+overrides.</p>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Using type in a note element</h2><p class="p">In
+a note element, this defines the type of note. For example, if the
+note is a tip, the word <strong class="ph b">Tip</strong> may be used to draw the reader's
+attention to it. <span class="ph">The values danger, warning, and notice
+have new or additional meanings with DITA 1.2 that are based on ANSI
+Z535 and ISO 3864 regulations.</span></p>
+<p class="p">If type is set to other,
+the value of the othertype attribute may be used. If you use othertype,
+many processors will require additional information on how to process
+the value. Allowable values for the type attribute are:</p>
+<dl class="dl">
+<dt class="dt dlterm">note</dt>
+
+<dd class="dd">This is just a note.</dd>
+
+
+<dt class="dt dlterm">attention</dt>
+
+<dd class="dd">Please pay extra attention to this note.</dd>
+
+
+<dt class="dt dlterm">caution</dt>
+
+<dd class="dd">Care is required when proceeding.</dd>
+
+
+<dt class="dt dlterm">danger</dt>
+
+<dd class="dd">Important! Be aware of this before doing anything else. <span class="ph">When
+used with the hazardstatement element, this indicates an imminently
+hazardous situation which, if not avoided, <strong class="ph b">will</strong> result in death
+or serious injury.</span></dd>
+
+
+<dt class="dt dlterm">fastpath</dt>
+
+<dd class="dd">This note will speed you on your way.</dd>
+
+
+<dt class="dt dlterm">important</dt>
+
+<dd class="dd">This note is important.</dd>
+
+
+<dt class="dt dlterm">notice</dt>
+
+<dd class="dd"> Indicates a potential situation which, if not avoided, may result
+in an <strong class="ph b">undesirable result or state</strong>.</dd>
+
+
+<dt class="dt dlterm">remember</dt>
+
+<dd class="dd">Don't forget to do what this note says.</dd>
+
+
+<dt class="dt dlterm">restriction</dt>
+
+<dd class="dd">You can't do what this note says.</dd>
+
+
+<dt class="dt dlterm">tip</dt>
+
+<dd class="dd">This is a fine little tip.</dd>
+
+
+<dt class="dt dlterm">warning</dt>
+
+<dd class="dd">Indicates a potentially hazardous situation. When used with the
+hazardstatement element, this indicates a situation which, if not
+avoided, <strong class="ph b">could</strong> result in death or serious injury.</dd>
+
+
+<dt class="dt dlterm">other</dt>
+
+<dd class="dd">This is something other than a normal note.</dd>
+
+ 
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  </dl>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/complexattributedefinitions.html" title="Several DITA attributes require more explanation than can fit in a single table cell. Those attributes are collected here.">Complex attribute definitions</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/theconkeyrefattribute.html" title="The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The conkeyref attribute</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/theformatattribute.html" title="The format attribute identifies the format of the resource being cross referenced. The processing default for format is &#34;dita&#34;. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor.">The format attribute</a></div>
+</div>
+</div>
+
+</body>
+</html>

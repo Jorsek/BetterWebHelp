@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="lcMatchingHeader"/>
+<meta name="abstract" content="The &lt;lcMatchingHeader&gt; element in an assessment interaction provides column headings for items to present in a matching table."/>
+<meta name="description" content="The &lt;lcMatchingHeader&gt; element in an assessment interaction provides column headings for items to present in a matching table."/>
+<meta name="DC.subject" content="lcMatchingHeader, learning and training elements"/>
+<meta name="keywords" content="lcMatchingHeader, learning and training elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/learning_training_elements_interactions_other.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcItem.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcMatchingItem.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="lcMatchingHeader"/>
+<meta name="DC.Language" content="en-us"/>
+<title>lcMatchingHeader</title>
+</head>
+<body id="lcMatchingHeader">
+
+
+	<h1 class="title topictitle1">lcMatchingHeader</h1>
+
+	
+
+	
+	<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">lcMatchingHeader</span>&gt; element in an assessment interaction provides column headings for items to present in a matching table.</p>
+
+		<div class="section" id="lcMatchingHeader__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d321295e42" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d321295e44" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d321295e49" headers="d321295e42" class="stentry"><strong>learningAssessment, learningContent, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d321295e44 d321295e49" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="lcItem.html" title="The &lt;lcItem&gt; element in an assessment interaction provides the content for an item that matches the match item in a match table.">lcItem</a>)  then  (<a class="- topic/xref  ajaxLink" href="lcMatchingItem.html" title="The &lt;lcMatchingItem&gt; element in an assessment interaction provides the content for the matching side of a matching pair of items in a match table interaction.">lcMatchingItem</a>) ) </td>
+</tr>
+</table>
+</div>
+
+		<div class="section" id="lcMatchingHeader__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d321295e80" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d321295e82" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d321295e87" headers="d321295e80" class="stentry"><strong>learningAssessment, learningContent, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d321295e82 d321295e87" class="stentry"><a class="- topic/xref  ajaxLink" href="lcMatchTable.html" title="The &lt;lcMatchTable&gt; element in an assessment interaction provides a format for matching items.">lcMatchTable</a></td>
+</tr>
+</table>
+</div>
+
+		<div class="section" id="lcMatchingHeader__inheritance"><h2 class="title sectiontitle">Inheritance</h2>
+			<p class="p">+ topic/sthead learningInteractionBase-d/sthead learning-d/lcMatchingHeader </p>
+
+		</div>
+
+<div class="example" id="lcMatchingHeader__example"><h2 class="title sectiontitle">Example</h2>
+<pre class="pre codeblock">
+...
+     &lt;lcMatchingHeader&gt;
+      &lt;lcItem&gt;Team&lt;/lcItem&gt;
+      &lt;lcMatchingItem&gt;City&lt;/lcMatchingItem&gt;
+     &lt;/lcMatchingHeader&gt;
+...
+</pre>
+
+</div>
+
+<div class="section" id="lcMatchingHeader__attributes"><h2 class="title sectiontitle">Attributes</h2>
+ 
+<table cellpadding="4" cellspacing="0" summary="" id="lcMatchingHeader__lcInteractions_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d321295e126" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d321295e129" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d321295e132" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d321295e135" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d321295e138" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d321295e126" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d321295e129" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d321295e132" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d321295e135" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d321295e138" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d321295e126" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d321295e129" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d321295e132" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d321295e135" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d321295e138" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d321295e126" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d321295e129" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d321295e132" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d321295e135" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d321295e138" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+ 
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/learning_training_elements_interactions_other.html" title="Elements in this group are designed specifically to describe learning and training interactions.">Common learning interactions elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcItem.html" title="The &lt;lcItem&gt; element in an assessment interaction provides the content for an item that matches the match item in a match table.">lcItem</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcMatchingItem.html" title="The &lt;lcMatchingItem&gt; element in an assessment interaction provides the content for the matching side of a matching pair of items in a match table interaction.">lcMatchingItem</a></div>
+</div>
+</div>
+
+</body>
+</html>

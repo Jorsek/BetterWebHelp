@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="lcInterventionItem"/>
+<meta name="abstract" content="The &lt;lcInterventionItem&gt; describes how learning content is built, based on a systems approach to analyzing, designing, developing, implementing, and evaluating any instructional experience."/>
+<meta name="description" content="The &lt;lcInterventionItem&gt; describes how learning content is built, based on a systems approach to analyzing, designing, developing, implementing, and evaluating any instructional experience."/>
+<meta name="DC.subject" content="lcInterventionItem, learning and training elements"/>
+<meta name="keywords" content="lcInterventionItem, learning and training elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/learning_training_elements_topics_other.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcIntervention.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcIntro.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="lcInterventionItem"/>
+<meta name="DC.Language" content="en-us"/>
+<title>lcInterventionItem</title>
+</head>
+<body id="lcInterventionItem">
+
+
+	<h1 class="title topictitle1">lcInterventionItem</h1>
+
+	
+
+	
+	<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">lcInterventionItem</span>&gt; describes how learning content is built, based on a systems approach to analyzing, designing, developing, implementing, and evaluating any instructional experience.</p>
+
+		<div class="section" id="lcInterventionItem__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d314602e43" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d314602e45" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d314602e50" headers="d314602e43" class="stentry"><strong>learningPlan</strong></td>
+
+<td valign="top" headers="d314602e45 d314602e50" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcLearnStrat.html" title="The &lt;lcLearnStrat&gt; describes the manner in which the learning content will be instructed. This should be a high level design that applies instructional-design theories and models.">lcLearnStrat</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcPlanObjective.html" title="The &lt;lcPlanObjective&gt; describes the objective to be addressed by a gap analysis or intervention.">lcPlanObjective</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcAssessment.html" title="The &lt;lcAssessment&gt; describes assessment plans.">lcAssessment</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcDelivery.html" title="The &lt;lcDelivery&gt; describes the delivery method for this learning content.">lcDelivery</a>) <em class="ph i"> (optional) </em>) </td>
+</tr>
+</table>
+</div>
+
+		<div class="section" id="lcInterventionItem__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d314602e130" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d314602e132" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d314602e137" headers="d314602e130" class="stentry"><strong>learningPlan</strong></td>
+
+<td valign="top" headers="d314602e132 d314602e137" class="stentry"><a class="- topic/xref  ajaxLink" href="lcIntervention.html" title="The &lt;lcIntervention&gt; describes the approach and strategies to building the learning materials, based on the needs analysis.">lcIntervention</a></td>
+</tr>
+</table>
+</div>
+
+		<div class="section" id="lcInterventionItem__inheritance"><h2 class="title sectiontitle">Inheritance</h2>
+			<p class="p">- topic/fig  learningBase/fig learningPlan/lcInterventionItem </p>
+
+		</div>
+
+<div class="example" id="lcInterventionItem__example"><h2 class="title sectiontitle">Example</h2>
+  
+  <pre class="pre codeblock">
+&lt;learningPlan id="learningPlanTest"&gt; 
+    &lt;title&gt;Learning Plan&lt;/title&gt; 
+    &lt;shortdesc&gt;It's always good to provide a plan.
+    &lt;/shortdesc&gt;
+    &lt;learningPlanbody&gt;
+        &lt;lcIntervention&gt; 
+            &lt;title&gt;Intervention&lt;/title&gt;
+            &lt;lcInterventionItem&gt;
+                &lt;lcLearnStrat&gt;Lesson 5
+consists of three SCOs, available from the LMS table of contents. The lesson
+addresses teaching points that support the module objectives. &lt;/lcLearnStrat&gt; 
+                &lt;lcPlanObjective&gt;Learn the basics of SCORM.&lt;/lcPlanObjective&gt;
+                &lt;lcAssessment&gt;The
+module will have a final assessment with questions associated to the SCOs that
+comprise the module. &lt;/lcAssessment&gt;
+                &lt;lcDelivery&gt;The course may be presented by
+land, by sea, and by air.&lt;/lcDelivery&gt;
+            &lt;/lcInterventionItem&gt;
+        &lt;/lcIntervention&gt;
+    &lt;/learningPlanbody&gt;
+&lt;/learningPlan&gt;
+  </pre>
+
+</div>
+
+<div class="section" id="lcInterventionItem__attributes"><h2 class="title sectiontitle">Attributes</h2>
+ 
+<table cellpadding="4" cellspacing="0" summary="" id="lcInterventionItem__lcInterventionItem_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d314602e177" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d314602e180" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d314602e183" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d314602e186" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d314602e189" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d314602e177" class="stentry">display-atts attribute group (scale, frame,
+				expanse)</td>
+ 
+			 <td valign="top" headers="d314602e180" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/display-atts.html" title="The &#34;display-atts&#34; attribute group includes attributes whose values may be used for affecting the display of a topic or element.">display-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d314602e183" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d314602e186" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d314602e189" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d314602e177" class="stentry">spectitle</td>
+ 
+			 <td valign="top" headers="d314602e180" class="stentry">The specialized title attribute allows architects of
+				specialized types to define a fixed or default title for a specialized element.
+				Not intended for direct use by authors.</td>
+ 
+			 <td valign="top" headers="d314602e183" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d314602e186" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d314602e189" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d314602e177" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d314602e180" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d314602e183" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d314602e186" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d314602e189" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d314602e177" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d314602e180" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d314602e183" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d314602e186" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d314602e189" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d314602e177" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d314602e180" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d314602e183" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d314602e186" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d314602e189" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+ 
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/learning_training_elements_topics_other.html" title="The learning and training content elements provide specialized content for learning topics.">Common learning content elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcIntervention.html" title="The &lt;lcIntervention&gt; describes the approach and strategies to building the learning materials, based on the needs analysis.">lcIntervention</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcIntro.html" title="The &lt;lcIntro&gt; provides a detailed introduction and description of the content to be delivered, in cases where the &lt;shortdesc&gt; is not adequate to fully describe the content. It may also include instructor notes.">lcIntro</a></div>
+</div>
+</div>
+
+</body>
+</html>

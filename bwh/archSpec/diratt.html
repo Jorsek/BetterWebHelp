@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="The dir attribute"/>
+<meta name="abstract" content="The dir attribute provides direction about how processors should render bidirectional text. Languages such as Arabic, Hebrew, Farsi, Urdu, and Yiddish have text written from right to left. Numerics and embedded sections of Western language text, however, are written from left to right. Some multilingual documents also contain a mixture of text segments in two directions. This attribute specifies how such text should be rendered to a reader."/>
+<meta name="description" content="The dir attribute provides direction about how processors should render bidirectional text. Languages such as Arabic, Hebrew, Farsi, Urdu, and Yiddish have text written from right to left. Numerics and embedded sections of Western language text, however, are written from left to right. Some multilingual documents also contain a mixture of text segments in two directions. This attribute specifies how such text should be rendered to a reader."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/translation.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/xmllang.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.w3.org/International/articles/inline-bidi-markup/"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.w3.org/TR/2004/WD-xhtml2-20040722/mod-bidi.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.w3.org/TR/html4/struct/dirlang.html#adef-dir"/>
+<meta name="DC.Relation" scheme="URI" content="http://www.htmlhelp.com/reference/html40/attrs.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="diratt"/>
+<meta name="DC.Language" content="en-US"/>
+<title>The dir attribute</title>
+</head>
+<body id="diratt">
+
+
+ <h1 class="title topictitle1">The dir attribute</h1>
+
+ 
+ 
+ <div class="body refbody"><p class="shortdesc">The dir attribute provides direction about how processors should render bidirectional
+  text. Languages such as Arabic, Hebrew, Farsi, Urdu, and Yiddish have text written from right to
+  left. Numerics and embedded sections of Western language text, however, are written from left to
+  right. Some multilingual documents also contain a mixture of text segments in two directions. This
+  attribute specifies how such text should be rendered to a reader.</p>
+
+  <div class="section">
+   
+   
+   <div class="p">Bidirectional text processing is controlled by several factors:<ul class="ul">
+     <li class="li">The xml:lang attribute may be used to identify text that requires bidirectional
+      rendering. The Unicode Bidirectional algorithm provides the means to properly identify western
+      content in mixed text.
+      </li>
+
+     <li class="li">The dir attribute may be set on the root element,<span class="ph"> in combination with the
+       xml:lang attribute</span>. <span class="ph">For example, to correctly set in a web browser a text
+       in Arabic with embedded English content, the root element should be set with xml:lang="ar"
+       and dir="rtl". All text, including punctuation marks, will be set correctly. </span></li>
+
+     <li class="li">The dir attribute may be set to either "ltr" or "rtl" on an element in the
+       document.</li>
+
+     <li class="li">The dir attribute may be set to either "lro" or "rlo" on an element in the document.
+      </li>
+
+    </ul>
+</div>
+
+   <p class="p">The Unicode bidirectional algorithm positions the punctuation correctly for a given language.
+    The rendering is responsible for displaying the text properly.
+    </p>
+
+   <p class="p">The use of the dir attribute and the Unicode algorithm is explained in the article <a class="xref" href="http://www.w3.org/TR/html4/struct/dirlang.html#adef-dir" target="_blank"> Specifying the
+     direction of text and tables: the dir attribute
+     (http://www.w3.org/TR/html4/struct/dirlang.html#adef-dir) </a>. This article contains
+    several examples of how to use the dir attribute set to either left-to-right or right-to-left.
+    There is no example of setting the dir attribute to either "lro" or "rlo", although it can be
+    inferred from the example that uses the &lt;bdo&gt; element, a now-deprecated W3C mechanism for
+    overriding the entire Unicode bidirectional algorithm.</p>
+
+   <p class="p">Note that properly written mixed text does not need any special markers. The Unicode
+    bidirectional algorithm is sufficient. However, some rendering systems may need directions for
+    displaying bidirectional text, such as Arabic, properly. For example, the Apache FOP tool may
+    not render Arabic properly unless the left-to-right and right-to-left indicators are used.</p>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">Recommended usage</h2>
+   
+   <p class="p">The dir attribute, together with the xml:lang attribute, is essential for rendering table
+    columns and definition lists &lt;dl&gt; to ensure proper order.</p>
+
+   <div class="p">In general text, the Unicode Bidirectional algorithm, as specified by the xml:lang attribute
+    together with the dir attribute, provides for various levels of bidirectionality, as follows:<ul class="ul" id="diratt__ul_2e2dcdcf-9265-4f9e-b49b-a67af4e4a94c">
+     <li class="li">Directionality is either explicitly specified <span class="ph">via the xml:lang
+       attribute in combination with the dir attribute</span> on the highest level element (topic or
+      derived peer for topics, map for ditamaps) or assumed by the processing application. If used,
+      it is recommended to specify the dir attribute on the highest level element in the topic or
+      document element of the map. </li>
+
+     <li class="li">When embedding a right-to-left text run inside a left-to-right text run (or vice-versa),
+      the default direction <span class="ph">may</span> provide incorrect results based on the rendering
+      mechanism, especially if the embedded text run includes punctuation that is located at one end
+      of the embedded text run. Unicode defines spaces and punctuation as having neutral
+      directionality and defines directionality for these neutral characters when they appear
+      between characters having a strong directionality (most characters that are not spaces or
+      punctuation). While the default direction is often sufficient to determine the correct
+      directionality of the language, sometimes it renders the characters incorrectly (for example,
+      a question mark at the end of a Hebrew question may appear at the beginning of the question
+      instead of at the end or a parenthesis may render incorrectly). To control this behavior, the
+      dir attribute is set to "ltr" or "rtl" as needed, to ensure that the desired direction is
+      applied to the characters that have neutral bidirectionality. The "ltr" and "rtl" values
+      override only the neutral characters (e.g. spaces and punctuation), not all Unicode
+      characters. <div class="note note"><span class="notetitle">Note:</span> Problems with Unicode rendering may be caused by the rendering mechanism.
+       The problems are not due to the XML markup itself. </div>
+</li>
+
+     <li class="li">Sometimes you may want to override the default directionality for strongly bidirectional
+      characters. Overrides are done using the "lro" and "rlo" values, which overrides the Unicode
+      Bidirectional algorithm. This override forces a direction on the contents of the element.
+      These override attributes give the author a brute force way of setting the directionality
+      independent of the Unicode Bidirectional algorithm. The gentler "ltr" and "rtl" values have a
+      less radical effect, only affecting punctuation and other so-called neutral characters. </li>
+
+    </ul>
+</div>
+
+   <p class="p">For most authoring needs, the "ltr" and "rtl" values are sufficient. Only when the desired
+    effect cannot be achieved using these values, should the override values be used. </p>
+
+   
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">Implementation precautions</h2>
+   
+   
+   <p class="p">Applications that process DITA documents, whether at the authoring, translation, publishing,
+    or any other stage, should fully support the Unicode bidirectional algorithm to correctly
+    implement the script and directionality for each language used in the document.
+    </p>
+
+   <p class="p">Applications should ensure every highest level topic element and the root map element
+    explicitly assign the dir attribute, as well as the xml:lang attribute. </p>
+
+  </div>
+
+ </div>
+
+ <div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/translation.html" title="DITA has features that facilitate preparing content for translation and working with multilingual content, including the @xml:lang attribute, the @dir attribute, and the @translate attribute. In addition, the &lt;index-sort-as&gt; element provides support for index sorting in languages in which the index sort order must be modified by the author or translator.">Translation and localization</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/xmllang.html" title="The @xml:lang attribute specifies the language (and optionally the locale) of the element content. The @xml:lang attribute applies to all attributes and content of the element where it is specified, unless it is overridden with @xml:lang on another element within that content. If the @xml:lang attribute on the document (outermost) element of a map or of a top-level topic has no value, the processor should assume a default value. The default value of the processor may be either fixed, configurable, or derived from the content itself, such as the @xml:lang attribute on the primary map file. As the default value of a processor may be fixed, it is strongly recommended that the @xml:lang attribute be set on each map and top-level topic.">The @xml:lang attribute</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a class="- topic/link  ajaxLink" href="http://www.w3.org/International/articles/inline-bidi-markup/" target="_blank">What you need to know about the BIDI algorithm and inline markup
+    (http://www.w3.org/International/articles/inline-bidi-markup/)</a></div>
+<div><a class="- topic/link  ajaxLink" href="http://www.w3.org/TR/2004/WD-xhtml2-20040722/mod-bidi.html" target="_blank">XHTML Bi-directional Text Attribute Module
+    (http://www.w3.org/TR/2004/WD-xhtml2-20040722/mod-bidi.html)</a></div>
+<div><a class="- topic/link  ajaxLink" href="http://www.w3.org/TR/html4/struct/dirlang.html#adef-dir" target="_blank">Specifying the direction of text and tables: the dir attribute
+    (http://www.w3.org/TR/html4/struct/dirlang.html#adef-dir)</a></div>
+<div><a class="- topic/link  ajaxLink" href="http://www.htmlhelp.com/reference/html40/attrs.html" target="_blank">HTML 4.0 Common Attributes
+    (http://www.htmlhelp.com/reference/html40/attrs.html)</a></div>
+</div>
+</div>
+
+</body>
+</html>

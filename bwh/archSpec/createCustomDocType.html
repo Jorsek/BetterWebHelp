@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Configuration (Document type shells)"/>
+<meta name="abstract" content="A given DITA map or topic document is governed by a DITA document type that defines the set of structural modules (topic or map types), domain modules, and constraints modules that the map or topic can use."/>
+<meta name="description" content="A given DITA map or topic document is governed by a DITA document type that defines the set of structural modules (topic or map types), domain modules, and constraints modules that the map or topic can use."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/configuration-specialization-and-constraints.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditaspecialization.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/specialize.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/shell-dtd-coding-reqs.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/xsdShellDoctypeCodeReq.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="createCustomDocType"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Configuration (Document type shells)</title>
+</head>
+<body id="createCustomDocType">
+
+
+  <h1 class="title topictitle1">Configuration (Document type shells)</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc"><span class="ph" id="shortdesc">A given DITA map or topic document is governed by a DITA document
+      type that defines the set of structural modules (topic or map types), domain modules, and
+      constraints modules that the map or topic can use.</span></p>
+
+    <p class="p">The DITA document type is defined entirely by the set of modules declared on the @domains
+      attribute of the document's root element and by the values of the @class attributes of all the
+      elements in the document. If the @domains attribute declares both structural and domain
+      vocabulary modules, then the @domains attribute by itself serves to define the DITA document
+      type. The information on the @domains and @class attributes is sufficient to implement all
+      DITA-defined processing and constraint checking on documents (for example, determining if a
+      referenced element in a content reference has a set of modules compatible with the modules
+      used by the referencing element's document).</p>
+
+    <p class="p">Thus, DITA <span class="keyword">does not</span> require that conforming DITA documents have an
+      associated DTD, XSD, or other formal document type definition as long as all required
+      attributes are explicit in document instances. However, most DITA documents have an associated
+      DTD or XML schema document by which the documents can be validated using normal XML processors
+      and that can provide default values for the @domains and @class attributes, in particular. In
+      addition, while the DITA specification only defines coding requirements for DTDs and XML
+      schema documents, conforming DITA documents <span class="keyword">may</span> use other document type
+      constraint languages, such as RelaxNG or Schematron.</p>
+
+    <p class="p">Per the coding requirements for DITA document types, document type shells are always
+      implemented as a top-level file that only includes and configures vocabulary modules—they
+      never directly define new element or attribute types.</p>
+
+    <div class="p">Two document type shells define the same DITA document type if they integrate the same set of
+      vocabulary and constraint modules. For example, a shell document type that is an unmodified
+      copy of the OASIS-provided topic document type shell (topic.dtd or topic.xsd) defines the same
+      DITA document type as the original but, because it is a distinct file, has a distinct system
+      identifier (because it is not a replacement for the OASIS-provided shell but a copy of it,
+      which <span class="keyword">must</span> be stored in a different location) and <span class="keyword">must</span>
+      have a unique public identifier if a public identifier is associated with it. In particular,
+      for document type shells not created by OASIS, the public identifier or URN for the document
+      type shell <span class="keyword">must not</span> indicate OASIS as the owner and
+        <span class="keyword">should</span> reflect the owner or creator of the document type shell. For
+      example, if example.com creates a copy of the topic.dtd document type shell for its own use,
+      an appropriate public identifier would be "-//example.com//DTD DITA Topic//EN", where
+      "example.com" is the owner identifier component of the public identifier. An appropriate URN
+      would be "urn:example.com:names:dita:xsd:topic.xsd".<div class="note note"><span class="notetitle">Note:</span> The public or system identifier
+        associated with a given document type shell is not, by itself, necessarily distinguishing.
+        This is because two different shell document types, owned by different owners, may define
+        the same DITA document type as indicated by the effective value of the @domains
+        attribute.</div>
+</div>
+
+    <p class="p">While the DITA specification includes a starter set of document type shells for common
+      combinations of modules, those document type shells are not mandatory.</p>
+
+    <div class="note note"><span class="notetitle">Note:</span> Even if an initial implementation does not require configuration, constraint, or
+      specialization, it can be useful to create new shell document types. That way, if modification
+      is required in the future, documents will not need to be modified to point to a new shell
+      document type.</div>
+
+    <p class="p">DITA document type shells <span class="keyword">must</span> follow the <span class="ph">coding
+        requirements</span> defined in this specification. This ensures consistency of implementation
+      and also serves to make the task of creating document type shells almost entirely
+      mechanical.</p>
+
+  </div>
+
+<div class="related-links">
+<ol class="olchildlinks">
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/shell-dtd-coding-reqs.html">DTD document-type shell: Coding requirements</a><br/>
+A document type shell integrates one or more topic type or map type modules, zero or     more domain modules, and zero or more constraint modules. A DTD document type shell is organized     into sections, where each section contains a specific type of declaration.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/xsdShellDoctypeCodeReq.html">XSD document-type shell: Coding requirements</a><br/>
+A shell document type integrates one or more topic type or map type modules, zero or     more domain modules, and zero or more constraint modules. A shell XSD is organized into     sections, where each section contains a specific type of declaration.</li>
+</ol>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/configuration-specialization-and-constraints.html" title="The extension facilities of DITA allow existing vocabulary and constraint modules to be combined to create specific DITA document types. Additionally, vocabulary modules can be extended to create more-specialized markup to meet new requirements not satisfied by existing markup.">Configuration, specialization, and constraints</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditaspecialization.html" title="DITA provides three extension facilities: configuration of the vocabulary modules used by DITA document types, constraint of base content models and attribute lists, and creation of new element and attribute types (specialization).">Overview of DITA extension facilities</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/specialize.html" title="The specialization feature of DITA allows for the creation of new element types and attributes that are explicitly and formally derived from existing types. The resulting specialization allows for the blind interchange of all conforming DITA content and a minimum level of common processing for all DITA content. It also allows specialization-aware processors to add specialization-specific processing to existing base processing.">Specialization</a></div>
+</div>
+</div>
+
+</body>
+</html>

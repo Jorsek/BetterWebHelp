@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="prop"/>
+<meta name="abstract" content="Identifies an attribute, and usually values in the attribute, to take an action on. The attribute must be a conditional processing attribute: platform, product, audience, props. and otheprops; or a specialization of the props attribute."/>
+<meta name="description" content="Identifies an attribute, and usually values in the attribute, to take an action on. The attribute must be a conditional processing attribute: platform, product, audience, props. and otheprops; or a specialization of the props attribute."/>
+<meta name="DC.subject" content="DITAVAL elements, prop"/>
+<meta name="keywords" content="DITAVAL elements, prop"/>
+<meta name="DC.Relation" scheme="URI" content="../common/about-ditaval.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/ditaval-style-conflict.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/ditaval-revprop.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ditaval-prop"/>
+<meta name="DC.Language" content="en-us"/>
+<title>prop</title>
+</head>
+<body id="ditaval-prop">
+
+
+<h1 class="title topictitle1">prop</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Identifies an attribute, and usually values in the attribute,
+to take an action on. The attribute must be a conditional processing
+attribute: platform, product, audience, props. and otheprops; or a
+specialization of the props attribute. </p>
+
+<div class="section">A prop element may do one of the following:<ul class="ul">
+<li class="li">A prop element with no @att attribute specified sets a default
+action for every prop element. It is an error to use more than one
+prop element with no attribute in a single document. Recovery from
+this error is implementation dependent; in such cases processors may,
+but need not, provide an error or warning message.</li>
+
+<li class="li">A prop element with an @att attribute but no @value attribute
+sets a default action for that specific attribute. For each specific
+attribute, it is an error to use more than one prop element with that
+attribute and no value in a single document. Recovery from this error
+is implementation dependent; in such cases processors may, but need
+not, provide an error or warning message.</li>
+
+<li class="li">A prop attribute with an @att attribute and a @value attribute
+sets an action for that value within that attribute. It is an error
+to use more than one prop element with the same attribute and value.
+Recovery from this error is implementation dependent; in such cases
+processors may, but need not, provide an error or warning message. </li>
+
+</ul>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Contains</h2><p class="p"><a class="- topic/xref  ajaxLink" href="ditaval-startflag.html" title="The startflag takes an optional image reference and an optional alt-text element for identifying the beginning of flagged content. If an image is specified, the specified image will be used to flag the beginning of the content, with the alt-text contents as alternative text. If alt-text is specified without an image, that text will be used to flag the content instead of an image. If no image and no alt-text are specified, then this element has no defined purpose. The startflag element is allowed inside either prop or revprop.">startflag</a> (<em class="ph i">optional</em>) then <a class="- topic/xref  ajaxLink" href="ditaval-endflag.html" title="The endflag takes an optional image reference and an optional alt-text element for identifying the end of flagged content. If an image is specified, the specified image will be used to flag the end of the content, with the alt-text contents as alternative text. If alt-text is specified without an image, that text will be used to flag the content instead of an image. If no image and no alt-text are specified, then this element has no defined purpose. The endflag element is allowed inside either prop or revprop.">endflag</a> (<em class="ph i">optional</em>)</p>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Contained by</h2><p class="p"><a class="- topic/xref  ajaxLink" href="ditaval-val.html" title="&lt;val&gt; is the root element of a DITAVAL file.">val</a></p>
+</div>
+
+<div class="example" id="ditaval-prop__example"><h2 class="title sectiontitle">Example</h2><p class="p">See the example
+in the <a class="- topic/xref  ajaxLink" href="ditaval-val.html" title="&lt;val&gt; is the root element of a DITAVAL file.">&lt;val&gt;</a> description.</p>
+</div>
+
+<div class="section" id="ditaval-prop__attrs"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="ditaval-prop__abstract_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d174269e117" class="stentry" width="14.285714285714286%">Name</th>
+
+<th valign="bottom" align="left" id="d174269e120" class="stentry" width="42.85714285714286%">Description</th>
+
+<th valign="bottom" align="left" id="d174269e123" class="stentry" width="14.285714285714286%">Data Type</th>
+
+<th valign="bottom" align="left" id="d174269e126" class="stentry" width="14.285714285714286%">Default Value</th>
+
+<th valign="bottom" align="left" id="d174269e129" class="stentry" width="14.285714285714286%">Required?</th>
+
+</tr>
+<tr class="strow">
+<td valign="top" headers="d174269e117" class="stentry">att</td>
+
+<td valign="top" headers="d174269e120" class="stentry">The attribute to be acted upon. Must be one of props, audience,
+platform, product, otherprops, or a specialization of props. If the
+att attribute is absent, then the prop element declares a default
+behavior for any conditional processing attribute.</td>
+
+<td valign="top" headers="d174269e123" class="stentry">CDATA</td>
+
+<td valign="top" headers="d174269e126" class="stentry">#IMPLIED</td>
+
+<td valign="top" headers="d174269e129" class="stentry">no</td>
+
+</tr>
+<tr class="strow">
+<td valign="top" headers="d174269e117" class="stentry">val</td>
+
+<td valign="top" headers="d174269e120" class="stentry">The value to be acted upon. If the val attribute is absent,
+then the prop element declares a default behavior for any value in
+the specified attribute.</td>
+
+<td valign="top" headers="d174269e123" class="stentry">CDATA</td>
+
+<td valign="top" headers="d174269e126" class="stentry">#IMPLIED</td>
+
+<td valign="top" headers="d174269e129" class="stentry">no</td>
+
+</tr>
+<tr class="strow">
+<td valign="top" headers="d174269e117" class="stentry">action</td>
+
+<td valign="top" headers="d174269e120" class="stentry">The action to be taken. The options are:<dl class="dl">
+<dt class="dt dlterm"><kbd class="ph userinput">include</kbd></dt>
+
+<dd class="dd">Include the content in output. This is the default behavior unless
+otherwise set.</dd>
+
+
+<dt class="dt dlterm"><kbd class="ph userinput">exclude</kbd></dt>
+
+<dd class="dd">Exclude the content from output (if all values in the particular
+attribute are excluded).</dd>
+
+
+<dt class="dt dlterm"><kbd class="ph userinput">passthrough</kbd></dt>
+
+<dd class="dd">Include the content in output, and preserve the attribute value
+as part of the output stream for further processing by a runtime engine,
+for example runtime filtering based on individual user settings. The
+value should be preserved in whatever syntax is required by the target
+runtime. Values that are not explicitly passed through should be removed
+from the output stream, even though the content is still included.</dd>
+
+
+<dt class="dt dlterm"><kbd class="ph userinput">flag</kbd></dt>
+
+<dd class="dd">Include and flag the content on output (if the content has not
+been excluded).</dd>
+
+</dl>
+</td>
+
+<td valign="top" headers="d174269e123" class="stentry">(include | exclude | passthrough | flag)</td>
+
+<td valign="top" headers="d174269e126" class="stentry">#IMPLIED</td>
+
+<td valign="top" headers="d174269e129" class="stentry">yes</td>
+
+</tr>
+<tr id="ditaval-prop__color" class="strow">
+<td valign="top" headers="d174269e117" class="stentry">color</td>
+
+<td valign="top" headers="d174269e120" class="stentry">If flag has been set, the color to use to flag text. Colors
+may be entered by name or code. Processor support is recommended for
+ the color names listed under the heading "&lt;color&gt;" in <a class="xref" href="http://www.w3.org/TR/2001/REC-xsl-20011015/slice5.html#section-N8794-Property-Datatypes" target="_blank">http://www.w3.org/TR/2001/REC-xsl-20011015/slice5.html#section-N8794-Property-Datatypes</a> and for the 6 digit hex code form (#rrggbb,
+case insensitive). If flag has not been set, this attribute is ignored.</td>
+
+<td valign="top" headers="d174269e123" class="stentry">CDATA</td>
+
+<td valign="top" headers="d174269e126" class="stentry">#IMPLIED</td>
+
+<td valign="top" headers="d174269e129" class="stentry">no</td>
+
+</tr>
+<tr id="ditaval-prop__backcolor" class="strow">
+<td valign="top" headers="d174269e117" class="stentry">backcolor</td>
+
+<td valign="top" headers="d174269e120" class="stentry">If flag has been set, the color to use as background for
+flagged text. Colors may be entered by name or code. Processor support
+is recommended for the color names listed under the heading "&lt;color&gt;"
+in <a class="xref" href="http://www.w3.org/TR/2001/REC-xsl-20011015/slice5.html#section-N8794-Property-Datatypes" target="_blank">http://www.w3.org/TR/2001/REC-xsl-20011015/slice5.html#section-N8794-Property-Datatypes</a> and for the 6 digit hex code form (#rrggbb,
+case insensitive). If flag has not been set, this attribute is ignored.</td>
+
+<td valign="top" headers="d174269e123" class="stentry">CDATA</td>
+
+<td valign="top" headers="d174269e126" class="stentry">#IMPLIED</td>
+
+<td valign="top" headers="d174269e129" class="stentry">no</td>
+
+</tr>
+<tr id="ditaval-prop__style" class="strow">
+<td valign="top" headers="d174269e117" class="stentry">style</td>
+
+<td valign="top" headers="d174269e120" class="stentry">If flag has been set, the text style to use for flagged text.
+The following values are enumerated:<ul class="ul">
+<li class="li">underline</li>
+
+<li class="li">double-underline</li>
+
+<li class="li">italics</li>
+
+<li class="li">overline</li>
+
+<li class="li">bold</li>
+
+</ul>
+ If flag has not been set, this attribute is ignored.</td>
+
+<td valign="top" headers="d174269e123" class="stentry">(underline | double-underline | italics | overline | bold)</td>
+
+<td valign="top" headers="d174269e126" class="stentry">#IMPLIED</td>
+
+<td valign="top" headers="d174269e129" class="stentry">no</td>
+
+</tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/about-ditaval.html" title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval.">DITAVAL elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/ditaval-style-conflict.html" title="The style-conflict element declares behavior to be used when one or more flagging methods collide on a single content element.">style-conflict</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/ditaval-revprop.html" title="Identifies a value in the rev attribute that should be flagged in some manner. Unlike the other conditional processing attributes, which may be used for both filtering and flagging, the rev attribute may only be used for flagging.">revprop</a></div>
+</div>
+</div>
+
+</body>
+</html>

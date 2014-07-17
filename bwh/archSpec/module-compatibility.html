@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="Module compatibility and the @domains attribute"/>
+<meta name="abstract" content="A given DITA document declares, through the @domains attribute on &lt;map&gt; and &lt;topic&gt; elements, the set of vocabulary and constraint modules on which it depends."/>
+<meta name="description" content="A given DITA document declares, through the @domains attribute on &lt;map&gt; and &lt;topic&gt; elements, the set of vocabulary and constraint modules on which it depends."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/behaviors.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditanav.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="module-compatibility"/>
+<meta name="DC.Language" content="en-US"/>
+<title>Module compatibility and the @domains attribute</title>
+</head>
+<body id="module-compatibility">
+
+
+ <h1 class="title topictitle1">Module compatibility and the @domains attribute</h1>
+
+ 
+ <div class="body"><p class="shortdesc">A given DITA document declares, through the @domains attribute on &lt;map&gt; and
+  &lt;topic&gt; elements, the set of vocabulary and constraint modules on which it depends.</p>
+
+  <p class="p">The @domains attribute serves two primary purposes:</p>
+
+  <ul class="ul">
+   <li class="li">To indicate to DITA processors the specific features that they should or must provide in
+    order to completely process the document.</li>
+
+   <li class="li">To determine the validity of elements that are copied from one DITA document to another. This
+    copying may occur as the result of a content reference (conref) or key reference (keyref), or
+    may occur in the context of an author editing a DITA document.</li>
+
+  </ul>
+
+  <p class="p">A processor can examine the value of the @domains attribute and compare the set of modules
+   listed to the set of modules for which it provides direct support. It then can take appropriate
+   action if it does not provide support for a given module, for example, issuing a warning before
+   applying fallback processing.</p>
+
+  <p class="p">When copying, it is necessary to determine if the data being copied (the copy source) requires
+   modules that are not required by the document into which the data is to be copied (the copy
+   target). Such a copy operation is always safe if the copy source requires a subset of the modules
+   that are required by the copy target. Such a copy is unsafe if the copy source requires modules
+   that are not required by the copy target. </p>
+
+  <p class="p">When a copy operation is unsafe, processors may compare the copy source to the copy target to
+   determine if the copy source satisfies the constraints of the copy target. If the copy source
+   meets the copy target constraints, the copy may be allowed. Processors should issue a warning
+   that the copy was allowed but the constraints are not compatible. If the copy source does not
+   meet the constraints of the copy target, processors may apply generalization until the
+   generalized result either satisfies the copy target constraints or no further generalization can
+   be performed. If the copy operation can be performed following generalization, the processor
+   should issue a warning that the constraints are not compatible and generalization had to be
+   performed in order to complete the copy operation.</p>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/behaviors.html" title="Several common DITA processing behaviors are driven by attributes, including setting the set of vocabulary and constraint modules on which a DITA document depends, navigation, linking, content reuse (via direct or indirect addressing), conditional processing, chunking, and printing. In addition, translation of DITA content is expedited through the use of the @dir, @translate, and @xml:lang attributes, and the &lt;index-sort-as&gt; element.">DITA processing</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditanav.html" title="DITA includes markup that processors may use to generate reader navigation to or across DITA topics.">Navigation behaviors</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="safety"/>
+<meta name="abstract" content="The &lt;safety&gt; element contains information about safety conditions. This element either contains children elements that describe safety conditions or a &lt;nosafety&gt; element that indicates that there are no safety conditions that must be considered."/>
+<meta name="description" content="The &lt;safety&gt; element contains information about safety conditions. This element either contains children elements that describe safety conditions or a &lt;nosafety&gt; element that indicates that there are no safety conditions that must be considered."/>
+<meta name="DC.subject" content="safety"/>
+<meta name="keywords" content="safety"/>
+<meta name="DC.Relation" scheme="URI" content="../common/mitask-d.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/safecond.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="safety"/>
+<meta name="DC.Language" content="en-us"/>
+<title>safety</title>
+</head>
+<body id="safety">
+
+
+<h1 class="title topictitle1">safety</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">safety</span>&gt; element contains information
+about safety conditions. This element either contains children elements
+that describe safety conditions or a &lt;nosafety&gt; element that indicates
+that there are no safety conditions that must be considered.</p>
+
+<div class="section" id="safety__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d508729e35" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d508729e37" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d508729e42" headers="d508729e35" class="stentry"><strong>machineryTask</strong></td>
+
+<td valign="top" headers="d508729e37 d508729e42" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="nosafety.html" title="The &lt;nosafety&gt; element specifies that there are no safety conditions that must be considered.">nosafety</a>)  or  (<a class="- topic/xref  ajaxLink" href="safecond.html" title="The &lt;safecond&gt; element specifies a safety condition that must be considered prior to completing a task. It may also contain a complete hazard statement.">safecond</a>) <em class="ph i"> (one or more) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="safety__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d508729e77" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d508729e79" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d508729e84" headers="d508729e77" class="stentry"><strong>machineryTask</strong></td>
+
+<td valign="top" headers="d508729e79 d508729e84" class="stentry"><a class="- topic/xref  ajaxLink" href="prelreqs.html" title="The &lt;prelreqs&gt; element contains information about preliminary requirements – the things the user needs to know or do before starting a task. This element contains information about personnel requirements, safety conditions, support equipment, supplies, and spare parts.">prelreqs</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="safety__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">+
+topic/ol task/ol mitask-d/safety</p>
+</div>
+
+<div class="example" id="safety__example"><h2 class="title sectiontitle">Example</h2><pre class="pre codeblock"><strong class="ph b">&lt;safety&gt;</strong>
+  &lt;safecond&gt;All power sources disconnected from the system.&lt;/safecond&gt;
+  &lt;safecond&gt;All networking cables disconnected from the system.&lt;/safecond&gt;
+<strong class="ph b">&lt;/safety&gt;</strong></pre>
+</div>
+
+<div class="section" id="safety__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="safety__attribute_table" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d508729e122" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d508729e125" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d508729e128" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d508729e131" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d508729e134" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d508729e122" class="stentry">compact</td>
+ 
+			 <td valign="top" headers="d508729e125" class="stentry">Indicates close vertical spacing between the list items.
+				Expanded spacing is the default value. The output result of compact spacing
+				depends on the processor or browser. Allowed values are:
+				<dl class="dl"> 
+				   
+					 <dt class="dt dlterm">yes
+					 </dt>
+ 
+					 <dd class="dd">Indicates compact spacing.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">no
+					 </dt>
+ 
+					 <dd class="dd">Indicates expanded spacing.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d508729e128" class="stentry">(yes | no | -dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d508729e131" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d508729e134" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d508729e122" class="stentry">spectitle</td>
+ 
+			 <td valign="top" headers="d508729e125" class="stentry">The specialized title attribute allows architects of
+				specialized types to define a fixed or default title for a specialized element.
+				Not intended for direct use by authors.</td>
+ 
+			 <td valign="top" headers="d508729e128" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d508729e131" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d508729e134" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d508729e122" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d508729e125" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d508729e128" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d508729e131" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d508729e134" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d508729e122" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d508729e125" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d508729e128" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d508729e131" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d508729e134" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d508729e122" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d508729e125" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d508729e128" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d508729e131" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d508729e134" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/mitask-d.html" title="The task requirements domain contains elements for use in describing tasks that involve machines or other pieces of hardware.">Task requirements domain</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/safecond.html" title="The &lt;safecond&gt; element specifies a safety condition that must be considered prior to completing a task. It may also contain a complete hazard statement.">safecond</a></div>
+</div>
+</div>
+
+</body>
+</html>

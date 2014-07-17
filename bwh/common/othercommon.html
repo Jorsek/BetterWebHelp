@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Other common DITA attributes"/>
+<meta name="abstract" content="The following attributes are not part of an entity group but are common to many elements."/>
+<meta name="description" content="The following attributes are not part of an entity group but are common to many elements."/>
+<meta name="DC.Relation" scheme="URI" content="../common/comrfet.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/topicref-atts.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="othercommon"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Other common DITA attributes</title>
+</head>
+<body id="othercommon">
+
+
+<h1 class="title topictitle1">Other common DITA attributes</h1>
+
+
+<div class="body refbody"><p class="shortdesc">The following attributes are not part of an entity group but are
+common to many elements.</p>
+
+<div class="section"><table cellpadding="4" cellspacing="0" summary="" id="othercommon__topicref-atts-no-toc_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d43158e40" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d43158e43" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d43158e46" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d43158e49" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d43158e52" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d43158e40" class="stentry">keyref</td>
+ 
+			 <td valign="top" headers="d43158e43" class="stentry"><span class="ph" id="othercommon__d263e2664">Keyref provides a redirectable
+				  reference based on a key defined within a map. See 
+				  <a class="- topic/xref  ajaxLink" href="thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The keyref attribute</a> for information on
+				  using this attribute.</span></td>
+ 
+			 <td valign="top" headers="d43158e46" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d43158e49" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d43158e52" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d43158e40" class="stentry">outputclass</td>
+ 
+			 <td valign="top" headers="d43158e43" class="stentry">Names a role that the element is playing. The role must be
+				consistent with the basic semantic and expectations for the element. In
+				particular, the outputclass attribute can be used for styling during output
+				processing; HTML output will typically preserve outputclass for CSS
+				processing.</td>
+ 
+			 <td valign="top" headers="d43158e46" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d43158e49" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d43158e52" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d43158e40" class="stentry">class</td>
+ 
+			 <td valign="top" headers="d43158e43" class="stentry"><em class="ph i">Not for use by authors. If an editor displays class
+				  attribute values, do not edit them.</em> The class attribute supports
+				specialization. Its predefined values allow DITA tools to work correctly with
+				ranges of related content. In a generalized DITA document the class attribute
+				value in the generalized instance may differ from the default value for the
+				class attribute for the element as given in the DTD or schema. See 
+				<a class="- topic/xref  ajaxLink" href="archSpec/classatt.html" title="Each DITA element declares its specialization hierarchy as the value of the @class attribute. The @class attribute usually provides a mapping from the element's current name to its more general equivalents, but it can also provide a mapping from the current name to more general and more specialized equivalents. All specialization-aware processing can be defined in terms of @class attribute values without reference to a given element's tagname.">Element type specialization hierarchy declaration (the @class attribute)</a> for more
+				information.</td>
+ 
+			 <td valign="top" headers="d43158e46" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d43158e49" class="stentry"><em class="ph i">Default value differs for each element</em></td>
+ 
+			 <td valign="top" headers="d43158e52" class="stentry">Yes</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d43158e40" class="stentry">xml:space</td>
+ 
+			 <td valign="top" headers="d43158e43" class="stentry">This attribute is provided on
+				&lt;<span class="keyword">pre</span>&gt;, &lt;<span class="keyword">lines</span>&gt;, and on
+				elements specialized from them. It ensures that parsers in editors and
+				transforms respect the white space, including line-end characters, that is part
+				of the data in those elements. It is intended to be part of the default
+				properties of these elements, and not for authors to change or
+				delete.</td>
+ 
+			 <td valign="top" headers="d43158e46" class="stentry">(preserve)</td>
+ 
+			 <td valign="top" headers="d43158e49" class="stentry">preserve</td>
+ 
+			 <td valign="top" headers="d43158e52" class="stentry">No</td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/comrfet.html" title="Common attribute groups, such as the selection and property attributes of most DITA elements, are described here as sets in order to reduce unnecessary duplication of common information.">Commonly referenced attribute groups</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/topicref-atts.html" title="The &#34;topicref-atts&#34;, &#34;topicref-atts-no-toc&#34;, and &#34;topicref-atts-without-format&#34; attribute groups represent collections of attributes used in numerous map elements.">topicref-atts, topicref-atts-no-toc, and topicref-atts-without-format attribute groups</a></div>
+</div>
+</div>
+
+</body>
+</html>

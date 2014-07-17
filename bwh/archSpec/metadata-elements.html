@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Metadata elements"/>
+<meta name="abstract" content="The metadata elements, many of which map to Dublin core metadata, are available in topics and DITA maps. This design enables authors and information architects to use identical metadata markup in both topics and maps."/>
+<meta name="description" content="The metadata elements, many of which map to Dublin core metadata, are available in topics and DITA maps. This design enables authors and information architects to use identical metadata markup in both topics and maps."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita-metadata.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/metadata-attributes.html"/>
+<meta name="DC.Relation" scheme="URI" content="http://dublincore.org/"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="metadata-elements"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Metadata elements</title>
+</head>
+<body id="metadata-elements">
+
+
+ <h1 class="title topictitle1">Metadata elements</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc">The metadata elements, many of which map to Dublin core metadata, are available in
+  topics and DITA maps. This design enables authors and information architects to use identical
+  metadata markup in both topics and maps. </p>
+
+ <p class="p">The &lt;metadata&gt; element is a wrapper element that contains many of the metadata elements. In
+    topics, the &lt;metadata&gt; element is available in the &lt;prolog&gt; element. In maps, the
+    &lt;metadata&gt; element is available in the &lt;topicmeta&gt; element. </p>
+
+   <p class="p">In DITA maps, the metadata elements also are available directly in the &lt;topicmeta&gt; element.
+    However, it is recommended to use the metadata elements available in the &lt;metadata&gt; element,
+    as it better supports reuse between topics and maps. Collections of metadata can be shared
+    between DITA maps and topics by using the conref or keyref mechanism.</p>
+
+   <p class="p">In general, specifying metadata in a &lt;topicmeta&gt; element is equivalent to specifying it in
+    the &lt;prolog&gt; element of a referenced topic. The value of specifying the metadata at the map
+    level is that the topic then can be reused in other maps where different metadata might apply.
+    Many items in the &lt;topicmeta&gt; element also cascade to nested &lt;topicref&gt; elements within
+    the map.</p>
+
+   <div class="note note"><span class="notetitle">Note:</span> Not all metadata elements are currently available in the &lt;metadata&gt; element. However,
+    they are available in either the topic &lt;prolog&gt; element or the map &lt;topicmeta&gt;
+    element.</div>
+
+ </div>
+
+ <div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita-metadata.html" title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is assigned in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map; this design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts.">DITA metadata</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/metadata-attributes.html" title="Certain attributes are common across most DITA elements. These attributes support content referencing, conditional processing, application of metadata, and globalization and localization.">Metadata attributes</a></div>
+</div>
+
+<div class="linklist linklist">
+<div><a class="- topic/link  ajaxLink" href="http://dublincore.org/">Dublin Core Metadata Initiative (DCMI)</a></div></div>
+</div>
+
+</body>
+</html>

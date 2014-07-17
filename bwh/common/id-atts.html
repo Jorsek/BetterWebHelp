@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="id-atts attribute group"/>
+<meta name="abstract" content="The &#34;id-atts&#34; attribute group includes attributes that enable the naming and referencing of elements in topics and maps."/>
+<meta name="description" content="The &#34;id-atts&#34; attribute group includes attributes that enable the naming and referencing of elements in topics and maps."/>
+<meta name="DC.subject" content="%id-atts, Commonly referenced attribute descriptions, id-atts"/>
+<meta name="keywords" content="%id-atts, Commonly referenced attribute descriptions, id-atts"/>
+<meta name="DC.Relation" scheme="URI" content="../common/comrfet.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/univ-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/select-atts.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="id-atts"/>
+<meta name="DC.Language" content="en-us"/>
+<title>id-atts attribute group</title>
+</head>
+<body id="id-atts">
+
+
+ <h1 class="title topictitle1">id-atts attribute group</h1>
+
+ 
+ 
+ <div class="body refbody"><p class="shortdesc">The "id-atts" attribute group includes attributes that enable the naming and referencing
+  of elements in topics and maps.</p>
+
+  <div class="section"><h2 class="title sectiontitle">Attributes</h2>
+   
+   <table cellpadding="4" cellspacing="0" summary="" id="id-atts__id-atts_attr" border="1" class="simpletable"><tr class="sthead">
+     <th valign="bottom" align="left" id="d37613e61" class="stentry" width="25%">Name</th>
+
+     <th valign="bottom" align="left" id="d37613e64" class="stentry" width="37.5%">Description</th>
+
+     <th valign="bottom" align="left" id="d37613e67" class="stentry" width="12.5%">Data Type</th>
+
+     <th valign="bottom" align="left" id="d37613e70" class="stentry" width="12.5%">Default Value</th>
+
+     <th valign="bottom" align="left" id="d37613e73" class="stentry" width="12.5%">Required?</th>
+
+    </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d37613e61" class="stentry">id</td>
+ 
+			 <td valign="top" headers="d37613e64" class="stentry">An anchor point. This ID is the target for references by
+				href and conref attributes and for external applications that refer to DITA
+				content. See 
+				<a class="- topic/xref  ajaxLink" href="archSpec/id.html" title="The DITA identity attribute provides a mechanism for identifying content for linking.">ID attribute</a> in the Architectural
+				Specification for more details.</td>
+
+			 <td valign="top" headers="d37613e67" class="stentry">NMTOKEN</td>
+ 
+			 <td valign="top" headers="d37613e70" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d37613e73" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d37613e61" class="stentry">conref </td>
+
+			 
+			 <td valign="top" headers="d37613e64" class="stentry">This attribute is used to reference an ID on content that
+				can be reused. See 
+				<a class="- topic/xref  ajaxLink" href="theconrefattribute.html" title="This attribute is used to reference content that can be reused. It allows reuse of DITA elements, including topic or map level elements.">The conref attribute</a> for examples and
+				details about the syntax.</td>
+ 
+			 <td valign="top" headers="d37613e67" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d37613e70" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d37613e73" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d37613e61" class="stentry">conrefend</td>
+ 
+			 <td valign="top" headers="d37613e64" class="stentry">The conrefend attribute is used when reusing a range of
+				elements through conref. The syntax is the same as for the conref attribute;
+				see 
+				<a class="- topic/xref  ajaxLink" href="theconrefendattribute.html" title="The conrefend attribute is used when referencing a range of elements with the conref mechanism. The conref or conkeyref attribute points to the first element in the range, while conrefend points to the last element in the range. Although the start and end elements must be of the same type as the referencing element (or specialized from that element), the intermediary, contiguous nodes in the middle of the range do not have to be the same.">The conrefend attribute</a> for
+				examples.</td>
+ 
+			 <td valign="top" headers="d37613e67" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d37613e70" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d37613e73" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d37613e61" class="stentry">conaction</td>
+ 
+			 <td valign="top" headers="d37613e64" class="stentry">This attribute enables users to push content into a new
+				location. See 
+				<a class="- topic/xref  ajaxLink" href="theconactionattribute.html" title="The conaction attribute allows users to push content from one topic into another. It causes the conref attribute to work in reverse, so that the content is pushed from the current topic into another, rather than pulled from another topic into the current one.">The conaction attribute</a> for examples and
+				details about the syntax.</td>
+ 
+			 <td valign="top" headers="d37613e67" class="stentry">(mark | pushafter | pushbefore | pushreplace |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d37613e70" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d37613e73" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d37613e61" class="stentry">conkeyref</td>
+ 
+			 <td valign="top" headers="d37613e64" class="stentry">Allows conref to operate using a key instead of a URI. See 
+				<a class="- topic/xref  ajaxLink" href="theconkeyrefattribute.html" title="The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The conkeyref attribute</a> for more details
+				about the syntax and behaviors.</td>
+ 
+			 <td valign="top" headers="d37613e67" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d37613e70" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d37613e73" class="stentry">No</td>
+ 
+		  </tr>
+</table>
+
+  </div>
+
+  
+  
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/comrfet.html" title="Common attribute groups, such as the selection and property attributes of most DITA elements, are described here as sets in order to reduce unnecessary duplication of common information.">Commonly referenced attribute groups</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/select-atts.html" title="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations.">select-atts attribute group</a></div>
+</div>
+</div>
+
+</body>
+</html>

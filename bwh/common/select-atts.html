@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="select-atts attribute group"/>
+<meta name="abstract" content="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations."/>
+<meta name="description" content="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations."/>
+<meta name="DC.subject" content="%select-atts, Commonly referenced attribute descriptions"/>
+<meta name="keywords" content="%select-atts, Commonly referenced attribute descriptions"/>
+<meta name="DC.Relation" scheme="URI" content="../common/comrfet.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/id-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/localization-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/conditional-processing-attributes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/condproc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/condproc.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/specialize.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dtdAttributeDomainCodingReq.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="select-atts"/>
+<meta name="DC.Language" content="en-us"/>
+<title>select-atts attribute group</title>
+</head>
+<body id="select-atts">
+
+
+  <h1 class="title topictitle1">select-atts attribute group</h1>
+
+  
+  
+  
+  <div class="body refbody"><p class="shortdesc">The "select-atts" attribute group includes common metadata attributes, several of
+    which support conditional processing (filtering and flagging) or the creation of new attribute
+    domain specializations.</p>
+<div class="section"><h2 class="title sectiontitle">Attributes</h2>
+      
+      <table cellpadding="4" cellspacing="0" summary="" id="select-atts__selectatts" border="1" class="simpletable"><tr class="sthead">
+          <th valign="bottom" align="left" id="d45227e60" class="stentry" width="20%">Name</th>
+
+          <th valign="bottom" align="left" id="d45227e63" class="stentry" width="40%">Description</th>
+
+          <th valign="bottom" align="left" id="d45227e66" class="stentry" width="13.333333333333334%">Data Type</th>
+
+          <th valign="bottom" align="left" id="d45227e69" class="stentry" width="13.333333333333334%">Default Value</th>
+
+          <th valign="bottom" align="left" id="d45227e72" class="stentry" width="13.333333333333334%">Required?</th>
+
+        </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d45227e60" class="stentry">props</td>
+ 
+			 <td valign="top" headers="d45227e63" class="stentry">Root
+				attribute from which new metadata attributes can be specialized. 
+				<span class="ph">This is a property attribute which supports conditional
+				  processing for filtering or flagging.</span> 
+				<span class="ph">If
+				  no value is specified, but the attribute is specified on an ancestor within a
+				  map or within the related-links section, the value will cascade from the
+				  closest ancestor.</span> 
+				<span class="ph">The attribute takes a space-delimited set of values.
+				  However, when acting as a container for generalized attributes, the content
+				  model will be more complex; see 
+				  <a class="- topic/xref  ajaxLink" href="archSpec/attributegeneralize.html" title="There is a particular syntax to generalize attributes that have been specialized from the @props or @base attribute. Specialization-aware processors should be able to recognize and process both the specialized and generalized forms of an attribute as being equivalent in their values.">Attribute generalization</a> for
+				  more details.</span></td>
+ 
+			 <td valign="top" headers="d45227e66" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d45227e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d45227e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d45227e60" class="stentry">base</td>
+ 
+			 <td valign="top" headers="d45227e63" class="stentry">A
+				generic attribute that has no specific purpose. It is intended to act as a base
+				for specialized attributes that have a simple value syntax like the conditional
+				processing attributes (one or more alphanumeric values separated by
+				whitespace), but is not itself a filtering or flagging attribute. 
+				<span class="ph">The attribute takes a space-delimited set of values.
+				  However, when acting as a container for generalized attributes, the content
+				  model will be more complex; see 
+				  <a class="- topic/xref  ajaxLink" href="archSpec/attributegeneralize.html" title="There is a particular syntax to generalize attributes that have been specialized from the @props or @base attribute. Specialization-aware processors should be able to recognize and process both the specialized and generalized forms of an attribute as being equivalent in their values.">Attribute generalization</a> for
+				  more details.</span></td>
+ 
+			 <td valign="top" headers="d45227e66" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d45227e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d45227e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d45227e60" class="stentry">platform</td>
+ 
+			 <td valign="top" headers="d45227e63" class="stentry">Indicates operating system and hardware. 
+				<span class="ph">This is a property attribute which supports conditional
+				  processing for filtering or flagging.</span> 
+				<span class="ph">If
+				  no value is specified, but the attribute is specified on an ancestor within a
+				  map or within the related-links section, the value will cascade from the
+				  closest ancestor.</span> 
+				<span class="ph">The attribute takes a space-delimited set of
+				  values.</span></td>
+ 
+			 <td valign="top" headers="d45227e66" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d45227e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d45227e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d45227e60" class="stentry">product</td>
+ 
+			 <td valign="top" headers="d45227e63" class="stentry">Contains the name of the product to which the element
+				applies. 
+				<span class="ph">This is a property attribute which supports conditional
+				  processing for filtering or flagging.</span> 
+				<span class="ph">If
+				  no value is specified, but the attribute is specified on an ancestor within a
+				  map or within the related-links section, the value will cascade from the
+				  closest ancestor.</span> 
+				<span class="ph">The attribute takes a space-delimited set of
+				  values.</span></td>
+
+			 
+			 <td valign="top" headers="d45227e66" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d45227e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d45227e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d45227e60" class="stentry">audience</td>
+ 
+			 <td valign="top" headers="d45227e63" class="stentry">Indicates the intended audience for the element. 
+				<span class="ph">This is a property attribute which supports conditional
+				  processing for filtering or flagging.</span> 
+				<span class="ph">If
+				  no value is specified, but the attribute is specified on an ancestor within a
+				  map or within the related-links section, the value will cascade from the
+				  closest ancestor.</span> 
+				<span class="ph">The attribute takes a space-delimited set of
+				  values.</span></td>
+ 
+			 <td valign="top" headers="d45227e66" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d45227e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d45227e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d45227e60" class="stentry">otherprops</td>
+ 
+			 <td valign="top" headers="d45227e63" class="stentry">This attribute can be used for any other properties that
+				might be needed to describe an audience, or to provide selection criteria for
+				the element. Alternatively, the props attribute may be specialized to provide a
+				new metadata attribute instead of using the general otherprops attribute. 
+				<span class="ph">This is a property attribute which supports conditional
+				  processing for filtering or flagging.</span> 
+				<span class="ph">If
+				  no value is specified, but the attribute is specified on an ancestor within a
+				  map or within the related-links section, the value will cascade from the
+				  closest ancestor.</span> 
+				<span class="ph">The attribute takes a space-delimited set of
+				  values.</span></td>
+ 
+			 <td valign="top" headers="d45227e66" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d45227e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d45227e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d45227e60" class="stentry">importance</td>
+ 
+			 <td valign="top" headers="d45227e63" class="stentry">A range of values that describe an importance or priority
+				attributed to an element. For example, in steps of a task, the attribute
+				indicates whether a step is optional or required. This attribute is not used
+				for DITAVAL-based filtering or flagging; applications may (but need not) use
+				the importance value to highlight elements.</td>
+ 
+			 <td valign="top" headers="d45227e66" class="stentry">obsolete | deprecated | optional | default | low | normal |
+				high | recommended | required | urgent | -dita-use-​conref-​target</td>
+ 
+			 <td valign="top" headers="d45227e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d45227e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d45227e60" class="stentry">rev</td>
+ 
+			 <td valign="top" headers="d45227e63" class="stentry">Indicates a revision level of an element that identifies
+				when the element was added or modified. It 
+				<em class="ph i">may</em> be used to flag outputs when it matches a run-time
+				parameter; 
+				<span class="ph">it cannot be used for filtering. It is
+				  not sufficient to be used for version control.</span><span class="ph">If
+				  no value is specified, but the attribute is specified on an ancestor within a
+				  map or within the related-links section, the value will cascade from the
+				  closest ancestor.</span></td>
+ 
+			 <td valign="top" headers="d45227e66" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d45227e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d45227e72" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d45227e60" class="stentry">status</td>
+ 
+			 <td valign="top" headers="d45227e63" class="stentry">The modification status of the current element. 
+				</td>
+ 
+			 <td valign="top" headers="d45227e66" class="stentry">new | changed | deleted | unchanged |
+				-dita-use-​conref-​target</td>
+ 
+			 <td valign="top" headers="d45227e69" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d45227e72" class="stentry">No</td>
+ 
+		  </tr>
+</table>
+
+    </div>
+
+    <div class="example"><h2 class="title sectiontitle">Example</h2>
+      
+      <p class="p">The "select-atts" attribute group is used within the DITA DTDs and Schemas as a common
+        definition for attributes available to most elements for you to enable the content for
+        improved retrievability or for selection. Some typical examples include:</p>
+
+      <pre class="pre codeblock">The &lt;keyword platform="Linux"&gt;chmod&lt;/keyword&gt; command...
+
+&lt;ph product="WhiteknuckleHandsoap"&gt;Amalgamated Cleansers get the grime!&lt;/ph&gt;
+
+&lt;msgph audience="programmer administrator"&gt;Divide by -1 error.&lt;/msgph&gt;
+
+&lt;ph otherprops="java"&gt;When using Java, use 
+  &lt;apiname&gt;com.example.obscureclass&lt;/apiname&gt; to calculate the value.&lt;/ph&gt;
+
+&lt;p importance="recommended" rev="3.2"&gt;Update anti-virus software often.&lt;/p&gt;</pre>
+
+      <p class="p">Note that, aside from those with pre-defined values, these attributes allow multiple
+        values. For example, the audience attribute in the example indicates that the message is of
+        interest to both programmers and administrators.</p>
+
+    </div>
+
+  </div>
+
+  <div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/comrfet.html" title="Common attribute groups, such as the selection and property attributes of most DITA elements, are described here as sets in order to reduce unnecessary duplication of common information.">Commonly referenced attribute groups</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/id-atts.html" title="The &#34;id-atts&#34; attribute group includes attributes that enable the naming and referencing of elements in topics and maps.">id-atts attribute group</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/localization-atts.html" title="The &#34;localization-atts&#34; attribute group defines a set of common attributes related to translation and localization. These attributes are available on most DITA elements.">localization-atts attribute group</a></div>
+</div>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br/>
+<div><a class="- topic/link  ajaxLink" href="archSpec/conditional-processing-attributes.html" title="The metadata attributes specify properties of the content that can be used to determine how the content should be processed. Specialized metadata attributes can be defined to enable specific business processing needs, such as semantic processing and data mining.">Conditional processing attributes</a></div>
+<div><a class="- topic/link  ajaxLink" href="archSpec/condproc.html" title="Attribute-based profiling, also known as conditional processing or applicability, is the use of classifying metadata that enables the filtering, flagging, searching, indexing, and other processing based on the association of an element with one or more values in a specific classification domain.">Conditional processing (profiling)</a></div>
+<div><a class="- topic/link  ajaxLink" href="archSpec/condproc.html" title="Attribute-based profiling, also known as conditional processing or applicability, is the use of classifying metadata that enables the filtering, flagging, searching, indexing, and other processing based on the association of an element with one or more values in a specific classification domain.">Conditional processing (profiling)</a></div>
+<div><a class="- topic/link  ajaxLink" href="archSpec/dtdAttributeDomainCodingReq.html" title="An attribute domain vocabulary module declares a new attribute specialized from either the @props or @base attribute. An attribute domain module defines exactly one new attribute type.">Attribute domain module coding requirements</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br/>
+<div><a class="- topic/link  ajaxLink" href="archSpec/specialize.html" title="The specialization feature of DITA allows for the creation of new element types and attributes that are explicitly and formally derived from existing types. The resulting specialization allows for the blind interchange of all conforming DITA content and a minimum level of common processing for all DITA content. It also allows specialization-aware processors to add specialization-specific processing to existing base processing.">Specialization</a></div>
+</div>
+</div>
+
+</body>
+</html>

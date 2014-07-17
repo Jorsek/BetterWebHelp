@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Concept topic"/>
+<meta name="abstract" content="The DITA concept document type uses the concept information type. Concept topics are specialized from the base topic information type. They include the standard topic elements, including the short description, prolog, a body, and related links."/>
+<meta name="description" content="The DITA concept document type uses the concept information type. Concept topics are specialized from the base topic information type. They include the standard topic elements, including the short description, prolog, a body, and related links."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_technicalContent_InformationTypes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_reference_topic.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="dita_concept_topic"/>
+<meta name="DC.Language" content="en-Us"/>
+<title>Concept topic</title>
+</head>
+<body id="dita_concept_topic">
+
+
+ <h1 class="title topictitle1">Concept topic</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc">The DITA concept document type uses the concept information type. Concept topics are
+  specialized from the base topic information type. They include the standard topic elements,
+  including the short description, prolog, a body, and related links.</p>
+
+  <div class="section"><h2 class="title sectiontitle">The purpose of the concept information type</h2>
+   
+   <p class="p">Concepts provide background that helps readers understand essential information about a
+    product, a task, a process, or any other conceptual or descriptive information. A concept may be
+    an extended definition of a major abstraction such as a process or function. Conceptual
+    information may explain the nature and components of a product and describe how it fits into a
+    category of products. Conceptual information helps readers to map their knowledge and
+    understanding to the tasks they need to perform and to provide other essential information about
+    a product, process, or system.</p>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">The structure of the concept topic</h2>
+   
+   <p class="p">The concept topic is specialized from the base topic information type. The top-level element
+    for a DITA concept topic is the &lt;concept&gt; element. Every concept topic contains the standard
+    topic elements, including title, short descriptions or abstract, prolog, a body, and related
+    links.</p>
+
+   <p class="p">The &lt;conbody&gt; element holds the main body-level elements of the concept topic. Like the
+    body element of a base topic, the &lt;conbody&gt; allows paragraphs, lists, tables, figures and
+    other general elements. It also provides two key elements that allow authors to subdivide the
+    topic into parts, with or without titles. These subdivisions are called sections and examples.
+    The &lt;conbody&gt; also allows &lt;bodydiv&gt; and &lt;sectiondiv&gt; to facilitate grouping elements in
+    the &lt;conbody&gt; for reuse.</p>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">Limitations within &lt;conbody&gt;</h2>
+   
+   <p class="p">The &lt;conbody&gt; provides for an unlimited number of subdivisions in the form of sections and
+    examples. However, once an author decides to incorporate a section or example in the
+    &lt;conbody&gt;, only additional sections or examples are allowed. Sections and examples may not
+    nest, meaning that only one level of subdivision is permitted in the concept topic.</p>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">Concept body primary subdivisions</h2>
+   
+   <dl class="dl">
+    
+     <dt class="dt dlterm">&lt;section&gt;</dt>
+
+     <dd class="dd">Represents an organizational division in a concept topic. Sections organize subsets of
+      information within a larger topic. You can only include a simple list of peer sections in a
+      topic; sections cannot be nested. A section may have an optional title.</dd>
+
+    
+    
+     <dt class="dt dlterm">&lt;example&gt;</dt>
+
+     <dd class="dd">Provides examples that illustrate or support the current topic. The &lt;example&gt; element
+      has the same content model as &lt;section&gt;. </dd>
+
+    
+   </dl>
+
+  </div>
+
+  <div class="example">
+   <p class="p">Following is an example of a simple concept topic. Note that once an example is used, it may
+    be followed only by another example or by a section.</p>
+
+   <pre class="pre codeblock">&lt;concept id="concept"&gt;
+ &lt;title&gt;Bird Songs&lt;/title&gt;
+
+&lt;shortdesc&gt;Bird songs are complex vocalizations used to attract mates or defend territories. 
+&lt;conbody&gt;
+  &lt;p&gt;Bird songs vary widely among species, from simple songs that are genetically imprinted to complex songs that are learned over a lifetime.&lt;/p&gt;
+  &lt;example&gt;
+   &lt;p&gt;Flycatchers know their songs from birth:&lt;/p&gt;
+   &lt;ul&gt;
+    &lt;li&gt;Flycatcher songs are simple sequences of notes.&lt;/li&gt;
+    &lt;li&gt;Flycatcher songs never vary but are unique to each member of the Flycatcher family.&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/example&gt;
+ &lt;/conbody&gt;
+&lt;/concept&gt;</pre>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">Modules</h2>
+   
+   <p class="p">The following DITA modules are provided for the concept topic:</p>
+
+   <ul class="sl simple">
+    <li class="sli">concept.mod, concept.ent (DTD)</li>
+
+    <li class="sli">conceptMod.xsd, conceptGrp.xsd (Schema)</li>
+
+   </ul>
+
+  </div>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_technicalContent_InformationTypes.html" title="The Technical Content package contains five topic specializations that support seven document types: concept, reference, general task, strict task, machinery task, glossary entry, and glossary group. These topic types are specialized from the base topic and are designed specifically for information that describes how to use products and processes they are dominated by procedural, task-oriented information. The Technical Content package also includes the map document type.">Technical content: Document and information types</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_reference_topic.html" title="The DITA reference document type uses the reference information type. Reference topics are specialized from the base topic information type. They contain the standard topic elements, including title, short descriptions or abstract, prolog, a body, and related links.">Reference topic</a></div>
+</div>
+</div>
+
+</body>
+</html>

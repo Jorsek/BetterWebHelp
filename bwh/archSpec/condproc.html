@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Conditional processing (profiling)"/>
+<meta name="abstract" content="Attribute-based profiling, also known as conditional processing or applicability, is the use of classifying metadata that enables the filtering, flagging, searching, indexing, and other processing based on the association of an element with one or more values in a specific classification domain."/>
+<meta name="description" content="Attribute-based profiling, also known as conditional processing or applicability, is the use of classifying metadata that enables the filtering, flagging, searching, indexing, and other processing based on the association of an element with one or more values in a specific classification domain."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/behaviors.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/conref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/chunking.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/conditional-processing-attributes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/select-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/about-ditaval.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="condproc"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Conditional processing (profiling)</title>
+</head>
+<body id="condproc">
+
+
+<h1 class="title topictitle1">Conditional processing (profiling)</h1>
+
+
+<div class="body conbody"><p class="shortdesc"><span class="ph" id="shortdesc">Attribute-based profiling, also known
+as conditional processing or       applicability, is the use of classifying
+metadata that enables the filtering, flagging,       searching, indexing,
+and other processing based on the association of an element with one
+or       more values in a specific classification domain.</span></p>
+
+<p class="p">DITA defines attributes that are specifically intended to enable
+filtering or flagging of individual elements. Those attributes are
+@audience, @platform, @product, @otherprops, @props, <span class="ph">and @rev (flagging only).</span> This enables
+the creation of topics and maps that can be dynamically configured
+at  processing time to reflect a specific set of conditions, using
+the DITA-defined conditional processing profile (DITAVAL).</p>
+
+<p class="p">Processors should be able to perform filtering and flagging using
+the attributes listed above. Although metatdata elements exist with
+similar names, such as the &lt;audience&gt;       element, processors
+are not required to perform conditional processing using metadata
+      elements. The @props attribute can be specialized to create
+new attributes, and processors       should be able to perform conditional
+processing on specializations of @props.</p>
+
+<div class="section" id="condproc__condprocattrs"><h2 class="title sectiontitle">Conditional processing attributes</h2>              <p class="p">For a topic or topicref, the audience, platform, and product
+metadata can be expressed with         attributes on the topic or
+topicref element or with elements within the topic prolog or     
+   topicmeta element. While the metadata elements are more expressive,
+the meaning of the         values is the same, and can be used in
+coordination. For example, the prolog elements can         fully define
+the audiences for a topic, and then metadata attributes can be used
+within the         content to identify parts that apply to only some
+of those audiences.</p>
+       <dl class="dl">
+
+<dt class="dt dlterm">audience</dt>
+
+<dd class="dd">The values in the audience attribute may also be used to reference
+a more complete             description of an audience in an audience
+element. Use the name of the audience in the             audience
+element when referring to the same audience in an audience attribute.<p class="p">The               audience attribute takes a space-delimited list
+of values, which may or may not match               the name value
+of any audience elements.</p>
+           </dd>
+
+
+
+<dt class="dt dlterm">platform</dt>
+
+<dd class="dd">The platform might be the operating system, hardware, or other
+environment. This             attribute is equivalent to the platform
+element for the topic metadata.</dd>
+
+<dd class="dd">             <p class="p">The platform attribute takes a space-delimited
+list of values, which may or may not               match the content
+of a platform element in the prolog.</p>
+           </dd>
+
+
+
+<dt class="dt dlterm">product</dt>
+
+<dd class="dd">The product or component name, version, brand, or internal code
+or number. This             attribute is equivalent to the prodinfo
+element for the topic metadata.</dd>
+
+<dd class="dd">             <p class="p">The product attribute takes a space-delimited
+list of values, which may or may not               match the value
+of the prodname element in the prolog.</p>
+           </dd>
+
+
+
+<dt class="dt dlterm">rev</dt>
+
+<dd class="dd">The identifier for the revision level. For example, if a paragraph
+was changed or             added during revision 1.1, the rev attribute
+might contain the value "1.1". </dd>
+
+
+
+          <dt class="dt dlterm">otherprops</dt>
+
+          <dd class="dd">A catch-all for metadata qualification values about the content. This attribute is equivalent to the othermeta element for the topic metadata. <p class="p">The attribute takes a space-delimited list of values, which may or may not match the values of othermeta elements in the prolog.</p>
+<p class="p">For example, a simple otherprops value list: <samp class="ph codeph">&lt;codeblock otherprops="java cpp"&gt;</samp></p>
+<p class="p">The attribute <dfn class="term">may</dfn> take labeled groups of values as for @props. Processors <dfn class="term">may</dfn> treat such values as equivalent to @props or they <dfn class="term">may</dfn> treat such values as simple strings. The use of labeled groups in @otherprops is deprecated in favor of using specializations of @props. Processors <dfn class="term">should</dfn> clearly document how they treat grouped @otherprops values. See <a class="- topic/xref  ajaxLink" href="attributegeneralize.html#attributegeneralize" title="There is a particular syntax to generalize attributes that have been specialized from the @props or @base attribute. Specialization-aware processors should be able to recognize and process both the specialized and generalized forms of an attribute as being equivalent in their values.">Attribute generalization</a> for details on generalized @props attribute values.</p>
+ </dd>
+
+        
+
+<dt class="dt dlterm">props</dt>
+
+<dd class="dd">A generic attribute for conditional processing values. Starting with DITA 1.1, the props attribute can be specialized to create new conditional processing attributes. <span class="ph">See <a class="- topic/xref  ajaxLink" href="attributegeneralize.html#attributegeneralize" title="There is a particular syntax to generalize attributes that have been specialized from the @props or @base attribute. Specialization-aware processors should be able to recognize and process both the specialized and generalized forms of an attribute as being equivalent in their values.">Attribute generalization</a>.</span></dd>
+
+
+</dl>
+     </div>
+
+<div class="section" id="condproc__usingcondatts"><h2 class="title sectiontitle">Using conditional processing
+attributes</h2>              <p class="p">Each attribute takes zero or more space-delimited
+string values. For example, you can use         the product attribute
+to identify that an element applies to two particular products. </p>
+       <div class="fig fignone"><span class="figcap">Figure 1. Example source</span>
+
+<pre class="pre codeblock">
+&lt;p audience="administrator"&gt;Set the configuration options:
+    &lt;ul&gt;
+        &lt;li product="extendedprod"&gt;Set foo to bar&lt;/li&gt;
+        &lt;li product="basicprod extendedprod"&gt;Set your blink rate&lt;/li&gt;
+        &lt;li&gt;Do some other stuff&lt;/li&gt;
+        &lt;li platform="Linux"&gt;Do a special thing for Linux&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/p&gt;
+            </pre>
+
+</div>
+     </div>
+
+<div class="section" id="condproc__proccondatts"><h2 class="title sectiontitle">Evaluating conditional processing
+attributes</h2>              <p class="p">At processing time, a DITAVAL conditional
+processing profile may be used to specify values         you want
+to include, exclude, or flag. </p>
+       <div class="p">For example, a publisher
+producing information for a mixed audience using the basic product
+        could choose to flag information that applies to administrators,
+and exclude information         that applies to the extended product,
+by defining a conditional processing profile like         this:<pre class="pre codeblock">&lt;val&gt;
+  &lt;prop att="audience" val="administrator" action="flag"&gt;
+    &lt;startflag&gt;&lt;alt-text&gt;ADMIN&lt;/alt-text&gt;&lt;/startflag&gt;
+  &lt;/prop&gt;
+  &lt;prop att="product" val="extendedprod" action="exclude"/&gt;
+&lt;/val&gt;</pre>
+</div>
+       <p class="p">At output time, the paragraph is
+flagged, and the first list item is excluded (since it         applies
+to extendedprod), but the second list item is still included (even
+though it does         apply to extendedprod, it also applies to basicprod,
+which was not excluded).</p>
+       <div class="p">The result should look something
+like: <div class="fig fignone">
+<div class="p"><strong class="ph b">ADMIN</strong> Set the configuration options: <ul class="ul">
+<li class="li">Set your blink rate</li>
+
+<li class="li">Do some other stuff </li>
+
+<li class="li">Do a special thing for Linux</li>
+
+</ul>
+</div>
+
+</div>
+</div>
+     </div>
+
+<div class="section" id="condproc__filterlogic"><h2 class="title sectiontitle">Filtering logic</h2>         
+    <p class="p">By default, values in conditional processing attributes that
+are not defined in a DITAVAL         profile evaluate to "include".
+For example, if the value audience="novice" is used on a         paragraph,
+but this value is not defined in a DITAVAL profile, the attribute
+evaluates to         "include". However, the DITAVAL profile may change
+this default to "exclude", so that any         value not explicitly
+defined in the DITAVAL profile will evaluate to "exclude". The profile
+        may also be used to change the default for a single attribute;
+for example, it may declare         that values in the platform attribute
+default to exclude while those in the product         attribute default
+to include. See <a class="- topic/xref  ajaxLink" href="common/about-ditaval.html" title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval.">DITAVAL elements</a> for
+        information on how to set up a DITAVAL profile and how to
+change default behaviors.</p>
+       <div class="p">When deciding whether to include
+or exclude a particular element, a processor should         evaluate
+each attribute, and then evaluate the set of attributes. <ul class="ul">
+<li class="li">If <strong class="ph b">all</strong> the values in a single attribute evaluate to "exclude",
+the attribute             evaluates to "exclude".</li>
+
+<li class="li">If <strong class="ph b">any single attribute</strong> evaluates to exclude, the element
+is excluded.</li>
+
+</ul>
+</div>
+       <p class="p">For example, if a paragraph applies to three products
+and the publisher has chosen to         exclude all of them, the processor
+should exclude the paragraph. This is true even if the         paragraph
+applies to an audience or platform that is not excluded. But if the
+paragraph         applies to an additional product that has not been
+excluded, then its content is still         relevant for the intended
+output and should be preserved.</p>
+     </div>
+
+<div class="section" id="condproc__flaglogic"><h2 class="title sectiontitle">Flagging logic</h2>            
+ <p class="p">When deciding whether to flag a particular element, a processor
+should evaluate each value.         Wherever a value that has been
+set as flagged appears in its attribute (for example,         audience="administrator")
+the process should add the flag. When multiple flags apply to a  
+      single element, multiple flags should be rendered, typically
+in the order they are         encountered.</p>
+       <p class="p">Flagging could
+be done using text (for example, bold text against a colored background)
+or         using images. When the same element evaluates as both flagged
+and filtered (for example,         flagged because of an audience
+attribute value and filtered because of its product attribute    
+    values), the element should be filtered.</p>
+     </div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/behaviors.html" title="Several common DITA processing behaviors are driven by attributes, including setting the set of vocabulary and constraint modules on which a DITA document depends, navigation, linking, content reuse (via direct or indirect addressing), conditional processing, chunking, and printing. In addition, translation of DITA content is expedited through the use of the @dir, @translate, and @xml:lang attributes, and the &lt;index-sort-as&gt; element.">DITA processing</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/conref.html" title="The DITA @conref, @conkeyref, @conrefend, and related attributes provide a mechanism for reuse of content fragments within DITA topics or maps.">Content inclusion (conref)</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/chunking.html" title="Content may be chunked (divided or merged into new output documents) in different ways for the purposes of authoring, for delivering content, and for navigation. For example, something best authored as a set of separate topics may need to be delivered as a single Web page. A map author can use the chunk attribute to split up multi-topic documents into component topics or combine multiple topics into a single document as part of output processing.">Chunking</a></div>
+</div>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br/>
+<div><a class="- topic/link  ajaxLink" href="archSpec/conditional-processing-attributes.html" title="The metadata attributes specify properties of the content that can be used to determine how the content should be processed. Specialized metadata attributes can be defined to enable specific business processing needs, such as semantic processing and data mining.">Conditional processing attributes</a></div>
+<div><a class="- topic/link  ajaxLink" href="common/about-ditaval.html" title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval.">DITAVAL elements</a></div>
+</div>
+<div class="relinfo relref"><strong>Related reference</strong><br/>
+<div><a class="- topic/link  ajaxLink" href="common/select-atts.html" title="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations.">select-atts attribute group</a></div>
+</div>
+</div>
+
+</body>
+</html>

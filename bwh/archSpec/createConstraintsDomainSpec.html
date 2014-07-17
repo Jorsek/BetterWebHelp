@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="Constraints"/>
+<meta name="abstract" content="Constraint modules define additional constraints for corresponding vocabulary modules in order to restrict content models or attribute lists for specific element types, remove extension elements from an integrated domain module, or replace base element types with domain-provided extension element types. Constraint modules do not and cannot change element semantics, only the details of how element types can be used in the context of a specific concrete document type. Because constraints can make optional elements required, documents that use the same vocabulary modules may still have incompatible constraints. Thus the use of constraints can affect the ability for content from one topic or map to be used directly in another topic or map."/>
+<meta name="description" content="Constraint modules define additional constraints for corresponding vocabulary modules in order to restrict content models or attribute lists for specific element types, remove extension elements from an integrated domain module, or replace base element types with domain-provided extension element types. Constraint modules do not and cannot change element semantics, only the details of how element types can be used in the context of a specific concrete document type. Because constraints can make optional elements required, documents that use the same vocabulary modules may still have incompatible constraints. Thus the use of constraints can affect the ability for content from one topic or map to be used directly in another topic or map."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/configuration-specialization-and-constraints.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/specialize.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/constraintsDomainDesignPattern-dtd.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/constraintsDomainDesignPattern-xsd.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/constraintsGeneralize.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/constraint-module-examples.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="createConstraintsDomainSpec"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Constraints</title>
+</head>
+<body id="createConstraintsDomainSpec">
+
+
+<h1 class="title topictitle1">Constraints</h1>
+
+
+<div class="body"><p class="shortdesc"><span class="ph" id="shortdesc">Constraint modules define additional
+constraints for corresponding       vocabulary modules in order to
+restrict content models or attribute lists for specific element  
+    types, remove extension elements from an integrated domain module,
+or replace base element       types with domain-provided extension
+element types. Constraint modules do not and cannot       change element
+semantics, only the details of how element types can be used in the
+context of       a specific concrete document type. Because constraints
+can make optional elements required,       documents that use the
+same vocabulary modules may still have incompatible constraints. Thus
+      the use of constraints can affect the ability for content from
+one topic or map to be used       directly in another topic or map.</span></p>
+
+<p class="p">Each constraint integrated into a DITA document type <dfn class="term">must</dfn> be
+declared in the       @domains attribute for each structural type
+integrated into the document type. </p>
+
+<p class="p">A constraint module <dfn class="term">may</dfn> define any of the following
+types of constraint:</p>
+
+<dl class="dl">
+<dt class="dt dlterm">Restriction of content model or attributes for an element</dt>
+
+<dd class="dd">Constraint modules <dfn class="term">may</dfn> modify base content models
+by removing optional           elements, making optional elements
+required, or requiring unordered elements to occur is a          
+specific sequence. Constraint modules <dfn class="term">cannot</dfn> make required
+elements optional           or change the order of element occurrence
+for ordered elements.<p class="p">For example, a             constraint for &lt;topic&gt;
+could require &lt;shortdesc&gt;, could remove &lt;abstract&gt;         
+   altogether, and could require that the first child of &lt;body&gt;
+be &lt;p&gt;. A constraint             cannot allow &lt;shortdesc&gt; to
+follow &lt;prolog&gt;, because the base content model for           
+ &lt;topic&gt; declares &lt;shortdec&gt; to precede &lt;prolog&gt;.</p>
+</dd>
+
+
+<dt class="dt dlterm">Restriction of extension elements from a domain</dt>
+
+<dd class="dd">Constraint modules for element domains <dfn class="term">may</dfn> define
+a subset of the base set           of extension elements provided
+by the element domain.<p class="p">For example, a constraint on the        
+    programming domain could reduce the list of included extension
+elements to &lt;codeph&gt;             and &lt;codeblock&gt;.</p>
+</dd>
+
+
+<dt class="dt dlterm">Replacement of base elements by domain extensions</dt>
+
+<dd class="dd">Constraint modules <dfn class="term">may</dfn> replace base element types
+with domain-provided           extension elements.<p class="p">For example,
+a constraint module could replace the &lt;ph&gt; element            
+with the domain-provided elements, making &lt;ph&gt; unavailable.</p>
+<p class="p">In
+a shell document             type, when integrating a domain, the
+base domain element may be omitted from the domain             extension
+group or parameter entity. While there is no separate content model
+constraint             declaration in this case (because the content
+model is configured directly in the shell             document type)
+the constraint should be declared in the @domains attribute and therefore
+            there must be a domains module file that provides the
+constraint's contribution to the             @domains attribute.</p>
+</dd>
+
+</dl>
+
+<p class="p">There <dfn class="term">may</dfn> be at most one constraint module that defines
+the content model for a       given element type included in a given
+concrete document type. This means that constraints for       the
+same element type defined in two different constraint modules cannot
+be aggregated       together. In that case, a new constraint module
+must be created that reflects the aggregation       of the two original
+constraints.</p>
+
+<div class="section"><h2 class="title sectiontitle">Constraint rules</h2>              <p class="p">Constraint
+modules <dfn class="term">must</dfn> conform to the following requirements:</p>
+ 
+     <ul class="ul">
+<li class="li">           <p class="p">Designers <dfn class="term">must</dfn> implement constrained
+content models for element types that             are more restrictive
+than the unconstrained content models for the same element       
+     types.</p>
+         </li>
+
+<li class="li">           <p class="p">The content model and attributes of one element
+type can be constrained only by one             constraint module
+included in a document type shell. </p>
+         </li>
+
+<li class="li">           <p class="p">The list of extension element types provided by
+a domain module can be constrained only             by one constraint
+module included in a document type shell. </p>
+         </li>
+
+<li class="li">           <p class="p">Each constraint module may constrain element types
+from only one vocabulary module.             This rule maintains granularity
+of reuse at the module level. </p>
+         </li>
+
+<li class="li">           <p class="p">Constraint modules that restrict different element
+types within the same vocabulary             module can be combined
+with one another or with a constraint module that selects a      
+      subset of the extension element types for the vocabulary. Such
+combinations of             constraints on a single vocabulary module
+have no meaningful order or precedence. </p>
+         </li>
+
+<li class="li">           <p class="p">Designers have the option to declare a constraint
+module or combination of constraint             modules to be more
+restrictive than another constraint module or combination of     
+       constraint modules on the same vocabulary module or a base
+vocabulary module. This             option is particularly useful
+when a designer wants to constrain base and specialized          
+  element types in a consistent way. The advantage of declaring the
+consistency is that             processors can take advantage of the
+consistency when converting document instances.</p>
+<p class="p">For example,
+a constraint module for &lt;topic&gt; that requires both &lt;shortdesc&gt;
+and &lt;body&gt; is more restrictive than a similar constraint module
+that only requires &lt;body&gt;. By declaring this relationship, a designer
+may indicate that documents which use the first constraint also comply
+with the looser constraint.</p>
+</li>
+
+</ul>
+     </div>
+
+<div class="section"><h2 class="title sectiontitle">Content processing</h2>              <p class="p">A document
+type with constraints allows a subset of the possible instances of
+a document         type for the same vocabularies without constraints.
+To put it another way, all instances of         the constrained document
+type are guaranteed to be valid instances of the unconstrained   
+     document type.</p>
+       <p class="p">As a result, a constraint does not
+and cannot change basic or inherited element semantics.         The
+constrained instances remain valid instances of the unconstrained
+element type, and the         element type retains the same semantics
+and class attribute declaration. Thus, a constraint         never
+creates a new case to which content processing may need to react. </p>
+ 
+     <p class="p">For example, a document type constrained to require the &lt;shortdesc&gt;
+element allows a         subset of the possible instances of the unconstrained
+document type with an optional         &lt;shortdesc&gt; element. Thus,
+the content processing for topic still works when topic is       
+ constrained to require a short description.</p>
+     </div>
+
+<div class="section"><h2 class="title sectiontitle">Content interoperability</h2>              <p class="p">DITA
+document instances declare (by means of the @domains attribute and
+the @class         attribute for the topic or map elements) the vocabularies
+available in its document type. A         processor <dfn class="term">may</dfn> examine
+these declarations to determine whether or not a document        
+instance uses a subset of the vocabularies in another DITA document
+type and is thus         compatible with the other DITA document type.</p>
+ 
+     <p class="p">A constrained document type allows only a subset of the possible
+instances of the         unconstrained document type. Thus, for a
+processor to determine whether a document instance         is compatible
+with another document type, the document instance <dfn class="term">must</dfn> declare
+        any constraints on the document type. </p>
+       <p class="p">For instance,
+an unconstrained task is compatible with an unconstrained topic because
+the         task can be generalized to topic. If, however, the topic
+is constrained to require the         &lt;shortdesc&gt; element, a document
+type with an unconstrained task is not compatible with         the
+constrained document type because some instances of the task might
+not have a         &lt;shortdesc&gt; element. If, however, the task document
+type has also been constrained to         require the &lt;shortdesc&gt;
+element, it is compatible with the constrained topic document    
+    type. </p>
+     </div>
+
+</div>
+
+<div class="related-links">
+<ol class="olchildlinks">
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/constraintsDomainDesignPattern-dtd.html">Constraint module DTD coding requirements</a><br/>
+</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/constraintsDomainDesignPattern-xsd.html">Constraint module XSD coding requirements</a><br/>
+</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/constraintsGeneralize.html">Conref and generalization for constraint modules</a><br/>
+When documents use different constraints, conref and generalization processors may               examine the @domains to verify compatibility between the document               instances.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/constraint-module-examples.html">Examples of constraint declaration modules</a><br/>
+This section provides examples of constraint declaration modules.</li>
+</ol>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/configuration-specialization-and-constraints.html" title="The extension facilities of DITA allow existing vocabulary and constraint modules to be combined to create specific DITA document types. Additionally, vocabulary modules can be extended to create more-specialized markup to meet new requirements not satisfied by existing markup.">Configuration, specialization, and constraints</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/specialize.html" title="The specialization feature of DITA allows for the creation of new element types and attributes that are explicitly and formally derived from existing types. The resulting specialization allows for the blind interchange of all conforming DITA content and a minimum level of common processing for all DITA content. It also allows specialization-aware processors to add specialization-specific processing to existing base processing.">Specialization</a></div>
+</div>
+</div>
+
+</body>
+</html>

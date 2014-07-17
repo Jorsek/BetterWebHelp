@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="copyright"/>
+<meta name="abstract" content="The &lt;copyright&gt; element specifies legal ownership of the content."/>
+<meta name="description" content="The &lt;copyright&gt; element specifies legal ownership of the content."/>
+<meta name="DC.subject" content="copyright, Prolog elements"/>
+<meta name="keywords" content="copyright, Prolog elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/prolog2.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/component.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/copyrholder.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="copyright"/>
+<meta name="DC.Language" content="en-us"/>
+<title>copyright</title>
+</head>
+<body id="copyright">
+
+
+<h1 class="title topictitle1">copyright</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">copyright</span>&gt; element specifies
+legal ownership of the content.</p>
+
+<div class="section">       <p class="p">The &lt;<span class="keyword">copyright</span>&gt; element is
+used for a single copyright entry. It includes the copyright years
+and the copyright holder. Multiple &lt;<span class="keyword">copyright</span>&gt;
+statements are allowed.</p>
+<p class="p">This element is equivalent to the Rights
+element in Dublin Core.</p>
+     </div>
+
+<div class="section" id="copyright__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d142227e55" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d142227e57" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d142227e62" headers="d142227e55" class="stentry"><strong>topic, map, concept, ditabase, glossary, glossentry, glossgroup, reference, task, bookmap, classifyMap, subjectScheme, machineryTask, learningAssessment, learningBookmap, learningContent, learningMap, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d142227e57 d142227e62" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="copyryear.html" title="The &lt;copyryear&gt; element contains the copyright year as specified by the year attribute.">copyryear</a>) <em class="ph i"> (one or more) </em> then  (<a class="- topic/xref  ajaxLink" href="copyrholder.html" title="The copyright holder (&lt;copyrholder&gt;) element names the entity that holds legal rights to the material contained in the topic.">copyrholder</a>) ) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="copyright__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d142227e100" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d142227e102" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d142227e107" headers="d142227e100" class="stentry"><strong>topic (base), topic (technical content), concept, ditabase, glossary, glossentry, glossgroup, reference, task (strict), task (general), machineryTask, learningAssessment, learningContent, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d142227e102 d142227e107" class="stentry"><a class="- topic/xref  ajaxLink" href="prolog.html" title="The &lt;prolog&gt; element contains information about the topic as an whole (for example, author information or subject category) that is either entered by the author or maintained by a software application. Much of the metadata inside the &lt;prolog&gt; will not be displayed with the topic when the topic is rendered, but may be used by processes that generate search indexes or customize navigation.">prolog</a></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d142227e126" headers="d142227e100" class="stentry"><strong>map (base), map (technical content), bookmap, classifyMap, subjectScheme, learningBookmap, learningMap</strong></td>
+
+<td valign="top" headers="d142227e102 d142227e126" class="stentry"><a class="- topic/xref  ajaxLink" href="topicmeta.html" title="The &lt;topicmeta&gt; element defines the metadata that applies to a topic when it appears in a map. When appropriate, that metadata also applies to the other topics in the map that are contained by the same element that contains the &lt;topicmeta&gt; element. When creating links, &lt;topicmeta&gt; content can also be used to override the title and short description that are used for the link. In addition, it can be used to add index entries to referenced content using the &lt;keywords&gt; element.">topicmeta</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="copyright__inheritance"><h2 class="title sectiontitle">Inheritance</h2>        
+     <p class="p">- topic/copyright </p>
+     </div>
+
+<div class="example" id="copyright__example"><h2 class="title sectiontitle">Example</h2>              <pre class="pre codeblock">&lt;prolog&gt;
+ <strong class="ph b">&lt;copyright&gt;</strong>
+  &lt;copyryear year="2001-04-12"&gt;&lt;/copyryear&gt;
+  &lt;copyrholder&gt;IBM&lt;/copyrholder&gt;
+ <strong class="ph b">&lt;/copyright&gt;</strong>
+ <strong class="ph b">&lt;copyright type=secondary&gt;</strong>
+  &lt;copyryear year="2002-03-03&gt;&lt;/copyryear&gt;
+  &lt;copyrholder&gt;Schweetones Publishing, Inc.&lt;/copyrholder&gt;
+ <strong class="ph b">&lt;/copyright&gt;</strong>
+&lt;/prolog&gt;</pre>
+     </div>
+
+<div class="section" id="copyright__attributes"><h2 class="title sectiontitle">Attributes</h2>              <table cellpadding="4" cellspacing="0" summary="" id="copyright__copyright_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d142227e183" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d142227e186" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d142227e189" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d142227e192" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d142227e195" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d142227e183" class="stentry">type</td>
+ 
+			 <td valign="top" headers="d142227e186" class="stentry">Indicates the legal status of the copyright holder. 
+				<span class="ph">Note that this differs from the type
+				  attribute on many other DITA elements.</span> Beginning with
+				DITA 1.2, values in this attribute are not limited to a small number of
+				choices; the following values were used in DITA 1.0 and DITA 1.1, and are still
+				provided as sample values:
+				<dl class="dl">
+				   
+					 <dt class="dt dlterm">primary
+					 </dt>
+ 
+					 <dd class="dd">The copyright holder with first claim on the copyright
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">secondary
+					 </dt>
+ 
+					 <dd class="dd">An additional copyright holder who is not primary
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d142227e189" class="stentry">NMTOKEN</td>
+ 
+			 <td valign="top" headers="d142227e192" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d142227e195" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d142227e183" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d142227e186" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d142227e189" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d142227e192" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d142227e195" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d142227e183" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d142227e186" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d142227e189" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d142227e192" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d142227e195" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d142227e183" class="stentry">class</td>
+ 
+			 <td valign="top" headers="d142227e186" class="stentry">A common attribute described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d142227e189" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d142227e192" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d142227e195" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+     </div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/prolog2.html" title="The prolog elements represent the metadata associated with a document. Most of the metadata in a topic prolog can also be authored in a DITA map, in the map's &lt;topicmeta&gt; element.">Prolog (metadata) elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/component.html" title="The &lt;component&gt; element describes the component of the product that this topic is concerned with. For example, a product might be made up of many components, each of which is installable separately. Components might also be shared by several products so that the same component is available for installation with many products. An implementation may (but need not) use this identification to check cross-component dependencies when some components are installed, but not others. An implementation may also (but need not) use the identification to make sure that topics are hidden, removed, or flagged in some way when the component they describe isn't installed.">component</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/copyrholder.html" title="The copyright holder (&lt;copyrholder&gt;) element names the entity that holds legal rights to the material contained in the topic.">copyrholder</a></div>
+</div>
+</div>
+
+</body>
+</html>

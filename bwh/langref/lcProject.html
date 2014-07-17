@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="lcProject"/>
+<meta name="abstract" content="The &lt;lcProject&gt; provides learning content project plan description information."/>
+<meta name="description" content="The &lt;lcProject&gt; provides learning content project plan description information."/>
+<meta name="DC.subject" content="lcProject, learning and training elements"/>
+<meta name="keywords" content="lcProject, learning and training elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/learning_training_elements_topics_other.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcProcesses.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcResolution.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="lcProject"/>
+<meta name="DC.Language" content="en-us"/>
+<title>lcProject</title>
+</head>
+<body id="lcProject">
+
+
+	<h1 class="title topictitle1">lcProject</h1>
+
+	
+	
+	<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">lcProject</span>&gt; provides learning content project plan description information.
+</p>
+
+		<div class="section" id="lcProject__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d339561e42" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d339561e44" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d339561e49" headers="d339561e42" class="stentry"><strong>learningPlan</strong></td>
+
+<td valign="top" headers="d339561e44 d339561e49" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcClient.html" title="The &lt;lcClient&gt; provides the person or organization sponsoring or requiring the learning event development.">lcClient</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcPlanTitle.html" title="The &lt;lcPlanTitle&gt; provides a title for a specific module, lesson, or section of the course that this plan describes.">lcPlanTitle</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcCIN.html" title="The &lt;lcCIN&gt; provides a course identification number or other alternate identifier for the project title.">lcCIN</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcModDate.html" title="The &lt;lcModDate&gt; provides the project modification date.">lcModDate</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcDelivDate.html" title="The &lt;lcDelivDate&gt; provides the project delivery date.">lcDelivDate</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcPlanSubject.html" title="The &lt;lcPlanSubject&gt; provides a complete description of the subject of the planned learning.">lcPlanSubject</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcPlanDescrip.html" title="The &lt;lcPlanDescrip&gt; provides a plan description.">lcPlanDescrip</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcPlanPrereqs.html" title="&lt;lcPlanPrereqs&gt; provides the knowledge, skills, abilities, courses and other activities learners must have satisfied to take the instruction.">lcPlanPrereqs</a>) <em class="ph i"> (optional) </em>) </td>
+</tr>
+</table>
+</div>
+
+		<div class="section" id="lcProject__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d339561e183" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d339561e185" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d339561e190" headers="d339561e183" class="stentry"><strong>learningPlan</strong></td>
+
+<td valign="top" headers="d339561e185 d339561e190" class="stentry"><a class="- topic/xref  ajaxLink" href="learningPlanbody.html" title="The &lt;learningPlanbody&gt; element is the main body-level element in a learningPlan topic.">learningPlanbody</a></td>
+</tr>
+</table>
+</div>
+
+		<div class="section" id="lcProject__inheritance"><h2 class="title sectiontitle">Inheritance</h2>
+			<p class="p">- topic/section learningBase/section learningPlan/lcProject </p>
+
+</div>
+
+
+<div class="example" id="lcProject__example"><h2 class="title sectiontitle">Example</h2>
+  
+  <pre class="pre codeblock">
+&lt;learningPlan id="learningPlanTest"&gt; 
+    &lt;title&gt;Learning Plan&lt;/title&gt; 
+    &lt;shortdesc&gt;It's always good to provide a plan. 
+    &lt;/shortdesc&gt;
+    &lt;learningPlanbody&gt;
+        &lt;lcProject&gt; 
+            &lt;title&gt;lcProject&lt;/title&gt;
+            &lt;lcClient&gt; 
+                &lt;title&gt;Client&lt;/title&gt; 
+                &lt;p&gt;Joint work group 
+                &lt;/p&gt;
+            &lt;/lcClient&gt;
+            &lt;lcPlanTitle&gt; 
+                &lt;title&gt;Plan Title&lt;/title&gt; 
+                &lt;p&gt;Joint goals learning plan. 
+                &lt;/p&gt;
+            &lt;/lcPlanTitle&gt;
+            &lt;lcCIN&gt;
+                &lt;title&gt;Joint WG&lt;/title&gt;
+            &lt;/lcCIN&gt;
+            &lt;lcModDate&gt; 
+                &lt;title&gt;Modification Date&lt;/title&gt; 
+                &lt;p&gt;20070315 
+                &lt;/p&gt;
+            &lt;/lcModDate&gt;
+            &lt;lcDelivDate&gt; 
+                &lt;title&gt;Delivery Date&lt;/title&gt; 
+                &lt;p&gt;20070630 
+                &lt;/p&gt;
+            &lt;/lcDelivDate&gt;
+            &lt;lcPlanSubject&gt; 
+                &lt;title&gt;Subject&lt;/title&gt; 
+                &lt;p&gt;This course covers the goals of the Joint WG. 
+                &lt;/p&gt;
+            &lt;/lcPlanSubject&gt;
+            &lt;lcPlanDescrip&gt; 
+                &lt;title&gt;Plan Description&lt;/title&gt; 
+                &lt;p&gt;The goal of the Joint WG module is to provide learners with a broad overview
+  of the Joint WG. 
+                &lt;/p&gt;
+            &lt;/lcPlanDescrip&gt;
+            &lt;lcPlanPrereqs&gt; 
+                &lt;title&gt;Prerequisites&lt;/title&gt; 
+                &lt;p&gt;This course assumes you have mastery of JWG 101 (Fundamentals of Joint
+  Workgroups) or the equivalent. 
+                &lt;/p&gt;
+            &lt;/lcPlanPrereqs&gt;
+        &lt;/lcProject&gt;
+    &lt;/learningPlanbody&gt;
+  </pre>
+
+</div>
+
+<div class="section" id="lcProject__attributes"><h2 class="title sectiontitle">Attributes</h2>
+ 
+<table cellpadding="4" cellspacing="0" summary="" id="lcProject__lcProject_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d339561e230" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d339561e233" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d339561e236" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d339561e239" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d339561e242" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d339561e230" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d339561e233" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d339561e236" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d339561e239" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d339561e242" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d339561e230" class="stentry">spectitle</td>
+ 
+			 <td valign="top" headers="d339561e233" class="stentry">The specialized title attribute allows architects of
+				specialized types to define a fixed or default title for a specialized element.
+				Not intended for direct use by authors.</td>
+ 
+			 <td valign="top" headers="d339561e236" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d339561e239" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d339561e242" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d339561e230" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d339561e233" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d339561e236" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d339561e239" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d339561e242" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d339561e230" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d339561e233" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d339561e236" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d339561e239" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d339561e242" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+ 
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/learning_training_elements_topics_other.html" title="The learning and training content elements provide specialized content for learning topics.">Common learning content elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcProcesses.html" title="The &lt;lcProcesses&gt; describes processes learners routinely follow.">lcProcesses</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcResolution.html" title="The &lt;lcResolution&gt; describes the required computer screen resolution for the online instruction.">lcResolution</a></div>
+</div>
+</div>
+
+</body>
+</html>

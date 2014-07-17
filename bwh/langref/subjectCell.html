@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="subjectCell"/>
+<meta name="abstract" content="The &lt;subjectCell&gt; element contains subjects that are associated with topics in the first column of the current row in the &lt;topicSubjectTable&gt;. The subjects themselves have no defined relationship across columns, other than the fact that they apply to the same content."/>
+<meta name="description" content="The &lt;subjectCell&gt; element contains subjects that are associated with topics in the first column of the current row in the &lt;topicSubjectTable&gt;. The subjects themselves have no defined relationship across columns, other than the fact that they apply to the same content."/>
+<meta name="DC.subject" content="subjectCell"/>
+<meta name="keywords" content="subjectCell"/>
+<meta name="DC.Relation" scheme="URI" content="../common/classify-d.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/topicCell.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="subjectCell"/>
+<meta name="DC.Language" content="en-us"/>
+<title>subjectCell</title>
+</head>
+<body id="subjectCell">
+
+
+<h1 class="title topictitle1">subjectCell</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">subjectCell</span>&gt; element contains
+subjects that are associated with topics in the first column of the
+current row in the &lt;<span class="keyword">topicSubjectTable</span>&gt;. The
+subjects themselves have no defined relationship across columns, other
+than the fact that they apply to the same content.</p>
+
+<div class="section" id="subjectCell__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d552761e39" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d552761e41" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d552761e46" headers="d552761e39" class="stentry"><strong>classifyMap</strong></td>
+
+<td valign="top" headers="d552761e41 d552761e46" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="subjectref.html" title="The &lt;subjectref&gt; element identifies a subject to classify content. The &lt;subjectref&gt; can identify the subject with a keyref attribute (if the scheme has a &lt;subjectdef&gt; with a keys attribute that assigns a key to the subject) or an href attribute (if the scheme is not available and a topic exists that defines the subject).">subjectref</a> or <a class="- topic/xref  ajaxLink" href="topicref.html" title="The &lt;topicref&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;topicref&gt; can contain other &lt;topicref&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;topicref&gt; and its children. You can set the collection-type of a parent &lt;topicref&gt; to determine how its children are related to each other. You can also express relationships among &lt;topicref&gt; elements by using group and table structures (&lt;topicgroup&gt; and &lt;reltable&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship.">topicref</a> or  (<a class="- topic/xref  ajaxLink" href="topicsubject.html" title="The &lt;topicsubject&gt; element identifies the subjects covered by a topic or map.">topicsubject</a> or <a class="- topic/xref  ajaxLink" href="topicapply.html" title="The &lt;topicapply&gt; element identifies subjects that qualify the content for filtering or flagging but not retrieval. The &lt;topicapply&gt; element can identify a single subject. Additional subjects can be specified by nested &lt;subjectref&gt; elements.">topicapply</a>)  or  (<a class="- topic/xref  ajaxLink" href="anchorref.html" title="The &lt;anchorref&gt; element is used to reference an &lt;anchor&gt; element in a map. The contents of an &lt;anchorref&gt; element are rendered both in the original authored location and at the location of the referenced &lt;anchor&gt; element. The referenced &lt;anchor&gt; element may be defined in the current map or another map. When possible, this integration is done when displaying the map with &lt;anchor&gt; to an end user.">anchorref</a> or <a class="- topic/xref  ajaxLink" href="keydef.html" title="The &lt;keydef&gt; element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined. The &lt;keydef&gt; element is not the only way to define keys; its purpose is to simplify the process by defaulting several attributes to achieve the described behaviors.">keydef</a> or <a class="- topic/xref  ajaxLink" href="mapref.html" title="The &lt;mapref&gt; element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to &#34;ditamap&#34;. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.">mapref</a> or <a class="- topic/xref  ajaxLink" href="topicgroup.html" title="The &lt;topicgroup&gt; element groups &lt;topicref&gt; elements for common treatment without affecting the structural hierarchy of the map, as opposed to nesting &lt;topicref&gt; elements, which does imply a structural hierarchy. The &lt;topicgroup&gt; element can provide linking relationships and shared, inherited attributes to the set of elements that it contains without affecting the resulting table of contents or navigation.">topicgroup</a> or <a class="- topic/xref  ajaxLink" href="topichead.html" title="The &lt;topichead&gt; element provides a title-only entry in a navigation map, which should appear as a heading when the map is rendered as a table of contents. In print contexts it should also appear as a heading in the rendered content.">topichead</a> or <a class="- topic/xref  ajaxLink" href="topicset.html" title="The &lt;topicset&gt; element defines a complete unit of content that can be reused in other DITA maps or other &lt;topicset&gt; elements. The &lt;topicset&gt; element can be especially useful for task composition in which larger tasks are composed of smaller tasks. The id attribute on a &lt;topicset&gt; is required, which ensures that the complete unit is available for reuse in other contexts.">topicset</a> or <a class="- topic/xref  ajaxLink" href="topicsetref.html" title="The &lt;topicsetref&gt; element references a &lt;topicset&gt; element. The referenced &lt;topicset&gt; element can be defined in the current map or in another map.">topicsetref</a>) ) <em class="ph i"> (any number) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="subjectCell__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d552761e239" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d552761e241" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d552761e246" headers="d552761e239" class="stentry"><strong>classifyMap</strong></td>
+
+<td valign="top" headers="d552761e241 d552761e246" class="stentry"><a class="- topic/xref  ajaxLink" href="topicSubjectHeader.html" title="The &lt;topicSubjectHeader&gt; element specifies constraints on the subjects used in classifications.">topicSubjectHeader</a>, <a class="- topic/xref  ajaxLink" href="topicSubjectRow.html" title="The &lt;topicSubjectRow&gt; is a grouping element that contains one row of a subject table. It contains topic references in the first column, and relates those references to the subjects in each following column.">topicSubjectRow</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="subjectCell__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">+
+map/relcell classify-d/subjectCell </p>
+</div>
+
+<div class="example" id="subjectCell__example"><h2 class="title sectiontitle">Example</h2><p class="p">The topic subject table
+below classifies topics with goals for retrieval and with operating
+systems for filtering. The map makes use of definitions in a subject
+scheme map, defined separately.</p>
+<div class="fig fignone"><span class="figcap">Figure 1. Subject scheme map</span>
+<pre class="pre codeblock">&lt;subjectScheme&gt;
+    &lt;hasKind&gt;
+        &lt;subjectdef href="goalType.dita" keys="goal"&gt;
+            &lt;subjectdef href="performanceGoal.dita" keys="performance"/&gt;
+            &lt;subjectdef href="reliabilityGoal.dita" keys="reliability"/&gt;
+        &lt;/subjectdef&gt;
+        &lt;subjectdef href="operatingSystem.dita" keys="os"&gt;
+            &lt;subjectdef href="linuxOS.dita" keys="linux"/&gt;
+            &lt;subjectdef href="unixOS.dita" keys="unix"/&gt;
+            &lt;subjectdef href="windowsOS.dita" keys="windows"/&gt;
+        &lt;/subjectdef&gt;
+    &lt;/hasKind&gt;
+&lt;/subjectScheme&gt;</pre>
+
+</div>
+<div class="fig fignone"><span class="figcap">Figure 2. Topic subject table</span>
+<div class="p">The following &lt;topicSubjectTable&gt; classifies several topics
+according to subjects in the previous map. As with any &lt;topicSubjectTable&gt;,
+the first column is used to specify topics. In this specific example,
+the second column is used to specify a goal, based on the "goal" subject
+in the header. The third column is used to specify an operating system.
+Based on those definitions, the following classifications are made
+by this table:<ul class="ul">
+<li class="li">The topics "Configuring cron for efficient startup" and "Allocating
+raw storage" are each classified by the goal of "performance"; in
+addition, they are classified by the operating systems "linux" and
+"unix.</li>
+
+<li class="li">The topics "Analyzing web logs for service issues" and "Detecting
+denial-of-service attacks" are each classified by the goal of "reliability";
+in addition, they are classified by the operating systems "linux",
+"unix", and "windows".</li>
+
+<li class="li">No relationship is defined between subjects in the table, meaning
+that this table does not define any relationship between the goal
+of "performance" and the operating systems "linux" or "unix".</li>
+
+</ul>
+</div>
+
+<pre class="pre codeblock">&lt;map&gt;
+...
+&lt;topicSubjectTable&gt;
+  &lt;topicSubjectHeader&gt;
+    &lt;topicCell type="task"/&gt;
+    &lt;subjectCell&gt;
+      &lt;topicsubject keyref="goal"/&gt;
+    &lt;/subjectCell&gt;
+    &lt;subjectCell&gt;
+      &lt;topicapply keyref="os"/&gt;
+    &lt;/subjectCell&gt;
+  &lt;/topicSubjectHeader&gt;
+  &lt;topicSubjectRow&gt;
+    &lt;topicCell&gt;
+      &lt;topicref href="webServerStart.dita" navtitle="Configuring cron for efficient startup"/&gt;
+      &lt;topicref href="dbDisk.dita" navtitle="Allocating raw storage"/&gt;
+    &lt;/topicCell&gt;
+    &lt;subjectCell&gt;
+      &lt;topicsubject keyref="performance"/&gt;
+    &lt;/subjectCell&gt;
+    &lt;subjectCell&gt;
+      &lt;topicapply keyref="linux"/&gt;
+      &lt;topicapply keyref="unix"/&gt;
+    &lt;/subjectCell&gt;
+  &lt;/topicSubjectRow&gt;
+  &lt;topicSubjectRow&gt;
+    &lt;topicCell&gt;
+      &lt;topicref href="webLogAnalyze.dita" navtitle="Analyzing web logs for service issues"/&gt;
+      &lt;topicref href="webDenialService.dita" navtitle="Detecting denial-of-service attacks"/&gt;
+    &lt;/topicCell&gt;
+    &lt;subjectCell&gt;
+      &lt;topicsubject keyref="reliability"/&gt;
+    &lt;/subjectCell&gt;
+    &lt;subjectCell&gt;
+      &lt;topicapply keyref="linux"/&gt;
+      &lt;topicapply keyref="unix"/&gt;
+      &lt;topicapply keyref="windows"/&gt;
+    &lt;/subjectCell&gt;
+  &lt;/topicSubjectRow&gt;
+  ...
+&lt;/topicSubjectTable&gt;
+&lt;/map&gt;</pre>
+
+<p class="p">A table view of this &lt;topicSubjectTable&gt; might look as follows.
+This is only one of many possible views; to aid in understanding the
+example, the content topics in the first column are displayed using
+only their titles, and related subjects are displayed using only their
+keyref attribute value.</p>
+
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d552761e316" class="stentry"><em class="ph i">task</em></th>
+
+<th valign="bottom" align="left" id="d552761e320" class="stentry"><em class="ph i">goal</em></th>
+
+<th valign="bottom" align="left" id="d552761e324" class="stentry"><em class="ph i">os</em></th>
+
+</tr>
+<tr class="strow">
+<td valign="top" headers="d552761e316" class="stentry"><p class="lines">Configuring cron for efficient startup<br/>
+<br/>
+Allocating raw storage</p>
+</td>
+
+<td valign="top" headers="d552761e320" class="stentry"><p class="lines">performance</p>
+</td>
+
+<td valign="top" headers="d552761e324" class="stentry"><p class="lines">linux<br/>
+unix</p>
+</td>
+
+</tr>
+<tr class="strow">
+<td valign="top" headers="d552761e316" class="stentry"><p class="lines">Analyzing web logs for service issues<br/>
+<br/>
+Detecting denial-of-service attacks</p>
+</td>
+
+<td valign="top" headers="d552761e320" class="stentry"><p class="lines">reliability</p>
+</td>
+
+<td valign="top" headers="d552761e324" class="stentry"><p class="lines">linux<br/>
+unix<br/>
+windows</p>
+</td>
+
+</tr>
+</table>
+
+</div>
+</div>
+
+<div class="section" id="subjectCell__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="subjectCell__relrow_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d552761e368" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d552761e371" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d552761e374" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d552761e377" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d552761e380" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d552761e368" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d552761e371" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d552761e374" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d552761e377" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d552761e380" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d552761e368" class="stentry">topicref-atts attribute group (collection-type,
+				processing-role, type, scope, locktitle, format, linking, toc, print, search,
+				chunk)</td>
+ 
+			 <td valign="top" headers="d552761e371" class="stentry">A set of related attributes. See 
+				<a class="- topic/xref  ajaxLink" href="common/topicref-atts.html" title="The &#34;topicref-atts&#34;, &#34;topicref-atts-no-toc&#34;, and &#34;topicref-atts-without-format&#34; attribute groups represent collections of attributes used in numerous map elements.">topicref-atts, topicref-atts-no-toc, and topicref-atts-without-format attribute groups</a>.</td>
+ 
+			 <td valign="top" headers="d552761e374" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d552761e377" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d552761e380" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d552761e368" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d552761e371" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d552761e374" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d552761e377" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d552761e380" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d552761e368" class="stentry">class</td>
+ 
+			 <td valign="top" headers="d552761e371" class="stentry">A common attribute described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d552761e374" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d552761e377" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d552761e380" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/classify-d.html" title="The classification domain elements are used to identify the subject matter of content that is referenced in a map. These subjects must be subjects defined in a subject scheme map. In particular, this allows an author to classify content in new subject categories that are not bound to existing metadata attributes.">Classification domain elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/topicCell.html" title="The &lt;topicCell&gt; element contains topics that will be associated with subjects in each following column of the current row in the &lt;topicSubjectTable&gt;.">topicCell</a></div>
+</div>
+</div>
+
+</body>
+</html>

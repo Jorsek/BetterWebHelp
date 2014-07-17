@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Processing component modularization and naming conventions"/>
+<meta name="abstract" content=""/>
+<meta name="description" content=""/>
+<meta name="DC.Relation" scheme="URI" content="../non-normative/non-normative-information.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="filenaming-processing-modules"/>
+<title>Processing component modularization and naming conventions</title>
+</head>
+<body id="filenaming-processing-modules">
+
+
+ <h1 class="title topictitle1">Processing component modularization and naming conventions</h1>
+
+ 
+  <div class="body conbody"><p class="shortdesc"/>
+
+    <p class="p">Files that implement processing associated with specific vocabulary or constraint modules
+      should generally be organized by module, such that the implementation components correspond to
+      the vocabulary modules that they implement and are, to the degree the implementation
+      technology provides for it, similarly modular. </p>
+
+    <p class="p">For example, the DITA Open Toolkit provides a general plugin mechanism that allows implementation components to be dynamically added to and removed from a Toolkit instance. General practice is to define Toolkit plugins that correspond to modules.</p>
+
+    <p class="p">For the specific case of cascading style sheets and XSLTs transformations, two key DITA implementation technologies, the suggested filenaming conventions are:</p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">CSS override files (recommended convention for tool providers)</dt>
+
+        <dd class="dd">
+          <ul class="ul" id="filenaming-processing-modules__ul_e2dad691-6da8-4a19-9fe1-37704cc7deff">
+            <li class="li"><var class="keyword varname">typename</var>.css</li>
+
+            <li class="li"><var class="keyword varname">customization-purpose</var>.css</li>
+
+          </ul>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">XSLT override files (recommended convention for tool providers)</dt>
+
+        <dd class="dd">
+          <ul class="ul" id="filenaming-processing-modules__ul_6cfc09e0-f96e-4a9b-9332-c834350935ed">
+            <li class="li"><var class="keyword varname">typename</var>.xsl</li>
+
+            <li class="li"><var class="keyword varname">customization-purpose</var>.xsl</li>
+
+          </ul>
+
+        </dd>
+
+      
+    </dl>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="non-normative/non-normative-information.html" title="This section contains non-normative information, including topics about new features in DITA 1.2 and migrating from DITA 1.1 to DITA 1.2.">Non-normative information</a></div>
+</div>
+</div>
+
+</body>
+</html>

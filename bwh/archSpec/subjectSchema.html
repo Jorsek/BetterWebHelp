@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Subject scheme maps"/>
+<meta name="abstract" content="A subject scheme map enables adopters to create custom controlled values and to manage metadata attribute values for an organization or a project without having to write a DITA specialization."/>
+<meta name="description" content="A subject scheme map enables adopters to create custom controlled values and to manage metadata attribute values for an organization or a project without having to write a DITA specialization."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditamaps.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditamap-attributes.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="subjectSchema"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Subject scheme maps</title>
+</head>
+<body id="subjectSchema">
+
+
+ <h1 class="title topictitle1">Subject scheme maps</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc">A subject scheme map enables adopters to create custom controlled values and to manage
+  metadata attribute values for an organization or a project without having to write a DITA
+  specialization.</p>
+
+  <p class="p">Subject scheme maps use key definition to define a collection of controlled values rather than
+   a collection of topics. The highest level of map that uses the set of controlled values must
+   reference the subject scheme map in which those controlled values are defined.</p>
+
+  <p class="p">A controlled value is a short, readable, and meaningful keyword that can abe used as a value in
+   a metadata attribute. For example, the @audience metadata attribute may take a value that
+   identifies the user group associated with a particular content unit. Typical user values for a
+   medical-equipment product line might include therapist, oncologist, physicist, radiologist, and
+   so on. In a subject scheme map, an information architect can define a list of these audience
+   values. Authoring tools may use these lists of controlled values to provide value lists from
+   which authors may select values when they are entering metadata. </p>
+
+  <p class="p">If controlled values for a metadata attribute are defined using the subject scheme map, tools
+   may give an organization a list of readable labels, a hierarchy of values to simplify selection,
+   and a shared definition of the value.</p>
+
+  <p class="p">Controlled values may be used to classify content for filtering and flagging at build time.
+   They may also be used for retrieval and traversal of the content at run time if information
+   viewers that provide such functionality are available.</p>
+
+  <p class="p">Tools may validate controlled values for attributes by reference to the subject scheme map. As
+   with all key definitions and references, the reference must appear in the highest map that makes
+   use of the controlled values.</p>
+
+  <div class="section"><h2 class="title sectiontitle">Defining a list of controlled values</h2>
+   
+   <div class="p">A specialized DITA map, &lt;subjectScheme&gt; is used to define a collection of controlled
+    values. Each controlled value is defined using a specialized topic reference, called
+    &lt;subjectdef&gt;. The &lt;subjectdef&gt; is used to define both a category and a list of controlled
+    values. The top-level &lt;subjectdef&gt; defines the category and the children define the
+    controlled values. The following example illustrates the use of &lt;subjectdef&gt; to define
+    controlled values for a group of
+    users:<pre class="pre codeblock">&lt;subjectScheme&gt;
+&lt;!-- Pull in a scheme that defines audience user values --&gt;
+    &lt;subjectdef keys="users"&gt;
+        &lt;subjectdef keys="therapist"&gt;
+        &lt;subjectdef keys="oncologist"&gt;
+        &lt;subjectdef keys="radiationphysicist"&gt;
+        &lt;subjectdef keys="radiologist"&gt;
+    &lt;/subjectdef&gt;
+
+ &lt;!-- Define an enumeration of the audience attribute, equal to
+       each value in the users subject. This makes the following values
+       valid for the audience attribute: therapist, oncologist, physicist, radiologist --&gt;
+     &lt;enumerationdef&gt;
+         &lt;attributedef name="audience"/&gt;
+         &lt;subjectdef keyref="users"/&gt;
+     &lt;/enumerationdef&gt;...
+&lt;/subjectScheme&gt;</pre>
+</div>
+
+   <div class="p">Within the &lt;subjectdef&gt; element<ul class="ul">
+     <li class="li">&lt;navtitle&gt; can provide a more readable value name</li>
+
+     <li class="li">&lt;shortdesc&gt; within &lt;topicmeta&gt; can provide a definition</li>
+
+    </ul>
+</div>
+
+   <div class="p">An enumeration may be defined with hierarchical levels by nesting subject definitions. If
+    filtering or flagging excludes "therapist" and does not explicity identify "novice", processing
+    should apply filtering to all subsets of therapist. If filtering includes "novice" but does not
+    explicity exclude "therapist", processing should include the general therapist content because
+    it applies to "novice". If flagging explicity includes "therapist" but is not set explicity for
+    "novice", processing should apply the "therapist" flag to the "novice" content as a special type
+    of
+    therapist.<pre class="pre codeblock">&lt;subjectScheme&gt;
+    &lt;subjectdef keys="users"&gt;
+        &lt;subjectdef keys="therapist"&gt;
+            &lt;subjectdef keys="novice"/&gt;
+            &lt;subjectdef keys="expert"/&gt;
+        &lt;/subjectdef&gt;
+        &lt;subjectdef keys="oncologist"&gt;
+        &lt;subjectdef keys="physicist"&gt;
+        &lt;subjectdef keys="radiologist"&gt;
+    &lt;/subjectdef&gt;</pre>
+</div>
+
+   <div class="p">The &lt;subjectdef&gt; element can use an @href attribute to refer to a more detailed definition
+    of the subject. For example, the value of "oncologist" could refer to an encyclopedia entry that
+    describes the oncologist role in
+    medicine.<pre class="pre codeblock">&lt;subjectdef keys="oncologist" href="encyclopedia/oncologist.dita"/&gt;</pre>
+These
+    definitions may help to clarify the meaning of a value, especially when different parts of an
+    organization may use the same term differently. An editor may support drilling down to the
+    subject definition topic for a detailed explanation of the subject. DITA output formatting may
+    produce a help file, PDF, or other readable catalog for understanding the controlled
+    values.</div>
+
+  </div>
+
+  
+  <div class="section"><h2 class="title sectiontitle">Validating metadata attributes against a subject scheme</h2>
+   
+   <p class="p">After locating the scheme, editors may validate an attribute against the bound enumeration,
+    preventing users from entering misspelled or undefined values. A map editor may validate the
+    audience attribute in a map against the scheme. A processor may check that all values listed for
+    an attribute in a DITAVAL file are bound to the attribute by the scheme before filtering or
+    flagging.</p>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">Scaling a subject scheme to define a taxonomy</h2>
+   
+   <p class="p">A taxonomy differs from a controlled values list primarily in the degree of precision with
+    which the metadata values are defined. A set of controlled values lists is sometimes regarded as
+    the simplest form of taxonomy. Regardless of whether the goal is a simple list of controlled
+    values or a taxonomy:</p>
+
+   <ul class="ul">
+    <li class="li">The same core elements are used (subjectScheme, subjectdef, and schemeref).</li>
+
+    <li class="li">A category and its subjects can have a binding that enumerates the values of a metadata
+     attribute.</li>
+
+   </ul>
+
+   <p class="p">Beyond the core elements and the attribute binding elements, sophisticated taxonomies can take
+    advantage of some optional elements in the scheme. Most of these optional elements make it
+    possible to specify more precise relationships among subjects.</p>
+
+   <div class="p">The &lt;hasNarrower&gt;, &lt;hasPart&gt;, &lt;hasKind&gt;, &lt;hasInstance&gt;, and &lt;hasRelated&gt;
+    elements specify the kind of relationship in a hierarchy between a container subject and its
+    contained subjects. The following example defines San Francisco as an instance of a city but a
+    geographic part of
+    California.<pre class="pre codeblock">&lt;subjectScheme&gt;
+  &lt;hasInstance&gt;
+    &lt;subjectdef keys="city" navtitle="City"&gt;
+       &lt;subjectdef keys="la" navtitle="Los Angeles"/&gt;
+       &lt;subjectdef keys="nyc" navtitle=New York City"/&gt;
+       &lt;subjectdef keys="sf" navtitle="San Francisco"&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="state" navtitle="State"&gt;
+       &lt;subjectdef keys="ca" navtitle="California"/&gt;
+       &lt;subjectdef keys="ny" navtitle=New York"/&gt;
+    &lt;/subjectdef&gt;
+   &lt;/hasInstance&gt;
+   &lt;hasPart&gt;
+      &lt;subjectdef keys="place" navtitle="Place"&gt;
+        &lt;subjectdef keys="ca"&gt;
+          &lt;subjectdef keys="la"&gt;
+          &lt;subjectdef keys="sf"&gt;
+      &lt;/subjectdef&gt;
+      &lt;subjectdef keys="ny"&gt;
+         &lt;subjectdef keys="nyc"&gt;
+      &lt;/subjectdef&gt;
+    &lt;/hasPart&gt;
+ &lt;/subjectScheme&gt;</pre>
+</div>
+
+   <p class="p">Sophisticated tools can use this scheme to associate content about San Francisco with related
+    content about other California places or with related content about other cities (depending on
+    the interests of the current user).</p>
+
+   <p class="p">The scheme can also define relationships between subjects that are not hierarchical. For
+    instance, cities sometimes have "sister city" relationships. The example scheme could add a
+    subjectRelTable element to define these associative relationships, with a row for each
+    sister-city pair and the two cities in different columns in the row.</p>
+
+   <p class="p">While users who have access to sophisticated processing tools benefit from defining taxonomies
+    with this level of precision, other users can safely ignore this advanced markup and define
+    taxonomies with hierarchies of subjectdef elements that aren't precise about the kind of
+    relationship between the subjects.</p>
+
+  </div>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditamaps.html" title="This topic collection contains information about DITA maps and the purposes that they serve. It also includes high-level information about DITA map elements, attributes, and metadata.">DITA maps</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditamap-attributes.html" title="DITA maps have unique attributes that are designed to control the way that relationships are interpreted for different output purposes. In addition, DITA maps share many metadata and linking attributes with DITA topics.">DITA map attributes</a></div>
+</div>
+</div>
+
+</body>
+</html>

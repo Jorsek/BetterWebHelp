@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="supequip"/>
+<meta name="abstract" content="The &lt;supequip&gt; element contains information about the support equipment that is required to perform a task. This element either contains children elements that specify particular items of support equipment or a &lt;nosupreq&gt; element that specifies that no support equipment is required."/>
+<meta name="description" content="The &lt;supequip&gt; element contains information about the support equipment that is required to perform a task. This element either contains children elements that specify particular items of support equipment or a &lt;nosupreq&gt; element that specifies that no support equipment is required."/>
+<meta name="DC.subject" content="supequip"/>
+<meta name="keywords" content="supequip"/>
+<meta name="DC.Relation" scheme="URI" content="../common/mitask-d.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/supequi.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/nosupeq.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="supequip"/>
+<meta name="DC.Language" content="en-us"/>
+<title>supequip</title>
+</head>
+<body id="supequip">
+
+
+<h1 class="title topictitle1">supequip</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">supequip</span>&gt; element contains information
+about the support equipment that is required to perform a task. This
+element either contains children elements that specify particular
+items of support equipment or a &lt;nosupreq&gt; element that specifies
+that no support equipment is required.</p>
+
+<div class="section" id="supequip__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d570663e37" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d570663e39" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d570663e44" headers="d570663e37" class="stentry"><strong>machineryTask</strong></td>
+
+<td valign="top" headers="d570663e39 d570663e44" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="nosupeq.html" title="The &lt;nosupeq&gt; element indicates that there is no support equipment required to perform a task.">nosupeq</a>)  or  (<a class="- topic/xref  ajaxLink" href="supeqli.html" title="The &lt;supeqli&gt; element contains a list of the tools, support equipment, or monitoring equipment that is required to perform a task. These pieces of support equipment need to be assembled prior to beginning the task.">supeqli</a>) ) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="supequip__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d570663e76" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d570663e78" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d570663e83" headers="d570663e76" class="stentry"><strong>machineryTask</strong></td>
+
+<td valign="top" headers="d570663e78 d570663e83" class="stentry"><a class="- topic/xref  ajaxLink" href="prelreqs.html" title="The &lt;prelreqs&gt; element contains information about preliminary requirements – the things the user needs to know or do before starting a task. This element contains information about personnel requirements, safety conditions, support equipment, supplies, and spare parts.">prelreqs</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="supequip__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">+
+topic/p task/p mitask-d/supequip</p>
+</div>
+
+<div class="example" id="supequip__example"><h2 class="title sectiontitle">Example</h2><pre class="pre codeblock">&lt;supequip&gt;
+ &lt;supeqli&gt;
+  &lt;supequi&gt;Driver handle&lt;/supequi&gt;
+  &lt;supequi&gt;Slide hammer&lt;/supequi&gt;
+  &lt;supequi&gt;Axle seal installer&lt;/supequi&gt;
+ &lt;/supeqli&gt;
+&lt;/supequip&gt;
+</pre>
+</div>
+
+<div class="section" id="supequip__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="supequip__attribute_table" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d570663e118" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d570663e121" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d570663e124" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d570663e127" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d570663e130" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d570663e118" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d570663e121" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d570663e124" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d570663e127" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d570663e130" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d570663e118" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d570663e121" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d570663e124" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d570663e127" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d570663e130" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d570663e118" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d570663e121" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d570663e124" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d570663e127" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d570663e130" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/mitask-d.html" title="The task requirements domain contains elements for use in describing tasks that involve machines or other pieces of hardware.">Task requirements domain</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/supequi.html" title="The &lt;supequi&gt; element specifies a tool, a piece of support equipment, or a piece of monitoring equipment that is needed to perform a task, such as a slide hammer.">supequi</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/nosupeq.html" title="The &lt;nosupeq&gt; element indicates that there is no support equipment required to perform a task.">nosupeq</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="anchorid"/>
+<meta name="abstract" content="The &lt;anchorid&gt; element allows an author to define a conref target that will be resolved dynamically when rendered for an end user of the content. This element is useful when doing an initial process of the DITA content prior to final rendering of the content; it causes specified IDs to be preserved after that process, and conref relationships that reuse the element will not be resolved during the initial process."/>
+<meta name="description" content="The &lt;anchorid&gt; element allows an author to define a conref target that will be resolved dynamically when rendered for an end user of the content. This element is useful when doing an initial process of the DITA content prior to final rendering of the content; it causes specified IDs to be preserved after that process, and conref relationships that reuse the element will not be resolved during the initial process."/>
+<meta name="DC.subject" content="anchorid"/>
+<meta name="keywords" content="anchorid"/>
+<meta name="DC.Relation" scheme="URI" content="../common/delayconref-d.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/exportanchors.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/anchorkey.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="anchorid"/>
+<meta name="DC.Language" content="en-us"/>
+<title>anchorid</title>
+</head>
+<body id="anchorid">
+
+
+<h1 class="title topictitle1">anchorid</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">anchorid</span>&gt; element allows an
+author to define a conref target that will be resolved dynamically
+when rendered for an end user of the content. This element is useful
+when doing an initial process of the DITA content prior to final rendering
+of the content; it causes specified IDs to be preserved after that
+process, and conref relationships that reuse the element will not
+be resolved during the initial process.</p>
+
+<div class="section"><p class="p">When the anchorid element is defined within a topic prolog,
+the specified IDs will be found within that topic. When an anchorid
+element is defined within a topicref element, the specified IDs will
+be found within the referenced topic (if the topicref points to a
+collection of topics, such as a reference that uses only a file name,
+the IDs will be found within the first or root topic).</p>
+<p class="p">The only
+difference between specifying an anchorid in the prolog and in topicmeta
+is that from the map it is possible to export the ID of the entire
+referenced topic. If <samp class="ph codeph">&lt;anchorid id="zero"/&gt;</samp> is
+specified in the topicmeta, and the referenced topic has an id of
+"zero", this means that the anchorid is a reference to the entire
+topic. If the topic id is not "zero", then the anchorid is a reference
+to the element with id="zero" within that topic.</p>
+<p class="p">Along with
+the preservation of the element's ID, any conref attribute that references
+the element's ID will not be resolved during an initial process. In
+that case, the conref will be resolved during a later rendering process.</p>
+<p class="p">This
+description does not imply that IDs are not discarded when anchorid
+is not used; though this element requires that IDs be preserved in
+some manner, it is also common for IDs to be preserved when anchorid
+is not used. Thus the primary impact of the anchorid element is on
+conref resolution.</p>
+<p class="p">Many publishing systems for which DITA
+is used as a source format do not have a way to dynamically resolve
+content references; those systems will not see any benefit from this
+element. When DITA is used for those systems, behaviors related to
+this element should be ignored.</p>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Why not use topicid/elementid?</h2><p class="p">This element
+differs from normal DITA referencing syntax in that it may reference
+an element within a topic without using the topic's ID. There are
+two reasons for this. First, the anchorid element may only be defined
+in a situation that refers unambiguously to a single topic (in the
+prolog, or in the topicmeta for a reference to a topic). Second, it
+allows the anchorid to be combined with keyref values.</p>
+<p class="p">It is
+possible to combine an anchor id with a key in order to delay resolution
+of conref in the topic represented by that key (see the second set
+of examples below). This would not be possible if the anchorid element
+required both the topic id and the element id. That is, keyref allows
+a modifiable reference to a topic, so a map may instruct processors
+to delay conref for item step1 in the topic represented by the key
+"commonconfig". If the anchorid element required a topic id, the delayed
+conref would always be bound to that specific topic.</p>
+</div>
+
+<div class="section" id="anchorid__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d66200e58" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d66200e60" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d66200e65" headers="d66200e58" class="stentry"><strong>map, bookmap, classifyMap, learningBookmap, learningMap</strong></td>
+
+<td valign="top" headers="d66200e60 d66200e65" class="stentry"> no content </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="anchorid__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d66200e76" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d66200e78" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d66200e83" headers="d66200e76" class="stentry"><strong>map (base), map (technical content), bookmap, classifyMap, learningBookmap, learningMap</strong></td>
+
+<td valign="top" headers="d66200e78 d66200e83" class="stentry"><a class="- topic/xref  ajaxLink" href="exportanchors.html" title="The &lt;exportanchors&gt; element is used to delay conref resolution within DITA documents. This allows you to process or display DITA content in a way that will resolve only some of the conref values in that content, while remaining values are left for later resolution. The element contains a list of IDs or keys that should not be resolved during the initial preparation of the content for display; those IDs and keys will be preserved after that preparation, as will the conref relationship itself.">exportanchors</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="anchorid__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">+
+topic/keyword delay-d/anchorid </p>
+</div>
+
+<div class="example" id="anchorid__example"><h2 class="title sectiontitle">Example</h2><div class="fig fignone"><span class="figcap">Figure 1. Use case 1:
+Runtime resolution of conref to an id, determined by original author</span>
+<ol class="ol">
+<li class="li">Author 1 creates topics for information component A, which is
+a common component used by many products. The configuration task for
+component A is often reused in whole or in part, so the author assigns
+ids to each of the steps in the procedure and exports them. <pre class="pre codeblock">&lt;task id="configA"&gt;
+  &lt;title&gt;ABC&lt;title&gt;
+  &lt;shortdesc&gt;...&lt;/shortdesc&gt;
+  &lt;prolog&gt;&lt;metadata&gt;
+    &lt;exportanchors&gt;
+      &lt;anchorid id="step1"/&gt;
+      &lt;anchorid id="step2"/&gt;
+      &lt;anchorid id="step3"/&gt;
+    &lt;/exportanchors&gt;
+  &lt;/metadata&gt;&lt;/prolog&gt;
+  &lt;taskbody&gt;
+    &lt;steps&gt;
+      &lt;step id="step1"&gt;&lt;cmd&gt;Do this&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="step2"&gt;&lt;cmd&gt;Do the other&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="step3"&gt;&lt;cmd&gt;And then finish&lt;/cmd&gt;&lt;/step&gt;
+    &lt;/steps&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;</pre>
+</li>
+
+<li class="li">Author 2 is working on information component B, which has information
+component A as a prerequisite.</li>
+
+<li class="li">Author 2 creates a configuration task that reuses two steps from
+the configuration task in information component A.<pre class="pre codeblock">&lt;task id="configB"&gt;
+  &lt;title&gt;..&lt;/title&gt;
+  &lt;shortdesc&gt;..&lt;/shortdesc&gt;
+  &lt;taskbody&gt;
+    &lt;steps&gt;
+      &lt;step&gt;&lt;cmd&gt;Do the very first thing&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step conref="componentA/configA.dita#configA/step1"&gt;&lt;cmd/&gt;&lt;/step&gt;
+      &lt;step&gt;&lt;cmd&gt;Do the middle thing&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step conref="componentA/configA.dita#configA/step2"&gt;&lt;cmd/&gt;&lt;/step&gt;
+    &lt;/steps&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;</pre>
+</li>
+
+<li class="li">Author 2 builds the content for component B into a deliverable
+format that supports dynamic content resolution. As with traditional
+conref, the source for component A must be available during this process.
+Because the ids in configA are exported, the build process knows to
+preserve the reuse relationship rather than resolve it - so the conref
+to the steps becomes an equivalent reuse artifact in that deliverable
+format. This way the relationship to component A can be resolved at
+runtime, and pick up the user's version of component A, which may
+be more up-to-date than the one used by Author 2 when component B
+was built.</li>
+
+</ol>
+
+</div>
+<div class="fig fignone"><span class="figcap">Figure 2. Use case 2: Runtime resolution to an id exported
+by the information builder</span>
+<ol class="ol">
+<li class="li">Author 1 is creating content that will be packaged into multiple
+deliverable components. In one of those components, component A, the
+ids should be exported for runtime reuse by other components. In other
+components, the ids should not be exported because all reuse is local
+(for example, the output is a single infocenter, or a helpset that
+has only one component).</li>
+
+<li class="li">When author 1 builds component A, the author uses a map that exports
+the ids, rather than exporting the ids from the topic prolog. <pre class="pre codeblock">&lt;map&gt;
+  &lt;topicref href="componentA/configA.dita"&gt;
+    &lt;topicmeta&gt;
+      &lt;exportanchors&gt;
+        &lt;anchorid id="step1"/&gt;
+        &lt;anchorid id="step2"/&gt;
+        &lt;anchorid id="step3"/&gt;
+      &lt;/exportanchors&gt;
+    &lt;/topicmeta&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;</pre>
+</li>
+
+<li class="li">The rest of the use case is the same as previous - the conref
+is passed on to the runtime/display format to deal with, rather than
+being resolved during native DITA processing.</li>
+
+</ol>
+
+</div>
+<div class="fig fignone"><span class="figcap">Figure 3. Delaying resolution for a topic</span>
+<p class="p">The ID on an &lt;anchorid&gt; element is first compared with the topic's
+id, and then with elements inside that topic. This results in the
+following situation.</p>
+
+<pre class="pre codeblock">&lt;map&gt;
+  &lt;topicref href="componentA/this.dita"&gt;
+    &lt;topicmeta&gt;
+      &lt;exportanchors&gt;
+        &lt;anchorid id="this"/&gt;
+        &lt;anchorid id="that"/&gt;
+      &lt;/exportanchors&gt;
+    &lt;/topicmeta&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;
+
+&lt;topic id="this"&gt;
+  &lt;title&gt;This and that&lt;/title&gt;
+  &lt;shortdesc&gt;Oh, you know, this and that.&lt;/shortdesc&gt;
+  &lt;body&gt;
+    &lt;fig id="that"&gt;&lt;p&gt;more of that&lt;/p&gt;&lt;/fig&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</pre>
+
+<ul class="ul">
+<li class="li">The first ID to be exported is "this", which matches the topic
+id, so resolution of conref values that target the topic should be
+delayed.</li>
+
+<li class="li">The second value is "that", which matches a figure within the
+topic, so resolution of conref values that target the figure should
+be delayed.</li>
+
+<li class="li">Note that if the "this" is also used within the topic (which is
+legal from a DITA perspective), it will not be possible to export
+that id, because processors will match on the topic's id first.</li>
+
+</ul>
+
+</div>
+</div>
+
+<div class="example"><h2 class="title sectiontitle">Example</h2><p class="p">In this example, a
+set of information contains multiple components. Some references to
+component A use keys rather than a direct reference, so that conref
+can be redirected to a different component when component A is not
+installed. The keys may be exported, in addition to the IDs, so that
+some references become bound to the actual component while other references
+may be redirected.</p>
+<pre class="pre codeblock">&lt;map&gt;
+  &lt;topicref keys="componentAconfig commonconfig" 
+            href="componentA/configA.dita#configA"&gt;
+    &lt;topicmeta&gt;
+      &lt;exportanchors&gt;
+        &lt;anchorkey keyref="commonconfig"/&gt;
+        &lt;anchorid id="step1"/&gt;
+        &lt;anchorid id="step2"/&gt;
+      &lt;/exportanchors&gt;
+    &lt;/topicmeta&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;</pre>
+<p class="p">The keys attributes declares two distinct
+keys that may be used to refer to this topic (componentAconfig and
+commonconfig). Only the second is preserved using anchorkey. A task
+topic from another component may reuse steps within this topic in
+a variety of ways.</p>
+<pre class="pre codeblock">&lt;steps&gt;
+  &lt;step conkeyref="componentAconfig/step1"&gt;&lt;cmd/&gt;&lt;/step&gt;
+  &lt;step conkeyref="componentAconfig/step1.5"&gt;&lt;cmd/&gt;&lt;/step&gt;
+  &lt;step conkeyref="commonconfig/step2"&gt;&lt;cmd/&gt;&lt;/step&gt;
+  &lt;step conkeyref="commonconfig/step2.5"&gt;&lt;cmd/&gt;&lt;/step&gt;
+  &lt;step&gt;&lt;cmd&gt;And that is the end of that&lt;/cmd&gt;
+&lt;/steps&gt;</pre>
+<ul class="ul">
+<li class="li">The componentAconfig key is not preserved, so the first step becomes <samp class="ph codeph">&lt;step
+conref="componentA/configA.dita#configA/step1"&gt;&lt;cmd/&gt;&lt;/step&gt;</samp>.
+At that point the anchorid element instructs the step1 ID to be preserved;
+for runtime applications which support it, this relationship will
+be preserved in the processed DITA output.</li>
+
+<li class="li">The second step with the same key becomes <samp class="ph codeph">&lt;step conref="componentA/configA.dita#configA/step1.5"&gt;&lt;cmd/&gt;&lt;/step&gt;</samp>.
+However, conref relationships to step1.5 are not preserved, so this
+conref should be resolved into static content.</li>
+
+<li class="li">For step three, the map instructs that both the key commonconfig
+and the ID step2 should be preserved in any content generated for
+this DITA topic. For formats that support runtime resolution through
+keys, a process must convert the conkeyref value into an equivalent
+value for that format.</li>
+
+<li class="li">Although resolution for the key used in step four is delayed,
+the specific element that is referenced should not be delayed. Thus
+the fourth step becomes <samp class="ph codeph">&lt;step conref="componentA/configA.dita#configA/step2.5"&gt;&lt;cmd/&gt;&lt;/step&gt;</samp>.
+This value is then processed as an ordinary conref value.</li>
+
+</ul>
+<p class="p">This allows the information assembler to resolve references
+that must be to componentA while deferring references that can be
+fulfilled by alternative component content.</p>
+<div class="note note"><span class="notetitle">Note:</span> This example
+demonstrates why the anchorid element cannot reference an element
+with the usual topicid/elementid format. If the two anchorid elements
+in the example had been set to config/step1 and config/step2, then
+they would only ever apply in a topic with id="config". It would not
+be possible to redirect the key to another topic, but still preserve
+conref behaviors as desired.</div>
+<div class="note note"><span class="notetitle">Note:</span> Although it
+is not specifically called out in this example, it is possible to
+delay conref resolution for an entire topic using the key. If conkeyref
+on a task topic element is set to "componentAconfig", which <em class="ph i">is
+not</em> delayed, the conref will be evaluated as usual. However, if
+conkeyref on the task is set to "commonconfig", which <em class="ph i">is</em> delayed,
+resolution of conref on that element should be delayed by a processor.</div>
+</div>
+
+<div class="section" id="anchorid__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="anchorid__attribute_table" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d66200e227" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d66200e230" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d66200e233" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d66200e236" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d66200e239" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d66200e227" class="stentry">id</td>
+ 
+			 <td valign="top" headers="d66200e230" class="stentry">Indicates an ID within the a specific topic that will be
+				preserved during processing. Any conref values referencing the indicated ID
+				will not be resolved; when possible, the original relationship should be
+				preserved in any processed document. Note that this element creates an
+				exception to the general rules that IDs may only be used once within a single
+				topic or within a map; this is because the ID is actually a pointer to another
+				target, rather than being a target itself.</td>
+ 
+			 <td valign="top" headers="d66200e233" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d66200e236" class="stentry">#REQUIRED</td>
+ 
+			 <td valign="top" headers="d66200e239" class="stentry">Yes</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d66200e227" class="stentry">keyref</td>
+ 
+			 <td valign="top" headers="d66200e230" class="stentry"><span class="ph" id="anchorid__d8034e2664">Keyref provides a redirectable
+				  reference based on a key defined within a map. See 
+				  <a class="- topic/xref  ajaxLink" href="common/thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The keyref attribute</a> for information on
+				  using this attribute.</span></td>
+ 
+			 <td valign="top" headers="d66200e233" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d66200e236" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d66200e239" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d66200e227" class="stentry">conref-atts attribute group (conref, conrefend, conaction,
+				conkeyref)</td>
+ 
+			 <td valign="top" headers="d66200e230" class="stentry">A set of related attributes; includes all of the attributes
+				described in 
+				<a class="- topic/xref  ajaxLink" href="common/id-atts.html" title="The &#34;id-atts&#34; attribute group includes attributes that enable the naming and referencing of elements in topics and maps.">id-atts attribute group</a> 
+				<em class="ph i">except</em> for the id attribute.</td>
+ 
+			 <td valign="top" headers="d66200e233" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e236" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e239" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d66200e227" class="stentry">select-atts attribute group (props, base, platform, product,
+				audience, otherprops, importance, rev, status)</td>
+ 
+			 <td valign="top" headers="d66200e230" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/select-atts.html" title="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations.">select-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d66200e233" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e236" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e239" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d66200e227" class="stentry">localization-atts attribute group (translate, xml:lang,
+				dir)</td>
+ 
+			 <td valign="top" headers="d66200e230" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/localization-atts.html" title="The &#34;localization-atts&#34; attribute group defines a set of common attributes related to translation and localization. These attributes are available on most DITA elements.">localization-atts attribute group</a>. 
+			 </td>
+ 
+			 <td valign="top" headers="d66200e233" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e236" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e239" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d66200e227" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d66200e230" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d66200e233" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e236" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e239" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d66200e227" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d66200e230" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d66200e233" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e236" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d66200e239" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/delayconref-d.html" title="The delayed conref resolution domain provides several elements for use when using DITA in situations that enable delayed or run time resolution of conref. The elements allow users to resolve some conref values statically, while delaying others for later resolution.">Delayed conref resolution elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/exportanchors.html" title="The &lt;exportanchors&gt; element is used to delay conref resolution within DITA documents. This allows you to process or display DITA content in a way that will resolve only some of the conref values in that content, while remaining values are left for later resolution. The element contains a list of IDs or keys that should not be resolved during the initial preparation of the content for display; those IDs and keys will be preserved after that preparation, as will the conref relationship itself.">exportanchors</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/anchorkey.html" title="The &lt;anchorkey&gt; element allows an author to define a conref target that will be resolved dynamically when rendered for an end user of the content. This element is useful when doing an initial process of the DITA content prior to final rendering of the content; it allows specified keys to be preserved after that process, and conref relationships which use that key will not be resolved during that initial process.">anchorkey</a></div>
+</div>
+</div>
+
+</body>
+</html>

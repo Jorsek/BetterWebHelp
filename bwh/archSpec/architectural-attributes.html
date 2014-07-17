@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Architectural attributes"/>
+<meta name="abstract" content="The architectural attributes specify the version of DITA that the content supports, identify the DITA domains that are in use by the content, and provide essential information about specializations that are in use by the content."/>
+<meta name="description" content="The architectural attributes specify the version of DITA that the content supports, identify the DITA domains that are in use by the content, and provide essential information about specializations that are in use by the content."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/metadata-attributes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/translation-and-localization-attributes.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="architectural-attributes"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Architectural attributes</title>
+</head>
+<body id="architectural-attributes">
+
+
+<h1 class="title topictitle1">Architectural attributes</h1>
+
+
+<div class="body conbody"><p class="shortdesc">The architectural attributes specify the version of DITA
+that the content supports, identify the DITA domains that are in use by the
+content, and provide essential information about specializations that are in
+use by the content.</p>
+
+<p class="p">The architectural attributes should not be marked up in the source
+DITA map and topic    instances. Instead, the values of the architectural
+attributes are handled by the processor when    the content is processed,
+preferably through defaults set in the DTD or Schema declaration.
+This    practice ensures that the DITA content instances do not specify
+invalid values for the    architectural attributes.</p>
+
+<p class="p">The architectural attributes are as follows:</p>
+
+<dl class="dl">
+<dt class="dt dlterm">class</dt>
+
+<dd class="dd">This attribute identifies the specialization modules for the element
+type as well as its ancestors. Every DITA element (except the &lt;dita&gt;
+element that is used as the root of a ditabase document) has a @class
+attribute.</dd>
+
+
+<dt class="dt dlterm">domains</dt>
+
+<dd class="dd">This attribute identifies the domain specialization modules used in a map or topic and, for each
+                    domain module, its module dependencies. The root element of every topic and map
+                    has a @domains attribute.</dd>
+
+
+<dt class="dt dlterm">DITAArchVersion</dt>
+
+<dd class="dd">This attribute identifies the version of the DITA architecture used by the DTD or schema. The
+                    root element of every topic and map has a @DITAArchVersion attribute. The
+                    attribute is declared in a DITA namespace to allow namespace-sensitive tools to
+                    detect DITA markup.</dd>
+
+</dl>
+
+<p class="p">To make the document instance usable in the absence of a DTD or
+Schema declaration, a    normalization process may set the architectural
+attributes in the document instance.</p>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/metadata-attributes.html" title="Certain attributes are common across most DITA elements. These attributes support content referencing, conditional processing, application of metadata, and globalization and localization.">Metadata attributes</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/translation-and-localization-attributes.html" title="DITA elements have several attributes that support localization and translation.">Translation and localization attributes</a></div>
+</div>
+</div>
+
+</body>
+</html>

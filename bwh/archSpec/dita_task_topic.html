@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Task topic (strict task)"/>
+<meta name="abstract" content="The strict task document type supports the development of instructions for the completion of a procedure. The strict task document type is built using the general task information type combined with the Strict Taskbody Constraint. See the reference below to ensure that you have the correct task document type when you update to DITA 1.2."/>
+<meta name="description" content="The strict task document type supports the development of instructions for the completion of a procedure. The strict task document type is built using the general task information type combined with the Strict Taskbody Constraint. See the reference below to ensure that you have the correct task document type when you update to DITA 1.2."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_technicalContent_InformationTypes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_generic_task_topic.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_machinerytask_topic.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="dita_task_topic"/>
+<meta name="DC.Language" content="en-Us"/>
+<title>Task topic (strict task)</title>
+</head>
+<body id="dita_task_topic">
+
+
+ <h1 class="title topictitle1">Task topic (strict task)</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc">The strict task document type supports the development of instructions for the
+  completion of a procedure. The strict task document type is built using the general task
+  information type combined with the Strict Taskbody Constraint. See the reference below to ensure
+  that you have the correct task document type when you update to DITA 1.2.</p>
+
+  <div class="section"><h2 class="title sectiontitle">The purpose of the standard task information type</h2>
+   
+   <p class="p">Tasks are the essential building blocks to provide procedural information. A task information
+    type answers the "How do I?" question by providing precise step-by-step instructions detailing
+    the requirements that must be fulfilled, the actions that must be performed, and the order in
+    which the actions must be performed. The task topic includes sections for describing the
+    context, prerequisites, expected results, and other aspects of a task.</p>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">The structure of the task topic</h2>
+   
+   <p class="p">The &lt;task&gt; element is the top-level element for the strict task topic. The strict task
+    document type contains a title and a taskbody with optional alternative titles (titlealts), a
+    short description or abstract, a prolog,and related-links.</p>
+
+   <p class="p">The &lt;taskbody&gt; element is the main body element inside a strict task document type. The
+    strict task body has a constrained structure, with these optional elements in the following
+    order: </p>
+
+   <dl class="dl">
+    
+     <dt class="dt dlterm">&lt;prereq&gt;</dt>
+
+     <dd class="dd">Describes information that the user needs to know or do before starting the immediate task.
+      This section may occur only once.</dd>
+
+    
+    
+     <dt class="dt dlterm">&lt;context&gt;</dt>
+
+     <dd class="dd">Provides background information for the task. This information helps the users understand
+      the purpose of the task and what they will gain by completing the task correctly. This section
+      should be brief and does not replace or recreate a concept topic on the same subject, although
+      the context section may include some conceptual information. This section may occur only
+      once.</dd>
+
+    
+    
+     <dt class="dt dlterm">&lt;steps&gt;</dt>
+
+     <dd class="dd">Provides the main content of the task topic. A task consists of a series of steps that
+      accomplish the task. The &lt;steps&gt; element must have one or more &lt;step&gt; elements, which
+      provide the specifics about each step in the task. The &lt;steps&gt; element may occur only
+       once.<p class="p">The &lt;step&gt; element represents an action that a user must follow to accomplish a
+       task. Each step in a task must contain a command &lt;cmd&gt; element which describes the
+       particular action the user must perform to accomplish the overall task. The step element may
+       also contain information &lt;info&gt;, substeps &lt;substeps&gt;, tutorial information
+       &lt;tutorialinfo&gt;, a step example &lt;stepxmp&gt;, choices &lt;choices&gt;, or a stepresult
+       &lt;stepresult&gt;, although these are optional.</p>
+</dd>
+
+    
+    
+     <dt class="dt dlterm">&lt;steps-unordered&gt;</dt>
+
+     <dd class="dd">Provides alternative content for the task topic, allowing for a single step in a procedure
+      or a set of commands that need not be performed in a specific order.</dd>
+
+    
+    
+     <dt class="dt dlterm">&lt;result&gt;</dt>
+
+     <dd class="dd">Describes the expected outcome for the task as a whole. </dd>
+
+    
+    
+     <dt class="dt dlterm">&lt;example&gt;</dt>
+
+     <dd class="dd">Provides an example that illustrates or supports the task. </dd>
+
+    
+    
+     <dt class="dt dlterm">&lt;postreq&gt;</dt>
+
+     <dd class="dd">Describes steps or tasks that the user should do after the successful completion of the
+      current task. It is often supported by links to the next task or tasks in the
+      &lt;related-links&gt; section.</dd>
+
+    
+   </dl>
+
+  </div>
+
+  <div class="example">Here is an example of a task
+   topic:<pre class="pre codeblock">&lt;task id="birdhousebuilding"&gt;
+    &lt;title&gt;Building a bird house&lt;/title&gt;
+    &lt;shortdesc&gt;Building a birdhouse is a perfect activity 
+    for adults to share with their children or grandchildren. 
+    It can be used to teach about birds, as well as the proper use of tools.
+    &lt;/shortdesc&gt;
+ &lt;taskbody&gt;
+  &lt;context&gt;Birdhouses provide safe locations for birds to build nests and raise their young. They also provide shelter during cold and rainy spells.&lt;/context&gt;
+  &lt;prereq&gt;To build a sound birdhouse, you will need a complete set of tools:
+  &lt;ul&gt;&lt;li&gt;hand saw&lt;/li&gt;
+      &lt;li&gt;hammer ... &lt;/li&gt;
+  &lt;/ul&gt;&lt;/prereq&gt;
+ &lt;steps&gt;
+   &lt;step&gt;&lt;cmd&gt;Lay out the dimensions for the birdhouse elements.&lt;/cmd&gt;&lt;/step&gt;
+   &lt;step&gt;&lt;cmd&gt;Cut the elements to size.&lt;/cmd&gt;&lt;/step&gt;
+   &lt;step&gt;&lt;cmd&gt;Drill a 1 1/2" diameter hole for the bird entrance on the front.&lt;/cmd&gt;
+         &lt;info&gt;You need to look at the drawing for the correct placement of the 
+               hole.&lt;/info&gt;&lt;/step&gt;
+   ...
+  &lt;/steps&gt;
+  &lt;result&gt;You now have a beautiful new birdhouse!&lt;/result&gt;
+  &lt;postreq&gt;Now find a good place to mount it.&lt;/postreq&gt;
+ &lt;/taskbody&gt;
+&lt;/task&gt;</pre>
+</div>
+
+  <div class="section"><h2 class="title sectiontitle">Maintaining specializations using the strict task model</h2>
+   
+   <p class="p">Organizations that have created specializations based on the DITA 1.0 and 1.1 strict task
+    model should review the recommendations in <a class="- topic/xref  ajaxLink" href="non-normative/migration-1_1-to-1_2.html" title="(Non-normative) DITA 1.2 is compatible with prior versions of the DITA specification in that all valid DITA 1.0 and 1.1 documents are valid DITA 1.2 documents. However, some changes to existing document type shells and specializations might be needed in order to maintain the same behavior under DITA 1.2 or to take full advantage of new DITA 1.2 features.">Migrating from DITA 1.1 to 1.2</a> to maintain their
+    specializations. </p>
+
+  </div>
+
+  <div class="section"><h2 class="title sectiontitle">Modules</h2>
+   
+   <p class="p">The following DITA modules are provided for the task topic.</p>
+
+   <ul class="sl simple">
+    <li class="sli">task.mod. task.ent, strictTaskbody constraint (DTD)</li>
+
+    <li class="sli">taskMod.xsd, taskGrp.xsd, strictTaskbodyConstraintMod.xsd (Schema)</li>
+
+   </ul>
+
+  </div>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_technicalContent_InformationTypes.html" title="The Technical Content package contains five topic specializations that support seven document types: concept, reference, general task, strict task, machinery task, glossary entry, and glossary group. These topic types are specialized from the base topic and are designed specifically for information that describes how to use products and processes they are dominated by procedural, task-oriented information. The Technical Content package also includes the map document type.">Technical content: Document and information types</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_generic_task_topic.html" title="The general task document and information types are new to DITA 1.2. They provide a less strict content model for task-oriented information than was available in DITA 1.0 and 1.1. The general task content model may be preferred over the strict task model by some organizations. It can facilitate the migration of legacy content that does not follow the strict task topic model. The general task information type serves as the base for the strict task and machine-industry task document types, can be used to create new document types, and serves as a base for new structural specializations.">General task topic</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_machinerytask_topic.html" title="The machinery task document type supports the development of instructions for the completion of a procedure. The machinery task document type is built using the general task information type combined with the Machinery Taskbody Constraint.">Machinery task topic</a></div>
+</div>
+</div>
+
+</body>
+</html>

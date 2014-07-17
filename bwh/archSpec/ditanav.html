@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Navigation behaviors"/>
+<meta name="abstract" content="DITA includes markup that processors may use to generate reader navigation to or across DITA topics."/>
+<meta name="description" content="DITA includes markup that processors may use to generate reader navigation to or across DITA topics."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/behaviors.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/module-compatibility.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditalinking.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ditanav"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Navigation behaviors</title>
+</head>
+<body id="ditanav">
+
+
+     <h1 class="title topictitle1">Navigation behaviors</h1>
+
+     
+     <div class="body conbody"><p class="shortdesc">DITA includes markup that processors may use to generate reader navigation to or
+          across DITA topics.</p>
+
+          <p class="p">While DITA content can be processed to create output with media-specific navigational
+               aids, this topic discusses only the behaviors that are derived from markup.</p>
+
+          <div class="section"><h2 class="title sectiontitle">Tables of contents (TOCs)</h2>
+               
+               <p class="p">Processors may generate a TOC based on the hierarchy of the &lt;topicref&gt; elements
+                    in the DITA map. Each &lt;topicref&gt; element in the map represents a node in the
+                    TOC (unless it is set as a "resource only" topic reference). These topic
+                    references define a navigation tree. When a map contains a topic reference to a
+                    map (often called a map reference), processors should integrate the referenced
+                    map's navigation tree with the referencing map's navigation tree at the point of
+                    reference. In this way, a deliverable may be compiled from multiple DITA
+                    maps.</p>
+
+               <div class="note note"><span class="notetitle">Note:</span> 
+                    <p class="p">If a &lt;topicref&gt; element that references a map contains child &lt;topicref&gt;
+                         elements, the processing behavior of the child &lt;topicref&gt; elements is
+                         undefined.</p>
+
+               </div>
+
+               <p class="p">By default, the text for each node in the TOC is obtained from the referenced
+                    topic's title. If the @locktitle attribute on the &lt;topicref&gt; element is set
+                    to "yes", the node text must be taken from the @navtitle attribute or
+                    &lt;navtitle&gt; child element of the &lt;topicref&gt; element and must not be read
+                    from the referenced topic's title. If a &lt;topicref&gt; element contains both a
+                    &lt;navtitle&gt; child element and a @navtitle attribute, the @locktitle attribute
+                    applies to both &lt;navtitle&gt; and @navtitle and, when set to "yes", the value of
+                    the &lt;navtitle&gt; element <span class="keyword">must</span> be used.</p>
+
+               <p class="p">A TOC node is generated for every &lt;topicref&gt; element (or specialization
+                    thereof) that references a topic or specifies a navigation title, except in the
+                    following cases:</p>
+
+               <ul class="ul" id="ditanav__ul_8477b748-2748-45c3-b8ca-df776f1b536d">
+                    <li class="li">The @processing-role attribute is specified on the &lt;topicref&gt; element or
+                         an ancestor element.</li>
+
+                    <li class="li">The @print attribute is specified on the &lt;topicref&gt; element or an
+                         ancestor element and the current processing is not for print output.</li>
+
+                    <li class="li">Conditional processing is used to filter out this node or an ancestor
+                         node.</li>
+
+                    <li class="li">No @href or @navtitle attribute is set and no child &lt;navtitle&gt; element
+                         exists, or the node is a &lt;topicgroup&gt; element.</li>
+
+               </ul>
+
+               <p class="p">To suppress a &lt;topicref&gt; element from appearing in the TOC, set its @toc
+                    attribute to "no". The value of the @toc attribute cascades to child
+                    &lt;topicref&gt; elements, so if @toc is set to "no" on a particular &lt;topicref&gt;,
+                    all of that &lt;topicref&gt;'s children are also excluded from the TOC. If a child
+                    &lt;topicref&gt; overrides the cascading TOC node suppression by specifying
+                    @toc="yes", then the node that specifies @toc="yes" must appear in the TOC
+                    (minus the intermediate nodes that turned off @toc).</p>
+
+          </div>
+
+          <div class="section"><h2 class="title sectiontitle">Indexing</h2>
+               
+               <p class="p">An index may be generated from index entries occurring in topic bodies, topic
+                    prologs, or DITA maps. For more information, see the language reference for the
+                    &lt;indexterm&gt; element.</p>
+
+          </div>
+
+     </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/behaviors.html" title="Several common DITA processing behaviors are driven by attributes, including setting the set of vocabulary and constraint modules on which a DITA document depends, navigation, linking, content reuse (via direct or indirect addressing), conditional processing, chunking, and printing. In addition, translation of DITA content is expedited through the use of the @dir, @translate, and @xml:lang attributes, and the &lt;index-sort-as&gt; element.">DITA processing</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/module-compatibility.html" title="A given DITA document declares, through the @domains attribute on &lt;map&gt; and &lt;topic&gt; elements, the set of vocabulary and constraint modules on which it depends.">Module compatibility and the @domains attribute</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditalinking.html" title="DITA depends heavily on links. The purposes for which it provides links include defining the content and organization of publication structures (DITA maps), topic-to-topic navigation links and cross references, and reuse of content by reference. All DITA links use the same addressing facilities, either URI-based addresses or DITA-specific indirect addresses using keys and key references.">DITA linking</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Machinery task topic"/>
+<meta name="abstract" content="The machinery task document type supports the development of instructions for the completion of a procedure. The machinery task document type is built using the general task information type combined with the Machinery Taskbody Constraint."/>
+<meta name="description" content="The machinery task document type supports the development of instructions for the completion of a procedure. The machinery task document type is built using the general task information type combined with the Machinery Taskbody Constraint."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_technicalContent_InformationTypes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_task_topic.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_glossary_topic.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="dita_spec_2_1_info_tasks"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Machinery task topic</title>
+</head>
+<body id="dita_spec_2_1_info_tasks">
+
+
+     <h1 class="title topictitle1">Machinery task topic</h1>
+
+     
+     <div class="body conbody"><p class="shortdesc">The machinery task document type supports the development of instructions for the
+          completion of a procedure. The machinery task document type is built using the general
+          task information type combined with the Machinery Taskbody Constraint.</p>
+
+          <div class="section"><h2 class="title sectiontitle">The purpose of the machinery task information type</h2>
+               
+               <p class="p">The machinery-task is designed to provide procedural information, similar to the
+                    strict task topic, and has a well-defined semantic structure that describes how
+                    to perform the steps required to accomplish a specific goal. Compared to the
+                    strict task information type, the machinery-task information type contains
+                    additional descriptive elements in the prelreqs section that add detail to the
+                    pre-requisites required to perform a task. The machinery-task topic is developed
+                    using the DITA constraint mechanism, in addition to specializations for new
+                    elements. </p>
+
+               <p class="p">Machinery tasks are the essential building blocks to provide procedural
+                    information for machines, machinery equipment, assemblies, and apparatuses. A
+                    machinery-task information type answers the "How do I?" question by providing
+                    precise step-by-step instructions detailing the requirements that must be
+                    fulfilled, the actions that must be performed, and the order in which the
+                    actions must be performed. The machinery-task topic includes sections for
+                    describing the context, preliminary requirements, expected results, examples,
+                    closing requirements, and other aspects of a task. </p>
+
+          </div>
+
+          <div class="section"><h2 class="title sectiontitle">The structure of the machinery-task topic</h2>
+               
+               <p class="p">Similar to a strict DITA task, the &lt;task&gt; element is the top-level element for
+                    a machinery task topic. The machinery task document type contains a title and a
+                    taskbody with optional alternative titles (titlealts), a short description or
+                    abstract, a prolog,and related-links.</p>
+
+               <p class="p">The &lt;taskbody&gt; element is the main body element inside a machinery-task topic.
+                    A machinery-task body has a very specific structure, with the following elements
+                    in this order: (&lt;prelreqs&gt; or &lt;context&gt; or &lt;section&gt;)*, &lt;steps&gt;,
+                    &lt;result&gt;, &lt;example&gt;, and &lt;closereqs&gt;. Each of the body sections is
+                    optional.</p>
+
+               <p class="p">The machinery task includes two specialized element groups: &lt;prelreqs&gt; and
+                    &lt;closereqs&gt;. All other element groups are the same as the general task
+                    model.</p>
+
+               <dl class="dl">
+                    
+                         <dt class="dt dlterm">&lt;prelreqs&gt;</dt>
+
+                         <dd class="dd">The preliminary-requirements section of a task is used to describe what
+                              the user needs to know or do before starting the immediate task. The
+                              &lt;prelreqs&gt; element is similar to the prerequisites section of the
+                              general task model but contains a more descriptive content model. The
+                              &lt;prelreqs&gt; element contains required conditions, required
+                              personnel, required equipment, supplies, spares, and safety
+                              information. </dd>
+
+                    
+                    
+                         <dt class="dt dlterm">&lt;closereqs&gt;</dt>
+
+                         <dd class="dd">The close-requirements section is used to describe conditions that must
+                              be fulfilled after the successful completion of the current task. It
+                              is often supported by links to the next task or tasks in the
+                              &lt;related-links&gt; section. The &lt;closereqs&gt; element contains
+                              required conditions &lt;reqconds&gt;.</dd>
+
+                    
+               </dl>
+
+               
+          </div>
+
+          <div class="section"><h2 class="title sectiontitle">Modules</h2>
+               
+               <p class="p">The following DITA modules are provided for the machinery task topic.</p>
+
+               <ul class="sl simple">
+                    <li class="sli">machineryTask.dtd (DTD), machineryTaskbodyConstraint.mod</li>
+
+                    <li class="sli"> machineryTask.xsd, machineryTaskbodyConstraintMod.xsd,
+                         machineryTaskbodyConstraintIntMod.xsd (Schema)</li>
+
+               </ul>
+
+          </div>
+
+     </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_technicalContent_InformationTypes.html" title="The Technical Content package contains five topic specializations that support seven document types: concept, reference, general task, strict task, machinery task, glossary entry, and glossary group. These topic types are specialized from the base topic and are designed specifically for information that describes how to use products and processes they are dominated by procedural, task-oriented information. The Technical Content package also includes the map document type.">Technical content: Document and information types</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_task_topic.html" title="The strict task document type supports the development of instructions for the completion of a procedure. The strict task document type is built using the general task information type combined with the Strict Taskbody Constraint. See the reference below to ensure that you have the correct task document type when you update to DITA 1.2.">Task topic (strict task)</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_glossary_topic.html" title="Each glossary entry &lt;glossentry&gt; topic defines a single sense of one term. Besides identifying the term and providing a definition, the topic accommodates basic terminology information, such as part of speech. A glossentry topic may also include acronyms and acronym expansions. Glossentry topics may be assembled by authors or processes to create glossaries for various purposes, including books, websites, or other projects.">Glossary entry topic</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="The conkeyref attribute"/>
+<meta name="abstract" content="The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics. When the DITA content is processed, the key references are resolved using key definitions from DITA maps."/>
+<meta name="description" content="The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics. When the DITA content is processed, the key references are resolved using key definitions from DITA maps."/>
+<meta name="DC.Relation" scheme="URI" content="../common/complexattributedefinitions.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/theconrefendattribute.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/thetypeattribute.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="theconkeyrefattribute"/>
+<meta name="DC.Language" content="en-us"/>
+<title>The conkeyref attribute</title>
+</head>
+<body id="theconkeyrefattribute">
+
+
+<h1 class="title topictitle1">The conkeyref attribute</h1>
+
+  
+<div class="body refbody"><p class="shortdesc">The conkeyref attribute provides an indirect content reference to topic elements, map
+    elements, or elements within maps or topics. When the DITA content is processed, the key
+    references are resolved using key definitions from DITA maps.</p>
+
+    <div class="section">
+      <p class="p">For content references from map elements to map elements or topic elements to topic
+        elements, the value of the <span class="keyword">conkeyref</span> attribute is a key name, where the
+        key must be bound to a map element (for references from map elements) or a topic element
+        (for references from topic elements). For all other elements, the value of the <span class="keyword">conkeyref</span> attribute is a key name, an optional solidus ("/"), and the ID of the
+        target element, where the key name must be bound to the map or topic that contains the topic
+        element.  </p>
+
+      <p class="p">When the key name specified by the conkeyref attribute is not defined and the element also
+        specifies a <span class="keyword">conref</span> attribute, the <span class="keyword">conref</span> attribute is
+        used to determine the content reference relationship. If no <span class="keyword">conref</span>
+        attribute is specified there is no content reference relationship. Processors <span class="keyword">should</span> issue a warning when a <span class="keyword">conkeyref</span> reference cannot be
+        resolved and there is no <span class="keyword">conref</span> attribute to use as a fallback.
+        Processors <span class="keyword">may</span> issue a warning when a <span class="keyword">conkeyref</span> cannot
+        be resolved to an element and a specified <span class="keyword">conref</span> is used as a
+        fallback.</p>
+
+      <p class="p">The conrefend attribute, which defines the end of a conref range, may not include a key.
+        Instead the map or topic element addressed by the key name component of the <span class="keyword">conkeyref</span> is used in place of whatever map or topic element is addressed by the
+        conrefend attribute. See <a class="- topic/xref  ajaxLink" href="theconrefendattribute.html#theconrefendattribute__conkeyref">Using conrefend together with conkeyref</a> for more information
+        and for examples of this behavior.</p>
+
+    </div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/complexattributedefinitions.html" title="Several DITA attributes require more explanation than can fit in a single table cell. Those attributes are collected here.">Complex attribute definitions</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/theconrefendattribute.html" title="The conrefend attribute is used when referencing a range of elements with the conref mechanism. The conref or conkeyref attribute points to the first element in the range, while conrefend points to the last element in the range. Although the start and end elements must be of the same type as the referencing element (or specialized from that element), the intermediary, contiguous nodes in the middle of the range do not have to be the same.">The conrefend attribute</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/thetypeattribute.html" title="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes.">The type attribute</a></div>
+</div>
+</div>
+
+</body>
+</html>

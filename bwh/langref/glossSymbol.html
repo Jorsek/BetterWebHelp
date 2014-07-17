@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="glossSymbol"/>
+<meta name="abstract" content="The &lt;glossSymbol&gt; element identifies a standard image associated with the subject of the &lt;glossterm&gt;."/>
+<meta name="description" content="The &lt;glossSymbol&gt; element identifies a standard image associated with the subject of the &lt;glossterm&gt;."/>
+<meta name="DC.subject" content="glossSymbol"/>
+<meta name="keywords" content="glossSymbol"/>
+<meta name="DC.Relation" scheme="URI" content="../common/glossary2.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/glossSurfaceForm.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/glossSynonym.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="glossSymbol"/>
+<meta name="DC.Language" content="en-us"/>
+<title>glossSymbol</title>
+</head>
+<body id="glossSymbol">
+
+
+<h1 class="title topictitle1">glossSymbol</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;glossSymbol&gt; element identifies a standard image
+associated with the subject of the &lt;glossterm&gt;.</p>
+
+<div class="section" id="glossSymbol__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d229328e33" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d229328e35" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d229328e40" headers="d229328e33" class="stentry"><strong>ditabase, glossary, glossentry, glossgroup</strong></td>
+
+<td valign="top" headers="d229328e35 d229328e40" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="alt.html" title="The alt element provides alternate text for an image. It is equivalent to the alt attribute on the image element; since the attribute is deprecated, use the alt element instead. As an element, alt provides direct text entry within an XML editor and is more easily accessed than an attribute for translation.">alt</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="longdescref.html" title="The &lt;longdescref&gt; element supports a reference to a text description of the graphic or object. This element replaces the deprecated longdescref attribute on image and object elements.">longdescref</a>) <em class="ph i"> (optional) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="glossSymbol__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d229328e73" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d229328e75" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d229328e80" headers="d229328e73" class="stentry"><strong>ditabase, glossary, glossentry, glossgroup</strong></td>
+
+<td valign="top" headers="d229328e75 d229328e80" class="stentry"><a class="- topic/xref  ajaxLink" href="glossBody.html" title="The &lt;glossbody&gt; element is used to provide details about a glossary term (such as part of speech or additional forms of the term).">glossBody</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="glossSymbol__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+topic/image concept/image glossentry/glossSymbol </p>
+</div>
+
+<div class="example" id="glossSymbol__example"><h2 class="title sectiontitle">Example</h2><pre class="pre codeblock">&lt;glossentry id="atlanticpuffin"&gt;
+  &lt;glossterm&gt;Atlantic Puffin&lt;/glossterm&gt;
+  &lt;glossdef&gt;A sea bird that lives in the atlantic&lt;/glossdef&gt;
+  &lt;glossBody&gt;
+    <strong class="ph b">&lt;glossSymbol href="puffinicon.jpg" scope="local"&gt;</strong>
+      &lt;alt&gt;Atlantic puffin icon&lt;/alt&gt;
+    <strong class="ph b">&lt;/glossSymbol&gt;</strong>
+  &lt;/glossBody&gt;
+&lt;/glossentry&gt;</pre>
+</div>
+
+<div class="section" id="glossSymbol__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="glossSymbol__image_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d229328e119" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d229328e122" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d229328e125" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d229328e128" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d229328e131" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">href</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">Provides a reference to the image. See 
+				<a class="- topic/xref  ajaxLink" href="common/thehrefattribute.html" title="The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.">The href attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry">Yes</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">scope</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">The scope attribute identifies the closeness of the
+				relationship between the current document and the target resource. See 
+				<a class="- topic/xref  ajaxLink" href="common/thescopeattribute.html" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The scope attribute</a> for more information on
+				values.</td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry">(local | peer | external |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">longdescref 
+				<em class="ph i">(deprecated)</em></td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">A reference to a textual description of the graphic or
+				object. This attribute supports creating accessible content. See 
+				<a class="- topic/xref  ajaxLink" href="common/thehrefattribute.html" title="The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.">The href attribute</a> for detailed information
+				on supported values and processing implications. 
+				<span class="ph">For examples of how this attribute is used in output, see this
+				  this topic on 
+				  <a class="xref" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#long-descriptions" target="_blank">long descriptions</a>.</span> NOTE: This attribute is
+				deprecated in favor of the 
+				<a class="- topic/xref  ajaxLink" href="longdescref.html" title="The &lt;longdescref&gt; element supports a reference to a text description of the graphic or object. This element replaces the deprecated longdescref attribute on image and object elements.">longdescref</a>
+				subelement to this element.</td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">height</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">Indicates the vertical dimension for the resulting image
+				display. If necessary, the image is scaled to the specified size. 
+				<span class="ph" id="glossSymbol__d8034e1941">The value of this attribute is a real
+				  number optionally followed by a unit of measure from the set of pc, pt, px, in,
+				  cm, mm, em (picas, points, pixels, inches, centimeters, millimeters, and ems
+				  respectively). The default unit is px (pixels). Possible values include: "5",
+				  "5in", and "10.5cm".</span> If a height value is specified and no width value is
+				specified, the width will be scaled by the same factor as the height. 
+				<span class="ph" id="glossSymbol__d8034e1944">If both a height value and
+				  width value are specified, some implementations may not be able to scale the
+				  two directions by a different factor and may therefore ignore one of the two
+				  values.</span></td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry">NMTOKEN</td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">width</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">Indicates the horizontal dimension for the resulting image
+				display. If necessary, the image is scaled to the specified size. 
+				<span class="ph">The value of this attribute is a real
+				  number optionally followed by a unit of measure from the set of pc, pt, px, in,
+				  cm, mm, em (picas, points, pixels, inches, centimeters, millimeters, and ems
+				  respectively). The default unit is px (pixels). Possible values include: "5",
+				  "5in", and "10.5cm".</span> If a width
+				value is specified and no height value is specified, the height will be scaled
+				by the same factor as the width. 
+				<span class="ph">If both a height value and
+				  width value are specified, some implementations may not be able to scale the
+				  two directions by a different factor and may therefore ignore one of the two
+				  values.</span></td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry">NMTOKEN</td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">align</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">Controls the horizontal alignment of an image when placement
+				is specified as "break." Common values include 
+				<span class="keyword">left</span>, 
+				<span class="keyword">right</span>, and 
+				<span class="keyword">center</span>.</td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">scale</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">Specifies a percentage by which to scale the image in the
+				absence of any specified image height or width; a value of 100 implies that the
+				image should be presented at its intrinsic size. If a value has been specified
+				for this image's height or width attribute (or both), the scale attribute is
+				ignored. 
+				<p class="p">It is an error if the value of this attribute is not an unsigned
+				  integer. In this case, the implementation may (but need not) give an error
+				  message and may (but need not) recover by ignoring this attribute.
+				</p>
+</td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry">NMTOKEN</td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">scalefit</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">Allow an image to be scaled to fit within available space.
+				If, for a given image, any one of height, width, or scale is specified, those
+				attributes determine the graphic size, and any setting of scalefit is ignored.
+				If none of those attributes are specified and scalefit="yes", then the image is
+				scaled (the same factor in both dimensions) so that the graphic will just fit
+				within the available height or width (whichever is more constraining). 
+				<p class="p">The available width would be the prevailing column (or table
+				  cell) width--that is, the width a paragraph of text would have if the graphic
+				  were a paragraph instead. The available height is implementation dependent, but
+				  if feasible, it is suggested to be the page (or table cell) height or some
+				  other reasonable value.
+				</p>
+</td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry">(yes | no | 
+				<a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">-dita-use-​conref-​target</a>)</td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">placement</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">Indicates whether an image should be displayed inline or
+				separated from the surrounding text. The processing default is inline.
+				Allowable values are: inline or break. See 
+				<a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more information
+				on the -dita-use-​conref-​target value.</td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry">(inline | break | -dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry">inline</td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d229328e119" class="stentry">class, outputclass, keyref</td>
+ 
+			 <td valign="top" headers="d229328e122" class="stentry"><span class="ph">Keyref provides a redirectable
+				  reference based on a key defined within a map. See 
+				  <a class="- topic/xref  ajaxLink" href="common/thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The keyref attribute</a> for information on
+				  using this attribute.</span> Class and
+				outputclass are described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d229328e125" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d229328e128" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d229328e131" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/glossary2.html" title="Use the glossentry topic type to define glossary terms. Each glossentry topic should define a single sense of a term.">Glossentry elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/glossSurfaceForm.html" title="The &lt;glossSurfaceForm&gt; element specifies an unambiguous presentation of the &lt;glossterm&gt; that may combine multiple forms. The surface form is suitable to introduce the term in new contexts.">glossSurfaceForm</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/glossSynonym.html" title="Provides a term that is a synonym of the primary value in the &lt;glossterm&gt; element.">glossSynonym</a></div>
+</div>
+</div>
+
+</body>
+</html>

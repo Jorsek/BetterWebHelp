@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="global-atts attribute group"/>
+<meta name="abstract" content="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view."/>
+<meta name="description" content="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view."/>
+<meta name="DC.subject" content="%global-atts, Commonly referenced attribute descriptions, global-atts"/>
+<meta name="keywords" content="%global-atts, Commonly referenced attribute descriptions, global-atts"/>
+<meta name="DC.Relation" scheme="URI" content="../common/comrfet.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/display-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/univ-atts.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="global-atts"/>
+<meta name="DC.Language" content="en-us"/>
+<title>global-atts attribute group</title>
+</head>
+<body id="global-atts">
+
+
+ <h1 class="title topictitle1">global-atts attribute group</h1>
+
+ 
+ 
+ <div class="body refbody"><p class="shortdesc">The "global-atts" attribute group includes a set of debugging attributes that are
+  normally hidden from authoring view.</p>
+
+  <div class="section">
+   <p class="p">These attributes are intended to store debugging information during intermediate processing.
+    One possible implementation is to use <span class="ph filepath">xtrf</span> (xml-trace-filename) to store
+    the original source file name through intermediate processing steps, and use
+     <span class="ph filepath">xtrc</span> ( xml-trace-counter) to store an element counter for repositioning
+    authoring tools at the originating element location. If values are assigned in this way in the
+    first stage of a processing stream, values in these attributes can then be used for error
+    recovery.</p>
+
+   
+  </div>
+
+  <div class="section">
+   <p class="p">These attributes are normally hidden from authors and exposed only to processing tools or
+    editor macros. Values used in these attributes may be implementation-dependent.</p>
+
+  </div>
+
+  
+  
+  <div class="section"><h2 class="title sectiontitle">Attributes</h2>
+   
+   <table cellpadding="4" cellspacing="0" summary="" id="global-atts__global-atts_attr" border="1" class="simpletable"><tr class="sthead">
+     <th valign="bottom" align="left" id="d36740e79" class="stentry" width="25%">Name</th>
+
+     <th valign="bottom" align="left" id="d36740e82" class="stentry" width="37.5%">Description</th>
+
+     <th valign="bottom" align="left" id="d36740e85" class="stentry" width="12.5%">Data Type</th>
+
+     <th valign="bottom" align="left" id="d36740e88" class="stentry" width="12.5%">Default Value</th>
+
+     <th valign="bottom" align="left" id="d36740e91" class="stentry" width="12.5%">Required?</th>
+
+    </tr>
+<tr class="strow">
+     <td valign="top" headers="d36740e79" class="stentry">xtrf</td>
+
+     <td valign="top" headers="d36740e82" class="stentry">xml-trace-filename, the original filename</td>
+
+     <td valign="top" headers="d36740e85" class="stentry">CDATA</td>
+
+     <td valign="top" headers="d36740e88" class="stentry">#IMPLIED</td>
+
+     <td valign="top" headers="d36740e91" class="stentry">No</td>
+
+    </tr>
+<tr class="strow">
+     <td valign="top" headers="d36740e79" class="stentry">xtrc</td>
+
+     <td valign="top" headers="d36740e82" class="stentry">xml-trace-counter, an element counter for repositioning editors at a known edit
+      location</td>
+
+     <td valign="top" headers="d36740e85" class="stentry">CDATA</td>
+
+     <td valign="top" headers="d36740e88" class="stentry">#IMPLIED</td>
+
+     <td valign="top" headers="d36740e91" class="stentry">No</td>
+
+    </tr>
+</table>
+
+  </div>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/comrfet.html" title="Common attribute groups, such as the selection and property attributes of most DITA elements, are described here as sets in order to reduce unnecessary duplication of common information.">Commonly referenced attribute groups</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/display-atts.html" title="The &#34;display-atts&#34; attribute group includes attributes whose values may be used for affecting the display of a topic or element.">display-atts attribute group</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></div>
+</div>
+</div>
+
+</body>
+</html>

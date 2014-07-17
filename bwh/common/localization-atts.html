@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="localization-atts attribute group"/>
+<meta name="abstract" content="The &#34;localization-atts&#34; attribute group defines a set of common attributes related to translation and localization. These attributes are available on most DITA elements."/>
+<meta name="description" content="The &#34;localization-atts&#34; attribute group defines a set of common attributes related to translation and localization. These attributes are available on most DITA elements."/>
+<meta name="DC.subject" content="%localization-atts, Commonly referenced attribute descriptions, localization-atts"/>
+<meta name="keywords" content="%localization-atts, Commonly referenced attribute descriptions, localization-atts"/>
+<meta name="DC.Relation" scheme="URI" content="../common/comrfet.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/select-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/relational-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/translation.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="localization-atts"/>
+<meta name="DC.Language" content="en-us"/>
+<title>localization-atts attribute group</title>
+</head>
+<body id="localization-atts">
+
+
+<h1 class="title topictitle1">localization-atts attribute group</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The "localization-atts" attribute group defines a set of
+common attributes related to translation and localization. These attributes
+are available on most DITA elements.</p>
+
+<div class="section"/>
+
+<div class="section"><h2 class="title sectiontitle">Attributes</h2>              <table cellpadding="4" cellspacing="0" summary="" id="localization-atts__loc_atts" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d42088e59" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d42088e62" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d42088e65" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d42088e68" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d42088e71" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d42088e59" class="stentry">translate</td>
+ 
+			 <td valign="top" headers="d42088e62" class="stentry">Indicates whether the content of the element should be
+				translated or not. The DITA architectural specification contains a list of each
+				OASIS DITA element and its common processing default for the translate
+				value.</td>
+ 
+			 <td valign="top" headers="d42088e65" class="stentry">yes | no | 
+				<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">-dita-use-​conref-​target</a></td>
+ 
+			 <td valign="top" headers="d42088e68" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d42088e71" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d42088e59" class="stentry">xml:lang</td>
+ 
+			 <td valign="top" headers="d42088e62" class="stentry">Specifies the language of the element content. 
+				The xml:lang attribute and its values are described in the XML
+				Recommendation at 
+				<a class="xref" href="http://www.w3.org/TR/REC-xml/#sec-lang-tag" target="_blank">http://www.w3.org/TR/REC-xml/#sec-lang-tag</a>.
+				
+</td>
+ 
+			 <td valign="top" headers="d42088e65" class="stentry">language token or the null string</td>
+ 
+			 <td valign="top" headers="d42088e68" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d42088e71" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d42088e59" class="stentry">dir</td>
+ 
+			 <td valign="top" headers="d42088e62" class="stentry">Specifies the directionality of text:
+				left-to-right (ltr, the processing default) or right-to-left (rtl). The value
+				lro indicates an override of normal bidi text presentation, forcing the element
+				into left-to-right mode; rlo overrides normal rules to force right-to-left
+				presentation. See 
+				<a class="- topic/xref  ajaxLink" href="archSpec/diratt.html" title="The dir attribute provides direction about how processors should render bidirectional text. Languages such as Arabic, Hebrew, Farsi, Urdu, and Yiddish have text written from right to left. Numerics and embedded sections of Western language text, however, are written from left to right. Some multilingual documents also contain a mixture of text segments in two directions. This attribute specifies how such text should be rendered to a reader.">The dir attribute</a> for more information on the
+				dir attribute.</td>
+ 
+			 <td valign="top" headers="d42088e65" class="stentry">(ltr | rtl | lro | rlo | 
+				<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">-dita-use-​conref-​target</a>)</td>
+ 
+			 <td valign="top" headers="d42088e68" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d42088e71" class="stentry">No</td>
+ 
+		  </tr>
+</table>
+     </div>
+
+<div class="example">The translate, xml:lang, and dir attributes identify language-specific
+words or phrases for specific processing (or non-processing, in the
+case of translate="no").<pre class="pre codeblock">&lt;p&gt;The cordial response to the question is 
+&lt;q translate="no" xml:lang="de-de" dir="ltr"&gt;nein.&lt;/q&gt;&lt;/p&gt;</pre>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/comrfet.html" title="Common attribute groups, such as the selection and property attributes of most DITA elements, are described here as sets in order to reduce unnecessary duplication of common information.">Commonly referenced attribute groups</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/select-atts.html" title="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations.">select-atts attribute group</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/relational-atts.html" title="The &#34;relational-atts&#34; attribute group includes attributes whose values may be used for representing navigational relationships. These attributes occur only on elements that represent relationships among DITA elements or between DITA elements and non-DITA resources.">relational-atts attribute group</a></div>
+</div>
+<div class="relinfo relconcepts"><strong>Related concepts</strong><br/>
+<div><a class="- topic/link  ajaxLink" href="archSpec/translation.html" title="DITA has features that facilitate preparing content for translation and working with multilingual content, including the @xml:lang attribute, the @dir attribute, and the @translate attribute. In addition, the &lt;index-sort-as&gt; element provides support for index sorting in languages in which the index sort order must be modified by the author or translator.">Translation and localization</a></div>
+</div>
+</div>
+
+</body>
+</html>

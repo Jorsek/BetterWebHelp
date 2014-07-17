@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="lcWorkEnv"/>
+<meta name="abstract" content="The &lt;lcWorkEnv&gt; describes the working conditions and contexts in which the training will be applied."/>
+<meta name="description" content="The &lt;lcWorkEnv&gt; describes the working conditions and contexts in which the training will be applied."/>
+<meta name="DC.subject" content="lcWorkEnv, learning and training elements"/>
+<meta name="keywords" content="lcWorkEnv, learning and training elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/learning_training_elements_topics_other.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcW3C.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcWorkEnvDescription.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="lcWorkEnv"/>
+<meta name="DC.Language" content="en-us"/>
+<title>lcWorkEnv</title>
+</head>
+<body id="lcWorkEnv">
+
+
+	<h1 class="title topictitle1">lcWorkEnv</h1>
+
+	
+	
+	<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">lcWorkEnv</span>&gt; describes the working conditions and contexts in which the training will be applied.</p>
+
+		<div class="section" id="lcWorkEnv__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d355179e42" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d355179e44" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d355179e49" headers="d355179e42" class="stentry"><strong>learningPlan</strong></td>
+
+<td valign="top" headers="d355179e44 d355179e49" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcWorkEnvDescription.html" title="The &lt;lcWorkEnvDescription&gt; provides the general working environment in which the training will be applied.">lcWorkEnvDescription</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcPlanResources.html" title="The &lt;lcPlanResources&gt; describes resource needs.">lcPlanResources</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="lcProcesses.html" title="The &lt;lcProcesses&gt; describes processes learners routinely follow.">lcProcesses</a>) <em class="ph i"> (optional) </em>) </td>
+</tr>
+</table>
+</div>
+
+		<div class="section" id="lcWorkEnv__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d355179e116" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d355179e118" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d355179e123" headers="d355179e116" class="stentry"><strong>learningPlan</strong></td>
+
+<td valign="top" headers="d355179e118 d355179e123" class="stentry"><a class="- topic/xref  ajaxLink" href="lcNeedsAnalysis.html" title="The &lt;lcNeedsAnalysis&gt; describes the training requirement and identifies the need to develop or revise content. These include periodic training gap analyses, changes to operational or maintenance requirements, and changes to equipment or systems.">lcNeedsAnalysis</a></td>
+</tr>
+</table>
+</div>
+
+		<div class="section" id="lcWorkEnv__inheritance"><h2 class="title sectiontitle">Inheritance</h2>
+			<p class="p">- topic/fig learningBase/fig learningPlan/lcWorkEnv </p>
+
+</div>
+
+
+<div class="example" id="lcWorkEnv__example"><h2 class="title sectiontitle">Example</h2>
+
+<pre class="pre codeblock">
+...
+      &lt;lcWorkEnv&gt;
+        &lt;title&gt;Work Environment&lt;/title&gt;
+        &lt;lcWorkEnvDescription&gt;All learners work in a typical office environment.&lt;/lcWorkEnvDescription&gt;
+        &lt;lcPlanResources&gt;You need lots of pencils.&lt;/lcPlanResources&gt;
+        &lt;lcProcesses&gt;Follow these processes:
+          &lt;ul&gt;
+            &lt;li&gt;Fill our the pencil request form.&lt;/li&gt;
+            &lt;li&gt;Sharpen the pencils as soon as they arrive, to keep them fresh.&lt;/li&gt;
+          &lt;ul&gt;
+        &lt;/lcProcesses&gt;
+      &lt;/lcWorkEnv&gt;
+...
+</pre>
+
+</div>
+
+<div class="section" id="lcWorkEnv__attributes"><h2 class="title sectiontitle">Attributes</h2>
+ 
+<table cellpadding="4" cellspacing="0" summary="" id="lcWorkEnv__lcWorkEnv_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d355179e163" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d355179e166" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d355179e169" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d355179e172" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d355179e175" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d355179e163" class="stentry">display-atts attribute group (scale, frame,
+				expanse)</td>
+ 
+			 <td valign="top" headers="d355179e166" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/display-atts.html" title="The &#34;display-atts&#34; attribute group includes attributes whose values may be used for affecting the display of a topic or element.">display-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d355179e169" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d355179e172" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d355179e175" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d355179e163" class="stentry">spectitle</td>
+ 
+			 <td valign="top" headers="d355179e166" class="stentry">The specialized title attribute allows architects of
+				specialized types to define a fixed or default title for a specialized element.
+				Not intended for direct use by authors.</td>
+ 
+			 <td valign="top" headers="d355179e169" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d355179e172" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d355179e175" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d355179e163" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d355179e166" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d355179e169" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d355179e172" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d355179e175" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d355179e163" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d355179e166" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d355179e169" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d355179e172" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d355179e175" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d355179e163" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d355179e166" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d355179e169" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d355179e172" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d355179e175" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+ 
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/learning_training_elements_topics_other.html" title="The learning and training content elements provide specialized content for learning topics.">Common learning content elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcW3C.html" title="The &lt;lcW3C&gt; provides requirements for use of world wide web consortium standards.">lcW3C</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcWorkEnvDescription.html" title="The &lt;lcWorkEnvDescription&gt; provides the general working environment in which the training will be applied.">lcWorkEnvDescription</a></div>
+</div>
+</div>
+
+</body>
+</html>

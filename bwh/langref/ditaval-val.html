@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="val"/>
+<meta name="abstract" content="&lt;val&gt; is the root element of a DITAVAL file."/>
+<meta name="description" content="&lt;val&gt; is the root element of a DITAVAL file."/>
+<meta name="DC.subject" content="DITAVAL elements, val (root element)"/>
+<meta name="keywords" content="DITAVAL elements, val (root element)"/>
+<meta name="DC.Relation" scheme="URI" content="../common/about-ditaval.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/ditaval-style-conflict.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ditaval-val"/>
+<meta name="DC.Language" content="en-us"/>
+<title>val</title>
+</head>
+<body id="ditaval-val">
+
+
+<h1 class="title topictitle1">val</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">&lt;val&gt; is the root element of a DITAVAL file.</p>
+
+<div class="section"><p class="p">For information about processing DITAVAL files,
+including how to filter or flag elements with multiple property attributes
+or multiple properties within a single attribute, see <a class="- topic/xref  ajaxLink" href="archSpec/condproc.html" title="Attribute-based profiling, also known as conditional processing or applicability, is the use of classifying metadata that enables the filtering, flagging, searching, indexing, and other processing based on the association of an element with one or more values in a specific classification domain.">Conditional processing (profiling)</a>. </p>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Contains</h2><p class="p"><a class="- topic/xref  ajaxLink" href="ditaval-style-conflict.html" title="The style-conflict element declares behavior to be used when one or more flagging methods collide on a single content element.">style-conflict</a> (<em class="ph i">optional</em>)
+then (<a class="- topic/xref  ajaxLink" href="ditaval-prop.html" title="Identifies an attribute, and usually values in the attribute, to take an action on. The attribute must be a conditional processing attribute: platform, product, audience, props. and otheprops; or a specialization of the props attribute.">prop</a> <em class="ph i">or</em> <a class="- topic/xref  ajaxLink" href="ditaval-revprop.html" title="Identifies a value in the rev attribute that should be flagged in some manner. Unlike the other conditional processing attributes, which may be used for both filtering and flagging, the rev attribute may only be used for flagging.">revprop</a>) (<em class="ph i">any number</em>)</p>
+</div>
+
+<div class="example" id="ditaval-val__example"><h2 class="title sectiontitle">Example</h2><div class="fig fignone"><span class="figcap">Figure 1. Sample
+DITAVAL file</span>
+<pre class="pre codeblock">&lt;val&gt;
+   &lt;style-conflict backcolor="red"/&gt;
+   &lt;prop action="include" att="audience" val="everybody"/&gt;
+   &lt;prop action="flag" att="product" val="YourProd" backcolor="purple"/&gt;
+   &lt;prop action="flag" att="product" backcolor="blue"
+         color="yellow" style="underline" val="MyProd"&gt;
+      &lt;startflag imageref="startflag.jpg"&gt;
+        &lt;alt-text&gt;This is the start of my product info&lt;/alt-text&gt;
+      &lt;/startflag&gt;
+      &lt;endflag imageref="endflag.jpg"&gt;
+        &lt;alt-text&gt;This is the end of my product info&lt;/alt-text&gt;
+      &lt;/endflag&gt;
+   &lt;/prop&gt;
+   &lt;revprop action="flag" val="1.2"/&gt;
+&lt;/val&gt;</pre>
+
+<div class="p">This sample DITAVAL file performs the following actions:<ul class="ul">
+                  <li class="li">Elements with audience="everybody" are included without change.</li>
+
+                  <li class="li">Elements with product="YourProd" get a background color of purple.</li>
+
+                  <li class="li">Elements with product="MyProd" get the following actions:<ul class="ul">
+                        <li class="li">The image startflag.jpg is placed at the start of the element.</li>
+
+                        <li class="li">The image endflag.jpg is placed at the end of the element.</li>
+
+                        <li class="li">The element gets a background color of blue.</li>
+
+                        <li class="li">The text in the element appears in yellow, and is underlined.</li>
+
+                     </ul>
+</li>
+
+                  <li class="li">Elements marked with are flagged with the default revision flags,
+                     which are implementation dependent.</li>
+
+                  <li class="li">When there are conflicts - such as if an element is marked with
+                     product="MyProd YourProd" - it will be flagged with a background color of
+                     red.</li>
+
+               </ul>
+</div>
+
+</div>
+<div class="fig fignone"><span class="figcap">Figure 2. DITAVAL file that overrides the default "include"
+action</span>
+<pre class="pre codeblock">&lt;val&gt;
+   &lt;prop action="exclude"/&gt;
+   &lt;prop action="include" att="audience" val="everybody"/&gt;
+   &lt;prop action="include" att="audience" val="novice"/&gt;
+   &lt;prop action="include" att="product" val="productA"/&gt;
+   &lt;prop action="include" att="product" val="productB"/&gt;
+&lt;/val&gt;</pre>
+
+<div class="p">This simple DITAVAL file ditaval performs the following actions:<ul class="ul">
+<li class="li">The first &lt;prop&gt; element does not specify an attribute, which
+sets a default action of "exclude" for every prop value. This means
+that, by default, any property value not otherwise defined in this
+file evaluates to "exclude". Note that this same behavior can be limited
+to a single attribute; the following &lt;prop&gt; element sets a default
+action of "exclude" for all properties specified on the platform attribute: <samp class="ph codeph">&lt;prop
+action="exclude" att="otherprops"/&gt;</samp></li>
+
+<li class="li">The second and third &lt;prop&gt; elements set an action of "include"
+for two values on the audience attribute. All other values on the
+audience attribute still evaluate to "exclude".</li>
+
+<li class="li">The fourth and fifth &lt;prop&gt; elements set an action of "include"
+for two values on the product attribute. All other values on the product
+attribute still evaluate to "exclude".</li>
+
+</ul>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/about-ditaval.html" title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval.">DITAVAL elements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/ditaval-style-conflict.html" title="The style-conflict element declares behavior to be used when one or more flagging methods collide on a single content element.">style-conflict</a></div>
+</div>
+</div>
+
+</body>
+</html>

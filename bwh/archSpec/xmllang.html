@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="The @xml:lang attribute"/>
+<meta name="abstract" content="The @xml:lang attribute specifies the language (and optionally the locale) of the element content. The @xml:lang attribute applies to all attributes and content of the element where it is specified, unless it is overridden with @xml:lang on another element within that content. If the @xml:lang attribute on the document (outermost) element of a map or of a top-level topic has no value, the processor should assume a default value. The default value of the processor may be either fixed, configurable, or derived from the content itself, such as the @xml:lang attribute on the primary map file. As the default value of a processor may be fixed, it is strongly recommended that the @xml:lang attribute be set on each map and top-level topic."/>
+<meta name="description" content="The @xml:lang attribute specifies the language (and optionally the locale) of the element content. The @xml:lang attribute applies to all attributes and content of the element where it is specified, unless it is overridden with @xml:lang on another element within that content. If the @xml:lang attribute on the document (outermost) element of a map or of a top-level topic has no value, the processor should assume a default value. The default value of the processor may be either fixed, configurable, or derived from the content itself, such as the @xml:lang attribute on the primary map file. As the default value of a processor may be fixed, it is strongly recommended that the @xml:lang attribute be set on each map and top-level topic."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/translation.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/diratt.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="xmllang"/>
+<meta name="DC.Language" content="en-US"/>
+<title>The @xml:lang attribute</title>
+</head>
+<body id="xmllang">
+
+ 
+  <h1 class="title topictitle1">The @xml:lang attribute</h1>
+ 
+   
+  <div class="body refbody"><p class="shortdesc"> The @xml:lang attribute specifies the
+	 language (and optionally the locale) of the element content. The @xml:lang
+	 attribute applies to all attributes and content of the element where it is
+	 specified, unless it is overridden with @xml:lang on another element within
+	 that content. If the @xml:lang attribute on the document (outermost) element of
+	 a map or of a top-level topic has no value, the processor should assume a
+	 default value. The default value of the processor may be either fixed,
+	 configurable, or derived from the content itself, such as the @xml:lang
+	 attribute on the primary map file. As the default value of a processor may be
+	 fixed, it is strongly recommended that the @xml:lang attribute be set on each
+	 map and top-level topic. 
+  </p>
+ 
+	 <div class="section" id="xmllang__section_2D173063C192470C84EFFF72A56A54D7"> 
+		<p class="p">The @xml:lang attribute is described in the XML Recommendation at 
+		  <a class="xref" href="http://www.w3.org/TR/REC-xml/#sec-lang-tag" target="_blank">http://www.w3.org/TR/REC-xml/#sec-lang-tag</a>. Note that the recommended style for the @xml:lang attribute
+		  is lower case language and uppercase locale (if used), separated by a hyphen,
+		  i.e., en-US or sp-SP. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="xmllang__section_62864B54A3A24CA893BC577EDECFEF67"><h2 class="title sectiontitle">Recommended use in topics</h2> 
+		 
+		<p class="p">For a DITA document that contains a single
+		  language, the highest level element that contains content should set the
+		  @xml:lang attribute to the language (and optionally the locale) that applies to
+		  the document. 
+		</p>
+ 
+		<p class="p">When a DITA document contains more than one language, the highest
+		  level element should set the @xml:lang attribute to the primary language (and
+		  optionally the locale) that applies to the document. If part of a document is
+		  written in a different language, authors should ensure that the part is
+		  enclosed in an element with the @xml:lang attribute set appropriately.
+		  Processors should style each element in a way that is appropriate for its
+		  language as identified by the @xml:lang attribute. This method of overriding
+		  the default document language applies to both block and inline elements that
+		  use the alternate language. 
+		</p>
+ 
+		<p class="p">The @xml:lang attribute should be explicitly set
+		  on the root element of each map and topic. When the @xml:lang attribute is
+		  specified for a document, DITA processors must use the specified value to
+		  determine the language of the document. It is strongly recommended to author
+		  the @xml:lang value in the source language document, in order to facilitate the
+		  translation process, where translation tools (or translators) simply change the
+		  existing @xml:lang attribute value to the value of the target language. 
+		</p>
+ 
+		<p class="p"> Note: Some translation tools support changing
+		  the value of an existing @xml:lang attribute, but do not support adding new
+		  markup to the document being translated. Therefore, if the author of the source
+		  language content does not set the @xml:lang attribute, it may not be possible
+		  (or may be difficult) for the translator to add the @xml:lang attribute to the
+		  translated document. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="xmllang__section_8580BE0C4D9A475E823E300EFE709BAA"><h2 class="title sectiontitle">Use in maps</h2> 
+		 
+		<p class="p">The @xml:lang attribute can be specified on the &lt;map&gt; element.
+		  The @xml:lang attribute cascades within the map the same way that it cascades
+		  within a topic. The @xml:lang value does not cascade from one map to another or
+		  from a map to a topic, and an @xml:lang value specified in a map does not
+		  override @xml:lang values specified in other maps or in topics. 
+		</p>
+ 
+		<p class="p">The primary language for the map should be set
+		  on the &lt;map&gt; element. The specified language should remain in effect for
+		  all child &lt;topicref&gt; elements, unless a child specifies a different value
+		  for the @xml:lang attribute. 
+		</p>
+ 
+		<p class="p">When no @xml:lang value is supplied locally or on an ancestor, a
+		  processor determined default value is assumed. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="xmllang__section_1B41A0B49681492BB9FA0F98C88557D9"><h2 class="title sectiontitle">Use with the @conref or @conkeyref attribute</h2> 
+		 
+		<p class="p">When a @conref or @conkeyref attribute is used to include content from
+		  one element into another, the processor must use the effective value of the
+		  @xml:lang attribute from the referenced element, that is, the element that
+		  contains the content. If the reference element does not have an explicit value
+		  for the @xml:lang attribute, the effective value for its @xml:lang attribute is
+		  determined by using the standard @xml:lang inheritance from the referenced
+		  source.. If this action results in no effective value for @xml:lang, the
+		  processor should default to using the same value that is used for topics that
+		  do not set the @xml:lang attribute. 
+		</p>
+ 
+		<p class="p">This behavior is shown in the following example, where the value of
+		  the @xml:lang attribute of the included note is obtained from its parent
+		  &lt;section&gt; element (id="qqwwee") that sets the @xml:lang attribute. In
+		  this example, the @xml:lang value "fr" is applied to the note with the id
+		  attribute "mynote". 
+		</p>
+ 
+		<pre class="pre codeblock">&lt;-- ****************installingAcme.dita********************* --&gt;
+                
+&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic <strong class="ph b">xml:lang="en"</strong> id="install_acme"&gt;
+ &lt;title&gt;Installing Acme&lt;/title&gt;
+ &lt;shortdesc&gt;Step-by-step details about how to install Acme.&lt;/shortdesc&gt;
+ &lt;body&gt;
+  &lt;section&gt;
+   &lt;title&gt;Before you begin&lt;/title&gt;
+   &lt;p&gt;Special notes when installing Acme in France:&lt;/p&gt;
+   &lt;note conref="warningsAcme.dita#topic_warnings/frenchwarnings"&gt;&lt;/note&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/topic&gt;
+&lt;/dita&gt;
+*******************************************
+
+&lt;-- **************** warningsAcme.dita ********************* --&gt;
+&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="topic_warnings"&gt;
+ &lt;title&gt;Warnings&lt;/title&gt;
+ &lt;body&gt;
+  &lt;section id="qqwwee" <strong class="ph b">xml:lang="fr"</strong>&gt;
+   &lt;title&gt;French warnings&lt;/title&gt;
+   &lt;p&gt;These are our French warnings.&lt;/p&gt;
+   &lt;note id="frenchwarnings"&gt;Note in French!&lt;/note&gt;
+  &lt;/section&gt;
+  &lt;section <strong class="ph b">xml:lang="en"</strong>&gt;
+   &lt;title&gt;English warnings&lt;/title&gt;
+   &lt;p&gt;These are our English warnings.&lt;/p&gt;
+   &lt;note id="englishwarnings"&gt;Note in English!&lt;/note&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/topic&gt;
+*************************************
+</pre>
+ 
+	 </div>
+ 
+  </div>
+ 
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/translation.html" title="DITA has features that facilitate preparing content for translation and working with multilingual content, including the @xml:lang attribute, the @dir attribute, and the @translate attribute. In addition, the &lt;index-sort-as&gt; element provides support for index sorting in languages in which the index sort order must be modified by the author or translator.">Translation and localization</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/diratt.html" title="The dir attribute provides direction about how processors should render bidirectional text. Languages such as Arabic, Hebrew, Farsi, Urdu, and Yiddish have text written from right to left. Numerics and embedded sections of Western language text, however, are written from left to right. Some multilingual documents also contain a mixture of text segments in two directions. This attribute specifies how such text should be rendered to a reader.">The dir attribute</a></div>
+</div>
+</div>
+
+</body>
+</html>

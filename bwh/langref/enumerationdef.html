@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="enumerationdef"/>
+<meta name="abstract" content="The &lt;enumerationdef&gt; element identifies one attribute and one or more categories that contain the controlled values for the enumeration. The type attribute has a default value of keys."/>
+<meta name="description" content="The &lt;enumerationdef&gt; element identifies one attribute and one or more categories that contain the controlled values for the enumeration. The type attribute has a default value of keys."/>
+<meta name="DC.subject" content="enumerationdef"/>
+<meta name="keywords" content="enumerationdef"/>
+<meta name="DC.Relation" scheme="URI" content="../common/subjectScheme.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/hasRelated.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/elementdef.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="enumerationdef"/>
+<meta name="DC.Language" content="en-us"/>
+<title>enumerationdef</title>
+</head>
+<body id="enumerationdef">
+
+
+<h1 class="title topictitle1">enumerationdef</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">enumerationdef</span>&gt; element identifies
+one attribute and one or more categories that contain the controlled
+values for the enumeration. The type attribute has a default value
+of keys. </p>
+
+<div class="section"><p class="p">When the &lt;enumerationdef&gt; element contains an &lt;elementdef&gt;
+element, the defined enumeration applies to that attribute only on
+the element specified by &lt;elementdef&gt;. The enumeration does not
+apply to the same attribute on other elements. For example, when the
+element contains both <samp class="ph codeph">&lt;elementdef name="lomDifficulty"/&gt;</samp> and <samp class="ph codeph">&lt;attributedef
+name="value"/&gt;</samp>, this means that the only the value attribute
+on the &lt;lomDifficulty&gt; element is limited to the specified enumeration.
+The value attribute on other elements is not affected.</p>
+<p class="p">When
+the &lt;enumerationdef&gt; element does not contain an &lt;elementdef&gt;
+element, the attribute specified is limited to the enumeration on
+all elements. For example, when &lt;enumerationdef&gt; contains <samp class="ph codeph">&lt;attributedef
+name="value"/&gt;</samp> but does not contain &lt;elementdef&gt;, the
+value attribute is limited to the specified enumeration for all elements.</p>
+<div class="note note"><span class="notetitle">Note:</span> An
+enumeration can specify an empty category without children. In this
+case, no value is valid for the attribute.</div>
+<div class="note note"><span class="notetitle">Note:</span> Whether an
+attribute takes a single value or multiple values from the enumeration
+is part of the structural definition of the element controlled by
+the DTD or XML Schema. That is, an attribute which is defined as CDATA
+may take multiple values, while an attribute defined as NMTOKEN may
+take only one.</div>
+</div>
+
+<div class="section" id="enumerationdef__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d192682e54" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d192682e56" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d192682e61" headers="d192682e54" class="stentry"><strong>subjectScheme</strong></td>
+
+<td valign="top" headers="d192682e56 d192682e61" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="elementdef.html" title="The &lt;elementdef&gt; element identifies an element on which an attribute is enumerated. When the &lt;elementdef&gt; is left out of an &lt;enumerationdef&gt; element, the enumeration is bound to the attribute in all elements.">elementdef</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="attributedef.html" title="The &lt;attributedef&gt; element specifies the attribute to which a set of controlled values from a subject scheme map are to be applied.">attributedef</a>)  then  (<a class="- topic/xref  ajaxLink" href="subjectdef.html" title="The &lt;subjectdef&gt; element defines a subject (also known as a controlled value) within a scheme. To make the subject easy to identify, a &lt;subjectdef&gt; may use a keys attribute to assign a key to the subject. A subject with a key can be identified elsewhere with a keyref. The &lt;subjectdef&gt; may use a navtitle element or attribute to supply a label for the subject. The &lt;subjectdef&gt; may also refer to a topic that captures the consensus definition for the subject.">subjectdef</a>) <em class="ph i"> (one or more) </em> then  (<a class="- topic/xref  ajaxLink" href="defaultSubject.html" title="The &lt;defaultSubject&gt; element is used within an attribute enumeration to set the default value for that attribute in cases where no value is specified on the attribute. The default subject must be one of the controlled values within the categories specified for the attribute.">defaultSubject</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a>) <em class="ph i"> (any number) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="enumerationdef__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d192682e169" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d192682e171" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d192682e176" headers="d192682e169" class="stentry"><strong>subjectScheme</strong></td>
+
+<td valign="top" headers="d192682e171 d192682e176" class="stentry"><a class="- topic/xref  ajaxLink" href="subjectScheme.html" title="A subjectScheme is a specialized DITA map that defines a collection of controlled values rather than a collection of topics.">subjectScheme</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="enumerationdef__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+map/topicref subjectScheme/enumerationdef </p>
+</div>
+
+<div class="example" id="enumerationdef__example"><h2 class="title sectiontitle">Example</h2><p class="p" id="enumerationdef__enumeration-xpl">In this example, enumerations are specified for
+the platform and otherprops attributes. Note that the enumeration
+identifies a category of values; the values within the category are
+valid, while the category itself is not a valid value. For example,
+in the code sample here, the platform attribute is associated with
+the enumeration for the category "os"; all values within the "os"
+category are thus valid on the platform attribute, while the value
+"os" itself is not.</p>
+<pre class="pre codeblock">&lt;subjectScheme&gt;
+  &lt;!-- Pull in a scheme that defines unix OS values --&gt;
+  &lt;schemeref href="unixOS.ditamap"/&gt;
+  &lt;!-- Define new OS values that are merged with those in the unixOS scheme --&gt;
+  &lt;subjectdef keys="os"&gt;
+    &lt;subjectdef keys="linux"/&gt;
+    &lt;subjectdef keys="mswin"/&gt;
+    &lt;subjectdef keys="zos"/&gt;
+  &lt;/subjectdef&gt;
+  &lt;!-- Define application values --&gt;
+  &lt;subjectdef keys="app" navtitle="Applications"&gt;
+    &lt;subjectdef keys="apacheserv" href="subject/apache.dita"/&gt;
+    &lt;subjectdef keys="mysql"      href="subject/sql.dita"/&gt;
+  &lt;/subjectdef&gt;
+
+  &lt;!-- Define an enumeration of the platform attribute, equal to
+       each value in the OS subject. This makes the following values
+       valid for the platform attribute: linux, mswin, zos --&gt;
+  &lt;enumerationdef&gt;
+    &lt;attributedef name="platform"/&gt;
+    &lt;subjectdef keyref="os"/&gt;
+  &lt;/enumerationdef&gt;
+  &lt;!-- Define an enumeration of the otherprops attribute, equal to
+       each value in the application subjects.
+       This makes the following values valid for the otherprops attribute:
+       apacheserv, mysql --&gt;
+  &lt;enumerationdef&gt;
+    &lt;attributedef name="otherprops"/&gt;
+    &lt;subjectdef keyref="app"/&gt;
+  &lt;/enumerationdef&gt;
+&lt;/subjectScheme&gt;</pre>
+</div>
+
+<div class="section" id="enumerationdef__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="enumerationdef__attribute_table" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d192682e210" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d192682e213" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d192682e216" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d192682e219" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d192682e222" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d192682e210" class="stentry">id-atts attribute group (id, conref, conrefend, conaction,
+				conkeyref)</td>
+ 
+			 <td valign="top" headers="d192682e213" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/id-atts.html" title="The &#34;id-atts&#34; attribute group includes attributes that enable the naming and referencing of elements in topics and maps.">id-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d192682e216" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d192682e219" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d192682e222" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d192682e210" class="stentry">status</td>
+ 
+			 <td valign="top" headers="d192682e213" class="stentry">The modification status of the current element. 
+				</td>
+ 
+			 <td valign="top" headers="d192682e216" class="stentry">new | changed | deleted | unchanged |
+				-dita-use-​conref-​target</td>
+ 
+			 <td valign="top" headers="d192682e219" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d192682e222" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d192682e210" class="stentry">base</td>
+ 
+			 <td valign="top" headers="d192682e213" class="stentry">A
+				generic attribute that has no specific purpose. It is intended to act as a base
+				for specialized attributes that have a simple value syntax like the conditional
+				processing attributes (one or more alphanumeric values separated by
+				whitespace), but is not itself a filtering or flagging attribute. 
+				<span class="ph">The attribute takes a space-delimited set of values.
+				  However, when acting as a container for generalized attributes, the content
+				  model will be more complex; see 
+				  <a class="- topic/xref  ajaxLink" href="archSpec/attributegeneralize.html" title="There is a particular syntax to generalize attributes that have been specialized from the @props or @base attribute. Specialization-aware processors should be able to recognize and process both the specialized and generalized forms of an attribute as being equivalent in their values.">Attribute generalization</a> for
+				  more details.</span></td>
+ 
+			 <td valign="top" headers="d192682e216" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d192682e219" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d192682e222" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d192682e210" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d192682e213" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d192682e216" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d192682e219" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d192682e222" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d192682e210" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d192682e213" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d192682e216" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d192682e219" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d192682e222" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/subjectScheme.html" title="A subject scheme map is used to define sets of controlled values for use in classifying content. Sets of controlled values can be bound to DITA attributes. This allows DITA users to share the controlled values for an information set without having to modify a DTD or XML schema. The list of available values can be modified quickly to adapt to new situations, without the need to manage updates to a document type. In addition, DITA users can define relationships between controlled values and extend a set of controlled values maintained by another team or organization. The list of defined values are not validated by basic XML parsers. Instead, the defined values should be validated by DITA processors.">Subject scheme maps</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/hasRelated.html" title="The &lt;hasRelated&gt; element identifies an associative relationship between the container subject and each of the contained subjects.">hasRelated</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/elementdef.html" title="The &lt;elementdef&gt; element identifies an element on which an attribute is enumerated. When the &lt;elementdef&gt; is left out of an &lt;enumerationdef&gt; element, the enumeration is bound to the attribute in all elements.">elementdef</a></div>
+</div>
+</div>
+
+</body>
+</html>

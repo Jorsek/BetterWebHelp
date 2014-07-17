@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="coderef"/>
+<meta name="abstract" content="The &lt;coderef&gt; element references an external file that contains literal code. When evaluated, the &lt;coderef&gt; element should cause the target code to be displayed inline. If the target contains non-XML characters such as '&lt;' or '&amp;', those will need to be handled in a way that they may be displayed correctly by the final rendering engine. This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information."/>
+<meta name="description" content="The &lt;coderef&gt; element references an external file that contains literal code. When evaluated, the &lt;coderef&gt; element should cause the target code to be displayed inline. If the target contains non-XML characters such as '&lt;' or '&amp;', those will need to be handled in a way that they may be displayed correctly by the final rendering engine. This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information."/>
+<meta name="DC.subject" content="coderef"/>
+<meta name="keywords" content="coderef"/>
+<meta name="DC.Relation" scheme="URI" content="../common/pr-d.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/codeblock.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/codeph.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="coderef"/>
+<meta name="DC.Language" content="en-us"/>
+<title>coderef</title>
+</head>
+<body id="coderef">
+
+
+<h1 class="title topictitle1">coderef</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;coderef&gt; element references an external file that
+contains literal code. When evaluated, the &lt;coderef&gt; element should
+cause the target code to be displayed inline. If the target contains
+non-XML characters such as '&lt;' or '&amp;', those will need to be
+handled in a way that they may be displayed correctly by the final
+rendering engine. <span class="ph">This element
+is part of the DITA programming domain, a special set of DITA elements
+designed to document programming tasks, concepts, and reference information.</span></p>
+
+<div class="section" id="coderef__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d131603e35" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d131603e37" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d131603e42" headers="d131603e35" class="stentry"><strong>topic (technical content), map (technical content), concept, ditabase, glossary, glossentry, glossgroup, reference, task, bookmap</strong></td>
+
+<td valign="top" headers="d131603e37 d131603e42" class="stentry"> no content </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="coderef__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d131603e53" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d131603e55" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d131603e60" headers="d131603e53" class="stentry"><strong>topic (technical content), map (technical content), concept, ditabase, glossary, glossentry, glossgroup, reference, task (strict), task (general), bookmap</strong></td>
+
+<td valign="top" headers="d131603e55 d131603e60" class="stentry"><a class="- topic/xref  ajaxLink" href="codeblock.html" title="The &lt;codeblock&gt; element represents lines of program code. Like the &lt;pre&gt; element, line endings and spaces inside the element must be preserved, and the content is typically rendered in a monospaced font. This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information.">codeblock</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="coderef__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+topic/xref pr-d/coderef </p>
+</div>
+
+<div class="example" id="coderef__example"><h2 class="title sectiontitle">Example</h2><pre class="pre">&lt;example&gt;
+  &lt;title&gt;Processing DITA&lt;/title&gt;
+  &lt;p&gt;This code is an example of how to process DITA.&lt;/p&gt;
+  &lt;codeblock&gt;&lt;coderef href="process-dita.xsl"/&gt;&lt;/codeblock&gt;
+&lt;/example&gt;</pre>
+</div>
+
+<div class="section" id="coderef__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="coderef__attributes_table" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d131603e98" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d131603e101" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d131603e104" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d131603e107" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d131603e110" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d131603e98" class="stentry">href</td>
+ 
+			 <td valign="top" headers="d131603e101" class="stentry">Provides a reference to a resource. See 
+				<a class="- topic/xref  ajaxLink" href="common/thehrefattribute.html" title="The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.">The href attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d131603e104" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d131603e107" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d131603e110" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d131603e98" class="stentry">type</td>
+ 
+			 <td valign="top" headers="d131603e101" class="stentry">Describes the target of a reference. See 
+				<a class="- topic/xref  ajaxLink" href="common/thetypeattribute.html" title="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes.">The type attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d131603e104" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d131603e107" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d131603e110" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d131603e98" class="stentry">format</td>
+ 
+			 <td valign="top" headers="d131603e101" class="stentry">The format attribute identifies the format of the resource
+				being referenced. See 
+				<a class="- topic/xref  ajaxLink" href="common/theformatattribute.html" title="The format attribute identifies the format of the resource being cross referenced. The processing default for format is &#34;dita&#34;. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor.">The format attribute</a> for details on
+				supported values.</td>
+ 
+			 <td valign="top" headers="d131603e104" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d131603e107" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d131603e110" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d131603e98" class="stentry">scope</td>
+ 
+			 <td valign="top" headers="d131603e101" class="stentry">The scope attribute identifies the closeness of the
+				relationship between the current document and the target resource. See 
+				<a class="- topic/xref  ajaxLink" href="common/thescopeattribute.html" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The scope attribute</a> for more information on
+				values.</td>
+ 
+			 <td valign="top" headers="d131603e104" class="stentry">(local | peer | external |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d131603e107" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d131603e110" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d131603e98" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d131603e101" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d131603e104" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d131603e107" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d131603e110" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d131603e98" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d131603e101" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d131603e104" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d131603e107" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d131603e110" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d131603e98" class="stentry">class, outputclass, keyref</td>
+ 
+			 <td valign="top" headers="d131603e101" class="stentry"><span class="ph">Keyref provides a redirectable
+				  reference based on a key defined within a map. See 
+				  <a class="- topic/xref  ajaxLink" href="common/thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The keyref attribute</a> for information on
+				  using this attribute.</span> Class and
+				outputclass are described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d131603e104" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d131603e107" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d131603e110" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/pr-d.html" title="The programming domain elements are used to define the syntax and to give examples of programming languages.">Programming elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/codeblock.html" title="The &lt;codeblock&gt; element represents lines of program code. Like the &lt;pre&gt; element, line endings and spaces inside the element must be preserved, and the content is typically rendered in a monospaced font. This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information.">codeblock</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/codeph.html" title="The code phrase (&lt;codeph&gt;) element represents a snippet of code within the main flow of text. The code phrase is displayed in a monospaced font for emphasis. This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information.">codeph</a></div>
+</div>
+</div>
+
+</body>
+</html>

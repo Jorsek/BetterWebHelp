@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Topic content"/>
+<meta name="abstract" content="The content of all topics, regardless of topic type, is built on the same common structures."/>
+<meta name="description" content="The content of all topics, regardless of topic type, is built on the same common structures."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/topicover.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/topicstructure.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/topicDomains_BasicDITA.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topiccontent"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Topic content</title>
+</head>
+<body id="topiccontent">
+
+
+<h1 class="title topictitle1">Topic content</h1>
+
+
+<div class="body conbody"><p class="shortdesc">The content of all topics, regardless of topic type, is
+built on the same common structures.</p>
+
+<dl class="dl">
+
+<dt class="dt dlterm">Topic body</dt>
+
+<dd class="dd">The topic body contains all content except for that
+contained in the title or the short description/abstract. The topic
+body may be specialized to impose constraints appropriate for the
+specific topic type even when titles and prolog are generic, or the
+topic body may be generic where the topic title and prolog are specialized.</dd>
+
+
+
+<dt class="dt dlterm">Sections and examples</dt>
+
+<dd class="dd">The body of a topic may contain divisions, such as sections and examples. They may contain
+     block-level elements like titles and paragraphs and phrase-level elements like API names or
+     text. It is recommend that sections have titles, whether they are entered directly into the
+     title element or rendered using a fixed or default title.</dd>
+
+<dd class="dd">Either body divisions or untitled sections or examples may be used to delimit
+     arbitrary structures within a topic body. However, body divisions may nest, but sections and
+     examples cannot contain sections.
+     
+    </dd>
+
+
+<dt class="dt dlterm">Sectiondiv</dt>
+
+<dd class="dd">Sectiondiv allows for the arbitrary grouping of content within
+a section for the purpose of      content reuse. The sectiondiv does
+not include a title. Content that requires a title should      use
+section or example. </dd>
+
+
+<dt class="dt dlterm">Bodydiv</dt>
+
+<dd class="dd">Bodydiv allows for the arbitrary grouping of content within the
+body of a topic for the      purpose of content reuse. The bodydiv
+does not include a title. Content that requires a title      should
+use section or example. </dd>
+
+
+<dt class="dt dlterm">Block-level elements</dt>
+
+<dd class="dd">Paragraphs, lists, and tables are <span class="ph">types</span> of
+"block" elements. As a class      of content, they can contain other
+blocks, phrases, or text, though the rules vary for each      structure.</dd>
+
+
+
+<dt class="dt dlterm">Phrases and keywords</dt>
+
+<dd class="dd">Block-level elements can contain markup to label parts of a paragraph
+or parts of a sentence as having special semantic meaning or presentation
+characteristics, such as &lt;uicontrol&gt; or &lt;b&gt;. Phrases can usually
+contain other phrases and keywords as well as text. Keywords can only
+contain text.</dd>
+
+
+<dt class="dt dlterm">Images</dt>
+
+<dd class="dd">Images can be inserted to display photos, illustrations, screen
+captures, diagrams, and the like. At the phrase level, they can display
+trademark characters, icons, toolbar buttons, and the like.      
+    </dd>
+
+
+<dt class="dt dlterm">Multimedia</dt>
+
+<dd class="dd">With the object element, multimedia information may
+be added to display, for      example, diagrams that can be rotated
+and expanded. With the <span class="ph">&lt;foreign&gt;</span>      element,
+media may be included within topic content, e.g., SVG graphics, MathML
+equations, and so on.</dd>
+
+</dl>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/topicover.html" title="DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject. Topics may be of specific specialized information types, such as task, concept, or reference, or may be generic, that is, without a specified information type.">DITA topics</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/topicstructure.html" title="All topics have the same basic structure, regardless of topic type: title, description or abstract, prolog, body, related links, and nested topics.">Topic structure</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/topicDomains_BasicDITA.html" title="A DITA vocabulary domain defines a set of elements associated with a particular subject area or authoring requirement regardless of topic type. DITA incorporates three domains into the basic DITA content: typographic, utilities, and indexing. Other domains are incorporated into the DITA Technical Content and Learning and Training specializations.">Topic domains: Basic DITA</a></div>
+</div>
+</div>
+
+</body>
+</html>

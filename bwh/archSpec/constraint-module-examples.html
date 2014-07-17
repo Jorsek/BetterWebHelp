@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Examples of constraint declaration modules"/>
+<meta name="abstract" content="This section provides examples of constraint declaration modules."/>
+<meta name="description" content="This section provides examples of constraint declaration modules."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/createConstraintsDomainSpec.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/constraintsGeneralize.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="constraint-module-examples"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Examples of constraint declaration modules</title>
+</head>
+<body id="constraint-module-examples">
+
+
+<h1 class="title topictitle1">Examples of constraint declaration modules</h1>
+
+
+<div class="body conbody"><p class="shortdesc">This section provides examples of constraint declaration
+modules.</p>
+
+<div class="section"><h2 class="title sectiontitle">Constraining element content in a topic vocabulary
+module</h2>              <div class="p">A constraint module named shortdescReq redefines
+the content model of the &lt;topic&gt;         element so that the &lt;shortdesc&gt;
+element is required. The DTD declarations for this         module
+would         be:<pre class="pre codeblock">&lt;!ENTITY shortdescReq.constraint 
+  "(topic shortdescReq-c)"
+&gt;
+
+&lt;!ENTITY % topic.content  
+   "((%title;), 
+     (%titlealts;)?, 
+     <strong class="ph b">(%shortdesc;)</strong>,
+     (%prolog;)?, 
+     (%body;)?, 
+     (%related-links;)?, 
+     (%topic-info-types;)*)"
+&gt;
+&lt;!ENTITY % topic.attributes
+            "id          ID                                #REQUIRED
+             conref      CDATA                             #IMPLIED
+             %select-atts;
+             %localization-atts;
+             outputclass CDATA                             #IMPLIED"&gt;
+...
+&lt;!ELEMENT topic  %topic.content;&gt;
+&lt;!ATTLIST topic  %topic.attributes;&gt;
+&lt;!ATTLIST topic
+             %arch-atts;
+             domains    CDATA                    
+             "&amp;included-domains;"
+&gt;</pre>
+</div>
+</div>
+
+
+<div class="section"><h2 class="title sectiontitle">Integrating a subset of the extension elements
+from a domain module</h2>              <div class="p">A constraint module named basicHighlight
+includes the &lt;b&gt; and &lt;i&gt; elements but         not the &lt;u&gt;, &lt;sub&gt;, &lt;sup&gt;,
+and &lt;tt&gt; elements from the highlight         domain. The DTD
+declarations for this module would         be:<pre class="pre codeblock">&lt;!ENTITY   basicHighlight-c-att   
+   "(topic hi-d basicHighlight-c)"
+&gt;
+
+&lt;!ENTITY % basicHighlight-c-ph  "b | i"&gt;</pre>
+</div>
+       <div class="p">The
+XSD declarations for this module would         be:<pre class="pre codeblock">&lt;xs:group name="basicHighlight-c-ph"&gt;
+  &lt;xs:choice&gt;
+    &lt;xs:element ref="b"/&gt;
+    &lt;xs:element ref="i"/&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:group&gt;</pre>
+</div>
+<div class="p">Note that the basicHighlight
+constraint module subsets extension, but does not redefine any content
+models. If another constraint is created to restrict the content model
+of the &lt;b&gt; element, it will not conflict with the basicHighlight
+domain, because they do not attempt to revise the same content model.
+This means that the two can be combined in the same shell document
+type. The effective value of the @domains attribute will include the
+contributions from both constraint modules, as well as any other modules
+integrated by the shell, e.g.:<pre class="pre codeblock">...
+(topic hi-d noNestedHighlight-c)
+(topic hi-d basicHighlight-c)
+...</pre>
+</div>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Applying multiple constraints to a single vocabulary
+module</h2>              <div class="p">A constraint module named simpleSection redefines
+the content models of the &lt;section&gt;         and &lt;example&gt;
+elements to allow a single initial &lt;title&gt; element and to remove
+        text and phrase elements. Because this constraint module redefines
+different elements than         the shortdescReq constraint module
+shown above, both modules can apply to the topic module.         The
+order in which the constraint modules are listed is not significant.
+The DTD         declarations for this module would         be:<pre class="pre codeblock">&lt;!ENTITY simpleSection.constraints
+  "(topic simpleSection-c)"
+&gt;
+
+&lt;!ENTITY % section.content
+  "((%title),
+    (%basic.block; | 
+     %data.elements.incl; | 
+     %foreign.unknown.incl; |
+     %sectiondiv;)*)
+
+  "
+&gt;</pre>
+</div>
+       <p class="p">Note that this constraint module and the
+shortdescReq constraint module both constrain task         but because
+they constrain different element types they do not conflict and can
+be used         together. Each constraint module provides its own
+contribution to the @domains attribute, so         that when integrated
+the effective value of the @domains attribute will include the   
+     declarations for both constraint modules, as well as the declarations
+for the other modules         integrated by the shell document type,
+e.g.:</p>
+       <pre class="pre">...
+(topic shortdescReq-c)
+(topic simpleSection-c)
+..</pre>
+     </div>
+
+<div class="section"><h2 class="title sectiontitle">A topic with elements replaced by domain extensions</h2>        
+     <p class="p">A document type shell replaces the &lt;ph&gt; element with
+extension elements from the         highlighting and programming domains.
+Because the highlighting and programming domains         cannot be
+generalized to a topic without the &lt;ph&gt; element, the removal
+constraint must         be declared on the topic module with a separate
+parenthetical expression. </p>
+       <p class="p">The @domains attribute declaration:</p>
+ 
+     <pre class="pre">(topic noBasePhrase-c)
+(topic hi-d)
+(topic pr-d)</pre>
+     </div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/createConstraintsDomainSpec.html" title="Constraint modules define additional constraints for corresponding vocabulary modules in order to restrict content models or attribute lists for specific element types, remove extension elements from an integrated domain module, or replace base element types with domain-provided extension element types. Constraint modules do not and cannot change element semantics, only the details of how element types can be used in the context of a specific concrete document type. Because constraints can make optional elements required, documents that use the same vocabulary modules may still have incompatible constraints. Thus the use of constraints can affect the ability for content from one topic or map to be used directly in another topic or map.">Constraints</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/constraintsGeneralize.html" title="When documents use different constraints, conref and generalization processors may examine the @domains to verify compatibility between the document instances.">Conref and generalization for constraint modules</a></div>
+</div>
+</div>
+
+</body>
+</html>

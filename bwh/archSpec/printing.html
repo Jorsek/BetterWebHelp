@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Printing"/>
+<meta name="abstract" content="By default, the content of most elements is included in all output media. The DITA map provides a means to suppress element content from appearing in print-oriented media, or from appearing in non-print-oriented media, such as HTML. The generation or non-generation of print and other forms of output can also be affected through the use of other navigation-related attributes."/>
+<meta name="description" content="By default, the content of most elements is included in all output media. The DITA map provides a means to suppress element content from appearing in print-oriented media, or from appearing in non-print-oriented media, such as HTML. The generation or non-generation of print and other forms of output can also be affected through the use of other navigation-related attributes."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/behaviors.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/chunking.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/translation.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="printing"/>
+<title>Printing</title>
+</head>
+<body id="printing">
+
+
+ <h1 class="title topictitle1">Printing </h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc">By default, the content of most elements is included in all output media. The DITA map
+  provides a means to suppress element content from appearing in print-oriented media, or from
+  appearing in non-print-oriented media, such as HTML. The generation or non-generation of print and
+  other forms of output can also be affected through the use of other navigation-related attributes. </p>
+
+  <p class="p">The author can specify whether individual topics or groups of topics referenced in a DITA map
+   should be included for processing to print-oriented outputs such as PDF. Each map (or map
+   specialization) and topicref (or topicref specialization) in a DITA map supports the attributes
+   @toc, @processing-role, and @print. The @print attribute supports the following enumerated
+   values, each controlling the way that print-oriented processors handle the inclusion or exclusion
+   of topics or groups of topics.</p>
+
+  <div class="p">
+   <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
+     <th valign="bottom" align="left" id="d16846e24" class="stentry">@print value</th>
+
+     <th valign="bottom" align="left" id="d16846e27" class="stentry">Print-oriented Processing</th>
+
+     <th valign="bottom" align="left" id="d16846e30" class="stentry">Non-print-oriented Processing</th>
+
+    </tr>
+<tr class="strow">
+     <td valign="top" headers="d16846e24" class="stentry">
+      <p class="p">unspecified (default)</p>
+
+      <p class="p"><strong class="ph b">Example:</strong></p>
+
+      <p class="p"><samp class="ph msgph">&lt;topicref href="foo.dita"&gt;</samp></p>
+
+     </td>
+
+     <td valign="top" headers="d16846e27" class="stentry">
+      <p class="p">Topics referenced by the map element are <strong class="ph b">included</strong> in output. </p>
+
+     </td>
+
+     <td valign="top" headers="d16846e30" class="stentry">
+      <p class="p">Topics referenced by the map element are <strong class="ph b">included</strong> in output. </p>
+
+     </td>
+
+    </tr>
+<tr class="strow">
+     <td valign="top" headers="d16846e24" class="stentry">
+      <p class="p"><samp class="ph msgph">yes</samp></p>
+
+      <p class="p"><strong class="ph b">Example:</strong></p>
+
+      <p class="p"><samp class="ph msgph">&lt;topicref href="foo.dita" print="yes"&gt;</samp></p>
+
+     </td>
+
+     <td valign="top" headers="d16846e27" class="stentry">
+      <p class="p">Topics referenced by the map element are <strong class="ph b">included</strong> in output. </p>
+
+     </td>
+
+     <td valign="top" headers="d16846e30" class="stentry">
+      <p class="p">Topics referenced by the map element are <strong class="ph b">included</strong> in output. </p>
+
+     </td>
+
+    </tr>
+<tr class="strow">
+     <td valign="top" headers="d16846e24" class="stentry">
+      <p class="p"><samp class="ph msgph">printonly</samp></p>
+
+      <p class="p"><strong class="ph b">Example:</strong></p>
+
+      <p class="p"><samp class="ph msgph">&lt;topicref href="foo.dita" print="printonly"&gt;</samp></p>
+
+     </td>
+
+     <td valign="top" headers="d16846e27" class="stentry">
+      <p class="p">Topics referenced by the map element are <strong class="ph b">included</strong> in output. </p>
+
+     </td>
+
+     <td valign="top" headers="d16846e30" class="stentry">
+      <p class="p">Topics referenced by the map element are <strong class="ph b">excluded</strong> in output. </p>
+
+     </td>
+
+    </tr>
+<tr class="strow">
+     <td valign="top" headers="d16846e24" class="stentry">
+      <p class="p"><samp class="ph msgph">no</samp></p>
+
+      <p class="p"><strong class="ph b">Example:</strong></p>
+
+      <p class="p"><samp class="ph msgph">&lt;topicref href="foo.dita" print="no"&gt;</samp></p>
+
+     </td>
+
+     <td valign="top" headers="d16846e27" class="stentry">
+      <p class="p">Topics referenced by the map element are <strong class="ph b">excluded</strong> in output. </p>
+
+     </td>
+
+     <td valign="top" headers="d16846e30" class="stentry">
+      <p class="p">Topics referenced by the map element are <strong class="ph b">included</strong> in output. </p>
+
+     </td>
+
+    </tr>
+<tr class="strow">
+     <td valign="top" headers="d16846e24" class="stentry">
+      <p class="p"><samp class="ph msgph">-dita-use-conref-target</samp></p>
+
+      <p class="p"><strong class="ph b">Example:</strong></p>
+
+      <p class="p"><samp class="ph msgph">&lt;topicref conref="#foo-topic" print="-dita-use-conref-target"&gt;</samp></p>
+
+     </td>
+
+     <td valign="top" headers="d16846e27" class="stentry">
+      <p class="p">Topics referenced by the map element derive a value for @print from the @print value of the
+       referenced map element. </p>
+
+      <p class="p">See <a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more details on this value.</p>
+
+     </td>
+
+     <td valign="top" headers="d16846e30" class="stentry">
+      <p class="p">Topics referenced by the map element derive a value for @print from the @print value of the
+       referenced map element. </p>
+
+      <p class="p">See <a class="- topic/xref  ajaxLink" href="common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more details on this value.</p>
+
+     </td>
+
+    </tr>
+</table>
+
+  </div>
+
+  <div class="note note"><span class="notetitle">Note:</span> If a value for @print is not specified explicitly in a map element, but is specified in a
+   map that references the map element, the @print value cascades to the referenced map. If the
+   @print value is not specified on the referencing map, a default of "yes" is assumed.</div>
+
+  <p class="p">Use <samp class="ph msgph">@print="printonly"</samp> to identify transitional topics to be included
+   exclusively in highly contextual or linear print-oriented output.</p>
+
+  <p class="p">If the referenced topic should be excluded from all output formats, set the @processing-role
+   attribute to "resource-only" instead of using the @print attribute. Content within that topic may
+   still be referenced for display in other locations.</p>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/behaviors.html" title="Several common DITA processing behaviors are driven by attributes, including setting the set of vocabulary and constraint modules on which a DITA document depends, navigation, linking, content reuse (via direct or indirect addressing), conditional processing, chunking, and printing. In addition, translation of DITA content is expedited through the use of the @dir, @translate, and @xml:lang attributes, and the &lt;index-sort-as&gt; element.">DITA processing</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/chunking.html" title="Content may be chunked (divided or merged into new output documents) in different ways for the purposes of authoring, for delivering content, and for navigation. For example, something best authored as a set of separate topics may need to be delivered as a single Web page. A map author can use the chunk attribute to split up multi-topic documents into component topics or combine multiple topics into a single document as part of output processing.">Chunking</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/translation.html" title="DITA has features that facilitate preparing content for translation and working with multilingual content, including the @xml:lang attribute, the @dir attribute, and the @translate attribute. In addition, the &lt;index-sort-as&gt; element provides support for index sorting in languages in which the index sort order must be modified by the author or translator.">Translation and localization</a></div>
+</div>
+</div>
+
+</body>
+</html>

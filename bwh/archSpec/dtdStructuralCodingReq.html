@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Structural module coding requirements"/>
+<meta name="abstract" content="A structural vocabulary module defines a new topic or map type as a specialization of a base topic or map type. The purpose is usually to enhance the user's interaction by adapting the topic or map type to its particular purposes."/>
+<meta name="description" content="A structural vocabulary module defines a new topic or map type as a specialization of a base topic or map type. The purpose is usually to enhance the user's interaction by adapting the topic or map type to its particular purposes."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dtdmod.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dtdGeneralCodingReq.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dtdTopicTypeCodingReq.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="concept_1E272CD14D364D0AB4E8040C5D50545E"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Structural module coding requirements</title>
+</head>
+<body id="concept_1E272CD14D364D0AB4E8040C5D50545E">
+
+
+  <h1 class="title topictitle1">Structural module coding requirements</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">A structural vocabulary module defines a new topic or map type as a specialization of a
+    base topic or map type. The purpose is usually to enhance the user's interaction by adapting the
+    topic or map type to its particular purposes.</p>
+
+    <p class="p">A structural type module <dfn class="term">must</dfn> conform to the following coding requirements in
+      addition to the general module coding requirements: </p>
+
+    <div class="section" id="concept_1E272CD14D364D0AB4E8040C5D50545E__section_1D21A852F62148C9B5935D0B90478D50"><h2 class="title sectiontitle">Default included domains entity</h2>
+      
+      <div class="p">The module <dfn class="term">must</dfn> define the <samp class="ph codeph">included-domains</samp> entity with a
+        default value, as in the following
+        example:<pre class="pre codeblock">&lt;!ENTITY included-domains ""&gt;</pre>
+</div>
+
+      <p class="p">A document type shell can predefine the <samp class="ph codeph">included-domains</samp> entity to list
+        domains to be added to the document type.</p>
+
+      <div class="p">Structural vocabulary modules may require the use of specific domains. In that case, the
+        default value of the <samp class="ph codeph">included-domains</samp> entity must include the appropriate
+        domain use declaration, for
+        example:<pre class="pre codeblock">&lt;!ENTITY included-domains "(topic myDomain)"&gt;</pre>
+</div>
+
+      <p class="p">The list of included domains <dfn class="term">must</dfn> declare the domains from most generic (on
+        the left) to most specialized, current domain (on the right). See <a class="- topic/xref  ajaxLink" href="domainsatt.html#domainsatt" title="Structural types must declare the domain vocabulary modules and constraint modules they use. This is done with the @domains attribute, whose value is a sequence of parenthesized module ancestry specifications. The @domains attribute is declared on the root element for each topic or map type. Structural modules should declare their structural ancestry.">Domain usage declaration (the @domains
+          attribute)</a>.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Topic and map element attributes</h2>
+      
+      <p class="p">The topic or map element type <dfn class="term">must</dfn> set the @DITAArchVersion attribute to the
+        DITAArchVersion entity and the @domains attribute to the included-domains entity. These
+        attributes give processors a reliable way to check the architecture version and look up the
+        list of domains available in the document type.</p>
+
+      <pre class="pre codeblock">&lt;!ATTLIST concept    
+  %concept.attributes;
+  %arch-atts;
+  domains 
+    CDATA 
+       "&amp;included-domains;"
+&gt;</pre>
+
+    </div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dtdmod.html" title="To be extensible and backward compatible, DITA requires that a DTD implementation of structural and domain specialization modules conform to well-defined implementation (coding) requirements.">DTD syntax specialization module coding requirements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dtdGeneralCodingReq.html" title="Structural and element domain vocabulary modules must reflect the same coding requirements for element type declarations.">General element type declaration coding requirements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dtdTopicTypeCodingReq.html" title="Topic type vocabulary modules must conform to additional coding requirements for defining default topic nesting.">Topic type module coding requirements</a></div>
+</div>
+</div>
+
+</body>
+</html>

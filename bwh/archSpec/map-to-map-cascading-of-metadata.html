@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Map-to-map cascading behaviors"/>
+<meta name="abstract" content="When a DITA map (or branch of a DITA map) is referenced by another DITA map, by default, certain rules apply. These rules pertain to the cascading behaviors of attributes, metadata elements, and roles assigned to content (such as the role of &#34;Chapter&#34; assigned by a &lt;chapter&gt; element). Attributes and elements that cascade within a map generally follow the same rules when cascading from one map to another map; this topic covers the exceptions and additional rules that apply."/>
+<meta name="description" content="When a DITA map (or branch of a DITA map) is referenced by another DITA map, by default, certain rules apply. These rules pertain to the cascading behaviors of attributes, metadata elements, and roles assigned to content (such as the role of &#34;Chapter&#34; assigned by a &lt;chapter&gt; element). Attributes and elements that cascade within a map generally follow the same rules when cascading from one map to another map; this topic covers the exceptions and additional rules that apply."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita-metadata.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/cascading-in-a-ditamap.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/reconciling-topic-and-map-metadata.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="map-to-map-cascading-of-metadata"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Map-to-map cascading behaviors</title>
+</head>
+<body id="map-to-map-cascading-of-metadata">
+
+
+<h1 class="title topictitle1">Map-to-map cascading behaviors</h1>
+
+
+<div class="body conbody"><p class="shortdesc">When a DITA map (or branch of a DITA map) is referenced
+by another DITA map, by default, certain rules apply. These rules
+pertain to the cascading behaviors of attributes, metadata elements,
+and roles assigned to content (such as the role of "Chapter" assigned
+by a &lt;chapter&gt; element). Attributes and elements that cascade within
+a map generally follow the same rules when cascading from one map
+to another map; this topic covers the exceptions and additional rules
+that apply.</p>
+
+<div class="section"><h2 class="title sectiontitle">Cascading of attributes from map to map</h2><div class="p">The
+following attributes cascade within a single map:<ul class="ul">
+        <li class="li">@audience, @platform, @product, @otherprops, @rev</li>
+
+        <li class="li">@props and any attribute specialized from @props</li>
+
+        <li class="li">@linking, @toc, @print, @search</li>
+
+        <li class="li">@format, @scope, @type</li>
+
+        <li class="li">@xml:lang, @dir, @translate</li>
+
+        <li class="li">@processing-role</li>
+
+       </ul>
+</div>
+<div class="p">Of these, the following attributes <strong class="ph b">do not</strong> cascade
+from map to map:<ul class="ul">
+<li class="li">@format: this attribute must be set to "ditamap" in order to reference
+a map or a branch of a map, so it cannot cascade through to the referenced
+map.</li>
+
+<li class="li">@xml:lang and @dir: cascading behavior for xml:lang is defined in <a class="- topic/xref  ajaxLink" href="xmllang.html" title="The @xml:lang attribute specifies the language (and optionally the locale) of the element content. The @xml:lang attribute applies to all attributes and content of the element where it is specified, unless it is overridden with @xml:lang on another element within that content. If the @xml:lang attribute on the document (outermost) element of a map or of a top-level topic has no value, the processor should assume a default value. The default value of the processor may be either fixed, configurable, or derived from the content itself, such as the @xml:lang attribute on the primary map file. As the default value of a processor may be fixed, it is strongly recommended that the @xml:lang attribute be set on each map and top-level topic.">The @xml:lang attribute</a>.
+                        The @dir and translate attributes work the same way.</li>
+
+<li class="li">@scope: the @scope value describes the map itself, rather than
+the content. A @scope value of "external" indicates that the referenced
+map itself is external and unavailable, so the value cannot cascade
+into that referenced map.</li>
+
+</ul>
+</div>
+<p class="p">The @class attribute does not cascade within a map, but
+is used to determine processing roles that cascade from map to map.
+See <a class="- topic/xref  ajaxLink" href="#map-to-map-cascading-of-metadata__roles">Cascading of roles in specialized maps</a> for
+more details.</p>
+<p class="p">As with values that cascade within a map, the
+cascading is additive if the attribute permits multiple values (such
+as @audience). When the attribute only permits one value, the cascading
+value overrides the top-level element.</p>
+</div>
+
+<div class="example"><h2 class="title sectiontitle">Example of attributes cascading between maps</h2><div class="p">For
+example, assume the following references in <span class="ph filepath">test.ditamap</span>:<pre class="pre codeblock">&lt;map&gt;
+  &lt;topicref href="a.ditamap" format="ditamap" toc="no"/&gt;
+  &lt;mapref   href="b.ditamap" audience="developer"/&gt;
+  &lt;topicref href="c.ditamap#branch1" format="ditamap" print="no"/&gt;
+  &lt;mapref   href="c.ditamap#branch2" platform="myPlatform"/&gt;
+&lt;/map&gt;</pre>
+</div>
+<ul class="ul">
+<li class="li">The map <span class="ph filepath">a.ditamap</span> is treated as if toc="no"
+is specified on the root &lt;map&gt; element. This means that the topics
+that are referenced by <span class="ph filepath">a.ditamap</span> do not appear
+in the navigation generated by <span class="ph filepath">test.ditamap</span> (except
+for branches within the map that explicitly set toc="yes").</li>
+
+<li class="li">The map <span class="ph filepath">b.ditamap</span> is treated as if audience="developer"
+is set on the root &lt;map&gt; element. If the audience attribute is
+already set on the root &lt;map&gt; element within <span class="ph filepath">b.ditamap</span>,
+the value "developer" is added to any existing values.</li>
+
+<li class="li">The element with id="branch1" within the map <span class="ph filepath">c.ditamap</span> is
+treated as if print="no" is specified on that element. This means
+that the topics within the branch with id="branch1" do not appear
+in the printed output generated by <span class="ph filepath">test.ditamap</span> (except
+for nested branches within that branch that explicitly set print="yes").</li>
+
+<li class="li">The element with id="branch2" within the map <span class="ph filepath">c.ditamap</span> is
+treated as if platform="myPlatform" is specified on that element.
+If the @platform attribute is already specified on the element with
+id="branch", the value "myPlatform" is added to existing values.</li>
+
+</ul>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Cascading of metadata elements</h2><p class="p">Elements
+that are contained within &lt;topicmeta&gt; or &lt;metadata&gt; follow the
+same rules for cascading as apply within a single DITA map. For a
+complete list of which elements cascade within a map, see the column
+"<span class="ph">Does it cascade to
+child &lt;topicref&gt; elements?</span>"
+in the topic <a class="- topic/xref  ajaxLink" href="reconciling-topic-and-map-metadata.html" title="The &lt;topicmeta&gt; element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent &lt;topicref&gt; element, any child &lt;topicref&gt; elements, and – if a direct child of the &lt;map&gt; element – on the map as a whole.">Reconciling topic and map metadata</a>.</p>
+<p class="p">For
+example, consider the following code snippets:</p>
+<div class="fig fignone"><span class="figcap">Figure 1. <span class="ph filepath">test-2.ditamap</span></span>
+<pre class="pre codeblock">&lt;map&gt;
+    &lt;topicref href="a.ditamap" format="ditamap"&gt;
+        &lt;topicmeta&gt;
+            &lt;shortdesc&gt;This map contains information about Acme defects.&lt;/shortdesc&gt;
+        &lt;/topicmeta&gt;
+    &lt;/topicref&gt;
+    &lt;topicref href="b.ditamap" format="ditamap"&gt;
+        &lt;topicmeta&gt;
+            &lt;audience type="programmer"/&gt;
+        &lt;/topicmeta&gt;
+    &lt;/topicref&gt;    
+    &lt;mapref href="c.ditamap" format="ditamap"/&gt;
+    &lt;mapref href="d.ditamap" format="ditamap"/&gt;
+    &lt;/map&gt;</pre>
+
+</div>
+<div class="fig fignone"><span class="figcap">Figure 2. b.ditamap</span>
+<pre class="pre codeblock">&lt;map&gt;
+    &lt;topicmeta&gt;
+        &lt;audience type="writer"/&gt;
+    &lt;/topicmeta&gt;
+    &lt;topicref href="b-1.dita"/&gt;
+    &lt;topicref href="b-2.dita"/&gt;
+&lt;/map&gt;
+</pre>
+
+</div>
+<div class="p">When <span class="ph filepath">test-2.ditamap</span> is processed, the
+following behaviour occurs:<ul class="ul">
+<li class="li">Because the &lt;shortdesc&gt; element does not cascade, it does not
+apply to the DITA topics that are referenced in <span class="ph filepath">a.ditamap</span>.</li>
+
+<li class="li">Because the &lt;audience&gt; element cascades, the &lt;audience&gt;
+element in the reference to <span class="ph filepath">b.ditamap</span> combines
+with the &lt;audience&gt; attribute that is already specified at the
+top level of that map. The result is that the <span class="ph filepath">b-1.dita</span> topic
+and <span class="ph filepath">b-2.dita</span> topic are processed as if they each
+contained the following child &lt;topicmeta&gt; element:<pre class="pre codeblock">&lt;topicmeta&gt;
+    &lt;audience type="programmer"/&gt;
+    &lt;audience type="writer"/&gt;
+&lt;/topicmeta&gt;</pre>
+</li>
+
+</ul>
+</div>
+<div class="note note"><span class="notetitle">Note:</span> It is possible that a specialization might define metadata
+that should replace rather than add to metadata in the referenced
+map, but DITA (by default) does not currently support this behavior.</div>
+</div>
+
+<div class="section" id="map-to-map-cascading-of-metadata__roles"><h2 class="title sectiontitle">Cascading of roles in specialized maps</h2><p class="p">When
+a &lt;topicref&gt; element or a specialization of a &lt;topicref&gt; element
+references a DITA resource, it defines a role for that resource. In
+some cases this role is straightforward, such as when a &lt;topicref&gt;
+element references a DITA topic (giving it the already known role
+of "topic"), or when a &lt;mapref&gt; element references a DITA map (giving
+it the role of "DITA map").</p>
+<p class="p">Unless otherwise instructed, a specialized
+topicref element that references a map supplies a role for the referenced
+content. This means that, in effect, the @class attribute of the referencing
+element cascades to top-level topicref elements in the referenced
+map. In situations where this should not happen - such as all elements
+from the OASIS-supplied "mapgroup" domain - the non-default behavior
+should be clearly specified.</p>
+<p class="p">For example, when a &lt;chapter&gt;
+element from the bookmap specialization references a map, it supplies
+a role of "chapter" for each top-level element in the referenced map.
+When the &lt;chapter&gt; element references a branch in another map,
+it supplies a role of "chapter" for that branch. In effect, the @class
+attribute for &lt;chapter&gt; ("- map/topicref bookmap/chapter ") cascades
+to the top-level topicref in the nested map, although it does not
+cascade any further.</p>
+<p class="p">Alternatively, the &lt;mapref&gt; element
+in the "mapgroup" domain  is a convenience element; the top-level &lt;topicref&gt;
+elements in the map referenced by a &lt;mapref&gt; element <span class="keyword">must
+not</span> be processed as if they are &lt;mapref&gt; elements. The
+@class attribute from the &lt;mapref&gt; element ("+ map/topicref mapgroup-d/mapref
+") does not cascade to the referenced map.</p>
+<p class="p">In some cases, preserving
+the role of the referencing element might result in out-of-context
+content. For example, a &lt;chapter&gt; element that references a bookmap
+might pull in &lt;part&gt; elements that contain nested &lt;chapter&gt;
+elements. Treating the &lt;part&gt; element as a &lt;chapter&gt; will result
+in a chapter that nests other chapters, which is not valid in bookmap
+and may not be understandable by processors. The result is implementation
+specific; processors may or may not choose to treat this as an error,
+issue a warning, or simply assign new roles to the problematic elements.</p>
+</div>
+
+<div class="example"><h2 class="title sectiontitle">Example of cascading roles between maps</h2><div class="p">Consider
+the scenario of a &lt;chapter&gt; element that references a DITA map.
+This scenario could take several forms:<dl class="dl">
+<dt class="dt dlterm">Referenced map contains a single top-level &lt;topicref&gt; element</dt>
+
+<dd class="dd">The entire branch functions as if it were included in the bookmap;
+the top-level &lt;topicref&gt; element is processed as if it were the
+&lt;chapter&gt; element.</dd>
+
+
+<dt class="dt dlterm">Referenced map contains multiple top-level &lt;topicref&gt; elements</dt>
+
+<dd class="dd">Each top-level &lt;topicref&gt; element is processed as if it were
+a &lt;chapter&gt; element (the referencing element).</dd>
+
+
+<dt class="dt dlterm">Referenced map contains a single &lt;appendix&gt; element</dt>
+
+<dd class="dd">The &lt;appendix&gt; element is processed as it were a &lt;chapter&gt;
+element.</dd>
+
+
+<dt class="dt dlterm">Referenced map contains a single &lt;part&gt; element, with nested
+&lt;chapter&gt; elements.</dt>
+
+<dd class="dd">The &lt;part&gt; element is processed as it were a chapter element.
+Nested &lt;chapter&gt; elements may not be understandable by processors;
+applications may recover as described above.</dd>
+
+
+<dt class="dt dlterm">&lt;chapter&gt; element references a single &lt;topicref&gt; element
+rather than a map</dt>
+
+<dd class="dd">The referenced &lt;topicref&gt; element is processed as if it were
+a &lt;chapter&gt; element.</dd>
+
+</dl>
+</div>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita-metadata.html" title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is assigned in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map; this design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts.">DITA metadata</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/cascading-in-a-ditamap.html" title="Certain map-level attributes and metadata elements cascade throughout a map, which facilitates attribute and metadata management. When attributes or metadata elements cascade, they apply to the elements that are children of the element where the attributes or metadata were specified. Cascading applies to a containment hierarchy, as opposed to a element-type hierarchy.">Cascading of attributes and metadata in a DITA map</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/reconciling-topic-and-map-metadata.html" title="The &lt;topicmeta&gt; element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent &lt;topicref&gt; element, any child &lt;topicref&gt; elements, and – if a direct child of the &lt;map&gt; element – on the map as a whole.">Reconciling topic and map metadata</a></div>
+</div>
+</div>
+
+</body>
+</html>

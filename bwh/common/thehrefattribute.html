@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="The href attribute"/>
+<meta name="abstract" content="The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource."/>
+<meta name="description" content="The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource."/>
+<meta name="DC.subject" content="href attribute"/>
+<meta name="keywords" content="href attribute"/>
+<meta name="DC.Relation" scheme="URI" content="../common/complexattributedefinitions.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/thekeysattribute.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="thehrefattribute"/>
+<meta name="DC.Language" content="en-us"/>
+<title>The href attribute</title>
+</head>
+<body id="thehrefattribute">
+
+
+<h1 class="title topictitle1">The href attribute</h1>
+
+
+
+<div class="body refbody"><div class="abstract"><span class="shortdesc">The href attribute is used by many elements to
+provide a reference to another DITA topic or map, to a specific element
+inside a DITA topic or map, or to an external Web page or other non-DITA
+resource.</span>
+The references may be to DITA topics or elements
+within DITA topics or maps in the same document or in another document.</div>
+
+<div class="section"><p class="p">The value of a DITA href attribute must be a valid URI
+reference [<a class="xref" href="http://www.ietf.org/rfc/rfc3986.txt" target="_blank">RFC 3986</a>]. It is an error if the value is
+not a valid URI reference. An implementation may (but need not) give
+an error message, and may (but need not) recover from this error condition
+by attempting to convert the value to a valid URI reference. Note
+that the path separator character in a URI is always the forward slash
+(“/”); the backward slash character (“\”) is not permitted unescaped
+within URIs.</p>
+<p class="p">In the case of a reference to a DITA resource,
+an href value consisting of a URI with no fragment identifier resolves
+to the document element in the referenced document. For the purposes
+of rendering, such as when a topicref reference to a DITA document
+is used to render the content as HTML, this means that all topics
+(and topic specializations) in the target document are included in
+the reference. For the purpose of linking, the reference resolves
+to the first (or only) topic (or topic specialization) in the document. </p>
+<p class="p">An
+href value consisting of a URI with a fragment identifier must have
+a valid DITA local identifier as the portion after the hash. A DITA
+local identifier consists of topicID/elementID for a subelement of
+a topic and of elementID for topics, maps, and map subelements.</p>
+<p class="p">Note
+that certain characters (including, but not limited to, #, ?, \, and
+space) are not permitted unescaped within URIs. Such characters must
+be percent-encoding (per RFC 3986) if there is a need to represent
+them within a string that is a URI. Also note that the “&amp;” (ampersand)
+and “&lt;” (greater than) characters are not permitted in XML attribute
+values, so they must be represented by appropriate character or entity
+references if there is a need to represent them within such a string.
+(Some tools may do the required encoding on the user's behalf
+while others may require the user to avoid the special characters
+or perform the encoding manually.)</p>
+</div>
+
+<div class="example"><div class="p">Some examples of common href syntax in DITA
+include the following. Note that these examples represent only a few
+common scenarios, and are not all inclusive.<ul class="ul">
+<li class="li">Target the first topic in a DITA document: <samp class="ph codeph">href="file.dita"</samp></li>
+
+<li class="li">Target a specific topic in a DITA document: <samp class="ph codeph">href="file.dita#topicid"</samp></li>
+
+<li class="li">Target a non-topic element inside a DITA topic: <samp class="ph codeph">href="#topicid/elementid"</samp></li>
+
+<li class="li">Target an element in a DITA map: <samp class="ph codeph">href="myMap.ditamap#map-branch"</samp></li>
+
+<li class="li">Target an image: <samp class="ph codeph">href="exampleImage.jpg"</samp></li>
+
+<li class="li">Target an external resource: <samp class="ph codeph">href="http://www.example.org"</samp></li>
+
+</ul>
+</div>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/complexattributedefinitions.html" title="Several DITA attributes require more explanation than can fit in a single table cell. Those attributes are collected here.">Complex attribute definitions</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/thekeysattribute.html" title="A keys attribute consists of one or more space-separated keys. Map authors define keys using a topicref or topicref specialization that contains the “keys” attribute. Each key definition introduces a global identifier for a resource referenced from a map. Keys resolve to the resources given as the href value on the key definition topicref element, to content contained within the key definition topicref element, or both.">The keys attribute</a></div>
+</div>
+</div>
+
+</body>
+</html>

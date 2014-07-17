@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="lcAnswerOptionGroup"/>
+<meta name="abstract" content="The &lt;lcAnswerOptionGroup&gt; element provides a container for the options for a true-false, single-select, or multiple-select assessment interaction."/>
+<meta name="description" content="The &lt;lcAnswerOptionGroup&gt; element provides a container for the options for a true-false, single-select, or multiple-select assessment interaction."/>
+<meta name="DC.subject" content="lcAnswerOptionGroup, learning and training elements"/>
+<meta name="keywords" content="lcAnswerOptionGroup, learning and training elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/learning_training_elements_interactions_other.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcAnswerOption.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/lcArea.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="lcAnswerOptionGroup"/>
+<meta name="DC.Language" content="en-us"/>
+<title>lcAnswerOptionGroup</title>
+</head>
+<body id="lcAnswerOptionGroup">
+
+
+  <h1 class="title topictitle1">lcAnswerOptionGroup</h1>
+
+  
+  
+  <div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">lcAnswerOptionGroup</span>&gt; element provides a container for the options for a true-false, single-select, or multiple-select assessment interaction.</p>
+
+    <div class="section" id="lcAnswerOptionGroup__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d290499e43" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d290499e45" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d290499e50" headers="d290499e43" class="stentry"><strong>learningAssessment, learningContent, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d290499e45 d290499e50" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="lcAnswerOption.html" title="The &lt;lcAnswerOption&gt; element in an assessment interaction provides the content and feedback for a question option, and can indicate the correct option.">lcAnswerOption</a>) <em class="ph i"> (one or more) </em>) </td>
+</tr>
+</table>
+</div>
+
+    <div class="section" id="lcAnswerOptionGroup__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d290499e74" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d290499e76" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d290499e81" headers="d290499e74" class="stentry"><strong>learningAssessment, learningContent, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d290499e76 d290499e81" class="stentry"><a class="- topic/xref  ajaxLink" href="lcTrueFalse.html" title="A lcTrueFalse interaction presents the learner with two choices, one correct, the other incorrect, often presented as true/false or yes/no responses.">lcTrueFalse</a>, <a class="- topic/xref  ajaxLink" href="lcSingleSelect.html" title="An lcSingleSelect interaction presents three or more choices, only one of which is correct.">lcSingleSelect</a>, <a class="- topic/xref  ajaxLink" href="lcMultipleSelect.html" title="In an lcMultipleSelect interaction, the learner must indicate two or more correct answers from a list of choices.">lcMultipleSelect</a></td>
+</tr>
+</table>
+</div>
+
+    <div class="section" id="lcAnswerOptionGroup__inheritance"><h2 class="title sectiontitle">Inheritance</h2>
+      <p class="p">+ topic/ul learningInteractionBase-d/ul learning-d/lcAnswerOptionGroup </p>
+
+    </div>
+
+    <div class="example" id="lcAnswerOptionGroup__example"><h2 class="title sectiontitle">Example</h2>
+      
+<pre class="pre codeblock">
+...
+&lt;lcAnswerOptionGroup&gt;
+  &lt;lcAnswerOption&gt;
+    &lt;lcAnswerContent&gt;True&lt;/lcAnswerContent&gt;
+    &lt;lcCorrectResponse/&gt;
+  &lt;/lcAnswerOption&gt;
+  &lt;lcAnswerOption&gt;
+    &lt;lcAnswerContent&gt;False&lt;/lcAnswerContent&gt;
+  &lt;/lcAnswerOption&gt;
+&lt;/lcAnswerOptionGroup&gt;
+...</pre>
+
+    </div>
+
+<div class="section" id="lcAnswerOptionGroup__attributes"><h2 class="title sectiontitle">Attributes</h2>
+ 
+<table cellpadding="4" cellspacing="0" summary="" id="lcAnswerOptionGroup__lcInteractions_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d290499e141" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d290499e144" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d290499e147" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d290499e150" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d290499e153" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d290499e141" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d290499e144" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d290499e147" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290499e150" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290499e153" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d290499e141" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d290499e144" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d290499e147" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290499e150" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290499e153" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d290499e141" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d290499e144" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d290499e147" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290499e150" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d290499e153" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+ 
+</div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/learning_training_elements_interactions_other.html" title="Elements in this group are designed specifically to describe learning and training interactions.">Common learning interactions elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcAnswerOption.html" title="The &lt;lcAnswerOption&gt; element in an assessment interaction provides the content and feedback for a question option, and can indicate the correct option.">lcAnswerOption</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/lcArea.html" title="A lcArea defines an area of a hotspot image that contains a correct or incorrect choice in a hotspot assessment interaction.">lcArea</a></div>
+</div>
+</div>
+
+</body>
+</html>

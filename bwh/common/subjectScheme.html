@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Subject scheme maps"/>
+<meta name="abstract" content="A subject scheme map is used to define sets of controlled values for use in classifying content. Sets of controlled values can be bound to DITA attributes. This allows DITA users to share the controlled values for an information set without having to modify a DTD or XML schema. The list of available values can be modified quickly to adapt to new situations, without the need to manage updates to a document type. In addition, DITA users can define relationships between controlled values and extend a set of controlled values maintained by another team or organization. The list of defined values are not validated by basic XML parsers. Instead, the defined values should be validated by DITA processors."/>
+<meta name="description" content="A subject scheme map is used to define sets of controlled values for use in classifying content. Sets of controlled values can be bound to DITA attributes. This allows DITA users to share the controlled values for an information set without having to modify a DTD or XML schema. The list of available values can be modified quickly to adapt to new situations, without the need to manage updates to a document type. In addition, DITA users can define relationships between controlled values and extend a set of controlled values maintained by another team or organization. The list of defined values are not validated by basic XML parsers. Instead, the defined values should be validated by DITA processors."/>
+<meta name="DC.subject" content="Subject scheme maps"/>
+<meta name="keywords" content="Subject scheme maps"/>
+<meta name="DC.Relation" scheme="URI" content="../common/classification_elements.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/classify-d.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectScheme.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/schemeref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/hasInstance.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/hasKind.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/hasNarrower.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/hasPart.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/hasRelated.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/enumerationdef.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/elementdef.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/attributedef.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/defaultSubject.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectHead.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectHeadMeta.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectdef.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/relatedSubjects.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectRelTable.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectRelHeader.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectRel.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/subjectRole.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="subjectscheme"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Subject scheme maps</title>
+</head>
+<body id="subjectscheme">
+
+
+<h1 class="title topictitle1">Subject scheme maps</h1>
+
+
+
+<div class="body conbody"><p class="shortdesc">A subject scheme map is used to define sets of controlled
+values for use in classifying content.  Sets of controlled values
+can be bound to DITA attributes. This allows DITA users to share the
+controlled values for an information set without having to modify
+a DTD or XML schema. The list of available values can be modified
+quickly to adapt to new situations, without the need to manage updates
+to a document type. In addition, DITA users can define relationships
+between controlled values and extend a set of controlled values maintained
+by another team or organization. The list of defined values are not
+validated by basic XML parsers. Instead, the defined values should
+be validated by DITA processors.</p>
+
+<div class="section"><div class="p">The same core elements in a subject scheme map may be
+used both to define controlled values and to define hierarchical taxonomies:<ul class="ul">
+<li class="li">schemeref</li>
+
+<li class="li">subjectdef</li>
+
+</ul>
+</div>
+<div class="p">The following elements are used to bind taxonomies or
+controlled values to an attribute:<ul class="ul">
+<li class="li">enumerationdef</li>
+
+<li class="li">elementdef</li>
+
+<li class="li">attributedef</li>
+
+<li class="li">defaultSubject</li>
+
+</ul>
+</div>
+<p class="p">The remaining elements in the subject scheme map are used
+to make more precise statements about how values in a taxonomy relate
+to one another.</p>
+</div>
+
+</div>
+
+<div class="related-links">
+<ol class="olchildlinks">
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/subjectScheme.html">subjectScheme</a><br/>
+A subjectScheme is a specialized DITA map that defines a collection of controlled values rather than a collection of topics.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/schemeref.html">schemeref</a><br/>
+A &lt;<span class="keyword">schemeref</span>&gt; element provides a reference to another scheme. Typically, the referenced scheme defines a base set of controlled values extended by the current scheme. The values in the referenced scheme are merged with the current scheme; the result is equivalent to specifying all of the values in a single map.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/hasInstance.html">hasInstance</a><br/>
+The &lt;hasInstance&gt; element specifies that the contained subjects have an INSTANCE-OF relationship with the container subject. In an INSTANCE-OF hierarchy, the child subject is a specific entity or object and the parent subject is a type, kind, or class of entity or object.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/hasKind.html">hasKind</a><br/>
+The &lt;hasKind&gt; element specifies that the contained hierarchy expresses KIND-OF relationships between subjects.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/hasNarrower.html">hasNarrower</a><br/>
+For subjects within the &lt;<span class="keyword">hasNarrower</span>&gt; element, the container subject is more general than each of the contained subjects. That is, this element makes the default hierarchical relationship explicit, although the way in which a relationship is narrower is not specified.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/hasPart.html">hasPart</a><br/>
+The &lt;<span class="keyword">hasPart</span>&gt; element specifies that the contained hierarchy expresses PART-OF relationships between subjects.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/hasRelated.html">hasRelated</a><br/>
+The &lt;<span class="keyword">hasRelated</span>&gt; element identifies an associative relationship between the container subject and each of the contained subjects.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/enumerationdef.html">enumerationdef</a><br/>
+The &lt;<span class="keyword">enumerationdef</span>&gt; element identifies one attribute and one or more categories that contain the controlled values for the enumeration. The type attribute has a default value of keys. </li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/elementdef.html">elementdef</a><br/>
+The &lt;<span class="keyword">elementdef</span>&gt; element identifies an element on which an attribute is enumerated. When the &lt;<span class="keyword">elementdef</span>&gt; is left out of an &lt;<span class="keyword">enumerationdef</span>&gt; element, the enumeration is bound to the attribute in all elements.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/attributedef.html">attributedef</a><br/>
+The &lt;<span class="keyword">attributedef</span>&gt; element specifies the attribute to which a set of controlled values from a subject scheme map are to be applied.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/defaultSubject.html">defaultSubject</a><br/>
+The &lt;<span class="keyword">defaultSubject</span>&gt; element is used within an attribute enumeration to set the default value for that attribute in cases where no value is specified on the attribute. The default subject must be one of the controlled values within the categories specified for the attribute.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/subjectHead.html">subjectHead</a><br/>
+The &lt;subjectHead&gt; element provides a heading for a group of subjects, for use if the scheme is displayed. For instance, a scheme may be displayed to let a user select subjects as part of faceted browsing. The subjectHead element itself does not reference a file and cannot be referenced as a key, so it does not define any controlled values.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/subjectHeadMeta.html">subjectHeadMeta</a><br/>
+The &lt;<span class="keyword">subjectHeadMeta</span>&gt; element allows a navigation title and short description to be associated with a subject heading. </li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/subjectdef.html">subjectdef</a><br/>
+The &lt;<span class="keyword">subjectdef</span>&gt; element defines a subject (also known as a controlled value) within a scheme. To make the subject easy to identify, a &lt;subjectdef&gt; may use a keys attribute to assign a key to the subject. A subject with a key can be identified elsewhere with a keyref. The &lt;subjectdef&gt; may use a navtitle element or attribute to supply a label for the subject. The &lt;subjectdef&gt; may also refer to a topic that captures the consensus definition for the subject.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/relatedSubjects.html">relatedSubjects</a><br/>
+The &lt;<span class="keyword">relatedSubjects</span>&gt; element establishes associative relationships between each child subject and every other child subject (unless the association is restricted by the linking attribute of the subjects).</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/subjectRelTable.html">subjectRelTable</a><br/>
+The &lt;<span class="keyword">subjectRelTable</span>&gt; element is a specialized relationship table which establishes relationships between the subjects in different columns of the same row. This element provides an efficient way to author non-hierarchical relationships between subjects. Tools (such as search tools) that use subject relationships to find related content may use these associative relationships in a similar way to the hierarchical relationships.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/subjectRelHeader.html">subjectRelHeader</a><br/>
+The &lt;<span class="keyword">subjectRelHeader</span>&gt; element specifies the roles played by subjects in associations.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/subjectRel.html">subjectRel</a><br/>
+The &lt;<span class="keyword">subjectRel</span>&gt; element contains a set of subjects that are related in some manner. Each group of subjects is contained in a &lt;subjectRole&gt; element; the associations between different columns in the same row are evaluated in the same way as those in a &lt;relrow&gt; (from which &lt;subjectRel&gt; is specialized) but define relationships between the subjects instead of links between topic documents.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/subjectRole.html">subjectRole</a><br/>
+The &lt;<span class="keyword">subjectRole</span>&gt; element, when used within a &lt;subjectRel&gt; element, contains a set of subjects that are related to other subjects in the same row of the current &lt;<span class="keyword">subjectRelTable</span>&gt;. By default, no relationship is defined between multiple subjects in the same &lt;<span class="keyword">subjectRole</span>&gt; element. When used within the &lt;subjectRelHeader&gt;, the &lt;subjectRole&gt; element defines the category of subject or relationship provided by that column.</li>
+</ol>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/classification_elements.html" title="Classification elements support managing metadata. Those in the Subject Scheme map are used to define controlled values, and to bind them to DITA attributes as enumerations. Those declared in the classification domain are used in other maps to classify content according to the scheme.">Classification elements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/classify-d.html" title="The classification domain elements are used to identify the subject matter of content that is referenced in a map. These subjects must be subjects defined in a subject scheme map. In particular, this allows an author to classify content in new subject categories that are not bound to existing metadata attributes.">Classification domain elements</a></div>
+</div>
+</div>
+
+</body>
+</html>

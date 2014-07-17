@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Summary of addressing elements"/>
+<meta name="abstract" content="This topic contains a table of DITA elements that may be used to link to or address other items. The table describes how and why each element uses the addressing mechanism, rather than defining the element itself."/>
+<meta name="description" content="This topic contains a table of DITA elements that may be used to link to or address other items. The table describes how and why each element uses the addressing mechanism, rather than defining the element itself."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditaaddressing.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/key-based_addressing.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="dita-linking-link-element-summary"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Summary of addressing elements</title>
+</head>
+<body id="dita-linking-link-element-summary">
+
+
+ <h1 class="title topictitle1">Summary of addressing elements</h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc">This topic contains a table of DITA elements that may be used to link to or address
+  other items. The table describes how and why each element uses the addressing mechanism, rather
+  than defining the element itself.</p>
+
+  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. DITA addressing elements</span></caption>
+    
+    
+    <thead class="thead" align="left">
+     <tr class="row">
+      <th class="entry" valign="top" id="d5070e30">Base element type</th>
+
+      <th class="entry" valign="top" id="d5070e33">Description and notes</th>
+
+     </tr>
+
+    </thead>
+
+    <tbody class="tbody">
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">topicref</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Establishes a relationship between the containing map and another map, DITA topic, or
+       non-DITA resource when @href or @keyref is specified. When @processing-role is
+       "resource-only", establishes a dependency on the target resource but does not contribute to
+       the navigation tree. May establish additional relationships between the referenced resource
+       and other resources in the navigation hierarchy as determined by the values of the
+       @collection-type attribute. By default, these additional relationships are bi-directional.
+       The directionality of additional relationships can be controlled using the @linking
+       attribute. </td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">reltable</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Establishes relations of a specific type (as defined by the relationship table) among
+       topicref-linked resources where each row in the table establishes a single set of
+       relationships among the topicref-linked resources in each cell of the row. Relationships
+       defined in relationship tables are outside of any navigation structure defined by the
+       map.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">navref</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Establishes a map-to-map relationship where the integration of the referenced map's
+       navigation structure is deferred. The referenced map is processed independently from the
+       referencing map and does not contribute to the referencing map's key space.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">link</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Establishes a link from its containing topic to another resource. Any &lt;link&gt;
+       element within a topic can be functionally replaced by the equivalent link defined in a
+       relationship table. Likewise, topic-to-topic links defined by relationship tables can be
+       replaced by the equivalent set of &lt;link&gt; elements in the topics involved.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">xref</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Establishes a navigation link from a topic's abstract or body to another DITA element
+       or non-DITA resource.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">image</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Links to an image for display at the point of reference.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">object</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Links to a media object for display at the point of reference.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">longdescref</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Links to a long description for an image or object. Can be used in place of the
+       @longdescref attribute on the parent image or object element.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">longquoteref</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Links to the source of a long quotation. Used in place of the @href or @keyref
+       attribute on &lt;lq&gt; and enables use of all the normal link-controlling
+       attributes.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">data-about</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Establishes an explicit relationship between one or more &lt;data&gt; elements and the
+       DITA element or non-DITA resource to which the data applies.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">Elements that take @keyref but not @href</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Elements that take @keyref but not @href establish navigation links to the referenced
+       DITA element or non-DITA resource when @keyref is specified and the key is bound to a topic,
+       map, or non-DITA resource. If the linking element has empty content and the key definition
+       has a matching subelement in its &lt;topicmeta&gt;, establishes a use-by-reference
+       relationship to the matchin element in the key definition. Includes &lt;ph&gt;, &lt;cite&gt;,
+       &lt;keyword&gt;, and &lt;term&gt;.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">imagemap (utilities domain)</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Enables linking from defined areas overlaid on a graphic. Modeled on the HTML image map
+       facility.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">author</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">May link to a resource that represents the author in some way, such as a biographical
+       topic or image.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">data</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">May link to a resource that represents the metadata value in some way.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">fragref (programming domain)</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Links to a syntax definition fragment.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">lq</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">May link to the source of the quotation.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">publisher</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">May link to a resource that represents the publisher in some way, such as the
+       Publisher's Web site or a publisher description topic.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">source</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">May link to a description of the source for the topic to which the &lt;source&gt; element
+       applies.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">synnoteref (programming domain)</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">May link to a syntax note.</td>
+
+     </tr>
+
+     <tr class="row">
+      <td class="entry" valign="top" headers="d5070e30 ">fn</td>
+
+      <td class="entry" valign="top" headers="d5070e33 ">Establishes a relationship between the content within which the footnote appears and
+       the note itself, such that the footnote is an annotation of the content.</td>
+
+     </tr>
+
+    </tbody>
+
+   </table>
+</div>
+
+ </div>
+
+ 
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditaaddressing.html" title="DITA provides a number of facilities for establishing relationships among DITA elements and between DITA elements and non-DITA resources. All DITA relationships use the same addressing facilities irrespective of the semantics of the relationship established. DITA addresses are either direct, URI-based addresses, or indirect key-based addresses. Within DITA documents, individual elements are addressed by unique IDs specified on the common @id attribute. DITA defines two fragment identifier syntaxes for addressing DITA elements, one for topics and elements within maps and one for non-topic elements within topics.">DITA addressing</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/key-based_addressing.html" title="The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.">Key-based addressing</a></div>
+</div>
+</div>
+
+</body>
+</html>

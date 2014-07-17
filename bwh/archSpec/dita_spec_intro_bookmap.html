@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Bookmap"/>
+<meta name="abstract" content="The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content."/>
+<meta name="description" content="The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_technicalContent_InformationTypes.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/dita_glossarygroup_topic.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="dita_spec_intro_bookmap"/>
+<title>Bookmap</title>
+</head>
+<body id="dita_spec_intro_bookmap">
+
+
+  <h1 class="title topictitle1">Bookmap</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">The DITA bookmap specialization represents the key markup requirements for managing
+    DITA content through book-oriented publication processes, including book metadata and book
+    structures for organizing content.</p>
+
+    <div class="section"><h2 class="title sectiontitle">The purpose of the bookmap specialization</h2>
+      
+      <p class="p">Books and other printed media are popular ways to present DITA content. By specializing the
+        general DITA map structure into the general structure and subject areas used by most
+        book-oriented DTDs, bookmaps enable users to organize their DITA information into front
+        matter, parts, chapters, and so forth. A rich set of metadata allows for recording
+        information about the book, such as its authors and owners, versions, and production
+        history.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">The structure of the bookmap specialization</h2>
+      
+      <p class="p">The &lt;bookmap&gt; element is the top-level element for a DITA bookmap. Most of the content
+        for a bookmap is optional, allowing for <span class="ph">specializations that further restrict
+          the bookmap
+        model.</span>.</p>
+
+      <p class="p">A bookmap allows the following parts:</p>
+
+      <ul class="ul">
+        <li class="li">An intial title or booktitle (booktitle has more semantics)</li>
+
+        <li class="li">Book metadata (publisher, author, copyright holders and dates, etc.)</li>
+
+        <li class="li">Front matter (placement for Table of Contents and other preliminary information) </li>
+
+        <li class="li">Any number of chapters or parts (parts can group chapters, chapters can group
+          topics)</li>
+
+        <li class="li">An appendices section (similar to a part or a chapter, can group multiple
+          appendices</li>
+
+        <li class="li">Back matter (similar to front matter, notices, glossary, index, etc.)</li>
+
+        <li class="li">Relationship table</li>
+
+      </ul>
+
+      <p class="p">In typical book-oriented DTDs or schemas, authors commonly manage major content structures
+        as external entities, separate from the body of the book, and referenced as imbedded
+        elements into the overall structure. Bookmap follows the same organizational approach, using
+        the topicref-based structure of DITA maps as the archetype for the major divisions of a
+        book.</p>
+
+      <div class="p">Here is an example of a simple bookmap. It includes several mechanisms to include chapter
+          content:<ul class="ul" id="dita_spec_intro_bookmap__ul_b654d314-2a70-4c88-a9e0-21050887ebe6">
+          <li class="li">Referencing a DITA map</li>
+
+          <li class="li">Referencing a DITA topic</li>
+
+          <li class="li">Nesting &lt;topicref&gt; elements</li>
+
+        </ul>
+</div>
+
+    </div>
+
+    <div class="example">
+      <pre class="pre codeblock">&lt;bookmap id="taskbook"&gt;
+  &lt;booktitle&gt;
+    &lt;mainbooktitle&gt;Product tasks&lt;/mainbooktitle&gt;
+    &lt;booktitlealt&gt;Tasks and what they do&lt;/booktitlealt&gt;
+  &lt;/booktitle&gt;
+  &lt;bookmeta&gt;
+    &lt;author&gt;John Doe&lt;/author&gt;
+    &lt;bookrights&gt;
+      &lt;copyrfirst&gt;
+        &lt;year&gt;2006&lt;/year&gt;
+      &lt;/copyrfirst&gt;
+      &lt;bookowner&gt;
+        &lt;person href="task_preface.dita&gt;Jane Doe&lt;/person&gt;
+      &lt;/bookowner&gt;
+    &lt;/bookrights&gt;
+  &lt;/bookmeta&gt;
+  &lt;frontmatter&gt;
+    &lt;preface/&gt;
+  &lt;/frontmatter&gt;
+  &lt;chapter format="ditamap" href="installing.ditamap"/&gt;
+  &lt;chapter href="configuring.dita"/&gt;
+  &lt;chapter href="maintaining.dita"&gt;
+    &lt;topicref href="maintainstorage.dita"/&gt;
+    &lt;topicref href="maintainserver.dita"/&gt;
+    &lt;topicref href="maintaindatabase.dita"/&gt;
+  &lt;/chapter&gt;
+  &lt;appendix href="task_appendix.dita"/&gt;
+  &lt;/bookmap&gt;</pre>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Modules</h2>
+      
+      <p class="p">The following DITA modules are provided for the bookmap specialization.</p>
+
+      <ul class="sl simple">
+        <li class="sli">bookmap.dtd, bookmap.ent, bookmap.mod (DTD)</li>
+
+        <li class="sli">bookmap.xsd, bookmapGrp.xsd, bookmapMod.xsd (Schema)</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_technicalContent_InformationTypes.html" title="The Technical Content package contains five topic specializations that support seven document types: concept, reference, general task, strict task, machinery task, glossary entry, and glossary group. These topic types are specialized from the base topic and are designed specifically for information that describes how to use products and processes they are dominated by procedural, task-oriented information. The Technical Content package also includes the map document type.">Technical content: Document and information types</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita_glossarygroup_topic.html" title="Glossary group &lt;glossgroup&gt; topics may be used to contain multiple glossentry topics in a single collection file.">Glossary group topic</a></div>
+</div>
+</div>
+
+</body>
+</html>

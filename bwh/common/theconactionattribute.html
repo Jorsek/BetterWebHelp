@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="The conaction attribute"/>
+<meta name="abstract" content="The conaction attribute allows users to push content from one topic into another. It causes the conref attribute to work in reverse, so that the content is pushed from the current topic into another, rather than pulled from another topic into the current one."/>
+<meta name="description" content="The conaction attribute allows users to push content from one topic into another. It causes the conref attribute to work in reverse, so that the content is pushed from the current topic into another, rather than pulled from another topic into the current one."/>
+<meta name="DC.Relation" scheme="URI" content="../common/complexattributedefinitions.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/theconrefattribute.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/theconrefendattribute.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="theconactionattribute"/>
+<meta name="DC.Language" content="en-us"/>
+<title>The conaction attribute</title>
+</head>
+<body id="theconactionattribute">
+
+
+<h1 class="title topictitle1">The conaction attribute</h1>
+
+
+<div class="body refbody"><p class="shortdesc">The conaction attribute allows users to push content from
+one topic into another. It causes the conref attribute to work in
+reverse, so that the content is pushed from the current topic into
+another, rather than pulled from another topic into the current one.</p>
+
+<div class="section"><div class="note note"><span class="notetitle">Note:</span> In the descriptions below, the word <em class="ph i">target</em> always
+refers to the element referenced by a conref attribute.</div>
+<p class="p">There
+are three possible functions using the conaction attribute: replacing
+an element, pushing content before an element, and pushing content
+after an element. The conaction attribute always declares the desired
+function while the conref attribute provides the target of the reference
+using the standard conref syntax.</p>
+<p class="p">In each case, an element pushed
+using conref must be of the same type as, or more specialized than,
+its target. If the pushed element is more specialized than the target,
+then it should be generalized when the conref is resolved. This ensures
+that the content will be valid in the target topic.</p>
+<ul class="ul">
+<li class="li">It is valid to push using conref when the two elements involved
+are of the same type. For example, a step element may use conref push
+with another step as the target of the conref.</li>
+
+<li class="li">The target element may be more general than the source. For example,
+it is legal to push a &lt;step&gt; element to replace a general list
+item (li); the step element should be generalized back to a list item
+during the process.</li>
+
+<li class="li">It is not possible to push a more general element into a specialized
+context. For example, it is not legal to push a list item (&lt;li&gt;)
+in order to replace a &lt;step&gt;, because the list item allows many
+items that are not valid in the specialized context.</li>
+
+</ul>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Replacing content in another topic</h2><p class="p">When
+the conaction attribute is set to "pushreplace", the source element
+will replace the target specified on the conref attribute. The pushed
+content remains in the source topic where it was originally authored.</p>
+<div class="p">For
+example, assume that a task in example.dita has the id "example",
+and contains a step with the id "b": <pre class="pre codeblock">&lt;task id="example" xml:lang="en"&gt;
+  &lt;title&gt;Example topic&lt;/title&gt;
+  &lt;taskbody&gt;
+    &lt;steps&gt;
+      &lt;step id="a"&gt;&lt;cmd&gt;A&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="b"&gt;&lt;cmd&gt;B&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="c"&gt;&lt;cmd&gt;C&lt;/cmd&gt;&lt;/step&gt;
+    &lt;/steps&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;</pre>
+</div>
+<div class="p">In order to replace the step with id="b",
+another topic must combine a conaction value of "pushreplace" with
+a conref attribute that references this step:<pre class="pre codeblock">&lt;task id="other" xml:lang="en"&gt;
+  ...
+   &lt;step conaction="pushreplace" 
+         conref="example.dita#example/b"&gt;
+     &lt;cmd&gt;Updated B&lt;/cmd&gt;
+   &lt;/step&gt;
+  ...
+&lt;/task&gt;</pre>
+</div>
+<div class="p">The result will be an updated version
+of example.dita which contains the pushed step:<pre class="pre codeblock">&lt;task id="example" xml:lang="en"&gt;
+  &lt;title&gt;Example topic&lt;/title&gt;
+  &lt;taskbody&gt;
+    &lt;steps&gt;
+      &lt;step id="a"&gt;&lt;cmd&gt;A&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="b"&gt;&lt;cmd&gt;Updated B&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="c"&gt;&lt;cmd&gt;C&lt;/cmd&gt;&lt;/step&gt;
+    &lt;/steps&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;</pre>
+</div>
+<p class="p">When
+resolving a conref push action, attributes are resolved using the
+same precedence as for normal conref, with one exception. Attributes
+on the element with the conref attribute (in this case, the source
+doing the push) will take priority over those on the referenced element.
+The exception is that if the source element does not specify an ID,
+the ID on the referenced element remains; if the source element does
+specify an ID then that replaces the ID on the referenced element.</p>
+<div class="note note"><span class="notetitle">Note:</span> It
+is an error for two source topics to replace the same element. Applications
+may, but need not, warn users if more than one element attempts to
+replace a single target.</div>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Pushing content before or after another element</h2><p class="p">Setting
+the conaction attribute to "pushbefore" allows an element to be pushed
+before the element referenced by the conref attribute. Likewise, setting
+the conaction attribute to "pushafter" allows an element to be pushed
+after the element referenced by the conref attribute. Multiple sources
+may push content before or after the same target; the order in which
+that content is pushed is undefined. </p>
+<p class="p">When an element is pushed
+before or after a target, the resulting document will have at least
+two of that element. Because this is not always valid, a document
+attempting to push content before or after a target must take an extra
+step to ensure that the result will be valid. The extra step makes
+use of the conaction="mark" value.</p>
+<p class="p">When pushing before, the
+conref attribute itself looks just as it did when replacing, but the
+conaction attribute is set to "mark" because it is marking the target
+element. This element remains empty; its purpose is to ensure that
+it is legal to have more than one of the current element. Immediately
+before the element which marks the target, you will place the content
+that you actually want to push. This element will set the conaction
+attribute to "pushbefore".</p>
+<p class="p">When pushing after, the procedure
+is the same, except that the order of the elements is reversed. The
+element with conaction="pushafter" comes immediately after the element
+which marks the target.</p>
+<p class="p">Attributes on the element which is pushed
+(the one with conaction="pushbefore") must be retained on the target,
+apart from the conaction attribute itself. If this causes the result
+document to end up with duplicate IDs, an application may (but need
+not) recover by dropping the duplicate ID, modifying it to ensure
+uniqueness, or warning the user.</p>
+<div class="note note"><span class="notetitle">Note:</span> The following restrictions
+apply when pushing content before or after an element: <ul class="ul">
+<li class="li">The elements that use conaction="mark" and conaction="pushbefore"
+must be the same type as each other and must appear in sequence. This
+restriction prevents a topic from trying to push a &lt;body&gt; element
+before or after another &lt;body&gt; element, because it is not valid
+to have two body elements in sequence.</li>
+
+<li class="li">The container elements of the source and target must match, or
+the container of the source element may be a specialization of the
+target's container. This is also to ensure validity of the target;
+for example, while it is possible to include multiple titles in a
+section, it is not possible to do so in a figure. Comparing the parents
+prevents a second section title from being pushed before a figure
+title (the resulting figure would not be valid DITA). This restriction
+only applies to the pushbefore or pushafter actions, not to the pushreplace
+action.</li>
+
+</ul>
+</div>
+<p class="p">When content is pushed from one topic to another, it
+is still rendered in the original context. Processors may delete empty
+the element that with the conaction="mark" attribute. In order to
+push content from a topic without actually rendering that topic on
+its own, the topic should be referenced from the map with the processing-role
+attribute set to "resource-only".</p>
+</div>
+
+<div class="example"><h2 class="title sectiontitle">Example: pushing an element before the target</h2><div class="p">The
+following example pushes a step before "b" in the example.dita file
+shown above. <pre class="pre codeblock">  &lt;step conaction="pushbefore"&gt;&lt;cmd&gt;Do this before B&lt;/cmd&gt;&lt;/step&gt;
+  &lt;step conaction="mark"
+        conref="example.dita#example/b"/&gt;</pre>
+</div>
+<div class="p">The result
+contains the pushed step element before "b".<pre class="pre codeblock">&lt;task id="example" xml:lang="en"&gt;
+  &lt;title&gt;Example topic&lt;/title&gt;
+  &lt;taskbody&gt;
+    &lt;steps&gt;
+      &lt;step id="a"&gt;&lt;cmd&gt;A&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step&gt;&lt;cmd&gt;Do this before B&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="b"&gt;&lt;cmd&gt;B&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="c"&gt;&lt;cmd&gt;C&lt;/cmd&gt;&lt;/step&gt;
+    &lt;/steps&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;</pre>
+</div>
+</div>
+
+<div class="example"><h2 class="title sectiontitle">Example: pushing an element after the target</h2><div class="p">Pushing
+an element after a target is exactly the same as pushing before, except
+that the order of the "mark" element and the pushed element are reversed.<pre class="pre codeblock">  &lt;step conaction="mark"
+        conref="example.dita#example/b"/&gt;
+  &lt;step conaction="pushafter"&gt;&lt;cmd&gt;Do this AFTER B&lt;/cmd&gt;&lt;/step&gt;
+</pre>
+</div>
+<div class="p">In this case the resulting document has the pushed
+content after step b:<pre class="pre codeblock">&lt;task id="example" xml:lang="en"&gt;
+  &lt;title&gt;Example topic&lt;/title&gt;
+  &lt;taskbody&gt;
+    &lt;steps&gt;
+      &lt;step id="a"&gt;&lt;cmd&gt;A&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="b"&gt;&lt;cmd&gt;B&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step&gt;&lt;cmd&gt;Do this AFTER B&lt;/cmd&gt;&lt;/step&gt;
+      &lt;step id="c"&gt;&lt;cmd&gt;C&lt;/cmd&gt;&lt;/step&gt;
+    &lt;/steps&gt;
+  &lt;/taskbody&gt;
+&lt;/task&gt;</pre>
+</div>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Combining conaction with conkeyref or conrefend</h2><p class="p">The conkeyref attribute may be used
+as an indirect way to specify a conref target. If the conkeyref attribute
+is specified on an element that also uses the conaction attribute,
+the conkeyref attribute is used to determine the target of the conref
+push (as it would normally be used to determine the target of conref).</p>
+<p class="p">The
+conref push function does not provide the ability to push a range
+of elements, so it is an error to specify the conrefend attribute
+together with the conaction attribute. If the two are specified together
+an application may (but need not) recover by warning the user and
+ignoring the conrefend attribute.</p>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/complexattributedefinitions.html" title="Several DITA attributes require more explanation than can fit in a single table cell. Those attributes are collected here.">Complex attribute definitions</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/theconrefattribute.html" title="This attribute is used to reference content that can be reused. It allows reuse of DITA elements, including topic or map level elements.">The conref attribute</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/theconrefendattribute.html" title="The conrefend attribute is used when referencing a range of elements with the conref mechanism. The conref or conkeyref attribute points to the first element in the range, while conrefend points to the last element in the range. Although the start and end elements must be of the same type as the referencing element (or specialized from that element), the intermediary, contiguous nodes in the middle of the range do not have to be the same.">The conrefend attribute</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="index-sort-as"/>
+<meta name="abstract" content="The &lt;index-sort-as&gt; element specifies a sort phrase under which an index entry would be sorted."/>
+<meta name="description" content="The &lt;index-sort-as&gt; element specifies a sort phrase under which an index entry would be sorted."/>
+<meta name="DC.subject" content="index-sort-as, Indexing domain elements"/>
+<meta name="keywords" content="index-sort-as, Indexing domain elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/indexing-d.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/index-see-also.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="index-sort-as"/>
+<meta name="DC.Language" content="en-us"/>
+<title>index-sort-as</title>
+</head>
+<body id="index-sort-as">
+
+
+<h1 class="title topictitle1">index-sort-as</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;index-sort-as&gt; element specifies a sort phrase
+under which an index entry would be sorted.</p>
+
+<div class="section"><p class="p">This element gives an author the flexibility to sort an
+index entry in an index differently from how its text normally would
+be sorted. The common use for this is to disregard insignificant leading
+text, such as punctuation or words like "the" or "a". For example,
+the author may want &lt;data&gt; to be sorted under the letter D rather
+than the left angle bracket (&lt;). An author may want to include
+such an entry under both the punctuation heading and the letter D,
+in which case there can be two index entry directives differentiated
+only by the sort order.  </p>
+<p class="p">Certain languages may have special
+sort order needs. For example, Japanese index entries might be written
+partially or wholly in kanji, but need to be sorted in phonetic order
+according to its hiragana/katakana rendition. There is no reliable
+automated way to map written to phonetic text: for kanji text, there
+can be multiple phonetic possibilities depending on the context. The
+only way to correctly sort Japanese index entries is to keep the phonetic
+counterparts with the written forms. The phonetic text would be presented
+as the sort order text for indexing purposes.</p>
+<p class="p">The &lt;index-sort-as&gt; element's content is
+logically augmented by the textual content of its parent &lt;indexterm&gt;
+element to produce the effective sort key (i.e., the textual content
+acts as a secondary sort field), so two indexterms with different
+content but the same &lt;index-sort-as&gt; value would never merge
+into a single index entry.</p>
+<p class="p">An &lt;index-sort-as&gt; element
+provides sort key information for the indexterm that is its parent;
+therefore, in a multiple level indexterm, the index-sort-as only affects
+the level in which it occurs.</p>
+<p class="p">It is an error if there is more
+than one index-sort-as child for a given indexterm. An implementation
+may (but need not) give an error message, and may (but need not) recover
+from this error condition by ignoring all but the last index-sort-as.</p>
+</div>
+
+<div class="section" id="index-sort-as__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d263504e50" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d263504e52" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d263504e57" headers="d263504e50" class="stentry"><strong>topic (base), map (base), classifyMap, learningAssessment, learningBookmap, learningContent, learningMap, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d263504e52 d263504e57" class="stentry"> ( text data  or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="foreign.html" title="The &lt;foreign&gt; element allows the introduction of non-DITA content, for example, MathML, SVG, or Rich Text Format (RTF). The &lt;foreign&gt; element or a specialization may contain more than one type of non-DITA content or a mix of DITA and non-DITA content. Specialization of the &lt;foreign&gt; element generally is implemented as a domain, but architects looking for more control over the content may implement foreign vocabularies as structural specializations.">foreign</a> or <a class="- topic/xref  ajaxLink" href="unknown.html" title="The &lt;unknown&gt; element is an open extension that allows information architects to incorporate xml fragments that do not necessarily fit into an existing DITA use case. Processors should ignore this element unless otherwise instructed.">unknown</a> or <a class="- topic/xref  ajaxLink" href="keyword.html" title="The &lt;keyword&gt; element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.">keyword</a> or <a class="- topic/xref  ajaxLink" href="term.html" title="The &lt;term&gt; element identifies words that may have or require extended definitions or explanations.">term</a>) <em class="ph i"> (any number) </em></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d263504e140" headers="d263504e50" class="stentry"><strong>topic (technical content), map (technical content), concept, ditabase, glossary, glossentry, glossgroup, reference, task, bookmap</strong></td>
+
+<td valign="top" headers="d263504e52 d263504e140" class="stentry"> ( text data  or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="foreign.html" title="The &lt;foreign&gt; element allows the introduction of non-DITA content, for example, MathML, SVG, or Rich Text Format (RTF). The &lt;foreign&gt; element or a specialization may contain more than one type of non-DITA content or a mix of DITA and non-DITA content. Specialization of the &lt;foreign&gt; element generally is implemented as a domain, but architects looking for more control over the content may implement foreign vocabularies as structural specializations.">foreign</a> or <a class="- topic/xref  ajaxLink" href="unknown.html" title="The &lt;unknown&gt; element is an open extension that allows information architects to incorporate xml fragments that do not necessarily fit into an existing DITA use case. Processors should ignore this element unless otherwise instructed.">unknown</a> or <a class="- topic/xref  ajaxLink" href="keyword.html" title="The &lt;keyword&gt; element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.">keyword</a> or <a class="- topic/xref  ajaxLink" href="apiname.html" title="The &lt;apiname&gt; element provides the name of an application programming interface (API) such as a Java class name or method name. This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information.">apiname</a> or <a class="- topic/xref  ajaxLink" href="option.html" title="The &lt;option&gt; element describes an option that can be used to modify a command (or something else, like a configuration). This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information.">option</a> or <a class="- topic/xref  ajaxLink" href="parmname.html" title="When referencing the name of an application programming interface parameter within the text flow of your topic, use the parameter name (&lt;parmname&gt;) element to mark up the parameter. This element is part of the DITA programming domain, a special set of DITA elements designed to document programming tasks, concepts, and reference information.">parmname</a> or <a class="- topic/xref  ajaxLink" href="cmdname.html" title="The command name (&lt;cmdname&gt;) element specifies the name of a command when it is part of a software discussion. This element is part of the DITA software domain, a special set of DITA elements designed to document software tasks, concepts and reference information.">cmdname</a> or <a class="- topic/xref  ajaxLink" href="msgnum.html" title="The message number (&lt;msgnum&gt;) element contains the number of a message produced by an application or program. This element is part of the DITA software domain, a special set of DITA elements designed to document software tasks, concepts and reference information.">msgnum</a> or <a class="- topic/xref  ajaxLink" href="varname.html" title="The variable name (&lt;varname&gt;) element defines a variable that must be supplied to a software application. The variable name element is very similar to the variable (var) element, but variable name is used outside of syntax diagrams. This element is part of the DITA software domain, a special set of DITA elements designed to document software tasks, concepts and reference information.">varname</a> or <a class="- topic/xref  ajaxLink" href="wintitle.html" title="The window title &lt;wintitle&gt; element can be used to mark up names of windows or dialogs, or other user interface elements at the same level of grouping, including wizard titles, wizard page titles, and window pane titles. This element is part of the DITA user interface domain, a special set of DITA elements designed to document user interface tasks, concepts and reference information.">wintitle</a> or <a class="- topic/xref  ajaxLink" href="term.html" title="The &lt;term&gt; element identifies words that may have or require extended definitions or explanations.">term</a> or <a class="- topic/xref  ajaxLink" href="abbreviated-form.html" title="The &lt;abbreviated-form&gt; element represents a reference to a term that may appear in an abbreviated form (often an acronym). The long and short forms of the term are generally defined in a &lt;glossentry&gt; topic. Processors should display the referenced term when rendering an &lt;abbreviated-form&gt; element.">abbreviated-form</a>) <em class="ph i"> (any number) </em></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d263504e313" headers="d263504e50" class="stentry"><strong>machineryTask</strong></td>
+
+<td valign="top" headers="d263504e52 d263504e313" class="stentry"> ( text data  or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="foreign.html" title="The &lt;foreign&gt; element allows the introduction of non-DITA content, for example, MathML, SVG, or Rich Text Format (RTF). The &lt;foreign&gt; element or a specialization may contain more than one type of non-DITA content or a mix of DITA and non-DITA content. Specialization of the &lt;foreign&gt; element generally is implemented as a domain, but architects looking for more control over the content may implement foreign vocabularies as structural specializations.">foreign</a> or <a class="- topic/xref  ajaxLink" href="unknown.html" title="The &lt;unknown&gt; element is an open extension that allows information architects to incorporate xml fragments that do not necessarily fit into an existing DITA use case. Processors should ignore this element unless otherwise instructed.">unknown</a> or <a class="- topic/xref  ajaxLink" href="keyword.html" title="The &lt;keyword&gt; element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.">keyword</a> or <a class="- topic/xref  ajaxLink" href="wintitle.html" title="The window title &lt;wintitle&gt; element can be used to mark up names of windows or dialogs, or other user interface elements at the same level of grouping, including wizard titles, wizard page titles, and window pane titles. This element is part of the DITA user interface domain, a special set of DITA elements designed to document user interface tasks, concepts and reference information.">wintitle</a> or <a class="- topic/xref  ajaxLink" href="term.html" title="The &lt;term&gt; element identifies words that may have or require extended definitions or explanations.">term</a>) <em class="ph i"> (any number) </em></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="index-sort-as__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d263504e409" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d263504e411" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d263504e416" headers="d263504e409" class="stentry"><strong>topic (base), map (base), topic (technical content), map (technical content), concept, ditabase, glossary, glossentry, glossgroup, reference, task (strict), task (general), bookmap, classifyMap, machineryTask, learningAssessment, learningBookmap, learningContent, learningMap, learningOverview, learningPlan, learningSummary</strong></td>
+
+<td valign="top" headers="d263504e411 d263504e416" class="stentry"><a class="- topic/xref  ajaxLink" href="indexterm.html" title="The content of an &lt;indexterm&gt; element is used to produce an index entry in the generated index. You can nest indexterm elements to create multi-level indexes. The content is not output as part of the topic content, only as part of the index.">indexterm</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="index-sort-as__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">+
+topic/index-base indexing-d/index-sort-as </p>
+</div>
+
+<div class="example" id="index-sort-as__example"><p class="p">This is an example of an index entry for &lt;data&gt;
+that will be sorted as "data":</p>
+<pre class="pre codeblock">&lt;indexterm&gt;&amp;lt;data&amp;gt;&lt;index-sort-as&gt;data&lt;/index-sort-as&gt;&lt;/indexterm&gt;</pre>
+</div>
+
+<div class="section" id="index-sort-as__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="index-sort-as__index-sort-as_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d263504e450" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d263504e453" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d263504e456" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d263504e459" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d263504e462" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d263504e450" class="stentry">keyref</td>
+ 
+			 <td valign="top" headers="d263504e453" class="stentry"><span class="ph" id="index-sort-as__d8034e2664">Keyref provides a redirectable
+				  reference based on a key defined within a map. See 
+				  <a class="- topic/xref  ajaxLink" href="common/thekeyrefattribute.html" title="The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference. When the DITA content is processed, the key references are resolved using key definitions from DITA maps.">The keyref attribute</a> for information on
+				  using this attribute.</span></td>
+ 
+			 <td valign="top" headers="d263504e456" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d263504e459" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d263504e462" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d263504e450" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+				and localization-atts groups)</td>
+ 
+			 <td valign="top" headers="d263504e453" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d263504e456" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d263504e459" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d263504e462" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d263504e450" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d263504e453" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d263504e456" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d263504e459" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d263504e462" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d263504e450" class="stentry">class</td>
+ 
+			 <td valign="top" headers="d263504e453" class="stentry">A common attribute described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d263504e456" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d263504e459" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d263504e462" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/indexing-d.html" title="The indexing domain provides several new elements for use with indexing. The new elements allow authors to define &#34;See&#34; and &#34;See also&#34; references, and to override the default sort order for a term.">Indexing group elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/index-see-also.html" title="An &lt;index-see-also&gt; element within an &lt;indexterm&gt; redirects the reader to another index entry that the reader should reference in addition to the current one.">index-see-also</a></div>
+</div>
+</div>
+
+</body>
+</html>

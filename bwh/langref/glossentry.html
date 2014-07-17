@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="glossentry"/>
+<meta name="abstract" content="The &lt;glossentry&gt; element defines a single sense of a glossary term. Glossary entries for different term senses can be reused independently of one another. DITA 1.2 adds several elements to the glossentry topic type, allowing it to specify additional information about a term (beyond just the definition)."/>
+<meta name="description" content="The &lt;glossentry&gt; element defines a single sense of a glossary term. Glossary entries for different term senses can be reused independently of one another. DITA 1.2 adds several elements to the glossentry topic type, allowing it to specify additional information about a term (beyond just the definition)."/>
+<meta name="DC.subject" content="glossentry, Glossentry elements"/>
+<meta name="keywords" content="glossentry, Glossentry elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/glossary2.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/glossterm.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="glossentry"/>
+<meta name="DC.Language" content="en-us"/>
+<title>glossentry</title>
+</head>
+<body id="glossentry">
+
+
+<h1 class="title topictitle1">glossentry</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">glossentry</span>&gt; element defines
+a single sense of a glossary term. Glossary entries for different
+term senses can be reused independently of one another. <span class="ph">DITA
+1.2 adds several elements to the glossentry topic type, allowing it
+to specify additional information about a term (beyond just the definition).</span></p>
+
+<div class="section">The recommended (but not required) book processing is to
+sort and group glossary entries based on the localized term so a back-of-the-book
+glossary can contain a collated list of terms with the definitions
+of the individual senses of each term indented under the term. The
+glossary can have a different organization in different languages
+depending on the translation of the terms. One possible implementation
+of a glossary in online processing is to associate a hotspot for mentions
+of terms in &lt;term&gt; elements and display the definition on hover
+or click.</div>
+
+<div class="section" id="glossentry__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d232887e45" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d232887e47" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d232887e52" headers="d232887e45" class="stentry"><strong>ditabase, glossary, glossentry, glossgroup</strong></td>
+
+<td valign="top" headers="d232887e47 d232887e52" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="glossterm.html" title="The &lt;glossterm&gt; element specifies the preferred term associated with a definition of a sense. If the same term has multiple senses, create a separate &lt;glossentry&gt; topic for each sense.">glossterm</a>)  then  (<a class="- topic/xref  ajaxLink" href="glossdef.html" title="The &lt;glossdef&gt; element specifies the definition of one sense of a term. If a term has multiple senses, create a separate &lt;glossentry&gt; topic to define each sense.">glossdef</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="prolog.html" title="The &lt;prolog&gt; element contains information about the topic as an whole (for example, author information or subject category) that is either entered by the author or maintained by a software application. Much of the metadata inside the &lt;prolog&gt; will not be displayed with the topic when the topic is rendered, but may be used by processes that generate search indexes or customize navigation.">prolog</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="glossBody.html" title="The &lt;glossbody&gt; element is used to provide details about a glossary term (such as part of speech or additional forms of the term).">glossBody</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="related-links.html" title="The related information links of a topic (&lt;related-links&gt; element) are stored in a special section following the body of the topic. After a topic is processed into its final output form, the related links are usually displayed at the end of the topic, although some Web-based help systems might display them in a separate navigation frame.">related-links</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="no-topic-nesting.html" title="The &lt;no-topic-nesting&gt; element is a placeholder in the DITA architecture. It is not actually used by the default DITA document types; it is for use only when creating a validly customized document type where the information designer wants to eliminate the ability to nest topics. Not intended for use by authors, and has no associated output processing.">no-topic-nesting</a>) <em class="ph i"> (any number) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="glossentry__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d232887e148" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d232887e150" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d232887e155" headers="d232887e148" class="stentry"><strong>ditabase</strong></td>
+
+<td valign="top" headers="d232887e150 d232887e155" class="stentry"><a class="- topic/xref  ajaxLink" href="dita.html" title="The &lt;dita&gt; element provides a top-level container for multiple topics when you create documents using the ditabase document type. The &lt;dita&gt; element lets you create any sequence of concept, task, and reference topics, and the ditabase document type lets you nest these topic types inside each other. The &lt;dita&gt; element has no particular output implications; it simply allows you to create multiple topics of different types at the same level in a single document.">dita</a>, <a class="- topic/xref  ajaxLink" href="topic.html" title="The &lt;topic&gt; element is the top-level DITA element for a single-subject topic or article. Other top-level DITA elements that are more content-specific are &lt;concept&gt;, &lt;task&gt;, &lt;reference&gt;, and &lt;glossentry&gt;, all of which are specializations of the &lt;topic&gt; element.">topic</a>, <a class="- topic/xref  ajaxLink" href="concept.html" title="The &lt;concept&gt; element is the top-level element for a topic that answers the question &#34;what is?&#34; Concepts provide background information that users must know before they can successfully work with a product or interface. Often, a concept is an extended definition of a major abstraction such as a process or function. It might also have an example or a graphic, but generally the structure of a concept is fairly simple.">concept</a>, <a class="- topic/xref  ajaxLink" href="task.html" title="The &lt;task&gt; element is the top-level element for a task topic. Tasks are the main building blocks for task-oriented user assistance. They generally provide step-by-step instructions that will enable a user to perform a task. A task answers the question of &#34;how to?&#34; by telling the user precisely what to do and the order in which to do it. Tasks have the same high-level structure as other topics, with a title, short description and body.">task</a>, <a class="- topic/xref  ajaxLink" href="reference.html" title="The &lt;reference&gt; element defines a top-level container for a reference topic. Reference topics document programming constructs or facts about a product. Examples of reference topics include (but are not limited to) product specifications, environmental specifications, equipment lists, parts lists, required tools, language elements, class descriptions, commands, functions, and API information. All of these items provide quick access to facts, but no deeper explanation of related concepts or tasks. Reference topics have the same high-level structure as any other topic type, with a title, short description, and body. Within the body, reference topics are typically organized into one or more sections, property lists, and tables. The reference topic type provides general rules that apply to all kinds of reference information, using elements like &lt;refsyn&gt; for syntax or signatures, and &lt;properties&gt; for lists of properties and values.">reference</a>, <a class="- topic/xref  ajaxLink" href="glossgroup.html" title="The &lt;glossgroup&gt; is a specialized topic element that may be used to contain multiple &lt;glossentry&gt; topics within a single collection.">glossgroup</a></td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d232887e251" headers="d232887e148" class="stentry"><strong>glossgroup</strong></td>
+
+<td valign="top" headers="d232887e150 d232887e251" class="stentry"><a class="- topic/xref  ajaxLink" href="glossgroup.html" title="The &lt;glossgroup&gt; is a specialized topic element that may be used to contain multiple &lt;glossentry&gt; topics within a single collection.">glossgroup</a></td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="glossentry__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+topic/topic concept/concept glossentry/glossentry </p>
+</div>
+
+<div class="example" id="glossentry__example"><h2 class="title sectiontitle">Example</h2><div class="fig fignone"><span class="figcap">Figure 1. The
+glossary term "USB flash drive" with additional information</span>
+<pre class="pre codeblock">&lt;glossentry id="usbfd"&gt;
+  &lt;glossterm&gt;USB flash drive&lt;/glossterm&gt;
+  &lt;glossdef&gt;A small portable drive.&lt;/glossdef&gt;
+  &lt;glossBody&gt;
+    &lt;glossPartOfSpeech value="noun"/&gt;
+    &lt;glossUsage&gt;Do not provide in upper case (as in "USB Flash
+Drive") because that suggests a trademark.&lt;/glossUsage&gt;
+    &lt;glossAlt&gt;
+      &lt;glossAcronym&gt;UFD&lt;/glossAcronym&gt;
+      &lt;glossUsage&gt;Explain the acronym on first occurrence.&lt;/glossUsage&gt;
+    &lt;/glossAlt&gt;
+    &lt;glossAlt id="memoryStick"&gt;
+      &lt;glossSynonym&gt;memory stick&lt;/glossSynonym&gt;
+      &lt;glossUsage&gt;This is a colloquial term.&lt;/glossUsage&gt;
+    &lt;/glossAlt&gt;
+    &lt;glossAlt&gt;
+      &lt;glossAbbreviation&gt;stick&lt;/glossAbbreviation&gt;
+      &lt;glossStatus value="prohibited"/&gt;
+      &lt;glossUsage&gt;This is too colloquial.&lt;/glossUsage&gt;
+      &lt;glossAlternateFor href="#usbfd/memoryStick"/&gt;
+    &lt;/glossAlt&gt;
+    &lt;glossAlt&gt;
+      &lt;glossAbbreviation&gt;flash&lt;/glossAbbreviation&gt;
+      &lt;glossStatus value="prohibited"/&gt;
+      &lt;glossUsage&gt;This short form is ambiguous.&lt;/glossUsage&gt;
+    &lt;/glossAlt&gt;
+  &lt;/glossBody&gt;
+&lt;/glossentry&gt;</pre>
+
+</div>
+</div>
+
+<div class="section" id="glossentry__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="glossentry__glossentry_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d232887e294" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d232887e297" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d232887e300" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d232887e303" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d232887e306" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d232887e294" class="stentry">id</td>
+ 
+			 <td valign="top" headers="d232887e297" class="stentry">This ID enables topics to be referenced uniquely by
+				topicrefs in DITA maps.</td>
+ 
+			 <td valign="top" headers="d232887e300" class="stentry">ID</td>
+ 
+			 <td valign="top" headers="d232887e303" class="stentry">  
+			 </td>
+ 
+			 <td valign="top" headers="d232887e306" class="stentry">Yes</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d232887e294" class="stentry">conref-atts attribute group (conref, conrefend, conaction,
+				conkeyref)</td>
+ 
+			 <td valign="top" headers="d232887e297" class="stentry">A set of related attributes; includes all of the attributes
+				described in 
+				<a class="- topic/xref  ajaxLink" href="common/id-atts.html" title="The &#34;id-atts&#34; attribute group includes attributes that enable the naming and referencing of elements in topics and maps.">id-atts attribute group</a> 
+				<em class="ph i">except</em> for the id attribute.</td>
+ 
+			 <td valign="top" headers="d232887e300" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e303" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e306" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d232887e294" class="stentry">xmlns:ditaarch</td>
+ 
+			 <td valign="top" headers="d232887e297" class="stentry">Declares the default DITA namespace.</td>
+ 
+			 <td valign="top" headers="d232887e300" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e303" class="stentry">"http://dita.​oasis-open.​org/​architecture/​2005/"</td>
+
+			 
+			 <td valign="top" headers="d232887e306" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d232887e294" class="stentry">DITAArchVersion</td>
+ 
+			 <td valign="top" headers="d232887e297" class="stentry">Designates the version of the architecture that is in use.
+				The default value will increase with each release of DITA.</td>
+ 
+			 <td valign="top" headers="d232887e300" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d232887e303" class="stentry">"1.2"</td>
+ 
+			 <td valign="top" headers="d232887e306" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d232887e294" class="stentry">domains</td>
+ 
+			 <td valign="top" headers="d232887e297" class="stentry">Indicates the specialized domains that are included in the
+				DTD or Schema. This value will differ depending on what domains are included in
+				the current DTD or Schema.</td>
+ 
+			 <td valign="top" headers="d232887e300" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d232887e303" class="stentry"><em class="ph i">Varies based on the DTD or Schema; a sample value is
+				  "(topic ui-d) (topic hi-d) (topic pr-d) (topic sw-d) (topic ut-d) (topic
+				  indexing-d)"</em></td>
+ 
+			 <td valign="top" headers="d232887e306" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d232887e294" class="stentry">select-atts attribute group (props, base, platform, product,
+				audience, otherprops, importance, rev, status)</td>
+ 
+			 <td valign="top" headers="d232887e297" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/select-atts.html" title="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations.">select-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d232887e300" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e303" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e306" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d232887e294" class="stentry">localization-atts attribute group (translate, xml:lang,
+				dir)</td>
+ 
+			 <td valign="top" headers="d232887e297" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/localization-atts.html" title="The &#34;localization-atts&#34; attribute group defines a set of common attributes related to translation and localization. These attributes are available on most DITA elements.">localization-atts attribute group</a>. 
+			 </td>
+ 
+			 <td valign="top" headers="d232887e300" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e303" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e306" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d232887e294" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d232887e297" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d232887e300" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e303" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e306" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d232887e294" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d232887e297" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d232887e300" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e303" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d232887e306" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/glossary2.html" title="Use the glossentry topic type to define glossary terms. Each glossentry topic should define a single sense of a term.">Glossentry elements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/glossterm.html" title="The &lt;glossterm&gt; element specifies the preferred term associated with a definition of a sense. If the same term has multiple senses, create a separate &lt;glossentry&gt; topic for each sense.">glossterm</a></div>
+</div>
+</div>
+
+</body>
+</html>

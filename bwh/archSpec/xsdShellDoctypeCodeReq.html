@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="XSD document-type shell: Coding requirements"/>
+<meta name="abstract" content="A shell document type integrates one or more topic type or map type modules, zero or more domain modules, and zero or more constraint modules. A shell XSD is organized into sections, where each section contains a specific type of declaration."/>
+<meta name="description" content="A shell document type integrates one or more topic type or map type modules, zero or more domain modules, and zero or more constraint modules. A shell XSD is organized into sections, where each section contains a specific type of declaration."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/createCustomDocType.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/shell-dtd-coding-reqs.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topicShellPattern"/>
+<meta name="DC.Language" content="en-us"/>
+<title>XSD document-type shell: Coding requirements</title>
+</head>
+<body id="topicShellPattern">
+
+
+  <h1 class="title topictitle1">XSD document-type shell: Coding requirements</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">A shell document type integrates one or more topic type or map type modules, zero or
+    more domain modules, and zero or more constraint modules. A shell XSD is organized into
+    sections, where each section contains a specific type of declaration.</p>
+
+    <p class="p">An XSD document type shell <span class="keyword">must</span> conform to the following coding
+      requirements. XSD document type shells <span class="keyword">may not</span> directly declare element
+      types or attributes (except for the @domains attribute, which always reflects the details of
+      the domains and structural types integrated by the shell).</p>
+
+    <p class="p">DITA XSDs use the XML Schema redefine feature (xs:redefine) to override base group
+      definitions for content models and attribute lists. This facility is analogous to the
+      parameter entities used for DTDs. Unlike DTD parameter entities, an xs:redefine both includes
+      the XSD file it redefines and holds the redefinition applied to the groups in the included XSD
+      file. Thus, for XSD files that define groups, the file may be included via xs:include if it is
+      used without modification or via xs:redefine if any of its groups are redefined.</p>
+
+    <p class="p">Shell XSDs are organized into sections. Each section of the shell XSD is introduced by a
+      comment. Shells <span class="keyword">should</span> use these comments to identify each section of the
+      shell. Each section <span class="keyword">should</span> be present in the shell XSD, even if the section
+      contains no declarations, and <span class="keyword">should</span> occur in the order they are presented
+      here. Shell XSDs <span class="keyword">should</span> have an initial set of comments that describe the
+      shell and indicate the URNs or absolute URLs by which the shell should be referenced from
+      document instances or otherwise associated with documents. Shell XSDs <span class="keyword">may</span>
+      use the XSD appinfo and documentation elements to contain additional documentation about the
+      shell.</p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Element domain inclusions</dt>
+
+        <dd class="dd">
+          <p class="p">The element domain inclusion section contains includes of each element domain
+            integrated by the shell. This section <span class="keyword">should</span> use the comment:</p>
+
+          <pre class="pre codeblock">&lt;!--  ================ ELEMENT DOMAINS =====================  --&gt;</pre>
+
+          <div class="p">For each element domain used by the map or topic type, the shell XSD must have an
+            xs:include element that includes the XSD module for that domain. For
+            example:<pre class="pre codeblock">&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:programmingDomain.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:softwareDomain.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:highlightDomain.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:uiDomain.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:utilitiesDomain.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:indexingDomain.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:hazardstatementDomain.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:abbreviateDomain.xsd:1.2" /&gt;</pre>
+</div>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Attribute domain inclusions</dt>
+
+        <dd class="dd">The attribute domain inclusion section contains includes of each attribute domain
+          integrated by the shell. This section <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!--  ================ ATTRIBUTE DOMAINS =====================  --&gt;</pre>
+<div class="p">For
+            each attribute domain used by the map or topic type, the shell XSD must have an
+            xs:include element that includes the XSD module for that domain. For
+            example:<pre class="pre codeblock">&lt;xs:include schemaLocation="urn:example.com:dita:domains:newAtt.xsd" /&gt;</pre>
+</div>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Group inclusions</dt>
+
+        <dd class="dd">The group inclusion section contains includes or redefinitions of the group definitions
+          for the structural types integrated in the shell. Group redefinitions are used to
+          integrate domain-provided element and attribute types into base content models. This
+          section <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!--  ================ GROUP DEFINITIONS =====================  --&gt;</pre>
+<p class="p">For
+            both map and topic shells, this section <span class="keyword">must</span> include or redefine the
+            common element group, the metadata declaration group, and the table model group.
+            </p>
+<div class="p">For topic shells, this section <span class="keyword">must</span> include or redefine the
+            group XSD for each topic type used by the shell. For example, from a shell for the task
+            topic
+            type:<pre class="pre codeblock">&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:taskGrp.xsd:1.2" /&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:topicGrp.xsd:1.2"/&gt;</pre>
+</div>
+<div class="p">For
+            map shells, this section <span class="keyword">must</span> include or redefine the group XSD for
+            each map type used by the shell (that is, the module for the specialization of &lt;map&gt;
+            the shell uses, as well as any ancestor map types from which the shell's map element is
+            specialized). For example, from the learningMap
+            shell:<pre class="pre codeblock">    &lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd:1.2"/&gt;
+    &lt;xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:mapGrp.xsd:1.2"&gt;
+      &lt;xs:group name="topicref"&gt;
+        &lt;xs:choice&gt;
+          &lt;xs:group ref="topicref"/&gt;
+          &lt;xs:group ref="mapgroup-d-topicref"/&gt;
+          &lt;xs:group ref="learningmap-d-topicref"/&gt;
+        &lt;/xs:choice&gt;
+      &lt;/xs:group&gt;
+    &lt;/xs:redefine&gt;
+  
+    &lt;xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd:1.2"&gt;
+      &lt;xs:group name="index-base"&gt;
+        &lt;xs:choice&gt;
+          &lt;xs:group ref="index-base"/&gt;
+          &lt;xs:group ref="indexing-d-index-base"/&gt;
+        &lt;/xs:choice&gt;
+      &lt;/xs:group&gt;
+      
+    &lt;/xs:redefine&gt;
+    
+    
+    &lt;xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd:1.2"&gt;
+      &lt;xs:group name="metadata"&gt;
+        &lt;xs:choice&gt;
+          &lt;xs:group ref="metadata"/&gt;
+          &lt;xs:group ref="learningmeta-d-metadata"/&gt;
+        &lt;/xs:choice&gt;
+      &lt;/xs:group&gt;
+      &lt;xs:group name="keywords"&gt;
+        &lt;xs:choice&gt;
+          &lt;xs:group ref="keywords"/&gt;
+          &lt;xs:group ref="delay-d-keywords"/&gt;
+        &lt;/xs:choice&gt;
+      &lt;/xs:group&gt;
+    &lt;/xs:redefine&gt;</pre>
+</div>
+<div class="p">For
+            each element extended by one or more domains, the document type shell
+              <span class="keyword">must</span> redefine the model group for the element to a list of
+            alternatives including the literal name of the element and the element extension model
+            group from each domain that is providing specializations. To integrate a new domain in
+            the document type shell use the schema &lt;redefine&gt; mechanism to manage the number
+            of domains used by the document type shell. The model group requires a reference to
+            itself to extend the base model group. To see an example, look at the
+              <span class="ph filepath">topic.xsd</span> schema document.
+            <pre class="pre codeblock">&lt;xs:group name="pre"&gt;   
+  &lt;xs:choice&gt;       
+    &lt;xs:group ref="pre" /&gt;
+    &lt;xs:group ref="pr-d-pre" /&gt;
+    &lt;xs:group ref="ui-d-pre" /&gt;
+    &lt;xs:group ref="sw-d-pre" /&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:group&gt;</pre>
+</div>
+<div class="p">To
+            add domains to a new structural type you can copy the contents of the parent structural
+            type domains schema document into the document type shell. Add or remove the model group
+            from the new domain to the appropriate named
+            group.<pre class="pre codeblock">&lt;xs:group name="pre"&gt;
+  &lt;xs:choice&gt;
+    &lt;xs:group ref="pre"/&gt;
+    &lt;xs:group ref="pr-d-pre" /&gt;
+    &lt;xs:group ref="domainName-d-element"/&gt;
+  &lt;/xs:choice&gt; 
+&lt;/xs:group&gt;</pre>
+</div>
+<div class="p">For
+            each attribute extended by one or more domains, the document type shell
+              <span class="keyword">must</span> redefine the attribute extension model group for the attribute
+            to a list of alternatives including the literal name of the attribute and the attribute
+            extension model group from each domain that is providing specializations. To integrate a
+            new attribute domain in the document type shell use the schema &lt;redefine&gt;
+            mechanism to manage the number of attribute domains used by the document type
+            shell.<pre class="pre codeblock">&lt;xs:attributeGroup name="props-attribute-extensions"&gt;
+  &lt;xs:attributeGroup ref="props-attribute-extensions"/&gt;
+  &lt;xs:attributeGroup ref="newAtt-d-attribute"/&gt;
+  &lt;xs:attributeGroup ref="othernewAtt-d-attribute"/&gt;
+&lt;/xs:attributeGroup&gt;
+          
+&lt;xs:attributeGroup name="base-attribute-extensions"&gt;
+  &lt;xs:attributeGroup ref="base-attribute-extensions"/&gt;
+  &lt;xs:attributeGroup ref="newfrombaseAtt-d-attribute"/&gt;
+  &lt;xs:attributeGroup ref="othernewfrombaseAtt-d-attribute"/&gt;
+&lt;/xs:attributeGroup&gt;        </pre>
+</div>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Module inclusions</dt>
+
+        <dd class="dd">The module inclusion section includes the module XSD files for the structural types used
+          in the shell. This section <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- =================  MODULE INCLUDE DEFINITION  ==================  --&gt;</pre>
+<div class="p">For
+            each map or topic type used by the shell, this section <span class="keyword">must</span> include
+            either the module XSD file for that type or a constraint module for that type . It
+              <span class="keyword">must</span> also include any other module XSD files required by the topic
+            or map types, normally the common element module, meta declaration module, and table
+            declaration module. For
+            example:<pre class="pre codeblock">&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.2"/&gt;
+&lt;!-- ======== Table elements ======== --&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:tblDeclMod.xsd:1.2"/&gt;    
+&lt;!-- ======= MetaData elements, plus keyword and indexterm ======= --&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:metaDeclMod.xsd:1.2"/&gt;
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.2" /&gt;  
+&lt;xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:conceptMod.xsd:1.2" /&gt;</pre>
+</div>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Domains attribute declaration</dt>
+
+        <dd class="dd">The @domains attribute declaration section contains the declaration of the domains
+          attribute for the shell. This section <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- =================  DOMAINS ATTRIBUTE DECLARATION  ==================  --&gt;</pre>
+<div class="p">The
+            shell must declare the @domains attribute such that the @domains attribute value
+            reflects each vocabulary module and constraint module integrated by the shell. The
+            declaration has the
+            form:<pre class="pre codeblock">&lt;xs:attributeGroup name="domains-att"&gt;
+   &lt;xs:attribute name="domains" type="xs:string"
+        default="<em class="ph i">domain usage declarations</em>"
+   /&gt;
+&lt;/xs:attributeGroup&gt;</pre>
+</div>
+<div class="p">Where
+              <em class="ph i">domain usage declarations</em> is a sequence of domain usage specifications (see
+              <a class="- topic/xref  ajaxLink" href="domainsatt.html#domainsatt" title="Structural types must declare the domain vocabulary modules and constraint modules they use. This is done with the @domains attribute, whose value is a sequence of parenthesized module ancestry specifications. The @domains attribute is declared on the root element for each topic or map type. Structural modules should declare their structural ancestry.">Domain usage declaration (the @domains attribute)</a> for details). For example,
+            from the learningMap
+            shell:<pre class="pre codeblock">&lt;xs:attributeGroup name="domains-att"&gt;
+  &lt;xs:attribute name="domains" type="xs:string"
+     default="(map mapgroup-d) 
+              (topic delay-d)  
+              (topic indexing-d) 
+              (topic learningmeta-d) 
+              (map learningmap-d) "
+  /&gt;
+&lt;/xs:attributeGroup&gt;</pre>
+</div>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Info types definition</dt>
+
+        <dd class="dd">Each topic type defines an info types group that defines the default set of allowed
+          subordinate topics for that topic type. Topic shells may redefine this group to change the
+          effective set of allowed subordinate topics. <div class="p">The info types section contains the
+            definition of the effective value of the info types groups for topics used by the shell.
+            This section <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- =================  INFO TYPES DEFINITION  ==================  --&gt;</pre>
+</div>
+<p class="p">This
+            section <span class="keyword">must not</span> be included in map shells.</p>
+<div class="p">The shell
+              <span class="keyword">must</span> define a model group with the name
+            <samp class="ph codeph">info-types</samp>. This model group <span class="keyword">may</span> define a list of
+            allowed subordinate topics. If the topic type should not allow subordinate topics, then
+            the default value for the <samp class="ph codeph">info-types</samp> model group
+              <span class="keyword">must</span> be defined as an empty group, as
+            follows:<pre class="pre codeblock">&lt;xs:group name="info-types"&gt;
+  &lt;xs:sequence/&gt;
+&lt;/xs:group&gt;</pre>
+</div>
+<div class="p">The
+            document type shell <span class="keyword">may</span> control how topics are allowed to nest within
+            specific topic types by redefining the topic-type-specific info types group, named
+                <samp class="ph codeph"><var class="keyword varname">topictype</var>-info-types</samp>. The info-types group is
+            declared in the module XSD file for a given topic type. For example, in a shell for the
+            concept topic type, allowing concept or generic topic to nest within
+            concept:<pre class="pre codeblock">&lt;xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:conceptMod.xsd:1.2" &gt;
+  &lt;xs:group name="concept-info-types"&gt;
+    &lt;xs:choice&gt;
+      &lt;xs:group ref="concept-info-types"/&gt;
+      &lt;xs:group ref="topic"/&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:group&gt;
+&lt;/xs:redefine&gt;</pre>
+</div>
+<p class="p">Note
+            that XSD rules require that the redefined group include a reference to itself in
+            addition to any other components specified for the redefined group.</p>
+</dd>
+
+      
+    </dl>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/createCustomDocType.html" title="A given DITA map or topic document is governed by a DITA document type that defines the set of structural modules (topic or map types), domain modules, and constraints modules that the map or topic can use.">Configuration (Document type shells)</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/shell-dtd-coding-reqs.html" title="A document type shell integrates one or more topic type or map type modules, zero or more domain modules, and zero or more constraint modules. A DTD document type shell is organized into sections, where each section contains a specific type of declaration.">DTD document-type shell: Coding requirements</a></div>
+</div>
+</div>
+
+</body>
+</html>

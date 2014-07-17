@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="topicref-atts, topicref-atts-no-toc, and topicref-atts-without-format attribute groups"/>
+<meta name="abstract" content="The &#34;topicref-atts&#34;, &#34;topicref-atts-no-toc&#34;, and &#34;topicref-atts-without-format&#34; attribute groups represent collections of attributes used in numerous map elements."/>
+<meta name="description" content="The &#34;topicref-atts&#34;, &#34;topicref-atts-no-toc&#34;, and &#34;topicref-atts-without-format&#34; attribute groups represent collections of attributes used in numerous map elements."/>
+<meta name="DC.subject" content="%topicref-atts, %topicref-atts-no-toc, %topicref-atts-without-format, Commonly referenced attribute descriptions, topicref-atts, topicref-atts-no-toc, topicref-atts-without-format"/>
+<meta name="keywords" content="%topicref-atts, %topicref-atts-no-toc, %topicref-atts-without-format, Commonly referenced attribute descriptions, topicref-atts, topicref-atts-no-toc, topicref-atts-without-format"/>
+<meta name="DC.Relation" scheme="URI" content="../common/comrfet.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/relational-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/othercommon.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topicref-atts"/>
+<meta name="DC.Language" content="en-us"/>
+<title>topicref-atts, topicref-atts-no-toc, and topicref-atts-without-format attribute groups</title>
+</head>
+<body id="topicref-atts">
+
+
+ <h1 class="title topictitle1">topicref-atts, topicref-atts-no-toc, and topicref-atts-without-format attribute
+  groups</h1>
+
+ 
+ 
+ <div class="body refbody"><div class="abstract"><span class="shortdesc">The "topicref-atts", "topicref-atts-no-toc", and
+   "topicref-atts-without-format" attribute groups represent collections of attributes used in
+   numerous map elements.</span>
+ With two exceptions, the three groups are identical. Neither
+  "topicref-atts" nor "topicref-atts-without-format" provides a default for the toc attribute, while
+  "topicref-atts-no-toc" provides a default of "no". Both "topicref-atts" and "topicref-atts-no-toc"
+  include the format attribute, while "topicref-atts-without-format" omits the format attribute to
+  allow specialization authors to declare the format attribute with specific default values. </div>
+
+  <div class="section"><h2 class="title sectiontitle">Attributes</h2>
+   
+   <div class="note note"><span class="notetitle">Note:</span> The table below describes the "topicref-atts" attribute group. The "topicref-atts-no-toc"
+    group is the same, except for the toc attribute, which is modified to provide a default of "no".
+    The "topicref-atts-without-format" group is also the same as "topicref-atts", except that it
+    does not define the format attribute.</div>
+
+   <table cellpadding="4" cellspacing="0" summary="" id="topicref-atts__topicref-atts_attr" border="1" class="simpletable"><tr class="sthead">
+     <th valign="bottom" align="left" id="d52749e75" class="stentry" width="25%">Name</th>
+
+     <th valign="bottom" align="left" id="d52749e78" class="stentry" width="37.5%">Description</th>
+
+     <th valign="bottom" align="left" id="d52749e81" class="stentry" width="12.5%">Data Type</th>
+
+     <th valign="bottom" align="left" id="d52749e84" class="stentry" width="12.5%">Default Value</th>
+
+     <th valign="bottom" align="left" id="d52749e87" class="stentry" width="12.5%">Required?</th>
+
+    </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">collection-type</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">Collection types describe how links relate to each other.
+				The processing default is "unordered", although no default is specified in the
+				DTD or Schema.
+				<dl class="dl" id="topicref-atts__d263e938"> 
+				  
+					 <dt class="dt dlterm">unordered
+					 </dt>
+
+					 <dd class="dd">Indicates that the order of the child topics is not
+						significant.
+					 </dd>
+
+				   
+				  
+					 <dt class="dt dlterm">sequence
+					 </dt>
+
+					 <dd class="dd">Indicates that the order of the child topics is
+						significant; output processors will typically link between them in order.
+					 </dd>
+
+				   
+				  
+					 <dt class="dt dlterm">choice
+					 </dt>
+
+					 <dd class="dd">Indicates that one of the children should be selected.
+					 </dd>
+
+				   
+				  
+					 <dt class="dt dlterm">family
+					 </dt>
+
+					 <dd class="dd">Represents a tight grouping in which each of the referenced
+						topics not only relates to the current topic but also relate to each other.
+					 </dd>
+
+				   
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				   
+				</dl>
+
+				<p class="p">Usage of the collection-type attribute on &lt;reltable&gt; and
+				  &lt;relcolspec&gt; is currently undefined and reserved for future use.
+				</p>
+</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">(unordered | sequence | choice | family |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">processing-role</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">Describes the processing role of the referenced topic. The
+				processing default is "normal". 
+				<span class="ph">If the value is not specified locally, but
+				  is specified on an ancestor, the value will cascade from the closest
+				  ancestor.</span>
+				<dl class="dl"> 
+				   
+					 <dt class="dt dlterm">normal
+					 </dt>
+ 
+					 <dd class="dd">Normal topic that is a readable part of the information.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">resource-only
+					 </dt>
+ 
+					 <dd class="dd">The topic is used as a resource for processing purposes,
+						but is not a readable unit of information on its own. This topic should not be
+						included in a rendered table of contents, and the topic should not be rendered
+						on its own.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">(normal | resource-only |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">type</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">Describes the target of a reference. See 
+				<a class="- topic/xref  ajaxLink" href="thetypeattribute.html" title="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes.">The type attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">scope</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">The scope attribute identifies the closeness of the
+				relationship between the current document and the target resource. See 
+				<a class="- topic/xref  ajaxLink" href="thescopeattribute.html" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The scope attribute</a> for more information on
+				values.</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">(local | peer | external |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">locktitle</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry"> If locktitle is set to "yes", the
+				&lt;navtitle&gt; element or @navtitle attribute is used if it is present.
+				Otherwise, the navtitle is ignored and the navigation title is retrieved from
+				the referenced file. 
+				<div class="note note" id="topicref-atts__d263e3090"><span class="notetitle">Note:</span> The @navtitle attribute is
+				  deprecated in favor of the &lt;navtitle&gt; element. When both a
+				  &lt;navtitle&gt; element and a navtitle attribute are specified, the
+				  &lt;navtitle&gt; element should be used. 
+				</div>
+ 
+				<dl class="dl">
+				   
+					 <dt class="dt dlterm">yes
+					 </dt>
+ 
+					 <dd class="dd">The navtitle in the map is used.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">no
+					 </dt>
+ 
+					 <dd class="dd">The navtitle or title of the topic is used. This is the
+						processing default.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">(yes | no | -dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">format</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">The format attribute identifies the format of the resource
+				being referenced. See 
+				<a class="- topic/xref  ajaxLink" href="theformatattribute.html" title="The format attribute identifies the format of the resource being cross referenced. The processing default for format is &#34;dita&#34;. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor.">The format attribute</a> for details on
+				supported values.</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">linking</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">Defines some specific linking characteristics of a
+				topic's current location in the map. 
+				<span class="ph">If the value is not specified locally, but
+				  is specified on an ancestor, the value will cascade from the closest
+				  ancestor.</span>
+				<dl class="dl"> 
+				   
+					 <dt class="dt dlterm">targetonly
+					 </dt>
+ 
+					 <dd class="dd">A topic can only be linked to and cannot link to other
+						topics.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">sourceonly
+					 </dt>
+ 
+					 <dd class="dd">A topic cannot be linked to but can link to other topics.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">normal
+					 </dt>
+ 
+					 <dd class="dd">A topic can be linked to and can link to other topics. Use
+						this to override the linking value of a parent topic.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">none
+					 </dt>
+ 
+					 <dd class="dd">A topic cannot be linked to or link to other topics.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">(targetonly | sourceonly | normal | none |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">toc</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">Specifies whether a topic appears in the table of contents
+				(TOC). 
+				<span class="ph" id="topicref-atts__d263e4662">If the value is not specified locally, but
+				  is specified on an ancestor, the value will cascade from the closest
+				  ancestor.</span></td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">(yes | no | 
+				<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">-dita-use-​conref-​target</a>)</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">print</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">Specifies whether the topic should be included in a
+				print-specific rendition, such as PDF. The processing default is "yes". 
+				<span class="ph">If the value is not specified locally, but
+				  is specified on an ancestor, the value will cascade from the closest
+				  ancestor.</span>
+				<dl class="dl" id="topicref-atts__d263e3873"> 
+				   
+					 <dt class="dt dlterm">yes
+					 </dt>
+ 
+					 <dd class="dd">Include the topic in the print-oriented file.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">no
+					 </dt>
+ 
+					 <dd class="dd">Do not include the topic in a print-oriented file.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">printonly
+					 </dt>
+ 
+					 <dd class="dd">Only include the topic when rendering the DITA content in a
+						print-oriented context; the topic should not be included in other contexts,
+						such as when rendering as HTML.
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">-dita-use-​conref-​target
+					 </dt>
+ 
+					 <dd class="dd">See 
+						<a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">Using the -dita-use-conref-target value</a> for more
+						information.
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">(yes | no | printonly | -dita-use-​conref-​target)</td>
+
+			 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">search</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">Describes whether the target is available for searching. 
+				<span class="ph">If the value is not specified locally, but
+				  is specified on an ancestor, the value will cascade from the closest
+				  ancestor.</span>
+				<dl class="dl">
+				   
+					 <dt class="dt dlterm">yes
+					 </dt>
+ 
+					 <dd class="dd">
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm">no
+					 </dt>
+ 
+					 <dd class="dd">
+					 </dd>
+ 
+				  
+				   
+					 <dt class="dt dlterm"><a class="- topic/xref  ajaxLink" href="ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">-dita-use-​conref-​target</a>
+					 </dt>
+ 
+					 <dd class="dd">
+					 </dd>
+ 
+				  
+				</dl>
+</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">(yes | no | -dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d52749e75" class="stentry">chunk</td>
+ 
+			 <td valign="top" headers="d52749e78" class="stentry">When a set of topics
+				is transformed using a map, the chunk attribute allows multi-topic documents to
+				be broken into smaller files and multiple individual topics to be combined into
+				larger combined documents. 
+				<p class="p">For a detailed description of the chunk attribute and its usage,
+				  see 
+				  <a class="- topic/xref  ajaxLink" href="archSpec/chunking.html" title="Content may be chunked (divided or merged into new output documents) in different ways for the purposes of authoring, for delivering content, and for navigation. For example, something best authored as a set of separate topics may need to be delivered as a single Web page. A map author can use the chunk attribute to split up multi-topic documents into component topics or combine multiple topics into a single document as part of output processing.">Chunking</a> in the DITA
+				  Architectural Specification.
+				</p>
+</td>
+ 
+			 <td valign="top" headers="d52749e81" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d52749e84" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d52749e87" class="stentry">No</td>
+ 
+		  </tr>
+</table>
+
+  </div>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/comrfet.html" title="Common attribute groups, such as the selection and property attributes of most DITA elements, are described here as sets in order to reduce unnecessary duplication of common information.">Commonly referenced attribute groups</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/relational-atts.html" title="The &#34;relational-atts&#34; attribute group includes attributes whose values may be used for representing navigational relationships. These attributes occur only on elements that represent relationships among DITA elements or between DITA elements and non-DITA resources.">relational-atts attribute group</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></div>
+</div>
+</div>
+
+</body>
+</html>

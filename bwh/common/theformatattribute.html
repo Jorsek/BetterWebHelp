@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="The format attribute"/>
+<meta name="abstract" content="The format attribute identifies the format of the resource being cross referenced. The processing default for format is &#34;dita&#34;. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor."/>
+<meta name="description" content="The format attribute identifies the format of the resource being cross referenced. The processing default for format is &#34;dita&#34;. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor."/>
+<meta name="DC.Relation" scheme="URI" content="../common/complexattributedefinitions.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/thetypeattribute.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/thescopeattribute.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="theformatattribute"/>
+<meta name="DC.Language" content="en-us"/>
+<title>The format attribute</title>
+</head>
+<body id="theformatattribute">
+
+
+<h1 class="title topictitle1">The format attribute</h1>
+
+
+<div class="body refbody"><p class="shortdesc">The format attribute identifies the format of the resource
+being cross referenced. The processing default for format is <span class="q">"dita"</span>. <span class="ph">If
+				  no value is specified, but the attribute is specified on an ancestor within a
+				  map or within the related-links section, the value will cascade from the
+				  closest ancestor.</span></p>
+
+<div class="section"><h2 class="title sectiontitle">Using the format attribute</h2><p class="p">Possible values
+for this attribute include:</p>
+<dl class="dl">
+<dt class="dt dlterm">dita</dt>
+
+<dd class="dd">The destination uses DITA topic markup or markup specialized from
+a DITA topic. Unless otherwise specified, the corresponding default
+type will be treated as "topic."</dd>
+
+
+<dt class="dt dlterm">html</dt>
+
+<dd class="dd">The format of the linked-to resource is HTML or XHTML.</dd>
+
+
+<dt class="dt dlterm">pdf</dt>
+
+<dd class="dd">The format of the linked-to resource is PDF (opens a new window).</dd>
+
+
+<dt class="dt dlterm">ditamap</dt>
+
+<dd class="dd">The linked-to resource is a DITA map. It represents the referenced
+hierarchy at the current point in the referencing map. References
+to other maps may occur at any point in a map, but because relationship
+tables are only valid as children of a map, referenced relationship
+tables are treated as children of the referencing map.</dd>
+
+
+<dt class="dt dlterm">(no value)</dt>
+
+<dd class="dd">Processors default to "dita"</dd>
+
+</dl>
+<p class="p">For other formats, you can use the file extension
+without the "." (for example, in a link to file "readme.txt",
+use "txt" as the value).</p>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/complexattributedefinitions.html" title="Several DITA attributes require more explanation than can fit in a single table cell. Those attributes are collected here.">Complex attribute definitions</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/thetypeattribute.html" title="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes.">The type attribute</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/thescopeattribute.html" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The scope attribute</a></div>
+</div>
+</div>
+
+</body>
+</html>

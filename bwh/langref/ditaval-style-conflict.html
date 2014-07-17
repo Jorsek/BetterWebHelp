@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="style-conflict"/>
+<meta name="abstract" content="The style-conflict element declares behavior to be used when one or more flagging methods collide on a single content element."/>
+<meta name="description" content="The style-conflict element declares behavior to be used when one or more flagging methods collide on a single content element."/>
+<meta name="DC.subject" content="DITAVAL elements, style-conflict"/>
+<meta name="keywords" content="DITAVAL elements, style-conflict"/>
+<meta name="DC.Relation" scheme="URI" content="../common/about-ditaval.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/ditaval-val.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/ditaval-prop.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="ditaval-style-conflict"/>
+<meta name="DC.Language" content="en-us"/>
+<title>style-conflict</title>
+</head>
+<body id="ditaval-style-conflict">
+
+
+<h1 class="title topictitle1">style-conflict</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The style-conflict element declares behavior to be used
+when one or more flagging methods collide on a single content element. </p>
+
+<div class="section"><p class="p">In case of conflicts between flagging methods at different
+levels (for example, a section is flagged green and a paragraph within
+the section is flagged red), the most deeply nested flagging method
+applies. </p>
+<div class="p">In case of conflicts between flagging methods on the
+same element (for example, a single element is being flagged with
+both green and red color), it is recommended that the conflicts be
+resolved as follows:<dl class="dl">
+
+<dt class="dthd"><strong>Flagging method</strong></dt>
+<dd class="ddhd"><strong>Conflict behavior</strong></dd>
+
+
+
+<dt class="dt dlterm">startflag/endflag</dt>
+
+<dd class="dd">Add all flags that apply.</dd>
+
+
+<dt class="dt dlterm">color</dt>
+
+<dd class="dd">Follow the style-conflict @foreground-conflict-color setting,
+or use an output-appropriate default color if no conflict color is
+set.</dd>
+
+
+<dt class="dt dlterm">backcolor</dt>
+
+<dd class="dd">Follow the style-conflict @background-conflict-color setting,
+or use an output-appropriate default color if no conflict color is
+set.</dd>
+
+
+<dt class="dt dlterm">style</dt>
+
+<dd class="dd">Add all font styles that apply. If two different kinds of underline
+are used, default to the heaviest (double underline) and use the foreground-conflict-color.</dd>
+
+
+<dt class="dt dlterm">changebar</dt>
+
+<dd class="dd">Add all change bars that apply.</dd>
+
+</dl>
+</div>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Contains</h2><p class="p"><em class="ph i">(empty)</em></p>
+</div>
+
+<div class="section"><h2 class="title sectiontitle">Contained by</h2><p class="p"><a class="- topic/xref  ajaxLink" href="ditaval-val.html" title="&lt;val&gt; is the root element of a DITAVAL file.">val</a></p>
+</div>
+
+<div class="example" id="ditaval-style-conflict__example"><h2 class="title sectiontitle">Example</h2><p class="p">See the example
+in the <a class="- topic/xref  ajaxLink" href="ditaval-val.html" title="&lt;val&gt; is the root element of a DITAVAL file.">&lt;val&gt;</a> description.</p>
+</div>
+
+<div class="section" id="ditaval-style-conflict__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="ditaval-style-conflict__abstract_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d175442e141" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d175442e144" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d175442e147" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d175442e150" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d175442e153" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow">
+<td valign="top" headers="d175442e141" class="stentry">foreground-conflict-color</td>
+
+<td valign="top" headers="d175442e144" class="stentry">The
+color to be used when more than one flagging color applies to a single
+content element.</td>
+
+<td valign="top" headers="d175442e147" class="stentry">CDATA</td>
+
+<td valign="top" headers="d175442e150" class="stentry">#IMPLIED</td>
+
+<td valign="top" headers="d175442e153" class="stentry">no</td>
+
+</tr>
+<tr class="strow">
+<td valign="top" headers="d175442e141" class="stentry">background-conflict-color</td>
+
+<td valign="top" headers="d175442e144" class="stentry">The color to be used when more than one flagging background
+color applies to a single content element.</td>
+
+<td valign="top" headers="d175442e147" class="stentry">CDATA</td>
+
+<td valign="top" headers="d175442e150" class="stentry">#IMPLIED</td>
+
+<td valign="top" headers="d175442e153" class="stentry">no</td>
+
+</tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/about-ditaval.html" title="A conditional processing profile (DITAVAL file) is used to identify which values are to be used for conditional processing during a particular output, build, or some other purpose. The profile should have an extension of .ditaval.">DITAVAL elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="langref/ditaval-val.html" title="&lt;val&gt; is the root element of a DITAVAL file.">val</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/ditaval-prop.html" title="Identifies an attribute, and usually values in the attribute, to take an action on. The attribute must be a conditional processing attribute: platform, product, audience, props. and otheprops; or a specialization of the props attribute.">prop</a></div>
+</div>
+</div>
+
+</body>
+</html>

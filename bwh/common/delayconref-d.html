@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Delayed conref resolution elements"/>
+<meta name="abstract" content="The delayed conref resolution domain provides several elements for use when using DITA in situations that enable delayed or run time resolution of conref. The elements allow users to resolve some conref values statically, while delaying others for later resolution."/>
+<meta name="description" content="The delayed conref resolution domain provides several elements for use when using DITA in situations that enable delayed or run time resolution of conref. The elements allow users to resolve some conref values statically, while delaying others for later resolution."/>
+<meta name="DC.subject" content="Domains elements, indexing domain, Indexing domain elements"/>
+<meta name="keywords" content="Domains elements, indexing domain, Indexing domain elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/metadata_elements.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/indexing-d.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/exportanchors.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/anchorid.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/anchorkey.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="delayconref"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Delayed conref resolution elements</title>
+</head>
+<body id="delayconref">
+
+
+<h1 class="title topictitle1">Delayed conref resolution elements</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The delayed conref resolution domain provides several elements
+for use when using DITA in situations that enable delayed or run time
+resolution of conref. The elements allow users to resolve some conref
+values statically, while delaying others for later resolution.</p>
+
+<div class="section"><p class="p">Many publishing systems for which DITA
+is used as a source format do not have a way to dynamically resolve
+content references; those systems will not see any benefit from this
+element. When DITA is used for those systems, behaviors related to
+this element should be ignored.</p>
+</div>
+
+</div>
+
+<div class="related-links">
+<ol class="olchildlinks">
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/exportanchors.html">exportanchors</a><br/>
+The &lt;<span class="keyword">exportanchors</span>&gt; element is used to delay conref resolution within DITA documents. This allows you to process or display DITA content in a way that will resolve only some of the conref values in that content, while remaining values are left for later resolution. The element contains a list of IDs or keys that should not be resolved during the initial preparation of the content for display; those IDs and keys will be preserved after that preparation, as will the conref relationship itself.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/anchorid.html">anchorid</a><br/>
+The &lt;<span class="keyword">anchorid</span>&gt; element allows an author to define a conref target that will be resolved dynamically when rendered for an end user of the content. This element is useful when doing an initial process of the DITA content prior to final rendering of the content; it causes specified IDs to be preserved after that process, and conref relationships that reuse the element will not be resolved during the initial process.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/anchorkey.html">anchorkey</a><br/>
+The &lt;<span class="keyword">anchorkey</span>&gt; element allows an author to define a conref target that will be resolved dynamically when rendered for an end user of the content. This element is useful when doing an initial process of the DITA content prior to final rendering of the content; it allows specified keys to be preserved after that process, and conref relationships which use that key will not be resolved during that initial process.</li>
+</ol>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/metadata_elements.html" title="Metadata elements include information that is located within the &lt;topicmeta&gt; element (in maps) or &lt;prolog&gt; element (in topics), as well as indexing elements that can be placed in additional locations within topic content.">Metadata elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/indexing-d.html" title="The indexing domain provides several new elements for use with indexing. The new elements allow authors to define &#34;See&#34; and &#34;See also&#34; references, and to override the default sort order for a term.">Indexing group elements</a></div>
+</div>
+</div>
+
+</body>
+</html>

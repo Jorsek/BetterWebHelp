@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Map group elements"/>
+<meta name="abstract" content="The map group domain elements define, group, or reference content. Many of the map group elements are convenience elements, which means that they simply make it easier for an author to make use of existing functions."/>
+<meta name="description" content="The map group domain elements define, group, or reference content. Many of the map group elements are convenience elements, which means that they simply make it easier for an author to make use of existing functions."/>
+<meta name="DC.subject" content="Domains elements, mapgroup domain, Mapgroup elements"/>
+<meta name="keywords" content="Domains elements, mapgroup domain, Mapgroup elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/map_elements.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/map2.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/anchorref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/keydef.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/mapref.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/topicgroup.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/topichead.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/topicset.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/topicsetref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="mapgroup"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Map group elements</title>
+</head>
+<body id="mapgroup">
+
+
+<h1 class="title topictitle1">Map group elements</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The map group domain elements define, group,
+or reference content. Many of the map group elements are convenience
+elements, which means that they simply make it easier for an author
+to make use of existing functions.</p>
+
+<div class="section"> <p class="p">For example, the &lt;topichead&gt; element allows
+a map to specify a heading without allowing a reference to a topic.
+While a &lt;topicref&gt; element may accomplish the same thing by creating
+a title and leaving off the href attribute, the &lt;topichead&gt; element
+simply makes the intent clearer and prevents the accidental inclusion
+of an href attribute.</p>
+ </div>
+
+</div>
+
+<div class="related-links">
+<ol class="olchildlinks">
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/anchorref.html">anchorref</a><br/>
+<span class="ph">The &lt;<span class="keyword">anchorref</span>&gt; element is used to reference an &lt;anchor&gt; element in a map.</span> The contents of an &lt;anchorref&gt; element are rendered both in the original authored location and at the location of the referenced &lt;anchor&gt; element. The referenced &lt;<span class="keyword">anchor</span>&gt; element may be defined in the current map or another map. <span class="ph">When possible, this integration is done when displaying the map with &lt;anchor&gt; to an end user. </span></li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/keydef.html">keydef</a><br/>
+The &lt;<span class="keyword">keydef</span>&gt; element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined. The &lt;keydef&gt; element is not the only way to define keys; its purpose is to simplify the process by defaulting several attributes to achieve the described behaviors.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/mapref.html">mapref</a><br/>
+The &lt;mapref&gt; element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to "ditamap". The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/topicgroup.html">topicgroup</a><br/>
+The &lt;<span class="keyword">topicgroup</span>&gt; element groups &lt;topicref&gt; elements for common treatment without affecting the structural hierarchy of the map, as opposed to nesting &lt;<span class="keyword">topicref</span>&gt; elements, which does imply a structural hierarchy. The &lt;topicgroup&gt; element can provide linking relationships and shared, inherited attributes to the set of elements that it contains without affecting the resulting table of contents or navigation.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/topichead.html">topichead</a><br/>
+The &lt;<span class="keyword">topichead</span>&gt; element provides a title-only entry in a navigation map, which should appear as a heading when the map is rendered as a table of contents. In print contexts it should also appear as a heading in the rendered content.</li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/topicset.html">topicset</a><br/>
+The &lt;topicset&gt; element defines a complete unit of content that can be reused in other DITA maps or other &lt;topicset&gt; elements. The &lt;topicset&gt; element can be especially useful for task composition in which larger tasks are composed of smaller tasks. The id attribute on a &lt;topicset&gt; is required, which ensures that the complete unit is available for reuse in other contexts. </li>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/topicsetref.html">topicsetref</a><br/>
+The &lt;topicsetref&gt; element references a &lt;topicset&gt; element. The referenced &lt;topicset&gt; element can be defined in the current map or in another map.</li>
+</ol>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/map_elements.html" title="Map elements include the core components of DITA maps, such as &lt;topicref&gt; and &lt;reltable&gt;, as well as general purpose map specializations in the map group domain.">Map elements</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/map2.html" title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The &lt;topicmeta&gt; element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside &lt;topicmeta&gt; are also available inside the topic prolog.">Basic map elements</a></div>
+</div>
+</div>
+
+</body>
+</html>

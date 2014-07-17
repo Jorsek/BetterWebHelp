@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="Producing different deliverables from a single source"/>
+<meta name="abstract" content="DITA is designed to produce multiple deliverable formats from a single set of DITA content. This means that many rendition details are specified neither in the DITA specification nor in the DITA content; the rendition details are defined and controlled by the processors."/>
+<meta name="description" content="DITA is designed to produce multiple deliverable formats from a single set of DITA content. This means that many rendition details are specified neither in the DITA specification nor in the DITA content; the rendition details are defined and controlled by the processors."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/introduction-to-dita.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/fileext.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="single_sourcing"/>
+<meta name="DC.Language" content="en-US"/>
+<title>Producing different deliverables from a single source</title>
+</head>
+<body id="single_sourcing">
+
+
+ <h1 class="title topictitle1">Producing different deliverables from a single source</h1>
+
+ 
+ <div class="body"><p class="shortdesc">DITA is designed to produce multiple deliverable formats from a single set of DITA
+  content. This means that many rendition details are specified neither in the DITA specification
+  nor in the DITA content; the rendition details are defined and controlled by the
+  processors.</p>
+
+  
+  <div class="p">Like many XML-based applications for human-readable documentation, DITA supports the separation
+   of content from presentation. This is necessary when content is used in different contexts, since
+   authors cannot predict how or where the material that they author will be used. The following
+   features and mechanisms enable users to produce different deliverable formats from a
+   single source:<dl class="dl">
+    
+     <dt class="dt dlterm">DITA maps</dt>
+
+     <dd class="dd">Different DITA maps can be optimized for different delivery formats. For example, you might
+      have a book map for printed output and another DITA map to generate online help; each map uses
+      the same content set.</dd>
+
+    
+    
+     <dt class="dt dlterm">Specialization</dt>
+
+     <dd class="dd">The DITA specialization facility enables users to create the XML elements needed by a
+      particular information set in order to provide appropriate rendition distinctions. In
+      XML-based systems where presentation details are defined as styles bound to elements, the more
+      precise and detailed the markup, the easier it is to define presentation rendering. Because
+      the use of arbitrary specializations does not impede interchange or interoperability, DITA
+      users can safely create the specializations demanded by their local delivery and rendition
+      requirements, with a minimum of additional impact on the systems and business processes that
+      depend on or use the content. While general XML practices suggest that element types should be
+      semantic, specialization can be used to define element types that are purely presentational in
+      nature. The highlighting domain is an example of such a specialization.</dd>
+
+    
+    
+     <dt class="dt dlterm">Conditional processing</dt>
+
+     <dd class="dd">Conditional processing makes it possible to have a topic or DITA map that contains
+      delivery-specific content.</dd>
+
+    
+    
+     <dt class="dt dlterm">Content referencing</dt>
+
+     <dd class="dd">The conref mechanism makes it possible to construct delivery-specific maps or topics from a
+      combination of generic components and delivery-context-specific components.</dd>
+
+    
+    
+     <dt class="dt dlterm">Key referencing</dt>
+
+     <dd class="dd">The keyref mechanism makes it possible to change variables for volatile content, redirect
+      links, and reap the benefits of indirect addressing.</dd>
+
+    
+    
+     <dt class="dt dlterm">@outputclass attribute</dt>
+
+     <dd class="dd">The @outputclass attribute provides a mechanism whereby authors can indicate specific
+      rendition intent where necessary. Note that the DITA specification does not define any values
+      for the @outputclass attribute; the use of the @outputclass attribute is, by nature, processor
+      specific.</dd>
+
+    
+   </dl>
+</div>
+
+  <p class="p">While DITA is independent of any particular delivery format, it is a standard that supports the
+   creation of human-readable content. As such, it defines some fundamental document components
+   including paragraphs, lists, and table. When there is a reasonable expectation that such basic
+   document components be rendered consistently, the DITA specification defines default or suggested
+   renderings.</p>
+
+  
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/introduction-to-dita.html" title="The Darwin Information Typing Architecture (DITA) is an XML-based architecture for authoring, producing, and delivering topic-oriented, information-typed content that can be reused and single-sourced in a variety of ways. While DITA historically has been driven by the requirements of large-scale technical documentation authoring, management, and delivery, it is a standard that is applicable to any kind of publication or information that might be presented to readers, including interactive training and educational materials, standards, reports, business documents, trade books, travel and nature guides, and more.">Introduction to DITA</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/fileext.html" title="DITA uses certain naming conventions and file extension for topics, maps, modules, and document-type implementation files.">File naming conventions</a></div>
+</div>
+</div>
+
+</body>
+</html>

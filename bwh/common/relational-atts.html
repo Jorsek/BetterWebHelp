@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="relational-atts attribute group"/>
+<meta name="abstract" content="The &#34;relational-atts&#34; attribute group includes attributes whose values may be used for representing navigational relationships. These attributes occur only on elements that represent relationships among DITA elements or between DITA elements and non-DITA resources."/>
+<meta name="description" content="The &#34;relational-atts&#34; attribute group includes attributes whose values may be used for representing navigational relationships. These attributes occur only on elements that represent relationships among DITA elements or between DITA elements and non-DITA resources."/>
+<meta name="DC.subject" content="%relational-atts, Commonly referenced attribute descriptions, relational-atts"/>
+<meta name="keywords" content="%relational-atts, Commonly referenced attribute descriptions, relational-atts"/>
+<meta name="DC.Relation" scheme="URI" content="../common/comrfet.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/localization-atts.html"/>
+<meta name="DC.Relation" scheme="URI" content="../common/topicref-atts.html"/>
+<meta name="copyright" content="IBM 2001 2004" type="primary"/>
+<meta name="DC.Rights.Owner" content="IBM 2001 2004" type="primary"/>
+<meta name="copyright" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Rights.Owner" content="OASIS 2005 2008" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="relational-atts"/>
+<meta name="DC.Language" content="en-us"/>
+<title>relational-atts attribute group</title>
+</head>
+<body id="relational-atts">
+
+
+<h1 class="title topictitle1">relational-atts attribute group</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The "relational-atts" attribute group includes attributes
+whose values may be used for representing navigational relationships.
+These attributes occur only on elements that represent relationships
+among DITA elements or between DITA elements and non-DITA resources.</p>
+
+<div class="section"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="relational-atts__rel-atts_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d44893e56" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d44893e59" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d44893e62" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d44893e65" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d44893e68" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d44893e56" class="stentry">type</td>
+ 
+			 <td valign="top" headers="d44893e59" class="stentry">Describes the target of a reference. See 
+				<a class="- topic/xref  ajaxLink" href="thetypeattribute.html" title="The type attribute is most often used on linking elements to describe the target of a cross-reference. It is also used on the note element to describe the type of the current note, and on several other elements for varying purposes.">The type attribute</a> for detailed information
+				on supported values and processing implications.</td>
+ 
+			 <td valign="top" headers="d44893e62" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d44893e65" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d44893e68" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d44893e56" class="stentry">format</td>
+ 
+			 <td valign="top" headers="d44893e59" class="stentry">The format attribute identifies the format of the resource
+				being referenced. See 
+				<a class="- topic/xref  ajaxLink" href="theformatattribute.html" title="The format attribute identifies the format of the resource being cross referenced. The processing default for format is &#34;dita&#34;. If no value is specified, but the attribute is specified on an ancestor within a map or within the related-links section, the value will cascade from the closest ancestor.">The format attribute</a> for details on
+				supported values.</td>
+ 
+			 <td valign="top" headers="d44893e62" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d44893e65" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d44893e68" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d44893e56" class="stentry">scope</td>
+ 
+			 <td valign="top" headers="d44893e59" class="stentry">The scope attribute identifies the closeness of the
+				relationship between the current document and the target resource. See 
+				<a class="- topic/xref  ajaxLink" href="thescopeattribute.html" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The scope attribute</a> for more information on
+				values.</td>
+ 
+			 <td valign="top" headers="d44893e62" class="stentry">(local | peer | external |
+				-dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d44893e65" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d44893e68" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d44893e56" class="stentry">role</td>
+ 
+			 <td valign="top" headers="d44893e59" class="stentry"><span class="ph" id="relational-atts__d263e4136">The role attribute defines the
+				  role the target topic plays in relationship with the current topic. For
+				  example, in a parent/child relationship, the role would be "parent"
+				  when the target is the parent of the current topic, and "child" when
+				  the target is the child of the current topic. This structure could be used to
+				  sort and classify links at display time. 
+				</span> See 
+				<a class="- topic/xref  ajaxLink" href="theroleattribute.html" title="The role attribute defines the role the target topic plays in relationship with the current topic. For example, in a parent/child relationship, the role would be &#34;parent&#34; when the target is the parent of the current topic, and &#34;child&#34; when the target is the child of the current topic. This structure could be used to sort and classify links at display time.">The role attribute</a> for information on
+				supported values.
+				<p class="p">The role attribute values 
+				  <em class="ph i">sample</em> and 
+				  <em class="ph i">external</em> are deprecated.
+				</p>
+</td>
+ 
+			 <td valign="top" headers="d44893e62" class="stentry">(parent | child | sibling | friend | next | previous |
+				cousin | ancestor | descendant | 
+				<em class="ph i">sample</em> | 
+				<em class="ph i">external</em> | other | -dita-use-​conref-​target)</td>
+ 
+			 <td valign="top" headers="d44893e65" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d44893e68" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d44893e56" class="stentry">otherrole</td>
+ 
+			 <td valign="top" headers="d44893e59" class="stentry">Indicates an alternate role. This value is used when the
+				role attribute is set to other.</td>
+ 
+			 <td valign="top" headers="d44893e62" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d44893e65" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d44893e68" class="stentry">No</td>
+ 
+		  </tr>
+</table>
+</div>
+
+<div class="example">          <p class="p">The "relational-atts" attribute group is used
+within the DITA DTDs as a common definition for attributes available
+to elements that represent topic-to-topic relationships. Some typical
+examples include:</p>
+<pre class="pre">&lt;link type="task" role="child" href="how2uninst.dita" scope="local"/&gt;
+&lt;link type="concept" role="parent" href="aboutTheThing.dita" scope="local"/&gt;</pre>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/comrfet.html" title="Common attribute groups, such as the selection and property attributes of most DITA elements, are described here as sets in order to reduce unnecessary duplication of common information.">Commonly referenced attribute groups</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="common/localization-atts.html" title="The &#34;localization-atts&#34; attribute group defines a set of common attributes related to translation and localization. These attributes are available on most DITA elements.">localization-atts attribute group</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/topicref-atts.html" title="The &#34;topicref-atts&#34;, &#34;topicref-atts-no-toc&#34;, and &#34;topicref-atts-without-format&#34; attribute groups represent collections of attributes used in numerous map elements.">topicref-atts, topicref-atts-no-toc, and topicref-atts-without-format attribute groups</a></div>
+</div>
+</div>
+
+</body>
+</html>

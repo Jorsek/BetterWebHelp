@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="DTD document-type shell: Coding requirements"/>
+<meta name="abstract" content="A document type shell integrates one or more topic type or map type modules, zero or more domain modules, and zero or more constraint modules. A DTD document type shell is organized into sections, where each section contains a specific type of declaration."/>
+<meta name="description" content="A document type shell integrates one or more topic type or map type modules, zero or more domain modules, and zero or more constraint modules. A DTD document type shell is organized into sections, where each section contains a specific type of declaration."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/createCustomDocType.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/xsdShellDoctypeCodeReq.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="shell-dtd-coding-reqs"/>
+<meta name="DC.Language" content="en-us"/>
+<title>DTD document-type shell: Coding requirements</title>
+</head>
+<body id="shell-dtd-coding-reqs">
+
+
+  <h1 class="title topictitle1">DTD document-type shell: Coding requirements</h1>
+
+  
+  <div class="body conbody"><p class="shortdesc">A document type shell integrates one or more topic type or map type modules, zero or
+    more domain modules, and zero or more constraint modules. A DTD document type shell is organized
+    into sections, where each section contains a specific type of declaration.</p>
+
+    <p class="p"> DTD document type shells <span class="keyword">may not</span> directly declare element types or
+      attributes. A DTD document type shell <span class="keyword">must</span> conform to the following coding
+      requirements.</p>
+
+    <p class="p">Each section of the shell is introduced by a comment. Shells <span class="keyword">should</span> use
+      these comments to identify each section of the shell. Each section <span class="keyword">should</span>
+      be present in the shell DTD, even if the section contains no declarations, and
+        <span class="keyword">must</span> occur in the order they are presented here. The ordering is required
+      by the XML rules for entity declaration precedence and also serve to enable automatic shell
+      creation and modification. Shells <span class="keyword">should</span> have an initial set of comments
+      that describe the shell and indicate the public identifiers, URNs, or absolute URLs by which
+      the shell should be referenced in DOCTYPE declarations. </p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Topic or map entity inclusions</dt>
+
+        <dd class="dd">The topic or map entity declarations section includes the <span class="ph filepath">.ent</span> file
+          for the top-level topic or map type the shell is configuring. </dd>
+
+        <dd class="dd">
+          <div class="p">Topic shells <span class="keyword">should</span> use the comment:
+            <pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    TOPIC ENTITY DECLARATIONS                  --&gt;
+&lt;!-- ============================================================= --&gt;  </pre>
+</div>
+
+          <div class="p">Map shells <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    MAP ENTITY DECLARATIONS                    --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+</div>
+
+          <div class="p">This section <span class="keyword">must</span> declare and reference as an external parameter
+            entity the <span class="ph filepath">.ent</span> file for the topic or map module where the entity
+            is named <samp class="ph codeph">%<em class="ph i">typename</em>-dec</samp>. For
+            example:<pre class="pre codeblock">&lt;!ENTITY % concept-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Concept//EN" 
+         "concept.ent"
+&gt;%concept-dec;</pre>
+</div>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Domain entity inclusions</dt>
+
+        <dd class="dd">
+          <div class="p">The domain entity inclusions section includes the entity declaration files for each
+            element domain integrated by the document type. This section <span class="keyword">should</span>
+            use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    DOMAIN ENTITY DECLARATIONS                 --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+</div>
+
+          <p class="p">For each element domain included in the shell, this section <span class="keyword">must</span>
+            declare an external parameter entity for the domain's entity declaration file and
+            immediately reference the entity. The entity name for the domain declaration consists of
+            the domain name plus the <samp class="ph codeph">dec</samp> suffix. In the following example, the
+            entity file for the highlight domain is included in the document type shell:</p>
+
+          <pre class="pre codeblock">&lt;!ENTITY % hi-d-dec PUBLIC
+    "-//OASIS//ENTITIES DITA Highlight Domain//EN" 
+    "highlightDomain.ent"
+&gt;%hi-d-dec;</pre>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Domain attribute inclusions</dt>
+
+        <dd class="dd">
+          <p class="p">The domain attribute inclusions section includes the entity declaration files for each
+            attribute domain integrated by the document type. This section <span class="keyword">should</span>
+            use the comment:</p>
+
+          <pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    DOMAIN ATTRIBUTE DECLARATIONS              --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+
+          <p class="p">For each attribute domain included in the shell, this section <span class="keyword">must</span>
+            declare an external parameter entity for the domain's entity declaration file and
+            immediately reference the entity. The entity name for the domain declaration consists of
+            the domain name plus the <samp class="ph codeph">ent</samp> suffix. In the following example, the
+            entity file for a new attribute domain is included in the document type shell:</p>
+
+          <pre class="pre codeblock">&lt;!ENTITY % newAtt-d-dec PUBLIC
+    "-//My Company//ENTITIES New Attribute Domain//EN"
+    "newAttDomain.ent"
+&gt;%newAtt-d-dec;</pre>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Element extension redefinitions</dt>
+
+        <dd class="dd">
+          <div class="p">The element extension redefinition section contains redefinitions of element name
+            parameter entities to reflect the integration of domain-provided element types into base
+            content models. This section <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    DOMAIN EXTENSIONS                          --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+</div>
+
+          <p class="p">For each element that is extended by one or more domains, the document type shell
+            redefines the entity for the element. The new definition is a disjunctive list of
+            alternatives comprising the literal name of the element followed by the element
+            extension entity from each domain that is providing specializations. In the following
+            example, the entity for the &lt;pre&gt; element is redefined to allow specializations
+            from the programming, software, and user interface domains:</p>
+
+          <pre class="pre codeblock">&lt;!ENTITY % pre
+    "pre        | 
+     %pr-d-pre; | 
+     %sw-d-pre; | 
+     %ui-d-pre;"&gt;</pre>
+
+          <div class="p">The value of the entity <span class="keyword">may</span> omit any base types from which other
+            types listed are specialized. For example, the preceding example could omit the &lt;pre&gt;
+            element, effectively allowing only specializations of &lt;pre&gt;, but not &lt;pre&gt; itself:<pre class="pre codeblock">&lt;!ENTITY % pre
+    "%pr-d-pre; | 
+     %sw-d-pre; | 
+     %ui-d-pre;"&gt;</pre>
+</div>
+
+          <div class="note note"><span class="notetitle">Note:</span> Omitting base types from domain extensions constitutes a form of constraint. The
+            constraint <span class="keyword">must</span> be represented by a constraint module that declares
+            the @domains attribute declaration for the constraint. For the omission of &lt;pre&gt; in
+            the preceding example the constraint might be called "noBasePre-c" and would be declared
+            in a file named "noBasePreConstraint.mod", containing the following declarations:
+            <pre class="pre codeblock">&lt;!ENTITY noBasePre-c-pre  "%pr-d-pre; | %sw-d-pre; | %ui-d-pre;"&gt;
+&lt;!ENTITY noBasePre-c-att  "(topic noBasePre-c)" &gt;
+&lt;!ENTITY % pre          “%noBasePre-c-pre ;“&gt;</pre>
+</div>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Attribute extension redefinitions</dt>
+
+        <dd class="dd">
+          <div class="p">The attribute extension redefinition section integrates the declarations of
+            specializations of the base and props attributes (defined in attribute domain modules
+            included in the attribute domain inclusion section). This section must use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    DOMAIN ATTRIBUTE EXTENSIONS                --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+</div>
+
+          <p class="p">The entities for extending the props and base attributes have a null value by
+            default:</p>
+
+          <pre class="pre codeblock">&lt;!ENTITY % props-attribute-extensions  "" &gt;
+&lt;!ENTITY % base-attribute-extensions   "" &gt;</pre>
+
+          <p class="p">For each attribute domain included by the shell, the shell <span class="keyword">must</span>
+            redefine the entity that is extended. The new definition is a list of the attribute
+            extension entities for the domains that are providing specializations. </p>
+
+          <pre class="pre codeblock">&lt;!ENTITY % props-attribute-extensions
+        "%newAtt-d-attribute; 
+         %othernewAtt-d-attribute;"&gt;
+&lt;!ENTITY % base-attribute-extensions
+        "%newfrombaseAtt-d-attribute; 
+         %othernewfrombaseAtt-d-attribute;"&gt;
+</pre>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Topic nesting redefinitions</dt>
+
+        <dd class="dd">
+          <div class="p">The topic nesting section contains redefinitions of the topic nesting control parameter
+            entities defined by the topic modules integrated in the shell. This section
+              <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    TOPIC NESTING OVERRIDES                    --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+</div>
+
+          <p class="p">For each topic type integrated in the shell, the document type shell
+              <span class="keyword">may</span> control nesting of subtopics by redefining the
+                <samp class="ph codeph"><var class="keyword varname">topictype</var>-info-types</samp> entity. The definition is
+            usually an OR list of topic types that can be nested in the corresponding parent topic
+            type. Use the literal root element name of each topic, not the corresponding element
+            entity, as in the following example:</p>
+
+          <pre class="pre codeblock">&lt;!ENTITY % concept-info-types "concept | myTopicType"&gt;</pre>
+
+          <div class="p">The document type shell <span class="keyword">may</span> also set the default for most topic
+            types by defining the global <samp class="ph codeph">info-types</samp> entity, for example:
+            <pre class="pre codeblock">&lt;!ENTITY % info-types "concept | myTopicType"&gt;</pre>
+</div>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Domain declaration redefinition</dt>
+
+        <dd class="dd">
+          <div class="p">The domain declaration redefinition section sets the effective value of the @domains
+            attribute for the topic or map type modules integrated into the shell. This section
+              <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    DOMAINS ATTRIBUTE OVERRIDE                 --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+</div>
+
+          <p class="p">The document type shell <span class="keyword">must</span> redefine the
+              <samp class="ph codeph">included-domains</samp> entity to list the domains for specializations that
+            are included in the document type, as well as any constraint modules, as in the
+            following example:</p>
+
+          <pre class="pre codeblock">&lt;!ENTITY included-domains
+    "&amp;hi-d-att; 
+     &amp;ut-d-att; 
+     &amp;ui-d-att; 
+     &amp;pr-d-att; 
+     &amp;sw-d-att; 
+     &amp;newAtt-d-att;
+     &amp;noBasePre-c-ph;
+   "
+&gt;</pre>
+
+          <p class="p">For a domain or structural module, the domains attribute value entity is declared in
+            the domain's .ent file. For constraint modules, the domains attribute value entity is
+            declared in the module's .mod file constraint modules do not use separate .ent
+            files).</p>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Content constraint module inclusions</dt>
+
+        <dd class="dd">The content constraint module inclusion section includes constraint modules that
+          override the base content models for structural or domain types integrated in the shell.
+          This section <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    CONTENT CONSTRAINT INTEGRATION             --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+<div class="p">For
+            each constraint module integrated in the shell, the shell <span class="keyword">must</span>
+            declare an external parameter entity for the constraint's <span class="ph filepath">.mod</span> file
+            and immediately reference the entity. The entity name for the constraint declaration
+            consists of the constraint module name plus the <samp class="ph codeph">-c-mod</samp> suffix. For
+            example, this constraint inclusion for the task topic type constrains the DITA 1.2
+            relaxed task content model to match the more constrained DITA 1.1 task content
+            model:<pre class="pre codeblock">&lt;!ENTITY % strictTaskbody-c-def  
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Strict Taskbody Constraint//EN" 
+  "strictTaskbodyConstraint.mod"
+&gt;%strictTaskbody-c-def;</pre>
+</div>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Structural definition inclusions</dt>
+
+        <dd class="dd">
+          <div class="p">The structural definition inclusion section includes the element type declaration
+              (<span class="ph filepath">.mod</span>) files for each topic or map type integrated into the
+            shell. For topic shells, this section <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    TOPIC ELEMENT INTEGRATION                  --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+</div>
+
+          <div class="p">For map shells, this section <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    MAP ELEMENT INTEGRATION                    --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+</div>
+
+          <p class="p">For each structural type integrated in the document type, the document type shell
+              <span class="keyword">must</span> declare and reference an external parameter entity for the
+            structural type module's <span class="ph filepath">.mod</span> file. The entity name consists of the
+            name of the structural type plus a <samp class="ph codeph">-type</samp> suffix. For example:</p>
+
+          <pre class="pre codeblock">&lt;!ENTITY % topic-type PUBLIC
+    "-//OASIS//ELEMENTS DITA Topic//EN" 
+    "topic.mod"
+&gt;%topic-type;</pre>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Element domain definition inclusions</dt>
+
+        <dd class="dd">
+          <div class="p">The element domain definition inclusion section includes the element definition files
+            for each element domain integrated into the shell. This section
+              <span class="keyword">should</span> use the
+            comment:<pre class="pre codeblock">&lt;!-- ============================================================= --&gt;
+&lt;!--                    DOMAIN ELEMENT INTEGRATION                 --&gt;
+&lt;!-- ============================================================= --&gt;</pre>
+</div>
+
+          <p class="p">For each element domain used in the document type, the document type shell
+              <span class="keyword">must</span> declare and reference an external parameter entity for the
+            domain definition module file (<span class="ph filepath">.mod</span>). The entity name consists of
+            the domain name plus a <samp class="ph codeph">-def</samp> suffix. For example:</p>
+
+          <pre class="pre codeblock">&lt;!ENTITY % hi-d-def PUBLIC
+    "-//OASIS//ELEMENTS DITA Highlight Domain//EN" 
+    "highlightDomain.mod"
+&gt;%hi-d-def;</pre>
+
+        </dd>
+
+      
+    </dl>
+
+  </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/createCustomDocType.html" title="A given DITA map or topic document is governed by a DITA document type that defines the set of structural modules (topic or map types), domain modules, and constraints modules that the map or topic can use.">Configuration (Document type shells)</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/xsdShellDoctypeCodeReq.html" title="A shell document type integrates one or more topic type or map type modules, zero or more domain modules, and zero or more constraint modules. A shell XSD is organized into sections, where each section contains a specific type of declaration.">XSD document-type shell: Coding requirements</a></div>
+</div>
+</div>
+
+</body>
+</html>

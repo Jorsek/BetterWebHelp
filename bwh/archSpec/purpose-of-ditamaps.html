@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Purpose of DITA maps"/>
+<meta name="abstract" content="DITA maps enable the scalable reuse of content across multiple contexts. They can be used by information architects, writers, and publishers to plan, develop, and deliver content."/>
+<meta name="description" content="DITA maps enable the scalable reuse of content across multiple contexts. They can be used by information architects, writers, and publishers to plan, develop, and deliver content."/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditamaps.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/definition-of-ditamaps.html"/>
+<meta name="DC.Relation" scheme="URI" content="../archSpec/ditamap-elements.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="purpose-of-ditamaps"/>
+<meta name="DC.Language" content="en-us"/>
+<title>Purpose of DITA maps</title>
+</head>
+<body id="purpose-of-ditamaps">
+
+
+ <h1 class="title topictitle1"><span class="ph">Purpose of DITA maps</span></h1>
+
+ 
+ <div class="body conbody"><p class="shortdesc">DITA maps enable the scalable reuse of content across multiple contexts. They can be
+  used by information architects, writers, and publishers to plan, develop, and deliver
+  content.</p>
+
+  <p class="p">DITA maps support the following uses:</p>
+
+  <div class="p">
+   <dl class="dl">
+    
+     <dt class="dt dlterm">Defining an information architecture</dt>
+
+     <dd class="dd">Maps can be used to define the topics that are required for a particular audience, even
+      before the topics themselves exist. <span class="ph">DITA maps can aggregate multiple topics
+       for a single deliverable.</span></dd>
+
+    
+    
+     <dt class="dt dlterm">Defining what topics to build for a particular output</dt>
+
+     <dd class="dd">Maps reference topics that are included in output processing. Information architects,
+      authors, and publishers can use maps to specify a set of topics that are processed at the same
+      time, instead of processing each topic individually. <span class="ph">In this way, a DITA map can
+       serve as a manifest or bill of materials.</span></dd>
+
+    
+    
+     <dt class="dt dlterm">Defining navigation</dt>
+
+     <dd class="dd">Maps can define the online navigation or table of contents for a deliverable.</dd>
+
+    
+    
+     <dt class="dt dlterm">Defining related links</dt>
+
+     <dd class="dd">Maps define relationships among the topics they reference. <span class="ph">These
+       relationships are defined by the nesting of elements in the DITA map, relationship tables,
+       and the use of elements on which the @collection-type attribute is set. </span><span class="ph" id="purpose-of-ditamaps__1.2.3">On output, these relationships might be expressed as related links or the hierarchy of a
+       table of contents (TOC).</span></dd>
+
+    
+    
+     <dt class="dt dlterm"><span class="ph">Defining an authoring context</span></dt>
+
+     <dd class="dd">The DITA map can define the authoring framework, providing a starting point for
+      authoring new topics and integrating existing ones.</dd>
+
+    
+    
+     <dt class="dt dlterm">Defining keys</dt>
+
+     <dd class="dd">Maps can define keys, which provide an indirect addressing mechanism that
+      enhances portability of content. The keys are defined by &lt;topicref&gt; elements or
+      specialization of &lt;topicref&gt; elements, such as &lt;keydef&gt;. The &lt;keydef&gt; element is a
+      convenience element; it is a specialized type of a &lt;topicref&gt; element with the following
+       attributes:<ul class="ul">
+       <li class="li">A required @keys attribute</li>
+
+       <li class="li">A @processing-role attribute with a default value of "resource-only".</li>
+
+      </ul>
+</dd>
+
+     <dd class="dd">Maps also are the context for resolving key-based references, such as elements that specify
+      the @keyref or @conkeyref attribute.</dd>
+
+    
+   </dl>
+
+  </div>
+
+  <p class="p">Specialized maps can provide additional semantics beyond those of organization,
+   linking, and indirection. For example, the subjectScheme map specialization adds the semantics of
+   taxonomy and ontology definition.</p>
+
+ </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditamaps.html" title="This topic collection contains information about DITA maps and the purposes that they serve. It also includes high-level information about DITA map elements, attributes, and metadata.">DITA maps</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/definition-of-ditamaps.html" title="DITA maps are documents that organize topics and other resources into structured collections of information. DITA maps specify hierarchy and the relationships among the topics; they also provide the context in which keys are defined and resolved. DITA maps should have .ditamap file extensions.">Definition of DITA maps</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditamap-elements.html" title="A DITA map describes the relationships among a set of DITA topics. The DITA map and map group elements organize topics into hierarchies, groups, and relationships; they also define keys.">DITA map elements</a></div>
+</div>
+</div>
+
+</body>
+</html>

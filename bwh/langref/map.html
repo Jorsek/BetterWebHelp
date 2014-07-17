@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="map"/>
+<meta name="abstract" content="The &lt;map&gt; element describes the relationships among a set of resources, such as DITA topics. Maps consist of references to topics, maps, and other resources organized into hierarchies, groups, and tables. Maps express these relationships in a single common format that can be used for different outputs."/>
+<meta name="description" content="The &lt;map&gt; element describes the relationships among a set of resources, such as DITA topics. Maps consist of references to topics, maps, and other resources organized into hierarchies, groups, and tables. Maps express these relationships in a single common format that can be used for different outputs."/>
+<meta name="DC.subject" content="map, Map elements"/>
+<meta name="keywords" content="map, Map elements"/>
+<meta name="DC.Relation" scheme="URI" content="../common/map2.html"/>
+<meta name="DC.Relation" scheme="URI" content="../langref/topicref.html"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="map"/>
+<meta name="DC.Language" content="en-us"/>
+<title>map</title>
+</head>
+<body id="map">
+
+
+<h1 class="title topictitle1">map</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The &lt;<span class="keyword">map</span>&gt; element describes the
+relationships among a set of resources, such as DITA topics. Maps
+consist of references to topics, maps, and other resources organized
+into hierarchies, groups, and tables. Maps express these relationships
+in a single common format that can be used for different outputs. </p>
+
+<div class="section"><p class="p">The containing element for a map is the &lt;<span class="keyword">map</span>&gt;
+element. Within the map, use the &lt;<span class="keyword">topicref</span>&gt;
+element to add and organize references to the topics, and the &lt;topicgroup&gt;
+and &lt;reltable&gt; elements to provide non-hierarchical relationships.
+You can use the &lt;map&gt; element to set default attribute values
+for all &lt;topicref&gt; elements in the map.</p>
+<div class="p">A map describes
+the relationships among a set of DITA topics. The following are some
+examples of relationships that can be described in a map:<ul class="ul">
+<li class="li">Hierarchical (Parent/Child). Nested topics create a hierarchical
+relationship. The topic that does the nesting is the parent, and the
+topics that are nested are the children.</li>
+
+<li class="li">Ordered. Child topics can be labeled as having an ordered relationship,
+which means they are referenced in a definite sequence.</li>
+
+<li class="li">Family. Child topics can be labeled as having a family relationship,
+which means they all refer to each other.</li>
+
+</ul>
+</div>
+<p class="p">When rendering a map, processors may make use of these
+relationships, such as to create a Table of Contents (TOC), aggregate
+topics into a PDF document, or create links between topics in output.</p>
+<p class="p">The title element
+may optionally be used to provide a title for the map (the title element
+is preferred over the title attribute). In some scenarios the title
+is purely informational, and is present as an aid to the author. In
+other scenarios it may be useful or even required. For example, if
+a map is converted to Eclipse Help, the Eclipse system will require
+a title for the resulting table of contents. In the bookmap specialization
+of map, the &lt;title&gt; element provides a title for the book represented
+by that map.</p>
+</div>
+
+<div class="section" id="map__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
+Actual content models will differ with each new document type.</div>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d393892e68" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d393892e70" class="stentry" width="77.77777777777777%">Content model</th>
+</tr>
+<tr class="strow">
+<td valign="top" id="d393892e75" headers="d393892e68" class="stentry"><strong>map (base), bookmap</strong></td>
+
+<td valign="top" headers="d393892e70 d393892e75" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="topicmeta.html" title="The &lt;topicmeta&gt; element defines the metadata that applies to a topic when it appears in a map. When appropriate, that metadata also applies to the other topics in the map that are contained by the same element that contains the &lt;topicmeta&gt; element. When creating links, &lt;topicmeta&gt; content can also be used to override the title and short description that are used for the link. In addition, it can be used to add index entries to referenced content using the &lt;keywords&gt; element.">topicmeta</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="anchor.html" title="The &lt;anchor&gt; element provides an integration point that another map can reference in order to insert its navigation into the current navigation tree. For those familiar with Eclipse help systems, this serves the same purpose as the &lt;anchor&gt; element in that system. It may not be supported for all output formats.">anchor</a> or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="navref.html" title="The &lt;navref&gt; element represents a pointer to another map which should be preserved as a transcluding link rather than resolved. Output formats that support such linking will integrate the referenced resource when displaying the referencing map to an end user.">navref</a> or <a class="- topic/xref  ajaxLink" href="reltable.html" title="The &lt;reltable&gt; element is a relationship table that specifies relationships between topics, based on the familiar table model of rows (&lt;relrow&gt;), columns (&lt;relheader&gt;), and cells (&lt;relcell&gt;).">reltable</a> or <a class="- topic/xref  ajaxLink" href="topicref.html" title="The &lt;topicref&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;topicref&gt; can contain other &lt;topicref&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;topicref&gt; and its children. You can set the collection-type of a parent &lt;topicref&gt; to determine how its children are related to each other. You can also express relationships among &lt;topicref&gt; elements by using group and table structures (&lt;topicgroup&gt; and &lt;reltable&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship.">topicref</a> or <a class="- topic/xref  ajaxLink" href="anchorref.html" title="The &lt;anchorref&gt; element is used to reference an &lt;anchor&gt; element in a map. The contents of an &lt;anchorref&gt; element are rendered both in the original authored location and at the location of the referenced &lt;anchor&gt; element. The referenced &lt;anchor&gt; element may be defined in the current map or another map. When possible, this integration is done when displaying the map with &lt;anchor&gt; to an end user.">anchorref</a> or <a class="- topic/xref  ajaxLink" href="keydef.html" title="The &lt;keydef&gt; element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined. The &lt;keydef&gt; element is not the only way to define keys; its purpose is to simplify the process by defaulting several attributes to achieve the described behaviors.">keydef</a> or <a class="- topic/xref  ajaxLink" href="mapref.html" title="The &lt;mapref&gt; element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to &#34;ditamap&#34;. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.">mapref</a> or <a class="- topic/xref  ajaxLink" href="topicgroup.html" title="The &lt;topicgroup&gt; element groups &lt;topicref&gt; elements for common treatment without affecting the structural hierarchy of the map, as opposed to nesting &lt;topicref&gt; elements, which does imply a structural hierarchy. The &lt;topicgroup&gt; element can provide linking relationships and shared, inherited attributes to the set of elements that it contains without affecting the resulting table of contents or navigation.">topicgroup</a> or <a class="- topic/xref  ajaxLink" href="topichead.html" title="The &lt;topichead&gt; element provides a title-only entry in a navigation map, which should appear as a heading when the map is rendered as a table of contents. In print contexts it should also appear as a heading in the rendered content.">topichead</a> or <a class="- topic/xref  ajaxLink" href="topicset.html" title="The &lt;topicset&gt; element defines a complete unit of content that can be reused in other DITA maps or other &lt;topicset&gt; elements. The &lt;topicset&gt; element can be especially useful for task composition in which larger tasks are composed of smaller tasks. The id attribute on a &lt;topicset&gt; is required, which ensures that the complete unit is available for reuse in other contexts.">topicset</a> or <a class="- topic/xref  ajaxLink" href="topicsetref.html" title="The &lt;topicsetref&gt; element references a &lt;topicset&gt; element. The referenced &lt;topicset&gt; element can be defined in the current map or in another map.">topicsetref</a>) <em class="ph i"> (any number) </em>) </td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d393892e311" headers="d393892e68" class="stentry"><strong>map (technical content)</strong></td>
+
+<td valign="top" headers="d393892e70 d393892e311" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="topicmeta.html" title="The &lt;topicmeta&gt; element defines the metadata that applies to a topic when it appears in a map. When appropriate, that metadata also applies to the other topics in the map that are contained by the same element that contains the &lt;topicmeta&gt; element. When creating links, &lt;topicmeta&gt; content can also be used to override the title and short description that are used for the link. In addition, it can be used to add index entries to referenced content using the &lt;keywords&gt; element.">topicmeta</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="anchor.html" title="The &lt;anchor&gt; element provides an integration point that another map can reference in order to insert its navigation into the current navigation tree. For those familiar with Eclipse help systems, this serves the same purpose as the &lt;anchor&gt; element in that system. It may not be supported for all output formats.">anchor</a> or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="navref.html" title="The &lt;navref&gt; element represents a pointer to another map which should be preserved as a transcluding link rather than resolved. Output formats that support such linking will integrate the referenced resource when displaying the referencing map to an end user.">navref</a> or <a class="- topic/xref  ajaxLink" href="reltable.html" title="The &lt;reltable&gt; element is a relationship table that specifies relationships between topics, based on the familiar table model of rows (&lt;relrow&gt;), columns (&lt;relheader&gt;), and cells (&lt;relcell&gt;).">reltable</a> or <a class="- topic/xref  ajaxLink" href="topicref.html" title="The &lt;topicref&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;topicref&gt; can contain other &lt;topicref&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;topicref&gt; and its children. You can set the collection-type of a parent &lt;topicref&gt; to determine how its children are related to each other. You can also express relationships among &lt;topicref&gt; elements by using group and table structures (&lt;topicgroup&gt; and &lt;reltable&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship.">topicref</a> or  (<a class="- topic/xref  ajaxLink" href="anchorref.html" title="The &lt;anchorref&gt; element is used to reference an &lt;anchor&gt; element in a map. The contents of an &lt;anchorref&gt; element are rendered both in the original authored location and at the location of the referenced &lt;anchor&gt; element. The referenced &lt;anchor&gt; element may be defined in the current map or another map. When possible, this integration is done when displaying the map with &lt;anchor&gt; to an end user.">anchorref</a> or <a class="- topic/xref  ajaxLink" href="keydef.html" title="The &lt;keydef&gt; element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined. The &lt;keydef&gt; element is not the only way to define keys; its purpose is to simplify the process by defaulting several attributes to achieve the described behaviors.">keydef</a> or <a class="- topic/xref  ajaxLink" href="mapref.html" title="The &lt;mapref&gt; element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to &#34;ditamap&#34;. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.">mapref</a> or <a class="- topic/xref  ajaxLink" href="topicgroup.html" title="The &lt;topicgroup&gt; element groups &lt;topicref&gt; elements for common treatment without affecting the structural hierarchy of the map, as opposed to nesting &lt;topicref&gt; elements, which does imply a structural hierarchy. The &lt;topicgroup&gt; element can provide linking relationships and shared, inherited attributes to the set of elements that it contains without affecting the resulting table of contents or navigation.">topicgroup</a> or <a class="- topic/xref  ajaxLink" href="topichead.html" title="The &lt;topichead&gt; element provides a title-only entry in a navigation map, which should appear as a heading when the map is rendered as a table of contents. In print contexts it should also appear as a heading in the rendered content.">topichead</a> or <a class="- topic/xref  ajaxLink" href="topicset.html" title="The &lt;topicset&gt; element defines a complete unit of content that can be reused in other DITA maps or other &lt;topicset&gt; elements. The &lt;topicset&gt; element can be especially useful for task composition in which larger tasks are composed of smaller tasks. The id attribute on a &lt;topicset&gt; is required, which ensures that the complete unit is available for reuse in other contexts.">topicset</a> or <a class="- topic/xref  ajaxLink" href="topicsetref.html" title="The &lt;topicsetref&gt; element references a &lt;topicset&gt; element. The referenced &lt;topicset&gt; element can be defined in the current map or in another map.">topicsetref</a>)  or  (<a class="- topic/xref  ajaxLink" href="glossref.html" title="The &lt;glossref&gt; element is a convenience element in maps for creating a reference to a glossary topic. It has a required keys attribute, which forces the author to create a key by which inline terms may reference their definition. For example, when glossentry topics are used to define acronyms, this will remind authors to create a key which &lt;abbreviated-form&gt; elements may use to reference the short and expanded versions of that acronym.">glossref</a>) ) <em class="ph i"> (any number) </em>) </td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d393892e560" headers="d393892e68" class="stentry"><strong>classifyMap</strong></td>
+
+<td valign="top" headers="d393892e70 d393892e560" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="topicmeta.html" title="The &lt;topicmeta&gt; element defines the metadata that applies to a topic when it appears in a map. When appropriate, that metadata also applies to the other topics in the map that are contained by the same element that contains the &lt;topicmeta&gt; element. When creating links, &lt;topicmeta&gt; content can also be used to override the title and short description that are used for the link. In addition, it can be used to add index entries to referenced content using the &lt;keywords&gt; element.">topicmeta</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="anchor.html" title="The &lt;anchor&gt; element provides an integration point that another map can reference in order to insert its navigation into the current navigation tree. For those familiar with Eclipse help systems, this serves the same purpose as the &lt;anchor&gt; element in that system. It may not be supported for all output formats.">anchor</a> or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="navref.html" title="The &lt;navref&gt; element represents a pointer to another map which should be preserved as a transcluding link rather than resolved. Output formats that support such linking will integrate the referenced resource when displaying the referencing map to an end user.">navref</a> or <a class="- topic/xref  ajaxLink" href="reltable.html" title="The &lt;reltable&gt; element is a relationship table that specifies relationships between topics, based on the familiar table model of rows (&lt;relrow&gt;), columns (&lt;relheader&gt;), and cells (&lt;relcell&gt;).">reltable</a> or  (<a class="- topic/xref  ajaxLink" href="topicSubjectTable.html" title="The &lt;topicSubjectTable&gt; element is a specialized relationship table which allows a map to use relationship tables to associate topics with subjects. Tools (such as search tools) may use these classifications to retrieve content that is relative to a specific subject or combination of subjects.">topicSubjectTable</a>)  or <a class="- topic/xref  ajaxLink" href="topicref.html" title="The &lt;topicref&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;topicref&gt; can contain other &lt;topicref&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;topicref&gt; and its children. You can set the collection-type of a parent &lt;topicref&gt; to determine how its children are related to each other. You can also express relationships among &lt;topicref&gt; elements by using group and table structures (&lt;topicgroup&gt; and &lt;reltable&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship.">topicref</a> or  (<a class="- topic/xref  ajaxLink" href="topicsubject.html" title="The &lt;topicsubject&gt; element identifies the subjects covered by a topic or map.">topicsubject</a> or <a class="- topic/xref  ajaxLink" href="topicapply.html" title="The &lt;topicapply&gt; element identifies subjects that qualify the content for filtering or flagging but not retrieval. The &lt;topicapply&gt; element can identify a single subject. Additional subjects can be specified by nested &lt;subjectref&gt; elements.">topicapply</a>)  or  (<a class="- topic/xref  ajaxLink" href="anchorref.html" title="The &lt;anchorref&gt; element is used to reference an &lt;anchor&gt; element in a map. The contents of an &lt;anchorref&gt; element are rendered both in the original authored location and at the location of the referenced &lt;anchor&gt; element. The referenced &lt;anchor&gt; element may be defined in the current map or another map. When possible, this integration is done when displaying the map with &lt;anchor&gt; to an end user.">anchorref</a> or <a class="- topic/xref  ajaxLink" href="keydef.html" title="The &lt;keydef&gt; element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined. The &lt;keydef&gt; element is not the only way to define keys; its purpose is to simplify the process by defaulting several attributes to achieve the described behaviors.">keydef</a> or <a class="- topic/xref  ajaxLink" href="mapref.html" title="The &lt;mapref&gt; element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to &#34;ditamap&#34;. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.">mapref</a> or <a class="- topic/xref  ajaxLink" href="topicgroup.html" title="The &lt;topicgroup&gt; element groups &lt;topicref&gt; elements for common treatment without affecting the structural hierarchy of the map, as opposed to nesting &lt;topicref&gt; elements, which does imply a structural hierarchy. The &lt;topicgroup&gt; element can provide linking relationships and shared, inherited attributes to the set of elements that it contains without affecting the resulting table of contents or navigation.">topicgroup</a> or <a class="- topic/xref  ajaxLink" href="topichead.html" title="The &lt;topichead&gt; element provides a title-only entry in a navigation map, which should appear as a heading when the map is rendered as a table of contents. In print contexts it should also appear as a heading in the rendered content.">topichead</a> or <a class="- topic/xref  ajaxLink" href="topicset.html" title="The &lt;topicset&gt; element defines a complete unit of content that can be reused in other DITA maps or other &lt;topicset&gt; elements. The &lt;topicset&gt; element can be especially useful for task composition in which larger tasks are composed of smaller tasks. The id attribute on a &lt;topicset&gt; is required, which ensures that the complete unit is available for reuse in other contexts.">topicset</a> or <a class="- topic/xref  ajaxLink" href="topicsetref.html" title="The &lt;topicsetref&gt; element references a &lt;topicset&gt; element. The referenced &lt;topicset&gt; element can be defined in the current map or in another map.">topicsetref</a>) ) <em class="ph i"> (any number) </em>) </td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d393892e832" headers="d393892e68" class="stentry"><strong>subjectScheme</strong></td>
+
+<td valign="top" headers="d393892e70 d393892e832" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="topicmeta.html" title="The &lt;topicmeta&gt; element defines the metadata that applies to a topic when it appears in a map. When appropriate, that metadata also applies to the other topics in the map that are contained by the same element that contains the &lt;topicmeta&gt; element. When creating links, &lt;topicmeta&gt; content can also be used to override the title and short description that are used for the link. In addition, it can be used to add index entries to referenced content using the &lt;keywords&gt; element.">topicmeta</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="anchor.html" title="The &lt;anchor&gt; element provides an integration point that another map can reference in order to insert its navigation into the current navigation tree. For those familiar with Eclipse help systems, this serves the same purpose as the &lt;anchor&gt; element in that system. It may not be supported for all output formats.">anchor</a> or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="navref.html" title="The &lt;navref&gt; element represents a pointer to another map which should be preserved as a transcluding link rather than resolved. Output formats that support such linking will integrate the referenced resource when displaying the referencing map to an end user.">navref</a> or <a class="- topic/xref  ajaxLink" href="reltable.html" title="The &lt;reltable&gt; element is a relationship table that specifies relationships between topics, based on the familiar table model of rows (&lt;relrow&gt;), columns (&lt;relheader&gt;), and cells (&lt;relcell&gt;).">reltable</a> or <a class="- topic/xref  ajaxLink" href="topicref.html" title="The &lt;topicref&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;topicref&gt; can contain other &lt;topicref&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;topicref&gt; and its children. You can set the collection-type of a parent &lt;topicref&gt; to determine how its children are related to each other. You can also express relationships among &lt;topicref&gt; elements by using group and table structures (&lt;topicgroup&gt; and &lt;reltable&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship.">topicref</a> or  (<a class="- topic/xref  ajaxLink" href="anchorref.html" title="The &lt;anchorref&gt; element is used to reference an &lt;anchor&gt; element in a map. The contents of an &lt;anchorref&gt; element are rendered both in the original authored location and at the location of the referenced &lt;anchor&gt; element. The referenced &lt;anchor&gt; element may be defined in the current map or another map. When possible, this integration is done when displaying the map with &lt;anchor&gt; to an end user.">anchorref</a> or <a class="- topic/xref  ajaxLink" href="keydef.html" title="The &lt;keydef&gt; element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined. The &lt;keydef&gt; element is not the only way to define keys; its purpose is to simplify the process by defaulting several attributes to achieve the described behaviors.">keydef</a> or <a class="- topic/xref  ajaxLink" href="mapref.html" title="The &lt;mapref&gt; element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to &#34;ditamap&#34;. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.">mapref</a> or <a class="- topic/xref  ajaxLink" href="topicgroup.html" title="The &lt;topicgroup&gt; element groups &lt;topicref&gt; elements for common treatment without affecting the structural hierarchy of the map, as opposed to nesting &lt;topicref&gt; elements, which does imply a structural hierarchy. The &lt;topicgroup&gt; element can provide linking relationships and shared, inherited attributes to the set of elements that it contains without affecting the resulting table of contents or navigation.">topicgroup</a> or <a class="- topic/xref  ajaxLink" href="topichead.html" title="The &lt;topichead&gt; element provides a title-only entry in a navigation map, which should appear as a heading when the map is rendered as a table of contents. In print contexts it should also appear as a heading in the rendered content.">topichead</a> or <a class="- topic/xref  ajaxLink" href="topicset.html" title="The &lt;topicset&gt; element defines a complete unit of content that can be reused in other DITA maps or other &lt;topicset&gt; elements. The &lt;topicset&gt; element can be especially useful for task composition in which larger tasks are composed of smaller tasks. The id attribute on a &lt;topicset&gt; is required, which ensures that the complete unit is available for reuse in other contexts.">topicset</a> or <a class="- topic/xref  ajaxLink" href="topicsetref.html" title="The &lt;topicsetref&gt; element references a &lt;topicset&gt; element. The referenced &lt;topicset&gt; element can be defined in the current map or in another map.">topicsetref</a>) ) <em class="ph i"> (any number) </em>) </td>
+</tr>
+<tr class="strow">
+<td valign="top" id="d393892e1069" headers="d393892e68" class="stentry"><strong>learningBookmap, learningMap</strong></td>
+
+<td valign="top" headers="d393892e70 d393892e1069" class="stentry"> ( (<a class="- topic/xref  ajaxLink" href="title.html" title="The &lt;title&gt; element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables. Beginning with DITA 1.1, the element may also be used to provide a title for a map. With DITA 1.2, the element is also available in reltables, although in the reltable a title is typically used for reference information (not for content displayed to an end user).">title</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="topicmeta.html" title="The &lt;topicmeta&gt; element defines the metadata that applies to a topic when it appears in a map. When appropriate, that metadata also applies to the other topics in the map that are contained by the same element that contains the &lt;topicmeta&gt; element. When creating links, &lt;topicmeta&gt; content can also be used to override the title and short description that are used for the link. In addition, it can be used to add index entries to referenced content using the &lt;keywords&gt; element.">topicmeta</a>) <em class="ph i"> (optional) </em> then  (<a class="- topic/xref  ajaxLink" href="anchor.html" title="The &lt;anchor&gt; element provides an integration point that another map can reference in order to insert its navigation into the current navigation tree. For those familiar with Eclipse help systems, this serves the same purpose as the &lt;anchor&gt; element in that system. It may not be supported for all output formats.">anchor</a> or <a class="- topic/xref  ajaxLink" href="data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a class="- topic/xref  ajaxLink" href="data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a class="- topic/xref  ajaxLink" href="navref.html" title="The &lt;navref&gt; element represents a pointer to another map which should be preserved as a transcluding link rather than resolved. Output formats that support such linking will integrate the referenced resource when displaying the referencing map to an end user.">navref</a> or <a class="- topic/xref  ajaxLink" href="reltable.html" title="The &lt;reltable&gt; element is a relationship table that specifies relationships between topics, based on the familiar table model of rows (&lt;relrow&gt;), columns (&lt;relheader&gt;), and cells (&lt;relcell&gt;).">reltable</a> or <a class="- topic/xref  ajaxLink" href="topicref.html" title="The &lt;topicref&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;topicref&gt; can contain other &lt;topicref&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;topicref&gt; and its children. You can set the collection-type of a parent &lt;topicref&gt; to determine how its children are related to each other. You can also express relationships among &lt;topicref&gt; elements by using group and table structures (&lt;topicgroup&gt; and &lt;reltable&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship.">topicref</a> or <a class="- topic/xref  ajaxLink" href="anchorref.html" title="The &lt;anchorref&gt; element is used to reference an &lt;anchor&gt; element in a map. The contents of an &lt;anchorref&gt; element are rendered both in the original authored location and at the location of the referenced &lt;anchor&gt; element. The referenced &lt;anchor&gt; element may be defined in the current map or another map. When possible, this integration is done when displaying the map with &lt;anchor&gt; to an end user.">anchorref</a> or <a class="- topic/xref  ajaxLink" href="keydef.html" title="The &lt;keydef&gt; element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined. The &lt;keydef&gt; element is not the only way to define keys; its purpose is to simplify the process by defaulting several attributes to achieve the described behaviors.">keydef</a> or <a class="- topic/xref  ajaxLink" href="mapref.html" title="The &lt;mapref&gt; element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to &#34;ditamap&#34;. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.">mapref</a> or <a class="- topic/xref  ajaxLink" href="topicgroup.html" title="The &lt;topicgroup&gt; element groups &lt;topicref&gt; elements for common treatment without affecting the structural hierarchy of the map, as opposed to nesting &lt;topicref&gt; elements, which does imply a structural hierarchy. The &lt;topicgroup&gt; element can provide linking relationships and shared, inherited attributes to the set of elements that it contains without affecting the resulting table of contents or navigation.">topicgroup</a> or <a class="- topic/xref  ajaxLink" href="topichead.html" title="The &lt;topichead&gt; element provides a title-only entry in a navigation map, which should appear as a heading when the map is rendered as a table of contents. In print contexts it should also appear as a heading in the rendered content.">topichead</a> or <a class="- topic/xref  ajaxLink" href="topicset.html" title="The &lt;topicset&gt; element defines a complete unit of content that can be reused in other DITA maps or other &lt;topicset&gt; elements. The &lt;topicset&gt; element can be especially useful for task composition in which larger tasks are composed of smaller tasks. The id attribute on a &lt;topicset&gt; is required, which ensures that the complete unit is available for reuse in other contexts.">topicset</a> or <a class="- topic/xref  ajaxLink" href="topicsetref.html" title="The &lt;topicsetref&gt; element references a &lt;topicset&gt; element. The referenced &lt;topicset&gt; element can be defined in the current map or in another map.">topicsetref</a> or <a class="- topic/xref  ajaxLink" href="learningObject.html" title="learningObject organizes topic references to DITA learning topics as a learning object.">learningObject</a> or <a class="- topic/xref  ajaxLink" href="learningGroup.html" title="Use a &lt;learningGroup&gt; to structure learning objects into higher-level organizations, such as course-level, module-level, or lesson-level.">learningGroup</a>) <em class="ph i"> (any number) </em>) </td>
+</tr>
+</table>
+</div>
+
+<div class="section" id="map__containedby"><h2 class="title sectiontitle">Contained by</h2><p class="p">This element is not contained by any other elements.</p>
+</div>
+
+<div class="section" id="map__inheritance"><h2 class="title sectiontitle">Inheritance</h2><p class="p">-
+map/map </p>
+</div>
+
+<div class="example" id="map__example"><h2 class="title sectiontitle">Example</h2><p class="p">In this example, there
+are six topicrefs. They are nested and have a hierarchical relationship.
+The file bats.dita is the parent topic and the other topics are its
+children. The hierarchy could be used to generate a PDF, a navigation
+pane in an information center, a summary of the topics, or related
+links between the parent topic and its children.</p>
+<pre class="pre codeblock">&lt;map id="mybats"&gt;
+  &lt;title&gt;Bats&lt;/title&gt;
+  &lt;topicref href="bats.dita" type="topic"&gt;
+    &lt;topicref href="batcaring.dita" type="task"&gt;&lt;/topicref&gt;
+    &lt;topicref href="batfeeding.dita" type="task"&gt;&lt;/topicref&gt;
+    &lt;topicref href="batsonar.dita" type="concept"&gt;&lt;/topicref&gt;
+    &lt;topicref href="batguano.dita" type="reference"&gt;&lt;/topicref&gt;
+    &lt;topicref href="bathistory.dita" type="reference"&gt;&lt;/topicref&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;</pre>
+</div>
+
+<div class="section" id="map__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="map__map_attr" border="1" class="simpletable"><tr class="sthead">
+<th valign="bottom" align="left" id="d393892e1350" class="stentry" width="25%">Name</th>
+
+<th valign="bottom" align="left" id="d393892e1353" class="stentry" width="37.5%">Description</th>
+
+<th valign="bottom" align="left" id="d393892e1356" class="stentry" width="12.5%">Data Type</th>
+
+<th valign="bottom" align="left" id="d393892e1359" class="stentry" width="12.5%">Default Value</th>
+
+<th valign="bottom" align="left" id="d393892e1362" class="stentry" width="12.5%">Required?</th>
+
+</tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">title</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">An identifying title for the map. May be used or ignored,
+				depending on the capabilities of the display mechanism. Note that beginning
+				with DITA 1.1, the map can include a title element, which is preferred over the
+				title attribute.</td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">id</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">Allows an ID to be specified for the map. Note that maps do
+				not require IDs (unlike topics), and the map ID is not included in references
+				to elements within a map.</td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry">ID</td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">conref </td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">This attribute is used to reference an ID on a map that can
+				be reused. See 
+				<a class="- topic/xref  ajaxLink" href="common/theconrefattribute.html" title="This attribute is used to reference content that can be reused. It allows reuse of DITA elements, including topic or map level elements.">The conref attribute</a> for examples and
+				details about the syntax.</td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">anchorref</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">Identifies a location within another map file
+				where this map will be anchored at runtime. Resolution of the map is deferred
+				until the final step in the delivery of any rendered content. For example, 
+				<samp class="ph codeph">anchorref="map1.ditamap/a1"</samp> causes this
+				map to be pulled into the location of the anchor point "a1" inside map1.ditamap
+				when map1.ditamap is rendered for delivery.</td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry">#IMPLIED</td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">xmlns:ditaarch</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">Declares the default DITA namespace.</td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry">"http://dita.​oasis-open.​org/​architecture/​2005/"</td>
+
+			 
+			 <td valign="top" headers="d393892e1362" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">DITAArchVersion</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">Designates the version of the architecture that is in use.
+				The default value will increase with each release of DITA.</td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry">"1.2"</td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">domains</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">Indicates the specialized domains that are included in the
+				DTD or Schema. This value will differ depending on what domains are included in
+				the current DTD or Schema.</td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry">CDATA</td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry"><em class="ph i">Varies based on the DTD or Schema; a sample value is
+				  "(topic ui-d) (topic hi-d) (topic pr-d) (topic sw-d) (topic ut-d) (topic
+				  indexing-d)"</em></td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry">No</td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">topicref-atts attribute group (collection-type,
+				processing-role, type, scope, locktitle, format, linking, toc, print, search,
+				chunk)</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">A set of related attributes. See 
+				<a class="- topic/xref  ajaxLink" href="common/topicref-atts.html" title="The &#34;topicref-atts&#34;, &#34;topicref-atts-no-toc&#34;, and &#34;topicref-atts-without-format&#34; attribute groups represent collections of attributes used in numerous map elements.">topicref-atts, topicref-atts-no-toc, and topicref-atts-without-format attribute groups</a>.</td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">select-atts attribute group (props, base, platform, product,
+				audience, otherprops, importance, rev, status)</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/select-atts.html" title="The &#34;select-atts&#34; attribute group includes common metadata attributes, several of which support conditional processing (filtering and flagging) or the creation of new attribute domain specializations.">select-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">localization-atts attribute group (translate, xml:lang,
+				dir)</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/localization-atts.html" title="The &#34;localization-atts&#34; attribute group defines a set of common attributes related to translation and localization. These attributes are available on most DITA elements.">localization-atts attribute group</a>. 
+			 </td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">A set of related attributes, described in 
+				<a class="- topic/xref  ajaxLink" href="common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry"> </td>
+ 
+		  </tr>
+<tr class="strow"> 
+			 <td valign="top" headers="d393892e1350" class="stentry">class, outputclass</td>
+ 
+			 <td valign="top" headers="d393892e1353" class="stentry">Common attributes described in 
+				<a class="- topic/xref  ajaxLink" href="common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
+ 
+			 <td valign="top" headers="d393892e1356" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1359" class="stentry"> </td>
+ 
+			 <td valign="top" headers="d393892e1362" class="stentry"> </td>
+ 
+		  </tr>
+</table>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/map2.html" title="DITA maps are built from a few core elements that are used for referencing and organizing topics. The &lt;topicmeta&gt; element is also available to specify metadata for the map, for individual topics, or for groups of topics. Many elements inside &lt;topicmeta&gt; are also available inside the topic prolog.">Basic map elements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="langref/topicref.html" title="The &lt;topicref&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;topicref&gt; can contain other &lt;topicref&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;topicref&gt; and its children. You can set the collection-type of a parent &lt;topicref&gt; to determine how its children are related to each other. You can also express relationships among &lt;topicref&gt; elements by using group and table structures (&lt;topicgroup&gt; and &lt;reltable&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship.">topicref</a></div>
+</div>
+</div>
+
+</body>
+</html>
