@@ -15,6 +15,9 @@ To load the sample output (/bwh) follow the instructions to get a localhost serv
 
 Navigate to http://localhost/bwh/ to see the site.
 
+##Styling
+Note that the styling for BWH was written in [LESS for CSS](http://lesscss.org/) however the .less files are not copied to the output folder since they are compiled to CSS before building with the DITA OT. If you wish to alter these files, they are located in /com.jorsek.bwh/resource/scripts/ and you can use [Crunch](http://crunchapp.net/) to edit and compile into your output directory (or whichever LESS editor/compiler you prefer).
+
 ##Sponsor
 This project is sponsored by [Jorsek LLC, makers of easyDITA software](http://www.easydita.com).
 
