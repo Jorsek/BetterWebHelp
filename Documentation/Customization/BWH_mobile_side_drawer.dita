@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="task-7053" domains="(topic task)                            (topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)                            (topic task strictTaskbody-c)    " ditaarch:DITAArchVersion="1.2" class="- topic/topic task/task "><title class="- topic/title ">Set Up a Side Nav Drawer for BWH</title><shortdesc class="- topic/shortdesc ">How to set up a sliding side nav panel on mobile for Better Web Help (bwh) plugin for the DITA OT.</shortdesc><prolog class="- topic/prolog "><author type="creator" translate="no" class="- topic/author ">Scott Lucchini &lt;scott.lucchini@easydita.com&gt;</author><metadata class="- topic/metadata "><keywords class="- topic/keywords "/></metadata></prolog><taskbody class="- topic/body task/taskbody "><context class="- topic/section task/context ">This tutorial assumes you've already built the BWH site using the DITA Open Toolkit. I will use {root} as the root directory of the webpage (where you specified "outdir" in the DITA OT).</context><steps class="- topic/ol task/steps "><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">Open {root}/index.html in a text editing program (Notepad, TextEdit, etc).</cmd></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">You should see a document that begins with something like this:</cmd><stepxmp class="- topic/itemgroup task/stepxmp "><codeblock xml:space="preserve" class="+ topic/pre pr-d/codeblock ">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			name="viewport" /&gt;
+		&lt;meta name="viewport" content="width=device-width, minimal-ui" /&gt;
+		&lt;meta name="mobile-web-app-capable" content="yes" /&gt;
+		&lt;meta name="apple-mobile-web-app-capable" content="yes" /&gt;
+		&lt;link rel="icon" sizes="196x196" href="help-icon.png" /&gt;
+		&lt;link rel="apple-touch-icon" sizes="196x196" href="help-icon.png" /&gt;
+		&lt;link rel="stylesheet" type="text/css" href="frameless.css" /&gt;
+		&lt;link rel="stylesheet" type="text/css" href="user-fonts.css" /&gt;
+		&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="typeahead.bundle.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="queryString.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="dragdealer.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="lunr.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="lunrScripts.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="loadContent.js"&gt;//&lt;/script&gt;
+...</codeblock></stepxmp></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">Right below the line that contains 'href="frameless.css"', add the following line:</cmd><stepxmp class="- topic/itemgroup task/stepxmp "><codeblock xml:space="preserve" class="+ topic/pre pr-d/codeblock ">&lt;link rel="stylesheet" type="text/css" href="side-drawer.css" /&gt;</codeblock></stepxmp></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">It should look like this:</cmd><stepxmp class="- topic/itemgroup task/stepxmp "><codeblock xml:space="preserve" class="+ topic/pre pr-d/codeblock ">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			name="viewport" /&gt;
+		&lt;meta name="viewport" content="width=device-width, minimal-ui" /&gt;
+		&lt;meta name="mobile-web-app-capable" content="yes" /&gt;
+		&lt;meta name="apple-mobile-web-app-capable" content="yes" /&gt;
+		&lt;link rel="icon" sizes="196x196" href="help-icon.png" /&gt;
+		&lt;link rel="apple-touch-icon" sizes="196x196" href="help-icon.png" /&gt;
+		&lt;link rel="stylesheet" type="text/css" href="frameless.css" /&gt;
+		<b class="+ topic/ph hi-d/b ">&lt;link rel="stylesheet" type="text/css" href="side-drawer.css" /&gt;</b>
+		&lt;link rel="stylesheet" type="text/css" href="user-fonts.css" /&gt;
+		&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="typeahead.bundle.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="queryString.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="dragdealer.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="lunr.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="lunrScripts.js"&gt;//&lt;/script&gt;
+		&lt;script type="text/javascript" src="loadContent.js"&gt;//&lt;/script&gt;
+...</codeblock></stepxmp></step></steps><result class="- topic/section task/result ">When you next open your webpage, you should see a side drawer when the window size is less than 600 pixels wide.</result></taskbody></task>

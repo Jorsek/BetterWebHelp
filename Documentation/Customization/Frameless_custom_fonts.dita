@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="task-189" domains="(topic task)                            (topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)                            (topic task strictTaskbody-c)    " ditaarch:DITAArchVersion="1.2" class="- topic/topic task/task "><title class="- topic/title ">Custom Fonts with Better Web Help</title><shortdesc class="- topic/shortdesc ">How to customize the fonts with output from the Better Web Help (bwh) DITA OT plugin.</shortdesc><prolog class="- topic/prolog "><author type="creator" translate="no" class="- topic/author ">Scott Lucchini &lt;scott.lucchini@easydita.com&gt;</author><metadata class="- topic/metadata "><keywords class="- topic/keywords "/></metadata></prolog><taskbody class="- topic/body task/taskbody "><context class="- topic/section task/context ">This tutorial assumes that you have already built the website using the DITA OT.</context><steps class="- topic/ol task/steps "><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">Open the output directory that you supplied to the DITA OT.</cmd></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">Open "user-fonts.css."</cmd></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">You will see a comment at the top describing the classes and ids to specify to change a specific region:</cmd><stepxmp class="- topic/itemgroup task/stepxmp "><codeblock xml:space="preserve" class="+ topic/pre pr-d/codeblock ">/*
+ * 
+ * Enter custom fonts below. Use the following key to change the specific
+ * regions you require:
+ * 
+ * #web-help-c1 {this will affect the navigation panel / table of contents}
+ * #web-help-c2 {this will affect the entire content pane, excluding the
+ * heading}
+ * #web-help-c2 h1 {this will affect the title of the content pane}
+ * #web-help-c2 .body {this will affect the body text of the content pane}
+ * #web-help-c2 .related-links {this will affect the related links footer in
+ * (the content pane}
+ * 
+ * not recommended --&gt; #heading {this will affect the heading (content from
+ * heading.html)}
+ * 		edit styles within heading.html instead
+ * 
+ */</codeblock></stepxmp></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">Using the syntax below, enter the desired fonts.</cmd><stepxmp class="- topic/itemgroup task/stepxmp "><codeblock xml:space="preserve" class="+ topic/pre pr-d/codeblock ">{region} {font-family: {font1}, {font2}, {font3}, ...;}</codeblock></stepxmp></step></steps><result class="- topic/section task/result "><note type="tip" class="- topic/note ">You can use this document to customize other stylings as well.</note>The fonts on your web-help should now be changed. Note that if you rebuild the project to the same output directory, your custom fonts will remain. The build will not overwrite your user-fonts.css file.</result></taskbody></task>
