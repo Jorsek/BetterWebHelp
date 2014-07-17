@@ -1,0 +1,516 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+	
+	Based off of:
+	Frameless simple demo by Mark Nugent
+*/
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block;
+}
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+b,
+strong {
+  font-weight: bold;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img,
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+}
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  overflow: auto;
+}
+/*
+	Type presets
+*/
+body {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-size: 1em;
+}
+/***** drag up button styles *****/
+/*
+To create the gray pointed trapezoid
+*/
+#drag-icon-bg {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin-left: 0.3125em;
+  height: 4.375em;
+  width: 4.6875em;
+  z-index: 1;
+}
+#drag-icon-bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 51%;
+  width: 100%;
+  background: #eee;
+  -webkit-transform: skew(10deg, 0deg);
+  -moz-transform: skew(10deg, 0deg);
+  -ms-transform: skew(10deg, 0deg);
+  -o-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;
+  -khtml-border-radius: 0 5px 0 0;
+}
+#drag-icon-bg:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: #eee;
+  -webkit-transform: skew(-10deg, 0deg);
+  -moz-transform: skew(-10deg, 0deg);
+  -ms-transform: skew(-10deg, 0deg);
+  -o-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
+  -moz-border-radius: 0 0 5px 0;
+  -webkit-border-radius: 0 0 5px 0;
+  border-radius: 0 0 5px 0;
+  -khtml-border-radius: 0 0 5px 0;
+}
+/*
+To create the three arrow lines within the icon
+*/
+#drag-icon:before {
+  content: '';
+  z-index: 2;
+  display: block;
+  position: absolute;
+  height: 1.875em;
+  width: 0.15625em;
+  background: #8d8d8d;
+  left: 3.22916667em;
+  top: 0.3125em;
+  box-shadow: 0.41666667em 0 0 #8d8d8d, 0.83333333em 0 0 #8d8d8d;
+  -webkit-transform: skew(10deg, 0deg);
+  -moz-transform: skew(10deg, 0deg);
+  -ms-transform: skew(10deg, 0deg);
+  -o-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
+}
+#drag-icon:after {
+  content: '';
+  z-index: 2;
+  display: block;
+  position: absolute;
+  height: 1.875em;
+  width: 0.15625em;
+  background: #8d8d8d;
+  left: 3.22916667em;
+  top: 2.1875em;
+  box-shadow: 0.41666667em 0 0 #8d8d8d, 0.83333333em 0 0 #8d8d8d;
+  -webkit-transform: skew(-10deg, 0deg);
+  -moz-transform: skew(-10deg, 0deg);
+  -ms-transform: skew(-10deg, 0deg);
+  -o-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
+}
+.fade {
+  opacity: 0.2;
+  transition: opacity 0.5s ease-in-out;
+}
+.unfade {
+  opacity: 1.0;
+  transition: opacity 0.5s ease-in-out;
+}
+/***** end drag up button styles *****/
+/***** common styles *****/
+#container {
+  margin: auto;
+  width: 90%;
+}
+#heading h1 {
+  font-size: 1.75em;
+  background-color: #666;
+  color: #fff;
+  padding: 0.625em;
+}
+#heading img {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  max-height: 12.5em;
+}
+#web-help {
+  height: 100%;
+}
+.web-help-nav {
+  font-size: 0.75em;
+  margin: 0.25em auto 0.25em 0.375em;
+  list-style-type: none;
+}
+.web-help-subnav {
+  margin: auto auto 0.25em 0em;
+  list-style-type: none;
+}
+.web-help-subnav li {
+  margin-left: 1.25em;
+}
+#web-help-c1 a:link {
+  text-decoration: none;
+  color: #000000;
+}
+#web-help-c1 a:visited {
+  text-decoration: none;
+  color: #000000;
+}
+#web-help-c1 a:hover {
+  text-decoration: none;
+  color: white;
+}
+#web-help-c1 a:active {
+  text-decoration: none;
+  color: #000000;
+}
+#web-help-c2 a:link {
+  text-decoration: underline;
+  color: #000000;
+}
+#web-help-c2 a:visited {
+  text-decoration: underline;
+  color: #000000;
+}
+#web-help-c2 a:hover {
+  text-decoration: none;
+  color: #5C5CD6;
+}
+#web-help-c2 a:active {
+  text-decoration: underline;
+  color: #FF4D4D;
+}
+#web-help {
+  width: 100%;
+  margin-top: 0.375em;
+}
+#web-help-c1 {
+  width: 30%;
+  position: relative;
+  z-index: 10;
+  float: left;
+  background-color: #eee;
+  margin-bottom: 0.9375em;
+}
+#web-help-c2 {
+  width: 70%;
+  position: relative;
+  z-index: 1;
+  float: right;
+  padding-bottom: 3.125em;
+  font-family: serif;
+}
+#web-help-c2 h1 {
+  font-size: 1.625em;
+  font-weight: normal;
+  margin-bottom: 0.3125em;
+  border-bottom: solid 2px gray;
+  line-height: 125%;
+  font-family: sans-serif;
+}
+#web-help-c2 .shortdesc {
+  font-size: 0.875em;
+  font-style: italic;
+}
+#drag-container {
+  position: fixed;
+  z-index: 9;
+  left: -2.60416667em;
+  top: 55%;
+  margin-top: -2.1875em;
+  height: 4.375em;
+  right: 24.25%;
+  pointer-events: none;
+}
+#drag-handle {
+  pointer-events: auto;
+  width: 4.375em;
+  height: 100%;
+}
+#heading,
+#web-help-c2 {
+  pointer-events: none;
+  opacity: 0.3;
+}
+/***** end common styles *****/
+/**
+	Mobile layout 
+	240-600 px
+**/
+@media screen and (min-width: 15em) {
+  #container {
+    min-width: 16.5em;
+  }
+  #heading img {
+    width: 16.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #web-help-c1 {
+    width: 63%;
+    bottom: -6.25em;
+    top: 20%;
+    right: 101%;
+    overflow-y: scroll;
+    position: fixed;
+    padding-left: 7%;
+    border-top: solid 0.625em #eeeeee;
+    border-bottom: solid 6.25em #eeeeee;
+    border-right: solid 0.3125em #808080;
+    border-left: solid 62.5em #eeeeee;
+  }
+  #heading,
+  #web-help-c2 {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+  #web-help-c2 {
+    width: 100%;
+  }
+  #web-help-c2 img {
+    max-width: 16.5em;
+  }
+  #web-help-c2 ul {
+    margin-left: 0.625em;
+  }
+  #web-help-c2 li {
+    margin-left: 1.25em;
+  }
+}
+/*
+	Wide mobile layout 
+	480-767 px
+	Zoomed in above 480 px
+*/
+@media screen and (min-width: 30em) {
+  #container {
+    min-width: 25.5em;
+  }
+  #heading img {
+    width: 16.5em;
+  }
+  #web-help-c2 img {
+    max-width: 25.5em;
+  }
+  #web-help-c2 ul {
+    margin-left: 0.625em;
+  }
+  #web-help-c2 li {
+    margin-left: 1.25em;
+  }
+}
+/*
+	Tablet layout 
+	600-911 px
+	Zoomed in above 600 px
+*/
+@media screen and (min-width: 37.5em) {
+  #container {
+    min-width: 34.5em;
+  }
+  #heading img {
+    width: 21em;
+  }
+  #web-help {
+    float: left;
+  }
+  #web-help-c1 {
+    width: 25%;
+    border-bottom: none;
+    border-left: none;
+    padding-left: 0;
+    border-right: solid 5px gray;
+    position: static;
+  }
+  #heading,
+  #web-help-c2 {
+    pointer-events: auto;
+    opacity: 1.0;
+  }
+  #web-help-c2 {
+    width: 70%;
+    padding: 0.25em;
+  }
+  #web-help-c2 img {
+    max-width: 24.15em;
+  }
+  #web-help-c2 ul {
+    margin-left: 0.9375em;
+  }
+  #web-help-c2 li {
+    margin-left: 1.5625em;
+  }
+  #drag-container {
+    display: none;
+    z-index: -100;
+  }
+}
+/*
+	desktop layout 
+	912-infinity px
+*/
+@media screen and (min-width: 57em) {
+  #container {
+    min-width: 52.5em;
+    max-width: 70.5em;
+  }
+  #heading img {
+    width: 21em;
+  }
+  #web-help-c2 {
+    padding: 0.625em;
+  }
+  #web-help-c2 img {
+    max-width: 36.75em;
+  }
+  .web-help-nav {
+    margin: 0.5em auto 0.5em 0.75em;
+  }
+  .web-help-subnav {
+    margin: auto auto 0.5em 1.75em;
+  }
+  #web-help-c2 ul {
+    margin-left: 1.25em;
+  }
+  #web-help-c2 li {
+    margin-left: 2.5em;
+  }
+}
+/*
+	full page zoom above 1024 px. still desktop layout.
+*/
+@media screen and (min-width: 64em) {
+  body {
+    font-size: 1.125em;
+  }
+}

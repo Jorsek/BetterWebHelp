@@ -138,12 +138,12 @@
 <xsl:template name="content-scripts">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">//</script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js">//</script>
-	<script type="text/javascript" src="typeahead.bundle.js">//</script>
-	<script type="text/javascript" src="queryString.js">//</script>
-	<script type="text/javascript" src="dragdealer.js">//</script>
-	<script type="text/javascript" src="lunr.js">//</script>
-	<script type="text/javascript" src="lunrScripts.js">//</script>
-	<script type="text/javascript" src="loadContent.js">//</script>
+	<script type="text/javascript" src="scripts/typeahead.bundle.js">//</script>
+	<script type="text/javascript" src="scripts/queryString.js">//</script>
+	<script type="text/javascript" src="scripts/dragdealer.js">//</script>
+	<script type="text/javascript" src="scripts/lunr.js">//</script>
+	<script type="text/javascript" src="scripts/lunrScripts.js">//</script>
+	<script type="text/javascript" src="scripts/loadContent.js">//</script>
 </xsl:template>
 
 <xsl:template name="mobileapp-meta">
@@ -159,8 +159,8 @@
 </xsl:template>
 
 <xsl:template name="frameless-styles">
-	<link rel="stylesheet" type="text/css" href="frameless.css" />
-	<link rel="stylesheet" type="text/css" href="user-fonts.css" />
+	<link rel="stylesheet" type="text/css" href="scripts/frameless.css" />
+	<link rel="stylesheet" type="text/css" href="scripts/user-fonts.css" />
 </xsl:template>
 
 <xsl:template name="search-bar">

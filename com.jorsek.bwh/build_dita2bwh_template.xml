@@ -7,7 +7,7 @@
 	
     <target name="dita2bwh"
     	depends="build-init, preprocess, dita.map.bwh, 
-    	copy-default-user-fonts, copy-js, copy-default-heading, copy-my-css, 
+    	copy-default-user-fonts, copy-scripts, copy-default-heading,
     	dita.topics.bwh, dita.inner.topics.bwh, 
     	dita.outer.topics.bwh, build-search-index">
     </target>
@@ -87,17 +87,14 @@
     </dita-ot-echo>
   </target>
     
-	<target name="copy-my-css" description="Copying my CSS">
+	<target name="copy-scripts" description="Copying CSS and JS Scripts">
 		<!-- Copy System CSS Files -->
-		<copy todir="${output.dir}">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="*.css"/>
+		<copy todir="${output.dir}${file.separator}scripts">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.css" excludes="user-fonts.css"/>
 		</copy>
-	</target>
-
-	<target name="copy-js" description="Copy JS files">
-		<!-- Always copy system default js files -->
-		<copy todir="${output.dir}">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="*.js"></fileset>
+		<!-- Copy System JS Files -->
+		<copy todir="${output.dir}${file.separator}scripts">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.js"/>
 		</copy>
 	</target>
 	
@@ -118,7 +115,7 @@
 
 <!-- only copy over the default user-fonts.css file if one doesn't already exist in the output directory. 
 		(i.e. if the user has already added their customized fonts, don't overwrite it) -->
-	<available file="${output.dir}${file.separator}user-fonts.css" property="user-fonts.available"/>
+	<available file="${output.dir}${file.separator}scripts${file.separator}user-fonts.css" property="user-fonts.available"/>
 	<target name="copy-default-user-fonts" description="Copy Default User Fonts" unless="user-fonts.available">
 		<copy todir="${output.dir}">
 			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="user-fonts.css"/>
@@ -188,13 +185,13 @@
 				project.setProperty("lunrData",JSON.stringify(indexData));
 			]]>
 		</echo>
-		<concat destfile="${output.dir}${file.separator}temp-code-full.js">
+		<concat destfile="${dita.temp.dir}${file.separator}temp-code-full.js">
 			<fileset file="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource/lunr.js"/>
 			<fileset file="${dita.temp.dir}${file.separator}temp-code.js"/>
 		</concat>
 		<echo>Loaded.</echo>
 		<echo>Indexing...</echo>
-		<script language="javascript" src="${output.dir}${file.separator}temp-code-full.js"/>
+		<script language="javascript" src="${dita.temp.dir}${file.separator}temp-code-full.js"/>
 		<echo>Indexing Complete.</echo>
 		<echo>Saving files...</echo>
 		<echo file="${output.dir}${file.separator}indexes${file.separator}lunrIndex.txt" append="false">

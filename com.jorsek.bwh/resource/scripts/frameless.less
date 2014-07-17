@@ -1,0 +1,417 @@
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+	
+	Based off of:
+	Frameless simple demo by Mark Nugent
+*/
+
+//
+// Configuration
+//
+
+@font-size: 16; 		// Your base font-size in pixels
+@em: @font-size*1em;	// Shorthand for outputting ems, e.g. "12/@em"
+
+@column: 48;	// The column-width of your grid in pixels
+@gutter: 24;	// The gutter-width of your grid in pixels
+
+
+//
+// Column-widths in variables, in ems
+//
+
+ @1cols: ( 1 * (@column + @gutter) - @gutter) / @em; @1col: @1cols;
+ @2cols: ( 2 * (@column + @gutter) - @gutter) / @em;
+ @3cols: ( 3 * (@column + @gutter) - @gutter) / @em;
+ @4cols: ( 4 * (@column + @gutter) - @gutter) / @em;
+ @5cols: ( 5 * (@column + @gutter) - @gutter) / @em;
+ @6cols: ( 6 * (@column + @gutter) - @gutter) / @em;
+ @7cols: ( 7 * (@column + @gutter) - @gutter) / @em;
+ @8cols: ( 8 * (@column + @gutter) - @gutter) / @em;
+ @9cols: ( 9 * (@column + @gutter) - @gutter) / @em;
+@10cols: (10 * (@column + @gutter) - @gutter) / @em;
+@11cols: (11 * (@column + @gutter) - @gutter) / @em;
+@12cols: (12 * (@column + @gutter) - @gutter) / @em;
+@16cols: (16 * (@column + @gutter) - @gutter) / @em;
+
+//
+// Column-widths in a function, in ems
+//
+
+.width (@cols:1) {
+	width: (@cols * (@column + @gutter) - @gutter) / @em;
+}
+
+
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, nav, section, audio, canvas, video {
+	display: block;
+}
+
+html {
+	height: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+}
+
+body {min-height: 100%; font-size: 100%; font-family: sans-serif;}
+
+sub, sup {
+	font-size: 75%; 
+	line-height: 0; 
+	position: relative; 
+	vertical-align: baseline;
+}
+
+	sup {top: -0.5em;}
+	sub {bottom: -0.25em;}
+
+pre {
+	white-space: pre; 
+	white-space: pre-wrap; 
+	word-wrap: break-word;
+}
+
+b, strong {font-weight: bold;}
+abbr[title] {border-bottom: 1px dotted;}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a img, img {
+	-ms-interpolation-mode: bicubic;
+	border: 0;
+}
+
+input, textarea, button, select {
+	margin: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: baseline;
+}
+
+	button,
+	html input[type="button"], 
+	input[type="reset"], 
+	input[type="submit"] {
+	    cursor: pointer;
+	    -webkit-appearance: button;
+	}
+	
+	input[type="checkbox"],
+	input[type="radio"] {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			 -o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	
+	textarea {overflow: auto;}
+
+
+/*
+	Type presets
+*/
+
+body {
+	font-size: @font-size / 16*1em;
+	line-height: 24/@em;
+	font-family: sans-serif;
+}
+
+h1, h2, h3, h4 {
+	font-size: 1em;
+}
+
+/***** drag up button styles *****/
+@iconscaler: 1.2*@em;
+
+/*
+To create the gray pointed trapezoid
+*/
+#drag-icon-bg {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 6/@iconscaler;
+    height: 90/@iconscaler;
+    width: 84/@iconscaler;
+    z-index: 1;
+}
+#drag-icon-bg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+    background: #eee;
+    -webkit-transform: skew(0deg, -6deg);
+    -moz-transform: skew(0deg, -6deg);
+    -ms-transform: skew(0deg, -6deg);
+    -o-transform: skew(0deg, -6deg);
+    transform: skew(0deg, -6deg);
+    -moz-border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    border-radius: 5px 0 0 0;
+    -khtml-border-radius: 5px 0 0 0;
+}
+#drag-icon-bg:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: #eee;
+    -webkit-transform: skew(0deg, 6deg);
+    -moz-transform: skew(0deg, 6deg);
+    -ms-transform: skew(0deg, 6deg);
+    -o-transform: skew(0deg, 6deg);
+    transform: skew(0deg, 6deg);
+    -moz-border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+    -khtml-border-radius: 0 5px 0 0;
+}
+
+/*
+To create the three arrow lines within the icon
+*/
+#drag-icon:before { 
+    content: ''; 
+    z-index: 2;
+    display: block; 
+    position: absolute; 
+    height: 3/@iconscaler; 
+    width: 36/@iconscaler; 
+    background: #8d8d8d; 
+    left: 6/@iconscaler; 
+    top: 12/@iconscaler; 
+    box-shadow: 0 8/@iconscaler 0 #8d8d8d, 0 16/@iconscaler 0 #8d8d8d;
+    -webkit-transform: skew(0deg, -6deg);
+    -moz-transform: skew(0deg, -6deg);
+    -ms-transform: skew(0deg, -6deg);
+    -o-transform: skew(0deg, -6deg);
+    transform: skew(0deg, -6deg);
+} 
+#drag-icon:after { 
+    content: ''; 
+    z-index: 2;
+    display: block; 
+    position: absolute; 
+    height: 3/@iconscaler; 
+    width: 36/@iconscaler; 
+    background: #8d8d8d; 
+    left: 42/@iconscaler; 
+    top: 12/@iconscaler; 
+    box-shadow: 0 8/@iconscaler 0 #8d8d8d, 0 16/@iconscaler 0 #8d8d8d;
+    -webkit-transform: skew(0deg, 6deg);
+    -moz-transform: skew(0deg, 6deg);
+    -ms-transform: skew(0deg, 6deg);
+    -o-transform: skew(0deg, 6deg);
+    transform: skew(0deg, 6deg);
+}
+/***** end drag up button styles *****/
+
+/***** Shading for depth effects *****/
+
+.Z-Depth1 {
+    -moz-box-shadow:    0 2px 2.5px 0 rgba(0,0,0,0.28);
+    -webkit-box-shadow: 0 2px 2.5px 0 rgba(0,0,0,0.28);
+    box-shadow:         0 2px 2.5px 0 rgba(0,0,0,0.28);
+}
+.Z-Depth2 {
+    -moz-box-shadow:    0 5px 8px 0 rgba(0,0,0,0.26);
+    -webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.26);
+    box-shadow:         0 5px 8px 0 rgba(0,0,0,0.26);
+}
+.Z-Depth3 {
+    -moz-box-shadow:    0 10px 18px 0 rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
+    box-shadow:         0 10px 18px 0 rgba(0,0,0,0.3);
+}
+.Z-Depth4 {
+    -moz-box-shadow:    0 14px 25px 0 rgba(0,0,0,0.35);
+    -webkit-box-shadow: 0 14px 25px 0 rgba(0,0,0,0.35);
+    box-shadow:         0 14px 25px 0 rgba(0,0,0,0.35);
+}
+.Z-Depth5 {
+    -moz-box-shadow:    0 19px 32px 0 rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 19px 32px 0 rgba(0,0,0,0.4);
+    box-shadow:         0 19px 32px 0 rgba(0,0,0,0.4);
+}
+
+/***** End shading for depth effects *****/
+
+/***** search box etc styling *****/
+.clearable{
+  background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -30px center;
+  background-color: white;
+  border:1px solid #999;
+  padding:3px 18px 3px 4px; /* USE the same right padding in jQ! */
+  border-radius:10px;
+  transition: background 0.4s; /*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
+  outline: none;
+}
+.clearable.x{
+  background-position: right 10px center;
+}
+.clearable.onX{
+  cursor:pointer;
+}
+
+#search-button {border-radius: 8px; outline: none; position: relative; float: right; margin-right: 5px;}
+#search-bar {padding-top: 3px;}
+
+.typeahead, .twitter-typeahead {width: ~"calc(100% - 80px)";}
+.tt-dropdown-menu {.Z-Depth3; background-color: #fff; border-radius: 6px; border: 1px solid #aaa; padding: 5px;}
+.tt-hint {color: rgba(0,0,0,0.45); width: 100%;}
+.tt-input {width: 100%;}
+.tt-suggestion {font-size: 14/@em;
+    & :hover {cursor: pointer;}
+}
+.tt-cursor {background-color: #ddd;}
+
+/***** end search box etc styling *****/
+
+/***** common styles *****/
+
+#container {margin: 0; width: 100%; height: 100vh;}
+
+#heading {.Z-Depth1; background-color: #888; height: 64/@em; position: fixed; left: 0; right: 0; top: 0;}
+#heading h1 {font-size: 28/@em; color: #fff; padding: 10/@em; position: relative; float: left;}
+#heading img {width: auto; margin: auto; position: relative; height: 64px; position: relative; float: left;}
+
+.web-help-nav-container {overflow: auto;}
+.web-help-nav {font-size: 12/@em; margin: 4/@em auto 4/@em 4/@em; list-style-type: none;}
+.web-help-subnav {margin: 0; list-style-type: none; overflow: hidden; padding-left: 30/@em;}
+
+#web-help-c1 li.file:link {text-decoration: none; color: #000000;}
+#web-help-c1 li.file:visited {text-decoration: none; color: #000000;}
+#web-help-c1 li.file:hover {text-decoration: none; color: #fff;}
+#web-help-c1 li.file:active {text-decoration: none; color: #000000}
+.web-help-nav li.folder:hover {background-color: #ddd;}
+.web-help-nav li.folder:focus {background-color: #ccc; outline: none;}
+#web-help-c1 li.file, #web-help-c1 li.folder {cursor: pointer;}
+
+#web-help-c2 a:link {text-decoration: underline; color: #000000;}
+#web-help-c2 a:visited {text-decoration: underline; color: #000000;}
+#web-help-c2 a:hover {text-decoration: none; color: #5C5CD6;}
+#web-help-c2 a:active {text-decoration: underline; color: #FF4D4D;}
+
+#web-help {height: 100%; width: 100%;}
+#web-help-c1 {.Z-Depth2; width: 30%; position: fixed; z-index: 10; float: left; background-color: #eee; margin-bottom: 15/@em; padding: 5/@em 0 5/@em 5/@em; overflow: hidden;}
+#web-help-c2 {width: 70%; position: fixed; z-index: 1; right: 0; padding: 3%; font-family: serif; margin-top: 64px; overflow: auto; top: 0; bottom: 0;}
+#web-help-c2 h1 {font-size: 26/@em; font-weight: normal; margin-bottom: 5/@em; border-bottom: solid 2px gray; line-height: 125%; font-family: sans-serif;}
+#web-help-c2 .shortdesc {font-size: 14/@em; font-style:italic;}
+
+#drag-container {position: fixed; z-index: 9; bottom: -50/@iconscaler; left: 50%; margin-left: -84/(2*@iconscaler); width: 84/@iconscaler; top: 30%-92/@em; pointer-events: none;}
+#drag-handle {pointer-events: auto;}
+
+#heading, #web-help-c2 {pointer-events: none; opacity: 0.3;}
+
+.result-count {border-bottom: 10px double #333;}
+.result-title {line-height: 16/@em; margin-top: 10/@em; margin-bottom: 3/@em;}
+.result-tree {font-size: 12/@em; color: #000; line-height: 20/@em; border-bottom: 1px solid #333; padding-bottom: 10/@em;}
+.result-element:hover {color: #fff; cursor: pointer;}
+
+/***** end common styles *****/
+
+/**
+	Mobile layout 
+	240-600 px
+**/
+@media screen and (min-width: 15em) {
+    #heading {height: 128/@em;}
+    #heading h1 {width: 100%;}
+    #heading img {float: none; margin: auto; position: relative;}
+	#web-help-c1 {width: 90%; bottom: -100/@em; top: 30%; overflow-y: scroll; position: fixed; margin-left: 5%; margin-right: 5%; border-bottom: solid 100/@em #eee; border-top: solid 5/@em #eee;}
+	#heading, #web-help-c2 {pointer-events: none; opacity: 0.3;}
+	#web-help-c2 {float: none; width: 94%; padding: 3%; margin-top: 128/@em;}
+	#web-help-c2 img {max-width: @4cols;}
+	#web-help-c2 ul {margin-left: 10/@em;}
+    #web-help-c2 li {margin-left: 20/@em;}
+}
+
+/*
+	Wide mobile layout 
+	480-767 px
+	Zoomed in above 480 px
+*/
+@media screen and (min-width: 30em){
+	#web-help-c1 {width: 80%; margin-left: 10%; margin-right: 10%;}
+	#web-help-c2 img {max-width: @6cols;}
+	#web-help-c2 ul {margin-left: 10/@em;}
+    #web-help-c2 li {margin-left: 20/@em;}
+}
+
+/*
+	Tablet layout 
+	600-911 px
+	Zoomed in above 600 px
+*/
+@media screen and (min-width: 37.5em) {	
+    #heading {background-color: #888; height: 64/@em;}
+    #heading h1 {font-size: 28/@em; color: #fff; padding: 10/@em; position: relative; float: left; width: auto;}
+    #heading img {width: auto; margin: auto; position: relative; height: 64/@em; position: relative; float: left;}
+	#web-help {float: left;}
+	#web-help-c1 {width: 30%-5px; border-bottom: none; border-top: none; border-right: solid 1px gray; margin: auto; position: fixed; bottom: 0; top: 64/@em;}
+	#heading, #web-help-c2 {pointer-events: auto; opacity: 1.0;}
+	#web-help-c2 {width: 67%; padding: 7/@em 5% 4/@em 4/@em; float: right; margin-top: 64/@em;}
+	#web-help-c2 img {max-width: @8cols*0.7;}
+	#web-help-c2 ul {margin-left: 15/@em;}
+    #web-help-c2 li {margin-left: 25/@em;}
+    #drag-container {display: none; z-index: -100;}
+}
+
+/*
+	desktop layout 
+	912-infinity px
+*/
+@media screen and (min-width: 57em) {
+	#web-help-c1 {max-width: 310/@em;}
+	#web-help-c2 {max-width: 700/@em;}
+	#web-help-c2 {width: 60%; padding: 15/@em 10% 10/@em 10/@em;}
+	#web-help-c2 img {max-width: @12cols*0.7;}
+	.web-help-nav {margin: 8/@em auto 8/@em 4/@em;}
+    .web-help-subnav {margin: auto auto 8/@em 28/@em;}
+    .web-help-subnav {margin: 0;}
+    #web-help-c2 ul {margin-left: 20/@em;}
+    #web-help-c2 li {margin-left: 40/@em;}
+}
+
+/*
+	full page zoom above 1024 px. still desktop layout.
+*/
+@media screen and (min-width: 64em) {
+	body {font-size: (@font-size + 2)/16*1em;}
+}
+
+

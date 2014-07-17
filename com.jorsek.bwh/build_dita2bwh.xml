@@ -2,7 +2,7 @@
      Sourceforge.net. See the accompanying license.txt file for 
      applicable licenses.--><!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. --><project name="dita2bwh">
 	
-    <target name="dita2bwh" depends="build-init, preprocess, dita.map.bwh,       copy-default-user-fonts, copy-js, copy-default-heading, copy-my-css,       dita.topics.bwh, dita.inner.topics.bwh,       dita.outer.topics.bwh, build-search-index">
+    <target name="dita2bwh" depends="build-init, preprocess, dita.map.bwh,       copy-default-user-fonts, copy-scripts, copy-default-heading, dita.topics.bwh, dita.inner.topics.bwh,       dita.outer.topics.bwh, build-search-index">
     </target>
 
     <target name="dita.map.bwh" depends="dita.map.bwh.init, dita.map.bwh.toc , dita.out.map.bwh.toc"></target>
@@ -61,17 +61,14 @@
     </dita-ot-echo>
   </target>
     
-	<target name="copy-my-css" description="Copying my CSS">
+	<target name="copy-scripts" description="Copying CSS and JS Scripts">
 		<!-- Copy System CSS Files -->
-		<copy todir="${output.dir}">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="*.css"></fileset>
+		<copy todir="${output.dir}${file.separator}scripts">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.css" excludes="user-fonts.css"/>
 		</copy>
-	</target>
-
-	<target name="copy-js" description="Copy JS files">
-		<!-- Always copy system default js files -->
-		<copy todir="${output.dir}">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="*.js"></fileset>
+		<!-- Copy System JS Files -->
+		<copy todir="${output.dir}${file.separator}scripts">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.js"/>
 		</copy>
 	</target>
 	
@@ -156,13 +153,13 @@
 				project.setProperty(&quot;lunrData&quot;,JSON.stringify(indexData));
 			
 		</echo>
-		<concat destfile="${output.dir}${file.separator}temp-code-full.js">
+		<concat destfile="${dita.temp.dir}${file.separator}temp-code-full.js">
 			<fileset file="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource/lunr.js"></fileset>
 			<fileset file="${dita.temp.dir}${file.separator}temp-code.js"></fileset>
 		</concat>
 		<echo>Loaded.</echo>
 		<echo>Indexing...</echo>
-		<script language="javascript" src="${output.dir}${file.separator}temp-code-full.js"></script>
+		<script language="javascript" src="${dita.temp.dir}${file.separator}temp-code-full.js"></script>
 		<echo>Indexing Complete.</echo>
 		<echo>Saving files...</echo>
 		<echo file="${output.dir}${file.separator}indexes${file.separator}lunrIndex.txt" append="false">
