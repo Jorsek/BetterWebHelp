@@ -59,7 +59,6 @@ function loadIndex() {
 					'</div>'].join('\n')
 			}
 		});
-		$('.tt-dropdown-menu').addClass('z-depth3');
 		
 	});
 }

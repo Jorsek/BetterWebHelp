@@ -201,40 +201,6 @@ To create the gray pointed trapezoid
     -khtml-border-radius: 0 5px 0 0;
 }
 
-/**********
-Shading for depth effects
-**********/
-
-.z-depth1 {
-    -moz-box-shadow:    0 2px 2.5px 0 rgba(0,0,0,0.28);
-    -webkit-box-shadow: 0 2px 2.5px 0 rgba(0,0,0,0.28);
-    box-shadow:         0 2px 2.5px 0 rgba(0,0,0,0.28);
-}
-.z-depth2 {
-    -moz-box-shadow:    0 5px 8px 0 rgba(0,0,0,0.26);
-    -webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.26);
-    box-shadow:         0 5px 8px 0 rgba(0,0,0,0.26);
-}
-.z-depth3 {
-    -moz-box-shadow:    0 10px 18px 0 rgba(0,0,0,0.3);
-    -webkit-box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
-    box-shadow:         0 10px 18px 0 rgba(0,0,0,0.3);
-}
-.z-depth4 {
-    -moz-box-shadow:    0 14px 25px 0 rgba(0,0,0,0.35);
-    -webkit-box-shadow: 0 14px 25px 0 rgba(0,0,0,0.35);
-    box-shadow:         0 14px 25px 0 rgba(0,0,0,0.35);
-}
-.z-depth5 {
-    -moz-box-shadow:    0 19px 32px 0 rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0 19px 32px 0 rgba(0,0,0,0.4);
-    box-shadow:         0 19px 32px 0 rgba(0,0,0,0.4);
-}
-
-/**********
-End shading for depth effects
-**********/
-
 /*
 To create the three arrow lines within the icon
 */
@@ -274,6 +240,40 @@ To create the three arrow lines within the icon
 }
 /***** end drag up button styles *****/
 
+/**********
+Shading for depth effects
+**********/
+
+.Z-Depth1 {
+    -moz-box-shadow:    0 2px 2.5px 0 rgba(0,0,0,0.28);
+    -webkit-box-shadow: 0 2px 2.5px 0 rgba(0,0,0,0.28);
+    box-shadow:         0 2px 2.5px 0 rgba(0,0,0,0.28);
+}
+.Z-Depth2 {
+    -moz-box-shadow:    0 5px 8px 0 rgba(0,0,0,0.26);
+    -webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.26);
+    box-shadow:         0 5px 8px 0 rgba(0,0,0,0.26);
+}
+.Z-Depth3 {
+    -moz-box-shadow:    0 10px 18px 0 rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
+    box-shadow:         0 10px 18px 0 rgba(0,0,0,0.3);
+}
+.Z-Depth4 {
+    -moz-box-shadow:    0 14px 25px 0 rgba(0,0,0,0.35);
+    -webkit-box-shadow: 0 14px 25px 0 rgba(0,0,0,0.35);
+    box-shadow:         0 14px 25px 0 rgba(0,0,0,0.35);
+}
+.Z-Depth5 {
+    -moz-box-shadow:    0 19px 32px 0 rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 19px 32px 0 rgba(0,0,0,0.4);
+    box-shadow:         0 19px 32px 0 rgba(0,0,0,0.4);
+}
+
+/**********
+End shading for depth effects
+**********/
+
 /***** search box etc styling *****/
 .clearable{
   background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -30px center;
@@ -294,13 +294,14 @@ To create the three arrow lines within the icon
 #search-button {border-radius: 8px; outline: none; position: relative; float: right; margin-right: 5px;}
 #search-bar {padding-top: 3px;}
 
-#q, .twitter-typeahead {width: ~"calc(100% - 80px)";}
-.tt-dropdown-menu {background-color: #fff; border-radius: 10px; border: 1px solid black; padding: 5px;}
+.typeahead, .twitter-typeahead {width: ~"calc(100% - 80px)";}
+.tt-dropdown-menu {.Z-Depth3; background-color: #fff; border-radius: 6px; border: 1px solid #aaa; padding: 5px;}
 .tt-hint {color: rgba(0,0,0,0.45); width: 100%;}
 .tt-input {width: 100%;}
 .tt-suggestion {font-size: 14/@em;
-    & :hover {background-color: #ddd; cursor: pointer;}
+    & :hover {cursor: pointer;}
 }
+.tt-cursor {background-color: #ddd;}
 
 /***** end search box etc styling *****/
 
@@ -385,9 +386,9 @@ To create the three arrow lines within the icon
     #heading h1 {font-size: 28/@em; color: #fff; padding: 10/@em; position: relative; float: left; width: auto;}
     #heading img {width: auto; margin: auto; position: relative; height: 64/@em; position: relative; float: left;}
 	#web-help {float: left;}
-	#web-help-c1 {width: 243/@em; border-bottom: none; border-top: none; border-right: solid 1px gray; margin: auto; position: fixed; bottom: 0; top: 64/@em;}
+	#web-help-c1 {width: 200/@em; border-bottom: none; border-top: none; border-right: solid 1px gray; margin: auto; position: fixed; bottom: 0; top: 64/@em;}
 	#heading, #web-help-c2 {pointer-events: auto; opacity: 1.0;}
-	#web-help-c2 {width: ~"calc(100% - 325px)"; padding: 7/@em 5% 4/@em 20/@em; float: right; margin-top: 64/@em;}
+	#web-help-c2 {width: ~"calc(100% - 270px)"; padding: 7/@em 30/@em 4/@em 20/@em; float: right; margin-top: 64/@em;}
 	#web-help-c2 img {max-width: @8cols*0.7;}
 	#web-help-c2 ul {margin-left: 15/@em;}
     #web-help-c2 li {margin-left: 25/@em;}
@@ -399,9 +400,9 @@ To create the three arrow lines within the icon
 	912-infinity px
 */
 @media screen and (min-width: 57em) {
-	#web-help-c1 {max-width: 310/@em;}
+	#web-help-c1 {width: 243/@em;}
 	#web-help-c2 {max-width: 700/@em;}
-	#web-help-c2 {width: ~"calc(100% - 375px)"; padding: 15/@em 10% 10/@em 30/@em;}
+	#web-help-c2 {width: ~"calc(100% - 375px)"; padding: 15/@em 100/@em 10/@em 30/@em;}
 	#web-help-c2 img {max-width: @12cols*0.7;}
 	.web-help-nav {margin: 8/@em auto 8/@em 4/@em;}
     .web-help-subnav {margin: auto auto 8/@em 28/@em;}
@@ -413,7 +414,7 @@ To create the three arrow lines within the icon
 /*
 	full page zoom above 1024 px. still desktop layout.
 */
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 72em) {
 	body {font-size: (@font-size + 2)/16*1em;}
 	#web-help-c2 {width: ~"calc(100% - 425px)";}
 }

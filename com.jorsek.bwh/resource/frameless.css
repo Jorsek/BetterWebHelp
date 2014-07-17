@@ -239,27 +239,27 @@ To create the three arrow lines within the icon
 }
 /***** end drag up button styles *****/
 /***** Shading for depth effects *****/
-.z-depth1 {
+.Z-Depth1 {
   -moz-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
   -webkit-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
   box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
 }
-.z-depth2 {
+.Z-Depth2 {
   -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
 }
-.z-depth3 {
+.Z-Depth3 {
   -moz-box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
 }
-.z-depth4 {
+.Z-Depth4 {
   -moz-box-shadow: 0 14px 25px 0 rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 14px 25px 0 rgba(0, 0, 0, 0.35);
   box-shadow: 0 14px 25px 0 rgba(0, 0, 0, 0.35);
 }
-.z-depth5 {
+.Z-Depth5 {
   -moz-box-shadow: 0 19px 32px 0 rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 19px 32px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 19px 32px 0 rgba(0, 0, 0, 0.4);
@@ -298,6 +298,9 @@ To create the three arrow lines within the icon
   width: calc(100% - 80px);
 }
 .tt-dropdown-menu {
+  -moz-box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
   background-color: #fff;
   border-radius: 6px;
   border: 1px solid #aaa;
@@ -314,8 +317,10 @@ To create the three arrow lines within the icon
   font-size: 0.875em;
 }
 .tt-suggestion :hover {
-  background-color: #ddd;
   cursor: pointer;
+}
+.tt-cursor {
+  background-color: #ddd;
 }
 /***** end search box etc styling *****/
 /***** common styles *****/
@@ -325,6 +330,9 @@ To create the three arrow lines within the icon
   height: 100vh;
 }
 #heading {
+  -moz-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
+  box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
   background-color: #888;
   height: 4em;
   position: fixed;
@@ -408,6 +416,9 @@ To create the three arrow lines within the icon
   width: 100%;
 }
 #web-help-c1 {
+  -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
   width: 30%;
   position: fixed;
   z-index: 10;

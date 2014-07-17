@@ -183,6 +183,10 @@ $( document ).ready(function() {
 		expandSubNav(this);
 	});
 	
+	$(document).on("click","#drag-handle",function (e) {
+		openCloseNav();
+	});
+	
 	/*if (queries.q) {
 		$("#q").css("value",q);
 		doSearch(q);

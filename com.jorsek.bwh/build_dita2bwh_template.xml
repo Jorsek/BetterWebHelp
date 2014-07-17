@@ -129,7 +129,8 @@
     <copy file="${args.css.real}" todir="${user.csspath.real}"/>
   </target>
   
-	<target name="build-search-index" description="Build Lunr Search Index">
+
+	<target name="build-search-index" unless="${noindex}" description="Build Lunr Search Index">
 		<echo message="Running XSLT Indexer..."/>
 		<xslt
 			basedir="${dita.temp.dir}"

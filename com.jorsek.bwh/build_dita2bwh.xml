@@ -103,7 +103,7 @@
     <copy file="${args.css.real}" todir="${user.csspath.real}"></copy>
   </target>
   
-	<target name="build-search-index" description="Build Lunr Search Index">
+	<target name="build-search-index" unless="${noindex}" description="Build Lunr Search Index">
 		<echo message="Running XSLT Indexer..."></echo>
 		<xslt basedir="${dita.temp.dir}" destdir="${output.dir}${file.separator}indexes" includesfile="${dita.temp.dir}${file.separator}${user.input.file.listfile}" classpathref="dost.class.path" style="${dita.plugin.com.jorsek.bwh.dir}${file.separator}xsl${file.separator}dita2json.xsl">
 			<mapper type="glob" from="${user.input.file}" to="lunr_raw.txt"></mapper>

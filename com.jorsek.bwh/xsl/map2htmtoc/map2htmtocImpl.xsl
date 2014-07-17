@@ -90,11 +90,11 @@
 			<xsl:value-of select="$newline"/>
 			<div id="container">
 <!-- heading to be filled in using javascript upon page load so that user can add custom headings-->
-				<div id="heading" class="z-depth1">//</div>
+				<div id="heading">//</div>
 				<div id="main">
 					<div id="web-help">
 <!-- web-help-c1 contains the table of contents information -->
-						<div id="web-help-c1" class="z-depth2">
+						<div id="web-help-c1">
 							<xsl:call-template name="search-bar"/>
 							<xsl:apply-templates/>
 						</div>
@@ -106,7 +106,7 @@
 				</div>
 <!-- the following divs are to build the draggable handle on mobile -->
 				<div id="drag-container" class="dragdealer">
-					<div id="drag-handle" class="handle" onclick="openCloseNav()">
+					<div id="drag-handle" class="handle">
 						<div id="drag-button">
 <!-- to be styled with CSS to make them look like buttons -->
 							<div id="drag-icon-bg"></div>

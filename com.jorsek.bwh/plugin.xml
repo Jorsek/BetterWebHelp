@@ -3,17 +3,17 @@
   This plugin was adapted from the XHTML built-in DITA OT plugin.
 -->
 <plugin id="com.jorsek.bwh">
-  <!-- extension points -->
+	<!-- extension points -->
 	<extension-point id="dita.xsl.bwh" name="HTML/XHTML XSLT import"/>
-  <extension-point id="dita.conductor.html.param" name="HTML XSLT parameters"/>
+	<extension-point id="dita.conductor.html.param" name="HTML XSLT parameters"/>
 	<extension-point id="dita.conductor.bwh.param" name="XHTML XSLT parameters"/>
 	<extension-point id="dita.conductor.bwh.toc.param" name="HTML/XSLT XSLT parameter"/>
-  <extension-point id="dita.xsl.htmltoc" name="HTML/XHTML TOC XSLT import"/>
-  <!-- extensions -->
-  <feature extension="dita.conductor.transtype.check" value="bwh"/>
-  <feature extension="dita.conductor.target.relative" file="conductor.xml"/>
-  <template file="build_general_template.xml"/>
-  <template file="build_dita2bwh_template.xml"/>
-  <template file="xsl/dita2html-base_template.xsl"/>
-  <template file="xsl/map2htmtoc_template.xsl"/>
+	<extension-point id="dita.xsl.htmltoc" name="HTML/XHTML TOC XSLT import"/>
+	<!-- extensions -->
+	<feature extension="dita.conductor.transtype.check" value="bwh"/>
+	<feature extension="dita.conductor.target.relative" file="conductor.xml"/>
+	<template file="build_general_template.xml"/>
+	<template file="build_dita2bwh_template.xml"/>
+	<template file="xsl/dita2html-base_template.xsl"/>
+	<template file="xsl/map2htmtoc_template.xsl"/>
 </plugin>
