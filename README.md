@@ -13,6 +13,8 @@ Within the Documentation/ folder, there are files that describe how to install t
 ##Sample Output
 To load the sample output (/bwh) follow the instructions to get a localhost server running on your machine (/Documentation/Installation/Installing_BWH.pdf). Then copy /bwh into your /Library/WebServer/Documents/ folder.
 
+Navigate to http://localhost/bwh/ to see the site.
+
 ##Sponsor
 This project is sponsored by [Jorsek LLC, makers of easyDITA software](http://www.easydita.com).
 
