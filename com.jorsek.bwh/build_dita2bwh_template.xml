@@ -7,7 +7,7 @@
 	
     <target name="dita2bwh"
     	depends="build-init, preprocess, dita.map.bwh, 
-    	copy-default-user-fonts, copy-scripts, copy-default-heading,
+    	copy-default-user-styles, copy-scripts, copy-default-heading,
     	dita.topics.bwh, dita.inner.topics.bwh, 
     	dita.outer.topics.bwh, build-search-index">
     </target>
@@ -90,7 +90,7 @@
 	<target name="copy-scripts" description="Copying CSS and JS Scripts">
 		<!-- Copy System CSS Files -->
 		<copy todir="${output.dir}${file.separator}scripts">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.css" excludes="user-fonts.css"/>
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.css" excludes="user-*.css"/>
 		</copy>
 		<!-- Copy System JS Files -->
 		<copy todir="${output.dir}${file.separator}scripts">
@@ -116,9 +116,17 @@
 <!-- only copy over the default user-fonts.css file if one doesn't already exist in the output directory. 
 		(i.e. if the user has already added their customized fonts, don't overwrite it) -->
 	<available file="${output.dir}${file.separator}scripts${file.separator}user-fonts.css" property="user-fonts.available"/>
+	<available file="${output.dir}${file.separator}scripts${file.separator}user-styling.css" property="user-styling.available"/>
+	
+	<target name="copy-default-user-styles" depends="copy-default-user-fonts, copy-default-user-styling" />
 	<target name="copy-default-user-fonts" description="Copy Default User Fonts" unless="user-fonts.available">
 		<copy todir="${output.dir}">
 			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="user-fonts.css"/>
+		</copy>
+	</target>
+	<target name="copy-default-user-styling" description="Copy Default User Styling" unless="user-styling.available">
+		<copy todir="${output.dir}">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="user-styling.css"/>
 		</copy>
 	</target>
 

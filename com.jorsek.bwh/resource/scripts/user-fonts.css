@@ -8,11 +8,10 @@
  * #web-help-c2 h1 {this will affect the title of the content pane}
  * #web-help-c2 .body {this will affect the body text of the content pane}
  * #web-help-c2 .related-links {this will affect the related links footer in the content pane}
+ * #heading {this will affect the heading (content from heading.html)}
  * 
- * not recommended --> #heading {this will affect the heading (content from heading.html)}
- * 		edit styles within heading.html instead
  * 
- * You can also add in any other customizations you want here.
+ * If you want to add other custom stylings, use the user-styling.css file.
  * 
  * 
  */
@@ -20,11 +19,3 @@
  #web-help-c1 {font-family: sans-serif;}
  #web-help-c2 {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif}
  #web-help-c2 h1 {font-family: "Trebuchet MS", Helvetica, sans-serif}
- 
- /*
-  * 
-  * Custom Colors:
-  * Select 
-  * 
-  * 
-  */

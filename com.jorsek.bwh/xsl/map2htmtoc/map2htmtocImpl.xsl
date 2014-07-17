@@ -161,6 +161,7 @@
 <xsl:template name="frameless-styles">
 	<link rel="stylesheet" type="text/css" href="scripts/frameless.css" />
 	<link rel="stylesheet" type="text/css" href="scripts/user-fonts.css" />
+	<link rel="stylesheet" type="text/css" href="scripts/user-styling.css" />
 </xsl:template>
 
 <xsl:template name="search-bar">
