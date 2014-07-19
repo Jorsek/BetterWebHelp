@@ -102,16 +102,35 @@ function doSearch() {
 		};
 		output.innerHTML += resultString + "</li>";
 	}
+	
+	if (location.hash.indexOf("&q=") == -1) {
+		location.hash += '&q=' + input;
+	} else {
+		if (location.hash.substring(location.hash.indexOf("&q=")+3) != input) {
+			location.hash = locSubstr(location.hash) + '&q=' + input;
+		}
+	}
+	
 	console.log('Searched for : ' + input + '. Results:');
 	console.log(results);
 }
 
 function resetSearch() {
+	if (location.hash.indexOf('&q=') != -1) {
+		location.hash = locSubstr(location.hash);
+	}
 	if (previousNav == "") {
 		document.getElementsByClassName("web-help-nav")[0].outerHTML = defaultNav;
 	} else {
 		document.getElementsByClassName("web-help-nav")[0].outerHTML = previousNav;
 	}
+	
+	$('.clearable').val('');
+	$('.typeahead').typeahead('val', '');
+}
+
+function locSubstr(locstring) {
+	return locstring.substring(1, locstring.indexOf("&q="));
 }
 
 $( document ).ready( function() {
