@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="task-1614" domains="(topic task)                            (topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)                            (topic task strictTaskbody-c)    " ditaarch:DITAArchVersion="1.2" class="- topic/topic task/task "><title class="- topic/title ">BWH user-styling.css Width Example</title><shortdesc class="- topic/shortdesc ">An example on how to change the width of the columns in the Better Web Help DITA OT plugin output.</shortdesc><prolog class="- topic/prolog "><author type="creator" translate="no" class="- topic/author ">Scott Lucchini &lt;scott.lucchini@easydita.com&gt;</author><metadata class="- topic/metadata "><keywords class="- topic/keywords "/></metadata></prolog><taskbody class="- topic/body task/taskbody "><context class="- topic/section task/context ">In the default output of the DITA OT, the widths of the columns are percent based. They change size depending on the size of the window. In this example, we will fix the width of the Navigation panel and adjust the size of the content pane accordingly.</context><steps class="- topic/ol task/steps "><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">Say you want to change the widths of the Navigation column and the Content column for your version of BWH.</cmd></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">Open the user-styling.css file located in bwh/scripts/.</cmd></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">The first comment gives you the IDs and classes of important regions of the document. The only ones we're going to worry about in this example are</cmd><stepxmp class="- topic/itemgroup task/stepxmp "><codeblock xml:space="preserve" class="+ topic/pre pr-d/codeblock ">#web-help-c1 {this will affect the navigation panel / table of contents}
+#web-help-c2 {this will affect the entire content pane, excluding the heading}</codeblock></stepxmp></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">If you scroll down in user-styling.css, you will see the templates for the different media (mobile, wide-mobile, tablet, desktop, and desktop zoom).</cmd></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">We don't want to affect the widths on mobile because the Navigation panel becomes a drawer, so under "desktop layout" ("min-width: 57em") let's add a line to fix the width of the Nav panel:</cmd><stepxmp class="- topic/itemgroup task/stepxmp "><codeblock xml:space="preserve" class="+ topic/pre pr-d/codeblock "> /*
+  * desktop layout 
+  * 912-infinity px
+  */
+@media screen and (min-width: 57em) {
+	<b class="+ topic/ph hi-d/b ">#web-help-c1 {width: 15.1875em;}</b>
+}</codeblock></stepxmp></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">If you are still using the default heading (with the easyDITA logo) you will notice that the panel is now the same width as the logo. We computed this by opening the developer tools on the website to measure the width of the logo (248px) minus the padding and margins on #web-help-c1 (5px) which gives us 243px. Then, since the body font size is 16px, 243px/16px/1em = 15.1875em.</cmd></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">Now, we also want fixed width for tablet, but we want it a little smaller, so we can add the following line of code:</cmd><stepxmp class="- topic/itemgroup task/stepxmp "><codeblock xml:space="preserve" class="+ topic/pre pr-d/codeblock "> /*
+  * Tablet layout
+  * 600-911 px
+  * Zoomed in above 600 px
+  */
+@media screen and (min-width: 37.5em) {
+	#web-help-c1 {width: 10.625em;}
+}</codeblock></stepxmp></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">However, now we need to adjust the width of the content pane (#web-help-c2) to match the navigation panel.</cmd><stepxmp class="- topic/itemgroup task/stepxmp "><codeblock xml:space="preserve" class="+ topic/pre pr-d/codeblock "> /*
+  * Tablet layout
+  * 600-911 px
+  * Zoomed in above 600 px
+  */
+@media screen and (min-width: 37.5em) {
+	#web-help-c1 {width: 10.625em;}
+	<b class="+ topic/ph hi-d/b ">#web-help-c2 {left: 13em; right: 0; width: auto;}</b>
+}
+ /*
+  * desktop layout 
+  * 912-infinity px
+  */
+@media screen and (min-width: 57em) {
+	#web-help-c1 {width: 15.1875em;}
+	<b class="+ topic/ph hi-d/b ">#web-help-c2 {left: 18em; right: 0; width: auto;}</b>
+}</codeblock></stepxmp></step><step class="- topic/li task/step "><cmd class="- topic/ph task/cmd ">We rounded up on the left values so that there is a little extra padding between the navigation panel and the content pane.</cmd></step></steps><result class="- topic/section task/result ">At this point, you should have a constant width navigation panel when resizing your window and the content pane will resize appropriately.</result></taskbody></task>
