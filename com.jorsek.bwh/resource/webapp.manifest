@@ -2,14 +2,25 @@ CACHE MANIFEST
 # version 1.0
 
 CACHE:
-loadContent.js
+scripts/dragdealer.js
+scripts/frameless-side-drawer.css
+scripts/frameless-static-navbar.css
+scripts/frameless.css
+scripts/loadContent.js
+scripts/lunr.js
+scripts/lunrScripts.js
+scripts/queryString.js
+scripts/side-drawer.css
+scripts/typeahead.bundle.js
+scripts/user-fonts.css
+scripts/user-styling.css
+indexes/lunrData.txt
+indexes/lunrIndex.txt
 help-icon.png
 heading.html
 heading/logo.jpg
-dragdealer.js
-frameless.css
-user-fonts.css
 http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js
 
 NETWORK:
 *

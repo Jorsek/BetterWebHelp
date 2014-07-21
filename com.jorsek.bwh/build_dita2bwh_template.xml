@@ -8,7 +8,7 @@
     <target name="dita2bwh"
     	depends="build-init, preprocess, dita.map.bwh, 
     	copy-default-user-styles, copy-scripts, copy-default-heading,
-    	dita.topics.bwh, dita.inner.topics.bwh, 
+    	copy-others, dita.topics.bwh, dita.inner.topics.bwh, 
     	dita.outer.topics.bwh, build-search-index">
     </target>
 
@@ -94,7 +94,7 @@
 		</copy>
 		<!-- Copy System JS Files -->
 		<copy todir="${output.dir}${file.separator}scripts">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.js"/>
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.js" excludes="*_side-panel-search.js"></fileset>
 		</copy>
 	</target>
 	
@@ -120,13 +120,13 @@
 	
 	<target name="copy-default-user-styles" depends="copy-default-user-fonts, copy-default-user-styling" />
 	<target name="copy-default-user-fonts" description="Copy Default User Fonts" unless="user-fonts.available">
-		<copy todir="${output.dir}">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="user-fonts.css"/>
+		<copy todir="${output.dir}${file.separator}scripts">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="user-fonts.css"/>
 		</copy>
 	</target>
 	<target name="copy-default-user-styling" description="Copy Default User Styling" unless="user-styling.available">
-		<copy todir="${output.dir}">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="user-styling.css"/>
+		<copy todir="${output.dir}${file.separator}scripts">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="user-styling.css"/>
 		</copy>
 	</target>
 
@@ -134,6 +134,11 @@
     <copy file="${args.css.real}" todir="${user.csspath.real}"/>
   </target>
   
+	<target name="copy-others">
+		<copy todir="${output.dir}">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="fallback.html help-icon.png"/>
+		</copy>
+	</target>
 
 	<target name="build-search-index" unless="${noindex}" description="Build Lunr Search Index">
 		<echo message="Running XSLT Indexer..."/>
@@ -194,7 +199,7 @@
 			]]>
 		</echo>
 		<concat destfile="${dita.temp.dir}${file.separator}temp-code-full.js">
-			<fileset file="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource/lunr.js"/>
+			<fileset file="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts${file.separator}lunr.js"></fileset>
 			<fileset file="${dita.temp.dir}${file.separator}temp-code.js"/>
 		</concat>
 		<echo>Loaded.</echo>

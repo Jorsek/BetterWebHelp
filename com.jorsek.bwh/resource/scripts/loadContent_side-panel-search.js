@@ -10,6 +10,7 @@ Use AJAX to load content from url link.
 And optionally automatically close the nav panel on load.
 */
 function loadContent (location,url,shrinkNav) {
+	$('#web-help-c2').scrollTop(0);
 	$(location).load(url);
 	shrinkNav = shrinkNav || "yes";
 	if (shrinkNav == "yes") {
@@ -136,16 +137,35 @@ $(window).resize(function() {
 });
 
 window.onhashchange = function() {
-	if (location.hash == "") {
+
+	if (location.hash.indexOf("&q=") == -1) {
+		var siteloc = location.hash.substring(1);
+		var searchstr = '';
+	} else {
+		var siteloc = location.hash.substring(1, location.hash.indexOf("&q="));
+		var searchstr = location.hash.substring(location.hash.indexOf("&q=")+3);
+		$('#q').val(searchstr);
+		doSearch();
+	}
+
+	console.log(siteloc);
+	console.log(searchstr);
+
+	if (siteloc == "") {
 		// Figure out a way to display a blank page
 	} else {
 		linkClicked = document.activeElement;
 		if ($(linkClicked).hasClass('folder')) {
-			loadContent("#web-help-c2",location.hash.substring(1), 'no');
+			loadContent("#web-help-c2",siteloc, 'no');
 		} else {
-			loadContent("#web-help-c2",location.hash.substring(1));
+			loadContent("#web-help-c2",siteloc);
 		}
 	}
+	
+	if (searchstr.length == 0 && $('#result-num').length != 0) {
+		resetSearch();
+	}
+	
 }
 
 /*
@@ -176,7 +196,12 @@ $( document ).ready(function() {
 	
 	$(document).on("click",".ajaxLink",function (e) {
 		e.preventDefault();
-		location.hash = $(this).attr('href');
+		if (location.hash.indexOf('&q=') == -1) {
+			location.hash = $(this).attr('href');
+		} else {
+			searchstr = location.hash.substring(location.hash.indexOf('&q='));
+			location.hash = $(this).attr('href')+searchstr;
+		}
 	});
 	
 	$(document).on("click",".folder",function (e) {
@@ -186,11 +211,6 @@ $( document ).ready(function() {
 	$(document).on("click","#drag-handle",function (e) {
 		openCloseNav();
 	});
-	
-	/*if (queries.q) {
-		$("#q").css("value",q);
-		doSearch(q);
-	}*/
 	
 });
 

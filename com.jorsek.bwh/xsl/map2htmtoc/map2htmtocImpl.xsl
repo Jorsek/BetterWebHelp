@@ -91,11 +91,11 @@
 			<div id="container">
 <!-- heading to be filled in using javascript upon page load so that user can add custom headings-->
 				<div id="heading">//</div>
+				<xsl:call-template name="search-bar"/>
 				<div id="main">
 					<div id="web-help">
 <!-- web-help-c1 contains the table of contents information -->
 						<div id="web-help-c1">
-							<xsl:call-template name="search-bar"/>
 							<xsl:apply-templates/>
 						</div>
 <!-- web-help-c2 will contain the content information loaded through ajax -->

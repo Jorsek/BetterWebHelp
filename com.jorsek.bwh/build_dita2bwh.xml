@@ -2,7 +2,7 @@
      Sourceforge.net. See the accompanying license.txt file for 
      applicable licenses.--><!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. --><project name="dita2bwh">
 	
-    <target name="dita2bwh" depends="build-init, preprocess, dita.map.bwh,       copy-default-user-styles, copy-scripts, copy-default-heading, dita.topics.bwh, dita.inner.topics.bwh,       dita.outer.topics.bwh, build-search-index">
+    <target name="dita2bwh" depends="build-init, preprocess, dita.map.bwh,       copy-default-user-styles, copy-scripts, copy-default-heading,      copy-others, dita.topics.bwh, dita.inner.topics.bwh,       dita.outer.topics.bwh, build-search-index">
     </target>
 
     <target name="dita.map.bwh" depends="dita.map.bwh.init, dita.map.bwh.toc , dita.out.map.bwh.toc"></target>
@@ -64,11 +64,11 @@
 	<target name="copy-scripts" description="Copying CSS and JS Scripts">
 		<!-- Copy System CSS Files -->
 		<copy todir="${output.dir}${file.separator}scripts">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.css" excludes="user-*.css"/>
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.css" excludes="user-*.css"></fileset>
 		</copy>
 		<!-- Copy System JS Files -->
 		<copy todir="${output.dir}${file.separator}scripts">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.js"/>
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="*.js" excludes="*_side-panel-search.js"></fileset>
 		</copy>
 	</target>
 	
@@ -89,18 +89,18 @@
 
 <!-- only copy over the default user-fonts.css file if one doesn't already exist in the output directory. 
 		(i.e. if the user has already added their customized fonts, don't overwrite it) -->
-	<available file="${output.dir}${file.separator}scripts${file.separator}user-fonts.css" property="user-fonts.available"/>
-	<available file="${output.dir}${file.separator}scripts${file.separator}user-styling.css" property="user-styling.available"/>
+	<available file="${output.dir}${file.separator}scripts${file.separator}user-fonts.css" property="user-fonts.available"></available>
+	<available file="${output.dir}${file.separator}scripts${file.separator}user-styling.css" property="user-styling.available"></available>
 	
-	<target name="copy-default-user-styles" depends="copy-default-user-fonts, copy-default-user-styling" />
+	<target name="copy-default-user-styles" depends="copy-default-user-fonts, copy-default-user-styling"></target>
 	<target name="copy-default-user-fonts" description="Copy Default User Fonts" unless="user-fonts.available">
-		<copy todir="${output.dir}">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="user-fonts.css"/>
+		<copy todir="${output.dir}${file.separator}scripts">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="user-fonts.css"></fileset>
 		</copy>
 	</target>
 	<target name="copy-default-user-styling" description="Copy Default User Styling" unless="user-styling.available">
-		<copy todir="${output.dir}">
-			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="user-styling.css"/>
+		<copy todir="${output.dir}${file.separator}scripts">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts" includes="user-styling.css"></fileset>
 		</copy>
 	</target>
 
@@ -108,6 +108,12 @@
     <copy file="${args.css.real}" todir="${user.csspath.real}"></copy>
   </target>
   
+	<target name="copy-others">
+		<copy todir="${output.dir}">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="fallback.html help-icon.png"></fileset>
+		</copy>
+	</target>
+
 	<target name="build-search-index" unless="${noindex}" description="Build Lunr Search Index">
 		<echo message="Running XSLT Indexer..."></echo>
 		<xslt basedir="${dita.temp.dir}" destdir="${output.dir}${file.separator}indexes" includesfile="${dita.temp.dir}${file.separator}${user.input.file.listfile}" classpathref="dost.class.path" style="${dita.plugin.com.jorsek.bwh.dir}${file.separator}xsl${file.separator}dita2json.xsl">
@@ -162,7 +168,7 @@
 			
 		</echo>
 		<concat destfile="${dita.temp.dir}${file.separator}temp-code-full.js">
-			<fileset file="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource/lunr.js"></fileset>
+			<fileset file="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}scripts${file.separator}lunr.js"></fileset>
 			<fileset file="${dita.temp.dir}${file.separator}temp-code.js"></fileset>
 		</concat>
 		<echo>Loaded.</echo>
