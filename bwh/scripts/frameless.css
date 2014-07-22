@@ -72,9 +72,9 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  min-height: 100%;
-  font-size: 100%;
-  font-family: sans-serif;
+	min-height: 100%;
+	font-size: 100%;
+	font-family: serif;
 }
 sub,
 sup {
@@ -333,7 +333,7 @@ To create the three arrow lines within the icon
   -moz-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
   -webkit-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
   box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
-  background-color: #888;
+  background-color: #01579b;
   height: 4em;
   position: fixed;
   left: 0;
@@ -341,13 +341,15 @@ To create the three arrow lines within the icon
   top: 0;
 }
 #heading h1 {
-  font-size: 1.75em;
+  font-size: 28px;
   color: #fff;
   padding: 0.625em;
   position: relative;
   float: left;
+  font-family:"Walkway Rounded", "Walkway SemiBold", "Walkway Condensed SemiBold", "Walkway UltraCondensed Semi";
 }
 #heading img {
+  background:url(heading/logo2.jpg);
   width: auto;
   margin: auto;
   height: 64px;
@@ -370,25 +372,29 @@ To create the three arrow lines within the icon
 }
 #web-help-c1 li.file:link {
   text-decoration: none;
-  color: #000000;
+  color:#01579b;
 }
 #web-help-c1 li.file:visited {
   text-decoration: none;
-  color: #000000;
+  color: #01579b;
 }
 #web-help-c1 li.file:hover {
   text-decoration: none;
-  color: #fff;
+  color: #01579b;
+  background-color:#EEE;
 }
 #web-help-c1 li.file:active {
   text-decoration: none;
-  color: #000000;
+  color: #0276cf;
+  
 }
 .web-help-nav li.folder:hover {
-  background-color: #ddd;
+  color:#01579b;
+  background-color: #CCC;
 }
 .web-help-nav li.folder:focus {
-  background-color: #ccc;
+  background-color: #01579b;
+  color:#FFF;
   outline: none;
 }
 #web-help-c1 li.file,
@@ -396,25 +402,32 @@ To create the three arrow lines within the icon
   cursor: pointer;
 }
 #web-help-c2 a:link {
-  text-decoration: underline;
-  color: #000000;
+  list-style-type:none;
+  text-decoration:none;
+  font-family:"Walkway Rounded", "Walkway SemiBold", "Walkway Condensed SemiBold", "Walkway UltraCondensed Semi";
+  color: #01579b;
+  font-size:24px;
 }
 #web-help-c2 a:visited {
-  text-decoration: underline;
+  text-decoration: none;
   color: #000000;
 }
 #web-help-c2 a:hover {
   text-decoration: none;
-  color: #5C5CD6;
+  color: #0276cf;
 }
 #web-help-c2 a:active {
-  text-decoration: underline;
-  color: #FF4D4D;
+  text-decoration:none;
+  color: #5C5CD6;
 }
 #web-help {
   height: 100%;
   width: 100%;
 }
+
+
+/* SIDE BAR STYLE*/
+
 #web-help-c1 {
   -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
@@ -434,7 +447,6 @@ To create the three arrow lines within the icon
   z-index: 1;
   right: 0;
   padding: 3%;
-  font-family: serif;
   margin-top: 64px;
   overflow: auto;
   top: 0;
@@ -444,13 +456,15 @@ To create the three arrow lines within the icon
   font-size: 1.625em;
   font-weight: normal;
   margin-bottom: 0.3125em;
-  border-bottom: solid 2px gray;
+  border-bottom: solid 2px #01579b;
   line-height: 125%;
-  font-family: sans-serif;
 }
 #web-help-c2 .shortdesc {
-  font-size: 0.875em;
+  font-size: 14px;
+  color:#666;
   font-style: italic;
+  margin-bottom:20px;
+  line-height:150%;
 }
 #drag-container {
   position: fixed;
@@ -544,9 +558,12 @@ To create the three arrow lines within the icon
     max-width: 16.5em;
   }
   #web-help-c2 ul {
+	margin-top:10px;
+	list-style-type:none;
     margin-left: 0.625em;
   }
   #web-help-c2 li {
+	margin-bottom:5px;
     margin-left: 1.25em;
   }
 }
@@ -578,8 +595,8 @@ To create the three arrow lines within the icon
 */
 @media screen and (min-width: 37.5em) {
   #heading {
-    background-color: #888;
-    height: 4em;
+	background-color: #01579b;
+	height: 4em;
   }
   #heading h1 {
     font-size: 1.75em;
