@@ -17,9 +17,15 @@
  * 
  */
  
- #web-help-c1 {font-family: sans-serif;}
- #web-help-c2 {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif}
- #web-help-c2 h1 {font-family: "Trebuchet MS", Helvetica, sans-serif}
+ #web-help-c1 {
+	font-family:"Helvetica Neue", Helvetica, "Helvetica Light";
+}
+ #web-help-c2 {
+	font-size:20px;
+	color:#333; 
+	font-family: "Open Sans", "Helvetica", "Sans Serif"}
+	
+ #web-help-c2 h1 {font-family:"Walkway Rounded", "Walkway SemiBold", "Walkway Condensed SemiBold", "Walkway UltraCondensed Semi";}
  
  /*
   * 
