@@ -62,66 +62,66 @@ more details on when to use task and other information types, please refer
 to the DITA architectural specification.</p>
 </div>
 
-<div class="related-links">
+<div xmlns:functx="http://www.functx.com" class="related-links">
 <ol class="olchildlinks">
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/task.html">task</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/task.html">task</a><br/>
 The &lt;<span class="keyword">task</span>&gt; element is the top-level element for a task topic. Tasks are the main building blocks for task-oriented user assistance. They generally provide step-by-step instructions that will enable a user to perform a task. A task answers the question of "how to?" by telling the user precisely what to do and the order in which to do it. Tasks have the same high-level structure as other topics, with a title, short description and body.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/taskbody.html">taskbody</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/taskbody.html">taskbody</a><br/>
 The &lt;<span class="keyword">taskbody</span>&gt; element is the main body-level element inside a task topic. A task body is designed to contain information specific to completing a task, such as prerequisites, contextual information, and steps. <span class="ph">DITA 1.2 introduces a much looser &lt;taskbody&gt; content model in order to allow for more variations in the structure of a task. A constraint module is also provided in order to maintain compatibility with the previous strict model; this constraint is used in the default task distributed by OASIS.</span></li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/prereq.html">prereq</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/prereq.html">prereq</a><br/>
 The &lt;prereq&gt; element of a task contains prerequisites that the user needs to know or do before starting the current task. Implementations may, but need not, render prerequisite links from the related-links section together with the &lt;prereq&gt; content.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/context.html">context</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/context.html">context</a><br/>
 The &lt;<span class="keyword">context</span>&gt; element provides background information for a task. This information helps the user understand what the purpose of the task is and what they will gain by completing the task. This section should be brief and does not replace or recreate a concept topic on the same subject, although the context section may include some conceptual information.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/steps.html">steps</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/steps.html">steps</a><br/>
 The &lt;<span class="keyword">steps</span>&gt; element provides the main content of a task topic. The task is described as a series of steps that the user must follow to accomplish the task. At least one &lt;<span class="keyword">step</span>&gt; element is required inside the &lt;<span class="keyword">steps</span>&gt; element.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/steps-informal.html">steps-informal</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/steps-informal.html">steps-informal</a><br/>
 The &lt;<span class="keyword">steps-informal</span>&gt; element allows authors to describe procedural task information without placing each step in an individual container element, which is a requirement of the related &lt;steps&gt; and &lt;steps-unordered&gt; elements. For example, &lt;steps-informal&gt; may contain a paragraph that describes more than one step in a single sentence, or it may contain sentences that mix steps together with information about the steps.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/steps-unordered.html">steps-unordered</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/steps-unordered.html">steps-unordered</a><br/>
 Like the &lt;<span class="keyword">steps</span>&gt; element, the &lt;<span class="keyword">steps-unordered</span>&gt; element provides the main content of a task topic, but particularly for cases in which the order of steps may vary from one situation to another. At least one &lt;<span class="keyword">step</span>&gt; element is required inside the &lt;<span class="keyword">steps-unordered</span>&gt; element.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/step.html">step</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/step.html">step</a><br/>
 The &lt;<span class="keyword">step</span>&gt; element represents an action that a user must follow to accomplish a task. Each step in a task must contain a command &lt;<span class="keyword">cmd</span>&gt; element which describes the particular action the user must do to accomplish the overall task. <span class="ph">Beginning with DITA 1.2, it is possible to place a &lt;<span class="keyword">note</span>&gt; element before the command in order to notify the user of dangers or other important information about the step. The &lt;step&gt; element can also contain additional optional information about the step, such as substeps, a list of choices, or result information.</span></li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/stepsection.html">stepsection</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/stepsection.html">stepsection</a><br/>
 The &lt;<span class="keyword">stepsection</span>&gt; element provides expository text before a step element. Although the element is specialized from &lt;li&gt; and has the same content model as a list item, it is not intended to represent a step in a task.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/cmd.html">cmd</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/cmd.html">cmd</a><br/>
 The &lt;<span class="keyword">cmd</span>&gt; element specifies a command, which is a required element inside the &lt;<span class="keyword">step</span>&gt; element. It provides the active voice instruction to the user for completing the step, and should not be more than one sentence. If the step needs additional explanation, place the explanation in an &lt;<span class="keyword">info</span>&gt; element following the &lt;<span class="keyword">cmd</span>&gt;. </li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/info.html">info</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/info.html">info</a><br/>
 The &lt;<span class="keyword">info</span>&gt; element occurs inside a &lt;<span class="keyword">step</span>&gt; element to provide additional information about the step.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/substeps.html">substeps</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/substeps.html">substeps</a><br/>
 The &lt;<span class="keyword">substeps</span>&gt; element allows you to break a step down into a series of separate actions, and should be used only if necessary. Try to describe the steps of a task in a single level of steps. If you need to use more than one level of substep nesting, you should probably rewrite the task to simplify it.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/substep.html">substep</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/substep.html">substep</a><br/>
 A &lt;<span class="keyword">substep</span>&gt; element has the same structure as a &lt;<span class="keyword">step</span>&gt;, except that it does not allow lists of choices or substeps within it, in order to prevent unlimited nesting of steps.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/stepxmp.html">stepxmp</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/stepxmp.html">stepxmp</a><br/>
 The &lt;<span class="keyword">stepxmp</span>&gt; element is used to illustrate a step of a task. The step example can be a couple of words, or an entire paragraph.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/choicetable.html">choicetable</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/choicetable.html">choicetable</a><br/>
 The &lt;<span class="keyword">choicetable</span>&gt; element contains a series of optional choices available within a step of a task.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/chhead.html">chhead</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/chhead.html">chhead</a><br/>
 The &lt;<span class="keyword">chhead</span>&gt; element is a container inside the &lt;<span class="keyword">choicetable</span>&gt; element that provides specific heading text to override the default <strong class="ph b">Options</strong> and <strong class="ph b">Description</strong> headings. The &lt;<span class="keyword">chhead</span>&gt; element contains both a &lt;<span class="keyword">choptionhd</span>&gt; and &lt;<span class="keyword">chdeschd</span>&gt; element as a pair.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/choptionhd.html">choptionhd</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/choptionhd.html">choptionhd</a><br/>
 The &lt;<span class="keyword">choptionhd</span>&gt; element provides a specific label for the list of options from which a user chooses in order to accomplish a step. The default label for options is a localized translation of <strong class="ph b">Option</strong>.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/chdeschd.html">chdeschd</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/chdeschd.html">chdeschd</a><br/>
 The &lt;<span class="keyword">chdeschd</span>&gt; element provides a specific label for the list of descriptions of options from which a user must choose in order to accomplish a step. The default label overridden by &lt;<span class="keyword">chdeschd</span>&gt; is a localized translation of <strong class="ph b">Description</strong>.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/chrow.html">chrow</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/chrow.html">chrow</a><br/>
 The &lt;<span class="keyword">chrow</span>&gt; element is a container inside the &lt;<span class="keyword">choicetable</span>&gt; element. The &lt;<span class="keyword">chrow</span>&gt; element contains both a &lt;<span class="keyword">choption</span>&gt; and &lt;<span class="keyword">chdesc</span>&gt; element as a pair.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/choption.html">choption</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/choption.html">choption</a><br/>
 The &lt;<span class="keyword">choption</span>&gt; element describes an option that a user could choose to accomplish a step of a task. In a user interface, for example, this might be the name of radio button.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/chdesc.html">chdesc</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/chdesc.html">chdesc</a><br/>
 The &lt;<span class="keyword">chdesc</span>&gt; element is a description of an option that a user chooses while performing a step to accomplish a task. It explains why the user would choose that option and might explain the result of the choice when it is not immediately obvious.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/choices.html">choices</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/choices.html">choices</a><br/>
 The &lt;<span class="keyword">choices</span>&gt; element contains a list of &lt;<span class="keyword">choice</span>&gt; elements. It is used when the user will need to choose one of several actions while performing the steps of a task. </li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/choice.html">choice</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/choice.html">choice</a><br/>
 Each &lt;<span class="keyword">choice</span>&gt; element describes one way that the user could accomplish the current step.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/stepresult.html">stepresult</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/stepresult.html">stepresult</a><br/>
 The &lt;<span class="keyword">stepresult</span>&gt; element provides information on the expected outcome of a step. If a user interface is being documented, the outcome could describe a dialog box opening or the appearance of a progress indicator. Step results are useful to assure a user that they are on track, but should not be used for every step as this quickly becomes tedious.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/tutorialinfo.html">tutorialinfo</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/tutorialinfo.html">tutorialinfo</a><br/>
 The &lt;<span class="keyword">tutorialinfo</span>&gt; element contains additional information that is useful when the task is part of a tutorial.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/result.html">result</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/result.html">result</a><br/>
 The &lt;<span class="keyword">result</span>&gt; element describes the expected outcome for the task as a whole. </li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/postreq.html">postreq</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/postreq.html">postreq</a><br/>
 The &lt;<span class="keyword">postreq</span>&gt; element describes steps or tasks that the user should do after the successful completion of the current task. It is often supported by links to the next task or tasks in the &lt;<span class="keyword">related-links</span>&gt; section.</li>
 </ol>
 
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="langRef-technicalContent.html" title="Elements in the technical content section include the original Concept, Task, and Reference specializations, as well as the Bookmap and Glossary specializations added with DITA 1.1. It also includes domains designed primarily for technical content, such as the task requirements and software domains.">Technical content elements</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/../langRef-technicalContent.html" title="Elements in the technical content section include the original Concept, Task, and Reference specializations, as well as the Bookmap and Glossary specializations added with DITA 1.1. It also includes domains designed primarily for technical content, such as the task requirements and software domains.">Technical content elements</a></div>
 </div>
 </div>
 

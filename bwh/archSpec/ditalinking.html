@@ -72,7 +72,7 @@
 
             <p class="p">Almost any element may become a use-by-reference link by using the @conref or
                   @conkeyref attribute to establish a content reference (conref) relationship to
-                  another element or set of elements (see <a class="- topic/xref  ajaxLink" href="conref.html#conref" title="The DITA @conref, @conkeyref, @conrefend, and related attributes provide a mechanism for reuse of content fragments within DITA topics or maps.">Use by reference</a>). Elements such as
+                  another element or set of elements (see <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="archSpec/conref.html#conref" title="The DITA @conref, @conkeyref, @conrefend, and related attributes provide a mechanism for reuse of content fragments within DITA topics or maps.">Use by reference</a>). Elements such as
                   &lt;term&gt; and &lt;keyword&gt; may become navigation links by using the @keyref
                   attribute to establish a relationship to another DITA element or non-DITA
                   resource. </p>
@@ -98,7 +98,7 @@
                   reference is functionally equivalent to having addressed the same target by URI
                   reference, in that the final processing result should be the same in both cases.
                   However, the two forms of address have different practical and intermediate
-                  processing implications. See <a class="- topic/xref  ajaxLink" href="ditaaddressing.html#id" title="DITA provides a number of facilities for establishing relationships among DITA elements and between DITA elements and non-DITA resources. All DITA relationships use the same addressing facilities irrespective of the semantics of the relationship established. DITA addresses are either direct, URI-based addresses, or indirect key-based addresses. Within DITA documents, individual elements are addressed by unique IDs specified on the common @id attribute. DITA defines two fragment identifier syntaxes for addressing DITA elements, one for topics and elements within maps and one for non-topic elements within topics.">DITA addressing</a>.</p>
+                  processing implications. See <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="archSpec/ditaaddressing.html#id" title="DITA provides a number of facilities for establishing relationships among DITA elements and between DITA elements and non-DITA resources. All DITA relationships use the same addressing facilities irrespective of the semantics of the relationship established. DITA addresses are either direct, URI-based addresses, or indirect key-based addresses. Within DITA documents, individual elements are addressed by unique IDs specified on the common @id attribute. DITA defines two fragment identifier syntaxes for addressing DITA elements, one for topics and elements within maps and one for non-topic elements within topics.">DITA addressing</a>.</p>
 
             <p class="p">Links from maps to other maps, topics, or non-DITA resources establish explicit
                   dependencies from the map containing the links to the associated resources. Links
@@ -120,10 +120,10 @@
                   using a resource-only topic reference in the map tree to establish the dependency
                   explicitly. If the resource-only topicref also defines a key, the link within the
                   topic can then be changed to use a key reference (@keyref or @conkeyref) instead
-                  of a URI reference (@href, @conref). See <a class="- topic/xref  ajaxLink" href="key-based_addressing.html" title="The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.">Key-based addressing</a>.</p>
+                  of a URI reference (@href, @conref). See <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="archSpec/key-based_addressing.html" title="The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.">Key-based addressing</a>.</p>
 
             <p class="p">Navigation links have an associated "scope" indicating the closeness of the
-                  relationship of the linking element to associated resources. See <a class="- topic/xref  ajaxLink" href="common/thescopeattribute.html#thescopeattribute" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The
+                  relationship of the linking element to associated resources. See <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="archSpec/../common/thescopeattribute.html#thescopeattribute" title="The scope attribute identifies the closeness of the relationship between the current document and the target resource.">The
                         scope attribute</a>.</p>
 
             <p class="p">Most navigation links have an associated "link text", which is the text used to
@@ -143,18 +143,18 @@
 
       </div>
 
-<div class="related-links">
+<div xmlns:functx="http://www.functx.com" class="related-links">
 <ol class="olchildlinks">
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/dita-linking-links-within-maps.html">Links within maps</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/../archSpec/dita-linking-links-within-maps.html">Links within maps</a><br/>
 DITA maps serve primarily to define a navigation hierarchy of topics and non-DITA   resources. Through relationship tables, maps may also define arbitrary topic-to-topic   relationships such as "related links". Maps may also link to topics or non-DITA resources to   establish dependency relationships without binding the linked resource into the navigation   tree.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/dita-linking-links-within-topics.html">Links within topics</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="archSpec/../archSpec/dita-linking-links-within-topics.html">Links within topics</a><br/>
 A topic may contain several types of links.</li>
 </ol>
 
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/behaviors.html" title="Several common DITA processing behaviors are driven by attributes, including setting the set of vocabulary and constraint modules on which a DITA document depends, navigation, linking, content reuse (via direct or indirect addressing), conditional processing, chunking, and printing. In addition, translation of DITA content is expedited through the use of the @dir, @translate, and @xml:lang attributes, and the &lt;index-sort-as&gt; element.">DITA processing</a></div>
-<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditanav.html" title="DITA includes markup that processors may use to generate reader navigation to or across DITA topics.">Navigation behaviors</a></div>
-<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/ditaaddressing.html" title="DITA provides a number of facilities for establishing relationships among DITA elements and between DITA elements and non-DITA resources. All DITA relationships use the same addressing facilities irrespective of the semantics of the relationship established. DITA addresses are either direct, URI-based addresses, or indirect key-based addresses. Within DITA documents, individual elements are addressed by unique IDs specified on the common @id attribute. DITA defines two fragment identifier syntaxes for addressing DITA elements, one for topics and elements within maps and one for non-topic elements within topics.">DITA addressing</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/../archSpec/behaviors.html" title="Several common DITA processing behaviors are driven by attributes, including setting the set of vocabulary and constraint modules on which a DITA document depends, navigation, linking, content reuse (via direct or indirect addressing), conditional processing, chunking, and printing. In addition, translation of DITA content is expedited through the use of the @dir, @translate, and @xml:lang attributes, and the &lt;index-sort-as&gt; element.">DITA processing</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/../archSpec/ditanav.html" title="DITA includes markup that processors may use to generate reader navigation to or across DITA topics.">Navigation behaviors</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/../archSpec/ditaaddressing.html" title="DITA provides a number of facilities for establishing relationships among DITA elements and between DITA elements and non-DITA resources. All DITA relationships use the same addressing facilities irrespective of the semantics of the relationship established. DITA addresses are either direct, URI-based addresses, or indirect key-based addresses. Within DITA documents, individual elements are addressed by unique IDs specified on the common @id attribute. DITA defines two fragment identifier syntaxes for addressing DITA elements, one for topics and elements within maps and one for non-topic elements within topics.">DITA addressing</a></div>
 </div>
 </div>
 

@@ -43,33 +43,33 @@ topics, or for groups of topics. Many elements inside &lt;topicmeta&gt;
 are also available inside the topic prolog.</p>
 </div>
 
-<div class="related-links">
+<div xmlns:functx="http://www.functx.com" class="related-links">
 <ol class="olchildlinks">
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/map.html">map</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/map.html">map</a><br/>
 The &lt;<span class="keyword">map</span>&gt; element describes the relationships among a set of resources, such as DITA topics. Maps consist of references to topics, maps, and other resources organized into hierarchies, groups, and tables. Maps express these relationships in a single common format that can be used for different outputs. </li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/topicref.html">topicref</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/topicref.html">topicref</a><br/>
 The &lt;<span class="keyword">topicref</span>&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;<span class="keyword">topicref</span>&gt; can contain other &lt;<span class="keyword">topicref</span>&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;<span class="keyword">topicref</span>&gt; and its children. You can set the collection-type of a parent &lt;<span class="keyword">topicref</span>&gt; to determine how its children are related to each other. You can also express relationships among &lt;<span class="keyword">topicref</span>&gt; elements by using group and table structures (&lt;<span class="keyword">topicgroup</span>&gt; and &lt;<span class="keyword">reltable</span>&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship. </li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/topicmeta.html">topicmeta</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/topicmeta.html">topicmeta</a><br/>
 The &lt;<span class="keyword">topicmeta</span>&gt; element defines the metadata that applies to a     topic when it appears in a map. When appropriate, that metadata also applies to the other topics     in the map that are contained by the same element that contains the &lt;topicmeta&gt; element.     When creating links, &lt;topicmeta&gt; content can also be used to override the title and short     description that are used for the link. In addition, it can be used to add index entries to     referenced content using the &lt;<span class="keyword">keywords</span>&gt; element.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/anchor.html">anchor</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/anchor.html">anchor</a><br/>
 <span class="ph">The &lt;<span class="keyword">anchor</span>&gt; element provides an integration point that another map can <span class="ph">reference</span> in order to insert its navigation into the current navigation tree. For those familiar with Eclipse help systems, this serves the same purpose as the &lt;anchor&gt; element in that system. It <dfn class="term">may not</dfn> be supported for all output formats.</span></li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/navref.html">navref</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/navref.html">navref</a><br/>
 <span class="ph">The &lt;<span class="keyword">navref</span>&gt; element represents a pointer to another map which should be preserved as a transcluding link rather than resolved. Output formats that support such linking will integrate the referenced resource when displaying the referencing map to an end user. </span> </li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/reltable.html">reltable</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/reltable.html">reltable</a><br/>
 The &lt;<span class="keyword">reltable</span>&gt; element is a relationship table that specifies relationships between topics, based on the familiar table model of rows (&lt;<span class="keyword">relrow</span>&gt;), columns (&lt;<span class="keyword">relheader</span>&gt;), and cells (&lt;<span class="keyword">relcell</span>&gt;).</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/relrow.html">relrow</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/relrow.html">relrow</a><br/>
 The &lt;<span class="keyword">relrow</span>&gt; element defines a row in the relationship table (&lt;reltable&gt;). It creates a relationship between the cells in the row, which is expressed in output as links between the topics or resources referenced in those cells.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/relcell.html">relcell</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/relcell.html">relcell</a><br/>
 The &lt;<span class="keyword">relcell</span>&gt; element defines a cell in the relationship table (&lt;reltable&gt;). The &lt;<span class="keyword">topicref</span>&gt; elements that it contains are related to the &lt;topicref&gt; elements in other cells of the same row. By default, topics or resources that are referenced in the same cell are not related to each other, unless you change the collection-type attribute of the &lt;relcell&gt; to indicate that they are related.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/relheader.html">relheader</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/relheader.html">relheader</a><br/>
 The &lt;<span class="keyword">relheader</span>&gt; element is a row  in a relationship table that contains column definitions (&lt;relcolspec&gt; elements). Each table can have only one set of column definitions.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/relcolspec.html">relcolspec</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/relcolspec.html">relcolspec</a><br/>
 The &lt;relcolspec&gt; element is used to define a column in a relationship table. The &lt;relcolspec&gt; element may be used to set default values for the &lt;topicref&gt; elements in the column.</li>
 </ol>
 
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/map_elements.html" title="Map elements include the core components of DITA maps, such as &lt;topicref&gt; and &lt;reltable&gt;, as well as general purpose map specializations in the map group domain.">Map elements</a></div>
-<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/mapgroup-d.html" title="The map group domain elements define, group, or reference content. Many of the map group elements are convenience elements, which means that they simply make it easier for an author to make use of existing functions.">Map group elements</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/../common/map_elements.html" title="Map elements include the core components of DITA maps, such as &lt;topicref&gt; and &lt;reltable&gt;, as well as general purpose map specializations in the map group domain.">Map elements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/../common/mapgroup-d.html" title="The map group domain elements define, group, or reference content. Many of the map group elements are convenience elements, which means that they simply make it easier for an author to make use of existing functions.">Map group elements</a></div>
 </div>
 </div>
 

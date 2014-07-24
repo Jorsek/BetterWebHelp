@@ -55,7 +55,7 @@ from map to map:<ul class="ul">
 a map or a branch of a map, so it cannot cascade through to the referenced
 map.</li>
 
-<li class="li">@xml:lang and @dir: cascading behavior for xml:lang is defined in <a class="- topic/xref  ajaxLink" href="xmllang.html" title="The @xml:lang attribute specifies the language (and optionally the locale) of the element content. The @xml:lang attribute applies to all attributes and content of the element where it is specified, unless it is overridden with @xml:lang on another element within that content. If the @xml:lang attribute on the document (outermost) element of a map or of a top-level topic has no value, the processor should assume a default value. The default value of the processor may be either fixed, configurable, or derived from the content itself, such as the @xml:lang attribute on the primary map file. As the default value of a processor may be fixed, it is strongly recommended that the @xml:lang attribute be set on each map and top-level topic.">The @xml:lang attribute</a>.
+<li class="li">@xml:lang and @dir: cascading behavior for xml:lang is defined in <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="archSpec/xmllang.html" title="The @xml:lang attribute specifies the language (and optionally the locale) of the element content. The @xml:lang attribute applies to all attributes and content of the element where it is specified, unless it is overridden with @xml:lang on another element within that content. If the @xml:lang attribute on the document (outermost) element of a map or of a top-level topic has no value, the processor should assume a default value. The default value of the processor may be either fixed, configurable, or derived from the content itself, such as the @xml:lang attribute on the primary map file. As the default value of a processor may be fixed, it is strongly recommended that the @xml:lang attribute be set on each map and top-level topic.">The @xml:lang attribute</a>.
                         The @dir and translate attributes work the same way.</li>
 
 <li class="li">@scope: the @scope value describes the map itself, rather than
@@ -67,7 +67,7 @@ into that referenced map.</li>
 </div>
 <p class="p">The @class attribute does not cascade within a map, but
 is used to determine processing roles that cascade from map to map.
-See <a class="- topic/xref  ajaxLink" href="#map-to-map-cascading-of-metadata__roles">Cascading of roles in specialized maps</a> for
+See <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="#map-to-map-cascading-of-metadata__roles">Cascading of roles in specialized maps</a> for
 more details.</p>
 <p class="p">As with values that cascade within a map, the
 cascading is additive if the attribute permits multiple values (such
@@ -115,7 +115,7 @@ same rules for cascading as apply within a single DITA map. For a
 complete list of which elements cascade within a map, see the column
 "<span class="ph">Does it cascade to
 child &lt;topicref&gt; elements?</span>"
-in the topic <a class="- topic/xref  ajaxLink" href="reconciling-topic-and-map-metadata.html" title="The &lt;topicmeta&gt; element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent &lt;topicref&gt; element, any child &lt;topicref&gt; elements, and – if a direct child of the &lt;map&gt; element – on the map as a whole.">Reconciling topic and map metadata</a>.</p>
+in the topic <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="archSpec/reconciling-topic-and-map-metadata.html" title="The &lt;topicmeta&gt; element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent &lt;topicref&gt; element, any child &lt;topicref&gt; elements, and – if a direct child of the &lt;map&gt; element – on the map as a whole.">Reconciling topic and map metadata</a>.</p>
 <p class="p">For
 example, consider the following code snippets:</p>
 <div class="fig fignone"><span class="figcap">Figure 1. <span class="ph filepath">test-2.ditamap</span></span>
@@ -250,11 +250,11 @@ a &lt;chapter&gt; element.</dd>
 
 </div>
 
-<div class="related-links">
+<div xmlns:functx="http://www.functx.com" class="related-links">
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita-metadata.html" title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is assigned in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map; this design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts.">DITA metadata</a></div>
-<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/cascading-in-a-ditamap.html" title="Certain map-level attributes and metadata elements cascade throughout a map, which facilitates attribute and metadata management. When attributes or metadata elements cascade, they apply to the elements that are children of the element where the attributes or metadata were specified. Cascading applies to a containment hierarchy, as opposed to a element-type hierarchy.">Cascading of attributes and metadata in a DITA map</a></div>
-<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/reconciling-topic-and-map-metadata.html" title="The &lt;topicmeta&gt; element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent &lt;topicref&gt; element, any child &lt;topicref&gt; elements, and – if a direct child of the &lt;map&gt; element – on the map as a whole.">Reconciling topic and map metadata</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/../archSpec/dita-metadata.html" title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is assigned in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map; this design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts.">DITA metadata</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/../archSpec/cascading-in-a-ditamap.html" title="Certain map-level attributes and metadata elements cascade throughout a map, which facilitates attribute and metadata management. When attributes or metadata elements cascade, they apply to the elements that are children of the element where the attributes or metadata were specified. Cascading applies to a containment hierarchy, as opposed to a element-type hierarchy.">Cascading of attributes and metadata in a DITA map</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/../archSpec/reconciling-topic-and-map-metadata.html" title="The &lt;topicmeta&gt; element in maps contains numerous elements that can be used to declare metadata. These metadata elements have an effect on the parent &lt;topicref&gt; element, any child &lt;topicref&gt; elements, and – if a direct child of the &lt;map&gt; element – on the map as a whole.">Reconciling topic and map metadata</a></div>
 </div>
 </div>
 

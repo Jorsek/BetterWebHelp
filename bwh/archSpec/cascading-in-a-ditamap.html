@@ -132,10 +132,10 @@ Attribute values and metadata elements in relationship tables can be applied to 
     attribute values are set and all cascading is complete.</p>
 
    <p class="p">For example, in the case of <samp class="ph codeph">&lt;topicref toc="yes&gt;</samp>, applications must stop at
-     <a class="- topic/xref  ajaxLink" href="#cascading-in-a-ditamap__explicit-values">2</a> in the list; a value is
+     <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="#cascading-in-a-ditamap__explicit-values">2</a> in the list; a value is
     specified for @toc in the document instance, so @toc values from containing elements will not
     cascade to that specific &lt;topicref&gt; element. The @toc="yes" setting on that &lt;topicref&gt;
-    element may cascade to contained elements, provided those elements reach <a class="- topic/xref  ajaxLink" href="#cascading-in-a-ditamap__attributes-cascade">5</a> below when evaluating the
+    element may cascade to contained elements, provided those elements reach <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="#cascading-in-a-ditamap__attributes-cascade">5</a> below when evaluating the
     @toc attribute.</p>
 
    <div class="p">For attributes within a map, the following processing order <dfn class="term">must</dfn> occur:<ol class="ol" id="cascading-in-a-ditamap__ol_6eb4fb9c-b56f-4471-bb2d-b183fef5980c">
@@ -162,10 +162,10 @@ Attribute values and metadata elements in relationship tables can be applied to 
        However, a processor-supplied default of toc="yes" must not override a value of toc="no" that
        is set on a referenced map. If the toc="yes" value is explicitly specified, is given as a
        default through a DTD, XSD, or controlled values file, or cascades from a containing element
-       in the map, it will override a toc="no" setting on the referenced map. See <a class="- topic/xref  ajaxLink" href="map-to-map-cascading-of-metadata.html" title="When a DITA map (or branch of a DITA map) is referenced by another DITA map, by default, certain rules apply. These rules pertain to the cascading behaviors of attributes, metadata elements, and roles assigned to content (such as the role of &#34;Chapter&#34; assigned by a &lt;chapter&gt; element). Attributes and elements that cascade within a map generally follow the same rules when cascading from one map to another map; this topic covers the exceptions and additional rules that apply.">Map-to-map cascading behaviors</a> for more details.</div>
+       in the map, it will override a toc="no" setting on the referenced map. See <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="archSpec/map-to-map-cascading-of-metadata.html" title="When a DITA map (or branch of a DITA map) is referenced by another DITA map, by default, certain rules apply. These rules pertain to the cascading behaviors of attributes, metadata elements, and roles assigned to content (such as the role of &#34;Chapter&#34; assigned by a &lt;chapter&gt; element). Attributes and elements that cascade within a map generally follow the same rules when cascading from one map to another map; this topic covers the exceptions and additional rules that apply.">Map-to-map cascading behaviors</a> for more details.</div>
 </li>
 
-     <li class="li">Repeat steps <a class="- topic/xref  ajaxLink" href="#cascading-in-a-ditamap__common-start">1</a> to <a class="- topic/xref  ajaxLink" href="#cascading-in-a-ditamap__common-end">4</a> for each referenced map.</li>
+     <li class="li">Repeat steps <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="#cascading-in-a-ditamap__common-start">1</a> to <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="#cascading-in-a-ditamap__common-end">4</a> for each referenced map.</li>
 
      <li class="li">The attributes cascade within each referenced map.</li>
 
@@ -205,11 +205,11 @@ Attribute values and metadata elements in relationship tables can be applied to 
 
  </div>
 
-<div class="related-links">
+<div xmlns:functx="http://www.functx.com" class="related-links">
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/dita-metadata.html" title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is assigned in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map; this design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts.">DITA metadata</a></div>
-<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/metadata-in-maps-and-topics.html" title="Topic metadata can be specified in a DITA map as well as in the topics that the map references. By default, metadata in the map supplements or overrides metadata that is specified at the topic level, unless the @lockmeta attribute of the &lt;topicref&gt; element is set to &#34;no&#34;.">Metadata in maps and topics</a></div>
-<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/map-to-map-cascading-of-metadata.html" title="When a DITA map (or branch of a DITA map) is referenced by another DITA map, by default, certain rules apply. These rules pertain to the cascading behaviors of attributes, metadata elements, and roles assigned to content (such as the role of &#34;Chapter&#34; assigned by a &lt;chapter&gt; element). Attributes and elements that cascade within a map generally follow the same rules when cascading from one map to another map; this topic covers the exceptions and additional rules that apply.">Map-to-map cascading behaviors</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/../archSpec/dita-metadata.html" title="Metadata can be applied in both DITA topics and DITA maps. Metadata that is assigned in DITA topics can be supplemented or overridden by metadata that is assigned in a DITA map; this design facilitates the reuse of DITA topics in different DITA maps and use-specific contexts.">DITA metadata</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/../archSpec/metadata-in-maps-and-topics.html" title="Topic metadata can be specified in a DITA map as well as in the topics that the map references. By default, metadata in the map supplements or overrides metadata that is specified at the topic level, unless the @lockmeta attribute of the &lt;topicref&gt; element is set to &#34;no&#34;.">Metadata in maps and topics</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="archSpec/../archSpec/map-to-map-cascading-of-metadata.html" title="When a DITA map (or branch of a DITA map) is referenced by another DITA map, by default, certain rules apply. These rules pertain to the cascading behaviors of attributes, metadata elements, and roles assigned to content (such as the role of &#34;Chapter&#34; assigned by a &lt;chapter&gt; element). Attributes and elements that cascade within a map generally follow the same rules when cascading from one map to another map; this topic covers the exceptions and additional rules that apply.">Map-to-map cascading behaviors</a></div>
 </div>
 </div>
 

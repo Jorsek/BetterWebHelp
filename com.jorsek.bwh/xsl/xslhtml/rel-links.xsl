@@ -7,6 +7,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:ditamsg="http://dita-ot.sourceforge.net/ns/200704/ditamsg"
 	xmlns:related-links="http://dita-ot.sourceforge.net/ns/200709/related-links"
+	xmlns:functx="http://www.functx.com"
 	exclude-result-prefixes="related-links ditamsg">
 
 	<xsl:key name="link"
@@ -424,7 +425,8 @@ Children are displayed in a numbered list, with the target title as the cmd and 
       and for peer links accept both .xml and .dita bug:3059256-->
 			<xsl:when
 				test="(not(@scope) or @scope='local' or @scope='peer') and (not(@format) or @format='dita' or @format='DITA')">
-				<xsl:choose>
+				
+				<!--<xsl:choose>
 					<xsl:when test="starts-with(@href,'../')">
 						<xsl:call-template name="replace-extension">
 							<xsl:with-param name="filename" select="substring-after(@href,'../')"/>
@@ -432,14 +434,17 @@ Children are displayed in a numbered list, with the target title as the cmd and 
 							<xsl:with-param name="ignore-fragment" select="true()"/>
 						</xsl:call-template>
 					</xsl:when>
-					<xsl:otherwise>
+					<xsl:otherwise>-->
+						<!-- Make sure the path is absolute for ajax -->
+						<xsl:value-of select="concat($FILEDIR,'/')"/>
+						
 						<xsl:call-template name="replace-extension">
 							<xsl:with-param name="filename" select="@href"/>
 							<xsl:with-param name="extension" select="$OUTEXT"/>
 							<xsl:with-param name="ignore-fragment" select="true()"/>
 						</xsl:call-template>
-					</xsl:otherwise>
-				</xsl:choose>
+					<!--</xsl:otherwise>
+				</xsl:choose>-->
 				<xsl:if test="contains(@href, '#')">
 					<xsl:text>#</xsl:text>
 					<xsl:call-template name="parsehref">

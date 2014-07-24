@@ -47,47 +47,47 @@
 terms. Each glossentry topic should define a single sense of a term.</p>
 </div>
 
-<div class="related-links">
+<div xmlns:functx="http://www.functx.com" class="related-links">
 <ol class="olchildlinks">
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossentry.html">glossentry</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossentry.html">glossentry</a><br/>
 The &lt;<span class="keyword">glossentry</span>&gt; element defines a single sense of a glossary term. Glossary entries for different term senses can be reused independently of one another. <span class="ph">DITA 1.2 adds several elements to the glossentry topic type, allowing it to specify additional information about a term (beyond just the definition).</span></li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossterm.html">glossterm</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossterm.html">glossterm</a><br/>
 The &lt;<span class="keyword">glossterm</span>&gt; element specifies the preferred term associated with a definition of a sense. If the same term has multiple senses, create a separate &lt;<span class="keyword">glossentry</span>&gt; topic for each sense.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossdef.html">glossdef</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossdef.html">glossdef</a><br/>
 The &lt;<span class="keyword">glossdef</span>&gt; element specifies the definition of one sense of a term. If a term has multiple senses, create a separate &lt;<span class="keyword">glossentry</span>&gt; topic to define each sense.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossAbbreviation.html">glossAbbreviation</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossAbbreviation.html">glossAbbreviation</a><br/>
 The &lt;<span class="keyword">glossAbbreviation</span>&gt; element provides an abbreviated form of the term contained in a &lt;<span class="keyword">glossterm</span>&gt; element.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossAcronym.html">glossAcronym</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossAcronym.html">glossAcronym</a><br/>
 The &lt;glossAcronym&gt; element defines an acronym as an alternate form for the term defined in the &lt;glossterm&gt; element. </li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossAlt.html">glossAlt</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossAlt.html">glossAlt</a><br/>
 The &lt;glossAlt&gt; element contains a variant term for the preferred term. The variant should have the same meaning as the term in the &lt;glossterm&gt; element; the variant is simply another way to refer to the same term. There may be many ways to refer to a term; each variant is placed in its own &lt;glossAlt&gt; element. The &lt;glossUsage&gt; element may be used within &lt;glossAlt&gt; to indicate when use of the alternate term is appropriate.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossAlternateFor.html">glossAlternateFor</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossAlternateFor.html">glossAlternateFor</a><br/>
 The &lt;<span class="keyword">glossAlternateFor</span>&gt; element indicates when a variant term has a relationship to another variant term as well as to the preferred term.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossBody.html">glossBody</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossBody.html">glossBody</a><br/>
 The &lt;<span class="keyword">glossbody</span>&gt; element is used to provide details about a glossary term (such as part of speech or additional forms of the term).</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossPartOfSpeech.html">glossPartOfSpeech</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossPartOfSpeech.html">glossPartOfSpeech</a><br/>
 The &lt;glossPartOfSpeech&gt; element identifies the part of speech for the preferred and alternate terms. Alternate terms must have the same part of speech as the preferred term because all terms in the glossentry topic designate the same subject. If the part of speech isn't specified, the default is a noun for the standard enumeration.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossProperty.html">glossProperty</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossProperty.html">glossProperty</a><br/>
 The &lt;<span class="keyword">glossProperty</span>&gt; element is an extension point which allows additional details about the preferred term or its subject.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossScopeNote.html">glossScopeNote</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossScopeNote.html">glossScopeNote</a><br/>
 The &lt;glossScopeNote&gt; element contains a clarification of the subject designated by the &lt;<span class="keyword">glossterm</span>&gt;, such as examples of included or excluded companies or products. For instance, a scope note for "Linux" might explain that the term doesn't apply to UNIX products and may give some examples of Linux products that are included as well as UNIX products that are excluded. </li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossShortForm.html">glossShortForm</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossShortForm.html">glossShortForm</a><br/>
 The &lt;<span class="keyword">glossShortForm</span>&gt; element provides a shorter alternative to the primary term specified in the &lt;<span class="keyword">glossterm</span>&gt; element.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossStatus.html">glossStatus</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossStatus.html">glossStatus</a><br/>
 Identifies the usage status of a preferred or alternate term. If the status isn't specified, the &lt;glossterm&gt; provides a preferred term and an alternate term provides an allowed term.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossSurfaceForm.html">glossSurfaceForm</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossSurfaceForm.html">glossSurfaceForm</a><br/>
 The &lt;glossSurfaceForm&gt; element specifies an unambiguous presentation of the &lt;glossterm&gt; that may combine multiple forms. The surface form is suitable to introduce the term in new contexts.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossSymbol.html">glossSymbol</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossSymbol.html">glossSymbol</a><br/>
 The &lt;glossSymbol&gt; element identifies a standard image associated with the subject of the &lt;glossterm&gt;.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossSynonym.html">glossSynonym</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossSynonym.html">glossSynonym</a><br/>
 Provides a term that is a synonym of the primary value in the &lt;<span class="keyword">glossterm</span>&gt; element.</li>
-<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="langref/glossUsage.html">glossUsage</a><br/>
+<li class="link olchildlink"><a class="- topic/link  ajaxLink" href="common/../langref/glossUsage.html">glossUsage</a><br/>
 The &lt;glossUsage&gt; element provides information about the correct use of a term, such as where or how it can be used.</li>
 </ol>
 
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/glossary-elements.html" title="Glossary elements include those elements designed to specify terms and their definitions, as well as elements that are designed to group, reference, or otherwise make use of information in the glossentry topic.">Glossary elements</a></div>
-<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/glossrelated.html" title="Elements related to the glossary specialization are not defined as part of the glossary topic type, but are often used in conjunction with those elements.">Glossary related elements</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a class="- topic/link  ajaxLink" href="common/../common/glossary-elements.html" title="Glossary elements include those elements designed to specify terms and their definitions, as well as elements that are designed to group, reference, or otherwise make use of information in the glossentry topic.">Glossary elements</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a class="- topic/link  ajaxLink" href="common/../common/glossrelated.html" title="Elements related to the glossary specialization are not defined as part of the glossary topic type, but are often used in conjunction with those elements.">Glossary related elements</a></div>
 </div>
 </div>
 
