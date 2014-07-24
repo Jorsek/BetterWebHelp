@@ -145,5 +145,7 @@ $( document ).ready( function() {
 		doSearch();
 		return false;
 	});
-	
+	$("#q").bind("typeahead:selected", function (event, data, dataset) {
+        doSearch();
+    });
 });
