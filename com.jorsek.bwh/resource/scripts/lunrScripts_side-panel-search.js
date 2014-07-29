@@ -47,7 +47,7 @@ function loadIndex() {
 		$('.typeahead').typeahead({
 			hint: true,
 			highlight: true,
-			minLength: 1
+			minLength: 2
 		},{
 			name: 'Titles',
 			displayKey: 'value',
@@ -58,9 +58,7 @@ function loadIndex() {
 					'No matching titles',
 					'</div>'].join('\n')
 			}
-		}).on("typeahead:selected", function (event, data, dataset) {
-        	doSearch();
-    	});
+		});
 		
 	});
 }
@@ -69,25 +67,17 @@ function doSearch() {
 	input = document.getElementById("q").value;
 	results = idx.search(input);
 	
-	if (location.hash.indexOf('#q=') != -1 && location.hash.substring(3) != input) {
-		ga('send', 'event', 'search', 'double-search', {
-			'page': location.pathname + location.hash,
-			'eventValue': input
-		});
-	}
-	
 	if ($('#result-num').length == 0) {
 		previousNav = $('.web-help-nav')[0].outerHTML;
 	}
 	
-/*	output = document.getElementsByClassName("web-help-nav")[0];*/
-	output = document.getElementById("web-help-c2");
-	var resultString = "<div id='result-set'><li style='font-weight:bold;' id='result-num'>" + ((results.length > 20) ? '20+' : String(results.length)) + " results found for \"" + input + "\"</li>"
+	output = document.getElementsByClassName("web-help-nav")[0];
+	output.innerHTML = "<li style='font-weight:bold;' id='result-num'>Found " + ((results.length > 20) ? '20+' : String(results.length)) + " results!</li>"
 	for (x in results) {
 		if (x > 20) {break};
 		title = indexData[results[x].ref].Title;
 		link = indexData[results[x].ref].URI;
-		resultString += "<li class='result-element ajaxLink' href=\"" + link + "\"><div class='result-title'>" + title + "</div>";
+		resultString = "<li class='result-element ajaxLink' href=\"" + link + "\"><div class='result-title'>" + title + "</div>";
 		
 		el = $("li[href='"+link+"']", $(defaultNav))[0];
 		treeComplete = 'false';
@@ -97,7 +87,7 @@ function doSearch() {
 			tree.unshift(el.textContent);
 			
 			if (el.parentElement.parentElement != null) {
-				el = el.parentElement.parentElement.previousElementSibling;
+				el = el.parentElement.parentElement.previousSibling;
 			} else {treeComplete = 'true'}
 		}
 
@@ -110,11 +100,15 @@ function doSearch() {
 				resultString += " > " + tree[t] + "</div>";
 			};
 		};
-		resultString += "</li>";
+		output.innerHTML += resultString + "</li>";
 	}
-	output.innerHTML = resultString + "</div>";
-	if (location.hash.substring(3) != input) {
-		location.hash = 'q=' + input;
+	
+	if (location.hash.indexOf("&q=") == -1) {
+		location.hash += '&q=' + input;
+	} else {
+		if (location.hash.substring(location.hash.indexOf("&q=")+3) != input) {
+			location.hash = locSubstr(location.hash) + '&q=' + input;
+		}
 	}
 	
 	console.log('Searched for : ' + input + '. Results:');
@@ -154,7 +148,5 @@ $( document ).ready( function() {
 		doSearch();
 		return false;
 	});
-	$('#q').on('input',function(e) {
-		setTimeout(function() {$('.tt-dropdown-menu').scrollTop(0)}, 10);
-	});
+	
 });

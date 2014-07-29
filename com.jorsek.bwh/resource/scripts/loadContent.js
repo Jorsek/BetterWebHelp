@@ -191,6 +191,15 @@ $( document ).ready(function() {
         	loadContent("#heading",headingLoc,"no");
     	}
 	});
+	var footerLoc = "footer.html";
+	$.ajax({url:footerLoc, type:'HEAD',
+		error: function() {
+			$('#footer').css("display","none");
+		},
+    	success: function() {
+        	loadContent("#footer",footerLoc,"no");
+    	}
+	});
 	
 	navInit();
 	

@@ -1,0 +1,74 @@
+body {
+	font-family: serif;
+}
+#heading {
+	background-color: #01579b;
+}
+#heading h1 {
+	font-size: 28px;
+	font-family:"Walkway Rounded","Walkway SemiBold","Walkway UltraCondensed Semi";
+}
+#web-help-c1 li.file:link {
+	color: #01579b;
+}
+#web-help-c1 li.file:visited {
+	color: #01579b;
+}
+#web-help-c1 li.file:hover {
+	color: #01579b;
+	background-color:#eee;
+}
+#web-help-c1 li.file:active {
+	color: #0276cf;
+}
+.web-help-nav li.folder:hover {
+  color:#01579b;
+  background-color: #CCC;
+}
+.web-help-nav li.folder:focus {
+  background-color: #01579b;
+  color:#FFF;
+}
+#web-help-c2 a:link {
+  list-style-type:none;
+  text-decoration:none;
+  font-family:"Walkway Rounded", "Walkway SemiBold", "Walkway Condensed SemiBold", "Walkway UltraCondensed Semi";
+  color: #01579b;
+  font-size:24px;
+}
+#web-help-c2 a:visited {
+	text-decoration: none;
+}
+#web-help-c2 a:hover {
+	color: #0276cf;
+}
+#web-help-c2 a:active {
+  text-decoration:none;
+  color: #5C5CD6;
+}
+#web-help-c2 h1 {
+  border-bottom: solid 2px #01579b;
+}
+#web-help-c2 .shortdesc {
+  font-size: 14px;
+  color:#666;
+  margin-bottom:20px;
+  line-height:150%;
+}
+
+@media screen and (min-width: 15em) {
+
+	#web-help-c2 ul {
+		margin-top:10px;
+		list-style-type:none;
+	}
+	#web-help-c2 li {
+		margin-bottom:5px;
+	}
+}
+
+@media screen and (min-width: 37.5em) {
+	#heading {
+		background-color: #01579b;
+	}
+}

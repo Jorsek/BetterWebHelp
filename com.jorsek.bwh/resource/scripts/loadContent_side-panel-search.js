@@ -16,6 +16,7 @@ function loadContent (location,url,shrinkNav) {
 	if (shrinkNav == "yes") {
 		setTimeout(function() {dd.setValue(0,1)},100);
 	};
+	$("html, body").animate({scrollTop: 0}, "slow");
 };
 
 function expandSubNav(item) {
@@ -137,44 +138,34 @@ $(window).resize(function() {
 
 window.onhashchange = function() {
 
-	if (location.hash.indexOf('q=') == -1) {
-	
+	if (location.hash.indexOf("&q=") == -1) {
 		var siteloc = location.hash.substring(1);
-	
-		if (siteloc == "") {
-			// Figure out a way to display a blank page
-		} else {
-			linkClicked = document.activeElement;
-			if ($(linkClicked).hasClass('folder')) {
-				loadContent("#web-help-c2",siteloc, 'no');
-			} else {
-				loadContent("#web-help-c2",siteloc);
-			}
-		}
+		var searchstr = '';
 	} else {
-		$('#q').val(location.hash.substring(3));
+		var siteloc = location.hash.substring(1, location.hash.indexOf("&q="));
+		var searchstr = location.hash.substring(location.hash.indexOf("&q=")+3);
+		$('#q').val(searchstr);
 		doSearch();
 	}
-	
-	ga('send', 'pageview', {
-		'page': location.pathname + location.hash
-	});
-	
-}
 
-function firstLoad() {
-	if (loaded != 2) {
-		setTimeout(firstLoad, 50);
+	console.log(siteloc);
+	console.log(searchstr);
+
+	if (siteloc == "") {
+		// Figure out a way to display a blank page
 	} else {
-		if (location.hash != '') {
-			if (location.hash.indexOf('q=') != -1) {
-				$('#q').val(location.hash.substring(3));
-				doSearch();
-			} else {
-				loadContent("#web-help-c2",location.hash.substring(1));
-			}
+		linkClicked = document.activeElement;
+		if ($(linkClicked).hasClass('folder')) {
+			loadContent("#web-help-c2",siteloc, 'no');
+		} else {
+			loadContent("#web-help-c2",siteloc);
 		}
 	}
+	
+	if (searchstr.length == 0 && $('#result-num').length != 0) {
+		resetSearch();
+	}
+	
 }
 
 /*
@@ -191,15 +182,6 @@ $( document ).ready(function() {
         	loadContent("#heading",headingLoc,"no");
     	}
 	});
-	var footerLoc = "footer.html";
-	$.ajax({url:footerLoc, type:'HEAD',
-		error: function() {
-			$('#footer').css("display","none");
-		},
-    	success: function() {
-        	loadContent("#footer",footerLoc,"no");
-    	}
-	});
 	
 	navInit();
 	
@@ -210,11 +192,16 @@ $( document ).ready(function() {
 		navStyle = 'vert';
 	};
 	
-	firstLoad();
+	if (location.hash != '') {loadContent("#web-help-c2",location.hash.substring(1));}
 	
 	$(document).on("click",".ajaxLink",function (e) {
 		e.preventDefault();
-		location.hash = $(this).attr('href');
+		if (location.hash.indexOf('&q=') == -1) {
+			location.hash = $(this).attr('href');
+		} else {
+			searchstr = location.hash.substring(location.hash.indexOf('&q='));
+			location.hash = $(this).attr('href')+searchstr;
+		}
 	});
 	
 	$(document).on("click",".folder",function (e) {
@@ -233,12 +220,6 @@ jQuery(function($) {
 	
 	function tog(v){return v?'addClass':'removeClass';} 
 	
-	$(document).on('click', '.clearable', function(){
-		if (!$(this).hasClass('x')) {
-			$(this).addClass('x');
-		}
-	})
-	
 	$(document).on('input', '.clearable', function(){
 		$(this)[tog(this.value)]('x');
 		}).on('mousemove', '.x', function( e ){
@@ -247,8 +228,8 @@ jQuery(function($) {
 		$('.clearable').removeClass('x onX').val('');
 		$('.typeahead').typeahead('val', '');
 		
-		/*if ($('#result-num').length != 0) {
+		if ($('#result-num').length != 0) {
 			resetSearch();
-		}*/
+		}
 	});
 });

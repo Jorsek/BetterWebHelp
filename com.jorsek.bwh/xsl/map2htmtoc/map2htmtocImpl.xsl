@@ -104,6 +104,7 @@
 						</div>
 					</div>
 				</div>
+				<div id="footer">//</div>
 <!-- the following divs are to build the draggable handle on mobile -->
 				<div id="drag-container" class="dragdealer">
 					<div id="drag-handle" class="handle">
@@ -160,6 +161,8 @@
 
 <xsl:template name="frameless-styles">
 	<link rel="stylesheet" type="text/css" href="scripts/frameless.css" />
+	<link rel="stylesheet" type="text/css" href="scripts/content-styling.css" />
+	<link rel="stylesheet" type="text/css" href="scripts/matts-changes.css" />
 	<link rel="stylesheet" type="text/css" href="scripts/user-fonts.css" />
 	<link rel="stylesheet" type="text/css" href="scripts/user-styling.css" />
 </xsl:template>

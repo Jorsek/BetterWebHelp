@@ -2,7 +2,7 @@
      Sourceforge.net. See the accompanying license.txt file for 
      applicable licenses.--><!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. --><project name="dita2bwh">
 	
-    <target name="dita2bwh" depends="build-init, preprocess, dita.map.bwh,       copy-default-user-styles, copy-scripts, copy-default-heading,      copy-others, dita.topics.bwh, dita.inner.topics.bwh,       dita.outer.topics.bwh, build-search-index">
+    <target name="dita2bwh" depends="build-init, preprocess, dita.map.bwh,       copy-default-user-styles, copy-scripts, copy-heading-footer,      copy-others, dita.topics.bwh, dita.inner.topics.bwh,       dita.outer.topics.bwh, build-search-index">
     </target>
 
     <target name="dita.map.bwh" depends="dita.map.bwh.init, dita.map.bwh.toc , dita.out.map.bwh.toc"></target>
@@ -72,18 +72,27 @@
 		</copy>
 	</target>
 	
-<!-- only copy over the default heading.html file and heading/ folder if one doesn't already exist
+	<!-- only copy over the default heading.html file and heading/ folder if one doesn't already exist
 	in the output directory. (i.e. if the user has already added their customized heading, don't overwrite it) -->
-	<available file="${output.dir}${file.separator}heading.html" property="heading.available"></available>
+	<available file="${output.dir}${file.separator}heading.html" property="heading.available"/>
+	<available file="${output.dir}${file.separator}footer.html" property="footer.available"/>
+	
+	<target name="copy-heading-footer" depends="copy-default-footer, copy-default-heading" />
 	<target name="copy-default-heading" description="Copy Default Heading" unless="heading.available">
-<!--		Copy over the default heading HTML file -->
+		<!--		Copy over the default heading HTML file -->
 		<copy todir="${output.dir}">
 			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="heading.html"></fileset>
 		</copy>
-<!--		Copy over the default logos, etc -->
+		<!--		Copy over the default logos, etc -->
 		<mkdir dir="${user.headingpath.real}${file.separator}heading"></mkdir>
 		<copy todir="${output.dir}${file.separator}heading">
 			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource${file.separator}heading" includes="*"></fileset>
+		</copy>
+	</target>
+	<target name="copy-default-footer" description="Copy Default Footer" unless="footer.available">
+		<!--		Copy over the default heading HTML file -->
+		<copy todir="${output.dir}">
+			<fileset dir="${dita.plugin.com.jorsek.bwh.dir}${file.separator}resource" includes="footer.html"></fileset>
 		</copy>
 	</target>
 

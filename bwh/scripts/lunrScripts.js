@@ -58,7 +58,9 @@ function loadIndex() {
 					'No matching titles',
 					'</div>'].join('\n')
 			}
-		});
+		}).on("typeahead:selected", function (event, data, dataset) {
+        	doSearch();
+    	});
 		
 	});
 }
@@ -66,7 +68,7 @@ function loadIndex() {
 function doSearch() {
 	input = document.getElementById("q").value;
 	results = idx.search(input);
-	
+
 	if ($('#result-num').length == 0) {
 		previousNav = $('.web-help-nav')[0].outerHTML;
 	}
@@ -145,7 +147,7 @@ $( document ).ready( function() {
 		doSearch();
 		return false;
 	});
-	$("#q").bind("typeahead:selected", function (event, data, dataset) {
-        doSearch();
-    });
+	$('#q').on('input',function(e) {
+		setTimeout(function() {$('.tt-dropdown-menu').scrollTop(0)}, 10);
+	});
 });

@@ -2,14 +2,1682 @@
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/><meta name="viewport" content="width=device-width, minimal-ui"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><link rel="icon" sizes="196x196" href="help-icon.png"/><link rel="apple-touch-icon" sizes="196x196" href="help-icon.png"/><link rel="stylesheet" type="text/css" href="scripts/frameless.css"/><link rel="stylesheet" type="text/css" href="scripts/user-fonts.css"/><link rel="stylesheet" type="text/css" href="scripts/user-styling.css"/><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">//</script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js">//</script><script type="text/javascript" src="scripts/typeahead.bundle.js">//</script><script type="text/javascript" src="scripts/queryString.js">//</script><script type="text/javascript" src="scripts/dragdealer.js">//</script><script type="text/javascript" src="scripts/lunr.js">//</script><script type="text/javascript" src="scripts/lunrScripts.js">//</script><script type="text/javascript" src="scripts/loadContent.js">//</script><title>Darwin Information Typing Architecture (DITA) Version 1.2 OASIS Standard 1 December 2010 DITA Version 1.2 Specification</title>
-</head>
-<body>
-<div id="container"><div id="heading">//</div><div id="search-bar"><form name="search-form" id="search-form"><input class="clearable typeahead" type="text" name="q" id="q" placeholder="Search..."/><input type="submit" id="search-button" value="Go!"/></form></div><div id="main"><div id="web-help"><div id="web-help-c1"><ul class="web-help-nav">
-<li class="ajaxLink folder" tabindex="0" href="introduction/dita-1.2_complete_overview.html">Introduction</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="introduction/c-terminology.html">Terminology</li><li class="ajaxLink file" href="introduction/normative-references.html">Normative references</li><li class="ajaxLink file" href="introduction/non-normative-references.html">Non-normative references</li><li class="ajaxLink file" href="introduction/formatting-conventions-xhtml-output.html">Formatting conventions in the XHTML version of the specification</li></div></ul><li class="ajaxLink folder" tabindex="0" href="architectural_specification.html">Architectural specification</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="archSpec-base.html">Base architecture</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="archSpec/introduction-to-dita.html">Introduction to DITA</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/about_specification_source.html">About the specification source</li><li class="ajaxLink file" href="archSpec/dita-terminology.html">Terminology and notation</li><li class="ajaxLink file" href="archSpec/basic-concepts.html">Basic concepts</li><li class="ajaxLink file" href="archSpec/fileext.html">File naming conventions</li><li class="ajaxLink file" href="archSpec/single_sourcing.html">Producing different deliverables from a single source</li></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/ditamarkup.html">DITA markup</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="archSpec/topicover.html">DITA topics</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/topicdefined.html">The topic as the basic unit of information</li><li class="ajaxLink folder" tabindex="0" href="archSpec/topicbenefits.html">The benefits of a topic-based architecture</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/topicorientation.html">Disciplined, topic-oriented writing</li><li class="ajaxLink file" href="archSpec/transitionaltextsolutions.html">Transitional text solutions</li></div></ul><li class="ajaxLink file" href="archSpec/information-typing.html">Information typing</li><li class="ajaxLink file" href="archSpec/generictopics.html">Generic topics</li><li class="ajaxLink file" href="archSpec/topicstructure.html">Topic structure</li><li class="ajaxLink file" href="archSpec/topiccontent.html">Topic content</li><li class="ajaxLink file" href="archSpec/topicDomains_BasicDITA.html">Topics domains: Basic DITA</li></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/ditamaps.html">DITA maps</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/definition-of-ditamaps.html">Definition of DITA maps</li><li class="ajaxLink file" href="archSpec/purpose-of-ditamaps.html">Purpose of DITA maps</li><li class="ajaxLink file" href="archSpec/ditamap-elements.html">DITA map elements</li><li class="ajaxLink file" href="archSpec/ditamap-attributes.html">DITA map attributes</li><li class="ajaxLink file" href="archSpec/subjectSchema.html">subjectSchema</li></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/dita-metadata.html">DITA metadata</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/metadata-elements.html">Metadata elements</li><li class="ajaxLink folder" tabindex="0" href="archSpec/metadata-attributes.html">Metadata attributes</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/conditional-processing-attributes.html">Conditional processing attributes</li><li class="ajaxLink file" href="archSpec/translation-and-localization-attributes.html">Translation and localization attributes</li><li class="ajaxLink file" href="archSpec/architectural-attributes.html">Architectural attributes</li></div></ul><li class="ajaxLink file" href="archSpec/metadata-in-maps-and-topics.html">Metadata in maps and topics</li><li class="ajaxLink file" href="archSpec/cascading-in-a-ditamap.html">Cascading of attributes and metadata in a DITA map</li><li class="ajaxLink file" href="archSpec/map-to-map-cascading-of-metadata.html">Map-to-map cascading behaviors</li><li class="ajaxLink file" href="archSpec/reconciling-topic-and-map-metadata.html">Reconciling topic and map metadata</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/behaviors.html">DITA processing</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/module-compatibility.html">Module compatibility and the domains attribute</li><li class="ajaxLink file" href="archSpec/ditanav.html">Navigation behaviors</li><li class="ajaxLink folder" tabindex="0" href="archSpec/ditalinking.html">DITA linking</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/dita-linking-links-within-maps.html">Links within maps</li><li class="ajaxLink file" href="archSpec/dita-linking-links-within-topics.html">Links within topics</li></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/ditaaddressing.html">DITA addressing</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/id.html">ID attribute</li><li class="ajaxLink file" href="archSpec/uri-based-addressing.html">URI-based (direct) addressing</li><li class="ajaxLink folder" tabindex="0" href="archSpec/key-based_addressing.html">Key-based addressing</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/overview_of_keys.html">Overview of keys</li><li class="ajaxLink file" href="archSpec/using_keys_to_address_dita_elements.html">Using keys to address DITA elements</li><li class="ajaxLink file" href="archSpec/processing_key_references.html">Processing key references</li><li class="ajaxLink file" href="archSpec/examples_of_keys.html">Examples of keys</li></div></ul><li class="ajaxLink file" href="archSpec/dita-linking-link-element-summary.html">Summary of addressing elements</li></div></ul><li class="ajaxLink file" href="archSpec/conref.html">Content inclusion (conref)</li><li class="ajaxLink file" href="archSpec/condproc.html">Conditional processing (profiling)</li><li class="ajaxLink file" href="archSpec/chunking.html">Chunking</li><li class="ajaxLink file" href="archSpec/printing.html">Printing</li><li class="ajaxLink folder" tabindex="0" href="archSpec/translation.html">Translation</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/xmllang.html">The xml:lang attribute</li><li class="ajaxLink file" href="archSpec/diratt.html">The dir attribute</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/configuration-specialization-and-constraints.html">Configuration, specialization, and constraints </li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="archSpec/ditaspecialization.html">Overview of DITA extension facilities</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/recognizedconstraintmechanisms.html">Recognized XML document constraint mechanisms</li></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/createCustomDocType.html">Configuration (Document type shells)</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/shell-dtd-coding-reqs.html">DTD document-type shell: Coding requirements</li><li class="ajaxLink file" href="archSpec/xsdShellDoctypeCodeReq.html">XSD document-type shell: Coding requirements</li></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/specialize.html">Specialization</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/vocabularymodules.html">Vocabulary modules</li><li class="ajaxLink file" href="archSpec/specvalid.html">Requirements for specialized element types and attributes</li><li class="ajaxLink file" href="archSpec/classatt.html">Element type specialization hierarchy declaration (the @class attribute)</li><li class="ajaxLink file" href="archSpec/domainsatt.html">Domain usage declaration (the @domains attribute)</li><li class="ajaxLink file" href="archSpec/generalize.html">Generalization</li><li class="ajaxLink file" href="archSpec/attributegeneralize.html">Attribute generalization</li><li class="ajaxLink file" href="archSpec/foreigncontentspec.html">Specializing foreign or unknown content</li><li class="ajaxLink folder" tabindex="0" href="archSpec/specialization_module_requirements.html">Specialization module coding requirements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="archSpec/dtdmod.html">DTD syntax specialization module coding requirements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/dtdGeneralCodingReq.html">General element type declaration coding requirements</li><li class="ajaxLink file" href="archSpec/dtdStructuralCodingReq.html">Structural module coding requirements</li><li class="ajaxLink file" href="archSpec/dtdTopicTypeCodingReq.html">Topic type module coding requirements</li><li class="ajaxLink file" href="archSpec/dtdElementDomainCodingReq.html">Element domain module coding requirements</li><li class="ajaxLink file" href="archSpec/dtdAttributeDomainCodingReq.html">Attribute domain module coding requirements</li></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/schemamod.html">XSD schema specialization module coding requirements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/xsdGeneralCodingReq.html">General element type declaration coding requirements</li><li class="ajaxLink file" href="archSpec/xsdStructuralSpecializationReqs.html">Structural specialization coding requirements</li><li class="ajaxLink file" href="archSpec/xsdAttributeDomainSpecializationCodeReq.html">Attribute domain coding requirements</li></div></ul></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec/createConstraintsDomainSpec.html">Constraints</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/constraintsDomainDesignPattern-dtd.html">Constraint module DTD coding requirements </li><li class="ajaxLink file" href="archSpec/constraintsDomainDesignPattern-xsd.html">Constraint module XSD coding requirements</li><li class="ajaxLink file" href="archSpec/constraintsGeneralize.html">Conref and generalization for constraint modules</li><li class="ajaxLink file" href="archSpec/constraint-module-examples.html">Examples of constraint declaration modules</li></div></ul></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec-technicalContent.html">Technical content architecture</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/dita-1.2_technicalContent_overview.html">Overview of the DITA 1.2 Specification: Technical Content</li><li class="ajaxLink folder" tabindex="0" href="archSpec/dita_technicalContent_InformationTypes.html">Technical content: Information types</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/dita_concept_topic.html">Concept topic</li><li class="ajaxLink file" href="archSpec/dita_reference_topic.html">Reference topic</li><li class="ajaxLink file" href="archSpec/dita_generic_task_topic.html">General task topic</li><li class="ajaxLink file" href="archSpec/dita_task_topic.html">Task topic (strict)</li><li class="ajaxLink file" href="archSpec/dita_machinerytask_topic.html">Machinery Task topic</li><li class="ajaxLink file" href="archSpec/dita_glossary_topic.html">Glossary Entry topic</li><li class="ajaxLink file" href="archSpec/dita_glossarygroup_topic.html">Glossary Group topic</li><li class="ajaxLink file" href="archSpec/dita_spec_intro_bookmap.html">Bookmap</li></div></ul><li class="ajaxLink file" href="archSpec/dita_technicalContent_TopicDomains.html">Topic domains: Technical content</li><li class="ajaxLink file" href="archSpec/xNALDomain.html">The xNAL domain</li></div></ul><li class="ajaxLink folder" tabindex="0" href="archSpec-learningTraining.html">Learning and training architecture</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="archSpec/lc_spec_Overview_problem.html">Overview</li><li class="ajaxLink file" href="archSpec/lc_spec_Overview_objectives.html">Objectives of the DITA Learning and Training Specialization</li><li class="ajaxLink file" href="archSpec/lc_spec_Overview_assumptions.html">A learning objects approach to learning and training content</li><li class="ajaxLink file" href="archSpec/lc_spec_Overview_usecases.html">Use cases</li><li class="ajaxLink file" href="archSpec/lc_spec_Summary_of_landt_designs.html">Summary of learning topic, map, and domain designs</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="language_reference.html">Language reference</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="langRef-base.html">Base elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/topic_elements.html">Topic elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/topic2.html">Basic topic elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/topic.html">topic</li><li class="ajaxLink file" href="langref/title.html">title</li><li class="ajaxLink file" href="langref/titlealts.html">titlealts</li><li class="ajaxLink file" href="langref/searchtitle.html">searchtitle</li><li class="ajaxLink file" href="langref/navtitle.html">navtitle</li><li class="ajaxLink file" href="langref/shortdesc.html">shortdesc</li><li class="ajaxLink file" href="langref/abstract.html">abstract</li><li class="ajaxLink file" href="langref/body.html">body</li><li class="ajaxLink file" href="langref/bodydiv.html">bodydiv</li><li class="ajaxLink file" href="langref/related-links.html">related-links</li><li class="ajaxLink file" href="langref/dita.html">dita</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/body2.html">Body elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/alt.html">alt</li><li class="ajaxLink file" href="langref/cite.html">cite</li><li class="ajaxLink file" href="langref/dd.html">dd</li><li class="ajaxLink file" href="langref/desc.html">desc</li><li class="ajaxLink file" href="langref/ddhd.html">ddhd</li><li class="ajaxLink file" href="langref/dl.html">dl</li><li class="ajaxLink file" href="langref/dlentry.html">dlentry</li><li class="ajaxLink file" href="langref/dlhead.html">dlhead</li><li class="ajaxLink file" href="langref/dt.html">dt</li><li class="ajaxLink file" href="langref/draft-comment.html">draft-comment</li><li class="ajaxLink file" href="langref/dthd.html">dthd</li><li class="ajaxLink file" href="langref/example.html">example</li><li class="ajaxLink file" href="langref/fig.html">fig</li><li class="ajaxLink file" href="langref/figgroup.html">figgroup</li><li class="ajaxLink file" href="langref/fn.html">fn</li><li class="ajaxLink file" href="langref/image.html">image</li><li class="ajaxLink file" href="langref/keyword.html">keyword</li><li class="ajaxLink file" href="langref/li.html">li</li><li class="ajaxLink file" href="langref/lines.html">lines</li><li class="ajaxLink file" href="langref/longdescref.html">longdescref</li><li class="ajaxLink file" href="langref/longquoteref.html">longquoteref</li><li class="ajaxLink file" href="langref/lq.html">lq</li><li class="ajaxLink file" href="langref/object.html">object</li><li class="ajaxLink file" href="langref/note.html">note</li><li class="ajaxLink file" href="langref/ol.html">ol</li><li class="ajaxLink file" href="langref/p.html">p</li><li class="ajaxLink file" href="langref/param.html">param</li><li class="ajaxLink file" href="langref/ph.html">ph</li><li class="ajaxLink file" href="langref/pre.html">pre</li><li class="ajaxLink file" href="langref/q.html">q</li><li class="ajaxLink file" href="langref/section.html">section</li><li class="ajaxLink file" href="langref/sectiondiv.html">sectiondiv</li><li class="ajaxLink file" href="langref/sl.html">sl</li><li class="ajaxLink file" href="langref/sli.html">sli</li><li class="ajaxLink file" href="langref/term.html">term</li><li class="ajaxLink file" href="langref/text.html">text</li><li class="ajaxLink file" href="langref/tm.html">tm</li><li class="ajaxLink file" href="langref/ul.html">ul</li><li class="ajaxLink file" href="langref/xref.html">xref</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/table2.html">Table elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/table.html">table</li><li class="ajaxLink file" href="langref/tgroup.html">tgroup</li><li class="ajaxLink file" href="langref/colspec.html">colspec</li><li class="ajaxLink file" href="langref/thead.html">thead</li><li class="ajaxLink file" href="langref/tbody.html">tbody</li><li class="ajaxLink file" href="langref/row.html">row</li><li class="ajaxLink file" href="langref/entry.html">entry</li><li class="ajaxLink file" href="langref/simpletable.html">simpletable</li><li class="ajaxLink file" href="langref/sthead.html">sthead</li><li class="ajaxLink file" href="langref/strow.html">strow</li><li class="ajaxLink file" href="langref/stentry.html">stentry</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/relatedl.html">Related links elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/link.html">link</li><li class="ajaxLink file" href="langref/linklist.html">linklist</li><li class="ajaxLink file" href="langref/linkpool.html">linkpool</li><li class="ajaxLink file" href="langref/linktext.html">linktext</li><li class="ajaxLink file" href="langref/linkinfo.html">linkinfo</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="common/map_elements.html">Map elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/map2.html">Basic map elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/map.html">map</li><li class="ajaxLink file" href="langref/topicref.html">topicref</li><li class="ajaxLink file" href="langref/topicmeta.html">topicmeta</li><li class="ajaxLink file" href="langref/anchor.html">anchor</li><li class="ajaxLink file" href="langref/navref.html">navref</li><li class="ajaxLink file" href="langref/reltable.html">reltable</li><li class="ajaxLink file" href="langref/relrow.html">relrow</li><li class="ajaxLink file" href="langref/relcell.html">relcell</li><li class="ajaxLink file" href="langref/relheader.html">relheader</li><li class="ajaxLink file" href="langref/relcolspec.html">relcolspec</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/mapgroup-d.html">Map group elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/anchorref.html">anchorref</li><li class="ajaxLink file" href="langref/keydef.html">keydef</li><li class="ajaxLink file" href="langref/mapref.html">mapref</li><li class="ajaxLink file" href="langref/topicgroup.html">topicgroup</li><li class="ajaxLink file" href="langref/topichead.html">topichead</li><li class="ajaxLink file" href="langref/topicset.html">topicset</li><li class="ajaxLink file" href="langref/topicsetref.html">topicsetref</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="common/metadata_elements.html">Metadata elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/prolog2.html">Prolog elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/prolog.html">prolog</li><li class="ajaxLink file" href="langref/audience.html">audience</li><li class="ajaxLink file" href="langref/author.html">author</li><li class="ajaxLink file" href="langref/brand.html">brand</li><li class="ajaxLink file" href="langref/category.html">category</li><li class="ajaxLink file" href="langref/component.html">component</li><li class="ajaxLink file" href="langref/copyright.html">copyright</li><li class="ajaxLink file" href="langref/copyrholder.html">copyrholder</li><li class="ajaxLink file" href="langref/copyryear.html">copyryear</li><li class="ajaxLink file" href="langref/created.html">created</li><li class="ajaxLink file" href="langref/critdates.html">critdates</li><li class="ajaxLink file" href="langref/featnum.html">featnum</li><li class="ajaxLink file" href="langref/keywords.html">keywords</li><li class="ajaxLink file" href="langref/metadata.html">metadata</li><li class="ajaxLink file" href="langref/othermeta.html">othermeta</li><li class="ajaxLink file" href="langref/permissions.html">permissions</li><li class="ajaxLink file" href="langref/platform.html">platform</li><li class="ajaxLink file" href="langref/prodinfo.html">prodinfo</li><li class="ajaxLink file" href="langref/prodname.html">prodname</li><li class="ajaxLink file" href="langref/prognum.html">prognum</li><li class="ajaxLink file" href="langref/publisher.html">publisher</li><li class="ajaxLink file" href="langref/resourceid.html">resourceid</li><li class="ajaxLink file" href="langref/revised.html">revised</li><li class="ajaxLink file" href="langref/series.html">series</li><li class="ajaxLink file" href="langref/source.html">source</li><li class="ajaxLink file" href="langref/vrmlist.html">vrmlist</li><li class="ajaxLink file" href="langref/vrm.html">vrm</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/indexing-d.html">Indexing group elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/indexterm.html">indexterm</li><li class="ajaxLink file" href="langref/indextermref.html">indextermref</li><li class="ajaxLink file" href="langref/index-see.html">index-see</li><li class="ajaxLink file" href="langref/index-see-also.html">index-see-also</li><li class="ajaxLink file" href="langref/index-sort-as.html">index-sort-as</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/delayconref-d.html">Delayed conref resolution elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/exportanchors.html">exportanchors</li><li class="ajaxLink file" href="langref/anchorid.html">anchorid</li><li class="ajaxLink file" href="langref/anchorkey.html">anchorkey</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="common/domain_elements.html">Domain elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/hazard-d.html">Hazard statement elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/hazardstatement.html">hazardstatement</li><li class="ajaxLink file" href="langref/consequence.html">consequence</li><li class="ajaxLink file" href="langref/hazardsymbol.html">hazardsymbol</li><li class="ajaxLink file" href="langref/howtoavoid.html">howtoavoid</li><li class="ajaxLink file" href="langref/messagepanel.html">messagepanel</li><li class="ajaxLink file" href="langref/typeofhazard.html">typeofhazard</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/hi-d.html">Typographic elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/b.html">b</li><li class="ajaxLink file" href="langref/i.html">i</li><li class="ajaxLink file" href="langref/sup.html">sup</li><li class="ajaxLink file" href="langref/sub.html">sub</li><li class="ajaxLink file" href="langref/tt.html">tt</li><li class="ajaxLink file" href="langref/u.html">u</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/ut-d.html">Utilities elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/area.html">area</li><li class="ajaxLink file" href="langref/coords.html">coords</li><li class="ajaxLink file" href="langref/imagemap.html">imagemap</li><li class="ajaxLink file" href="langref/shape.html">shape</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="common/classification_elements.html">Classification elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/subjectScheme.html">Subject scheme maps</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/subjectScheme.html">subjectScheme</li><li class="ajaxLink file" href="langref/schemeref.html">schemeref</li><li class="ajaxLink file" href="langref/hasInstance.html">hasInstance</li><li class="ajaxLink file" href="langref/hasKind.html">hasKind</li><li class="ajaxLink file" href="langref/hasNarrower.html">hasNarrower</li><li class="ajaxLink file" href="langref/hasPart.html">hasPart</li><li class="ajaxLink file" href="langref/hasRelated.html">hasRelated</li><li class="ajaxLink file" href="langref/enumerationdef.html">enumerationdef</li><li class="ajaxLink file" href="langref/elementdef.html">elementdef</li><li class="ajaxLink file" href="langref/attributedef.html">attributedef</li><li class="ajaxLink file" href="langref/defaultSubject.html">defaultSubject</li><li class="ajaxLink file" href="langref/subjectHead.html">subjectHead</li><li class="ajaxLink file" href="langref/subjectHeadMeta.html">subjectHeadMeta</li><li class="ajaxLink file" href="langref/subjectdef.html">subjectdef</li><li class="ajaxLink file" href="langref/relatedSubjects.html">relatedSubjects</li><li class="ajaxLink file" href="langref/subjectRelTable.html">subjectRelTable</li><li class="ajaxLink file" href="langref/subjectRelHeader.html">subjectRelHeader</li><li class="ajaxLink file" href="langref/subjectRel.html">subjectRel</li><li class="ajaxLink file" href="langref/subjectRole.html">subjectRole</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/classify-d.html">Classification domain elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/subjectref.html">subjectref</li><li class="ajaxLink file" href="langref/topicapply.html">topicapply</li><li class="ajaxLink file" href="langref/topicsubject.html">topicsubject</li><li class="ajaxLink file" href="langref/topicSubjectTable.html">topicSubjectTable</li><li class="ajaxLink file" href="langref/topicSubjectHeader.html">topicSubjectHeader</li><li class="ajaxLink file" href="langref/topicSubjectRow.html">topicSubjectRow</li><li class="ajaxLink file" href="langref/topicCell.html">topicCell</li><li class="ajaxLink file" href="langref/subjectCell.html">subjectCell</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="common/special.html">Specialization elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/boolean.html">boolean</li><li class="ajaxLink file" href="langref/data.html">data</li><li class="ajaxLink file" href="langref/data-about.html">data-about</li><li class="ajaxLink file" href="langref/foreign.html">foreign</li><li class="ajaxLink file" href="langref/index-base.html">index-base</li><li class="ajaxLink file" href="langref/itemgroup.html">itemgroup</li><li class="ajaxLink file" href="langref/no-topic-nesting.html">no-topic-nesting</li><li class="ajaxLink file" href="langref/state.html">state</li><li class="ajaxLink file" href="langref/unknown.html">unknown</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/legacy_conversion_elements.html">Legacy conversion elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/required-cleanup.html">required-cleanup</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/about-ditaval.html">DITAVAL elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/ditaval-val.html">val</li><li class="ajaxLink file" href="langref/ditaval-style-conflict.html">style-conflict</li><li class="ajaxLink file" href="langref/ditaval-prop.html">prop</li><li class="ajaxLink file" href="langref/ditaval-revprop.html">revprop</li><li class="ajaxLink file" href="langref/ditaval-startflag.html">startflag</li><li class="ajaxLink file" href="langref/ditaval-endflag.html">endflag</li><li class="ajaxLink file" href="langref/ditaval-alt-text.html">alt-text</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="langRef-technicalContent.html">Technical content elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/concept2.html">Concept elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/concept.html">concept</li><li class="ajaxLink file" href="langref/conbody.html">conbody</li><li class="ajaxLink file" href="langref/conbodydiv.html">conbodydiv</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/task2.html">Task elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/task.html">task</li><li class="ajaxLink file" href="langref/taskbody.html">taskbody</li><li class="ajaxLink file" href="langref/prereq.html">prereq</li><li class="ajaxLink file" href="langref/context.html">context</li><li class="ajaxLink file" href="langref/steps.html">steps</li><li class="ajaxLink file" href="langref/steps-informal.html">steps-informal</li><li class="ajaxLink file" href="langref/steps-unordered.html">steps-unordered</li><li class="ajaxLink file" href="langref/step.html">step</li><li class="ajaxLink file" href="langref/stepsection.html">stepsection</li><li class="ajaxLink file" href="langref/cmd.html">cmd</li><li class="ajaxLink file" href="langref/info.html">info</li><li class="ajaxLink file" href="langref/substeps.html">substeps</li><li class="ajaxLink file" href="langref/substep.html">substep</li><li class="ajaxLink file" href="langref/stepxmp.html">stepxmp</li><li class="ajaxLink file" href="langref/choicetable.html">choicetable</li><li class="ajaxLink file" href="langref/chhead.html">chhead</li><li class="ajaxLink file" href="langref/choptionhd.html">choptionhd</li><li class="ajaxLink file" href="langref/chdeschd.html">chdeschd</li><li class="ajaxLink file" href="langref/chrow.html">chrow</li><li class="ajaxLink file" href="langref/choption.html">choption</li><li class="ajaxLink file" href="langref/chdesc.html">chdesc</li><li class="ajaxLink file" href="langref/choices.html">choices</li><li class="ajaxLink file" href="langref/choice.html">choice</li><li class="ajaxLink file" href="langref/stepresult.html">stepresult</li><li class="ajaxLink file" href="langref/tutorialinfo.html">tutorialinfo</li><li class="ajaxLink file" href="langref/result.html">result</li><li class="ajaxLink file" href="langref/postreq.html">postreq</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/reference2.html">Reference elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/reference.html">reference</li><li class="ajaxLink file" href="langref/refbody.html">refbody</li><li class="ajaxLink file" href="langref/refbodydiv.html">refbodydiv</li><li class="ajaxLink file" href="langref/refsyn.html">refsyn</li><li class="ajaxLink file" href="langref/properties.html">properties</li><li class="ajaxLink file" href="langref/prophead.html">prophead</li><li class="ajaxLink file" href="langref/proptypehd.html">proptypehd</li><li class="ajaxLink file" href="langref/propvaluehd.html">propvaluehd</li><li class="ajaxLink file" href="langref/propdeschd.html">propdeschd</li><li class="ajaxLink file" href="langref/property.html">property</li><li class="ajaxLink file" href="langref/proptype.html">proptype</li><li class="ajaxLink file" href="langref/propvalue.html">propvalue</li><li class="ajaxLink file" href="langref/propdesc.html">propdesc</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/glossary-elements.html">Glossary elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/glossary2.html">Glossentry elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/glossentry.html">glossentry</li><li class="ajaxLink file" href="langref/glossterm.html">glossterm</li><li class="ajaxLink file" href="langref/glossdef.html">glossdef</li><li class="ajaxLink file" href="langref/glossAbbreviation.html">glossAbbreviation</li><li class="ajaxLink file" href="langref/glossAcronym.html">glossAcronym</li><li class="ajaxLink file" href="langref/glossAlt.html">glossAlt</li><li class="ajaxLink file" href="langref/glossAlternateFor.html">glossAlternateFor</li><li class="ajaxLink file" href="langref/glossBody.html">glossBody</li><li class="ajaxLink file" href="langref/glossPartOfSpeech.html">glossPartOfSpeech</li><li class="ajaxLink file" href="langref/glossProperty.html">glossProperty</li><li class="ajaxLink file" href="langref/glossScopeNote.html">glossScopeNote</li><li class="ajaxLink file" href="langref/glossShortForm.html">glossShortForm</li><li class="ajaxLink file" href="langref/glossStatus.html">glossStatus</li><li class="ajaxLink file" href="langref/glossSurfaceForm.html">glossSurfaceForm</li><li class="ajaxLink file" href="langref/glossSymbol.html">glossSymbol</li><li class="ajaxLink file" href="langref/glossSynonym.html">glossSynonym</li><li class="ajaxLink file" href="langref/glossUsage.html">glossUsage</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/glossrelated.html">Glossary related elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/abbreviated-form.html">abbreviated-form</li><li class="ajaxLink file" href="langref/glossref.html">glossref</li><li class="ajaxLink file" href="langref/glossgroup.html">glossgroup</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="common/bookmap-elements.html">Bookmap elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/about-bookmap.html">Bookmap content elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/bookmap.html">bookmap</li><li class="ajaxLink file" href="langref/abbrevlist.html">abbrevlist</li><li class="ajaxLink file" href="langref/amendments.html">amendments</li><li class="ajaxLink file" href="langref/appendices.html">appendices</li><li class="ajaxLink file" href="langref/appendix.html">appendix</li><li class="ajaxLink file" href="langref/backmatter.html">backmatter</li><li class="ajaxLink file" href="langref/bibliolist.html">bibliolist</li><li class="ajaxLink file" href="langref/bookabstract.html">bookabstract</li><li class="ajaxLink file" href="langref/booklibrary.html">booklibrary</li><li class="ajaxLink file" href="langref/booklist.html">booklist</li><li class="ajaxLink file" href="langref/booklists.html">booklists</li><li class="ajaxLink file" href="langref/booktitle.html">booktitle</li><li class="ajaxLink file" href="langref/booktitlealt.html">booktitlealt</li><li class="ajaxLink file" href="langref/chapter.html">chapter</li><li class="ajaxLink file" href="langref/colophon.html">colophon</li><li class="ajaxLink file" href="langref/dedication.html">dedication</li><li class="ajaxLink file" href="langref/draftintro.html">draftintro</li><li class="ajaxLink file" href="langref/figurelist.html">figurelist</li><li class="ajaxLink file" href="langref/frontmatter.html">frontmatter</li><li class="ajaxLink file" href="langref/glossarylist.html">glossarylist</li><li class="ajaxLink file" href="langref/indexlist.html">indexlist</li><li class="ajaxLink file" href="langref/mainbooktitle.html">mainbooktitle</li><li class="ajaxLink file" href="langref/notices.html">notices</li><li class="ajaxLink file" href="langref/part.html">part</li><li class="ajaxLink file" href="langref/preface.html">preface</li><li class="ajaxLink file" href="langref/tablelist.html">tablelist</li><li class="ajaxLink file" href="langref/toc.html">toc</li><li class="ajaxLink file" href="langref/trademarklist.html">trademarklist</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/bookmap-meta.html">Bookmap metadata elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/bookmeta.html">bookmeta</li><li class="ajaxLink file" href="langref/approved.html">approved</li><li class="ajaxLink file" href="langref/bookchangehistory.html">bookchangehistory</li><li class="ajaxLink file" href="langref/bookevent.html">bookevent</li><li class="ajaxLink file" href="langref/bookeventtype.html">bookeventtype</li><li class="ajaxLink file" href="langref/bookid.html">bookid</li><li class="ajaxLink file" href="langref/booknumber.html">booknumber</li><li class="ajaxLink file" href="langref/bookowner.html">bookowner</li><li class="ajaxLink file" href="langref/bookpartno.html">bookpartno</li><li class="ajaxLink file" href="langref/bookrestriction.html">bookrestriction</li><li class="ajaxLink file" href="langref/bookrights.html">bookrights</li><li class="ajaxLink file" href="langref/completed.html">completed</li><li class="ajaxLink file" href="langref/copyrfirst.html">copyrfirst</li><li class="ajaxLink file" href="langref/copyrlast.html">copyrlast</li><li class="ajaxLink file" href="langref/day.html">day</li><li class="ajaxLink file" href="langref/edited.html">edited</li><li class="ajaxLink file" href="langref/edition.html">edition</li><li class="ajaxLink file" href="langref/isbn.html">isbn</li><li class="ajaxLink file" href="langref/maintainer.html">maintainer</li><li class="ajaxLink file" href="langref/month.html">month</li><li class="ajaxLink file" href="langref/organization.html">organization</li><li class="ajaxLink file" href="langref/person.html">person</li><li class="ajaxLink file" href="langref/printlocation.html">printlocation</li><li class="ajaxLink file" href="langref/published.html">published</li><li class="ajaxLink file" href="langref/publisherinformation.html">publisherinformation</li><li class="ajaxLink file" href="langref/publishtype.html">publishtype</li><li class="ajaxLink file" href="langref/reviewed.html">reviewed</li><li class="ajaxLink file" href="langref/revisionid.html">revisionid</li><li class="ajaxLink file" href="langref/started.html">started</li><li class="ajaxLink file" href="langref/summary.html">summary</li><li class="ajaxLink file" href="langref/tested.html">tested</li><li class="ajaxLink file" href="langref/volume.html">volume</li><li class="ajaxLink file" href="langref/year.html">year</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="common/technicalContent-domain-elements.html">Domain elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/mitask-d.html">Task requirements domain</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/prelreqs.html">prelreqs</li><li class="ajaxLink file" href="langref/closereqs.html">closereqs</li><li class="ajaxLink file" href="langref/reqconds.html">reqconds</li><li class="ajaxLink file" href="langref/reqcond.html">reqcond</li><li class="ajaxLink file" href="langref/noconds.html">noconds</li><li class="ajaxLink file" href="langref/reqcontp.html">reqcontp</li><li class="ajaxLink file" href="langref/reqpers.html">reqpers</li><li class="ajaxLink file" href="langref/personnel.html">personnel</li><li class="ajaxLink file" href="langref/perscat.html">perscat</li><li class="ajaxLink file" href="langref/perskill.html">perskill</li><li class="ajaxLink file" href="langref/esttime.html">esttime</li><li class="ajaxLink file" href="langref/supeqli.html">supeqli</li><li class="ajaxLink file" href="langref/supequi.html">supequi</li><li class="ajaxLink file" href="langref/supequip.html">supequip</li><li class="ajaxLink file" href="langref/nosupeq.html">nosupeq</li><li class="ajaxLink file" href="langref/supplies.html">supplies</li><li class="ajaxLink file" href="langref/supply.html">supply</li><li class="ajaxLink file" href="langref/supplyli.html">supplyli</li><li class="ajaxLink file" href="langref/nosupply.html">nosupply</li><li class="ajaxLink file" href="langref/spare.html">spare</li><li class="ajaxLink file" href="langref/spares.html">spares</li><li class="ajaxLink file" href="langref/sparesli.html">sparesli</li><li class="ajaxLink file" href="langref/nospares.html">nospares</li><li class="ajaxLink file" href="langref/nosafety.html">nosafety</li><li class="ajaxLink file" href="langref/safecond.html">safecond</li><li class="ajaxLink file" href="langref/safety.html">safety</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/pr-d.html">Programming elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/apiname.html">apiname</li><li class="ajaxLink file" href="langref/codeblock.html">codeblock</li><li class="ajaxLink file" href="langref/coderef.html">coderef</li><li class="ajaxLink file" href="langref/codeph.html">codeph</li><li class="ajaxLink file" href="langref/option.html">option</li><li class="ajaxLink file" href="langref/parmname.html">parmname</li><li class="ajaxLink file" href="langref/parml.html">parml</li><li class="ajaxLink file" href="langref/plentry.html">plentry</li><li class="ajaxLink file" href="langref/pt.html">pt</li><li class="ajaxLink file" href="langref/pd.html">pd</li><li class="ajaxLink file" href="langref/synph.html">synph</li><li class="ajaxLink file" href="langref/syntaxdiagram.html">syntaxdiagram</li><li class="ajaxLink file" href="langref/groupseq.html">groupseq</li><li class="ajaxLink file" href="langref/groupchoice.html">groupchoice</li><li class="ajaxLink file" href="langref/groupcomp.html">groupcomp</li><li class="ajaxLink file" href="langref/fragment.html">fragment</li><li class="ajaxLink file" href="langref/fragref.html">fragref</li><li class="ajaxLink file" href="langref/synblk.html">synblk</li><li class="ajaxLink file" href="langref/synnote.html">synnote</li><li class="ajaxLink file" href="langref/synnoteref.html">synnoteref</li><li class="ajaxLink file" href="langref/kwd.html">kwd</li><li class="ajaxLink file" href="langref/var.html">var</li><li class="ajaxLink file" href="langref/oper.html">oper</li><li class="ajaxLink file" href="langref/delim.html">delim</li><li class="ajaxLink file" href="langref/sep.html">sep</li><li class="ajaxLink file" href="langref/repsep.html">repsep</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/sw-d.html">Software elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/msgph.html">msgph</li><li class="ajaxLink file" href="langref/msgblock.html">msgblock</li><li class="ajaxLink file" href="langref/msgnum.html">msgnum</li><li class="ajaxLink file" href="langref/cmdname.html">cmdname</li><li class="ajaxLink file" href="langref/varname.html">varname</li><li class="ajaxLink file" href="langref/filepath.html">filepath</li><li class="ajaxLink file" href="langref/userinput.html">userinput</li><li class="ajaxLink file" href="langref/systemoutput.html">systemoutput</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/ui-d.html">User interface elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/uicontrol.html">uicontrol</li><li class="ajaxLink file" href="langref/wintitle.html">wintitle</li><li class="ajaxLink file" href="langref/menucascade.html">menucascade</li><li class="ajaxLink file" href="langref/shortcut.html">shortcut</li><li class="ajaxLink file" href="langref/screen.html">screen</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/xnal-d.html">xNAL domain elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="common/xnaldetails.html">xNAL usage guidelines</li><li class="ajaxLink file" href="langref/authorinformation.html">authorinformation</li><li class="ajaxLink file" href="langref/addressdetails.html">addressdetails</li><li class="ajaxLink file" href="langref/administrativearea.html">administrativearea</li><li class="ajaxLink file" href="langref/contactnumber.html">contactnumber</li><li class="ajaxLink file" href="langref/contactnumbers.html">contactnumbers</li><li class="ajaxLink file" href="langref/country.html">country</li><li class="ajaxLink file" href="langref/emailaddress.html">emailaddress</li><li class="ajaxLink file" href="langref/emailaddresses.html">emailaddresses</li><li class="ajaxLink file" href="langref/firstname.html">firstname</li><li class="ajaxLink file" href="langref/generationidentifier.html">generationidentifier</li><li class="ajaxLink file" href="langref/honorific.html">honorific</li><li class="ajaxLink file" href="langref/lastname.html">lastname</li><li class="ajaxLink file" href="langref/locality.html">locality</li><li class="ajaxLink file" href="langref/localityname.html">localityname</li><li class="ajaxLink file" href="langref/middlename.html">middlename</li><li class="ajaxLink file" href="langref/namedetails.html">namedetails</li><li class="ajaxLink file" href="langref/organizationinfo.html">organizationinfo</li><li class="ajaxLink file" href="langref/organizationname.html">organizationname</li><li class="ajaxLink file" href="langref/organizationnamedetails.html">organizationnamedetails</li><li class="ajaxLink file" href="langref/otherinfo.html">otherinfo</li><li class="ajaxLink file" href="langref/personinfo.html">personinfo</li><li class="ajaxLink file" href="langref/personname.html">personname</li><li class="ajaxLink file" href="langref/postalcode.html">postalcode</li><li class="ajaxLink file" href="langref/thoroughfare.html">thoroughfare</li><li class="ajaxLink file" href="langref/url.html">url</li><li class="ajaxLink file" href="langref/urls.html">urls</li></div></ul></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="langRef-learningTraining.html">Learning and training elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/lc_spec_topics.html">Learning and training topic elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/learningOverview.html">learningOverview</li><li class="ajaxLink file" href="langref/learningOverviewbody.html">learningOverviewbody</li><li class="ajaxLink file" href="langref/learningContent.html">learningContent</li><li class="ajaxLink file" href="langref/learningContentbody.html">learningContentbody</li><li class="ajaxLink file" href="langref/learningSummary.html">learningSummary</li><li class="ajaxLink file" href="langref/learningSummarybody.html">learningSummarybody</li><li class="ajaxLink file" href="langref/learningAssessment.html">learningAssessment</li><li class="ajaxLink file" href="langref/learningAssessmentbody.html">learningAssessmentbody</li><li class="ajaxLink file" href="langref/learningPlan.html">learningPlan</li><li class="ajaxLink file" href="langref/learningPlanbody.html">learningPlanbody</li><li class="ajaxLink file" href="langref/learningBase.html">learningBase</li><li class="ajaxLink file" href="langref/learningBasebody.html">learningBasebody</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/lc_spec_learning_map.html">Learning and training map domain elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/learningGroup.html">learningGroup</li><li class="ajaxLink file" href="langref/learningObject.html">learningObject</li><li class="ajaxLink file" href="langref/learningPlanRef.html">learningPlanRef</li><li class="ajaxLink file" href="langref/learningPreAssessmentRef.html">learningPreAssessmentRef</li><li class="ajaxLink file" href="langref/learningOverviewRef.html">learningOverviewRef</li><li class="ajaxLink file" href="langref/learningContentRef.html">learningContentRef</li><li class="ajaxLink file" href="langref/learningContentComponentRef.html">learningContentComponentRef</li><li class="ajaxLink file" href="langref/learningSummaryRef.html">learningSummaryRef</li><li class="ajaxLink file" href="langref/learningPostAssessmentRef.html">learningPostAssessmentRef</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/lc_spec_interactions_domain.html">Learning and training interactions domain elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/lcInstructornote.html">lcInstructornote</li><li class="ajaxLink folder" tabindex="0" href="common/lc_spec_interactionBase_domain.html">DITA learning interaction base domain elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/lcInteractionBase.html">lcInteractionBase</li><li class="ajaxLink file" href="langref/lcQuestionBase.html">lcQuestionBase</li><li class="ajaxLink file" href="langref/lcOpenQuestion.html">lcOpenQuestion</li><li class="ajaxLink file" href="langref/lcTrueFalse.html">lcTrueFalse</li><li class="ajaxLink file" href="langref/lcSingleSelect.html">lcSingleSelect</li><li class="ajaxLink file" href="langref/lcMultipleSelect.html">lcMultipleSelect</li><li class="ajaxLink file" href="langref/lcSequencing.html">lcSequencing</li><li class="ajaxLink file" href="langref/lcMatching.html">lcMatching</li><li class="ajaxLink file" href="langref/lcHotspot.html">lcHotspot</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="common/lc_spec_lom.html">Learning and training metadata elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/lcLom.html">lcLom</li><li class="ajaxLink file" href="langref/lomAggregationLevel.html">lomAggregationLevel</li><li class="ajaxLink file" href="langref/lomContext.html">lomContext</li><li class="ajaxLink file" href="langref/lomCoverage.html">lomCoverage</li><li class="ajaxLink file" href="langref/lomDifficulty.html">lomDifficulty</li><li class="ajaxLink file" href="langref/lomInstallationRemarks.html">lomInstallationRemarks</li><li class="ajaxLink file" href="langref/lomIntendedUserRole.html">lomIntendedUserRole</li><li class="ajaxLink file" href="langref/lomInteractivityLevel.html">lomInteractivityLevel</li><li class="ajaxLink file" href="langref/lomInteractivityType.html">lomInteractivityType</li><li class="ajaxLink file" href="langref/lomLearningResourceType.html">lomLearningResourceType</li><li class="ajaxLink file" href="langref/lomOtherPlatformRequirements.html">lomOtherPlatformRequirements</li><li class="ajaxLink file" href="langref/lomSemanticDensity.html">lomSemanticDensity</li><li class="ajaxLink file" href="langref/lomStructure.html">lomStructure</li><li class="ajaxLink file" href="langref/lomTechRequirement.html">lomTechRequirement</li><li class="ajaxLink file" href="langref/lomTypicalAgeRange.html">lomTypicalAgeRange</li><li class="ajaxLink file" href="langref/lomTypicalLearningTime.html">lomTypicalLearningTime</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/learning_training_elements_other.html">Other learning and training elements</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/learning_training_elements_interactions_other.html">Common learning interactions elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/lcAnswerContent.html">lcAnswerContent</li><li class="ajaxLink file" href="langref/lcAnswerOption.html">lcAnswerOption</li><li class="ajaxLink file" href="langref/lcAnswerOptionGroup.html">lcAnswerOptionGroup</li><li class="ajaxLink file" href="langref/lcArea.html">lcArea</li><li class="ajaxLink file" href="langref/lcAreaCoords.html">lcAreaCoords</li><li class="ajaxLink file" href="langref/lcAreaShape.html">lcAreaShape</li><li class="ajaxLink file" href="langref/lcAsset.html">lcAsset</li><li class="ajaxLink file" href="langref/lcCorrectResponse.html">lcCorrectResponse</li><li class="ajaxLink file" href="langref/lcFeedback.html">lcFeedback</li><li class="ajaxLink file" href="langref/lcFeedbackCorrect.html">lcFeedbackCorrect</li><li class="ajaxLink file" href="langref/lcFeedbackIncorrect.html">lcFeedbackIncorrect</li><li class="ajaxLink file" href="langref/lcHotspotMap.html">lcHotspotMap</li><li class="ajaxLink file" href="langref/lcItem.html">lcItem</li><li class="ajaxLink file" href="langref/lcMatchingHeader.html">lcMatchingHeader</li><li class="ajaxLink file" href="langref/lcMatchingItem.html">lcMatchingItem</li><li class="ajaxLink file" href="langref/lcMatchingItemFeedback.html">lcMatchingItemFeedback</li><li class="ajaxLink file" href="langref/lcMatchingPair.html">lcMatchingPair</li><li class="ajaxLink file" href="langref/lcMatchTable.html">lcMatchTable</li><li class="ajaxLink file" href="langref/lcOpenAnswer.html">lcOpenAnswer</li><li class="ajaxLink file" href="langref/lcQuestion.html">lcQuestion</li><li class="ajaxLink file" href="langref/lcSequence.html">lcSequence</li><li class="ajaxLink file" href="langref/lcSequenceOption.html">lcSequenceOption</li><li class="ajaxLink file" href="langref/lcSequenceOptionGroup.html">lcSequenceOptionGroup</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/learning_training_elements_topics_other.html">Common learning content elements</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="langref/lcAge.html">lcAge</li><li class="ajaxLink file" href="langref/lcAssessment.html">lcAssessment</li><li class="ajaxLink file" href="langref/lcAttitude.html">lcAttitude</li><li class="ajaxLink file" href="langref/lcAudience.html">lcAudience</li><li class="ajaxLink file" href="langref/lcBackground.html">lcBackground</li><li class="ajaxLink file" href="langref/lcChallenge.html">lcChallenge</li><li class="ajaxLink file" href="langref/lcCIN.html">lcCIN</li><li class="ajaxLink file" href="langref/lcClassroom.html">lcClassroom</li><li class="ajaxLink file" href="langref/lcClient.html">lcClient</li><li class="ajaxLink file" href="langref/lcConstraints.html">lcConstraints</li><li class="ajaxLink file" href="langref/lcDelivDate.html">lcDelivDate</li><li class="ajaxLink file" href="langref/lcDelivery.html">lcDelivery</li><li class="ajaxLink file" href="langref/lcDownloadTime.html">lcDownloadTime</li><li class="ajaxLink file" href="langref/lcDuration.html">lcDuration</li><li class="ajaxLink file" href="langref/lcEdLevel.html">lcEdLevel</li><li class="ajaxLink file" href="langref/lcFileSizeLimitations.html">lcFileSizeLimitations</li><li class="ajaxLink file" href="langref/lcGapAnalysis.html">lcGapAnalysis</li><li class="ajaxLink file" href="langref/lcGapItem.html">lcGapItem</li><li class="ajaxLink file" href="langref/lcGapItemDelta.html">lcGapItemDelta</li><li class="ajaxLink file" href="langref/lcGeneralDescription.html">lcGeneralDescription</li><li class="ajaxLink file" href="langref/lcGoals.html">lcGoals</li><li class="ajaxLink file" href="langref/lcGraphics.html">lcGraphics</li><li class="ajaxLink file" href="langref/lcHandouts.html">lcHandouts</li><li class="ajaxLink file" href="langref/lcInstruction.html">lcInstruction</li><li class="ajaxLink file" href="langref/lcInteraction.html">lcInteraction</li><li class="ajaxLink file" href="langref/lcIntervention.html">lcIntervention</li><li class="ajaxLink file" href="langref/lcInterventionItem.html">lcInterventionItem</li><li class="ajaxLink file" href="langref/lcIntro.html">lcIntro</li><li class="ajaxLink file" href="langref/lcJtaItem.html">lcJtaItem</li><li class="ajaxLink file" href="langref/lcKnowledge.html">lcKnowledge</li><li class="ajaxLink file" href="langref/lcLearnStrat.html">lcLearnStrat</li><li class="ajaxLink file" href="langref/lcLMS.html">lcLMS</li><li class="ajaxLink file" href="langref/lcModDate.html">lcModDate</li><li class="ajaxLink file" href="langref/lcMotivation.html">lcMotivation</li><li class="ajaxLink file" href="langref/lcNeeds.html">lcNeeds</li><li class="ajaxLink file" href="langref/lcNeedsAnalysis.html">lcNeedsAnalysis</li><li class="ajaxLink file" href="langref/lcNextSteps.html">lcNextSteps</li><li class="ajaxLink file" href="langref/lcNoLMS.html">lcNoLMS</li><li class="ajaxLink file" href="langref/lcObjective.html">lcObjective</li><li class="ajaxLink file" href="langref/lcObjectives.html">lcObjectives</li><li class="ajaxLink file" href="langref/lcObjectivesGroup.html">lcObjectivesGroup</li><li class="ajaxLink file" href="langref/lcObjectivesStem.html">lcObjectivesStem</li><li class="ajaxLink file" href="langref/lcOJT.html">lcOJT</li><li class="ajaxLink file" href="langref/lcOrganizational.html">lcOrganizational</li><li class="ajaxLink file" href="langref/lcOrgConstraints.html">lcOrgConstraints</li><li class="ajaxLink file" href="langref/lcPlanAudience.html">lcPlanAudience</li><li class="ajaxLink file" href="langref/lcPlanDescrip.html">lcPlanDescrip</li><li class="ajaxLink file" href="langref/lcPlanObjective.html">lcPlanObjective</li><li class="ajaxLink file" href="langref/lcPlanPrereqs.html">lcPlanPrereqs</li><li class="ajaxLink file" href="langref/lcPlanResources.html">lcPlanResources</li><li class="ajaxLink file" href="langref/lcPlanSubject.html">lcPlanSubject</li><li class="ajaxLink file" href="langref/lcPlanTitle.html">lcPlanTitle</li><li class="ajaxLink file" href="langref/lcPlayers.html">lcPlayers</li><li class="ajaxLink file" href="langref/lcPrereqs.html">lcPrereqs</li><li class="ajaxLink file" href="langref/lcProcesses.html">lcProcesses</li><li class="ajaxLink file" href="langref/lcProject.html">lcProject</li><li class="ajaxLink file" href="langref/lcResolution.html">lcResolution</li><li class="ajaxLink file" href="langref/lcResources.html">lcResources</li><li class="ajaxLink file" href="langref/lcReview.html">lcReview</li><li class="ajaxLink file" href="langref/lcSecurity.html">lcSecurity</li><li class="ajaxLink file" href="langref/lcSkills.html">lcSkills</li><li class="ajaxLink file" href="langref/lcSpecChars.html">lcSpecChars</li><li class="ajaxLink file" href="langref/lcSummary.html">lcSummary</li><li class="ajaxLink file" href="langref/lcTask.html">lcTask</li><li class="ajaxLink file" href="langref/lcTaskItem.html">lcTaskItem</li><li class="ajaxLink file" href="langref/lcTechnical.html">lcTechnical</li><li class="ajaxLink file" href="langref/lcTime.html">lcTime</li><li class="ajaxLink file" href="langref/lcValues.html">lcValues</li><li class="ajaxLink file" href="langref/lcViewers.html">lcViewers</li><li class="ajaxLink file" href="langref/lcW3C.html">lcW3C</li><li class="ajaxLink file" href="langref/lcWorkEnv.html">lcWorkEnv</li><li class="ajaxLink file" href="langref/lcWorkEnvDescription.html">lcWorkEnvDescription</li></div></ul></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="common/attributes.html">Attributes</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="common/comrfet.html">Commonly referenced attribute groups</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="common/display-atts.html">display-atts attribute group</li><li class="ajaxLink file" href="common/global-atts.html">global-atts attribute group</li><li class="ajaxLink file" href="common/univ-atts.html">univ-atts attribute group</li><li class="ajaxLink file" href="common/id-atts.html">id-atts attribute group</li><li class="ajaxLink file" href="common/select-atts.html">select-atts attribute group</li><li class="ajaxLink file" href="common/localization-atts.html">localization-atts attribute group</li><li class="ajaxLink folder" tabindex="0" href="common/relational-atts.html">relational-atts attribute group</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="common/rel-atts.html">rel-atts attribute group</li></div></ul><li class="ajaxLink file" href="common/topicref-atts.html">topicref-atts, topicref-atts-no-toc, and topicref-atts-without-format attribute groups</li><li class="ajaxLink file" href="common/othercommon.html">Other common DITA attributes</li></div></ul><li class="ajaxLink folder" tabindex="0" href="common/complexattributedefinitions.html">Complex attribute definitions</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="common/thehrefattribute.html">The href attribute</li><li class="ajaxLink file" href="common/thekeysattribute.html">The keys attribute</li><li class="ajaxLink file" href="common/thekeyrefattribute.html">The keyref attribute</li><li class="ajaxLink folder" tabindex="0" href="common/theconrefattribute.html">The conref attribute</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="common/ditauseconreftarget.html">Using the -dita-use-conref-target value</li></div></ul><li class="ajaxLink file" href="common/theconactionattribute.html">The conaction attribute</li><li class="ajaxLink file" href="common/theconrefendattribute.html">The conrefend attribute</li><li class="ajaxLink file" href="common/theconkeyrefattribute.html">The conkeyref attribute</li><li class="ajaxLink file" href="common/thetypeattribute.html">The type attribute</li><li class="ajaxLink file" href="common/theformatattribute.html">The format attribute</li><li class="ajaxLink file" href="common/thescopeattribute.html">The scope attribute</li><li class="ajaxLink file" href="common/theroleattribute.html">The role attribute</li></div></ul></div></ul><li class="ajaxLink folder" tabindex="0" href="element-quick-reference.html">Element quick reference</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="common/base_elements_a_to_z.html">Base DITA elements, A to Z</li><li class="ajaxLink file" href="common/technical_content_elements_a_to_z.html">Technical content elements, A to Z</li><li class="ajaxLink file" href="common/learning_training_elements_a_to_z.html">Learning and training elements, A to Z</li><li class="ajaxLink file" href="common/alldita1.2elements_a_to_z.html">All DITA 1.2 elements, A to Z</li></div></ul></div></ul><li class="ajaxLink file" href="conformance.html">Conformance</li><li class="ajaxLink file" href="r-acknowledgments.html">Acknowledgments</li><li class="ajaxLink folder" tabindex="0" href="non-normative/non-normative-information.html">Non-normative information</li><ul class="web-help-subnav"><div><li class="ajaxLink folder" tabindex="0" href="non-normative/changes-from-previous-versions.html">Changes from previous versions</li><ul class="web-help-subnav"><div><li class="ajaxLink file" href="non-normative/new-in_1_2.html">Changes from DITA 1.1 to DITA 1.2</li><li class="ajaxLink file" href="non-normative/new-in_1_1.html">Changes from DITA 1.0 to DITA 1.1</li></div></ul><li class="ajaxLink file" href="non-normative/migration-1_1-to-1_2.html">Migrating from DITA 1.1 to 1.2</li><li class="ajaxLink file" href="non-normative/DITA-mime-type.html">DITA MIME type</li><li class="ajaxLink file" href="non-normative/foreigngeneralization.html">Considerations for generalizing &lt;foreign&gt; elements</li><li class="ajaxLink file" href="non-normative/elementsMerged.html">Element-by-element recommendations for translators</li><li class="ajaxLink file" href="non-normative/dita-module-impl-ref.html">DITA module and shell implementation reference</li><li class="ajaxLink file" href="non-normative/dtdorganization.html">DTD organization</li><li class="ajaxLink file" href="non-normative/schemaorganization.html">XML schema organization</li><li class="ajaxLink file" href="non-normative/filenaming-processing-modules.html">Processing component modularization and naming conventions</li><li class="ajaxLink file" href="non-normative/interoperability-considerations.html">Processing interoperability considerations</li><li class="ajaxLink file" href="non-normative/speclimits.html">Specialization design, customization, and the limits of specialization</li></div></ul></ul>
-</div><div id="web-help-c2"/></div></div><div id="drag-container" class="dragdealer"><div id="drag-handle" class="handle"><div id="drag-button"><div id="drag-icon-bg"/><div id="drag-icon"/></div></div></div></div><script type="text/javascript">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			name="viewport" />
+		<meta name="viewport" content="width=device-width, minimal-ui" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="icon" sizes="196x196" href="help-icon.png" />
+		<link rel="apple-touch-icon" sizes="196x196" href="help-icon.png" />
+		<link rel="stylesheet" type="text/css" href="scripts/frameless.css" />
+		<link rel="stylesheet" type="text/css" href="scripts/side-drawer.css" />
+		<link rel="stylesheet" type="text/css" href="scripts/content-styling.css" />
+		<link rel="stylesheet" type="text/css" href="scripts/matts-changes.css" />
+		<link rel="stylesheet" type="text/css" href="scripts/user-fonts.css" />
+		<link rel="stylesheet" type="text/css" href="scripts/user-styling.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">//</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js">//</script>
+		<script type="text/javascript" src="scripts/typeahead.bundle.js">//</script>
+		<script type="text/javascript" src="scripts/queryString.js">//</script>
+		<script type="text/javascript" src="scripts/dragdealer.js">//</script>
+		<script type="text/javascript" src="scripts/lunr.js">//</script>
+		<script type="text/javascript" src="scripts/lunrScripts.js">//</script>
+		<script type="text/javascript" src="scripts/loadContent.js">//</script>
+		<title>Darwin Information Typing Architecture (DITA) Version 1.2 OASIS Standard 1 December
+			2010 DITA Version 1.2 Specification</title>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52975147-1', {'cookieDomain': 'none'});
+  ga('send', 'pageview');
+
+</script>
+	</head>
+	<body>
+		<div id="container"><div id="heading">//</div><div id="search-bar"><form name="search-form"
+					id="search-form"><input class="clearable typeahead" type="text" name="q" id="q"
+						placeholder="Search..." /><input type="submit" id="search-button"
+						value="Go!" /></form></div><div id="main"><div id="web-help"><div
+						id="web-help-c1"><ul class="web-help-nav">
+							<li class="ajaxLink folder" tabindex="0"
+								href="introduction/dita-1.2_complete_overview.html"
+								>Introduction</li>
+							<ul class="web-help-subnav">
+								<div><li class="ajaxLink file"
+										href="introduction/c-terminology.html">Terminology</li><li
+										class="ajaxLink file"
+										href="introduction/normative-references.html">Normative
+										references</li><li class="ajaxLink file"
+										href="introduction/non-normative-references.html"
+										>Non-normative references</li><li class="ajaxLink file"
+										href="introduction/formatting-conventions-xhtml-output.html"
+										>Formatting conventions in the XHTML version of the
+										specification</li></div>
+							</ul>
+							<li class="ajaxLink folder" tabindex="0"
+								href="architectural_specification.html">Architectural
+								specification</li>
+							<ul class="web-help-subnav">
+								<div><li class="ajaxLink folder" tabindex="0"
+										href="archSpec-base.html">Base architecture</li><ul
+										class="web-help-subnav">
+										<div><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/introduction-to-dita.html"
+												>Introduction to DITA</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/about_specification_source.html"
+												>About the specification source</li><li
+												class="ajaxLink file"
+												href="archSpec/dita-terminology.html">Terminology
+												and notation</li><li class="ajaxLink file"
+												href="archSpec/basic-concepts.html">Basic
+												concepts</li><li class="ajaxLink file"
+												href="archSpec/fileext.html">File naming
+												conventions</li><li class="ajaxLink file"
+												href="archSpec/single_sourcing.html">Producing
+												different deliverables from a single
+												source</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/ditamarkup.html">DITA markup</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/topicover.html">DITA topics</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/topicdefined.html">The topic as the
+												basic unit of information</li><li
+												class="ajaxLink folder" tabindex="0"
+												href="archSpec/topicbenefits.html">The benefits of
+												a topic-based architecture</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/topicorientation.html">Disciplined,
+												topic-oriented writing</li><li
+												class="ajaxLink file"
+												href="archSpec/transitionaltextsolutions.html"
+												>Transitional text solutions</li></div>
+												</ul><li class="ajaxLink file"
+												href="archSpec/information-typing.html"
+												>Information typing</li><li class="ajaxLink file"
+												href="archSpec/generictopics.html">Generic
+												topics</li><li class="ajaxLink file"
+												href="archSpec/topicstructure.html">Topic
+												structure</li><li class="ajaxLink file"
+												href="archSpec/topiccontent.html">Topic
+												content</li><li class="ajaxLink file"
+												href="archSpec/topicDomains_BasicDITA.html">Topics
+												domains: Basic DITA</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/ditamaps.html">DITA maps</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/definition-of-ditamaps.html"
+												>Definition of DITA maps</li><li
+												class="ajaxLink file"
+												href="archSpec/purpose-of-ditamaps.html">Purpose
+												of DITA maps</li><li class="ajaxLink file"
+												href="archSpec/ditamap-elements.html">DITA map
+												elements</li><li class="ajaxLink file"
+												href="archSpec/ditamap-attributes.html">DITA map
+												attributes</li><li class="ajaxLink file"
+												href="archSpec/subjectSchema.html"
+												>subjectSchema</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/dita-metadata.html">DITA
+												metadata</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/metadata-elements.html">Metadata
+												elements</li><li class="ajaxLink folder"
+												tabindex="0"
+												href="archSpec/metadata-attributes.html">Metadata
+												attributes</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/conditional-processing-attributes.html"
+												>Conditional processing attributes</li><li
+												class="ajaxLink file"
+												href="archSpec/translation-and-localization-attributes.html"
+												>Translation and localization attributes</li><li
+												class="ajaxLink file"
+												href="archSpec/architectural-attributes.html"
+												>Architectural attributes</li></div>
+												</ul><li class="ajaxLink file"
+												href="archSpec/metadata-in-maps-and-topics.html"
+												>Metadata in maps and topics</li><li
+												class="ajaxLink file"
+												href="archSpec/cascading-in-a-ditamap.html"
+												>Cascading of attributes and metadata in a DITA
+												map</li><li class="ajaxLink file"
+												href="archSpec/map-to-map-cascading-of-metadata.html"
+												>Map-to-map cascading behaviors</li><li
+												class="ajaxLink file"
+												href="archSpec/reconciling-topic-and-map-metadata.html"
+												>Reconciling topic and map metadata</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/behaviors.html">DITA
+												processing</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/module-compatibility.html">Module
+												compatibility and the domains attribute</li><li
+												class="ajaxLink file" href="archSpec/ditanav.html"
+												>Navigation behaviors</li><li
+												class="ajaxLink folder" tabindex="0"
+												href="archSpec/ditalinking.html">DITA
+												linking</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/dita-linking-links-within-maps.html"
+												>Links within maps</li><li class="ajaxLink file"
+												href="archSpec/dita-linking-links-within-topics.html"
+												>Links within topics</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/ditaaddressing.html">DITA
+												addressing</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/id.html">ID attribute</li><li
+												class="ajaxLink file"
+												href="archSpec/uri-based-addressing.html"
+												>URI-based (direct) addressing</li><li
+												class="ajaxLink folder" tabindex="0"
+												href="archSpec/key-based_addressing.html"
+												>Key-based addressing</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/overview_of_keys.html">Overview of
+												keys</li><li class="ajaxLink file"
+												href="archSpec/using_keys_to_address_dita_elements.html"
+												>Using keys to address DITA elements</li><li
+												class="ajaxLink file"
+												href="archSpec/processing_key_references.html"
+												>Processing key references</li><li
+												class="ajaxLink file"
+												href="archSpec/examples_of_keys.html">Examples of
+												keys</li></div>
+												</ul><li class="ajaxLink file"
+												href="archSpec/dita-linking-link-element-summary.html"
+												>Summary of addressing elements</li></div>
+												</ul><li class="ajaxLink file"
+												href="archSpec/conref.html">Content inclusion
+												(conref)</li><li class="ajaxLink file"
+												href="archSpec/condproc.html">Conditional
+												processing (profiling)</li><li
+												class="ajaxLink file"
+												href="archSpec/chunking.html">Chunking</li><li
+												class="ajaxLink file"
+												href="archSpec/printing.html">Printing</li><li
+												class="ajaxLink folder" tabindex="0"
+												href="archSpec/translation.html"
+												>Translation</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/xmllang.html">The xml:lang
+												attribute</li><li class="ajaxLink file"
+												href="archSpec/diratt.html">The dir
+												attribute</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/configuration-specialization-and-constraints.html"
+												>Configuration, specialization, and constraints
+												</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/ditaspecialization.html">Overview
+												of DITA extension facilities</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/recognizedconstraintmechanisms.html"
+												>Recognized XML document constraint
+												mechanisms</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/createCustomDocType.html"
+												>Configuration (Document type shells)</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/shell-dtd-coding-reqs.html">DTD
+												document-type shell: Coding requirements</li><li
+												class="ajaxLink file"
+												href="archSpec/xsdShellDoctypeCodeReq.html">XSD
+												document-type shell: Coding
+												requirements</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/specialize.html"
+												>Specialization</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/vocabularymodules.html">Vocabulary
+												modules</li><li class="ajaxLink file"
+												href="archSpec/specvalid.html">Requirements for
+												specialized element types and attributes</li><li
+												class="ajaxLink file"
+												href="archSpec/classatt.html">Element type
+												specialization hierarchy declaration (the @class
+												attribute)</li><li class="ajaxLink file"
+												href="archSpec/domainsatt.html">Domain usage
+												declaration (the @domains attribute)</li><li
+												class="ajaxLink file"
+												href="archSpec/generalize.html"
+												>Generalization</li><li class="ajaxLink file"
+												href="archSpec/attributegeneralize.html">Attribute
+												generalization</li><li class="ajaxLink file"
+												href="archSpec/foreigncontentspec.html"
+												>Specializing foreign or unknown content</li><li
+												class="ajaxLink folder" tabindex="0"
+												href="archSpec/specialization_module_requirements.html"
+												>Specialization module coding requirements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/dtdmod.html">DTD syntax
+												specialization module coding requirements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/dtdGeneralCodingReq.html">General
+												element type declaration coding
+												requirements</li><li class="ajaxLink file"
+												href="archSpec/dtdStructuralCodingReq.html"
+												>Structural module coding requirements</li><li
+												class="ajaxLink file"
+												href="archSpec/dtdTopicTypeCodingReq.html">Topic
+												type module coding requirements</li><li
+												class="ajaxLink file"
+												href="archSpec/dtdElementDomainCodingReq.html"
+												>Element domain module coding requirements</li><li
+												class="ajaxLink file"
+												href="archSpec/dtdAttributeDomainCodingReq.html"
+												>Attribute domain module coding
+												requirements</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/schemamod.html">XSD schema
+												specialization module coding requirements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/xsdGeneralCodingReq.html">General
+												element type declaration coding
+												requirements</li><li class="ajaxLink file"
+												href="archSpec/xsdStructuralSpecializationReqs.html"
+												>Structural specialization coding
+												requirements</li><li class="ajaxLink file"
+												href="archSpec/xsdAttributeDomainSpecializationCodeReq.html"
+												>Attribute domain coding requirements</li></div>
+												</ul></div>
+												</ul></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/createConstraintsDomainSpec.html"
+												>Constraints</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/constraintsDomainDesignPattern-dtd.html"
+												>Constraint module DTD coding requirements
+												</li><li class="ajaxLink file"
+												href="archSpec/constraintsDomainDesignPattern-xsd.html"
+												>Constraint module XSD coding requirements</li><li
+												class="ajaxLink file"
+												href="archSpec/constraintsGeneralize.html">Conref
+												and generalization for constraint modules</li><li
+												class="ajaxLink file"
+												href="archSpec/constraint-module-examples.html"
+												>Examples of constraint declaration
+												modules</li></div>
+												</ul></div>
+											</ul></div>
+									</ul><li class="ajaxLink folder" tabindex="0"
+										href="archSpec-technicalContent.html">Technical content
+										architecture</li><ul class="web-help-subnav">
+										<div><li class="ajaxLink file"
+												href="archSpec/dita-1.2_technicalContent_overview.html"
+												>Overview of the DITA 1.2 Specification: Technical
+												Content</li><li class="ajaxLink folder" tabindex="0"
+												href="archSpec/dita_technicalContent_InformationTypes.html"
+												>Technical content: Information types</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="archSpec/dita_concept_topic.html">Concept
+												topic</li><li class="ajaxLink file"
+												href="archSpec/dita_reference_topic.html"
+												>Reference topic</li><li class="ajaxLink file"
+												href="archSpec/dita_generic_task_topic.html"
+												>General task topic</li><li class="ajaxLink file"
+												href="archSpec/dita_task_topic.html">Task topic
+												(strict)</li><li class="ajaxLink file"
+												href="archSpec/dita_machinerytask_topic.html"
+												>Machinery Task topic</li><li
+												class="ajaxLink file"
+												href="archSpec/dita_glossary_topic.html">Glossary
+												Entry topic</li><li class="ajaxLink file"
+												href="archSpec/dita_glossarygroup_topic.html"
+												>Glossary Group topic</li><li
+												class="ajaxLink file"
+												href="archSpec/dita_spec_intro_bookmap.html"
+												>Bookmap</li></div>
+											</ul><li class="ajaxLink file"
+												href="archSpec/dita_technicalContent_TopicDomains.html"
+												>Topic domains: Technical content</li><li
+												class="ajaxLink file"
+												href="archSpec/xNALDomain.html">The xNAL
+											domain</li></div>
+									</ul><li class="ajaxLink folder" tabindex="0"
+										href="archSpec-learningTraining.html">Learning and training
+										architecture</li><ul class="web-help-subnav">
+										<div><li class="ajaxLink file"
+												href="archSpec/lc_spec_Overview_problem.html"
+												>Overview</li><li class="ajaxLink file"
+												href="archSpec/lc_spec_Overview_objectives.html"
+												>Objectives of the DITA Learning and Training
+												Specialization</li><li class="ajaxLink file"
+												href="archSpec/lc_spec_Overview_assumptions.html">A
+												learning objects approach to learning and training
+												content</li><li class="ajaxLink file"
+												href="archSpec/lc_spec_Overview_usecases.html">Use
+												cases</li><li class="ajaxLink file"
+												href="archSpec/lc_spec_Summary_of_landt_designs.html"
+												>Summary of learning topic, map, and domain
+												designs</li></div>
+									</ul></div>
+							</ul>
+							<li class="ajaxLink folder" tabindex="0" href="language_reference.html"
+								>Language reference</li>
+							<ul class="web-help-subnav">
+								<div><li class="ajaxLink folder" tabindex="0"
+										href="langRef-base.html">Base elements</li><ul
+										class="web-help-subnav">
+										<div><li class="ajaxLink folder" tabindex="0"
+												href="common/topic_elements.html">Topic
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="common/topic2.html">Basic topic
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/topic.html">topic</li><li
+												class="ajaxLink file" href="langref/title.html"
+												>title</li><li class="ajaxLink file"
+												href="langref/titlealts.html">titlealts</li><li
+												class="ajaxLink file"
+												href="langref/searchtitle.html"
+												>searchtitle</li><li class="ajaxLink file"
+												href="langref/navtitle.html">navtitle</li><li
+												class="ajaxLink file"
+												href="langref/shortdesc.html">shortdesc</li><li
+												class="ajaxLink file" href="langref/abstract.html"
+												>abstract</li><li class="ajaxLink file"
+												href="langref/body.html">body</li><li
+												class="ajaxLink file" href="langref/bodydiv.html"
+												>bodydiv</li><li class="ajaxLink file"
+												href="langref/related-links.html"
+												>related-links</li><li class="ajaxLink file"
+												href="langref/dita.html">dita</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/body2.html">Body elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/alt.html">alt</li><li
+												class="ajaxLink file" href="langref/cite.html"
+												>cite</li><li class="ajaxLink file"
+												href="langref/dd.html">dd</li><li
+												class="ajaxLink file" href="langref/desc.html"
+												>desc</li><li class="ajaxLink file"
+												href="langref/ddhd.html">ddhd</li><li
+												class="ajaxLink file" href="langref/dl.html"
+												>dl</li><li class="ajaxLink file"
+												href="langref/dlentry.html">dlentry</li><li
+												class="ajaxLink file" href="langref/dlhead.html"
+												>dlhead</li><li class="ajaxLink file"
+												href="langref/dt.html">dt</li><li
+												class="ajaxLink file"
+												href="langref/draft-comment.html"
+												>draft-comment</li><li class="ajaxLink file"
+												href="langref/dthd.html">dthd</li><li
+												class="ajaxLink file" href="langref/example.html"
+												>example</li><li class="ajaxLink file"
+												href="langref/fig.html">fig</li><li
+												class="ajaxLink file" href="langref/figgroup.html"
+												>figgroup</li><li class="ajaxLink file"
+												href="langref/fn.html">fn</li><li
+												class="ajaxLink file" href="langref/image.html"
+												>image</li><li class="ajaxLink file"
+												href="langref/keyword.html">keyword</li><li
+												class="ajaxLink file" href="langref/li.html"
+												>li</li><li class="ajaxLink file"
+												href="langref/lines.html">lines</li><li
+												class="ajaxLink file"
+												href="langref/longdescref.html"
+												>longdescref</li><li class="ajaxLink file"
+												href="langref/longquoteref.html"
+												>longquoteref</li><li class="ajaxLink file"
+												href="langref/lq.html">lq</li><li
+												class="ajaxLink file" href="langref/object.html"
+												>object</li><li class="ajaxLink file"
+												href="langref/note.html">note</li><li
+												class="ajaxLink file" href="langref/ol.html"
+												>ol</li><li class="ajaxLink file"
+												href="langref/p.html">p</li><li
+												class="ajaxLink file" href="langref/param.html"
+												>param</li><li class="ajaxLink file"
+												href="langref/ph.html">ph</li><li
+												class="ajaxLink file" href="langref/pre.html"
+												>pre</li><li class="ajaxLink file"
+												href="langref/q.html">q</li><li
+												class="ajaxLink file" href="langref/section.html"
+												>section</li><li class="ajaxLink file"
+												href="langref/sectiondiv.html">sectiondiv</li><li
+												class="ajaxLink file" href="langref/sl.html"
+												>sl</li><li class="ajaxLink file"
+												href="langref/sli.html">sli</li><li
+												class="ajaxLink file" href="langref/term.html"
+												>term</li><li class="ajaxLink file"
+												href="langref/text.html">text</li><li
+												class="ajaxLink file" href="langref/tm.html"
+												>tm</li><li class="ajaxLink file"
+												href="langref/ul.html">ul</li><li
+												class="ajaxLink file" href="langref/xref.html"
+												>xref</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/table2.html">Table elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/table.html">table</li><li
+												class="ajaxLink file" href="langref/tgroup.html"
+												>tgroup</li><li class="ajaxLink file"
+												href="langref/colspec.html">colspec</li><li
+												class="ajaxLink file" href="langref/thead.html"
+												>thead</li><li class="ajaxLink file"
+												href="langref/tbody.html">tbody</li><li
+												class="ajaxLink file" href="langref/row.html"
+												>row</li><li class="ajaxLink file"
+												href="langref/entry.html">entry</li><li
+												class="ajaxLink file"
+												href="langref/simpletable.html"
+												>simpletable</li><li class="ajaxLink file"
+												href="langref/sthead.html">sthead</li><li
+												class="ajaxLink file" href="langref/strow.html"
+												>strow</li><li class="ajaxLink file"
+												href="langref/stentry.html">stentry</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/relatedl.html">Related links
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/link.html">link</li><li
+												class="ajaxLink file" href="langref/linklist.html"
+												>linklist</li><li class="ajaxLink file"
+												href="langref/linkpool.html">linkpool</li><li
+												class="ajaxLink file" href="langref/linktext.html"
+												>linktext</li><li class="ajaxLink file"
+												href="langref/linkinfo.html">linkinfo</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/map_elements.html">Map elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="common/map2.html">Basic map elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/map.html">map</li><li
+												class="ajaxLink file" href="langref/topicref.html"
+												>topicref</li><li class="ajaxLink file"
+												href="langref/topicmeta.html">topicmeta</li><li
+												class="ajaxLink file" href="langref/anchor.html"
+												>anchor</li><li class="ajaxLink file"
+												href="langref/navref.html">navref</li><li
+												class="ajaxLink file" href="langref/reltable.html"
+												>reltable</li><li class="ajaxLink file"
+												href="langref/relrow.html">relrow</li><li
+												class="ajaxLink file" href="langref/relcell.html"
+												>relcell</li><li class="ajaxLink file"
+												href="langref/relheader.html">relheader</li><li
+												class="ajaxLink file"
+												href="langref/relcolspec.html"
+												>relcolspec</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/mapgroup-d.html">Map group
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/anchorref.html">anchorref</li><li
+												class="ajaxLink file" href="langref/keydef.html"
+												>keydef</li><li class="ajaxLink file"
+												href="langref/mapref.html">mapref</li><li
+												class="ajaxLink file"
+												href="langref/topicgroup.html">topicgroup</li><li
+												class="ajaxLink file"
+												href="langref/topichead.html">topichead</li><li
+												class="ajaxLink file" href="langref/topicset.html"
+												>topicset</li><li class="ajaxLink file"
+												href="langref/topicsetref.html"
+												>topicsetref</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/metadata_elements.html">Metadata
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="common/prolog2.html">Prolog elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/prolog.html">prolog</li><li
+												class="ajaxLink file" href="langref/audience.html"
+												>audience</li><li class="ajaxLink file"
+												href="langref/author.html">author</li><li
+												class="ajaxLink file" href="langref/brand.html"
+												>brand</li><li class="ajaxLink file"
+												href="langref/category.html">category</li><li
+												class="ajaxLink file"
+												href="langref/component.html">component</li><li
+												class="ajaxLink file"
+												href="langref/copyright.html">copyright</li><li
+												class="ajaxLink file"
+												href="langref/copyrholder.html"
+												>copyrholder</li><li class="ajaxLink file"
+												href="langref/copyryear.html">copyryear</li><li
+												class="ajaxLink file" href="langref/created.html"
+												>created</li><li class="ajaxLink file"
+												href="langref/critdates.html">critdates</li><li
+												class="ajaxLink file" href="langref/featnum.html"
+												>featnum</li><li class="ajaxLink file"
+												href="langref/keywords.html">keywords</li><li
+												class="ajaxLink file" href="langref/metadata.html"
+												>metadata</li><li class="ajaxLink file"
+												href="langref/othermeta.html">othermeta</li><li
+												class="ajaxLink file"
+												href="langref/permissions.html"
+												>permissions</li><li class="ajaxLink file"
+												href="langref/platform.html">platform</li><li
+												class="ajaxLink file" href="langref/prodinfo.html"
+												>prodinfo</li><li class="ajaxLink file"
+												href="langref/prodname.html">prodname</li><li
+												class="ajaxLink file" href="langref/prognum.html"
+												>prognum</li><li class="ajaxLink file"
+												href="langref/publisher.html">publisher</li><li
+												class="ajaxLink file"
+												href="langref/resourceid.html">resourceid</li><li
+												class="ajaxLink file" href="langref/revised.html"
+												>revised</li><li class="ajaxLink file"
+												href="langref/series.html">series</li><li
+												class="ajaxLink file" href="langref/source.html"
+												>source</li><li class="ajaxLink file"
+												href="langref/vrmlist.html">vrmlist</li><li
+												class="ajaxLink file" href="langref/vrm.html"
+												>vrm</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/indexing-d.html">Indexing group
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/indexterm.html">indexterm</li><li
+												class="ajaxLink file"
+												href="langref/indextermref.html"
+												>indextermref</li><li class="ajaxLink file"
+												href="langref/index-see.html">index-see</li><li
+												class="ajaxLink file"
+												href="langref/index-see-also.html"
+												>index-see-also</li><li class="ajaxLink file"
+												href="langref/index-sort-as.html"
+												>index-sort-as</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/delayconref-d.html">Delayed conref
+												resolution elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/exportanchors.html"
+												>exportanchors</li><li class="ajaxLink file"
+												href="langref/anchorid.html">anchorid</li><li
+												class="ajaxLink file"
+												href="langref/anchorkey.html">anchorkey</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/domain_elements.html">Domain
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="common/hazard-d.html">Hazard statement
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/hazardstatement.html"
+												>hazardstatement</li><li class="ajaxLink file"
+												href="langref/consequence.html"
+												>consequence</li><li class="ajaxLink file"
+												href="langref/hazardsymbol.html"
+												>hazardsymbol</li><li class="ajaxLink file"
+												href="langref/howtoavoid.html">howtoavoid</li><li
+												class="ajaxLink file"
+												href="langref/messagepanel.html"
+												>messagepanel</li><li class="ajaxLink file"
+												href="langref/typeofhazard.html"
+												>typeofhazard</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/hi-d.html">Typographic
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/b.html">b</li><li
+												class="ajaxLink file" href="langref/i.html"
+												>i</li><li class="ajaxLink file"
+												href="langref/sup.html">sup</li><li
+												class="ajaxLink file" href="langref/sub.html"
+												>sub</li><li class="ajaxLink file"
+												href="langref/tt.html">tt</li><li
+												class="ajaxLink file" href="langref/u.html"
+												>u</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/ut-d.html">Utilities elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/area.html">area</li><li
+												class="ajaxLink file" href="langref/coords.html"
+												>coords</li><li class="ajaxLink file"
+												href="langref/imagemap.html">imagemap</li><li
+												class="ajaxLink file" href="langref/shape.html"
+												>shape</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/classification_elements.html"
+												>Classification elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="common/subjectScheme.html">Subject scheme
+												maps</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/subjectScheme.html"
+												>subjectScheme</li><li class="ajaxLink file"
+												href="langref/schemeref.html">schemeref</li><li
+												class="ajaxLink file"
+												href="langref/hasInstance.html"
+												>hasInstance</li><li class="ajaxLink file"
+												href="langref/hasKind.html">hasKind</li><li
+												class="ajaxLink file"
+												href="langref/hasNarrower.html"
+												>hasNarrower</li><li class="ajaxLink file"
+												href="langref/hasPart.html">hasPart</li><li
+												class="ajaxLink file"
+												href="langref/hasRelated.html">hasRelated</li><li
+												class="ajaxLink file"
+												href="langref/enumerationdef.html"
+												>enumerationdef</li><li class="ajaxLink file"
+												href="langref/elementdef.html">elementdef</li><li
+												class="ajaxLink file"
+												href="langref/attributedef.html"
+												>attributedef</li><li class="ajaxLink file"
+												href="langref/defaultSubject.html"
+												>defaultSubject</li><li class="ajaxLink file"
+												href="langref/subjectHead.html"
+												>subjectHead</li><li class="ajaxLink file"
+												href="langref/subjectHeadMeta.html"
+												>subjectHeadMeta</li><li class="ajaxLink file"
+												href="langref/subjectdef.html">subjectdef</li><li
+												class="ajaxLink file"
+												href="langref/relatedSubjects.html"
+												>relatedSubjects</li><li class="ajaxLink file"
+												href="langref/subjectRelTable.html"
+												>subjectRelTable</li><li class="ajaxLink file"
+												href="langref/subjectRelHeader.html"
+												>subjectRelHeader</li><li class="ajaxLink file"
+												href="langref/subjectRel.html">subjectRel</li><li
+												class="ajaxLink file"
+												href="langref/subjectRole.html"
+												>subjectRole</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/classify-d.html">Classification
+												domain elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/subjectref.html">subjectref</li><li
+												class="ajaxLink file"
+												href="langref/topicapply.html">topicapply</li><li
+												class="ajaxLink file"
+												href="langref/topicsubject.html"
+												>topicsubject</li><li class="ajaxLink file"
+												href="langref/topicSubjectTable.html"
+												>topicSubjectTable</li><li class="ajaxLink file"
+												href="langref/topicSubjectHeader.html"
+												>topicSubjectHeader</li><li class="ajaxLink file"
+												href="langref/topicSubjectRow.html"
+												>topicSubjectRow</li><li class="ajaxLink file"
+												href="langref/topicCell.html">topicCell</li><li
+												class="ajaxLink file"
+												href="langref/subjectCell.html"
+												>subjectCell</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/special.html">Specialization
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/boolean.html">boolean</li><li
+												class="ajaxLink file" href="langref/data.html"
+												>data</li><li class="ajaxLink file"
+												href="langref/data-about.html">data-about</li><li
+												class="ajaxLink file" href="langref/foreign.html"
+												>foreign</li><li class="ajaxLink file"
+												href="langref/index-base.html">index-base</li><li
+												class="ajaxLink file"
+												href="langref/itemgroup.html">itemgroup</li><li
+												class="ajaxLink file"
+												href="langref/no-topic-nesting.html"
+												>no-topic-nesting</li><li class="ajaxLink file"
+												href="langref/state.html">state</li><li
+												class="ajaxLink file" href="langref/unknown.html"
+												>unknown</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/legacy_conversion_elements.html">Legacy
+												conversion elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/required-cleanup.html"
+												>required-cleanup</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/about-ditaval.html">DITAVAL
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/ditaval-val.html">val</li><li
+												class="ajaxLink file"
+												href="langref/ditaval-style-conflict.html"
+												>style-conflict</li><li class="ajaxLink file"
+												href="langref/ditaval-prop.html">prop</li><li
+												class="ajaxLink file"
+												href="langref/ditaval-revprop.html"
+												>revprop</li><li class="ajaxLink file"
+												href="langref/ditaval-startflag.html"
+												>startflag</li><li class="ajaxLink file"
+												href="langref/ditaval-endflag.html"
+												>endflag</li><li class="ajaxLink file"
+												href="langref/ditaval-alt-text.html"
+												>alt-text</li></div>
+											</ul></div>
+									</ul><li class="ajaxLink folder" tabindex="0"
+										href="langRef-technicalContent.html">Technical content
+										elements</li><ul class="web-help-subnav">
+										<div><li class="ajaxLink folder" tabindex="0"
+												href="common/concept2.html">Concept elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/concept.html">concept</li><li
+												class="ajaxLink file" href="langref/conbody.html"
+												>conbody</li><li class="ajaxLink file"
+												href="langref/conbodydiv.html"
+												>conbodydiv</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/task2.html">Task elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/task.html">task</li><li
+												class="ajaxLink file" href="langref/taskbody.html"
+												>taskbody</li><li class="ajaxLink file"
+												href="langref/prereq.html">prereq</li><li
+												class="ajaxLink file" href="langref/context.html"
+												>context</li><li class="ajaxLink file"
+												href="langref/steps.html">steps</li><li
+												class="ajaxLink file"
+												href="langref/steps-informal.html"
+												>steps-informal</li><li class="ajaxLink file"
+												href="langref/steps-unordered.html"
+												>steps-unordered</li><li class="ajaxLink file"
+												href="langref/step.html">step</li><li
+												class="ajaxLink file"
+												href="langref/stepsection.html"
+												>stepsection</li><li class="ajaxLink file"
+												href="langref/cmd.html">cmd</li><li
+												class="ajaxLink file" href="langref/info.html"
+												>info</li><li class="ajaxLink file"
+												href="langref/substeps.html">substeps</li><li
+												class="ajaxLink file" href="langref/substep.html"
+												>substep</li><li class="ajaxLink file"
+												href="langref/stepxmp.html">stepxmp</li><li
+												class="ajaxLink file"
+												href="langref/choicetable.html"
+												>choicetable</li><li class="ajaxLink file"
+												href="langref/chhead.html">chhead</li><li
+												class="ajaxLink file"
+												href="langref/choptionhd.html">choptionhd</li><li
+												class="ajaxLink file" href="langref/chdeschd.html"
+												>chdeschd</li><li class="ajaxLink file"
+												href="langref/chrow.html">chrow</li><li
+												class="ajaxLink file" href="langref/choption.html"
+												>choption</li><li class="ajaxLink file"
+												href="langref/chdesc.html">chdesc</li><li
+												class="ajaxLink file" href="langref/choices.html"
+												>choices</li><li class="ajaxLink file"
+												href="langref/choice.html">choice</li><li
+												class="ajaxLink file"
+												href="langref/stepresult.html">stepresult</li><li
+												class="ajaxLink file"
+												href="langref/tutorialinfo.html"
+												>tutorialinfo</li><li class="ajaxLink file"
+												href="langref/result.html">result</li><li
+												class="ajaxLink file" href="langref/postreq.html"
+												>postreq</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/reference2.html">Reference
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/reference.html">reference</li><li
+												class="ajaxLink file" href="langref/refbody.html"
+												>refbody</li><li class="ajaxLink file"
+												href="langref/refbodydiv.html">refbodydiv</li><li
+												class="ajaxLink file" href="langref/refsyn.html"
+												>refsyn</li><li class="ajaxLink file"
+												href="langref/properties.html">properties</li><li
+												class="ajaxLink file" href="langref/prophead.html"
+												>prophead</li><li class="ajaxLink file"
+												href="langref/proptypehd.html">proptypehd</li><li
+												class="ajaxLink file"
+												href="langref/propvaluehd.html"
+												>propvaluehd</li><li class="ajaxLink file"
+												href="langref/propdeschd.html">propdeschd</li><li
+												class="ajaxLink file" href="langref/property.html"
+												>property</li><li class="ajaxLink file"
+												href="langref/proptype.html">proptype</li><li
+												class="ajaxLink file"
+												href="langref/propvalue.html">propvalue</li><li
+												class="ajaxLink file" href="langref/propdesc.html"
+												>propdesc</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/glossary-elements.html">Glossary
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="common/glossary2.html">Glossentry
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/glossentry.html">glossentry</li><li
+												class="ajaxLink file"
+												href="langref/glossterm.html">glossterm</li><li
+												class="ajaxLink file" href="langref/glossdef.html"
+												>glossdef</li><li class="ajaxLink file"
+												href="langref/glossAbbreviation.html"
+												>glossAbbreviation</li><li class="ajaxLink file"
+												href="langref/glossAcronym.html"
+												>glossAcronym</li><li class="ajaxLink file"
+												href="langref/glossAlt.html">glossAlt</li><li
+												class="ajaxLink file"
+												href="langref/glossAlternateFor.html"
+												>glossAlternateFor</li><li class="ajaxLink file"
+												href="langref/glossBody.html">glossBody</li><li
+												class="ajaxLink file"
+												href="langref/glossPartOfSpeech.html"
+												>glossPartOfSpeech</li><li class="ajaxLink file"
+												href="langref/glossProperty.html"
+												>glossProperty</li><li class="ajaxLink file"
+												href="langref/glossScopeNote.html"
+												>glossScopeNote</li><li class="ajaxLink file"
+												href="langref/glossShortForm.html"
+												>glossShortForm</li><li class="ajaxLink file"
+												href="langref/glossStatus.html"
+												>glossStatus</li><li class="ajaxLink file"
+												href="langref/glossSurfaceForm.html"
+												>glossSurfaceForm</li><li class="ajaxLink file"
+												href="langref/glossSymbol.html"
+												>glossSymbol</li><li class="ajaxLink file"
+												href="langref/glossSynonym.html"
+												>glossSynonym</li><li class="ajaxLink file"
+												href="langref/glossUsage.html"
+												>glossUsage</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/glossrelated.html">Glossary related
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/abbreviated-form.html"
+												>abbreviated-form</li><li class="ajaxLink file"
+												href="langref/glossref.html">glossref</li><li
+												class="ajaxLink file"
+												href="langref/glossgroup.html"
+												>glossgroup</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/bookmap-elements.html">Bookmap
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="common/about-bookmap.html">Bookmap content
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/bookmap.html">bookmap</li><li
+												class="ajaxLink file"
+												href="langref/abbrevlist.html">abbrevlist</li><li
+												class="ajaxLink file"
+												href="langref/amendments.html">amendments</li><li
+												class="ajaxLink file"
+												href="langref/appendices.html">appendices</li><li
+												class="ajaxLink file" href="langref/appendix.html"
+												>appendix</li><li class="ajaxLink file"
+												href="langref/backmatter.html">backmatter</li><li
+												class="ajaxLink file"
+												href="langref/bibliolist.html">bibliolist</li><li
+												class="ajaxLink file"
+												href="langref/bookabstract.html"
+												>bookabstract</li><li class="ajaxLink file"
+												href="langref/booklibrary.html"
+												>booklibrary</li><li class="ajaxLink file"
+												href="langref/booklist.html">booklist</li><li
+												class="ajaxLink file"
+												href="langref/booklists.html">booklists</li><li
+												class="ajaxLink file"
+												href="langref/booktitle.html">booktitle</li><li
+												class="ajaxLink file"
+												href="langref/booktitlealt.html"
+												>booktitlealt</li><li class="ajaxLink file"
+												href="langref/chapter.html">chapter</li><li
+												class="ajaxLink file" href="langref/colophon.html"
+												>colophon</li><li class="ajaxLink file"
+												href="langref/dedication.html">dedication</li><li
+												class="ajaxLink file"
+												href="langref/draftintro.html">draftintro</li><li
+												class="ajaxLink file"
+												href="langref/figurelist.html">figurelist</li><li
+												class="ajaxLink file"
+												href="langref/frontmatter.html"
+												>frontmatter</li><li class="ajaxLink file"
+												href="langref/glossarylist.html"
+												>glossarylist</li><li class="ajaxLink file"
+												href="langref/indexlist.html">indexlist</li><li
+												class="ajaxLink file"
+												href="langref/mainbooktitle.html"
+												>mainbooktitle</li><li class="ajaxLink file"
+												href="langref/notices.html">notices</li><li
+												class="ajaxLink file" href="langref/part.html"
+												>part</li><li class="ajaxLink file"
+												href="langref/preface.html">preface</li><li
+												class="ajaxLink file"
+												href="langref/tablelist.html">tablelist</li><li
+												class="ajaxLink file" href="langref/toc.html"
+												>toc</li><li class="ajaxLink file"
+												href="langref/trademarklist.html"
+												>trademarklist</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/bookmap-meta.html">Bookmap metadata
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/bookmeta.html">bookmeta</li><li
+												class="ajaxLink file" href="langref/approved.html"
+												>approved</li><li class="ajaxLink file"
+												href="langref/bookchangehistory.html"
+												>bookchangehistory</li><li class="ajaxLink file"
+												href="langref/bookevent.html">bookevent</li><li
+												class="ajaxLink file"
+												href="langref/bookeventtype.html"
+												>bookeventtype</li><li class="ajaxLink file"
+												href="langref/bookid.html">bookid</li><li
+												class="ajaxLink file"
+												href="langref/booknumber.html">booknumber</li><li
+												class="ajaxLink file"
+												href="langref/bookowner.html">bookowner</li><li
+												class="ajaxLink file"
+												href="langref/bookpartno.html">bookpartno</li><li
+												class="ajaxLink file"
+												href="langref/bookrestriction.html"
+												>bookrestriction</li><li class="ajaxLink file"
+												href="langref/bookrights.html">bookrights</li><li
+												class="ajaxLink file"
+												href="langref/completed.html">completed</li><li
+												class="ajaxLink file"
+												href="langref/copyrfirst.html">copyrfirst</li><li
+												class="ajaxLink file"
+												href="langref/copyrlast.html">copyrlast</li><li
+												class="ajaxLink file" href="langref/day.html"
+												>day</li><li class="ajaxLink file"
+												href="langref/edited.html">edited</li><li
+												class="ajaxLink file" href="langref/edition.html"
+												>edition</li><li class="ajaxLink file"
+												href="langref/isbn.html">isbn</li><li
+												class="ajaxLink file"
+												href="langref/maintainer.html">maintainer</li><li
+												class="ajaxLink file" href="langref/month.html"
+												>month</li><li class="ajaxLink file"
+												href="langref/organization.html"
+												>organization</li><li class="ajaxLink file"
+												href="langref/person.html">person</li><li
+												class="ajaxLink file"
+												href="langref/printlocation.html"
+												>printlocation</li><li class="ajaxLink file"
+												href="langref/published.html">published</li><li
+												class="ajaxLink file"
+												href="langref/publisherinformation.html"
+												>publisherinformation</li><li
+												class="ajaxLink file"
+												href="langref/publishtype.html"
+												>publishtype</li><li class="ajaxLink file"
+												href="langref/reviewed.html">reviewed</li><li
+												class="ajaxLink file"
+												href="langref/revisionid.html">revisionid</li><li
+												class="ajaxLink file" href="langref/started.html"
+												>started</li><li class="ajaxLink file"
+												href="langref/summary.html">summary</li><li
+												class="ajaxLink file" href="langref/tested.html"
+												>tested</li><li class="ajaxLink file"
+												href="langref/volume.html">volume</li><li
+												class="ajaxLink file" href="langref/year.html"
+												>year</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/technicalContent-domain-elements.html"
+												>Domain elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="common/mitask-d.html">Task requirements
+												domain</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/prelreqs.html">prelreqs</li><li
+												class="ajaxLink file"
+												href="langref/closereqs.html">closereqs</li><li
+												class="ajaxLink file" href="langref/reqconds.html"
+												>reqconds</li><li class="ajaxLink file"
+												href="langref/reqcond.html">reqcond</li><li
+												class="ajaxLink file" href="langref/noconds.html"
+												>noconds</li><li class="ajaxLink file"
+												href="langref/reqcontp.html">reqcontp</li><li
+												class="ajaxLink file" href="langref/reqpers.html"
+												>reqpers</li><li class="ajaxLink file"
+												href="langref/personnel.html">personnel</li><li
+												class="ajaxLink file" href="langref/perscat.html"
+												>perscat</li><li class="ajaxLink file"
+												href="langref/perskill.html">perskill</li><li
+												class="ajaxLink file" href="langref/esttime.html"
+												>esttime</li><li class="ajaxLink file"
+												href="langref/supeqli.html">supeqli</li><li
+												class="ajaxLink file" href="langref/supequi.html"
+												>supequi</li><li class="ajaxLink file"
+												href="langref/supequip.html">supequip</li><li
+												class="ajaxLink file" href="langref/nosupeq.html"
+												>nosupeq</li><li class="ajaxLink file"
+												href="langref/supplies.html">supplies</li><li
+												class="ajaxLink file" href="langref/supply.html"
+												>supply</li><li class="ajaxLink file"
+												href="langref/supplyli.html">supplyli</li><li
+												class="ajaxLink file" href="langref/nosupply.html"
+												>nosupply</li><li class="ajaxLink file"
+												href="langref/spare.html">spare</li><li
+												class="ajaxLink file" href="langref/spares.html"
+												>spares</li><li class="ajaxLink file"
+												href="langref/sparesli.html">sparesli</li><li
+												class="ajaxLink file" href="langref/nospares.html"
+												>nospares</li><li class="ajaxLink file"
+												href="langref/nosafety.html">nosafety</li><li
+												class="ajaxLink file" href="langref/safecond.html"
+												>safecond</li><li class="ajaxLink file"
+												href="langref/safety.html">safety</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/pr-d.html">Programming
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/apiname.html">apiname</li><li
+												class="ajaxLink file"
+												href="langref/codeblock.html">codeblock</li><li
+												class="ajaxLink file" href="langref/coderef.html"
+												>coderef</li><li class="ajaxLink file"
+												href="langref/codeph.html">codeph</li><li
+												class="ajaxLink file" href="langref/option.html"
+												>option</li><li class="ajaxLink file"
+												href="langref/parmname.html">parmname</li><li
+												class="ajaxLink file" href="langref/parml.html"
+												>parml</li><li class="ajaxLink file"
+												href="langref/plentry.html">plentry</li><li
+												class="ajaxLink file" href="langref/pt.html"
+												>pt</li><li class="ajaxLink file"
+												href="langref/pd.html">pd</li><li
+												class="ajaxLink file" href="langref/synph.html"
+												>synph</li><li class="ajaxLink file"
+												href="langref/syntaxdiagram.html"
+												>syntaxdiagram</li><li class="ajaxLink file"
+												href="langref/groupseq.html">groupseq</li><li
+												class="ajaxLink file"
+												href="langref/groupchoice.html"
+												>groupchoice</li><li class="ajaxLink file"
+												href="langref/groupcomp.html">groupcomp</li><li
+												class="ajaxLink file" href="langref/fragment.html"
+												>fragment</li><li class="ajaxLink file"
+												href="langref/fragref.html">fragref</li><li
+												class="ajaxLink file" href="langref/synblk.html"
+												>synblk</li><li class="ajaxLink file"
+												href="langref/synnote.html">synnote</li><li
+												class="ajaxLink file"
+												href="langref/synnoteref.html">synnoteref</li><li
+												class="ajaxLink file" href="langref/kwd.html"
+												>kwd</li><li class="ajaxLink file"
+												href="langref/var.html">var</li><li
+												class="ajaxLink file" href="langref/oper.html"
+												>oper</li><li class="ajaxLink file"
+												href="langref/delim.html">delim</li><li
+												class="ajaxLink file" href="langref/sep.html"
+												>sep</li><li class="ajaxLink file"
+												href="langref/repsep.html">repsep</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/sw-d.html">Software elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/msgph.html">msgph</li><li
+												class="ajaxLink file" href="langref/msgblock.html"
+												>msgblock</li><li class="ajaxLink file"
+												href="langref/msgnum.html">msgnum</li><li
+												class="ajaxLink file" href="langref/cmdname.html"
+												>cmdname</li><li class="ajaxLink file"
+												href="langref/varname.html">varname</li><li
+												class="ajaxLink file" href="langref/filepath.html"
+												>filepath</li><li class="ajaxLink file"
+												href="langref/userinput.html">userinput</li><li
+												class="ajaxLink file"
+												href="langref/systemoutput.html"
+												>systemoutput</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/ui-d.html">User interface
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/uicontrol.html">uicontrol</li><li
+												class="ajaxLink file" href="langref/wintitle.html"
+												>wintitle</li><li class="ajaxLink file"
+												href="langref/menucascade.html"
+												>menucascade</li><li class="ajaxLink file"
+												href="langref/shortcut.html">shortcut</li><li
+												class="ajaxLink file" href="langref/screen.html"
+												>screen</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/xnal-d.html">xNAL domain
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="common/xnaldetails.html">xNAL usage
+												guidelines</li><li class="ajaxLink file"
+												href="langref/authorinformation.html"
+												>authorinformation</li><li class="ajaxLink file"
+												href="langref/addressdetails.html"
+												>addressdetails</li><li class="ajaxLink file"
+												href="langref/administrativearea.html"
+												>administrativearea</li><li class="ajaxLink file"
+												href="langref/contactnumber.html"
+												>contactnumber</li><li class="ajaxLink file"
+												href="langref/contactnumbers.html"
+												>contactnumbers</li><li class="ajaxLink file"
+												href="langref/country.html">country</li><li
+												class="ajaxLink file"
+												href="langref/emailaddress.html"
+												>emailaddress</li><li class="ajaxLink file"
+												href="langref/emailaddresses.html"
+												>emailaddresses</li><li class="ajaxLink file"
+												href="langref/firstname.html">firstname</li><li
+												class="ajaxLink file"
+												href="langref/generationidentifier.html"
+												>generationidentifier</li><li
+												class="ajaxLink file"
+												href="langref/honorific.html">honorific</li><li
+												class="ajaxLink file" href="langref/lastname.html"
+												>lastname</li><li class="ajaxLink file"
+												href="langref/locality.html">locality</li><li
+												class="ajaxLink file"
+												href="langref/localityname.html"
+												>localityname</li><li class="ajaxLink file"
+												href="langref/middlename.html">middlename</li><li
+												class="ajaxLink file"
+												href="langref/namedetails.html"
+												>namedetails</li><li class="ajaxLink file"
+												href="langref/organizationinfo.html"
+												>organizationinfo</li><li class="ajaxLink file"
+												href="langref/organizationname.html"
+												>organizationname</li><li class="ajaxLink file"
+												href="langref/organizationnamedetails.html"
+												>organizationnamedetails</li><li
+												class="ajaxLink file"
+												href="langref/otherinfo.html">otherinfo</li><li
+												class="ajaxLink file"
+												href="langref/personinfo.html">personinfo</li><li
+												class="ajaxLink file"
+												href="langref/personname.html">personname</li><li
+												class="ajaxLink file"
+												href="langref/postalcode.html">postalcode</li><li
+												class="ajaxLink file"
+												href="langref/thoroughfare.html"
+												>thoroughfare</li><li class="ajaxLink file"
+												href="langref/url.html">url</li><li
+												class="ajaxLink file" href="langref/urls.html"
+												>urls</li></div>
+												</ul></div>
+											</ul></div>
+									</ul><li class="ajaxLink folder" tabindex="0"
+										href="langRef-learningTraining.html">Learning and training
+										elements</li><ul class="web-help-subnav">
+										<div><li class="ajaxLink folder" tabindex="0"
+												href="common/lc_spec_topics.html">Learning and
+												training topic elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/learningOverview.html"
+												>learningOverview</li><li class="ajaxLink file"
+												href="langref/learningOverviewbody.html"
+												>learningOverviewbody</li><li
+												class="ajaxLink file"
+												href="langref/learningContent.html"
+												>learningContent</li><li class="ajaxLink file"
+												href="langref/learningContentbody.html"
+												>learningContentbody</li><li class="ajaxLink file"
+												href="langref/learningSummary.html"
+												>learningSummary</li><li class="ajaxLink file"
+												href="langref/learningSummarybody.html"
+												>learningSummarybody</li><li class="ajaxLink file"
+												href="langref/learningAssessment.html"
+												>learningAssessment</li><li class="ajaxLink file"
+												href="langref/learningAssessmentbody.html"
+												>learningAssessmentbody</li><li
+												class="ajaxLink file"
+												href="langref/learningPlan.html"
+												>learningPlan</li><li class="ajaxLink file"
+												href="langref/learningPlanbody.html"
+												>learningPlanbody</li><li class="ajaxLink file"
+												href="langref/learningBase.html"
+												>learningBase</li><li class="ajaxLink file"
+												href="langref/learningBasebody.html"
+												>learningBasebody</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/lc_spec_learning_map.html">Learning and
+												training map domain elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/learningGroup.html"
+												>learningGroup</li><li class="ajaxLink file"
+												href="langref/learningObject.html"
+												>learningObject</li><li class="ajaxLink file"
+												href="langref/learningPlanRef.html"
+												>learningPlanRef</li><li class="ajaxLink file"
+												href="langref/learningPreAssessmentRef.html"
+												>learningPreAssessmentRef</li><li
+												class="ajaxLink file"
+												href="langref/learningOverviewRef.html"
+												>learningOverviewRef</li><li class="ajaxLink file"
+												href="langref/learningContentRef.html"
+												>learningContentRef</li><li class="ajaxLink file"
+												href="langref/learningContentComponentRef.html"
+												>learningContentComponentRef</li><li
+												class="ajaxLink file"
+												href="langref/learningSummaryRef.html"
+												>learningSummaryRef</li><li class="ajaxLink file"
+												href="langref/learningPostAssessmentRef.html"
+												>learningPostAssessmentRef</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/lc_spec_interactions_domain.html"
+												>Learning and training interactions domain
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/lcInstructornote.html"
+												>lcInstructornote</li><li class="ajaxLink folder"
+												tabindex="0"
+												href="common/lc_spec_interactionBase_domain.html"
+												>DITA learning interaction base domain
+												elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/lcInteractionBase.html"
+												>lcInteractionBase</li><li class="ajaxLink file"
+												href="langref/lcQuestionBase.html"
+												>lcQuestionBase</li><li class="ajaxLink file"
+												href="langref/lcOpenQuestion.html"
+												>lcOpenQuestion</li><li class="ajaxLink file"
+												href="langref/lcTrueFalse.html"
+												>lcTrueFalse</li><li class="ajaxLink file"
+												href="langref/lcSingleSelect.html"
+												>lcSingleSelect</li><li class="ajaxLink file"
+												href="langref/lcMultipleSelect.html"
+												>lcMultipleSelect</li><li class="ajaxLink file"
+												href="langref/lcSequencing.html"
+												>lcSequencing</li><li class="ajaxLink file"
+												href="langref/lcMatching.html">lcMatching</li><li
+												class="ajaxLink file"
+												href="langref/lcHotspot.html">lcHotspot</li></div>
+												</ul></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/lc_spec_lom.html">Learning and training
+												metadata elements</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/lcLom.html">lcLom</li><li
+												class="ajaxLink file"
+												href="langref/lomAggregationLevel.html"
+												>lomAggregationLevel</li><li class="ajaxLink file"
+												href="langref/lomContext.html">lomContext</li><li
+												class="ajaxLink file"
+												href="langref/lomCoverage.html"
+												>lomCoverage</li><li class="ajaxLink file"
+												href="langref/lomDifficulty.html"
+												>lomDifficulty</li><li class="ajaxLink file"
+												href="langref/lomInstallationRemarks.html"
+												>lomInstallationRemarks</li><li
+												class="ajaxLink file"
+												href="langref/lomIntendedUserRole.html"
+												>lomIntendedUserRole</li><li class="ajaxLink file"
+												href="langref/lomInteractivityLevel.html"
+												>lomInteractivityLevel</li><li
+												class="ajaxLink file"
+												href="langref/lomInteractivityType.html"
+												>lomInteractivityType</li><li
+												class="ajaxLink file"
+												href="langref/lomLearningResourceType.html"
+												>lomLearningResourceType</li><li
+												class="ajaxLink file"
+												href="langref/lomOtherPlatformRequirements.html"
+												>lomOtherPlatformRequirements</li><li
+												class="ajaxLink file"
+												href="langref/lomSemanticDensity.html"
+												>lomSemanticDensity</li><li class="ajaxLink file"
+												href="langref/lomStructure.html"
+												>lomStructure</li><li class="ajaxLink file"
+												href="langref/lomTechRequirement.html"
+												>lomTechRequirement</li><li class="ajaxLink file"
+												href="langref/lomTypicalAgeRange.html"
+												>lomTypicalAgeRange</li><li class="ajaxLink file"
+												href="langref/lomTypicalLearningTime.html"
+												>lomTypicalLearningTime</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/learning_training_elements_other.html"
+												>Other learning and training elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink folder" tabindex="0"
+												href="common/learning_training_elements_interactions_other.html"
+												>Common learning interactions elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/lcAnswerContent.html"
+												>lcAnswerContent</li><li class="ajaxLink file"
+												href="langref/lcAnswerOption.html"
+												>lcAnswerOption</li><li class="ajaxLink file"
+												href="langref/lcAnswerOptionGroup.html"
+												>lcAnswerOptionGroup</li><li class="ajaxLink file"
+												href="langref/lcArea.html">lcArea</li><li
+												class="ajaxLink file"
+												href="langref/lcAreaCoords.html"
+												>lcAreaCoords</li><li class="ajaxLink file"
+												href="langref/lcAreaShape.html"
+												>lcAreaShape</li><li class="ajaxLink file"
+												href="langref/lcAsset.html">lcAsset</li><li
+												class="ajaxLink file"
+												href="langref/lcCorrectResponse.html"
+												>lcCorrectResponse</li><li class="ajaxLink file"
+												href="langref/lcFeedback.html">lcFeedback</li><li
+												class="ajaxLink file"
+												href="langref/lcFeedbackCorrect.html"
+												>lcFeedbackCorrect</li><li class="ajaxLink file"
+												href="langref/lcFeedbackIncorrect.html"
+												>lcFeedbackIncorrect</li><li class="ajaxLink file"
+												href="langref/lcHotspotMap.html"
+												>lcHotspotMap</li><li class="ajaxLink file"
+												href="langref/lcItem.html">lcItem</li><li
+												class="ajaxLink file"
+												href="langref/lcMatchingHeader.html"
+												>lcMatchingHeader</li><li class="ajaxLink file"
+												href="langref/lcMatchingItem.html"
+												>lcMatchingItem</li><li class="ajaxLink file"
+												href="langref/lcMatchingItemFeedback.html"
+												>lcMatchingItemFeedback</li><li
+												class="ajaxLink file"
+												href="langref/lcMatchingPair.html"
+												>lcMatchingPair</li><li class="ajaxLink file"
+												href="langref/lcMatchTable.html"
+												>lcMatchTable</li><li class="ajaxLink file"
+												href="langref/lcOpenAnswer.html"
+												>lcOpenAnswer</li><li class="ajaxLink file"
+												href="langref/lcQuestion.html">lcQuestion</li><li
+												class="ajaxLink file"
+												href="langref/lcSequence.html">lcSequence</li><li
+												class="ajaxLink file"
+												href="langref/lcSequenceOption.html"
+												>lcSequenceOption</li><li class="ajaxLink file"
+												href="langref/lcSequenceOptionGroup.html"
+												>lcSequenceOptionGroup</li></div>
+												</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/learning_training_elements_topics_other.html"
+												>Common learning content elements</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="langref/lcAge.html">lcAge</li><li
+												class="ajaxLink file"
+												href="langref/lcAssessment.html"
+												>lcAssessment</li><li class="ajaxLink file"
+												href="langref/lcAttitude.html">lcAttitude</li><li
+												class="ajaxLink file"
+												href="langref/lcAudience.html">lcAudience</li><li
+												class="ajaxLink file"
+												href="langref/lcBackground.html"
+												>lcBackground</li><li class="ajaxLink file"
+												href="langref/lcChallenge.html"
+												>lcChallenge</li><li class="ajaxLink file"
+												href="langref/lcCIN.html">lcCIN</li><li
+												class="ajaxLink file"
+												href="langref/lcClassroom.html"
+												>lcClassroom</li><li class="ajaxLink file"
+												href="langref/lcClient.html">lcClient</li><li
+												class="ajaxLink file"
+												href="langref/lcConstraints.html"
+												>lcConstraints</li><li class="ajaxLink file"
+												href="langref/lcDelivDate.html"
+												>lcDelivDate</li><li class="ajaxLink file"
+												href="langref/lcDelivery.html">lcDelivery</li><li
+												class="ajaxLink file"
+												href="langref/lcDownloadTime.html"
+												>lcDownloadTime</li><li class="ajaxLink file"
+												href="langref/lcDuration.html">lcDuration</li><li
+												class="ajaxLink file"
+												href="langref/lcEdLevel.html">lcEdLevel</li><li
+												class="ajaxLink file"
+												href="langref/lcFileSizeLimitations.html"
+												>lcFileSizeLimitations</li><li
+												class="ajaxLink file"
+												href="langref/lcGapAnalysis.html"
+												>lcGapAnalysis</li><li class="ajaxLink file"
+												href="langref/lcGapItem.html">lcGapItem</li><li
+												class="ajaxLink file"
+												href="langref/lcGapItemDelta.html"
+												>lcGapItemDelta</li><li class="ajaxLink file"
+												href="langref/lcGeneralDescription.html"
+												>lcGeneralDescription</li><li
+												class="ajaxLink file" href="langref/lcGoals.html"
+												>lcGoals</li><li class="ajaxLink file"
+												href="langref/lcGraphics.html">lcGraphics</li><li
+												class="ajaxLink file"
+												href="langref/lcHandouts.html">lcHandouts</li><li
+												class="ajaxLink file"
+												href="langref/lcInstruction.html"
+												>lcInstruction</li><li class="ajaxLink file"
+												href="langref/lcInteraction.html"
+												>lcInteraction</li><li class="ajaxLink file"
+												href="langref/lcIntervention.html"
+												>lcIntervention</li><li class="ajaxLink file"
+												href="langref/lcInterventionItem.html"
+												>lcInterventionItem</li><li class="ajaxLink file"
+												href="langref/lcIntro.html">lcIntro</li><li
+												class="ajaxLink file"
+												href="langref/lcJtaItem.html">lcJtaItem</li><li
+												class="ajaxLink file"
+												href="langref/lcKnowledge.html"
+												>lcKnowledge</li><li class="ajaxLink file"
+												href="langref/lcLearnStrat.html"
+												>lcLearnStrat</li><li class="ajaxLink file"
+												href="langref/lcLMS.html">lcLMS</li><li
+												class="ajaxLink file"
+												href="langref/lcModDate.html">lcModDate</li><li
+												class="ajaxLink file"
+												href="langref/lcMotivation.html"
+												>lcMotivation</li><li class="ajaxLink file"
+												href="langref/lcNeeds.html">lcNeeds</li><li
+												class="ajaxLink file"
+												href="langref/lcNeedsAnalysis.html"
+												>lcNeedsAnalysis</li><li class="ajaxLink file"
+												href="langref/lcNextSteps.html"
+												>lcNextSteps</li><li class="ajaxLink file"
+												href="langref/lcNoLMS.html">lcNoLMS</li><li
+												class="ajaxLink file"
+												href="langref/lcObjective.html"
+												>lcObjective</li><li class="ajaxLink file"
+												href="langref/lcObjectives.html"
+												>lcObjectives</li><li class="ajaxLink file"
+												href="langref/lcObjectivesGroup.html"
+												>lcObjectivesGroup</li><li class="ajaxLink file"
+												href="langref/lcObjectivesStem.html"
+												>lcObjectivesStem</li><li class="ajaxLink file"
+												href="langref/lcOJT.html">lcOJT</li><li
+												class="ajaxLink file"
+												href="langref/lcOrganizational.html"
+												>lcOrganizational</li><li class="ajaxLink file"
+												href="langref/lcOrgConstraints.html"
+												>lcOrgConstraints</li><li class="ajaxLink file"
+												href="langref/lcPlanAudience.html"
+												>lcPlanAudience</li><li class="ajaxLink file"
+												href="langref/lcPlanDescrip.html"
+												>lcPlanDescrip</li><li class="ajaxLink file"
+												href="langref/lcPlanObjective.html"
+												>lcPlanObjective</li><li class="ajaxLink file"
+												href="langref/lcPlanPrereqs.html"
+												>lcPlanPrereqs</li><li class="ajaxLink file"
+												href="langref/lcPlanResources.html"
+												>lcPlanResources</li><li class="ajaxLink file"
+												href="langref/lcPlanSubject.html"
+												>lcPlanSubject</li><li class="ajaxLink file"
+												href="langref/lcPlanTitle.html"
+												>lcPlanTitle</li><li class="ajaxLink file"
+												href="langref/lcPlayers.html">lcPlayers</li><li
+												class="ajaxLink file"
+												href="langref/lcPrereqs.html">lcPrereqs</li><li
+												class="ajaxLink file"
+												href="langref/lcProcesses.html"
+												>lcProcesses</li><li class="ajaxLink file"
+												href="langref/lcProject.html">lcProject</li><li
+												class="ajaxLink file"
+												href="langref/lcResolution.html"
+												>lcResolution</li><li class="ajaxLink file"
+												href="langref/lcResources.html"
+												>lcResources</li><li class="ajaxLink file"
+												href="langref/lcReview.html">lcReview</li><li
+												class="ajaxLink file"
+												href="langref/lcSecurity.html">lcSecurity</li><li
+												class="ajaxLink file" href="langref/lcSkills.html"
+												>lcSkills</li><li class="ajaxLink file"
+												href="langref/lcSpecChars.html"
+												>lcSpecChars</li><li class="ajaxLink file"
+												href="langref/lcSummary.html">lcSummary</li><li
+												class="ajaxLink file" href="langref/lcTask.html"
+												>lcTask</li><li class="ajaxLink file"
+												href="langref/lcTaskItem.html">lcTaskItem</li><li
+												class="ajaxLink file"
+												href="langref/lcTechnical.html"
+												>lcTechnical</li><li class="ajaxLink file"
+												href="langref/lcTime.html">lcTime</li><li
+												class="ajaxLink file" href="langref/lcValues.html"
+												>lcValues</li><li class="ajaxLink file"
+												href="langref/lcViewers.html">lcViewers</li><li
+												class="ajaxLink file" href="langref/lcW3C.html"
+												>lcW3C</li><li class="ajaxLink file"
+												href="langref/lcWorkEnv.html">lcWorkEnv</li><li
+												class="ajaxLink file"
+												href="langref/lcWorkEnvDescription.html"
+												>lcWorkEnvDescription</li></div>
+												</ul></div>
+											</ul></div>
+									</ul><li class="ajaxLink folder" tabindex="0"
+										href="common/attributes.html">Attributes</li><ul
+										class="web-help-subnav">
+										<div><li class="ajaxLink folder" tabindex="0"
+												href="common/comrfet.html">Commonly referenced
+												attribute groups</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="common/display-atts.html">display-atts
+												attribute group</li><li class="ajaxLink file"
+												href="common/global-atts.html">global-atts
+												attribute group</li><li class="ajaxLink file"
+												href="common/univ-atts.html">univ-atts attribute
+												group</li><li class="ajaxLink file"
+												href="common/id-atts.html">id-atts attribute
+												group</li><li class="ajaxLink file"
+												href="common/select-atts.html">select-atts
+												attribute group</li><li class="ajaxLink file"
+												href="common/localization-atts.html"
+												>localization-atts attribute group</li><li
+												class="ajaxLink folder" tabindex="0"
+												href="common/relational-atts.html">relational-atts
+												attribute group</li><ul class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="common/rel-atts.html">rel-atts attribute
+												group</li></div>
+												</ul><li class="ajaxLink file"
+												href="common/topicref-atts.html">topicref-atts,
+												topicref-atts-no-toc, and
+												topicref-atts-without-format attribute
+												groups</li><li class="ajaxLink file"
+												href="common/othercommon.html">Other common DITA
+												attributes</li></div>
+											</ul><li class="ajaxLink folder" tabindex="0"
+												href="common/complexattributedefinitions.html"
+												>Complex attribute definitions</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="common/thehrefattribute.html">The href
+												attribute</li><li class="ajaxLink file"
+												href="common/thekeysattribute.html">The keys
+												attribute</li><li class="ajaxLink file"
+												href="common/thekeyrefattribute.html">The keyref
+												attribute</li><li class="ajaxLink folder"
+												tabindex="0" href="common/theconrefattribute.html"
+												>The conref attribute</li><ul
+												class="web-help-subnav">
+												<div><li class="ajaxLink file"
+												href="common/ditauseconreftarget.html">Using the
+												-dita-use-conref-target value</li></div>
+												</ul><li class="ajaxLink file"
+												href="common/theconactionattribute.html">The
+												conaction attribute</li><li class="ajaxLink file"
+												href="common/theconrefendattribute.html">The
+												conrefend attribute</li><li class="ajaxLink file"
+												href="common/theconkeyrefattribute.html">The
+												conkeyref attribute</li><li class="ajaxLink file"
+												href="common/thetypeattribute.html">The type
+												attribute</li><li class="ajaxLink file"
+												href="common/theformatattribute.html">The format
+												attribute</li><li class="ajaxLink file"
+												href="common/thescopeattribute.html">The scope
+												attribute</li><li class="ajaxLink file"
+												href="common/theroleattribute.html">The role
+												attribute</li></div>
+											</ul></div>
+									</ul><li class="ajaxLink folder" tabindex="0"
+										href="element-quick-reference.html">Element quick
+										reference</li><ul class="web-help-subnav">
+										<div><li class="ajaxLink file"
+												href="common/base_elements_a_to_z.html">Base DITA
+												elements, A to Z</li><li class="ajaxLink file"
+												href="common/technical_content_elements_a_to_z.html"
+												>Technical content elements, A to Z</li><li
+												class="ajaxLink file"
+												href="common/learning_training_elements_a_to_z.html"
+												>Learning and training elements, A to Z</li><li
+												class="ajaxLink file"
+												href="common/alldita1.2elements_a_to_z.html">All
+												DITA 1.2 elements, A to Z</li></div>
+									</ul></div>
+							</ul>
+							<li class="ajaxLink file" href="conformance.html">Conformance</li>
+							<li class="ajaxLink file" href="r-acknowledgments.html"
+								>Acknowledgments</li>
+							<li class="ajaxLink folder" tabindex="0"
+								href="non-normative/non-normative-information.html">Non-normative
+								information</li>
+							<ul class="web-help-subnav">
+								<div><li class="ajaxLink folder" tabindex="0"
+										href="non-normative/changes-from-previous-versions.html"
+										>Changes from previous versions</li><ul
+										class="web-help-subnav">
+										<div><li class="ajaxLink file"
+												href="non-normative/new-in_1_2.html">Changes from
+												DITA 1.1 to DITA 1.2</li><li class="ajaxLink file"
+												href="non-normative/new-in_1_1.html">Changes from
+												DITA 1.0 to DITA 1.1</li></div>
+									</ul><li class="ajaxLink file"
+										href="non-normative/migration-1_1-to-1_2.html">Migrating
+										from DITA 1.1 to 1.2</li><li class="ajaxLink file"
+										href="non-normative/DITA-mime-type.html">DITA MIME
+										type</li><li class="ajaxLink file"
+										href="non-normative/foreigngeneralization.html"
+										>Considerations for generalizing &lt;foreign&gt;
+										elements</li><li class="ajaxLink file"
+										href="non-normative/elementsMerged.html">Element-by-element
+										recommendations for translators</li><li
+										class="ajaxLink file"
+										href="non-normative/dita-module-impl-ref.html">DITA module
+										and shell implementation reference</li><li
+										class="ajaxLink file"
+										href="non-normative/dtdorganization.html">DTD
+										organization</li><li class="ajaxLink file"
+										href="non-normative/schemaorganization.html">XML schema
+										organization</li><li class="ajaxLink file"
+										href="non-normative/filenaming-processing-modules.html"
+										>Processing component modularization and naming
+										conventions</li><li class="ajaxLink file"
+										href="non-normative/interoperability-considerations.html"
+										>Processing interoperability considerations</li><li
+										class="ajaxLink file" href="non-normative/speclimits.html"
+										>Specialization design, customization, and the limits of
+										specialization</li></div>
+							</ul>
+						</ul>
+					</div><div id="web-help-c2"></div></div></div><div id="footer">//</div><div id="drag-container"
+				class="dragdealer"><div id="drag-handle" class="handle"><div id="drag-button"><div
+							id="drag-icon-bg"></div><div id="drag-icon"
+			></div></div></div></div></div><script type="text/javascript">
 				var dd = new Dragdealer('drag-container',
 				{horizontal: true, vertical: true, tapping: false, loose: true, steps: 2, y: 0, x: 1,
 				animationCallback: function(x,y) {slideNav(x,y)}, callback: function(x,y) {fadeHandle(x,y)}});
