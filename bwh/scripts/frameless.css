@@ -72,9 +72,11 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  min-height: 100%;
-  font-size: 100%;
-  font-family: sans-serif;
+	margin:0;
+	padding:0;
+	min-height: 100%;
+	font-size: 100%;
+	font-family: serif;
 }
 sub,
 sup {
@@ -126,6 +128,7 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
@@ -141,7 +144,7 @@ textarea {
 	Type presets
 */
 body {
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 1.5em;
   font-family: sans-serif;
 }
@@ -156,12 +159,13 @@ h4 {
 To create the gray pointed trapezoid
 */
 #drag-icon-bg {
+  background:#F0783C;	
   position: relative;
   text-align: center;
   padding: 0;
-  margin-bottom: 0.3125em;
+  margin-bottom: 10px;
   height: 4.6875em;
-  width: 4.375em;
+  width: 40px;
   z-index: 1;
 }
 #drag-icon-bg:before {
@@ -170,17 +174,11 @@ To create the gray pointed trapezoid
   top: 0;
   left: 0;
   height: 100%;
-  width: 51%;
-  background: #eee;
   -webkit-transform: skew(0deg, -6deg);
   -moz-transform: skew(0deg, -6deg);
   -ms-transform: skew(0deg, -6deg);
   -o-transform: skew(0deg, -6deg);
   transform: skew(0deg, -6deg);
-  -moz-border-radius: 5px 0 0 0;
-  -webkit-border-radius: 5px 0 0 0;
-  border-radius: 5px 0 0 0;
-  -khtml-border-radius: 5px 0 0 0;
 }
 #drag-icon-bg:after {
   content: '';
@@ -188,8 +186,6 @@ To create the gray pointed trapezoid
   top: 0;
   right: 0;
   height: 100%;
-  width: 50%;
-  background: #eee;
   -webkit-transform: skew(0deg, 6deg);
   -moz-transform: skew(0deg, 6deg);
   -ms-transform: skew(0deg, 6deg);
@@ -202,7 +198,7 @@ To create the gray pointed trapezoid
 }
 /*
 To create the three arrow lines within the icon
-*/
+
 #drag-icon:before {
   content: '';
   z-index: 2;
@@ -236,265 +232,328 @@ To create the three arrow lines within the icon
   -ms-transform: skew(0deg, 6deg);
   -o-transform: skew(0deg, 6deg);
   transform: skew(0deg, 6deg);
-}
-.fade {
-  opacity: 0.2;
-  transition: opacity 0.5s ease-in-out;
-}
-.unfade {
-  opacity: 1.0;
-  transition: opacity 0.5s ease-in-out;
-}
+}*/
 /***** end drag up button styles *****/
 /***** Shading for depth effects *****/
-.z-depth0 {
-  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.28);
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.28);
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.28);
-}
-.z-depth1 {
+.Z-Depth1 {
   -moz-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
   -webkit-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
   box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
 }
-.z-depth2 {
+.Z-Depth2 {
   -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
 }
-.z-depth3 {
+.Z-Depth3 {
   -moz-box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
 }
-.z-depth4 {
+.Z-Depth4 {
   -moz-box-shadow: 0 14px 25px 0 rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 14px 25px 0 rgba(0, 0, 0, 0.35);
   box-shadow: 0 14px 25px 0 rgba(0, 0, 0, 0.35);
 }
-.z-depth5 {
+.Z-Depth5 {
   -moz-box-shadow: 0 19px 32px 0 rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 19px 32px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 19px 32px 0 rgba(0, 0, 0, 0.4);
 }
 /***** End shading for depth effects *****/
+
 /***** search box etc styling *****/
+
+::-webkit-input-placeholder {
+    color:    #AAA;
+	padding-top:5px;
+	line-height:10px;
+	font-size:14px;
+}
+:-moz-placeholder {
+    color:    #AAA;
+}
+::-moz-placeholder {
+    color:    #AAA;
+}
+:-ms-input-placeholder {
+    color:    #AAA;
+}
+
 .clearable {
-  background: url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -30px center;
-  background-color: white;
-  border: 1px solid #999;
-  padding: 3px 18px 3px 4px;
-  /* USE the same right padding in jQ! */
-  border-radius: 10px;
-  transition: background 0.4s;
-  /*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
-  outline: none;
+	background: url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -30px center;
+	background-color: white;
+	border: none;
+	padding: 3px 18px 3px 4px;
+	/* USE the same right padding in jQ! */
+	border-radius: 5px;
+	transition: background 0.4s;
+	/*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
+	outline: none;
 }
 .clearable.x {
   background-position: right 10px center;
 }
+
 .clearable.onX {
   cursor: pointer;
 }
 #search-button {
-  border-radius: 8px;
+  font-size:1em;
+  color:#FFF;
+  border:none;
+  border-radius: 4px;
+  background-color:#F27A3E;
   outline: none;
   position: relative;
   float: right;
 }
+
+#search-button:hover {
+  color:#F27A3E;
+  border:none;
+  border-radius: 4px;
+  background-color:#FFF;
+  outline: none;
+  position: relative;
+  float: right;
+}
+
 #search-bar {
-  position: fixed;
-  top: 17px;
-  right: 10px;
-  width: 16.875em;
-  z-index: 100;
+	margin-top:5px;
+	position: fixed;
+	top: 30px;
+	right: 20px;
+	z-index: 100;
 }
 .typeahead,
 .twitter-typeahead,
 .tt-input {
   width: 12.5em;
+  color:#333;
+  font-size:16px;
+  line-height:20px;
 }
 .tt-dropdown-menu {
-  -moz-box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-  border-radius: 6px;
-  border: 1px solid #aaa;
-  padding: 5px;
-  max-height: 60vh;
-  overflow: auto;
+	-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	border: 1px solid #DDD;
+	padding: 5px;
 }
 .tt-hint {
   color: rgba(0, 0, 0, 0.45);
 }
 .tt-suggestion {
-  font-size: 0.875em;
+  font-size: 14px;
+  color:#444444;
 }
 .tt-suggestion :hover {
   cursor: pointer;
 }
 .tt-cursor {
-  background-color: #ddd;
+  color: #F27A3E;
 }
 /***** end search box etc styling *****/
 /***** common styles *****/
 #container {
   margin: 0;
   width: 100%;
-  height: 100vh;
+  height: 100;
 }
+
 #heading {
-  -moz-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
-  -webkit-box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
-  box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.28);
-  background-color: #888;
-  height: 4em;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
+	border-top: solid 4px #F27A3E;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+	height: 76px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
 }
 #heading h1 {
-  font-size: 1.75em;
+  opacity:1;
   color: #fff;
+  margin-top:5px;
   padding: 0.625em;
   position: relative;
   float: left;
+  font-family:"Walkway Rounded", "Walkway SemiBold", "Walkway Condensed SemiBold", "Walkway UltraCondensed Semi";
 }
 #heading img {
+  background:url(heading/logo2.jpg);
   width: auto;
   margin: auto;
   height: 64px;
   position: relative;
   float: left;
 }
-#footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  border-top: 1px solid gray;
-}
 .web-help-nav-container {
   overflow: auto;
 }
 .web-help-nav {
-  font-size: 0.75em;
-  margin: 0.25em auto 0.25em 0.25em;
-  list-style-type: none;
+
+	padding: 0;
+	list-style-type: none;
 }
 .web-help-subnav {
-  margin: 0;
-  list-style-type: none;
-  overflow: hidden;
-  padding-left: 1.875em;
+	margin: 0;
+	list-style-type: none;
+	overflow: hidden;
+	padding-left: .5em;
 }
+
+ #web-help-c1 li {
+}
+
+#web-help-c1 li.file {
+  font-size:16px;
+  color:#888888;
+  line-height:25px;
+  letter-spacing: 2px;
+}
+
 #web-help-c1 li.file:link {
-  text-decoration: none;
-  color: #000000;
 }
+
 #web-help-c1 li.file:visited {
-  text-decoration: none;
-  color: #000000;
+  color: #E46225;
 }
 #web-help-c1 li.file:hover {
-  text-decoration: none;
-  color: #fff;
+	color: #333333;
 }
 #web-help-c1 li.file:active {
-  text-decoration: none;
-  color: #000000;
+	color: #F27A3E;  
 }
+
+.web-help-nav li.folder {
+	line-height:25px;
+	font-size: 18px;
+	font-family: "Walkway Condensed Bold";
+	color: #00579B;
+	letter-spacing: 2px;
+	
+}
+
 .web-help-nav li.folder:hover {
-  background-color: #ddd;
+	font-size:20px;
+	color: #00579b;
 }
+
 .web-help-nav li.folder:focus {
-  background-color: #ccc;
+	
+  font-size:20px;
+  color:#E46225;
   outline: none;
+  
 }
 #web-help-c1 li.file,
 #web-help-c1 li.folder {
+  
   cursor: pointer;
-}
-#web-help-c1 li {
-  padding-right: 0.3125em;
+  padding:0;
 }
 #web-help-c2 a:link {
-  text-decoration: underline;
-  color: #000000;
+	-webkit-text-stroke: 1px #222222;
+	letter-spacing: 2px;
+	list-style-type: none;
+	text-decoration: none;
+	font-family: "Walkway Condensed SemiBold", "Walkway UltraCondensed Semi";
+	color: #333333;
+	font-size: 18x;
 }
 #web-help-c2 a:visited {
-  text-decoration: underline;
-  color: #000000;
+  opacity: 0.6;
+  text-decoration: none;
+  -webkit-text-stroke: 1px #888888;
+  color: #888888;
 }
 #web-help-c2 a:hover {
   text-decoration: none;
-  color: #5C5CD6;
+  -webkit-text-stroke: 1px #E46225;
+  color: #E46225;
 }
 #web-help-c2 a:active {
-  text-decoration: underline;
-  color: #FF4D4D;
+  text-decoration:none;
+  -webkit-text-stroke: 1px #888888;
+  color: #888888;
 }
 #web-help {
   height: 100%;
   width: 100%;
 }
+
+
+/* SIDE BAR STYLE*/
+
 #web-help-c1 {
-  -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
-  width: 30%;
-  position: fixed;
-  z-index: 10;
-  float: left;
-  background-color: #eee;
-  margin-bottom: 0.9375em;
-  padding: 0.3125em 0 0.3125em 0.3125em;
-  overflow: hidden;
+	-moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+	-webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+	width: 30%;
+	position: fixed;
+	top: 80px;
+	z-index: 10;
+	float: left;
+	background-color: #F1F1F1;
+	margin-bottom: -6.25em;
+	padding: 0;
+	overflow: hidden;
+	margin-top: 0;
+	margin-right: 0px;
+	margin-left: 0px;
+	clear: both;
+	
 }
+
 #web-help-c2 {
-  width: 70%;
-  position: fixed;
-  z-index: 1;
-  right: 0;
-  padding: 3%;
-  font-family: serif;
-  top: 64px;
-  overflow: auto;
-  top: 0;
-  bottom: 1.5625em;
+	opacity:1;
+	width: 70%;
+	position: fixed;
+	z-index: 1;
+	right: 0;
+	margin-top: 80px;
+	overflow: auto;
+	top: 0;
+	bottom: 0;
 }
 #web-help-c2 h1 {
+	color: #01579b;
   font-size: 1.625em;
   font-weight: normal;
   margin-bottom: 0.3125em;
-  border-bottom: solid 2px gray;
+  border-bottom: solid 2px #F27A3E;
   line-height: 125%;
-  font-family: sans-serif;
 }
 #web-help-c2 .shortdesc {
-  font-size: 0.875em;
-  font-style: italic;
+	font-size: 14px;
+	color: #888888;
+	font-style: italic;
+	font-family: "Helvetica Neue Medium", "Helvetica Neue Light", "Helvetica Neue", "Helvetica Light", Helvetica;
+	margin-bottom: 20px;
+	line-height: 150%;
 }
 #drag-container {
   position: fixed;
   z-index: 9;
   bottom: -2.60416667em;
   left: 50%;
-  margin-left: -2.1875em;
-  width: 4.375em;
+  margin-left: -20px;
+  width: 40px;
   top: 24.25%;
   pointer-events: none;
 }
 #drag-handle {
   pointer-events: auto;
-}
+  }
+
 #heading,
 #web-help-c2 {
   pointer-events: none;
-  opacity: 0.3;
-}
+  opacity:1.0;
+  }
 #result-set li {
   list-style-type: none;
 }
@@ -502,19 +561,25 @@ To create the three arrow lines within the icon
   border-bottom: 10px double #333;
 }
 .result-title {
+  color: #00579B;
   line-height: 1em;
   margin-top: 0.625em;
   margin-bottom: 0.4375em;
 }
+
+.result-title:hover {
+  color: #E46225;
+}
+
 .result-tree {
   font-size: 0.6875em;
-  color: #000;
+  color: #888888;
   line-height: 1.25em;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #DDDDDD;
   padding-bottom: 0.625em;
 }
 .result-element:hover {
-  color: #5C5CD6;
+  color: #E46225;
   cursor: pointer;
 }
 /***** end common styles *****/
@@ -524,63 +589,78 @@ To create the three arrow lines within the icon
 **/
 @media screen and (min-width: 15em) {
   #heading {
-    height: 8em;
+	  background-color:#00579B;
+	  height:76px;
   }
   #heading h1 {
+	  opacity:0;
     width: 100%;
   }
   #heading img {
     float: none;
     margin: auto;
     position: relative;
+	height: 70px;
+	width:auto;
   }
-  #footer {
-    left: 0;
-  }
-  #search-bar {
-    top: 5.1875em;
-    width: 12.5em;
+
+   #search-bar {
+	margin:0;
+    width: 200px;
   }
   .typeahead,
   .twitter-typeahead,
   .tt-input {
-    width: 8.125em;
+    width: 130px;
   }
-  .tt-dropdown-menu {
-    width: 10em;
-  }
+  
+  #search-button {
+	font-size:18px;
+}
+  
+  .web-help-nav {
+	margin: 10px 0 0 15px;
+}
+  
   #web-help-c1 {
-    width: 90%;
-    bottom: -6.25em;
-    top: 30%;
-    overflow-y: scroll;
-    position: fixed;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-bottom: solid 6.25em #eeeeee;
-    border-top: solid 0.3125em #eeeeee;
-    -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.28);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.28);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.28);
+  border-top: 10px solid #F1793D;
+  top:32%;
+  bottom: -0.625em;
+  -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: #eee;
+  margin-bottom: -0.625em;
+  padding:0;
+  overflow: hidden;
   }
+
   #heading,
   #web-help-c2 {
     pointer-events: none;
-    opacity: 0.3;
+    opacity:0.3;
   }
   #web-help-c2 {
     float: none;
     width: 94%;
-    padding: 3%;
-    top: 8em;
+    padding-right: 3%;
+	padding-left: 3%;
+	padding-top: 3%;
+	padding-bottom:40px;
   }
   #web-help-c2 img {
     max-width: 16.5em;
   }
   #web-help-c2 ul {
+	margin-top:10px;
+	list-style-type:none;
     margin-left: 0.625em;
   }
   #web-help-c2 li {
+	margin-bottom:5px;
     margin-left: 1.25em;
   }
 }
@@ -590,10 +670,26 @@ To create the three arrow lines within the icon
 	Zoomed in above 480 px
 */
 @media screen and (min-width: 30em) {
+  #heading {
+	background-color: #00579B;
+	height:76px;
+  }
+  
+
+  #heading,
+  #web-help-c2 {
+    pointer-events: none;
+	opacity:0.3;
+  }
+  	
   #web-help-c1 {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+	-moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   #web-help-c2 img {
     max-width: 25.5em;
@@ -604,7 +700,21 @@ To create the three arrow lines within the icon
   #web-help-c2 li {
     margin-left: 1.25em;
   }
+  
+    #search-bar {
+	margin:0;
+    width: 240px;
+  }
+  .typeahead,
+  .twitter-typeahead,
+  .tt-input {
+    width: 170px;
+  }
+  
+  #search-button {
+	font-size:18px;
 }
+  
 /*
 	Tablet layout 
 	600-911 px
@@ -612,70 +722,89 @@ To create the three arrow lines within the icon
 */
 @media screen and (min-width: 37.5em) {
   #heading {
-    background-color: #888;
-    height: 4em;
+	background-color: #00579B;
+	height:76px;
   }
+  
   #heading h1 {
-    font-size: 1.75em;
-    color: #fff;
+	opacity:1;
+    font-size: 1em;
+    color: #FFF;
     padding: 0.625em;
     position: relative;
     float: left;
     width: auto;
+    letter-spacing:1.5px;
   }
   #heading img {
     width: auto;
     margin: auto;
-    height: 4em;
+    height: 68px;
     position: relative;
     float: left;
   }
-  #footer {
-    left: 10.6875em;
-  }
   #search-bar {
-    top: 1.1875em;
-    width: 12.5em;
+    margin-top:0px;
+	top: 30px;
+    width: 270px;
   }
+  
+#search-button {
+	font-size:18px;
+}
+
   .typeahead,
   .twitter-typeahead,
   .tt-input {
-    width: 8.125em;
+    width: 200px;
   }
+  
   #web-help {
     float: left;
   }
+  
+.web-help-nav {
+	margin: 20px 0 0 20px;
+}
+  
+  .web-help-subnav {
+	margin: 0;
+	list-style-type: none;
+	overflow: hidden;
+	padding-left:0.25em;
+}
+  
   #web-help-c1 {
-    width: 10.625em;
-    border-bottom: none;
-    border-top: none;
-    border-right: solid 1px gray;
-    margin: auto;
-    position: fixed;
-    bottom: 0;
-    top: 4em;
-    -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
-    -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.26);
+	  	-moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -khtml-border-radius: 0px;
+	padding: 0;
+	width: 300px;
+	border-bottom: none;
+	border-top: none;
+	margin: 0;
+	position: fixed;
+	bottom: 0;
+	top: 80px;
   }
+  
   #heading,
   #web-help-c2 {
     pointer-events: auto;
-    opacity: 1.0;
+	opacity:1.0;
   }
   #web-help-c2 {
-    width: auto;
-    padding: 0.4375em 5% 0.25em 0.25em;
-    float: right;
-    top: 4em;
-    left: 13em;
-    right: 0;
+	width: 67%;
+	padding: 0.4375em 5% 0.25em 0.25em;
+	float: right;
+	margin-top:100px;
   }
   #web-help-c2 img {
     max-width: 24.15em;
   }
   #web-help-c2 ul {
-    margin-left: 0.9375em;
+    margin-left: 0;
   }
   #web-help-c2 li {
     margin-left: 1.5625em;
@@ -690,38 +819,50 @@ To create the three arrow lines within the icon
 	912-infinity px
 */
 @media screen and (min-width: 57em) {
-  #search-bar {
-    top: 1.1875em;
-    width: 16.875em;
+    #heading h1 {
+    font-size: 1.25em;
+    color: #FFF;
+    padding: 0.625em  ;
+    position: relative;
+    float: left;
+    width: auto;
+	letter-spacing:1.5px;
   }
+
+  #search-bar {
+	top:30px;
+	margin-top:0px;
+    width:300px;
+  }
+
+#search-button {
+	font-size:18px;
+}
+
+  
   .typeahead,
   .twitter-typeahead,
   .tt-input {
-    width: 12.5em;
-  }
-  .tt-dropdown-menu {
-    width: 14em;
-  }
-  #footer {
-    left: 15.25em;
+    width: 230px;
   }
   #web-help-c1 {
-    width: 15.1875em;
+	
   }
   #web-help-c2 {
-    left: 18em;
-    right: 0;
-    width: auto;
-    padding: 0.9375em 10% 0.625em 0.625em;
+    max-width: 43.75em;
+  }
+  #web-help-c2 {
+	width: 80%;
+	padding: 0.9375em 5% 0.625em 0.625em;
   }
   #web-help-c2 img {
     max-width: 36.75em;
   }
   .web-help-nav {
-    margin: 0.5em auto 0.5em 0.25em;
+    margin: 20px 0 0 20px;
   }
   .web-help-subnav {
-    margin: auto auto 0.5em 1.75em;
+	margin: auto auto 0.5em 0;
   }
   .web-help-subnav {
     margin: 0;
@@ -740,4 +881,16 @@ To create the three arrow lines within the icon
   body {
     font-size: 1.125em;
   }
+  
+  #heading h1 {
+    font-size: 1.75em;
+    color: #FFF;
+	margin-top:5px;
+    padding: 0.625em;
+    position: relative;
+    float: left;
+    width: auto;
+	letter-spacing:1.5px;
+  }
+  
 }
