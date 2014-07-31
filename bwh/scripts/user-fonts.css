@@ -18,14 +18,20 @@
  */
  
  #web-help-c1 {
-	font-family:"Helvetica Neue", Helvetica, "Helvetica Light";
+	font-family: "Walkway Condensed Bold", "Walkway Rounded", "Walkway Condensed SemiBold", "Walkway Condensed", "Walkway Black";
 }
  #web-help-c2 {
-/*	font-size:20px;*/
-	color:#333; 
-	font-family: "Open Sans", "Helvetica", "Sans Serif"}
+	font-size: 18px;
+	color: #666666;
+	font-family: "Helvetica Neue Thin","Helvetica Neue Light", "Helvetica Neue", "Helvetica Light", Helvetica;
+}
 	
- #web-help-c2 h1 {font-family:"Walkway Rounded", "Walkway SemiBold", "Walkway Condensed SemiBold", "Walkway UltraCondensed Semi";}
+ #web-help-c2 h1 {
+	 font-family: "Walkway Condensed Bold";
+	 -webkit-text-stroke: 1.5px #01579b;
+	 letter-spacing:3px;
+ }
+ 
  
  /*
   * 
