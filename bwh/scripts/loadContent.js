@@ -18,12 +18,17 @@ function loadContent (location,url,shrinkNav) {
 	};
 };
 
-function expandSubNav(item) {
+function expandSubNav(item,restrict) {
+
+// Acceptable values for restrict are: "expand" , "collapse" or "no"
+// Expand will only expand the subnav, and won't do anything if already open
+// Collapse will only collapse the subnav, and won't do anything if already closed
+	if (!restrict) {restrict = "no"};
 
 	var div = $(item).next();
 	var dd = $(item).next().children()[0];
 
-	if ($(div).hasClass("collapsed")) {
+	if ($(div).hasClass("collapsed") && restrict != "collapse") {
 		$(div).removeClass("collapsed");
 		$(div).addClass("moving");
 		$(div).css("display","block");
@@ -31,7 +36,7 @@ function expandSubNav(item) {
 			$(this).parent().removeClass("moving");
 			$(this).parent().addClass("expanded");
 		});
-	} else if ($(div).hasClass("expanded")) {
+	} else if ($(div).hasClass("expanded") && restrict != "expand") {
 		$(div).removeClass("expanded");
 		$(div).addClass("moving");
 		$(dd).animate({'margin-top': -($(div).height()+15)},500,"easeOutQuad",function() {
@@ -142,7 +147,7 @@ window.onhashchange = function() {
 		var siteloc = location.hash.substring(1);
 	
 		if (siteloc == "") {
-			// Figure out a way to display a blank page
+			loadContent("#web-help-c2",'preface.html');
 		} else {
 			linkClicked = document.activeElement;
 			if ($(linkClicked).hasClass('folder')) {
@@ -151,6 +156,9 @@ window.onhashchange = function() {
 				loadContent("#web-help-c2",siteloc);
 			}
 		}
+		
+		openNavTree();
+		
 	} else {
 		$('#q').val(location.hash.substring(3));
 		doSearch();
@@ -162,17 +170,50 @@ window.onhashchange = function() {
 	
 }
 
+function getPathAfterUpFolder(link) {
+	if (link.indexOf("./") == -1) {
+		return link;
+	} else if (link.indexOf("../") == -1) {
+		return getPathAfterUpFolder(link.substring(link.indexOf("../")+3));
+	} else {
+		return getPathAfterUpFolder(link.substring(link.indexOf("./")+2));
+	}
+}
+
+function openNavTree() {
+	if (location.hash.indexOf('q=') == -1 && location.hash.length > 1) {
+		var href = getPathAfterUpFolder(location.hash.substring(1));
+		var el = $('#web-help-c1 li[href*="'+href+'"');
+		if ($(el).next().hasClass("web-help-subnav")) {
+			expandSubNav(el,"expand");
+		}
+		tempel = el;
+		while (!$(tempel).parent().hasClass('web-help-nav')) {
+			tempel = tempel.parent().parent().prev();
+			expandSubNav(tempel, "expand");
+		}
+		setTimeout(function() {
+			$("#web-help-c1").animate({
+				scrollTop: ($(el).offset().top - ($(window).height()/2))
+			}, 200);
+		}, 500);
+	}
+}
+
 function firstLoad() {
 	if (loaded != 2) {
 		setTimeout(firstLoad, 50);
 	} else {
-		if (location.hash != '') {
+		if (location.hash.length > 1) {
 			if (location.hash.indexOf('q=') != -1) {
 				$('#q').val(location.hash.substring(3));
 				doSearch();
 			} else {
 				loadContent("#web-help-c2",location.hash.substring(1));
+				openNavTree();
 			}
+		} else {
+			loadContent("#web-help-c2","preface.html");
 		}
 	}
 }
@@ -223,6 +264,10 @@ $( document ).ready(function() {
 	
 	$(document).on("click","#drag-handle",function (e) {
 		openCloseNav();
+	});
+	
+	$(document).on("click","#heading h1", function(e) {
+		location.hash = '';
 	});
 	
 });

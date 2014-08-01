@@ -65,45 +65,47 @@
             <!-- If there is a reference to a DITA or HTML file, and it is not external: -->
             <xsl:when test="normalize-space(@href)">
 <!--              <xsl:element name="a">-->
-              	<xsl:attribute name="href">
+            	<xsl:attribute name="href">
               		<xsl:choose>
-                    <xsl:when test="@copy-to and not(contains(@chunk, 'to-content')) and 
-                                    (not(@format) or @format = 'dita' or @format = 'ditamap') ">
-                      <xsl:if test="not(@scope = 'external')">
-                      	<xsl:value-of select="$pathFromMaplist"/>
-                      </xsl:if>
-                      <xsl:call-template name="replace-extension">
-                      	<xsl:with-param name="filename" select="@copy-to"/>
-                        <xsl:with-param name="extension" select="$OUTEXT"/>
-                      </xsl:call-template>
-                      <xsl:if test="not(contains(@copy-to, '#')) and contains(@href, '#')">
-                        <xsl:value-of select="concat('#', substring-after(@href, '#'))"/>
-                      </xsl:if>
-                    </xsl:when>
-                    <xsl:when test="not(@scope = 'external') and (not(@format) or @format = 'dita' or @format = 'ditamap')">
-                      <xsl:value-of select="$pathFromMaplist"/>
-                      <xsl:call-template name="replace-extension">
-                      	<xsl:with-param name="filename" select="@href"/>
-                        <xsl:with-param name="extension" select="$OUTEXT"/>
-                      </xsl:call-template>
-                    </xsl:when>
-                    <xsl:otherwise><!-- If non-DITA, keep the href as-is -->
-                      <xsl:if test="not(@scope = 'external')">
-                      	<xsl:value-of select="$pathFromMaplist"/>
-                      </xsl:if>
-                    	<xsl:value-of select="@href"/>
-                    </xsl:otherwise>
-                  </xsl:choose>
-              	</xsl:attribute>
+	                    <xsl:when test="@copy-to and not(contains(@chunk, 'to-content')) and 
+	                                    (not(@format) or @format = 'dita' or @format = 'ditamap') ">
+	                      <xsl:if test="not(@scope = 'external')">
+	                      	<xsl:value-of select="$pathFromMaplist"/>
+	                      </xsl:if>
+	                      <xsl:call-template name="replace-extension">
+	                      	<xsl:with-param name="filename" select="@copy-to"/>
+	                        <xsl:with-param name="extension" select="$OUTEXT"/>
+	                      </xsl:call-template>
+	                      <xsl:if test="not(contains(@copy-to, '#')) and contains(@href, '#')">
+	                        <xsl:value-of select="concat('#', substring-after(@href, '#'))"/>
+	                      </xsl:if>
+	                    </xsl:when>
+	                    <xsl:when test="not(@scope = 'external') and (not(@format) or @format = 'dita' or @format = 'ditamap')">
+	                      <xsl:value-of select="$pathFromMaplist"/>
+	                      <xsl:call-template name="replace-extension">
+	                      	<xsl:with-param name="filename" select="@href"/>
+	                        <xsl:with-param name="extension" select="$OUTEXT"/>
+	                      </xsl:call-template>
+	                    </xsl:when>
+	                    <xsl:otherwise><!-- If non-DITA, keep the href as-is -->
+	                      <xsl:if test="not(@scope = 'external')">
+	                      	<xsl:value-of select="$pathFromMaplist"/>
+	                      </xsl:if>
+	                    	<xsl:value-of select="@href"/>
+	                    </xsl:otherwise>
+                  	</xsl:choose>
+              	
+			        </xsl:attribute>
+			        <xsl:value-of select="$title"/>
+              	
                 <xsl:if test="@scope = 'external' or not(not(@format) or @format = 'dita' or @format = 'ditamap')">
                   <xsl:attribute name="target">_blank</xsl:attribute>
                 </xsl:if>
-                <xsl:value-of select="$title"/>
               <!--</xsl:element>-->
             </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="$title"/>
-            </xsl:otherwise>
+          	<xsl:otherwise>
+          		<xsl:value-of select="$title"/>
+          	</xsl:otherwise>
           </xsl:choose>
         </li>
       	<!-- If there are any children that should be in the TOC, process them -->

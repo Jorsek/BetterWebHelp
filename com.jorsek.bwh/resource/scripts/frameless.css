@@ -361,6 +361,7 @@ To create the three arrow lines within the icon
   padding: 0.625em;
   position: relative;
   float: left;
+  cursor: pointer;
 }
 #heading img {
   width: auto;
@@ -416,6 +417,9 @@ To create the three arrow lines within the icon
 #web-help-c1 li.file,
 #web-help-c1 li.folder {
   cursor: pointer;
+}
+#web-help-c1 li {
+  padding-right: 0.3125em;
 }
 #web-help-c2 a:link {
   text-decoration: underline;
@@ -550,7 +554,7 @@ To create the three arrow lines within the icon
     width: 90%;
     bottom: -6.25em;
     top: 30%;
-    overflow-y: scroll;
+    overflow-y: auto;
     position: fixed;
     margin-left: 5%;
     margin-right: 5%;

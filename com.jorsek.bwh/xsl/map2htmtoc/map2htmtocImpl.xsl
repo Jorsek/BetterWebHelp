@@ -3,7 +3,7 @@
      Sourceforge.net. See the accompanying license.txt file for 
      applicable licenses.-->
 <!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
-<xsl:stylesheet version="1.0"
+<xsl:stylesheet version="2.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot"
                 xmlns:ditamsg="http://dita-ot.sourceforge.net/ns/200704/ditamsg"
@@ -28,6 +28,7 @@
 <xsl:import href="plugin:org.dita.base:xsl/common/dita-textonly.xsl"/>
 
 <xsl:output method="html" indent="no" encoding="UTF-8"/>
+<xsl:output method="html" indent="yes" name="html"/>
 
 <!-- Set the prefix for error message numbers -->
 <xsl:variable name="msgprefix">DOTX</xsl:variable>
@@ -43,6 +44,7 @@
 <xsl:param name="dita-css" select="'commonltr.css'"/> <!-- left to right languages -->
 <xsl:param name="bidi-dita-css" select="'commonrtl.css'"/> <!-- bidirectional languages -->
 <xsl:param name="OUTFILE"/>
+<xsl:param name="OUTPUTDIR"/>
 <xsl:param name="OUTPUTCLASS"/>   <!-- class to put on body element. -->
 <!-- the path back to the project. Used for c.gif, delta.gif, css to allow user's to have
   these files in 1 location. -->
@@ -100,7 +102,7 @@
 						</div>
 <!-- web-help-c2 will contain the content information loaded through ajax -->
 						<div id="web-help-c2">
-							
+							//
 						</div>
 					</div>
 				</div>
@@ -226,6 +228,9 @@
 <!-- This is active -->
 <xsl:template match="/*[contains(@class, ' map/map ')]">
   <xsl:param name="pathFromMaplist"/>
+  <xsl:if test="self::*[contains(@class, ' bookmap/bookmap ' )]">
+  	<xsl:call-template name="bookmap-preface"/>
+  </xsl:if>
   <xsl:if test=".//*[contains(@class, ' map/topicref ')][not(@toc='no')][not(@processing-role='resource-only')]">
     <ul class="web-help-nav"><xsl:value-of select="$newline"/>
 
@@ -234,6 +239,51 @@
       </xsl:apply-templates>
     </ul><xsl:value-of select="$newline"/>
   </xsl:if>
+</xsl:template>
+
+<xsl:template name="bookmap-preface">
+	<xsl:variable name="preface.file" select="concat($OUTPUTDIR,'/preface.html')"/>
+	<xsl:result-document href="{$preface.file}" format="html">
+		<xsl:call-template name="bookmap-preface-content"/>
+	</xsl:result-document>
+</xsl:template>
+
+<xsl:template name="bookmap-preface-content">
+	<xsl:variable name="preface.root" select="doc(concat($WORKDIR,(//*[contains(@class, ' bookmap/preface ' )]/*/@href)[1]))"/>
+	<html>
+		<head/>
+		<body>
+			<h1><xsl:value-of select="$preface.root//*[contains(@class, ' topic/title ' )]/text()"/></h1>
+			<div class="body">
+				<p class="shortdesc"><xsl:value-of select="$preface.root//*[contains(@class, ' topic/shortdesc ' )]/text()"/></p>
+				<xsl:for-each select="$preface.root//*[contains(@class, ' topic/p ')]">
+					<p class="p"><xsl:value-of select="./text()"/></p>
+				</xsl:for-each>
+			</div>
+			<ul class="preface-topic-grid">
+				<xsl:call-template name="bookmap-topic-grid"/>
+			</ul>
+		</body>
+	</html>
+</xsl:template>
+
+<xsl:template name="bookmap-topic-grid">
+		<xsl:for-each select="/*[contains(@class, ' bookmap/bookmap ' )]/*[contains(@class, ' bookmap/chapter ' )]">
+			<li class="preface-topic">
+				<strong><a class=" ajaxLink ">
+					<xsl:attribute name="href">
+						<xsl:call-template name="replace-extension">
+							<xsl:with-param name="filename" select="@href"/>
+							<xsl:with-param name="extension" select="$OUTEXT"/>
+						</xsl:call-template>
+					</xsl:attribute>
+					<xsl:value-of select="./*[contains(@class, ' map/topicmeta ' )]/*[contains(@class, ' topic/navtitle ' )]"/>
+				</a></strong><br/>
+				<xsl:if test="./@href">
+					<p><xsl:value-of select="doc(concat($WORKDIR,data(./@href)))//*[contains(@class, ' topic/shortdesc ' )]"/></p>
+				</xsl:if>
+			</li>
+		</xsl:for-each>
 </xsl:template>
 
 <xsl:template name="generateMapTitle">
