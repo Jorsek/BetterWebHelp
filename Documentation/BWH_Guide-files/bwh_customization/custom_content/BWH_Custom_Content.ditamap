@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/map.dtd">
+<map id="ditamap-4817" title="BWH Custom Content" class="- map/map ">
+   <topicref href="BWH_custom_content_intro.dita" class="- map/topicref ">
+      <topicref href="BWH_editing_logo_header.dita" class="- map/topicref "/>
+      <topicref href="BWH_support_footer.dita" class="- map/topicref "/>
+      <topicref href="BWH_preface_page.dita" class="- map/topicref "/>
+      <topicref href="BWH_homepage_section_links.dita" class="- map/topicref "/>
+      <topicref href="BWH_mobile_side_drawer.dita" class="- map/topicref "/>
+      <topicref href="BWH_adding_manifest.dita" class="- map/topicref "/>
+   </topicref>
+</map>

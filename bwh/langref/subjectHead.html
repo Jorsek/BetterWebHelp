@@ -36,24 +36,24 @@ values.</p>
 
 <div class="section" id="subjectHead__contains"><h2 class="title sectiontitle">Contains</h2><div class="note note"><span class="notetitle">Note:</span> These models represent only the default document types distributed by OASIS.
 Actual content models will differ with each new document type.</div>
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d553412e33" class="stentry" width="22.22222222222222%">Doctype</th>
-<th valign="bottom" align="left" id="d553412e35" class="stentry" width="77.77777777777777%">Content model</th>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d553413e33" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d553413e35" class="stentry" width="77.77777777777777%">Content model</th>
 </tr>
 <tr class="strow">
-<td valign="top" id="d553412e40" headers="d553412e33" class="stentry"><strong>subjectScheme</strong></td>
+<td valign="top" id="d553413e40" headers="d553413e33" class="stentry"><strong>subjectScheme</strong></td>
 
-<td valign="top" headers="d553412e35 d553412e40" class="stentry"> ( (<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectHeadMeta.html" title="The &lt;subjectHeadMeta&gt; element allows a navigation title and short description to be associated with a subject heading.">subjectHeadMeta</a>) <em class="ph i"> (optional) </em> then  (<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectdef.html" title="The &lt;subjectdef&gt; element defines a subject (also known as a controlled value) within a scheme. To make the subject easy to identify, a &lt;subjectdef&gt; may use a keys attribute to assign a key to the subject. A subject with a key can be identified elsewhere with a keyref. The &lt;subjectdef&gt; may use a navtitle element or attribute to supply a label for the subject. The &lt;subjectdef&gt; may also refer to a topic that captures the consensus definition for the subject.">subjectdef</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectHead.html" title="The &lt;subjectHead&gt; element provides a heading for a group of subjects, for use if the scheme is displayed. For instance, a scheme may be displayed to let a user select subjects as part of faceted browsing. The subjectHead element itself does not reference a file and cannot be referenced as a key, so it does not define any controlled values.">subjectHead</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topicref.html" title="The &lt;topicref&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;topicref&gt; can contain other &lt;topicref&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;topicref&gt; and its children. You can set the collection-type of a parent &lt;topicref&gt; to determine how its children are related to each other. You can also express relationships among &lt;topicref&gt; elements by using group and table structures (&lt;topicgroup&gt; and &lt;reltable&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship.">topicref</a> or  (<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/anchorref.html" title="The &lt;anchorref&gt; element is used to reference an &lt;anchor&gt; element in a map. The contents of an &lt;anchorref&gt; element are rendered both in the original authored location and at the location of the referenced &lt;anchor&gt; element. The referenced &lt;anchor&gt; element may be defined in the current map or another map. When possible, this integration is done when displaying the map with &lt;anchor&gt; to an end user.">anchorref</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/keydef.html" title="The &lt;keydef&gt; element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined. The &lt;keydef&gt; element is not the only way to define keys; its purpose is to simplify the process by defaulting several attributes to achieve the described behaviors.">keydef</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/mapref.html" title="The &lt;mapref&gt; element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to &#34;ditamap&#34;. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.">mapref</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topicgroup.html" title="The &lt;topicgroup&gt; element groups &lt;topicref&gt; elements for common treatment without affecting the structural hierarchy of the map, as opposed to nesting &lt;topicref&gt; elements, which does imply a structural hierarchy. The &lt;topicgroup&gt; element can provide linking relationships and shared, inherited attributes to the set of elements that it contains without affecting the resulting table of contents or navigation.">topicgroup</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topichead.html" title="The &lt;topichead&gt; element provides a title-only entry in a navigation map, which should appear as a heading when the map is rendered as a table of contents. In print contexts it should also appear as a heading in the rendered content.">topichead</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topicset.html" title="The &lt;topicset&gt; element defines a complete unit of content that can be reused in other DITA maps or other &lt;topicset&gt; elements. The &lt;topicset&gt; element can be especially useful for task composition in which larger tasks are composed of smaller tasks. The id attribute on a &lt;topicset&gt; is required, which ensures that the complete unit is available for reuse in other contexts.">topicset</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topicsetref.html" title="The &lt;topicsetref&gt; element references a &lt;topicset&gt; element. The referenced &lt;topicset&gt; element can be defined in the current map or in another map.">topicsetref</a>) ) <em class="ph i"> (any number) </em>) </td>
+<td valign="top" headers="d553413e35 d553413e40" class="stentry"> ( (<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectHeadMeta.html" title="The &lt;subjectHeadMeta&gt; element allows a navigation title and short description to be associated with a subject heading.">subjectHeadMeta</a>) <em class="ph i"> (optional) </em> then  (<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/data.html" title="The &lt;data&gt; element represents a property within a DITA topic or map. While the &lt;data&gt; element can be used directly to capture properties, it is particularly useful as a basis for specialization. Default processing should treat the content as an unknown kind of metadata and ignore it for rendering, but custom processing may match the name attribute or specialized element and use the element for automated manipulation or to format data associated with the body flow. For example, a specialized data element may be used to format properties as sidebars or other adornments or to harvest properties for automated processing.">data</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/data-about.html" title="The &lt;data-about&gt; element identifies the subject of a property when the subject isn't associated with the context in which the property is specified. The property itself is expressed by the &lt;data&gt; element. The &lt;data-about&gt; element handles exception cases where a property must be expressed somewhere other than inside the actual subject of the property. The &lt;data-about&gt; element is particularly useful as a basis for specialization in combination with the &lt;data&gt; element.">data-about</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectdef.html" title="The &lt;subjectdef&gt; element defines a subject (also known as a controlled value) within a scheme. To make the subject easy to identify, a &lt;subjectdef&gt; may use a keys attribute to assign a key to the subject. A subject with a key can be identified elsewhere with a keyref. The &lt;subjectdef&gt; may use a navtitle element or attribute to supply a label for the subject. The &lt;subjectdef&gt; may also refer to a topic that captures the consensus definition for the subject.">subjectdef</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectHead.html" title="The &lt;subjectHead&gt; element provides a heading for a group of subjects, for use if the scheme is displayed. For instance, a scheme may be displayed to let a user select subjects as part of faceted browsing. The subjectHead element itself does not reference a file and cannot be referenced as a key, so it does not define any controlled values.">subjectHead</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topicref.html" title="The &lt;topicref&gt; element identifies a topic (such as a concept, task, or reference) or other resource. A &lt;topicref&gt; can contain other &lt;topicref&gt; elements, allowing you to express navigation or table-of-contents hierarchies, as well as implying relationships between a containing (parent) &lt;topicref&gt; and its children. You can set the collection-type of a parent &lt;topicref&gt; to determine how its children are related to each other. You can also express relationships among &lt;topicref&gt; elements by using group and table structures (&lt;topicgroup&gt; and &lt;reltable&gt;). Relationships are expressed as links in the output; by default, each participant in a relationship has links to the other participants in that relationship.">topicref</a> or  (<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/anchorref.html" title="The &lt;anchorref&gt; element is used to reference an &lt;anchor&gt; element in a map. The contents of an &lt;anchorref&gt; element are rendered both in the original authored location and at the location of the referenced &lt;anchor&gt; element. The referenced &lt;anchor&gt; element may be defined in the current map or another map. When possible, this integration is done when displaying the map with &lt;anchor&gt; to an end user.">anchorref</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/keydef.html" title="The &lt;keydef&gt; element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined. The &lt;keydef&gt; element is not the only way to define keys; its purpose is to simplify the process by defaulting several attributes to achieve the described behaviors.">keydef</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/mapref.html" title="The &lt;mapref&gt; element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to &#34;ditamap&#34;. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.">mapref</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topicgroup.html" title="The &lt;topicgroup&gt; element groups &lt;topicref&gt; elements for common treatment without affecting the structural hierarchy of the map, as opposed to nesting &lt;topicref&gt; elements, which does imply a structural hierarchy. The &lt;topicgroup&gt; element can provide linking relationships and shared, inherited attributes to the set of elements that it contains without affecting the resulting table of contents or navigation.">topicgroup</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topichead.html" title="The &lt;topichead&gt; element provides a title-only entry in a navigation map, which should appear as a heading when the map is rendered as a table of contents. In print contexts it should also appear as a heading in the rendered content.">topichead</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topicset.html" title="The &lt;topicset&gt; element defines a complete unit of content that can be reused in other DITA maps or other &lt;topicset&gt; elements. The &lt;topicset&gt; element can be especially useful for task composition in which larger tasks are composed of smaller tasks. The id attribute on a &lt;topicset&gt; is required, which ensures that the complete unit is available for reuse in other contexts.">topicset</a> or <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/topicsetref.html" title="The &lt;topicsetref&gt; element references a &lt;topicset&gt; element. The referenced &lt;topicset&gt; element can be defined in the current map or in another map.">topicsetref</a>) ) <em class="ph i"> (any number) </em>) </td>
 </tr>
 </table>
 </div>
 
-<div class="section" id="subjectHead__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d553412e227" class="stentry" width="22.22222222222222%">Doctype</th>
-<th valign="bottom" align="left" id="d553412e229" class="stentry" width="77.77777777777777%">Content model</th>
+<div class="section" id="subjectHead__containedby"><h2 class="title sectiontitle">Contained by</h2><table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d553413e227" class="stentry" width="22.22222222222222%">Doctype</th>
+<th valign="bottom" align="left" id="d553413e229" class="stentry" width="77.77777777777777%">Content model</th>
 </tr>
 <tr class="strow">
-<td valign="top" id="d553412e234" headers="d553412e227" class="stentry"><strong>subjectScheme</strong></td>
+<td valign="top" id="d553413e234" headers="d553413e227" class="stentry"><strong>subjectScheme</strong></td>
 
-<td valign="top" headers="d553412e229 d553412e234" class="stentry"><a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectScheme.html" title="A subjectScheme is a specialized DITA map that defines a collection of controlled values rather than a collection of topics.">subjectScheme</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasNarrower.html" title="For subjects within the &lt;hasNarrower&gt; element, the container subject is more general than each of the contained subjects. That is, this element makes the default hierarchical relationship explicit, although the way in which a relationship is narrower is not specified.">hasNarrower</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasKind.html" title="The &lt;hasKind&gt; element specifies that the contained hierarchy expresses KIND-OF relationships between subjects.">hasKind</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasPart.html" title="The &lt;hasPart&gt; element specifies that the contained hierarchy expresses PART-OF relationships between subjects.">hasPart</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasInstance.html" title="The &lt;hasInstance&gt; element specifies that the contained subjects have an INSTANCE-OF relationship with the container subject. In an INSTANCE-OF hierarchy, the child subject is a specific entity or object and the parent subject is a type, kind, or class of entity or object.">hasInstance</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasRelated.html" title="The &lt;hasRelated&gt; element identifies an associative relationship between the container subject and each of the contained subjects.">hasRelated</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectdef.html" title="The &lt;subjectdef&gt; element defines a subject (also known as a controlled value) within a scheme. To make the subject easy to identify, a &lt;subjectdef&gt; may use a keys attribute to assign a key to the subject. A subject with a key can be identified elsewhere with a keyref. The &lt;subjectdef&gt; may use a navtitle element or attribute to supply a label for the subject. The &lt;subjectdef&gt; may also refer to a topic that captures the consensus definition for the subject.">subjectdef</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectHead.html" title="The &lt;subjectHead&gt; element provides a heading for a group of subjects, for use if the scheme is displayed. For instance, a scheme may be displayed to let a user select subjects as part of faceted browsing. The subjectHead element itself does not reference a file and cannot be referenced as a key, so it does not define any controlled values.">subjectHead</a></td>
+<td valign="top" headers="d553413e229 d553413e234" class="stentry"><a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectScheme.html" title="A subjectScheme is a specialized DITA map that defines a collection of controlled values rather than a collection of topics.">subjectScheme</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasNarrower.html" title="For subjects within the &lt;hasNarrower&gt; element, the container subject is more general than each of the contained subjects. That is, this element makes the default hierarchical relationship explicit, although the way in which a relationship is narrower is not specified.">hasNarrower</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasKind.html" title="The &lt;hasKind&gt; element specifies that the contained hierarchy expresses KIND-OF relationships between subjects.">hasKind</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasPart.html" title="The &lt;hasPart&gt; element specifies that the contained hierarchy expresses PART-OF relationships between subjects.">hasPart</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasInstance.html" title="The &lt;hasInstance&gt; element specifies that the contained subjects have an INSTANCE-OF relationship with the container subject. In an INSTANCE-OF hierarchy, the child subject is a specific entity or object and the parent subject is a type, kind, or class of entity or object.">hasInstance</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/hasRelated.html" title="The &lt;hasRelated&gt; element identifies an associative relationship between the container subject and each of the contained subjects.">hasRelated</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectdef.html" title="The &lt;subjectdef&gt; element defines a subject (also known as a controlled value) within a scheme. To make the subject easy to identify, a &lt;subjectdef&gt; may use a keys attribute to assign a key to the subject. A subject with a key can be identified elsewhere with a keyref. The &lt;subjectdef&gt; may use a navtitle element or attribute to supply a label for the subject. The &lt;subjectdef&gt; may also refer to a topic that captures the consensus definition for the subject.">subjectdef</a>, <a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/subjectHead.html" title="The &lt;subjectHead&gt; element provides a heading for a group of subjects, for use if the scheme is displayed. For instance, a scheme may be displayed to let a user select subjects as part of faceted browsing. The subjectHead element itself does not reference a file and cannot be referenced as a key, so it does not define any controlled values.">subjectHead</a></td>
 </tr>
 </table>
 </div>
@@ -84,36 +84,36 @@ servers.</p>
 </div>
 
 <div class="section" id="subjectHead__attributes"><h2 class="title sectiontitle">Attributes</h2><table cellpadding="4" cellspacing="0" summary="" id="subjectHead__attribute_table" border="1" class="simpletable"><tr class="sthead">
-<th valign="bottom" align="left" id="d553412e328" class="stentry" width="25%">Name</th>
+<th valign="bottom" align="left" id="d553413e328" class="stentry" width="25%">Name</th>
 
-<th valign="bottom" align="left" id="d553412e331" class="stentry" width="37.5%">Description</th>
+<th valign="bottom" align="left" id="d553413e331" class="stentry" width="37.5%">Description</th>
 
-<th valign="bottom" align="left" id="d553412e334" class="stentry" width="12.5%">Data Type</th>
+<th valign="bottom" align="left" id="d553413e334" class="stentry" width="12.5%">Data Type</th>
 
-<th valign="bottom" align="left" id="d553412e337" class="stentry" width="12.5%">Default Value</th>
+<th valign="bottom" align="left" id="d553413e337" class="stentry" width="12.5%">Default Value</th>
 
-<th valign="bottom" align="left" id="d553412e340" class="stentry" width="12.5%">Required?</th>
+<th valign="bottom" align="left" id="d553413e340" class="stentry" width="12.5%">Required?</th>
 
 </tr>
 <tr class="strow"> 
-			 <td valign="top" headers="d553412e328" class="stentry">navtitle</td>
+			 <td valign="top" headers="d553413e328" class="stentry">navtitle</td>
  
-			 <td valign="top" headers="d553412e331" class="stentry">Specifies the title of the topic as it will appear in the
+			 <td valign="top" headers="d553413e331" class="stentry">Specifies the title of the topic as it will appear in the
 				navigation or tables of contents that are generated from the map. Beginning
 				with DITA 1.2, the preferred way to specify the navigation title in a map is
 				with the navtitle element, available inside the topicmeta element.</td>
  
-			 <td valign="top" headers="d553412e334" class="stentry">CDATA</td>
+			 <td valign="top" headers="d553413e334" class="stentry">CDATA</td>
  
-			 <td valign="top" headers="d553412e337" class="stentry">#IMPLIED</td>
+			 <td valign="top" headers="d553413e337" class="stentry">#IMPLIED</td>
  
-			 <td valign="top" headers="d553412e340" class="stentry">No</td>
+			 <td valign="top" headers="d553413e340" class="stentry">No</td>
  
 		  </tr>
 <tr class="strow"> 
-			 <td valign="top" headers="d553412e328" class="stentry">collection-type</td>
+			 <td valign="top" headers="d553413e328" class="stentry">collection-type</td>
  
-			 <td valign="top" headers="d553412e331" class="stentry">Collection types describe how links relate to each other.
+			 <td valign="top" headers="d553413e331" class="stentry">Collection types describe how links relate to each other.
 				The processing default is "unordered", although no default is specified in the
 				DTD or Schema. 
 				<dl class="dl"> 
@@ -148,33 +148,33 @@ servers.</p>
 				</dl>
 </td>
  
-			 <td valign="top" headers="d553412e334" class="stentry">(unordered | sequence | -dita-use-​conref-​target)</td>
+			 <td valign="top" headers="d553413e334" class="stentry">(unordered | sequence | -dita-use-​conref-​target)</td>
 
 			 
-			 <td valign="top" headers="d553412e337" class="stentry">#IMPLIED</td>
+			 <td valign="top" headers="d553413e337" class="stentry">#IMPLIED</td>
  
-			 <td valign="top" headers="d553412e340" class="stentry">No</td>
+			 <td valign="top" headers="d553413e340" class="stentry">No</td>
  
 		  </tr>
 <tr class="strow"> 
-			 <td valign="top" headers="d553412e328" class="stentry">linking</td>
+			 <td valign="top" headers="d553413e328" class="stentry">linking</td>
  
-			 <td valign="top" headers="d553412e331" class="stentry">Defines some specific linking characteristics of subject
+			 <td valign="top" headers="d553413e331" class="stentry">Defines some specific linking characteristics of subject
 				topics. "normal" is the only valid value, and is specified as the default in
 				the DTD and Schema. When attribute values cascade, this causes a linking value
 				of "normal" to cascade to the subjects.</td>
  
-			 <td valign="top" headers="d553412e334" class="stentry">(normal)</td>
+			 <td valign="top" headers="d553413e334" class="stentry">(normal)</td>
  
-			 <td valign="top" headers="d553412e337" class="stentry">normal</td>
+			 <td valign="top" headers="d553413e337" class="stentry">normal</td>
  
-			 <td valign="top" headers="d553412e340" class="stentry">No</td>
+			 <td valign="top" headers="d553413e340" class="stentry">No</td>
  
 		  </tr>
 <tr class="strow"> 
-			 <td valign="top" headers="d553412e328" class="stentry">processing-role</td>
+			 <td valign="top" headers="d553413e328" class="stentry">processing-role</td>
  
-			 <td valign="top" headers="d553412e331" class="stentry">Describes the processing role of the referenced topic. The
+			 <td valign="top" headers="d553413e331" class="stentry">Describes the processing role of the referenced topic. The
 				processing default is "normal". 
 				<span class="ph">If the value is not specified locally, but
 				  is specified on an ancestor, the value will cascade from the closest
@@ -212,69 +212,69 @@ servers.</p>
 				</dl>
 </td>
  
-			 <td valign="top" headers="d553412e334" class="stentry">(normal | resource-only |
+			 <td valign="top" headers="d553413e334" class="stentry">(normal | resource-only |
 				-dita-use-​conref-​target)</td>
  
-			 <td valign="top" headers="d553412e337" class="stentry">#IMPLIED</td>
+			 <td valign="top" headers="d553413e337" class="stentry">#IMPLIED</td>
  
-			 <td valign="top" headers="d553412e340" class="stentry">No</td>
+			 <td valign="top" headers="d553413e340" class="stentry">No</td>
  
 		  </tr>
 <tr class="strow"> 
-			 <td valign="top" headers="d553412e328" class="stentry">toc</td>
+			 <td valign="top" headers="d553413e328" class="stentry">toc</td>
  
-			 <td valign="top" headers="d553412e331" class="stentry">Specifies whether a topic appears in the table of contents
+			 <td valign="top" headers="d553413e331" class="stentry">Specifies whether a topic appears in the table of contents
 				(TOC). 
 				<span class="ph" id="subjectHead__d8034e4662">If the value is not specified locally, but
 				  is specified on an ancestor, the value will cascade from the closest
 				  ancestor.</span></td>
  
-			 <td valign="top" headers="d553412e334" class="stentry">(yes | no | 
+			 <td valign="top" headers="d553413e334" class="stentry">(yes | no | 
 				<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/../common/ditauseconreftarget.html" title="The value -dita-use-conref-target is available on enumerated attributes and may also be specified on other attributes. When an element uses conref to pull in content, for any of its attributes assigned a value of &#34;-dita-use-conref-target&#34;, the resulting value for those attributes should also be pulled in from the referenced element.">-dita-use-​conref-​target</a>)</td>
  
-			 <td valign="top" headers="d553412e337" class="stentry">#IMPLIED</td>
+			 <td valign="top" headers="d553413e337" class="stentry">#IMPLIED</td>
  
-			 <td valign="top" headers="d553412e340" class="stentry">No</td>
+			 <td valign="top" headers="d553413e340" class="stentry">No</td>
  
 		  </tr>
 <tr class="strow"> 
-			 <td valign="top" headers="d553412e328" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
+			 <td valign="top" headers="d553413e328" class="stentry">univ-atts attribute group (includes select-atts, id-atts,
 				and localization-atts groups)</td>
  
-			 <td valign="top" headers="d553412e331" class="stentry">A set of related attributes, described in 
+			 <td valign="top" headers="d553413e331" class="stentry">A set of related attributes, described in 
 				<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/../common/univ-atts.html" title="The &#34;univ-atts&#34; attribute group defines a set of common attributes available on most DITA elements.">univ-atts attribute group</a></td>
  
-			 <td valign="top" headers="d553412e334" class="stentry"> </td>
+			 <td valign="top" headers="d553413e334" class="stentry"> </td>
  
-			 <td valign="top" headers="d553412e337" class="stentry"> </td>
+			 <td valign="top" headers="d553413e337" class="stentry"> </td>
  
-			 <td valign="top" headers="d553412e340" class="stentry"> </td>
+			 <td valign="top" headers="d553413e340" class="stentry"> </td>
  
 		  </tr>
 <tr class="strow"> 
-			 <td valign="top" headers="d553412e328" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
+			 <td valign="top" headers="d553413e328" class="stentry">global-atts attribute group (xtrf, xtrc)</td>
  
-			 <td valign="top" headers="d553412e331" class="stentry">A set of related attributes, described in 
+			 <td valign="top" headers="d553413e331" class="stentry">A set of related attributes, described in 
 				<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/../common/global-atts.html" title="The &#34;global-atts&#34; attribute group includes a set of debugging attributes that are normally hidden from authoring view.">global-atts attribute group</a></td>
  
-			 <td valign="top" headers="d553412e334" class="stentry"> </td>
+			 <td valign="top" headers="d553413e334" class="stentry"> </td>
  
-			 <td valign="top" headers="d553412e337" class="stentry"> </td>
+			 <td valign="top" headers="d553413e337" class="stentry"> </td>
  
-			 <td valign="top" headers="d553412e340" class="stentry"> </td>
+			 <td valign="top" headers="d553413e340" class="stentry"> </td>
  
 		  </tr>
 <tr class="strow"> 
-			 <td valign="top" headers="d553412e328" class="stentry">class, outputclass</td>
+			 <td valign="top" headers="d553413e328" class="stentry">class, outputclass</td>
  
-			 <td valign="top" headers="d553412e331" class="stentry">Common attributes described in 
+			 <td valign="top" headers="d553413e331" class="stentry">Common attributes described in 
 				<a xmlns:functx="http://www.functx.com" class="- topic/xref  ajaxLink" href="langref/../common/othercommon.html" title="The following attributes are not part of an entity group but are common to many elements.">Other common DITA attributes</a></td>
  
-			 <td valign="top" headers="d553412e334" class="stentry"> </td>
+			 <td valign="top" headers="d553413e334" class="stentry"> </td>
  
-			 <td valign="top" headers="d553412e337" class="stentry"> </td>
+			 <td valign="top" headers="d553413e337" class="stentry"> </td>
  
-			 <td valign="top" headers="d553412e340" class="stentry"> </td>
+			 <td valign="top" headers="d553413e340" class="stentry"> </td>
  
 		  </tr>
 </table>

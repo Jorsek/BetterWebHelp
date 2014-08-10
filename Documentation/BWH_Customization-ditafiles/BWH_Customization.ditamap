@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/map.dtd">
-<map id="ditamap-7151" title="How to Customize the Better Web Help DITA OT Plugin" class="- map/map ">
-   <mapref href="BWH_Custom_Content.ditamap" format="ditamap" class="+ map/topicref mapgroup-d/mapref "/>
-   <mapref href="BWH_Custom_Styling.ditamap" format="ditamap" class="+ map/topicref mapgroup-d/mapref "/>
-</map>

@@ -70,10 +70,12 @@ function doSearch() {
 	results = idx.search(input);
 	
 	if (location.hash.indexOf('#q=') != -1 && location.hash.substring(3) != input) {
-		ga('send', 'event', 'search', 'double-search', {
-			'page': location.pathname + location.hash,
-			'eventValue': input
-		});
+		try {
+			ga('send', 'event', 'search', 'double-search', {
+				'page': location.pathname + location.hash,
+				'eventValue': input
+			});
+		} catch (e) {}
 	}
 	
 	if ($('#result-num').length == 0) {
@@ -89,12 +91,17 @@ function doSearch() {
 		link = indexData[results[x].ref].URI;
 		resultString += "<li class='result-element ajaxLink' href=\"" + link + "\"><div class='result-title'>" + title + "</div>";
 		
-		el = $("li[href='"+link+"']", $(defaultNav))[0];
+		child = $("span[href='"+link+"']", $(defaultNav))[0];
+		el = $(child).parent()[0];
+		if (!el) {
+			alert("Index not set up Properly.\nPlease recompile your BWH build.");
+			return;
+		}
 		treeComplete = 'false';
 		tree = [];
 		while (treeComplete != 'true') {
 
-			tree.unshift(el.textContent);
+			tree.unshift($(el).children('.navtitle').text());
 			
 			if (el.parentElement.parentElement != null) {
 				el = el.parentElement.parentElement.previousElementSibling;
@@ -150,7 +157,7 @@ $( document ).ready( function() {
 		}
 	});*/
 	
-	$('#search-button').click(function(event) {
+	$('#search-button').on('click',function(e) {
 		doSearch();
 		return false;
 	});

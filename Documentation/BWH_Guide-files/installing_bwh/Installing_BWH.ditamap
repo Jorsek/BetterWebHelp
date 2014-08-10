@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/map.dtd">
+<map id="ditamap-2285" title="Installing Better Web Help" class="- map/map ">
+   <topicref href="BWH_install_intro.dita" class="- map/topicref ">
+      <topicref href="BWH_Install_DITAOT.dita" class="- map/topicref "/>
+      <topicref href="BWH_local_server.dita" class="- map/topicref "/>
+      <topicref href="BWH_Install_easyDITA.dita" class="- map/topicref "/>
+      <topicref href="BWH_google_analytics.dita" class="- map/topicref "/>
+   </topicref>
+</map>

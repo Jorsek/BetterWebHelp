@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="concept-7622" xml:lang="en-us" domains="(topic concept)                            (topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)    " ditaarch:DITAArchVersion="1.2" class="- topic/topic concept/concept "><title class="- topic/title ">How To Structure Your Document</title><shortdesc class="- topic/shortdesc ">So, you want to use BWH, but you're not sure where to start. This page describes how best to structure your DITA document to best work with Better WebHelp.</shortdesc><prolog class="- topic/prolog "><author type="creator" translate="no" class="- topic/author ">Scott Lucchini &lt;scott.lucchini@easydita.com&gt;</author><metadata class="- topic/metadata "><keywords class="- topic/keywords "/></metadata></prolog><conbody class="- topic/body  concept/conbody "><p class="- topic/p ">For your document to best fit with the basic Better WebHelp, you should follow the general structure described on this page. You can, of course, use other set-ups, however, we may not have tested those, so let us know how they work!</p><p class="- topic/p ">The basic outline of your document should look like the following:</p><ul class="- topic/ul "><li class="- topic/li ">Bookmap
+
+               
+
+               
+
+               <ul class="- topic/ul "><li class="- topic/li ">Frontmatter
+
+                     
+
+                     
+
+                     <ul class="- topic/ul "><li class="- topic/li ">Preface
+
+                           
+
+                           
+
+                           <ul class="- topic/ul "><li class="- topic/li ">Topicref [with toc="no" attribute] (homepage)</li></ul>
+                        </li></ul>
+                  </li><li class="- topic/li ">Chapter [with href and format]</li><li class="- topic/li ">Chapter [with href and format]</li><li class="- topic/li ">etc... </li></ul>
+            </li></ul>
+
+      <p class="- topic/p ">This will produce a BWH website that loads the topic located in the preface as a homepage. The homepage will automatically contain links to each of the chapters with their short descriptions.</p><p class="- topic/p ">The navigation panel will consist of a list of the chapters. Usually, the href links on the chapters will be maps. </p><p class="- topic/p "><note type="important" class="- topic/note ">If the href link is a map, the format attribute on the chapter must be set to "ditamap"</note></p><p class="- topic/p ">These content maps should look like the following:</p><ul class="- topic/ul "><li class="- topic/li ">Map [with title attribute]
+
+               
+
+               
+
+               <ul class="- topic/ul "><li class="- topic/li ">Topicref (intro page)
+
+                     
+
+                     
+
+                     <ul class="- topic/ul "><li class="- topic/li ">Topicref [with optional navtitle attribute]</li><li class="- topic/li ">Topicref [with optional navtitle attribute]</li><li class="- topic/li ">etc...</li></ul>
+                  </li></ul>
+            </li></ul>
+
+      <p class="- topic/p ">When a chapter is clicked in the navigation panel, it will load the "intro page" topic (which should just be a topic, not a map). Again, the intro page will auto populate with links to its child elements and their short descriptions. It will also expand the navigation panel to show the child topicrefs. If one of the child topicrefs links to a map it should look the same as above and it will behave in the same way.</p><p class="- topic/p "><note type="note" class="- topic/note ">The value of the title attribute on the map element is what will display in the navigation panel for a chapter.</note></p><p class="- topic/p "/></conbody></concept>

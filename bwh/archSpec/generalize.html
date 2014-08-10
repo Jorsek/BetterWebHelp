@@ -88,31 +88,31 @@
 
     <div class="p">The @class attribute for the root element of the structural type is checked before
       generalizing structural types:<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
-          <th valign="bottom" align="left" id="d13796e71" class="stentry"> </th>
+          <th valign="bottom" align="left" id="d13797e71" class="stentry"> </th>
 
-          <th valign="bottom" align="left" id="d13796e73" class="stentry">Source module unspecified</th>
+          <th valign="bottom" align="left" id="d13797e73" class="stentry">Source module unspecified</th>
 
-          <th valign="bottom" align="left" id="d13796e76" class="stentry">Source module specified</th>
+          <th valign="bottom" align="left" id="d13797e76" class="stentry">Source module specified</th>
 
         </tr>
 <tr class="strow">
-          <td valign="top" id="d13796e82" headers="d13796e71" class="stentry"><strong>Target module unspecified</strong></td>
+          <td valign="top" id="d13797e82" headers="d13797e71" class="stentry"><strong>Target module unspecified</strong></td>
 
-          <td valign="top" headers="d13796e73 d13796e82" class="stentry">Generalize this structural type to its base ancestor</td>
+          <td valign="top" headers="d13797e73 d13797e82" class="stentry">Generalize this structural type to its base ancestor</td>
 
-          <td valign="top" headers="d13796e76 d13796e82" class="stentry">Check whether the root element of the topic type matches a specified source
+          <td valign="top" headers="d13797e76 d13797e82" class="stentry">Check whether the root element of the topic type matches a specified source
             module; generalize to its base ancestor if it does, otherwise ignore the structural type
             instance unless it has domains to generalize.</td>
 
         </tr>
 <tr class="strow">
-          <td valign="top" id="d13796e94" headers="d13796e71" class="stentry"><strong>Target module specified</strong></td>
+          <td valign="top" id="d13797e94" headers="d13797e71" class="stentry"><strong>Target module specified</strong></td>
 
-          <td valign="top" headers="d13796e73 d13796e94" class="stentry">Check whether the @class attribute contains the target module.  If it does
+          <td valign="top" headers="d13797e73 d13797e94" class="stentry">Check whether the @class attribute contains the target module.  If it does
             contain the target, rename the element to the value associated with the target module.
             Otherwise, ignore the element.</td>
 
-          <td valign="top" headers="d13796e76 d13796e94" class="stentry">It is an error if the root element matches a specified source but its @class
+          <td valign="top" headers="d13797e76 d13797e94" class="stentry">It is an error if the root element matches a specified source but its @class
             attribute does not contain the target. If the root element matches a specified source
             module and its @class attribute does contain the target module, generalize to the target
             module. Otherwise, ignore the structural type instance unless it has domains to
@@ -125,31 +125,31 @@
     
     <div class="p">The @domains attribute for the root element of the structural type is checked before
       generalizing domains:<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
-          <th valign="bottom" align="left" id="d13796e113" class="stentry"> </th>
+          <th valign="bottom" align="left" id="d13797e113" class="stentry"> </th>
 
-          <th valign="bottom" align="left" id="d13796e115" class="stentry">Source module unspecified</th>
+          <th valign="bottom" align="left" id="d13797e115" class="stentry">Source module unspecified</th>
 
-          <th valign="bottom" align="left" id="d13796e118" class="stentry">Source module specified</th>
+          <th valign="bottom" align="left" id="d13797e118" class="stentry">Source module specified</th>
 
         </tr>
 <tr class="strow">
-          <td valign="top" id="d13796e124" headers="d13796e113" class="stentry"><strong>Target module unspecified</strong></td>
+          <td valign="top" id="d13797e124" headers="d13797e113" class="stentry"><strong>Target module unspecified</strong></td>
 
-          <td valign="top" headers="d13796e115 d13796e124" class="stentry">Do not generalize domain specializations in this structural type.</td>
+          <td valign="top" headers="d13797e115 d13797e124" class="stentry">Do not generalize domain specializations in this structural type.</td>
 
-          <td valign="top" headers="d13796e118 d13796e124" class="stentry">Check whether the @domains attribute lists the specified domain; proceed with
+          <td valign="top" headers="d13797e118 d13797e124" class="stentry">Check whether the @domains attribute lists the specified domain; proceed with
             generalization if it does, otherwise ignore the structural type instance unless it is
             itself a candidate for generalization.</td>
 
         </tr>
 <tr class="strow">
-          <td valign="top" id="d13796e136" headers="d13796e113" class="stentry"><strong>Target module specified</strong></td>
+          <td valign="top" id="d13797e136" headers="d13797e113" class="stentry"><strong>Target module specified</strong></td>
 
-          <td valign="top" headers="d13796e115 d13796e136" class="stentry">Check whether the @domains attribute contains the target module. If it does,
+          <td valign="top" headers="d13797e115 d13797e136" class="stentry">Check whether the @domains attribute contains the target module. If it does,
             generalize to the target module. Otherwise, skip the structural type instance unless it
             is itself a candidate for generalization.</td>
 
-          <td valign="top" headers="d13796e118 d13796e136" class="stentry">It is an error if the @domains attribute matches a specified source but the
+          <td valign="top" headers="d13797e118 d13797e136" class="stentry">It is an error if the @domains attribute matches a specified source but the
             domain value string does not contain the target. If the @domains attribute matches a
             specified source module and the domain value string does contain the target module,
             generalize to the target module. Otherwise, ignore the structural type instance unless
@@ -160,31 +160,31 @@
 </div>
 
     <div class="p">For each element in a candidate structural type instance:<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
-          <th valign="bottom" align="left" id="d13796e153" class="stentry"> </th>
+          <th valign="bottom" align="left" id="d13797e153" class="stentry"> </th>
 
-          <th valign="bottom" align="left" id="d13796e155" class="stentry">Source module unspecified</th>
+          <th valign="bottom" align="left" id="d13797e155" class="stentry">Source module unspecified</th>
 
-          <th valign="bottom" align="left" id="d13796e158" class="stentry">Source module specified</th>
+          <th valign="bottom" align="left" id="d13797e158" class="stentry">Source module specified</th>
 
         </tr>
 <tr class="strow">
-          <td valign="top" id="d13796e164" headers="d13796e153" class="stentry"><strong>Target module unspecified</strong></td>
+          <td valign="top" id="d13797e164" headers="d13797e153" class="stentry"><strong>Target module unspecified</strong></td>
 
-          <td valign="top" headers="d13796e155 d13796e164" class="stentry">If the @class attribute starts with "-" (part of a structural type), rename the
+          <td valign="top" headers="d13797e155 d13797e164" class="stentry">If the @class attribute starts with "-" (part of a structural type), rename the
             element to its base ancestor equivalent. Otherwise ignore it.</td>
 
-          <td valign="top" headers="d13796e158 d13796e164" class="stentry">Check whether the last value of the @class attribute matches a specified source;
+          <td valign="top" headers="d13797e158 d13797e164" class="stentry">Check whether the last value of the @class attribute matches a specified source;
             generalize to its base ancestor if it does, otherwise ignore the element.</td>
 
         </tr>
 <tr class="strow">
-          <td valign="top" id="d13796e176" headers="d13796e153" class="stentry"><strong>Target module specified</strong></td>
+          <td valign="top" id="d13797e176" headers="d13797e153" class="stentry"><strong>Target module specified</strong></td>
 
-          <td valign="top" headers="d13796e155 d13796e176" class="stentry">Check whether the @class attribute contains the target module; rename the element
+          <td valign="top" headers="d13797e155 d13797e176" class="stentry">Check whether the @class attribute contains the target module; rename the element
             to the value associated with the target module if it does contain the target, otherwise
             ignore the element.</td>
 
-          <td valign="top" headers="d13796e158 d13796e176" class="stentry">It is an error if the last value in the @class attribute matches a specified
+          <td valign="top" headers="d13797e158 d13797e176" class="stentry">It is an error if the last value in the @class attribute matches a specified
             source but the previous values do not include the target. If the last value in the
             @class attribute matches a specified source module and the previous values do include
             the target module, rename the element to the value associated with the target module.

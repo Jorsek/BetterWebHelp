@@ -164,7 +164,6 @@
 <xsl:template name="frameless-styles">
 	<link rel="stylesheet" type="text/css" href="scripts/frameless.css" />
 	<link rel="stylesheet" type="text/css" href="scripts/content-styling.css" />
-	<link rel="stylesheet" type="text/css" href="scripts/matts-changes.css" />
 	<link rel="stylesheet" type="text/css" href="scripts/user-fonts.css" />
 	<link rel="stylesheet" type="text/css" href="scripts/user-styling.css" />
 </xsl:template>
@@ -228,7 +227,7 @@
 <!-- This is active -->
 <xsl:template match="/*[contains(@class, ' map/map ')]">
   <xsl:param name="pathFromMaplist"/>
-  <xsl:if test="self::*[contains(@class, ' bookmap/bookmap ' )]">
+  <xsl:if test="contains(@class, ' bookmap/bookmap ' ) and //*[contains(@class, ' bookmap/preface ' )]/*">
   	<xsl:call-template name="bookmap-preface"/>
   </xsl:if>
   <xsl:if test=".//*[contains(@class, ' map/topicref ')][not(@toc='no')][not(@processing-role='resource-only')]">

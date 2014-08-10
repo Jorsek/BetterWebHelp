@@ -17,6 +17,12 @@
 @column: 48;	// The column-width of your grid in pixels
 @gutter: 24;	// The gutter-width of your grid in pixels
 
+//
+// Colors
+//
+
+@primary-color: #00579B;
+@accent-color: #F27A3E;
 
 //
 // Column-widths in variables, in ems
@@ -284,12 +290,18 @@ To create the three arrow lines within the icon
 /***** End shading for depth effects *****/
 
 /***** search box etc styling *****/
+
+::-webkit-input-placeholder {color: #AAA; padding-top:5px; line-height:10px; font-size:14px;}
+:-moz-placeholder {color: #AAA;}
+::-moz-placeholder {color: #AAA;}
+:-ms-input-placeholder {color: #AAA;}
+
 .clearable{
   background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -30px center;
   background-color: white;
-  border:1px solid #999;
+  border: none;
   padding:3px 18px 3px 4px; /* USE the same right padding in jQ! */
-  border-radius:10px;
+  border-radius:5px;
   transition: background 0.4s; /*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
   outline: none;
 }
@@ -300,16 +312,17 @@ To create the three arrow lines within the icon
   cursor:pointer;
 }
 
-#search-button {border-radius: 8px; outline: none; position: relative; float: right;}
-#search-bar {position: fixed; top: 17px; right: 10px; width: 270/@em; z-index: 100;}
+#search-button {font-size:1em; color:#FFF; border:none; border-radius: 4px; background-color: @accent-color; outline: none; position: relative; float: right;}
+#search-button:hover {color: @accent-color; border:none; border-radius: 4px; background-color:#FFF; outline: none; position: relative; float: right;}
+#search-bar {margin-top: 5px; position: fixed; top: 30px; right: 20px; width: 270/@em; z-index: 100;}
 
-.typeahead, .twitter-typeahead, .tt-input {width: 200/@em;}
-.tt-dropdown-menu {.z-depth3; background-color: #fff; border-radius: 6px; border: 1px solid #aaa; padding: 5px; max-height: 60vh; overflow: auto;}
+.typeahead, .twitter-typeahead, .tt-input {width: 200/@em; color:#333; font-size:16px; line-height:20px;}
+.tt-dropdown-menu {.z-depth1; background-color: #fff; border-radius: 5px; border: 1px solid #ddd; padding: 5px; max-height: 60vh; overflow: auto;}
 .tt-hint {color: rgba(0,0,0,0.45);}
-.tt-suggestion {font-size: 14/@em;
+.tt-suggestion {font-size: 14/@em; color:#444444;
     & :hover {cursor: pointer;}
 }
-.tt-cursor {background-color: #ddd;}
+.tt-cursor {color: @accent-color;}
 
 /***** end search box etc styling *****/
 
@@ -317,8 +330,11 @@ To create the three arrow lines within the icon
 
 #container {margin: 0; width: 100%; height: 100vh;}
 
-#heading {.z-depth1; background-color: #888; height: 64/@em; position: fixed; left: 0; right: 0; top: 0;}
-#heading h1 {font-size: 28/@em; color: #fff; padding: 10/@em; position: relative; float: left;}
+.loading {position: absolute; top: 30vh - 80/@em; text-align: center;}
+
+#heading {border-top: solid 4/@em @accent-color; .z-depth1; background-color: @primary-color; height: 76/@em; position: fixed; left: 0; right: 0; top: 0;}
+#heading h1 {font-size: 28/@em; color: #fff; padding: 10/@em; position: relative; float: left; cursor: pointer; margin-top: 5/@em;
+    font-family:"Walkway Rounded", "Walkway SemiBold", "Walkway Condensed SemiBold", "Walkway UltraCondensed Semi";}
 #heading img {width: auto; margin: auto; position: relative; height: 64px; position: relative; float: left;}
 
 #footer {position: fixed; right: 0; bottom: 0; text-align: center; border-top: 1px solid gray;}
@@ -327,25 +343,31 @@ To create the three arrow lines within the icon
 .web-help-nav {font-size: 12/@em; margin: 4/@em auto 4/@em 4/@em; list-style-type: none;}
 .web-help-subnav {margin: 0; list-style-type: none; overflow: hidden; padding-left: 30/@em;}
 
-#web-help-c1 li.file:link {text-decoration: none; color: #000000;}
-#web-help-c1 li.file:visited {text-decoration: none; color: #000000;}
-#web-help-c1 li.file:hover {text-decoration: none; color: #fff;}
-#web-help-c1 li.file:active {text-decoration: none; color: #000000}
-.web-help-nav li.folder:hover {background-color: #ddd;}
-.web-help-nav li.folder:focus {background-color: #ccc; outline: none;}
-#web-help-c1 li.file, #web-help-c1 li.folder {cursor: pointer;}
-#web-help-c1 li {padding-right: 5/@em;}
+.folderButton {float: right; margin: 8/@em 5/@em 7/@em 10/@em; border: 1px solid black; 
+    width: 10/@em; height: 10/@em; text-align: center; line-height: 8/@em; cursor: pointer;}
+.navtitle {float: left; width: ~"calc(100% - "35/@em~")";}
+
+
+#web-help-c1 .file:link {text-decoration: none; color: #000000;}
+#web-help-c1 .file:visited {text-decoration: none; color: #000000;}
+#web-help-c1 .file:hover {text-decoration: none; color: #fff;}
+#web-help-c1 .file:active {text-decoration: none; color: #000000}
+.web-help-nav .folder:hover {background-color: #ddd;}
+.web-help-nav .folder:focus {background-color: #ccc; outline: none;}
+#web-help-c1 .file, #web-help-c1 .folder {cursor: pointer;}
+#web-help-c1 li {padding-right: 5/@em; width: ~"calc(100% - "5/@em~")"; overflow: auto;}
+#web-help-c1 li, #web-help-c1 ul {clear: both;}
 
 #web-help-c2 a:link {text-decoration: underline; color: #000000;}
 #web-help-c2 a:visited {text-decoration: underline; color: #000000;}
-#web-help-c2 a:hover {text-decoration: none; color: #5C5CD6;}
-#web-help-c2 a:active {text-decoration: underline; color: #FF4D4D;}
+#web-help-c2 a:hover {text-decoration: none; color: @primary-color;}
+#web-help-c2 a:active {text-decoration: underline; color: @accent-color;}
 
 #web-help {height: 100%; width: 100%;}
 #web-help-c1 {.z-depth2; width: 30%; position: fixed; z-index: 10; float: left; background-color: #eee; margin-bottom: 15/@em; padding: 5/@em 0 5/@em 5/@em; overflow: hidden;}
-#web-help-c2 {width: 70%; position: fixed; z-index: 1; right: 0; padding: 3%; font-family: serif; top: 64px; overflow: auto; top: 0; bottom: 25/@em;}
-#web-help-c2 h1 {font-size: 26/@em; font-weight: normal; margin-bottom: 5/@em; border-bottom: solid 2px gray; line-height: 125%; font-family: sans-serif;}
-#web-help-c2 .shortdesc {font-size: 14/@em; font-style:italic;}
+#web-help-c2 {width: 70%; position: fixed; z-index: 1; right: 0; padding: 3%; font-family: serif; top: 64px; overflow: auto; top: 0; bottom: 25/@em; color: #555;}
+#web-help-c2 h1 {color: @primary-color; font-size: 26/@em; font-weight: normal; margin-bottom: 5/@em; border-bottom: solid 2px @accent-color; line-height: 125%; font-family: sans-serif;}
+#web-help-c2 .shortdesc {font-size: 14/@em; font-style: italic; color: #888; margin-bottom: 20/@em; line-height: 150%;}
 
 #drag-container {position: fixed; z-index: 9; bottom: -50/@iconscaler; left: 50%; margin-left: -84/(2*@iconscaler); width: 84/@iconscaler; top: 30%-92/@em; pointer-events: none;}
 #drag-handle {pointer-events: auto;}
@@ -356,7 +378,7 @@ To create the three arrow lines within the icon
 .result-count {border-bottom: 10px double #333;}
 .result-title {line-height: 16/@em; margin-top: 10/@em; margin-bottom: 7/@em;}
 .result-tree {font-size: 11/@em; color: #000; line-height: 20/@em; border-bottom: 1px solid #333; padding-bottom: 10/@em;}
-.result-element:hover {color: #5C5CD6; cursor: pointer;}
+.result-element:hover {color: @accent-color; cursor: pointer;}
 
 /***** end common styles *****/
 
@@ -365,6 +387,7 @@ To create the three arrow lines within the icon
 	240-600 px
 **/
 @media screen and (min-width: 15em) {
+    .loading {width: 100%;}
     #heading {height: 128/@em;}
     #heading h1 {width: 100%;}
     #heading img {float: none; margin: auto; position: relative;}
@@ -373,7 +396,7 @@ To create the three arrow lines within the icon
     .typeahead, .twitter-typeahead, .tt-input {width: 130/@em;}
     .tt-dropdown-menu {width: 160/@em;}
     
-	#web-help-c1 {width: 90%; bottom: -100/@em; top: 30%; overflow-y: scroll; position: fixed; margin-left: 5%; margin-right: 5%; border-bottom: solid 100/@em #eee; border-top: solid 5/@em #eee; .z-depth0;}
+	#web-help-c1 {width: 90%; bottom: -100/@em; top: 30%; overflow-y: auto; position: fixed; margin-left: 5%; margin-right: 5%; border-bottom: solid 100/@em #eee; border-top: solid 5/@em #eee; .z-depth0;}
 	#heading, #web-help-c2 {pointer-events: none; opacity: 0.3;}
 	#web-help-c2 {float: none; width: 94%; padding: 3%; top: 128/@em;}
 	#web-help-c2 img {max-width: @4cols;}
@@ -399,7 +422,8 @@ To create the three arrow lines within the icon
 	Zoomed in above 600 px
 */
 @media screen and (min-width: 37.5em) {	
-    #heading {background-color: #888; height: 64/@em;}
+    .loading {width: 95%;}
+    #heading {height: 76/@em;}
     #heading h1 {font-size: 28/@em; color: #fff; padding: 10/@em; position: relative; float: left; width: auto;}
     #heading img {width: auto; margin: auto; position: relative; height: 64/@em; position: relative; float: left;}
     #footer {left: 171/@em;}
@@ -408,9 +432,9 @@ To create the three arrow lines within the icon
     .typeahead, .twitter-typeahead, .tt-input {width: 130/@em;}
     
 	#web-help {float: left;}
-	#web-help-c1 {width: 170/@em; border-bottom: none; border-top: none; border-right: solid 1px gray; margin: auto; position: fixed; bottom: 0; top: 64/@em; .z-depth2;}
+	#web-help-c1 {width: 170/@em; border-bottom: none; border-top: none; border-right: solid 1px gray; margin: auto; position: fixed; bottom: 0; top: 80/@em; .z-depth2;}
 	#heading, #web-help-c2 {pointer-events: auto; opacity: 1.0;}
-	#web-help-c2 {width: auto; padding: 7/@em 5% 4/@em 4/@em; float: right; top: 64/@em; left: 208/@em; right: 0;}
+	#web-help-c2 {width: auto; padding: 7/@em 5% 4/@em 4/@em; float: right; top: 80/@em; left: 208/@em; right: 0;}
 	#web-help-c2 img {max-width: @8cols*0.7;}
 	#web-help-c2 ul {margin-left: 15/@em;}
     #web-help-c2 li {margin-left: 25/@em;}
@@ -422,6 +446,7 @@ To create the three arrow lines within the icon
 	912-infinity px
 */
 @media screen and (min-width: 57em) {
+    .loading {width: 90%;}
     #search-bar {top: 19/@em; width: 270/@em;}
     .typeahead, .twitter-typeahead, .tt-input {width: 200/@em;}
     .tt-dropdown-menu {width: 224/@em;}

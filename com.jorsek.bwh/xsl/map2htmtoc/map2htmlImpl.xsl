@@ -49,16 +49,16 @@
     </xsl:variable>
     <xsl:choose>
       <xsl:when test="normalize-space($title)">
-        <li>
+      	<li><span>
         	<xsl:choose>
         		<xsl:when test="descendant::*[contains(@class, ' map/topicref ')]
         			[not(@toc = 'no')]
         			[not(@processing-role = 'resource-only')]">
-        			<xsl:attribute name="class">ajaxLink folder</xsl:attribute>
+        			<xsl:attribute name="class">ajaxLink navtitle folder</xsl:attribute>
         			<xsl:attribute name="tabindex">0</xsl:attribute>
         		</xsl:when>
         		<xsl:otherwise>
-        			<xsl:attribute name="class">ajaxLink file</xsl:attribute>
+        			<xsl:attribute name="class">ajaxLink navtitle file</xsl:attribute>
         		</xsl:otherwise>
         	</xsl:choose>
           <xsl:choose>
@@ -107,6 +107,12 @@
           		<xsl:value-of select="$title"/>
           	</xsl:otherwise>
           </xsl:choose>
+      	</span>
+        	<xsl:if test="descendant::*[contains(@class, ' map/topicref ')]
+        		[not(@toc = 'no')]
+        		[not(@processing-role = 'resource-only')]">
+        		<span class="folderButton">+</span>
+        	</xsl:if>
         </li>
       	<!-- If there are any children that should be in the TOC, process them -->
       	<xsl:if test="descendant::*[contains(@class, ' map/topicref ')]

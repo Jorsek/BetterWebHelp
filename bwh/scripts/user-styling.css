@@ -43,21 +43,18 @@
   * Zoomed in above 600 px
   */
 @media screen and (min-width: 37.5em) {
-	#web-help-c1 {width: 10em;}
-	#web-help-c2 {left: 15em; right: 0; width: auto;}
+
 }
  /*
   * desktop layout 
   * 912-infinity px
   */
 @media screen and (min-width: 57em) {
-	#web-help-c1 {width: 11em;}
-	#web-help-c2 {left: 17em; right: 0; width: auto;}
+
 }
  /*
   * full page zoom above 1024 px. still desktop layout.
   */
 @media screen and (min-width: 64em) {
-	#web-help-c1 {width: 15em;}
-	#web-help-c2 {left: 18em; right: 0; width: auto;}
+
 }

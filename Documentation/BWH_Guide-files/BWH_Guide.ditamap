@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/map.dtd">
+<map id="ditamap-4792" title="Better WebHelp" class="- map/map ">
+   <topicref href="BWH_intro.dita" class="- map/topicref ">
+      <topicref href="BWH_how_to_structure.dita" class="- map/topicref ">
+         <data href="BWH_intro.dita" class="- topic/data "/>
+      </topicref>
+
+      <topicref href="installing_bwh/Installing_BWH.ditamap" format="ditamap" class="- map/topicref "/>
+      <topicref href="bwh_customization/BWH_Customization.ditamap" format="ditamap" class="- map/topicref "/>
+   </topicref>
+</map>
