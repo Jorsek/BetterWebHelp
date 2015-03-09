@@ -28,7 +28,9 @@
   * 240-600 px
   */
 @media screen and (min-width: 15em) {
-
+	#heading h1 {
+		margin-top: calc(5.0em / 20);
+	}
 }
  /*
   * Wide mobile layout 
@@ -43,7 +45,15 @@
   * Zoomed in above 600 px
   */
 @media screen and (min-width: 37.5em) {
-
+	#heading {
+		height: 5.0em;
+	}
+	#web-help-c1 {
+		top: calc(5.0em + 0.20em);
+	}
+	#web-help-c2 {
+		top: calc(5.0em + 0.25em);
+	}
 }
  /*
   * desktop layout 
