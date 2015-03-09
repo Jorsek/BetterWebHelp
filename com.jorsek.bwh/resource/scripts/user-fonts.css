@@ -9,9 +9,6 @@
  * #web-help-c2 .body {this will affect the body text of the content pane}
  * #web-help-c2 .related-links {this will affect the related links footer in the content pane}
  * 
- * not recommended --> #heading {this will affect the heading (content from heading.html)}
- * 		edit styles within heading.html instead
- * 
  * You can also add in any other customizations you want here.
  * 
  * 
@@ -27,10 +24,26 @@
 	
  #web-help-c2 h1 {font-family:"Walkway Rounded", "Walkway SemiBold", "Walkway Condensed SemiBold", "Walkway UltraCondensed Semi";}
  
- /*
+ /**
   * 
   * Custom Colors:
-  * Select 
+  * It is recommended to select one main color (for the header and for title text) and one accent color (for buttons and borders)
+  * Below are the default values:
   * 
+  * #f27a3e is the orange accent color
+  * #00579b is the main blue color
   * 
   */
+
+#heading {
+	border-top: 0.25em solid #f27a3e;
+	background-color: #00579b;
+}
+#search-bar #search-button {
+	color: white;
+	background-color: #f27a3e;
+}
+#web-help-c2 h1 {
+	color: #00579b;
+	border-bottom: solid 2px #f27a3e;
+}
