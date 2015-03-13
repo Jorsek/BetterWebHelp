@@ -43,6 +43,10 @@
 	color: white;
 	background-color: #f27a3e;
 }
+#search-bar #search-button:hover {
+	color: #f27a3e;
+	background-color: white;
+}
 #web-help-c2 h1 {
 	color: #00579b;
 	border-bottom: solid 2px #f27a3e;
