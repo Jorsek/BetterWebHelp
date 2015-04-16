@@ -1718,14 +1718,15 @@
 <!-- Process image attributes. Using priority, in case default @href is added at some point. -->
 <!-- 20090303: Removed priority; does not appear to be needed. -->
 <xsl:template match="*[contains(@class, ' topic/image ')]/@href">
-	<xsl:choose>
+	<!--<xsl:choose>
 		<xsl:when test="starts-with(../@href,'../')">
 			<xsl:attribute name="src"><xsl:value-of select="substring-after(../@href,'../')"/></xsl:attribute>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:attribute name="src"><xsl:value-of select="../@href"/></xsl:attribute>
 		</xsl:otherwise>
-	</xsl:choose>
+	</xsl:choose>-->
+	<xsl:attribute name="src"><xsl:value-of select="../@href"/></xsl:attribute>
 </xsl:template>
 
 <!-- AM: handling for scale attribute -->
