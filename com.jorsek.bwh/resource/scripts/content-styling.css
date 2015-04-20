@@ -20,6 +20,21 @@
 	border-bottom: solid 1px #aaa;
 }
 
+/*
+ * Tables
+ */
+td.entry, th.entry, td.stentry, th.stentry {
+    border: 1px solid black;
+}
+
+/*
+ * Related Links
+ */
+.related-links-title:after {
+	content: "See Also:";
+}
+
+
 /* 
  * Notes
  */
