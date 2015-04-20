@@ -1726,8 +1726,111 @@
 			<xsl:attribute name="src"><xsl:value-of select="../@href"/></xsl:attribute>
 		</xsl:otherwise>
 	</xsl:choose>-->
-	<xsl:attribute name="src"><xsl:value-of select="../@href"/></xsl:attribute>
+	<xsl:attribute name="src">
+		<xsl:call-template name="resolve-uri">
+			<xsl:with-param name="relative" select="../@href"/>
+			<xsl:with-param name="base">
+				<xsl:choose>
+					<xsl:when test="starts-with($CURRENTFILE,'/')">
+						<xsl:value-of select="substring($CURRENTFILE,1)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="$CURRENTFILE"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:with-param>
+		</xsl:call-template>
+	</xsl:attribute>
 </xsl:template>
+
+<xsl:template name="resolve-uri">
+	<xsl:param name="relative"/>
+	<xsl:param name="base"/>
+	<xsl:param name="result">
+		<xsl:call-template name="substring-before-last">
+			<xsl:with-param name="text" select="$base"/>
+			<xsl:with-param name="delim" select="'/'"/>
+		</xsl:call-template>
+	</xsl:param>
+	
+	<xsl:choose>
+		
+<!--	Remove the '../' from $relative and remove the last path segment of $result -->
+		<xsl:when test="starts-with($relative,'../')">
+			<xsl:call-template name="resolve-uri">
+				<xsl:with-param name="relative" select="substring-after($relative,'../')"/>
+				<xsl:with-param name="base" select="$base"/>
+				<xsl:with-param name="result">
+					<xsl:call-template name="substring-before-last">
+						<xsl:with-param name="text" select="$result"/>
+						<xsl:with-param name="delim" select="'/'"/>
+					</xsl:call-template>
+				</xsl:with-param>
+			</xsl:call-template>
+		</xsl:when>
+		
+<!--	If $relative doesn't contain a slash, it is the last element -->
+<!--	Return $result with the last element of $relative -->
+		<xsl:when test="not(contains($relative,'/'))">
+			<xsl:value-of select="$result"/>
+			<xsl:value-of select="'/'"/>
+			<xsl:value-of select="$relative"/>
+		</xsl:when>
+		
+<!--	Otherwise, append the first element of $relative to the end of $result -->
+		<xsl:otherwise>
+			<xsl:call-template name="resolve-uri">
+				<xsl:with-param name="relative" select="substring-after($relative,'/')"/>
+				<xsl:with-param name="base" select="$base"/>
+				<xsl:with-param name="result">
+					<xsl:choose>
+						<xsl:when test="starts-with(concat($result,'/'),'/')">
+							<xsl:value-of select="substring-before($relative,'/')"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat($result,'/',substring-before($relative,'/'))"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:with-param>
+			</xsl:call-template>
+		</xsl:otherwise>
+	</xsl:choose>
+	
+</xsl:template>
+
+<xsl:template name="remove-end-slash">
+	<xsl:param name="base"/>
+	<xsl:choose>
+		<xsl:when test="'/' = substring($base, string-length($base))">
+			<xsl:value-of select="substring($base,0,string-length($base)-1)"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="$base"/>
+		</xsl:otherwise>
+	</xsl:choose>
+</xsl:template>
+
+<!--<xsl:template name="substring-before-last">
+	<!-\-passed template parameter -\->
+	<xsl:param name="list"/>
+	<xsl:param name="delimiter"/>
+	<xsl:choose>
+		<xsl:when test="contains($list, $delimiter)">
+			<!-\- get everything in front of the first delimiter -\->
+			<xsl:value-of select="substring-before($list,$delimiter)"/>
+			<xsl:choose>
+				<xsl:when test="contains(substring-after($list,$delimiter),$delimiter)">
+					<xsl:value-of select="$delimiter"/>
+				</xsl:when>
+			</xsl:choose>
+			<xsl:call-template name="substring-before-last">
+				<!-\- store anything left in another variable -\->
+				<xsl:with-param name="list" select="substring-after($list,$delimiter)"/>
+				<xsl:with-param name="delimiter" select="$delimiter"/>
+			</xsl:call-template>
+		</xsl:when>
+	</xsl:choose>
+</xsl:template>-->
 
 <!-- AM: handling for scale attribute -->
 <xsl:template match="*[contains(@class, ' topic/image ')]/@scale">
