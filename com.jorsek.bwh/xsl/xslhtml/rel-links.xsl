@@ -206,8 +206,12 @@
 	<xsl:template match="*[contains(@class,' topic/related-links ')]" name="topic.related-links">
 		<div>
 			<xsl:call-template name="commonattributes"/>
+			
+			<div class="related-links-title"/>
+			
 			<xsl:if
 				test="contains($include.roles, ' child ') or contains($include.roles, ' descendant ')">
+				
 				<xsl:call-template name="ul-child-links"/>
 				<!--handle child/descendants outside of linklists in collection-type=unordered or choice-->
 
@@ -257,6 +261,7 @@ Each child is indented, the linktext is bold, and the shortdesc appears in norma
 		<xsl:if
 			test="descendant::*[contains(@class, ' topic/link ')][@role='child' or @role='descendant'][not(parent::*/@collection-type='sequence')][not(ancestor::*[contains(@class, ' topic/linklist ')])]">
 			<xsl:value-of select="$newline"/>
+			
 			<ul class="ullinks">
 				<xsl:value-of select="$newline"/>
 				<!--once you've tested that at least one child/descendant exists, apply templates to only the unique ones-->
