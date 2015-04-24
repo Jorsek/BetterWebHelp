@@ -41,7 +41,8 @@
 
   <xsl:template match="*[contains(@class, ' map/topicref ')]
                         [not(@toc = 'no')]
-                        [not(@processing-role = 'resource-only')]"
+                        [not(@processing-role = 'resource-only')]
+                        [not(contains(@class, ' bookmap/preface '))]"
                 mode="toc">
     <xsl:param name="pathFromMaplist"/>
     <xsl:variable name="title">
@@ -55,7 +56,6 @@
         			[not(@toc = 'no')]
         			[not(@processing-role = 'resource-only')]">
         			<xsl:attribute name="class">ajaxLink navtitle folder</xsl:attribute>
-        			<xsl:attribute name="tabindex">0</xsl:attribute>
         		</xsl:when>
         		<xsl:otherwise>
         			<xsl:attribute name="class">ajaxLink navtitle file</xsl:attribute>
