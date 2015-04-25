@@ -241,7 +241,7 @@
 </xsl:template>
 
 <xsl:template name="bookmap-preface">
-	<xsl:variable name="preface.file" select="concat($OUTPUTDIR,'/preface.html')"/>
+	<xsl:variable name="preface.file" select="'preface.html'"/>
 	<xsl:result-document href="{$preface.file}" format="html">
 		<xsl:call-template name="bookmap-preface-content"/>
 	</xsl:result-document>
