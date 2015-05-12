@@ -139,8 +139,8 @@
 </xsl:template>
 
 <xsl:template name="content-scripts">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">//</script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js">//</script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">//</script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js">//</script>
 	<script type="text/javascript" src="scripts/typeahead.bundle.js">//</script>
 	<script type="text/javascript" src="scripts/queryString.js">//</script>
 	<script type="text/javascript" src="scripts/dragdealer.js">//</script>

@@ -173,7 +173,7 @@
 				
 				var x = project.getProperty("source.data");
 				var y=x.replaceAll(/\s+/g,' ').trim();
-				var z=y.substring(0,y.length()-3).concat(' ]');
+				var z=y.substring(0,y.lastIndexOf(',')).concat(' ]');
 				var indexData = JSON.parse(z);
 				var len = indexData.length;
 				var lastPrint = -1;
