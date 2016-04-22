@@ -15,11 +15,13 @@ var defaultNav;
 Use AJAX to load content from url link.
 And optionally automatically close the nav panel on load (on mobile).
 */
-function loadContent (location,url,shrinkNav) {
+function loadContent (location,url,callback,shrinkNav) {
 	$('#web-help-c2').scrollTop(0);
 	$(location).load(url, function( response, status, xhr ) {
 		if (status == "error") {
 			throw "[AJAX] " + xhr.status + ": " + xhr.statusText;
+		} else if (callback != null) {
+			callback(response, status, xhr);
 		}
 	});
 	shrinkNav = shrinkNav || "yes";
@@ -193,18 +195,27 @@ window.onhashchange = function() {
 	if (location.hash.indexOf('q=') == -1) {
 	
 		var siteloc = location.hash.substring(1);
+		var elementId = '';
+		var scrollToElementCallback = function() {};
 	
 		if (siteloc == "") {
 			// Load homepage when no hash
 			loadContent("#web-help-c2",'preface.html');
 		} else {
+			if (siteloc.indexOf(";") != -1) {
+				siteloc = siteloc.substring(0,siteloc.indexOf(';'));
+				elementId = location.hash.substring(location.hash.indexOf(';')+1);
+				scrollToElementCallback = function(response, status, xhr) {
+						document.getElementById(elementId).scrollIntoView();
+					};
+			}
 			// Load content if link is clicked
 			linkClicked = document.activeElement;
 			// Don't close the nav panel (on mobile) if the user clicks on a folder
 			if ($(linkClicked).hasClass('folder')) {
-				loadContent("#web-help-c2",siteloc, 'no');
+				loadContent("#web-help-c2",siteloc, scrollToElementCallback, 'no');
 			} else {
-				loadContent("#web-help-c2",siteloc);
+				loadContent("#web-help-c2",siteloc, scrollToElementCallback);
 			}
 		}
 		
@@ -284,6 +295,23 @@ function firstLoad() {
 	}
 }
 
+// Manually handle updating hash just in case the link has an href
+// that contains a hash itself
+function updateHash(hrefValue) {
+	if (hrefValue.indexOf('#') != -1) {
+		hrefValue = hrefValue.replace("#",";");
+	}
+	var oldPage = location.hash.substring(1);
+	if (oldPage.indexOf(';') != -1) {
+		oldPage = oldPage.substring(0,oldPage.indexOf(';'));
+	}
+	if (hrefValue.startsWith(';')) {
+		location.hash = oldPage+hrefValue;
+	} else {
+		location.hash = hrefValue;
+	}
+}
+
 // Do these once the document's basic structure is set
 $( document ).ready(function() {
 
@@ -299,7 +327,7 @@ $( document ).ready(function() {
         	document.getElementById("heading").innerHTML = "";
     	},
     	success: function() {
-        	loadContent("#heading",headingLoc,"no");
+        	loadContent("#heading",headingLoc,function(){},"no");
     	}
 	});
 	var footerLoc = "footer.html";
@@ -310,7 +338,7 @@ $( document ).ready(function() {
 			$('#web-help-c2').css("bottom", "0");
 		},
     	success: function() {
-        	loadContent("#footer",footerLoc,"no");
+        	loadContent("#footer",footerLoc,function(){},"no");
     	}
 	});
 	
@@ -327,7 +355,7 @@ $( document ).ready(function() {
 	// Load the webpage content in the content pane when any ajaxLink is clicked on
 	$(document).on("click",".ajaxLink",function (e) {
 		e.preventDefault();
-		location.hash = $(this).attr('href');
+		updateHash($(this).attr('href'));
 	});
 	
 	// Expand the subnav lists when a folder is clicked on

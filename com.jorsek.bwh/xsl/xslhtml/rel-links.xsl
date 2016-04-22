@@ -469,8 +469,11 @@ Children are displayed in a numbered list, with the target title as the cmd and 
 		<xsl:param name="href"/>
 		<xsl:choose>
 			<xsl:when test="contains($href,'/')">
-				<xsl:value-of select="substring-before($href,'/')"/>__<xsl:value-of
-					select="substring-after($href,'/')"/>
+				<!--<xsl:value-of select="substring-before($href,'/')"/>__-->
+				<xsl:if test="starts-with($href,'#')">
+					<xsl:text>#</xsl:text>
+				</xsl:if>
+				<xsl:value-of select="substring-after($href,'/')"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="$href"/>
