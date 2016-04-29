@@ -332,6 +332,9 @@
   </xsl:param>
   <xsl:element name="h{$headinglevel}">
       <xsl:attribute name="class">topictitle<xsl:value-of select="$headinglevel"/></xsl:attribute>
+	  <xsl:if test="@id">
+	  	<xsl:attribute name="id"><xsl:value-of select="string(@id)"/></xsl:attribute>
+	  </xsl:if>
       <xsl:call-template name="commonattributes">
         <xsl:with-param name="default-output-class">topictitle<xsl:value-of select="$headinglevel"/></xsl:with-param>
       </xsl:call-template>
@@ -3634,6 +3637,9 @@
   </xsl:param>
   <xsl:element name="{$headLevel}">
     <xsl:attribute name="class">sectiontitle</xsl:attribute>
+  	<xsl:if test="@id">
+  		<xsl:attribute name="id"><xsl:value-of select="string(@id)"/></xsl:attribute>
+  	</xsl:if>
     <xsl:call-template name="commonattributes">
       <xsl:with-param name="default-output-class" select="'sectiontitle'"/>
     </xsl:call-template>
